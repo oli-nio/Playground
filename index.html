@@ -11,14 +11,10 @@
   </style>
 </head>
 <body>
-  <div class="loading">
-    <div>FORMIKAT OS wird geladen …<small>Die Präsentation wird aus der bestehenden Datei geladen.</small></div>
-  </div>
-
+  <div class="loading"><div>FORMIKAT OS wird geladen …<small>Die Präsentation wird aus der bestehenden Datei geladen.</small></div></div>
   <script>
   (function () {
     var PATCH = [
-      '/* iOS / mobile viewport overflow fix */',
       'html,body{overflow-x:hidden!important;max-width:100%!important;width:100%!important;}',
       'body{position:relative;}',
       'main,header,footer,section,.wrap{max-width:100%!important;min-width:0!important;}',
@@ -26,40 +22,65 @@
       '.rail,.offer-scroll{max-width:100%!important;}',
       'img,svg,video,canvas{max-width:100%;}',
       '@supports (overflow:clip){html,body{overflow-x:clip!important;}}',
-      '/* insight bridge images */',
-      '.insight-bridge{padding:18px 0 54px;border-top:1px solid var(--l,#344151);background:var(--bg,#101722);}',
-      '.insight-bridge .insight-wrap{width:min(1320px,calc(100% - 32px));margin:auto;}',
+      '.insight-bridge{padding:26px 0 58px;border-top:1px solid var(--l,#344151);background:var(--bg,#101722);overflow:hidden;}',
+      '.insight-wrap{width:min(1180px,calc(100% - 40px));margin:auto;}',
       '.insight-bridge figure{margin:0;}',
       '.insight-bridge img{display:block;width:100%;height:auto;border-radius:20px;border:1px solid rgba(255,255,255,.07);box-shadow:0 22px 70px rgba(0,0,0,.24);}',
-      '@media(max-width:620px){.insight-bridge{padding:10px 0 34px}.insight-bridge .insight-wrap{width:calc(100% - 18px)}.insight-bridge img{border-radius:13px}}'
+      '.insight-carousel{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:2px 0 16px;}',
+      '.insight-carousel::-webkit-scrollbar{display:none;}',
+      '.insight-carousel figure{flex:0 0 92%;scroll-snap-align:center;}',
+      '.insight-hint{margin:0 0 10px;color:var(--m,#adb8c7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;}',
+      '.insight-dots{display:flex;justify-content:center;gap:7px;margin-top:2px;}',
+      '.insight-dots i{width:6px;height:6px;border-radius:50%;background:var(--l,#344151);}',
+      '.insight-dots i:first-child{background:var(--g,#d5f976);}',
+      '@media(max-width:620px){.insight-bridge{padding:16px 0 38px}.insight-wrap{width:calc(100% - 18px)}.insight-bridge img{border-radius:13px}.insight-carousel{gap:10px}.insight-carousel figure{flex-basis:96%}}'
     ].join('');
 
-    fetch('./formikat-astra-pitch.html?overflowfix=1', {cache:'no-store'})
-      .then(function (r) {
-        if (!r.ok) throw new Error('HTTP ' + r.status);
-        return r.text();
-      })
-      .then(function (source) {
-        if (source.indexOf('</style>') !== -1) {
-          source = source.replace('</style>', PATCH + '</style>');
-        } else {
-          source = source.replace('</head>', '<style>' + PATCH + '</style></head>');
-        }
+    function one(src,alt){return '<div class="insight-bridge"><div class="insight-wrap"><figure><img src="'+src+'" width="1536" height="1024" loading="lazy" decoding="async" alt="'+alt+'"></figure></div></div>';}
+    function carousel(items){var figs=items.map(function(x){return '<figure><img src="'+x[0]+'" width="1536" height="1024" loading="lazy" decoding="async" alt="'+x[1]+'"></figure>';}).join('');var dots=items.map(function(){return '<i></i>';}).join('');return '<div class="insight-bridge"><div class="insight-wrap"><p class="insight-hint">Mehrere Erkenntnisse · horizontal wischen</p><div class="insight-carousel">'+figs+'</div><div class="insight-dots" aria-hidden="true">'+dots+'</div></div></div>';}
 
-        /* First reversible bridge: after the opening problem section. */
-        var bridge = '<div class="insight-bridge" aria-label="Visuelle Erkenntnis: Workflow-Engine"><div class="insight-wrap"><figure><img src="./assets/insights/workflow-engine.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Die eigentliche Workflow-Engine ist heute die enge Kopplung zwischen Oliver und Matthias. Das Diagramm zeigt den bidirektionalen Austausch von Ideen, Entscheidungen, Dateien, Feedback und Organisation sowie die gemessenen Reaktionszeiten."></figure></div></div>';
-        source = source.replace('</section><div class="breaker">', '</section>' + bridge + '<div class="breaker">');
+    fetch('./formikat-astra-pitch.html?insights=2', {cache:'no-store'})
+      .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.text();})
+      .then(function(source){
+        source=source.replace('</style>',PATCH+'</style>');
 
-        document.open();
-        document.write(source);
-        document.close();
+        /* 1 — Ausgangslage: die heutige menschliche Workflow-Engine */
+        var workflow=one('./assets/insights/workflow-engine.webp','Die heutige Workflow-Engine: enger bidirektionaler Austausch zwischen Oliver und Matthias.');
+        source=source.replace('</section><div class="breaker">','</section>'+workflow+'<div class="breaker">');
+
+        /* 2 — Übergänge: drei eng gekoppelte Ursachen von Prozessdruck */
+        var pressure=carousel([
+          ['./IMG_0762.webp','Späte externe Inputs verdichten die interne Arbeitsphase und erhöhen Zeitdruck.'],
+          ['./IMG_0761.webp','Änderungen nach einem Freeze lösen Kaskaden über mehrere Planungs- und Produktionsstände aus.'],
+          ['./IMG_0760.webp','Beschaffung, Verfügbarkeit, Preis und Fertigbarkeit sind Teil des Entwurfs.']
+        ]);
+        source=source.replace('</section><section id="sources">','</section>'+pressure+'<section id="sources">');
+
+        /* 3 — Quellen und Projektwahrheit: zwei Perspektiven, die zusammengehören */
+        var knowledge=carousel([
+          ['./IMG_0767.webp','KI-Synthese verbindet verteilte Quellen zu nutzbarem Projektwissen; die Wissensbasis bleibt modellunabhängig.'],
+          ['./IMG_0763.webp','Objektlisten machen Maße, Verfügbarkeit, Schutz, Freigaben, Risiken und nächste Schritte sichtbar.']
+        ]);
+        source=source.replace('</section><section id="identity">','</section>'+knowledge+'<section id="identity">');
+
+        /* 4 — Vom Projektstand zur Erfahrung: Realität und Lernen */
+        var learning=carousel([
+          ['./IMG_0765.webp','Die Baustelle ist aktive Entwurfsinstanz: reale Rückmeldung fließt in Prüfung und Anpassung zurück.'],
+          ['./IMG_0769.webp','Cross-Project-Learning erkennt wiederkehrende Muster und macht Erfahrung für neue Projekte nutzbar.']
+        ]);
+        source=source.replace('</section><div class="breaker"><div class="wrap"><p>Jedes abgeschlossene Projekt','</section>'+learning+'<div class="breaker"><div class="wrap"><p>Jedes abgeschlossene Projekt');
+
+        /* 5 — Möglichkeiten: Automatisierung differenziert statt pauschal */
+        var automation=one('./IMG_0764.webp','Automatisierung wird nach Geschäftswert, Wiederholbarkeit und notwendigem menschlichem Urteil ausgewählt.');
+        source=source.replace('</section><section id="infra">','</section>'+automation+'<section id="infra">');
+
+        /* 6 — Schluss der Vision: von Archivierung zu vorausschauender Unterstützung */
+        var prediction=one('./IMG_0766.webp','Vom vergangenen Projektwissen über Muster und aktuellen Kontext zu vorausschauender Unterstützung.');
+        source=source.replace('</section><div class="closing">','</section>'+prediction+'<div class="closing">');
+
+        document.open();document.write(source);document.close();
       })
-      .catch(function (err) {
-        document.body.innerHTML =
-          '<div class="loading"><div>Die Präsentation konnte nicht geladen werden.' +
-          '<small>Bitte prüfen, ob <b>formikat-astra-pitch.html</b> im selben GitHub-Ordner liegt.</small></div></div>';
-        console.error(err);
-      });
+      .catch(function(err){document.body.innerHTML='<div class="loading"><div>Die Präsentation konnte nicht geladen werden.<small>Bitte prüfen, ob <b>formikat-astra-pitch.html</b> im selben GitHub-Ordner liegt.</small></div></div>';console.error(err);});
   })();
   </script>
 </body>

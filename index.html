@@ -25,7 +25,13 @@
       '.hero>*,.sh>*,.source-layout>*,.potential>*,.finance>*,.infra>*,.phase-detail>*,.contrast>*,.identity-grid>*,.pilot-grid>*,.no-grid>*{min-width:0!important;}',
       '.rail,.offer-scroll{max-width:100%!important;}',
       'img,svg,video,canvas{max-width:100%;}',
-      '@supports (overflow:clip){html,body{overflow-x:clip!important;}}'
+      '@supports (overflow:clip){html,body{overflow-x:clip!important;}}',
+      '/* insight bridge images */',
+      '.insight-bridge{padding:18px 0 54px;border-top:1px solid var(--l,#344151);background:var(--bg,#101722);}',
+      '.insight-bridge .insight-wrap{width:min(1320px,calc(100% - 32px));margin:auto;}',
+      '.insight-bridge figure{margin:0;}',
+      '.insight-bridge img{display:block;width:100%;height:auto;border-radius:20px;border:1px solid rgba(255,255,255,.07);box-shadow:0 22px 70px rgba(0,0,0,.24);}',
+      '@media(max-width:620px){.insight-bridge{padding:10px 0 34px}.insight-bridge .insight-wrap{width:calc(100% - 18px)}.insight-bridge img{border-radius:13px}}'
     ].join('');
 
     fetch('./formikat-astra-pitch.html?overflowfix=1', {cache:'no-store'})
@@ -40,7 +46,10 @@
           source = source.replace('</head>', '<style>' + PATCH + '</style></head>');
         }
 
-        /* Keep the original document intact; only add the viewport fix. */
+        /* First reversible bridge: after the opening problem section. */
+        var bridge = '<div class="insight-bridge" aria-label="Visuelle Erkenntnis: Workflow-Engine"><div class="insight-wrap"><figure><img src="./assets/insights/workflow-engine.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Die eigentliche Workflow-Engine ist heute die enge Kopplung zwischen Oliver und Matthias. Das Diagramm zeigt den bidirektionalen Austausch von Ideen, Entscheidungen, Dateien, Feedback und Organisation sowie die gemessenen Reaktionszeiten."></figure></div></div>';
+        source = source.replace('</section><div class="breaker">', '</section>' + bridge + '<div class="breaker">');
+
         document.open();
         document.write(source);
         document.close();

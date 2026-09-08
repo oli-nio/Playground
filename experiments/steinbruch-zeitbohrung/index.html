@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>FORMIKAT — Zeitbohrung</title>
+<meta name="theme-color" content="#090909" />
+<style>
+  :root{--fg:#eee9df;--muted:#a8a39b;--accent:#d69b9f;--bg:#070707}
+  *{box-sizing:border-box} html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--fg);font-family:Arial,Helvetica,sans-serif}
+  body{overscroll-behavior:none;touch-action:none;user-select:none}
+  canvas{position:fixed;inset:0;width:100%;height:100%;display:block}
+  .grain{pointer-events:none;position:fixed;inset:0;z-index:3;opacity:.12;mix-blend-mode:screen;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E")}
+  .ui{position:fixed;inset:0;z-index:4;pointer-events:none}
+  .brand{position:absolute;top:max(18px,env(safe-area-inset-top));left:20px;font-size:12px;letter-spacing:.22em;font-weight:700}
+  .counter{position:absolute;top:max(18px,env(safe-area-inset-top));right:20px;font-size:11px;letter-spacing:.16em;color:var(--muted)}
+  .title{position:absolute;left:20px;bottom:max(24px,env(safe-area-inset-bottom));max-width:min(520px,84vw)}
+  .kicker{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin-bottom:7px}
+  h1{font-size:clamp(30px,5vw,68px);line-height:.92;letter-spacing:-.045em;margin:0 0 10px;font-weight:500}
+  .desc{font-size:12px;line-height:1.45;color:#c7c2b9;max-width:430px}
+  .depth{position:absolute;right:20px;bottom:max(26px,env(safe-area-inset-bottom));height:34vh;width:1px;background:#ffffff29}
+  .depth i{position:absolute;left:-2px;top:0;width:5px;height:5px;border-radius:50%;background:var(--fg);transform:translateY(var(--dot,0%))}
+  .depth::after{content:attr(data-depth);position:absolute;right:10px;top:var(--dot,0%);transform:translateY(-50%);font-size:10px;letter-spacing:.12em;color:var(--muted);white-space:nowrap}
+  .hint{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#d8d3c9;transition:opacity .6s;text-align:center;line-height:1.6;text-shadow:0 1px 10px #000}
+  .sound{pointer-events:auto;cursor:pointer;position:absolute;left:20px;top:max(48px,calc(env(safe-area-inset-top) + 48px));border:0;background:none;padding:0;color:var(--muted);font:10px Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+  .photo{position:absolute;left:50%;top:50%;width:min(62vw,760px);aspect-ratio:1000/667;transform:translate(-50%,-50%) scale(.72) rotate(var(--r));opacity:0;transition:opacity .35s;will-change:transform,opacity;filter:saturate(.78) contrast(1.08) brightness(.86);box-shadow:0 30px 100px #000b;overflow:hidden;border-radius:1px}
+  .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,#0000 40%,#ffffff10 50%,#0000 60%);mix-blend-mode:screen}
+  .photo.active{opacity:.86}
+  .ghost{position:absolute;inset:auto 0 0 0;height:1px;background:#ffffff22;transform:translateY(var(--gy,40vh));box-shadow:0 0 24px #ffffff18}
+  .mark{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:clamp(120px,28vw,430px);font-weight:700;letter-spacing:-.08em;color:#ffffff08;mix-blend-mode:screen;white-space:nowrap}
+  @media(max-width:700px){.photo{width:88vw}.title{max-width:72vw}.desc{font-size:11px}.depth{height:27vh}.brand{font-size:11px}.hint{width:70vw}.sound{top:max(46px,calc(env(safe-area-inset-top) + 46px))}}
+  @media(prefers-reduced-motion:reduce){.grain{display:none}}
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<div class="grain"></div>
+<div class="ui">
+  <div class="brand">FORMIKAT / EXPERIMENT 04</div>
+  <div class="counter" id="counter">SCHICHT 01 / 06</div>
+  <button class="sound" id="sound">sound: aus</button>
+  <div class="mark" id="mark">−12.4m</div>
+  <div class="photo" id="photo" style="--r:-1.2deg"><img id="img" alt="Im Steinbruch der Zeit"></div>
+  <div class="ghost" id="ghost"></div>
+  <div class="title">
+    <div class="kicker" id="kicker">Franckesche Stiftungen · Halle · 2020</div>
+    <h1 id="headline">Im Steinbruch<br>der Zeit</h1>
+    <div class="desc" id="desc">Nicht durch Räume klicken. Durch Zeit bohren. Ziehen, scrollen oder Pfeiltasten benutzen.</div>
+  </div>
+  <div class="depth" id="depth"><i></i></div>
+  <div class="hint" id="hint">↓ tiefer<br><span style="opacity:.55">scroll / drag</span></div>
+</div>
+<script type="module">
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js';
+
+const photos = [
+  'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-280_bmz.jpg',
+  'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-9_bmz.jpg',
+  'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-36_bmz.jpg',
+  'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-49_bmz.jpg',
+  'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-257_bmz.jpg',
+  'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-143.jpg'
+];
+const data = [
+  ['Portal','−12.4 m','Stein als Eintritt: ein heller Schnitt in einen dunklen Körper.'],
+  ['Entdecken','−38.7 m','Objekte stehen wie Funde in einem noch nicht vollständig freigelegten Feld.'],
+  ['Schichten','−71.2 m','Die Ausstellung erzählt wie Gestein: nicht linear, sondern Lage über Lage.'],
+  ['Glauben','−109.5 m','Wissen, Deutung und Bild werden zu räumlichen Sedimenten.'],
+  ['Vermessen','−164.8 m','Instrumente, Modelle und Geometrien markieren den Übergang vom Staunen zum Messen.'],
+  ['Berühren','−221.0 m','Am Grund wird Geschichte wieder Gegenwart: Hand, Bildschirm, Karte, Spur.']
+];
+
+const renderer = new THREE.WebGLRenderer({antialias:false,alpha:false,powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));
+renderer.setSize(innerWidth,innerHeight);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.setClearColor(0x060606,1);
+document.getElementById('stage').appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.fog = new THREE.FogExp2(0x070707,.035);
+const camera = new THREE.PerspectiveCamera(62,innerWidth/innerHeight,.1,400);
+camera.position.set(0,0,10);
+
+const group = new THREE.Group(); scene.add(group);
+const mats = [0x2a2522,0x35272b,0x1e2529,0x2e2d32,0x20272d,0x2b3326].map(c=>new THREE.MeshStandardMaterial({color:c,roughness:1,metalness:0,side:THREE.DoubleSide,transparent:true,opacity:.92}));
+const lineMat = new THREE.LineBasicMaterial({color:0xbab3aa,transparent:true,opacity:.11});
+
+function ringGeometry(radius,thickness,segments=9){
+  const shape = new THREE.Shape();
+  const pts=[]; for(let i=0;i<segments;i++){const a=i/segments*Math.PI*2; const wob=1+Math.sin(i*2.17)*.08; pts.push([Math.cos(a)*radius*wob,Math.sin(a)*radius*wob]);}
+  shape.moveTo(pts[0][0],pts[0][1]); for(let i=1;i<pts.length;i++) shape.lineTo(pts[i][0],pts[i][1]); shape.closePath();
+  const hole = new THREE.Path(); const r2=radius-thickness; const pts2=[]; for(let i=segments-1;i>=0;i--){const a=i/segments*Math.PI*2; const wob=1+Math.sin(i*2.17)*.08; pts2.push([Math.cos(a)*r2*wob,Math.sin(a)*r2*wob]);}
+  hole.moveTo(pts2[0][0],pts2[0][1]); for(let i=1;i<pts2.length;i++) hole.lineTo(pts2[i][0],pts2[i][1]); hole.closePath(); shape.holes.push(hole);
+  return new THREE.ExtrudeGeometry(shape,{depth:.55,bevelEnabled:false});
+}
+for(let i=0;i<70;i++){
+  const z = -i*4.2;
+  const radius = 8 + Math.sin(i*.73)*1.5 + (i%5)*.15;
+  const geo=ringGeometry(radius,2.3+(i%3)*.35,8+(i%4));
+  geo.translate(0,0,-.28);
+  const mesh=new THREE.Mesh(geo,mats[i%6]); mesh.position.z=z; mesh.rotation.z=i*.19; mesh.rotation.x=Math.sin(i*.33)*.035; group.add(mesh);
+  const edges=new THREE.LineSegments(new THREE.EdgesGeometry(geo,24),lineMat); edges.position.copy(mesh.position); edges.rotation.copy(mesh.rotation); group.add(edges);
+}
+const light=new THREE.PointLight(0xf6e4ce,48,70,2); light.position.set(0,0,5); scene.add(light);
+const fill=new THREE.DirectionalLight(0x8099bc,1.8); fill.position.set(2,-2,1); scene.add(fill);
+
+const dustGeo=new THREE.BufferGeometry(); const N=1200; const pos=new Float32Array(N*3);
+for(let i=0;i<N;i++){const a=Math.random()*Math.PI*2,r=2+Math.random()*10; pos[i*3]=Math.cos(a)*r; pos[i*3+1]=Math.sin(a)*r; pos[i*3+2]=-Math.random()*300;}
+dustGeo.setAttribute('position',new THREE.BufferAttribute(pos,3));
+const dust=new THREE.Points(dustGeo,new THREE.PointsMaterial({color:0xd8d0c2,size:.035,transparent:true,opacity:.38})); scene.add(dust);
+
+let target=0,current=0,lastIndex=-1,dragY=null,started=false;
+const maxDepth=5.999;
+const photo=document.getElementById('photo'), img=document.getElementById('img'), counter=document.getElementById('counter'), headline=document.getElementById('headline'), desc=document.getElementById('desc'), kicker=document.getElementById('kicker'), depth=document.getElementById('depth'), hint=document.getElementById('hint'), mark=document.getElementById('mark'), ghost=document.getElementById('ghost');
+
+function setTarget(v){target=Math.max(0,Math.min(maxDepth,v)); if(!started && target>.03){started=true;hint.style.opacity='0';}}
+addEventListener('wheel',e=>{e.preventDefault();setTarget(target+e.deltaY*.0017)},{passive:false});
+addEventListener('keydown',e=>{if(['ArrowDown','ArrowRight','PageDown',' '].includes(e.key))setTarget(Math.floor(target+1.02)); if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key))setTarget(Math.ceil(target-1.02));});
+addEventListener('pointerdown',e=>dragY=e.clientY);
+addEventListener('pointermove',e=>{if(dragY==null)return; const dy=dragY-e.clientY; dragY=e.clientY; setTarget(target+dy/170);});
+addEventListener('pointerup',()=>dragY=null); addEventListener('pointercancel',()=>dragY=null);
+
+function updateUI(index,frac){
+  if(index!==lastIndex){
+    lastIndex=index; photo.classList.remove('active');
+    setTimeout(()=>{img.src=photos[index]; photo.style.setProperty('--r',`${(index%2?1:-1)*(0.5+index*.24)}deg`); photo.classList.add('active');},90);
+    counter.textContent=`SCHICHT ${String(index+1).padStart(2,'0')} / 06`;
+    headline.innerHTML=index===0?'Im Steinbruch<br>der Zeit':data[index][0];
+    desc.textContent=data[index][2];
+    kicker.textContent=index===0?'Franckesche Stiftungen · Halle · 2020':'Raum als geologische Zeitmaschine';
+  }
+  const p=(current/5)*100; depth.style.setProperty('--dot',`${p}%`); depth.dataset.depth=data[index][1];
+  mark.textContent=data[index][1]; mark.style.opacity=String(.025 + Math.sin(frac*Math.PI)*.055);
+  photo.style.transform=`translate(-50%,-50%) scale(${.64+Math.sin(frac*Math.PI)*.18}) rotate(var(--r)) translateY(${(frac-.5)*-24}px)`;
+  photo.style.opacity=String(.2 + Math.pow(Math.sin(frac*Math.PI),.7)*.72);
+  ghost.style.setProperty('--gy',`${32+Math.sin(current*1.8)*20}vh`);
+}
+
+let audioCtx,osc,osc2,gain,filter;
+document.getElementById('sound').addEventListener('click',async e=>{
+  e.stopPropagation();
+  if(!audioCtx){audioCtx=new (window.AudioContext||window.webkitAudioContext)(); osc=audioCtx.createOscillator(); osc2=audioCtx.createOscillator(); gain=audioCtx.createGain(); filter=audioCtx.createBiquadFilter(); osc.type='sine';osc2.type='triangle';osc.frequency.value=43;osc2.frequency.value=61; gain.gain.value=.018; filter.type='lowpass';filter.frequency.value=320; osc.connect(filter);osc2.connect(filter);filter.connect(gain);gain.connect(audioCtx.destination);osc.start();osc2.start(); e.currentTarget.textContent='sound: an';}
+  else {const on=gain.gain.value>.001; gain.gain.setTargetAtTime(on?0:.018,audioCtx.currentTime,.08); e.currentTarget.textContent=on?'sound: aus':'sound: an';}
+});
+
+function animate(t){
+  current += (target-current)*.055;
+  const depthZ=current*47;
+  camera.position.z=10-depthZ; camera.position.x=Math.sin(current*1.15)*1.05; camera.position.y=Math.cos(current*.87)*.65;
+  camera.rotation.z=Math.sin(current*.63)*.025; camera.rotation.x=Math.sin(current*.9)*.035;
+  light.position.z=camera.position.z+2; light.position.x=camera.position.x;
+  group.rotation.z=Math.sin(current*.42)*.08; dust.rotation.z=t*.00003;
+  if(audioCtx && gain.gain.value>.001){filter.frequency.setTargetAtTime(220+current*60,audioCtx.currentTime,.08);osc.frequency.setTargetAtTime(42+current*3,audioCtx.currentTime,.08);}
+  const i=Math.min(5,Math.max(0,Math.floor(current+.5))); const frac=Math.max(0,Math.min(1,1-Math.abs(current-i)));
+  updateUI(i,frac);
+  renderer.render(scene,camera); requestAnimationFrame(animate);
+}
+requestAnimationFrame(animate);
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+img.src=photos[0]; photo.classList.add('active');
+</script>
+</body>
+</html>

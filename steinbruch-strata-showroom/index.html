@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>FORMIKAT — Steinbruch / Strata</title>
+<style>
+:root{--fg:#f1efe9;--muted:#aaa69d;--accent:#d7ff49;--bg:#090a0a}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:var(--bg);color:var(--fg);font-family:Arial,Helvetica,sans-serif;overflow:hidden}
+canvas{position:fixed;inset:0;width:100%;height:100%;display:block}
+#grain{position:fixed;inset:0;pointer-events:none;opacity:.06;mix-blend-mode:screen;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
+.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:flex-start;padding:18px 20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;pointer-events:none}.brand{font-weight:800;font-size:14px}.top .status{text-align:right;color:var(--muted);line-height:1.45}
+#intro{position:fixed;inset:0;z-index:15;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at 50% 50%,rgba(23,27,27,.25),rgba(3,4,4,.82));transition:opacity .8s ease,visibility .8s ease}.intro-inner{max-width:860px}.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}.title{font-size:clamp(52px,10vw,138px);font-weight:700;line-height:.78;letter-spacing:-.075em;margin:0}.title span{display:block;margin-left:13vw}.lede{max-width:500px;margin:28px 0 0 auto;font-size:14px;line-height:1.5;color:#d0cdc5}.enter{margin-top:28px;margin-left:auto;display:block;background:var(--accent);border:0;color:#10120b;border-radius:999px;padding:14px 18px;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.hint{margin-top:10px;text-align:right;color:var(--muted);font-size:10px}.hidden{opacity:0!important;visibility:hidden!important;pointer-events:none!important}
+#hud{position:fixed;left:20px;bottom:18px;z-index:12;display:flex;gap:12px;align-items:flex-end;pointer-events:none}.depth{font-size:clamp(44px,8vw,92px);letter-spacing:-.06em;line-height:.75}.depth small{font-size:12px;letter-spacing:.1em;color:var(--muted)}.meter{height:96px;width:2px;background:#4d4e49;position:relative}.meter i{position:absolute;left:0;bottom:0;width:2px;height:10%;background:var(--accent)}
+#rail{position:fixed;inset:0;z-index:10;pointer-events:none}.card{position:absolute;width:min(34vw,440px);pointer-events:auto;transition:opacity .35s,transform .35s;cursor:pointer;filter:saturate(.78) contrast(1.04)}.card img{width:100%;display:block;border-radius:2px;box-shadow:0 24px 70px rgba(0,0,0,.45)}.card .meta{display:flex;justify-content:space-between;margin-top:8px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#d2cfc7}.card .meta b{color:var(--accent);font-weight:700}.card:hover{filter:saturate(1)}
+#detail{position:fixed;z-index:30;right:0;top:0;height:100%;width:min(520px,100%);background:rgba(12,13,13,.94);backdrop-filter:blur(18px);padding:80px 28px 28px;transform:translateX(102%);transition:transform .5s cubic-bezier(.2,.8,.2,1);border-left:1px solid #343633}.detail-open #detail{transform:none}.detail-no{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}.detail-title{font-size:clamp(40px,7vw,72px);line-height:.9;letter-spacing:-.06em;margin:15px 0}.detail-copy{max-width:39ch;line-height:1.5;color:#cbc8c0;font-size:14px}.detail-img{width:100%;margin-top:24px;max-height:38vh;object-fit:cover}.close{position:absolute;right:20px;top:20px;border:1px solid #555;background:transparent;color:white;border-radius:999px;width:38px;height:38px;font-size:18px;cursor:pointer}
+.nav{position:fixed;right:18px;bottom:18px;z-index:20;display:flex;gap:8px}.nav button{border:1px solid #5d5f59;background:rgba(8,9,9,.6);color:white;border-radius:999px;width:44px;height:44px;font-size:18px;cursor:pointer;backdrop-filter:blur(10px)}
+@media(max-width:700px){.top{padding:14px}.top .status{display:none}.title{font-size:17vw}.lede{font-size:13px;margin-top:22px}.card{width:58vw}.depth{font-size:54px}#hud{left:14px;bottom:14px}.nav{right:12px;bottom:12px}.card .meta span:last-child{display:none}}
+</style>
+</head>
+<body>
+<div id="grain"></div><div class="top"><div class="brand">FORMIKAT</div><div class="status">Experiment 07<br>Raum als geologische Zeit</div></div>
+<section id="intro"><div class="intro-inner"><div class="eyebrow">Im Steinbruch der Zeit · 2020</div><h1 class="title">unter<br><span>der oberfläche</span></h1><p class="lede">Keine virtuelle Kopie der Ausstellung. Stattdessen wird ihr Gestaltungsprinzip selbst zum Interface: sechs Räume werden zu geologischen Schichten, durch die man sich vor und zurück gräbt.</p><button class="enter" id="enter">In den Steinbruch ↓</button><div class="hint">Scroll / Wischen / Ziehen</div></div></section>
+<div id="rail"></div>
+<div id="hud"><div class="meter"><i id="meter"></i></div><div class="depth" id="depth">0<small> m</small></div></div>
+<div class="nav"><button id="prev" aria-label="zurück">↑</button><button id="next" aria-label="weiter">↓</button></div>
+<aside id="detail"><button class="close" id="close">×</button><div class="detail-no" id="detailNo"></div><div class="detail-title" id="detailTitle"></div><div class="detail-copy" id="detailCopy"></div><img class="detail-img" id="detailImg" alt=""></aside>
+<script type="module">
+import * as THREE from 'https://unpkg.com/three@0.164.1/build/three.module.js';
+
+const data=[
+ {n:'01',t:'ZEITPORTAL',d:'Raum 1',img:'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-280_bmz.jpg',copy:'Der Eintritt ist kein Türrahmen, sondern eine ausgeschnittene Form im Dunkel. Im digitalen Steinbruch wird daraus der Nullpunkt: ab hier zählt Tiefe statt Seitenfolge.'},
+ {n:'02',t:'ENTDECKEN',d:'Raum 2',img:'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-9_bmz.jpg',copy:'Vitrinen, Karten und historische Bilder bilden kein Raster, sondern Fundstellen. Im Experiment tauchen sie wie freigelegte Einschlüsse zwischen massiven Schichten auf.'},
+ {n:'03',t:'SCHICHTUNG',d:'Raum 2',img:'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-11_bmz.jpg',copy:'Die Ausstellung erzählt nach dem Vorbild der Steine Schicht für Schicht. Hier wird dieser Satz wörtlich zur Navigation: Bewegung durch Tiefe ersetzt das klassische Scrollen.'},
+ {n:'04',t:'GLAUBEN',d:'Raum 4',img:'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-49_bmz.jpg',copy:'Objekte und Bilder liegen in einem reliefartigen Raum. Die virtuelle Architektur reagiert wie ein Schnitt durch Gestein: rau, dunkel, von einzelnen Lichtadern durchzogen.'},
+ {n:'05',t:'FREILEGEN',d:'Raum 5',img:'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-257_bmz.jpg',copy:'Nicht alles ist gleichzeitig sichtbar. Erst durch Bewegung verschieben sich die Schichten gegeneinander und geben Bilder frei – wie ein Fund, nicht wie eine Galerie.'},
+ {n:'06',t:'ANTHROPOZÄN',d:'Raum 6',img:'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-143.jpg',copy:'Am tiefsten Punkt kippt der Blick: Der Stein ist nicht mehr nur Archiv der Vergangenheit, sondern Projektionsfläche für die Spuren der Gegenwart.'}
+];
+
+const scene=new THREE.Scene(); scene.fog=new THREE.FogExp2(0x090a0a,.031);
+const camera=new THREE.PerspectiveCamera(48,innerWidth/innerHeight,.1,120); camera.position.set(0,0,9);
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'}); renderer.setPixelRatio(Math.min(devicePixelRatio,1.6)); renderer.setSize(innerWidth,innerHeight); renderer.outputColorSpace=THREE.SRGBColorSpace; document.body.prepend(renderer.domElement);
+scene.add(new THREE.HemisphereLight(0x77818a,0x0a0908,1.25)); const key=new THREE.DirectionalLight(0xd7ff99,1.6); key.position.set(4,8,6); scene.add(key);
+const strata=new THREE.Group(); scene.add(strata);
+const mats=[0x2a2c2b,0x343332,0x25292a,0x3a3935,0x202425,0x31332f];
+for(let i=0;i<34;i++){
+  const z=-i*2.15; const w=6.4+Math.sin(i*.73)*2.2; const h=4.0+Math.cos(i*.47)*1.5;
+  const geo=new THREE.BoxGeometry(w,h,.45+Math.random()*.7,2,2,1);
+  const pos=geo.attributes.position; for(let p=0;p<pos.count;p++){const x=pos.getX(p),y=pos.getY(p); pos.setX(p,x+Math.sin(y*2.4+i)*.09); pos.setY(p,y+Math.sin(x*1.7-i)*.08)} pos.needsUpdate=true; geo.computeVertexNormals();
+  const mat=new THREE.MeshStandardMaterial({color:mats[i%mats.length],roughness:.95,metalness:.02}); const m=new THREE.Mesh(geo,mat);
+  m.position.set(Math.sin(i*.61)*2.4,Math.cos(i*.43)*1.45,z); m.rotation.z=Math.sin(i*.37)*.18; m.rotation.y=Math.cos(i*.29)*.12; strata.add(m);
+  if(i%5===0){const seam=new THREE.Mesh(new THREE.BoxGeometry(w*.72,.025,.9),new THREE.MeshBasicMaterial({color:0xd7ff49})); seam.position.set(m.position.x,m.position.y+.4,z+.18); seam.rotation.z=m.rotation.z; strata.add(seam)}
+}
+
+const rail=document.getElementById('rail'); const cards=[];
+data.forEach((x,i)=>{const el=document.createElement('article');el.className='card';el.innerHTML=`<img src="${x.img}" alt="${x.t}"><div class="meta"><b>${x.n} · ${x.t}</b><span>${x.d}</span></div>`;el.onclick=()=>openDetail(i);rail.appendChild(el);cards.push(el)});
+let current=0, target=0, dragY=0, lastY=0, dragging=false, yaw=0, pitch=0, tyaw=0,tpitch=0,entered=false;
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+function setTarget(v){target=clamp(v,0,data.length-1);}
+addEventListener('wheel',e=>{if(!entered)return; setTarget(target+Math.sign(e.deltaY)*.22)},{passive:true});
+addEventListener('pointerdown',e=>{dragging=true;lastY=e.clientY;dragY=e.clientY});
+addEventListener('pointermove',e=>{if(!dragging)return; const dy=e.clientY-lastY; lastY=e.clientY; if(entered)setTarget(target-dy*.006); tyaw+=(e.movementX||0)*.0018; tpitch=clamp(tpitch+dy*.0008,-.16,.16)});
+addEventListener('pointerup',()=>dragging=false);
+document.getElementById('next').onclick=()=>setTarget(Math.round(target)+1);document.getElementById('prev').onclick=()=>setTarget(Math.round(target)-1);
+document.getElementById('enter').onclick=()=>{entered=true;document.getElementById('intro').classList.add('hidden')};
+function openDetail(i){document.body.classList.add('detail-open');const x=data[i];detailNo.textContent=`${x.n} / ${x.d}`;detailTitle.textContent=x.t;detailCopy.textContent=x.copy;detailImg.src=x.img} document.getElementById('close').onclick=()=>document.body.classList.remove('detail-open');
+function layoutCards(){
+ const w=innerWidth,h=innerHeight;
+ cards.forEach((el,i)=>{const dz=(i-current); const visible=Math.abs(dz)<1.7; el.style.opacity=visible?String(clamp(1-Math.abs(dz)*.55,0,1)):'0'; el.style.pointerEvents=visible?'auto':'none'; const side=i%2===0?1:-1; const x=w*.5+side*(w<700?w*.18:w*.23)+Math.sin(i*2.1)*w*.035; const y=h*.5+dz*h*.52; const s=1-Math.min(Math.abs(dz)*.18,.35); el.style.transform=`translate3d(${x-(w<700?w*.29:Math.min(w*.17,220))}px,${y-h*.16}px,0) scale(${s}) rotate(${side*dz*1.2}deg)`; });
+}
+function animate(){requestAnimationFrame(animate); current+=(target-current)*.055; yaw+=(tyaw-yaw)*.05; pitch+=(tpitch-pitch)*.05; const depth=current*7.4; camera.position.z=9-depth; camera.position.x=Math.sin(current*.7)*1.35+yaw*4; camera.position.y=Math.cos(current*.53)*.7+pitch*4; camera.lookAt(camera.position.x*.18,camera.position.y*.15,camera.position.z-7); strata.rotation.z=Math.sin(current*.31)*.025; strata.children.forEach((m,i)=>{if(i%2===0)m.rotation.x=Math.sin(performance.now()*.0002+i)*.01}); renderer.render(scene,camera); layoutCards(); document.getElementById('depth').innerHTML=`${Math.round(depth)}<small> m</small>`; document.getElementById('meter').style.height=`${8+(current/(data.length-1))*88}%`; }
+animate();
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+</script>
+</body></html>

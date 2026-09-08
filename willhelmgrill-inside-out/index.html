@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>FORMIKAT — Willhelmgrill / Inside Out</title>
+<style>
+  :root{--ink:#111;--paper:#ecebe7;--acid:#ff4a16;--line:rgba(17,17,17,.18)}
+  *{box-sizing:border-box} html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+  body{touch-action:none}
+  canvas{position:fixed;inset:0;display:block}
+  .ui{position:fixed;inset:0;pointer-events:none}
+  .top{position:absolute;left:18px;right:18px;top:14px;display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+  .brand{font-size:13px;font-weight:700;letter-spacing:.18em}.meta{text-align:right;font-size:10px;line-height:1.25;letter-spacing:.08em;text-transform:uppercase;max-width:220px}
+  .title{position:absolute;left:18px;bottom:18px;width:min(590px,calc(100vw - 36px))}
+  h1{font-size:clamp(44px,8vw,108px);line-height:.78;letter-spacing:-.07em;margin:0;font-weight:700}
+  .sub{margin-top:13px;display:flex;gap:14px;align-items:center;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--acid);box-shadow:0 0 18px var(--acid)}
+  .rail{position:absolute;right:18px;top:50%;transform:translateY(-50%);width:min(310px,34vw);pointer-events:auto}
+  .mode{display:flex;justify-content:space-between;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px}.mode b{font-size:10px}
+  input[type=range]{appearance:none;width:100%;height:28px;background:transparent;margin:0;cursor:ew-resize}
+  input[type=range]::-webkit-slider-runnable-track{height:1px;background:var(--ink)}
+  input[type=range]::-webkit-slider-thumb{appearance:none;width:14px;height:14px;border:2px solid var(--ink);background:var(--paper);border-radius:50%;margin-top:-6px}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:4px}
+  .step{font-size:9px;text-transform:uppercase;letter-spacing:.08em;padding-top:7px;border-top:1px solid var(--line);opacity:.42;transition:.2s}.step.on{opacity:1;border-color:var(--ink)}
+  .hint{position:absolute;left:50%;top:18px;transform:translateX(-50%);font-size:9px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+  .card{position:absolute;right:18px;bottom:18px;width:min(315px,37vw);pointer-events:auto;border:1px solid var(--ink);background:rgba(236,235,231,.88);backdrop-filter:blur(8px);overflow:hidden;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .3s}
+  .card img{width:100%;display:block;aspect-ratio:1.47;object-fit:cover;filter:grayscale(1);mix-blend-mode:multiply}
+  .caption{padding:9px 10px 11px;display:flex;justify-content:space-between;gap:8px;font-size:9px;letter-spacing:.06em;text-transform:uppercase}
+  .hot{position:absolute;left:50%;top:50%;width:20px;height:20px;margin:-10px;border-radius:50%;border:1px solid var(--ink);pointer-events:auto;cursor:pointer;transition:.2s}.hot:before,.hot:after{content:"";position:absolute;background:var(--ink);left:50%;top:50%;transform:translate(-50%,-50%)}.hot:before{width:8px;height:1px}.hot:after{height:8px;width:1px}.hot:hover{background:var(--acid);transform:scale(1.18)}
+  .info{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:210px;font-size:10px;line-height:1.45;letter-spacing:.025em;opacity:.78}.info strong{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px}
+  .pulse{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--acid);margin-right:6px;animation:p 1.4s infinite}@keyframes p{50%{opacity:.2;transform:scale(.65)}}
+  @media(max-width:760px){
+    .top{left:12px;right:12px;top:10px}.hint{display:none}.meta{max-width:140px}.title{left:12px;bottom:14px;width:calc(100vw - 24px)}h1{font-size:52px}.sub{padding-right:150px;line-height:1.3}.rail{left:12px;right:12px;top:auto;bottom:118px;transform:none;width:auto}.card{right:12px;bottom:12px;width:130px}.caption{display:none}.info{left:12px;top:76px;transform:none;width:170px;font-size:9px}.card img{aspect-ratio:1.1}.steps{gap:3px}.step{font-size:8px}.mode{font-size:8px}}
+</style>
+</head>
+<body>
+<div class="ui">
+  <div class="top"><div class="brand">FORMIKAT</div><div class="meta">Willhelmgrill · Produktentwicklung<br>Willhelm Technologies GmbH · 2017</div></div>
+  <div class="hint">ziehen = drehen · scrollen / slider = zerlegen</div>
+  <div class="info"><strong><span class="pulse"></span>Technische Anatomie</strong><span id="copy">Die Hülle wirkt ruhig. Darunter arbeitet ein vertikales System aus Hitze, Luft, Bewegung und Elektronik.</span></div>
+  <div class="rail">
+    <div class="mode"><span>Ansicht</span><b id="modeLabel">Hülle</b></div>
+    <input id="explode" type="range" min="0" max="3" value="0" step="0.01" aria-label="Explosionsansicht" />
+    <div class="steps"><div class="step on">Hülle</div><div class="step">Glut</div><div class="step">Luft</div><div class="step">Technik</div></div>
+  </div>
+  <div class="card" id="card"><img id="refimg" src="https://formikat.de/wp-content/uploads/2019/08/Will_MZ_09_WEB.jpg" alt="Willhelmgrill – Bild: Formikat GbR"><div class="caption"><span id="cap">Außen / Innen</span><span>Bild: FORMIKAT</span></div></div>
+  <div class="title"><h1>INSIDE<br>OUT.</h1><div class="sub"><span class="dot"></span><span>Ein Produkt nicht ansehen — sondern durch seine Funktionslogik fahren.</span></div></div>
+</div>
+<script type="module">
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js';
+
+const scene=new THREE.Scene();
+scene.background=new THREE.Color(0xecebe7);
+scene.fog=new THREE.Fog(0xecebe7,9,20);
+const camera=new THREE.PerspectiveCamera(34,innerWidth/innerHeight,.1,100);camera.position.set(5.8,3.8,7.8);
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});renderer.setPixelRatio(Math.min(devicePixelRatio,1.8));renderer.setSize(innerWidth,innerHeight);renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;document.body.prepend(renderer.domElement);
+const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.07;controls.enablePan=false;controls.minDistance=5.2;controls.maxDistance=11;controls.target.set(0,.15,0);controls.autoRotate=true;controls.autoRotateSpeed=.35;
+renderer.domElement.addEventListener('pointerdown',()=>controls.autoRotate=false,{once:true});
+
+scene.add(new THREE.HemisphereLight(0xffffff,0x77736b,2.1));
+const key=new THREE.DirectionalLight(0xffffff,4);key.position.set(4,7,5);key.castShadow=true;scene.add(key);
+const warm=new THREE.PointLight(0xff4a16,28,7,2);warm.position.set(0,.55,.2);scene.add(warm);
+
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(30,30),new THREE.MeshStandardMaterial({color:0xd8d6d0,roughness:1}));floor.rotation.x=-Math.PI/2;floor.position.y=-2.15;floor.receiveShadow=true;scene.add(floor);
+const grid=new THREE.GridHelper(18,18,0xb7b4ae,0xcac7c0);grid.position.y=-2.14;scene.add(grid);
+
+const root=new THREE.Group();scene.add(root);
+const metal=new THREE.MeshStandardMaterial({color:0x181818,roughness:.48,metalness:.72});
+const steel=new THREE.MeshStandardMaterial({color:0xa9a9a5,roughness:.31,metalness:.93});
+const dark=new THREE.MeshStandardMaterial({color:0x292929,roughness:.7,metalness:.35});
+const ember=new THREE.MeshStandardMaterial({color:0xff4a16,emissive:0xff2400,emissiveIntensity:1.8,roughness:.85});
+const glass=new THREE.MeshPhysicalMaterial({color:0xffffff,transmission:.25,transparent:true,opacity:.34,roughness:.15,metalness:.1});
+function box(w,h,d,mat,x,y,z,grp=root){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;grp.add(m);return m}
+
+// Four semantic layers, not a literal CAD replica: shell / fire / airflow / machinery.
+const shell=new THREE.Group(), fire=new THREE.Group(), air=new THREE.Group(), tech=new THREE.Group();root.add(shell,fire,air,tech);
+// shell: open frame + front panels
+box(2.65,.18,2.45,steel,0,1.78,0,shell); box(2.65,.18,2.45,metal,0,-1.72,0,shell);
+box(.18,3.45,.18,metal,-1.23,.02,-1.02,shell);box(.18,3.45,.18,metal,1.23,.02,-1.02,shell);box(.18,3.45,.18,metal,-1.23,.02,1.02,shell);box(.18,3.45,.18,metal,1.23,.02,1.02,shell);
+box(2.25,1.15,.10,dark,0,.78,1.11,shell);box(2.25,.7,.10,glass,0,-.45,1.12,shell);box(2.25,.62,.10,dark,0,-1.17,1.11,shell);
+for(let i=-5;i<=5;i++)box(.12,.08,2.14,metal,i*.2,1.91,0,shell);
+// fire tray
+box(1.85,.14,1.55,steel,0,.38,0,fire);box(1.72,.08,1.42,ember,0,.48,0,fire);
+for(let i=-4;i<=4;i++)for(let j=-3;j<=3;j++){if((i+j)%2===0){const c=new THREE.Mesh(new THREE.CylinderGeometry(.045,.045,.06,10),dark);c.rotation.x=Math.PI/2;c.position.set(i*.17,.53,j*.18);fire.add(c)}}
+// airflow: translucent channels + arrows
+box(1.55,1.45,.22,new THREE.MeshPhysicalMaterial({color:0xbfd8ff,transparent:true,opacity:.22,transmission:.2}),0,-.55,-.72,air);
+const arrowMat=new THREE.MeshBasicMaterial({color:0x6b8cff,transparent:true,opacity:.75});
+for(let i=0;i<4;i++){const a=new THREE.Mesh(new THREE.ConeGeometry(.08,.22,16),arrowMat);a.position.set(-.45+i*.3,-1.05+i*.32,-.58);a.rotation.z=-.2;air.add(a)}
+// tech bay
+box(1.7,.12,1.42,steel,0,-1.28,0,tech);box(.65,.48,.65,dark,-.45,-1.02,0,tech);box(.6,.12,.92,dark,.52,-1.02,.05,tech);
+const fan=new THREE.Mesh(new THREE.TorusGeometry(.24,.065,10,28),metal);fan.position.set(-.45,-1.01,.34);fan.rotation.x=Math.PI/2;tech.add(fan);
+for(let i=0;i<5;i++){const b=box(.025,.35,.08,metal,-.45,-1.01,.34,tech);b.rotation.z=i*Math.PI/5}
+
+// orange section plane as a visual "scanner"
+const scanMat=new THREE.MeshBasicMaterial({color:0xff4a16,transparent:true,opacity:.07,side:THREE.DoubleSide});
+const scan=new THREE.Mesh(new THREE.PlaneGeometry(5,5),scanMat);scan.rotation.y=Math.PI/2;scan.position.x=-1.5;root.add(scan);
+
+const slider=document.getElementById('explode'), label=document.getElementById('modeLabel'), steps=[...document.querySelectorAll('.step')], copy=document.getElementById('copy'), img=document.getElementById('refimg'), cap=document.getElementById('cap');
+const states=[
+ {n:'Hülle',c:'Die Hülle wirkt ruhig. Darunter arbeitet ein vertikales System aus Hitze, Luft, Bewegung und Elektronik.',img:'https://formikat.de/wp-content/uploads/2019/08/Will_MZ_09_WEB.jpg',cap:'Außen / Innen'},
+ {n:'Glut',c:'Die herausnehmbare Glutwanne ist beweglich gelagert. Höhe wird zur Stellgröße für Temperatur.',img:'https://formikat.de/wp-content/uploads/2019/08/Will_MZ_03_WEB.jpg',cap:'Luft + Temperatur'},
+ {n:'Luft',c:'Die Seitenwände sind nicht nur Form: Sie tragen Heizraum und Lineartechnik und führen die Belüftung.',img:'https://formikat.de/wp-content/uploads/2019/08/Will_MZ_03_WEB.jpg',cap:'Funktionsprinzip'},
+ {n:'Technik',c:'Im unteren Staufach sitzen Antrieb, Steuerelektronik und Energieversorgung — thermisch vom Boden entkoppelt.',img:'https://formikat.de/wp-content/uploads/2019/08/Will_MZ_01_WEB.jpg',cap:'Prototyp / Bau'}];
+let target=0,current=0,lastStep=-1;
+function setTarget(v){target=Math.max(0,Math.min(3,v));slider.value=target}
+slider.addEventListener('input',e=>{controls.autoRotate=false;setTarget(+e.target.value)});
+window.addEventListener('wheel',e=>{e.preventDefault();controls.autoRotate=false;setTarget(target+Math.sign(e.deltaY)*.18)},{passive:false});
+let sy=null;window.addEventListener('touchstart',e=>{if(e.touches.length===1)sy=e.touches[0].clientY},{passive:true});window.addEventListener('touchmove',e=>{if(sy!==null&&e.touches.length===1){const dy=sy-e.touches[0].clientY;if(Math.abs(dy)>18){setTarget(target+Math.sign(dy)*.08);sy=e.touches[0].clientY}}},{passive:true});
+function updateState(){const s=Math.max(0,Math.min(3,Math.round(current))); if(s===lastStep)return; lastStep=s;steps.forEach((x,i)=>x.classList.toggle('on',i===s));label.textContent=states[s].n;copy.textContent=states[s].c;img.src=states[s].img;cap.textContent=states[s].cap;}
+
+function animate(t){requestAnimationFrame(animate);current+=(target-current)*.07;updateState();
+ const e=current;
+ shell.children.forEach((m,i)=>{m.position.x += (((i%2?1:-1)*Math.max(0,e-.15)*.24)-m.position.x*(0))*0});
+ // explicit transforms from stored-like groups
+ shell.position.x=THREE.MathUtils.lerp(0,-1.45,Math.min(e/3,1));
+ fire.position.y=THREE.MathUtils.lerp(0,.58,Math.min(Math.max(e-.45,0)/2.55,1));fire.position.z=THREE.MathUtils.lerp(0,.62,Math.min(Math.max(e-.45,0)/2.55,1));
+ air.position.x=THREE.MathUtils.lerp(0,1.15,Math.min(Math.max(e-1,0)/2,1));air.position.z=THREE.MathUtils.lerp(0,-.55,Math.min(Math.max(e-1,0)/2,1));
+ tech.position.y=THREE.MathUtils.lerp(0,-.75,Math.min(Math.max(e-1.7,0)/1.3,1));tech.position.x=THREE.MathUtils.lerp(0,.5,Math.min(Math.max(e-1.7,0)/1.3,1));
+ fire.rotation.y=Math.sin(t*.0005)*.035*(e/3);air.rotation.y=-Math.sin(t*.00045)*.05*(e/3);scan.position.x=-1.7+(t*.00022%3.4);
+ warm.intensity=18+Math.sin(t*.003)*8+e*6;
+ root.rotation.y=Math.sin(t*.00016)*.06;
+ controls.update();renderer.render(scene,camera)}animate(0);
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+</script>
+</body>
+</html>

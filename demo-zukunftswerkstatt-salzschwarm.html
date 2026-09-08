@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>FORMIKAT — Zukunftswerkstatt / Salzschwarm</title>
+<meta name="description" content="Experimentelles FORMIKAT Web-Mockup zur Zukunftswerkstatt Salinemuseum Halle." />
+<style>
+  :root{
+    --red:#e3202a;
+    --paper:#f3efe7;
+    --ink:#151515;
+    --line:rgba(21,21,21,.18);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+  body{touch-action:none}
+  #stage{position:fixed;inset:0;overflow:hidden;background:
+    radial-gradient(circle at 50% 46%,rgba(255,255,255,.85),rgba(243,239,231,.45) 38%,rgba(220,211,196,.35) 70%,rgba(200,190,173,.45) 100%)}
+  #grain{position:absolute;inset:-30%;pointer-events:none;opacity:.14;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E");animation:grain 10s steps(10) infinite}
+  @keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(2%,-3%)}50%{transform:translate(-2%,2%)}75%{transform:translate(3%,1%)}100%{transform:translate(0,0)}}
+  #webgl{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  .hud{position:absolute;inset:0;z-index:30;pointer-events:none}
+  .brand{position:absolute;left:18px;top:16px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+  .brand b{color:var(--red)}
+  .counter{position:absolute;right:18px;top:16px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-align:right}
+  .title{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;width:min(88vw,760px);z-index:2;pointer-events:none;transition:opacity .5s ease,transform .5s ease}
+  .title.hide{opacity:.12;transform:translate(-50%,-50%) scale(.92)}
+  .title .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:10px}
+  .title h1{margin:0;font-size:clamp(42px,9vw,118px);line-height:.82;letter-spacing:-.07em;font-weight:900;text-transform:uppercase}
+  .title h1 span{display:block;color:var(--red)}
+  .title p{max-width:520px;margin:20px auto 0;font-size:14px;line-height:1.35}
+  .prompt{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);font-size:11px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;background:rgba(243,239,231,.7);backdrop-filter:blur(10px);padding:10px 14px;border:1px solid rgba(21,21,21,.16);border-radius:99px;transition:opacity .35s}
+  .sound{position:absolute;left:18px;bottom:18px;pointer-events:auto;border:1px solid var(--ink);background:var(--paper);border-radius:50%;width:46px;height:46px;display:grid;place-items:center;font-size:9px;line-height:1;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.08)}
+  .sound.on{background:var(--red);color:white;border-color:var(--red)}
+  .infoBtn{position:absolute;right:18px;bottom:18px;pointer-events:auto;border:1px solid var(--ink);background:var(--paper);border-radius:50%;width:46px;height:46px;display:grid;place-items:center;font-weight:700;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.08)}
+  .card{position:absolute;will-change:transform;width:clamp(145px,19vw,270px);aspect-ratio:4/3;border:1px solid rgba(21,21,21,.18);box-shadow:0 10px 30px rgba(0,0,0,.16);background:#ddd;overflow:hidden;cursor:grab;user-select:none;z-index:10;transition:box-shadow .25s,filter .25s,opacity .25s;border-radius:2px}
+  .card:active{cursor:grabbing;box-shadow:0 22px 50px rgba(0,0,0,.25)}
+  .card img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+  .card::after{content:attr(data-label);position:absolute;left:8px;bottom:8px;background:rgba(243,239,231,.88);padding:5px 7px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;backdrop-filter:blur(4px)}
+  .card.focus{z-index:50!important;width:min(78vw,820px)!important;aspect-ratio:3/2!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%) rotate(0deg)!important;box-shadow:0 40px 100px rgba(0,0,0,.36);cursor:zoom-out}
+  .card.dim{opacity:.16;filter:saturate(.3) blur(1px)}
+  .panel{position:absolute;z-index:60;right:18px;top:72px;width:min(360px,calc(100vw - 36px));max-height:calc(100vh - 150px);overflow:auto;background:rgba(243,239,231,.92);backdrop-filter:blur(18px);border:1px solid rgba(21,21,21,.25);padding:18px 18px 20px;transform:translateX(calc(100% + 30px));transition:transform .45s cubic-bezier(.2,.8,.2,1);pointer-events:auto}
+  .panel.open{transform:translateX(0)}
+  .panel h2{font-size:26px;line-height:.95;letter-spacing:-.045em;margin:0 0 14px;text-transform:uppercase}
+  .panel p{font-size:13px;line-height:1.45;margin:0 0 12px}
+  .panel .meta{font-size:10px;line-height:1.5;letter-spacing:.12em;text-transform:uppercase;border-top:1px solid var(--line);padding-top:12px}
+  .salt{position:absolute;left:50%;top:50%;width:84px;height:84px;transform:translate(-50%,-50%) rotate(45deg);z-index:4;border:1px solid rgba(227,32,42,.7);background:rgba(255,255,255,.4);box-shadow:inset 0 0 0 10px rgba(227,32,42,.04),0 0 70px rgba(227,32,42,.12);pointer-events:none}
+  .salt::before,.salt::after{content:"";position:absolute;inset:17px;border:1px solid rgba(227,32,42,.55)}
+  .salt::after{inset:31px;background:var(--red);border:0}
+  .trail{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--red);pointer-events:none;z-index:8;opacity:0;mix-blend-mode:multiply}
+  .flash{position:absolute;inset:0;pointer-events:none;background:var(--red);opacity:0;z-index:70}
+  @media (max-width:700px){
+    .brand,.counter{font-size:10px}
+    .title{top:48%}
+    .title h1{font-size:clamp(46px,17vw,82px)}
+    .title p{font-size:12px;width:84vw}
+    .prompt{bottom:78px;font-size:9px}
+    .card{width:42vw}
+    .salt{width:62px;height:62px}
+    .panel{top:58px}
+  }
+  @media (prefers-reduced-motion:reduce){#grain{animation:none}.card{transition:none}}
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="webgl"></canvas>
+  <div id="grain"></div>
+  <div class="salt"></div>
+  <div class="title" id="title">
+    <div class="eyebrow">FORMIKAT × Salinemuseum Halle</div>
+    <h1>Zukunfts<span>werkstatt</span></h1>
+    <p>Eine Ausstellung, die Vergangenheit nicht festhält, sondern in Bewegung versetzt. Zieh an den Bildern, wirf sie in den Raum und lass aus Geschichte neue Konstellationen entstehen.</p>
+  </div>
+  <div class="hud">
+    <div class="brand">FORMI<b>KAT</b> / Experiment 2026</div>
+    <div class="counter"><span id="energy">00</span> / Bewegung</div>
+    <div class="prompt" id="prompt">ziehen · werfen · antippen</div>
+    <button class="sound" id="sound" aria-label="Sound umschalten">Sound</button>
+    <button class="infoBtn" id="infoBtn" aria-label="Projektinfo">i</button>
+  </div>
+  <aside class="panel" id="panel">
+    <h2>Zukunftswerkstatt Salinemuseum</h2>
+    <p>Die Ausstellung verband Salz-Geschichte, Industriekultur und die Tradition der Halloren mit Fragen von morgen. Historische Spuren trafen auf Visionen für Stadt, Umwelt und Gesellschaft.</p>
+    <p>Dieses Experiment übersetzt das Prinzip in ein lebendiges Bildarchiv: Die Ausstellung wird nicht linear erklärt, sondern als physisches System erfahrbar. Bilder können angestoßen, neu geordnet und in andere Beziehungen gebracht werden.</p>
+    <div class="meta">Salinemuseum Halle · 2023<br>Entwurf bis Umsetzung · HOAS LP 1–7<br>Sonderbauten · Ausstellungsbau · Medien<br><br>Fotos: Formikat / Ingo Beljan / Matthias Zänsler</div>
+  </aside>
+  <div class="flash" id="flash"></div>
+</div>
+<script>
+(()=>{
+  const stage=document.getElementById('stage');
+  const title=document.getElementById('title');
+  const prompt=document.getElementById('prompt');
+  const energyEl=document.getElementById('energy');
+  const panel=document.getElementById('panel');
+  const infoBtn=document.getElementById('infoBtn');
+  const soundBtn=document.getElementById('sound');
+  const flash=document.getElementById('flash');
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const photos=[
+    ['https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_01_Foto_Ingo-Beljan.jpg','Heimat der Halloren'],
+    ['https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_02_Foto_Ingo-Beljan.jpg','Spuren im Raum'],
+    ['https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_03_Foto_Matthias-Zaensler.jpg','Industriekultur'],
+    ['https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_04_Foto_Ingo-Beljan.jpg','Salt News'],
+    ['https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_06_Foto_Ingo-Beljan.jpg','Zukunft'],
+    ['https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_07_Foto_Ingo-Beljan.jpg','Werkstatt'],
+    ['https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_9_Foto_Ingo-Beljan.jpg','Dialog']
+  ];
+  const nodes=[];
+  const W=()=>innerWidth,H=()=>innerHeight;
+  let active=null,px=0,py=0,pt=0,energy=0,focused=null,started=false;
+
+  function seed(i){
+    const a=(i/photos.length)*Math.PI*2-.6;
+    const r=Math.min(W(),H())*(innerWidth<700?.29:.36);
+    return {x:W()/2+Math.cos(a)*r,y:H()/2+Math.sin(a)*r,vx:(Math.random()-.5)*.6,vy:(Math.random()-.5)*.6,rot:(Math.random()-.5)*16,vr:(Math.random()-.5)*.12};
+  }
+  photos.forEach((p,i)=>{
+    const el=document.createElement('div'); el.className='card'; el.dataset.label=p[1];
+    el.innerHTML=`<img src="${p[0]}" alt="Zukunftswerkstatt Salinemuseum – ${p[1]}" loading="eager" draggable="false">`;
+    stage.appendChild(el);
+    const s=seed(i); const n={el,...s,w:0,h:0,drag:false,lastMove:0}; nodes.push(n);
+    el.addEventListener('pointerdown',e=>beginDrag(e,n));
+    el.addEventListener('click',e=>{if(performance.now()-n.lastMove>220)toggleFocus(n)});
+  });
+
+  function beginDrag(e,n){
+    if(focused){toggleFocus(focused);return}
+    started=true; title.classList.add('hide'); prompt.style.opacity=.25;
+    active=n;n.drag=true;n.lastMove=performance.now();px=e.clientX;py=e.clientY;pt=performance.now();
+    n.el.setPointerCapture?.(e.pointerId); burst(e.clientX,e.clientY,10); ping(.42);
+  }
+  addEventListener('pointermove',e=>{
+    if(!active)return;
+    const now=performance.now(),dt=Math.max(8,now-pt),dx=e.clientX-px,dy=e.clientY-py;
+    active.x+=dx;active.y+=dy;active.vx=dx/dt*16;active.vy=dy/dt*16;active.vr=dx*.018;
+    energy=Math.min(99,energy+Math.hypot(dx,dy)*.035); px=e.clientX;py=e.clientY;pt=now;active.lastMove=now;trail(e.clientX,e.clientY);
+  },{passive:true});
+  addEventListener('pointerup',()=>{if(active){active.drag=false;active=null}});
+
+  function toggleFocus(n){
+    if(focused===n){n.el.classList.remove('focus');nodes.forEach(x=>x.el.classList.remove('dim'));focused=null;return}
+    if(focused)focused.el.classList.remove('focus'); focused=n;n.el.classList.add('focus');nodes.forEach(x=>{if(x!==n)x.el.classList.add('dim')});
+    title.classList.add('hide');prompt.style.opacity=0;ping(.58);
+  }
+
+  function burst(x,y,count=7){
+    flash.animate([{opacity:.16},{opacity:0}],{duration:260,easing:'ease-out'});
+    for(let i=0;i<count;i++){const d=document.createElement('i');d.className='trail';d.style.left=x+'px';d.style.top=y+'px';stage.appendChild(d);const a=Math.random()*Math.PI*2,r=20+Math.random()*90;d.animate([{transform:'translate(-50%,-50%) scale(1)',opacity:.85},{transform:`translate(calc(-50% + ${Math.cos(a)*r}px),calc(-50% + ${Math.sin(a)*r}px)) scale(.1)`,opacity:0}],{duration:450+Math.random()*400,easing:'cubic-bezier(.1,.7,.2,1)'}).onfinish=()=>d.remove()}
+  }
+  function trail(x,y){if(Math.random()>.45)return;const d=document.createElement('i');d.className='trail';d.style.left=x+'px';d.style.top=y+'px';stage.appendChild(d);d.animate([{transform:'translate(-50%,-50%) scale(.8)',opacity:.55},{transform:`translate(-50%,${-20-Math.random()*45}px) scale(.1)`,opacity:0}],{duration:420}).onfinish=()=>d.remove()}
+
+  // procedural audio: tiny salt-crystal clicks, only after explicit user action
+  let ctx=null,master=null,sound=false;
+  function audioInit(){if(ctx)return;ctx=new (window.AudioContext||window.webkitAudioContext)();master=ctx.createGain();master.gain.value=.12;master.connect(ctx.destination)}
+  function ping(intensity=.3){if(!sound)return;audioInit();const o=ctx.createOscillator(),g=ctx.createGain(),f=900+Math.random()*1500;o.type='sine';o.frequency.setValueAtTime(f,ctx.currentTime);o.frequency.exponentialRampToValueAtTime(f*.55,ctx.currentTime+.09);g.gain.setValueAtTime(.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(Math.max(.005,intensity*.15),ctx.currentTime+.004);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+.11);o.connect(g);g.connect(master);o.start();o.stop(ctx.currentTime+.12)}
+  soundBtn.onclick=()=>{sound=!sound;audioInit();if(ctx.state==='suspended')ctx.resume();soundBtn.classList.toggle('on',sound);soundBtn.textContent=sound?'Sound on':'Sound';if(sound){ping(.7);burst(42,H()-42,8)}};
+  infoBtn.onclick=()=>panel.classList.toggle('open');
+
+  // Background field: a lightweight animated line system, no dependency / no WebGL requirement.
+  const c=document.getElementById('webgl'),g=c.getContext('2d');let dpr=1,stars=[];
+  function resize(){dpr=Math.min(devicePixelRatio||1,2);c.width=W()*dpr;c.height=H()*dpr;c.style.width=W()+'px';c.style.height=H()+'px';g.setTransform(dpr,0,0,dpr,0,0);stars=Array.from({length:innerWidth<700?32:58},()=>({x:Math.random()*W(),y:Math.random()*H(),z:Math.random(),a:Math.random()*Math.PI*2}))}
+  addEventListener('resize',()=>{resize();nodes.forEach((n,i)=>{if(!n.drag&&!focused)Object.assign(n,seed(i))})});resize();
+
+  function drawField(t){g.clearRect(0,0,W(),H());const cx=W()/2,cy=H()/2;g.lineWidth=1;
+    stars.forEach((s,i)=>{s.a+=.0015+.001*s.z;const rr=(35+s.z*Math.min(W(),H())*.52)*(1+Math.sin(t*.0003+i)*.04);const x=cx+Math.cos(s.a+i)*rr,y=cy+Math.sin(s.a*1.07+i)*rr;g.beginPath();g.strokeStyle=`rgba(227,32,42,${.035+s.z*.08})`;g.moveTo(cx,cy);g.lineTo(x,y);g.stroke();g.beginPath();g.fillStyle=`rgba(21,21,21,${.1+s.z*.25})`;g.arc(x,y,1+s.z*1.3,0,Math.PI*2);g.fill()})
+  }
+
+  function tick(t){
+    drawField(t);
+    if(!focused){
+      const cx=W()/2,cy=H()/2;
+      nodes.forEach((n,i)=>{
+        n.w=n.el.offsetWidth;n.h=n.el.offsetHeight;
+        if(!n.drag && !reduced){
+          const dx=cx-n.x,dy=cy-n.y,dist=Math.max(90,Math.hypot(dx,dy));
+          // weak orbital attraction plus mutual repulsion: image archive behaves like loose matter
+          const target=Math.min(W(),H())*(innerWidth<700?.31:.38);
+          const pull=(dist-target)*.000018;
+          n.vx+=dx*pull;n.vy+=dy*pull;
+          nodes.forEach(m=>{if(m===n)return;const rx=n.x-m.x,ry=n.y-m.y,rd=Math.max(30,Math.hypot(rx,ry));if(rd<Math.min(n.w,n.h)*.9){const f=(1-rd/(Math.min(n.w,n.h)*.9))*.055;n.vx+=rx/rd*f;n.vy+=ry/rd*f}});
+          n.vx*=.992;n.vy*=.992;n.vr*=.99;n.x+=n.vx;n.y+=n.vy;n.rot+=n.vr;
+          const margin=18;if(n.x<n.w/2+margin){n.x=n.w/2+margin;n.vx=Math.abs(n.vx)*.7}if(n.x>W()-n.w/2-margin){n.x=W()-n.w/2-margin;n.vx=-Math.abs(n.vx)*.7}if(n.y<n.h/2+margin){n.y=n.h/2+margin;n.vy=Math.abs(n.vy)*.7}if(n.y>H()-n.h/2-margin){n.y=H()-n.h/2-margin;n.vy=-Math.abs(n.vy)*.7}
+        }
+        n.el.style.transform=`translate3d(${n.x-n.w/2}px,${n.y-n.h/2}px,0) rotate(${n.rot}deg)`;
+      });
+    }
+    energy*=.982;energyEl.textContent=String(Math.round(energy)).padStart(2,'0');
+    requestAnimationFrame(tick)
+  }
+  requestAnimationFrame(tick);
+
+  // wake-up gesture: whole composition reacts, echoing the one-character / one-trick logic of Pablo.
+  stage.addEventListener('dblclick',e=>{
+    if(e.target.closest('.panel,button,.card'))return;started=true;title.classList.add('hide');
+    nodes.forEach(n=>{const a=Math.atan2(n.y-H()/2,n.x-W()/2);n.vx+=Math.cos(a)*(6+Math.random()*5);n.vy+=Math.sin(a)*(6+Math.random()*5);n.vr+=(Math.random()-.5)*1.8});energy=99;burst(e.clientX,e.clientY,18);ping(.85)
+  });
+  let lastTap=0;stage.addEventListener('pointerdown',e=>{if(e.target===stage||e.target.id==='webgl'||e.target.id==='grain'){const now=Date.now();if(now-lastTap<330){nodes.forEach(n=>{const a=Math.atan2(n.y-e.clientY,n.x-e.clientX);n.vx+=Math.cos(a)*8;n.vy+=Math.sin(a)*8});energy=99;burst(e.clientX,e.clientY,16);ping(.8)}lastTap=now}});
+})();
+</script>
+</body>
+</html>

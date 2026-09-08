@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <title>FORMIKAT — Zukunftswerkstatt / SALT ORBIT</title>
+  <meta name="theme-color" content="#0b0909" />
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <style>
+    :root{--red:#e72b25;--ink:#0b0909;--paper:#eee9df;--line:rgba(238,233,223,.28)}
+    *{box-sizing:border-box} html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--ink);font-family:Arial,Helvetica,sans-serif;color:var(--paper)}
+    a-scene{position:fixed!important;inset:0}
+    #grain{position:fixed;inset:0;z-index:5;pointer-events:none;opacity:.13;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");mix-blend-mode:screen}
+    #topbar{position:fixed;z-index:20;top:0;left:0;right:0;display:flex;align-items:flex-start;justify-content:space-between;padding:18px 20px;pointer-events:none;text-transform:uppercase;letter-spacing:.08em;font-size:11px}
+    .brand{font-weight:800;font-size:14px;letter-spacing:-.03em}.brand span{color:var(--red)}
+    .coords{text-align:right;line-height:1.5;opacity:.65}
+    #intro{position:fixed;z-index:30;inset:0;background:var(--ink);display:grid;place-items:center;padding:24px;transition:opacity .8s ease,visibility .8s ease}
+    #intro.off{opacity:0;visibility:hidden}.introbox{width:min(780px,100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0 28px}
+    .kicker{text-transform:uppercase;font-size:11px;letter-spacing:.18em;color:var(--red);margin-bottom:16px}.introbox h1{font-size:clamp(46px,11vw,112px);line-height:.78;letter-spacing:-.07em;margin:0 0 24px;text-transform:uppercase}.introbox h1 i{font-style:normal;color:var(--red)}
+    .introbox p{max-width:580px;margin:0 0 24px;font-size:14px;line-height:1.45;color:#c9c3b9}.enter{appearance:none;border:1px solid var(--paper);background:var(--paper);color:var(--ink);padding:13px 17px;text-transform:uppercase;font-weight:800;letter-spacing:.08em;cursor:pointer}
+    #panel{position:fixed;z-index:15;left:20px;bottom:20px;width:min(390px,calc(100vw - 40px));background:rgba(11,9,9,.86);backdrop-filter:blur(12px);border:1px solid var(--line);padding:14px 14px 15px;transition:.35s ease;transform:translateY(calc(100% + 30px));opacity:0;pointer-events:none}
+    #panel.show{transform:translateY(0);opacity:1;pointer-events:auto}.panel-index{font-size:10px;letter-spacing:.16em;color:var(--red);text-transform:uppercase}.panel-title{font-size:28px;letter-spacing:-.045em;line-height:.95;margin:8px 0 10px;text-transform:uppercase}.panel-copy{font-size:12px;line-height:1.45;color:#c9c3b9;margin:0}.panel-link{display:inline-block;margin-top:12px;color:var(--paper);font-size:10px;text-transform:uppercase;letter-spacing:.13em;text-decoration:none;border-bottom:1px solid var(--paper);padding-bottom:2px}
+    #hint{position:fixed;z-index:12;right:20px;bottom:20px;width:220px;font-size:10px;line-height:1.45;text-transform:uppercase;letter-spacing:.09em;color:#aaa39a;text-align:right;pointer-events:none}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);margin-right:7px}
+    #crosshair{position:fixed;z-index:14;left:50%;top:50%;width:18px;height:18px;transform:translate(-50%,-50%);pointer-events:none}#crosshair:before,#crosshair:after{content:"";position:absolute;background:rgba(255,255,255,.65)}#crosshair:before{width:18px;height:1px;left:0;top:8px}#crosshair:after{width:1px;height:18px;left:8px;top:0}
+    #mobile{display:none;position:fixed;z-index:18;right:16px;bottom:18px;gap:7px;grid-template-columns:48px 48px 48px;grid-template-rows:48px 48px;touch-action:none}.pad{border:1px solid var(--line);background:rgba(11,9,9,.68);color:var(--paper);font-size:18px;backdrop-filter:blur(8px)}.pad.up{grid-column:2}.pad.left{grid-column:1;grid-row:2}.pad.down{grid-column:2;grid-row:2}.pad.right{grid-column:3;grid-row:2}
+    #route{position:fixed;z-index:16;top:50%;right:20px;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px}.routeBtn{width:8px;height:32px;padding:0;border:0;background:rgba(255,255,255,.22);cursor:pointer}.routeBtn.active{background:var(--red)}
+    @media(max-width:760px){#hint{display:none}#mobile{display:grid}#panel{left:14px;bottom:126px;width:calc(100vw - 28px)}#route{right:10px}.coords{display:none}#topbar{padding:14px}.introbox h1{font-size:18vw}}
+  </style>
+</head>
+<body>
+  <div id="grain"></div>
+  <div id="intro">
+    <div class="introbox">
+      <div class="kicker">FORMIKAT × SALINEMUSEUM HALLE / EXPERIMENT 01</div>
+      <h1>SALT<br><i>ORBIT</i></h1>
+      <p>Eine begehbare Erinnerung der „Zukunftswerkstatt“: keine virtuelle Kopie der Ausstellung, sondern ein räumlicher Zeitkörper aus Salz, Industrie, Bildern und möglichen Zukünften.</p>
+      <button class="enter" id="enter">Raum betreten →</button>
+    </div>
+  </div>
+
+  <div id="topbar"><div class="brand">FORMI<span>KAT</span></div><div class="coords">Zukunftswerkstatt Salinemuseum<br>Halle (Saale) · 2023</div></div>
+  <div id="crosshair"></div>
+  <div id="route"><button class="routeBtn active" data-stop="0" aria-label="Start"></button><button class="routeBtn" data-stop="1" aria-label="Vergangenheit"></button><button class="routeBtn" data-stop="2" aria-label="Gegenwart"></button><button class="routeBtn" data-stop="3" aria-label="Zukunft"></button></div>
+  <div id="panel"><div class="panel-index" id="pIndex">Fundstück 01</div><div class="panel-title" id="pTitle">Heimat der Halloren</div><p class="panel-copy" id="pCopy"></p><a class="panel-link" href="https://formikat.de/2023/zukunftswerkstatt-salinemuseum/" target="_blank" rel="noopener">Projekt auf formikat.de ↗</a></div>
+  <div id="hint"><span class="dot"></span>Mit Maus/Finger umsehen · WASD oder Pfeile bewegen · rote Marker öffnen</div>
+  <div id="mobile"><button class="pad up" data-move="f">↑</button><button class="pad left" data-move="l">←</button><button class="pad down" data-move="b">↓</button><button class="pad right" data-move="r">→</button></div>
+
+  <a-scene renderer="antialias: true; colorManagement: true; physicallyCorrectLights: true;" vr-mode-ui="enabled: true" loading-screen="backgroundColor: #0b0909; dotsColor: #e72b25">
+    <a-assets timeout="8000">
+      <img id="saline1" crossorigin="anonymous" src="https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_01_Foto_Ingo-Beljan.jpg">
+      <img id="saline2" crossorigin="anonymous" src="https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_02_Foto_Ingo-Beljan.jpg">
+      <img id="saline3" crossorigin="anonymous" src="https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_03_Foto_Matthias-Zaensler.jpg">
+    </a-assets>
+
+    <a-entity light="type: ambient; color: #998d82; intensity: .55"></a-entity>
+    <a-entity light="type: directional; color: #fff3db; intensity: 1.5" position="-4 9 4"></a-entity>
+    <a-entity light="type: point; color: #e72b25; intensity: 2.2; distance: 20" position="0 2 -7"></a-entity>
+    <a-sky color="#0b0909"></a-sky>
+    <a-plane rotation="-90 0 0" width="90" height="90" color="#151211" material="roughness:1"></a-plane>
+
+    <!-- industrial grid / exhibition trace -->
+    <a-entity position="0 0 -8">
+      <a-box position="-5 1.8 0" width=".07" height="3.6" depth="18" color="#1e1b19"></a-box>
+      <a-box position="5 1.8 0" width=".07" height="3.6" depth="18" color="#1e1b19"></a-box>
+      <a-box position="0 3.6 -4" width="10" height=".08" depth=".12" color="#332d28"></a-box>
+      <a-box position="0 3.6 -10" width="10" height=".08" depth=".12" color="#332d28"></a-box>
+      <a-box position="0 3.6 -16" width="10" height=".08" depth=".12" color="#332d28"></a-box>
+    </a-entity>
+
+    <!-- salt field -->
+    <a-dodecahedron position="-3.8 .65 -5" radius=".8" color="#e8e2d7" opacity=".45" material="roughness:.9;metalness:.05"></a-dodecahedron>
+    <a-octahedron position="3.4 .45 -6.4" radius=".65" color="#fff8ec" opacity=".35"></a-octahedron>
+    <a-dodecahedron position="-4.2 .34 -9" radius=".45" color="#e8e2d7" opacity=".38"></a-dodecahedron>
+    <a-octahedron position="4.1 .8 -11" radius="1" color="#fff8ec" opacity=".28"></a-octahedron>
+    <a-dodecahedron position="-3.5 .9 -14.7" radius="1.1" color="#fff8ec" opacity=".32"></a-dodecahedron>
+    <a-octahedron position="3.8 .4 -17.5" radius=".55" color="#e8e2d7" opacity=".4"></a-octahedron>
+    <a-dodecahedron position="1.8 3.1 -9.5" radius=".35" color="#fff8ec" opacity=".18" animation="property: rotation; to: 360 180 90; loop:true; dur:18000; easing:linear"></a-dodecahedron>
+    <a-octahedron position="-2.3 2.6 -13.6" radius=".28" color="#fff8ec" opacity=".22" animation="property: rotation; to: 0 360 180; loop:true; dur:14000; easing:linear"></a-octahedron>
+
+    <!-- temporal spine -->
+    <a-cylinder position="0 .02 -4" radius="1.25" height=".03" color="#e72b25" opacity=".75"></a-cylinder>
+    <a-cylinder position="0 .02 -10" radius="1.25" height=".03" color="#e72b25" opacity=".75"></a-cylinder>
+    <a-cylinder position="0 .02 -16" radius="1.25" height=".03" color="#e72b25" opacity=".75"></a-cylinder>
+    <a-box position="0 .015 -10" width=".035" height=".02" depth="16" color="#e72b25"></a-box>
+
+    <!-- Station 1 -->
+    <a-entity position="0 1.7 -5.4">
+      <a-plane src="#saline1" width="4.4" height="2.75" material="shader:flat" position="0 0 0"></a-plane>
+      <a-box width="4.65" height="3" depth=".08" color="#e72b25" position="0 0 .1" opacity=".18"></a-box>
+      <a-ring class="clickable station" data-id="0" radius-inner=".15" radius-outer=".24" color="#e72b25" position="2.65 .1 .4" animation="property:scale;from:1 1 1;to:1.25 1.25 1.25;dir:alternate;loop:true;dur:950"></a-ring>
+      <a-text value="01 / ERINNERUNG" color="#eee9df" width="4" position="-2.2 1.72 .1" align="left"></a-text>
+    </a-entity>
+
+    <!-- Station 2 rotated like a real exhibition fragment -->
+    <a-entity position="2.1 1.65 -11" rotation="0 -20 0">
+      <a-plane src="#saline2" width="4.5" height="2.8" material="shader:flat"></a-plane>
+      <a-box width="4.75" height="3.05" depth=".08" color="#e72b25" position="0 0 .1" opacity=".18"></a-box>
+      <a-ring class="clickable station" data-id="1" radius-inner=".15" radius-outer=".24" color="#e72b25" position="-2.7 .1 .4" animation="property:scale;from:1 1 1;to:1.25 1.25 1.25;dir:alternate;loop:true;dur:1100"></a-ring>
+      <a-text value="02 / GEGENWART" color="#eee9df" width="4" position="-2.2 1.74 .1"></a-text>
+    </a-entity>
+
+    <!-- Station 3 -->
+    <a-entity position="-1.8 1.7 -16.5" rotation="0 18 0">
+      <a-plane src="#saline3" width="4.5" height="2.8" material="shader:flat"></a-plane>
+      <a-box width="4.75" height="3.05" depth=".08" color="#e72b25" position="0 0 .1" opacity=".18"></a-box>
+      <a-ring class="clickable station" data-id="2" radius-inner=".15" radius-outer=".24" color="#e72b25" position="2.7 .1 .4" animation="property:scale;from:1 1 1;to:1.25 1.25 1.25;dir:alternate;loop:true;dur:1250"></a-ring>
+      <a-text value="03 / MOEGLICHKEIT" color="#eee9df" width="4" position="-2.2 1.74 .1"></a-text>
+    </a-entity>
+
+    <!-- speculative future: the exhibition dissolves into an editable object -->
+    <a-entity position="0 2 -22" animation="property:rotation;to:0 360 0;loop:true;dur:28000;easing:linear">
+      <a-icosahedron radius="2.1" color="#e72b25" wireframe="true" opacity=".9"></a-icosahedron>
+      <a-icosahedron radius="1.45" color="#eee9df" wireframe="true" opacity=".42" rotation="45 30 0"></a-icosahedron>
+    </a-entity>
+    <a-text value="ZUKUNFT IST KEIN BILD.\nSIE IST EINE HANDLUNG." color="#eee9df" align="center" width="6" position="0 4.9 -22" rotation="0 180 0"></a-text>
+    <a-ring class="clickable station" data-id="3" radius-inner=".22" radius-outer=".34" color="#e72b25" position="0 1.5 -19.9" rotation="0 180 0" animation="property:scale;from:1 1 1;to:1.3 1.3 1.3;dir:alternate;loop:true;dur:900"></a-ring>
+
+    <a-entity id="rig" position="0 1.6 1.5">
+      <a-camera id="cam" wasd-controls="acceleration: 22" look-controls="touchEnabled: true; mouseEnabled: true">
+        <a-cursor raycaster="objects: .clickable" fuse="false" color="#e72b25" opacity="0"></a-cursor>
+      </a-camera>
+    </a-entity>
+  </a-scene>
+
+  <script>
+    const stops=[
+      {pos:[0,1.6,1.5],rot:0},
+      {pos:[0,1.6,-1.5],rot:0},
+      {pos:[0,1.6,-7.5],rot:0},
+      {pos:[0,1.6,-13.4],rot:0}
+    ];
+    const data=[
+      {i:'Fundstück 01 · Vergangenheit',t:'Heimat der Halloren',c:'Die Zukunftswerkstatt verband Salzgeschichte, Industriekultur und Halloren-Tradition mit Fragen von morgen. Hier wird das reale Ausstellungsbild nicht Hintergrund, sondern räumliches Gedächtnis.'},
+      {i:'Fundstück 02 · Gegenwart',t:'Ausstellung als Werkzeug',c:'FORMIKAT plante die Zukunftswerkstatt vom Entwurf bis zur Umsetzung – inklusive Sonderbauten, Ausstellungsbau und Medien. Im digitalen Raum lösen sich Wand, Bild und Objekt voneinander und werden navigierbar.'},
+      {i:'Fundstück 03 · Material',t:'Industrie wird Landschaft',c:'Historische Spuren treffen auf rote Konstruktionen, Projektionsflächen und reale Exponate. Das Webexperiment übersetzt diese Schichten in einen begehbaren Parcours statt in eine klassische Projektseite.'},
+      {i:'Fundstück 04 · Zukunft',t:'Der unfertige Raum',c:'Die Ausstellung lud Besuchende ein, Szenarien zu entwickeln und Zukunft mitzugestalten. Deshalb endet die Reise bewusst nicht mit einer Dokumentation, sondern mit einem offenen, rotierenden Körper – ein Platzhalter für das, was noch nicht entschieden ist.'}
+    ];
+    const panel=document.getElementById('panel');
+    function showPanel(id){const d=data[id];document.getElementById('pIndex').textContent=d.i;document.getElementById('pTitle').textContent=d.t;document.getElementById('pCopy').textContent=d.c;panel.classList.add('show');setTimeout(()=>panel.classList.remove('show'),8500)}
+    document.querySelectorAll('.station').forEach(el=>el.addEventListener('click',()=>showPanel(+el.dataset.id)));
+    document.getElementById('enter').onclick=()=>document.getElementById('intro').classList.add('off');
+
+    const rig=document.getElementById('rig'), cam=document.getElementById('cam');
+    function goStop(n){const s=stops[n];rig.setAttribute('animation__move',`property: position; to: ${s.pos.join(' ')}; dur: 1400; easing: easeInOutCubic`);document.querySelectorAll('.routeBtn').forEach((b,i)=>b.classList.toggle('active',i===n));if(n>0)showPanel(n-1)}
+    document.querySelectorAll('.routeBtn').forEach((b,i)=>b.onclick=()=>goStop(i));
+
+    function move(dir){
+      const p=rig.object3D.position, q=cam.object3D.getWorldQuaternion(new THREE.Quaternion());
+      const f=new THREE.Vector3(0,0,-1).applyQuaternion(q);f.y=0;f.normalize();
+      const r=new THREE.Vector3(1,0,0).applyQuaternion(q);r.y=0;r.normalize();
+      const step=.65;
+      if(dir==='f')p.addScaledVector(f,step); if(dir==='b')p.addScaledVector(f,-step); if(dir==='l')p.addScaledVector(r,-step); if(dir==='r')p.addScaledVector(r,step);
+      p.x=Math.max(-7,Math.min(7,p.x));p.z=Math.max(-25,Math.min(3,p.z));
+    }
+    let hold;
+    document.querySelectorAll('.pad').forEach(b=>{const start=e=>{e.preventDefault();move(b.dataset.move);clearInterval(hold);hold=setInterval(()=>move(b.dataset.move),120)};const end=()=>clearInterval(hold);b.addEventListener('touchstart',start,{passive:false});b.addEventListener('touchend',end);b.addEventListener('mousedown',start);b.addEventListener('mouseup',end);b.addEventListener('mouseleave',end)});
+
+    // Tiny reactive life: salt crystals breathe according to viewer depth.
+    const scene=document.querySelector('a-scene');
+    scene.addEventListener('loaded',()=>{
+      const crystals=[...document.querySelectorAll('a-dodecahedron,a-octahedron')];
+      function tick(t){const z=rig.object3D.position.z;const pulse=.8+Math.sin(t*.0015)*.08;crystals.forEach((c,i)=>{const s=pulse+(i%3)*.04;c.object3D.scale.setScalar(s)});document.querySelector('.coords').innerHTML=`Zukunftswerkstatt Salinemuseum<br>DEPTH ${Math.abs(z).toFixed(1)} M · 2023`;requestAnimationFrame(tick)}requestAnimationFrame(tick)
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>FORMIKAT — Salz / Zeit / Zukunft</title>
+<meta name="theme-color" content="#0c0c0c" />
+<style>
+  :root{--bg:#0b0b0a;--fg:#f4f0e8;--muted:#aaa69e;--accent:#ff5f32;--line:rgba(255,255,255,.14)}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+  canvas{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+  .grain{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.055;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E")}
+  header{position:fixed;z-index:5;left:0;right:0;top:0;display:flex;justify-content:space-between;align-items:center;padding:18px 22px;mix-blend-mode:difference;color:white;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+  header b{font-size:14px;letter-spacing:.02em}.progress{position:fixed;z-index:5;left:20px;right:20px;bottom:16px;height:1px;background:rgba(255,255,255,.18)}.progress i{display:block;height:1px;width:0;background:#fff}
+  main{position:relative;z-index:3}
+  section{min-height:112vh;display:grid;align-items:center;padding:14vh max(22px,6vw)}
+  .hero{min-height:130vh;align-items:start;padding-top:22vh}
+  .kicker{font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+  h1{font-size:clamp(48px,10vw,150px);line-height:.82;letter-spacing:-.07em;margin:0;max-width:1100px;font-weight:700}
+  h1 span{display:block}.outline{color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.7)}
+  .intro{max-width:520px;margin:44px 0 0 auto;font-size:clamp(18px,2vw,30px);line-height:1.15;letter-spacing:-.025em}
+  .scrollhint{margin-top:70px;font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+  .chapter{grid-template-columns:minmax(0,1fr) minmax(280px,640px);gap:6vw}.chapter:nth-child(even){grid-template-columns:minmax(280px,640px) minmax(0,1fr)}.chapter:nth-child(even) .copy{order:2}
+  .copy{max-width:520px}.num{font-size:11px;letter-spacing:.18em;color:var(--accent);margin-bottom:18px}.copy h2{font-size:clamp(34px,5.5vw,78px);line-height:.92;letter-spacing:-.055em;margin:0 0 22px}.copy p{font-size:clamp(16px,1.5vw,22px);line-height:1.35;color:#d4d0c8;margin:0}
+  .frame{position:relative;aspect-ratio:4/3;transform:perspective(1000px) rotateY(var(--ry,0deg)) rotateX(var(--rx,0deg));transform-style:preserve-3d;transition:filter .4s ease;filter:saturate(.9) contrast(1.03);border:1px solid var(--line);background:#151513;overflow:hidden}.frame img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.035);transition:transform .7s cubic-bezier(.2,.8,.2,1)}.frame:hover img{transform:scale(1)}.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 50%,rgba(255,95,50,.18));mix-blend-mode:screen;pointer-events:none}.caption{position:absolute;left:12px;right:12px;bottom:10px;display:flex;justify-content:space-between;gap:10px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;text-shadow:0 1px 5px #000}
+  .lab{min-height:140vh;align-items:start;padding-top:22vh}.labbox{width:min(100%,1100px);margin:auto;border-top:1px solid var(--line);padding-top:22px}.lab h2{font-size:clamp(42px,8vw,110px);line-height:.86;letter-spacing:-.06em;margin:0 0 40px}.controls{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.control{border:1px solid var(--line);padding:18px;background:rgba(12,12,11,.5);backdrop-filter:blur(6px)}.control label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:12px}.control input{width:100%;accent-color:var(--accent)}.control output{font-size:28px;letter-spacing:-.04em}
+  .end{min-height:110vh;place-items:center;text-align:center}.end h2{font-size:clamp(56px,12vw,180px);letter-spacing:-.08em;line-height:.8;margin:0}.end p{max-width:600px;margin:36px auto 0;color:var(--muted);font-size:14px}.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:10px 14px;margin-top:30px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+  .mobiletap{display:none}
+  @media(max-width:760px){header{padding:14px 14px}.chapter,.chapter:nth-child(even){grid-template-columns:1fr;gap:28px;min-height:118vh}.chapter:nth-child(even) .copy{order:0}.frame{aspect-ratio:3/4}.hero{padding-top:18vh}.intro{margin-left:0}.controls{grid-template-columns:1fr}.progress{left:14px;right:14px}.mobiletap{display:block;position:fixed;right:14px;bottom:26px;z-index:6;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.45);color:#fff;font-size:18px;backdrop-filter:blur(8px)}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.frame{transform:none!important}.frame img{transition:none}}
+</style>
+</head>
+<body>
+<canvas id="stage"></canvas><div class="grain"></div>
+<header><b>FORMIKAT</b><span>Zukunftswerkstatt · Salinemuseum</span><span id="fps">EXP / 01</span></header>
+<div class="progress"><i id="bar"></i></div>
+<button class="mobiletap" id="pulse" aria-label="Kristallimpuls">✦</button>
+<main>
+<section class="hero" data-scene="0">
+  <div>
+    <div class="kicker">Ein räumliches Projektprotokoll · Halle 2023</div>
+    <h1><span>SALZ</span><span class="outline">ZEIT</span><span>ZUKUNFT</span></h1>
+    <p class="intro">Eine Ausstellung über Salzgeschichte, Industriekultur und mögliche Zukünfte — hier nicht als Dokumentation, sondern als Schichtung, durch die man sich bewegt.</p>
+    <div class="scrollhint">↓ durch die Schichten scrollen</div>
+  </div>
+</section>
+<section class="chapter" data-scene="1">
+  <div class="copy"><div class="num">01 / SPUR</div><h2>Vergangenheit ist Material.</h2><p>Die Zukunftswerkstatt verbindet historische Spuren der Saline mit Fragen an Stadt, Umwelt und Gesellschaft. Im digitalen Modell werden diese Spuren zu räumlichen Linien: nichts liegt einfach „hinter“ uns — alles bleibt im Raum.</p></div>
+  <figure class="frame" data-tilt><img loading="lazy" src="https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_01_Foto_Ingo-Beljan.jpg" alt="Zukunftswerkstatt Salinemuseum, Ausstellungsgestaltung von Formikat"><figcaption class="caption"><span>Zukunftswerkstatt</span><span>Foto: Ingo Beljan</span></figcaption></figure>
+</section>
+<section class="chapter" data-scene="2">
+  <div class="copy"><div class="num">02 / WERKSTATT</div><h2>Besucher werden zu Mitautor:innen.</h2><p>Die Ausstellung war als lebendiger Raum angelegt: Ideen ausprobieren, Szenarien entwickeln, Zukunft diskutieren. Deshalb reagiert auch dieses Archiv auf dich — die Geometrie ist kein Hintergrund, sondern ein Zustand des Besuchs.</p></div>
+  <figure class="frame" data-tilt><img loading="lazy" src="https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_02_Foto_Ingo-Beljan.jpg" alt="Zukunftswerkstatt Salinemuseum, interaktive Ausstellung"><figcaption class="caption"><span>Raum als Werkzeug</span><span>Foto: Ingo Beljan</span></figcaption></figure>
+</section>
+<section class="chapter" data-scene="3">
+  <div class="copy"><div class="num">03 / SCHICHT</div><h2>Information bekommt Tiefe.</h2><p>Statt Seiten nacheinander zu öffnen, bleibt jede Station als Schicht sichtbar. Scrollen verschiebt nur den Standpunkt. So wird das Projekt selbst zum begehbaren Gedächtnis.</p></div>
+  <figure class="frame" data-tilt><img loading="lazy" src="https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_03_Foto_Matthias-Zaensler.jpg" alt="Zukunftswerkstatt Salinemuseum, Ausstellungsraum"><figcaption class="caption"><span>Schichten im Raum</span><span>Foto: Matthias Zänsler</span></figcaption></figure>
+</section>
+<section class="lab" data-scene="4">
+ <div class="labbox"><div class="kicker">Experimentierfeld</div><h2>Verändere den digitalen Salzstock.</h2>
+ <div class="controls">
+  <div class="control"><label for="density">Schichtung</label><input id="density" type="range" min="4" max="18" value="10"><output id="densityOut">10</output></div>
+  <div class="control"><label for="twist">Verdrehung</label><input id="twist" type="range" min="0" max="100" value="38"><output id="twistOut">38</output></div>
+  <div class="control"><label for="future">Zukunft</label><input id="future" type="range" min="0" max="100" value="62"><output id="futureOut">62</output></div>
+ </div></div>
+</section>
+<section class="chapter" data-scene="5">
+  <div class="copy"><div class="num">04 / PROTOTYP</div><h2>Die Ausstellung bleibt unfertig.</h2><p>Die Zukunftswerkstatt war ein Schritt in Richtung einer zukünftigen Dauerausstellung. Dieses Prinzip übernimmt der Prototyp: kein abgeschlossener Case, sondern ein veränderbarer Raumzustand.</p></div>
+  <figure class="frame" data-tilt><img loading="lazy" src="https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_04_Foto_Ingo-Beljan.jpg" alt="Zukunftswerkstatt Salinemuseum, Prototyping im Ausstellungsraum"><figcaption class="caption"><span>Vom Entwurf bis Umsetzung</span><span>FORMIKAT</span></figcaption></figure>
+</section>
+<section class="end" data-scene="6"><div><div class="kicker">FORMIKAT · Experiment</div><h2>IDEEN<br>GREIFBAR<br>MACHEN.</h2><p>Ausstellungsdesign / Idee / Planung / Sonderbauten / Ausstellungsbau / Medien · Salinemuseum Halle · 2023</p><div class="tag">Scroll zurück = Zeit zurückdrehen</div></div></section>
+</main>
+<script type="module">
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js';
+const canvas=document.querySelector('#stage');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false,powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio,1.6));renderer.setSize(innerWidth,innerHeight,false);renderer.outputColorSpace=THREE.SRGBColorSpace;
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x0b0b0a);scene.fog=new THREE.FogExp2(0x0b0b0a,.022);
+const camera=new THREE.PerspectiveCamera(47,innerWidth/innerHeight,.1,250);camera.position.set(0,0,15);
+const group=new THREE.Group();scene.add(group);
+scene.add(new THREE.HemisphereLight(0xfff5e6,0x1c1813,1.35));const key=new THREE.DirectionalLight(0xffd4c3,2.4);key.position.set(4,5,8);scene.add(key);
+let density=10,twist=.38,future=.62,pulse=0;
+const palette=[0xf3eee3,0xd8d0c2,0xb9b2a8,0xff5f32,0xe7d7bc,0x6d736d];
+const meshes=[];const lines=[];
+function dispose(){while(group.children.length){const o=group.children.pop();o.geometry?.dispose();if(o.material){(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.dispose())}}meshes.length=0;lines.length=0}
+function build(){dispose();
+  const count=density;for(let i=0;i<count;i++){
+    const z=-i*7.2;const pts=[];const seg=72;const radius=4.2+i*.055;
+    for(let j=0;j<=seg;j++){const a=j/seg*Math.PI*2;const wobble=Math.sin(a*3+i*.7)*(.18+.38*twist)+Math.sin(a*7-i)*.08;pts.push(new THREE.Vector3(Math.cos(a)*(radius+wobble),Math.sin(a)*(radius*.62+wobble*.7),z+Math.sin(a*2+i)*(.45+1.2*twist)))}
+    const curve=new THREE.CatmullRomCurve3(pts,true,'centripetal');
+    const geo=new THREE.TubeGeometry(curve,180,.055+i*.002,5,true);const mat=new THREE.MeshStandardMaterial({color:palette[i%palette.length],roughness:.68,metalness:.05,transparent:true,opacity:i%3===0?.95:.72});const m=new THREE.Mesh(geo,mat);m.userData={i,z,phase:Math.random()*10};group.add(m);meshes.push(m);
+    const points=curve.getPoints(160);const lgeo=new THREE.BufferGeometry().setFromPoints(points);const lmat=new THREE.LineBasicMaterial({color:0xffffff,transparent:true,opacity:.08});const l=new THREE.Line(lgeo,lmat);group.add(l);lines.push(l);
+  }
+  const crystalGeo=new THREE.OctahedronGeometry(1,0);for(let i=0;i<70;i++){const mat=new THREE.MeshStandardMaterial({color:i%8===0?0xff5f32:0xd9d2c7,roughness:.35,transparent:true,opacity:.28+Math.random()*.35});const c=new THREE.Mesh(crystalGeo,mat);const a=Math.random()*Math.PI*2;const r=5.5+Math.random()*6;c.position.set(Math.cos(a)*r,Math.sin(a)*r*.65,-Math.random()*density*7.4);const s=.06+Math.random()*.24;c.scale.setScalar(s);c.rotation.set(Math.random()*3,Math.random()*3,Math.random()*3);c.userData.phase=Math.random()*10;group.add(c)}
+}
+build();
+const pointer={x:0,y:0};addEventListener('pointermove',e=>{pointer.x=(e.clientX/innerWidth-.5)*2;pointer.y=(e.clientY/innerHeight-.5)*2});
+let scroll=0,targetScroll=0;function updateScroll(){const max=document.documentElement.scrollHeight-innerHeight;targetScroll=max?scrollY/max:0;document.querySelector('#bar').style.width=(targetScroll*100)+'%'}addEventListener('scroll',updateScroll,{passive:true});updateScroll();
+const clock=new THREE.Clock();let frames=0,lastF=performance.now();function animate(){requestAnimationFrame(animate);const t=clock.getElapsedTime();scroll+=(targetScroll-scroll)*.055;const depth=Math.max(0,density-1)*7.2;camera.position.z=15-scroll*(depth+24);camera.position.x=pointer.x*(1.2+scroll*1.2);camera.position.y=-pointer.y*.8+Math.sin(scroll*Math.PI*2)*.55;camera.rotation.z=pointer.x*.015;group.rotation.z=scroll*.9*twist+pointer.x*.05;
+  pulse*=.93;meshes.forEach((m,i)=>{m.rotation.z=Math.sin(t*.25+m.userData.phase)*.012;const dz=Math.abs(camera.position.z-m.userData.z);m.material.emissive=new THREE.Color(i%3===0?0x1f0802:0x000000);m.material.emissiveIntensity=(Math.max(0,1-dz/10)*.65+future*.12+pulse*.7)});
+  group.children.forEach(o=>{if(o.type==='Mesh'&&o.geometry.type==='OctahedronGeometry'){o.rotation.x+=.002;o.rotation.y+=.003;o.position.x+=Math.sin(t*.2+o.userData.phase)*.0007}});
+  renderer.render(scene,camera);frames++;const now=performance.now();if(now-lastF>1200){document.querySelector('#fps').textContent='EXP / '+String(Math.round(frames*1000/(now-lastF))).padStart(2,'0');frames=0;lastF=now}}
+animate();
+function resize(){renderer.setPixelRatio(Math.min(devicePixelRatio,innerWidth<700?1.2:1.6));renderer.setSize(innerWidth,innerHeight,false);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix()}addEventListener('resize',resize);
+document.querySelectorAll('[data-tilt]').forEach(el=>{el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.setProperty('--ry',(x*7)+'deg');el.style.setProperty('--rx',(-y*6)+'deg')});el.addEventListener('pointerleave',()=>{el.style.setProperty('--ry','0deg');el.style.setProperty('--rx','0deg')})});
+function bind(id,fn){const a=document.querySelector('#'+id),o=document.querySelector('#'+id+'Out');a.addEventListener('input',()=>{o.value=a.value;fn(+a.value)});o.value=a.value}
+bind('density',v=>{density=v;build()});bind('twist',v=>twist=v/100);bind('future',v=>future=v/100);
+document.querySelector('#pulse').addEventListener('click',()=>pulse=1.4);
+</script>
+</body></html>

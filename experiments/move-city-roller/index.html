@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="theme-color" content="#c7e8ef" />
+  <title>FORMIKAT — MOVE! CITY ROLLER</title>
+  <style>
+    :root{--ink:#171717;--paper:#f4efe7;--blue:#bfdfe8;--pink:#d99aa8;--orange:#d99a2b;--lime:#b9d36b}
+    *{box-sizing:border-box}html,body{margin:0;height:100%;overflow:hidden;background:#dce9e9;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+    canvas{display:block}
+    #app,#stage{position:fixed;inset:0}
+    #stage{z-index:1}
+    .grain{position:fixed;inset:0;pointer-events:none;z-index:3;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.75'/%3E%3C/svg%3E")}
+    .hud{position:fixed;z-index:5;left:0;top:0;width:100%;padding:18px 20px;display:flex;justify-content:space-between;align-items:flex-start;pointer-events:none}
+    .brand{font-weight:900;letter-spacing:-.06em;font-size:clamp(24px,3vw,46px);line-height:.8}.brand small{display:block;font-size:10px;letter-spacing:.16em;margin-top:8px;font-weight:700}
+    .counter{font:700 11px/1.3 monospace;letter-spacing:.08em;text-transform:uppercase;text-align:right;background:rgba(244,239,231,.82);backdrop-filter:blur(8px);padding:9px 11px;border:1px solid rgba(0,0,0,.16)}
+    .intro{position:fixed;z-index:8;inset:0;background:var(--paper);display:grid;place-items:center;padding:24px;transition:.8s cubic-bezier(.2,.8,.2,1)}
+    .intro.hide{opacity:0;visibility:hidden;transform:scale(1.04)}
+    .introBox{width:min(760px,100%);text-align:center}
+    .eyebrow{font:700 11px/1 monospace;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+    h1{font-size:clamp(56px,11vw,138px);line-height:.78;letter-spacing:-.08em;margin:0 0 24px;text-transform:uppercase}
+    .intro p{max-width:520px;margin:0 auto 26px;font-size:clamp(16px,2vw,22px);line-height:1.25}
+    button{font:800 12px/1 Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:inherit;background:#fff;border:2px solid var(--ink);padding:15px 20px;box-shadow:5px 5px 0 var(--ink);cursor:pointer}
+    button:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+    .hint{margin-top:18px!important;font:700 10px/1.4 monospace!important;letter-spacing:.06em;text-transform:uppercase}
+    .cardWrap{position:fixed;z-index:7;inset:0;display:grid;place-items:center;padding:18px;pointer-events:none;opacity:0;transition:.35s}
+    .cardWrap.show{opacity:1;pointer-events:auto;background:rgba(20,20,20,.24);backdrop-filter:blur(5px)}
+    .card{width:min(720px,100%);max-height:84vh;overflow:auto;background:var(--paper);border:2px solid var(--ink);box-shadow:10px 10px 0 var(--ink);display:grid;grid-template-columns:1fr 1fr}
+    .card img{width:100%;height:100%;min-height:330px;object-fit:cover;background:#ccc}
+    .cardText{padding:25px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+    .cardNo{font:700 10px/1 monospace;letter-spacing:.12em;text-transform:uppercase}.card h2{font-size:clamp(32px,5vw,66px);line-height:.9;letter-spacing:-.055em;text-transform:uppercase;margin:12px 0}.card p{font-size:15px;line-height:1.4;margin:0}.card button{align-self:flex-start}
+    .controls{position:fixed;z-index:6;bottom:20px;left:20px;width:138px;height:138px;display:none}
+    .controls button{position:absolute;width:46px;height:46px;padding:0;border:1.5px solid var(--ink);box-shadow:3px 3px 0 var(--ink);background:rgba(244,239,231,.88);font-size:18px;touch-action:none}
+    .up{left:46px;top:0}.down{left:46px;bottom:0}.left{left:0;top:46px}.right{right:0;top:46px}
+    .caption{position:fixed;z-index:5;bottom:22px;right:20px;max-width:300px;background:rgba(244,239,231,.8);backdrop-filter:blur(8px);padding:10px 12px;border:1px solid rgba(0,0,0,.15);font:700 10px/1.35 monospace;letter-spacing:.04em;text-transform:uppercase;pointer-events:none}
+    .stationLabel{position:fixed;z-index:4;pointer-events:none;transform:translate(-50%,-50%);font:900 11px/1 Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:#fff;border:1.5px solid #111;padding:6px 8px;box-shadow:3px 3px 0 #111;white-space:nowrap;opacity:.95}
+    @media(max-width:760px){.hud{padding:14px}.counter{font-size:9px}.controls{display:block}.caption{right:14px;bottom:14px;max-width:170px;font-size:8px}.card{grid-template-columns:1fr}.card img{min-height:190px;height:32vh}.cardText{padding:18px}.card h2{font-size:38px}.cardWrap{padding:12px}.brand{font-size:27px}.brand small{font-size:8px}}
+  </style>
+</head>
+<body>
+<div id="app"><div id="stage"></div><div class="grain"></div></div>
+<div class="hud"><div class="brand">FORMIKAT<small>MOVE! CITY ROLLER / EXPERIMENT 01</small></div><div class="counter" id="counter">0 / 4 STATIONEN<br>VERKEHRSMUSEUM DRESDEN · 2023</div></div>
+<div class="caption" id="caption">Rolle durch die Ausstellung. Nähe zu einer Station öffnet ihren Inhalt.</div>
+<div class="intro" id="intro"><div class="introBox"><div class="eyebrow">FORMIKAT × MOVE! Verkehr macht Stadt</div><h1>ROLLE<br>DEINE<br>STADT.</h1><p>Kein Portfolio zum Durchscrollen. Eine Ausstellung, die man als kleine Stadt durchfährt.</p><button id="start">STADT BETRETEN</button><p class="hint">Desktop: Pfeiltasten / WASD · Smartphone: Steuerkreuz unten links</p></div></div>
+<div class="cardWrap" id="cardWrap"><div class="card"><img id="cardImg" alt="MOVE! Ausstellung"><div class="cardText"><div><div class="cardNo" id="cardNo"></div><h2 id="cardTitle"></h2><p id="cardBody"></p></div><button id="closeCard">WEITERROLLEN</button></div></div></div>
+<div class="controls" id="controls"><button class="up" data-k="up">↑</button><button class="down" data-k="down">↓</button><button class="left" data-k="left">←</button><button class="right" data-k="right">→</button></div>
+<div id="labels"></div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.min.js"></script>
+<script>
+(()=>{
+  const stage=document.getElementById('stage'), intro=document.getElementById('intro'), cardWrap=document.getElementById('cardWrap');
+  const cardImg=document.getElementById('cardImg'), cardNo=document.getElementById('cardNo'), cardTitle=document.getElementById('cardTitle'), cardBody=document.getElementById('cardBody'), counter=document.getElementById('counter'), labelsRoot=document.getElementById('labels');
+  const scene=new THREE.Scene(); scene.background=new THREE.Color(0xc9e1e3); scene.fog=new THREE.Fog(0xc9e1e3,34,75);
+  const camera=new THREE.PerspectiveCamera(42,innerWidth/innerHeight,.1,130); camera.position.set(14,18,20);
+  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false}); renderer.setPixelRatio(Math.min(devicePixelRatio,1.75)); renderer.setSize(innerWidth,innerHeight); renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap; stage.appendChild(renderer.domElement);
+  scene.add(new THREE.HemisphereLight(0xffffff,0x9aa0a0,2.15));
+  const sun=new THREE.DirectionalLight(0xffffff,2.5); sun.position.set(12,28,14); sun.castShadow=true; sun.shadow.mapSize.set(1024,1024); sun.shadow.camera.left=-28;sun.shadow.camera.right=28;sun.shadow.camera.top=28;sun.shadow.camera.bottom=-28; scene.add(sun);
+  const ground=new THREE.Mesh(new THREE.PlaneGeometry(64,64),new THREE.MeshStandardMaterial({color:0xeae7df,roughness:1})); ground.rotation.x=-Math.PI/2; ground.receiveShadow=true; scene.add(ground);
+  const world=new THREE.Group(); scene.add(world);
+  function box(x,z,w,d,h,c,y=h/2){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),new THREE.MeshStandardMaterial({color:c,roughness:.78}));m.position.set(x,y,z);m.castShadow=m.receiveShadow=true;world.add(m);return m}
+  // city blocks / exhibition architecture
+  const blocks=[[-12,-12,8,6,2.4,0xd8aeb8],[-3,-13,6,5,4.5,0xbcdce7],[7,-12,8,6,3.2,0xe2b35b],[14,-8,5,9,2.8,0xc2d574],[12,4,8,6,4.2,0xdca2ae],[13,13,7,7,2.3,0xc6dfeb],[2,13,8,5,3.8,0xe0aa45],[-8,13,7,7,2.8,0xbad36d],[-14,5,5,8,4.5,0xbddde5],[-13,-3,7,5,2.2,0xe5bd68]];
+  blocks.forEach(b=>box(...b));
+  // central low hub to echo exhibition island
+  const hub=box(0,0,8,8,.7,0xf8f5ec,.35); hub.rotation.y=Math.PI/4;
+  // roads as dark ribbons
+  function road(x,z,w,d){const r=new THREE.Mesh(new THREE.PlaneGeometry(w,d),new THREE.MeshStandardMaterial({color:0x4a4b4d,roughness:1}));r.rotation.x=-Math.PI/2;r.position.set(x,.012,z);world.add(r);return r}
+  road(0,0,4,54); road(0,0,54,4); road(-8,-8,4,20); road(9,8,4,20);
+  // road markings
+  const markMat=new THREE.MeshBasicMaterial({color:0xf4efe7});
+  for(let i=-24;i<=24;i+=4){let a=new THREE.Mesh(new THREE.PlaneGeometry(.18,1.6),markMat);a.rotation.x=-Math.PI/2;a.position.set(0,.03,i);world.add(a);let b=new THREE.Mesh(new THREE.PlaneGeometry(1.6,.18),markMat);b.rotation.x=-Math.PI/2;b.position.set(i,.031,0);world.add(b)}
+  // little moving traffic
+  const cars=[]; const carColors=[0xe46d7a,0xf2c14d,0x87bfd2,0x9fc261];
+  for(let i=0;i<10;i++){const c=box((i%5-2)*5,-1.15,.9,1.5,.5,carColors[i%4],.28);cars.push({m:c,axis:i<5?'x':'z',dir:i%2?1:-1,speed:.018+Math.random()*.02});if(i>=5){c.position.x=1.15;c.position.z=(i-7)*5;c.rotation.y=Math.PI/2}}
+  // Player
+  const ball=new THREE.Mesh(new THREE.SphereGeometry(.72,32,24),new THREE.MeshStandardMaterial({color:0x111111,metalness:.1,roughness:.4})); ball.castShadow=true; ball.position.set(0,.74,16); scene.add(ball);
+  const halo=new THREE.Mesh(new THREE.TorusGeometry(1.12,.07,10,48),new THREE.MeshBasicMaterial({color:0xffffff,transparent:true,opacity:.85}));halo.rotation.x=Math.PI/2;halo.position.y=.04;ball.add(halo);
+  const stations=[
+    {x:0,z:9,color:0xe8b84c,title:'WAS MACHT DIE STADT ZUR STADT?',body:'MOVE! beginnt nicht beim Auto, sondern bei der Stadt. Die Ausstellung fragt, wie Verkehr Räume, Beziehungen und Alltag formt — und macht diese Zusammenhänge als begehbare Versuchsanordnung erfahrbar.',img:'https://formikat.de/wp-content/uploads/2025/09/Soa-MOVE_21_VMD_Matthias-Zaensler_web.jpg'},
+    {x:-9,z:0,color:0xd695a6,title:'12 QM PARKFLÄCHE',body:'Eine Parkfläche wird zum Spielfeld: Was könnte auf zwölf Quadratmetern noch passieren? In der realen Ausstellung wird aus abstrakter Verkehrsfläche ein unmittelbar erfahrbarer Raum zum Umdenken.',img:'https://formikat.de/wp-content/uploads/2025/09/Soa-MOVE_10_VMD_formikat_Foto-PhilippHerfort_web.jpg'},
+    {x:9,z:0,color:0x8ebfd0,title:'FUTURE MOBILITY SIMULATOR',body:'Nicht nur Zukunft anschauen, sondern Entscheidungen treffen. Der Future Mobility Simulator übersetzt Mobilität in Konsequenzen für eine ganze Stadt und macht Veränderung spielbar.',img:'https://formikat.de/wp-content/uploads/2025/09/Soa-MOVE_18_VMD_PhilippHerfort_web.jpg'},
+    {x:0,z:-10,color:0xaec96a,title:'IN WELCHER STADT WILLST DU LEBEN?',body:'Die zentrale Frage der Ausstellung wird hier zum Ziel des Spiels. Nicht schnell ankommen ist die Aufgabe — sondern alle Perspektiven einsammeln und am Ende mit einer anderen Vorstellung von Stadt zurückkehren.',img:'https://formikat.de/wp-content/uploads/2025/09/Soa-MOVE_21_VMD_Matthias-Zaensler_web.jpg'}
+  ];
+  stations.forEach((s,i)=>{const g=new THREE.Group(); const base=new THREE.Mesh(new THREE.CylinderGeometry(1.45,1.45,.18,48),new THREE.MeshStandardMaterial({color:s.color,roughness:.65}));base.position.y=.11;base.castShadow=true;g.add(base); const pin=new THREE.Mesh(new THREE.TorusGeometry(.84,.11,10,40),new THREE.MeshBasicMaterial({color:0xffffff}));pin.rotation.x=Math.PI/2;pin.position.y=.28;g.add(pin); g.position.set(s.x,0,s.z); world.add(g); s.group=g; const el=document.createElement('div');el.className='stationLabel';el.textContent=(i+1).toString().padStart(2,'0')+' · '+s.title;labelsRoot.appendChild(el);s.label=el;});
+  // perimeter details
+  for(let i=0;i<34;i++){const ang=i/34*Math.PI*2,rad=24+Math.sin(i*2.3)*2;const h=1.2+Math.random()*5;box(Math.cos(ang)*rad,Math.sin(ang)*rad,1.4+Math.random()*2,1.4+Math.random()*2,h,i%3===0?0xb8d9e3:i%3===1?0xd6a0ad:0xdab35e,h/2)}
+  // Controls
+  const keys={up:false,down:false,left:false,right:false};
+  addEventListener('keydown',e=>{if(['ArrowUp','w','W'].includes(e.key))keys.up=true;if(['ArrowDown','s','S'].includes(e.key))keys.down=true;if(['ArrowLeft','a','A'].includes(e.key))keys.left=true;if(['ArrowRight','d','D'].includes(e.key))keys.right=true});
+  addEventListener('keyup',e=>{if(['ArrowUp','w','W'].includes(e.key))keys.up=false;if(['ArrowDown','s','S'].includes(e.key))keys.down=false;if(['ArrowLeft','a','A'].includes(e.key))keys.left=false;if(['ArrowRight','d','D'].includes(e.key))keys.right=false});
+  document.querySelectorAll('.controls button').forEach(btn=>{const k=btn.dataset.k;['pointerdown','touchstart'].forEach(ev=>btn.addEventListener(ev,e=>{e.preventDefault();keys[k]=true},{passive:false}));['pointerup','pointercancel','pointerleave','touchend'].forEach(ev=>btn.addEventListener(ev,e=>{e.preventDefault();keys[k]=false},{passive:false}))});
+  let started=false,paused=false; document.getElementById('start').onclick=()=>{intro.classList.add('hide');started=true};
+  document.getElementById('closeCard').onclick=()=>{cardWrap.classList.remove('show');paused=false};
+  let vx=0,vz=0; const visited=new Set(); let lastOpen=-1;
+  function openStation(i){if(lastOpen===i||paused)return;lastOpen=i;paused=true;visited.add(i);const s=stations[i];cardNo.textContent=`STATION ${(i+1).toString().padStart(2,'0')} / 04 · MOVE! VERKEHR MACHT STADT`;cardTitle.textContent=s.title;cardBody.textContent=s.body;cardImg.src=s.img;cardWrap.classList.add('show');counter.innerHTML=`${visited.size} / 4 STATIONEN<br>VERKEHRSMUSEUM DRESDEN · 2023`;}
+  function projectLabel(s){const v=new THREE.Vector3(s.x,1.8,s.z).project(camera);const x=(v.x*.5+.5)*innerWidth,y=(-v.y*.5+.5)*innerHeight;s.label.style.left=x+'px';s.label.style.top=y+'px';s.label.style.display=(v.z>1||Math.abs(v.x)>1.2||Math.abs(v.y)>1.2)?'none':'block'}
+  function animate(){requestAnimationFrame(animate);const t=performance.now()*.001;
+    if(started&&!paused){let ax=(keys.right?1:0)-(keys.left?1:0),az=(keys.down?1:0)-(keys.up?1:0);const l=Math.hypot(ax,az)||1;ax/=l;az/=l;vx+=ax*.018;vz+=az*.018;vx*=.94;vz*=.94;const max=.34,spd=Math.hypot(vx,vz);if(spd>max){vx=vx/spd*max;vz=vz/spd*max}ball.position.x+=vx;ball.position.z+=vz;ball.position.x=THREE.MathUtils.clamp(ball.position.x,-24,24);ball.position.z=THREE.MathUtils.clamp(ball.position.z,-24,24);ball.rotation.z-=vx*.85;ball.rotation.x+=vz*.85;
+      stations.forEach((s,i)=>{const d=Math.hypot(ball.position.x-s.x,ball.position.z-s.z);s.group.children[1].material.opacity=.55+.45*Math.sin(t*4+i);if(d<1.85)openStation(i)});
+    }
+    cars.forEach(c=>{if(c.axis==='x'){c.m.position.x+=c.speed*c.dir*10;if(Math.abs(c.m.position.x)>24)c.m.position.x*=-1}else{c.m.position.z+=c.speed*c.dir*10;if(Math.abs(c.m.position.z)>24)c.m.position.z*=-1}});
+    const camTarget=new THREE.Vector3(ball.position.x+10,16,ball.position.z+14);camera.position.lerp(camTarget,.035);camera.lookAt(ball.position.x,0,ball.position.z-2);stations.forEach(projectLabel);renderer.render(scene,camera);
+  }
+  animate();
+  addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+})();
+</script>
+</body>
+</html>

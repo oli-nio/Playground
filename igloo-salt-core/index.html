@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>FORMIKAT — Salzspeicher / Zukunftswerkstatt</title>
+<meta name="theme-color" content="#0b1112" />
+<style>
+  :root{--ink:#edf1ea;--muted:#a9b7b1;--line:rgba(225,244,236,.16);--glass:rgba(11,17,18,.52);--accent:#d8f3e7}
+  *{box-sizing:border-box} html{scroll-behavior:smooth;background:#081011} body{margin:0;background:#081011;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}
+  #world{position:fixed;inset:0;z-index:0;display:block;width:100%;height:100%}
+  .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.17'/%3E%3C/svg%3E")}
+  header{position:fixed;z-index:20;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:flex-start;padding:18px 20px;mix-blend-mode:difference;color:white;pointer-events:none}
+  .mark{font-weight:800;letter-spacing:-.06em;font-size:clamp(22px,3vw,38px);line-height:.85}.mark span{display:block;font-size:.36em;letter-spacing:.16em;margin-top:8px;font-weight:500}
+  .counter{font:500 11px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;text-align:right;text-transform:uppercase}
+  main{position:relative;z-index:3}
+  .intro{min-height:100svh;display:grid;grid-template-rows:1fr auto;align-items:end;padding:18vh 20px 28px;pointer-events:none}
+  .intro h1{max-width:1100px;margin:0;font-size:clamp(48px,11vw,155px);line-height:.78;letter-spacing:-.075em;font-weight:650;text-wrap:balance}
+  .intro h1 i{font-family:Georgia,serif;font-weight:400}.sub{display:flex;justify-content:space-between;gap:20px;align-items:end;border-top:1px solid var(--line);padding-top:12px;margin-top:40px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.11em}.sub b{color:var(--ink);font-weight:600}
+  .sequence{position:relative;padding-bottom:14vh}
+  .chapter{min-height:105svh;display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,42vw);align-items:center;gap:4vw;padding:10vh 6vw;position:relative}
+  .chapter:nth-child(even){grid-template-columns:minmax(280px,42vw) minmax(0,1fr)}.chapter:nth-child(even) .copy{order:2}.chapter:nth-child(even) .frame{order:1}
+  .copy{max-width:520px;align-self:center}.kicker{font:600 11px/1.3 ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase;letter-spacing:.15em;color:#b9c9c2}.copy h2{font-size:clamp(42px,7vw,100px);line-height:.83;letter-spacing:-.065em;margin:12px 0 18px;font-weight:600}.copy p{max-width:44ch;font-size:clamp(16px,1.5vw,21px);line-height:1.45;color:#c3cec9;margin:0}
+  .frame{position:relative;aspect-ratio:4/5;perspective:1200px;transform-style:preserve-3d;filter:drop-shadow(0 30px 40px rgba(0,0,0,.35))}
+  .frame::before,.frame::after{content:"";position:absolute;inset:-9%;border:1px solid rgba(206,244,231,.17);clip-path:polygon(20% 0,85% 7%,100% 75%,73% 100%,4% 85%,0 20%);transform:rotate(var(--r,-4deg));transition:transform .8s cubic-bezier(.2,.8,.2,1),border-color .4s}.frame::after{inset:-3%;transform:rotate(calc(var(--r,-4deg) * -1)) translateZ(30px);border-color:rgba(255,255,255,.09)}
+  .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:2px;clip-path:polygon(8% 4%,90% 0,100% 68%,78% 100%,0 90%,3% 18%);filter:saturate(.72) contrast(1.04) brightness(.88);transition:transform .9s cubic-bezier(.2,.8,.2,1),filter .5s;transform:rotateY(var(--ry,0deg)) rotateX(var(--rx,0deg)) translateZ(1px)}
+  .frame .salt{position:absolute;inset:-2%;pointer-events:none;clip-path:polygon(8% 4%,90% 0,100% 68%,78% 100%,0 90%,3% 18%);background:radial-gradient(circle at 75% 10%,rgba(255,255,255,.42),transparent 22%),linear-gradient(130deg,rgba(213,246,235,.28),rgba(255,255,255,.02) 38%,rgba(136,214,202,.18) 72%,rgba(255,255,255,.28));mix-blend-mode:screen;opacity:.75;backdrop-filter:blur(.4px)}
+  .chapter.is-active .frame::before{border-color:rgba(221,255,244,.48);transform:rotate(2deg) scale(1.04)}.chapter.is-active img{filter:saturate(.98) contrast(1.02) brightness(1)}
+  .tap{position:absolute;right:12px;bottom:12px;border:1px solid rgba(255,255,255,.35);background:rgba(8,16,17,.5);backdrop-filter:blur(8px);padding:8px 10px;color:white;text-transform:uppercase;letter-spacing:.1em;font-size:9px}
+  .outro{min-height:85svh;display:flex;align-items:end;padding:10vh 6vw}.outro .big{font-size:clamp(54px,12vw,180px);line-height:.78;letter-spacing:-.075em;max-width:1200px;margin:0;font-weight:600}.outro em{font-family:Georgia,serif;font-weight:400}.meta{margin-top:28px;max-width:640px;color:var(--muted);line-height:1.5}
+  .hint{position:fixed;z-index:15;left:50%;bottom:18px;transform:translateX(-50%);font:500 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase;letter-spacing:.16em;color:rgba(255,255,255,.7);pointer-events:none;transition:opacity .5s}
+  @media(max-width:760px){header{padding:14px}.intro{padding:15vh 14px 18px}.sub{font-size:9px}.sub span:last-child{display:none}.chapter,.chapter:nth-child(even){min-height:100svh;grid-template-columns:1fr;align-content:center;gap:28px;padding:12vh 14px}.chapter:nth-child(even) .copy,.chapter:nth-child(even) .frame{order:initial}.copy{position:relative;z-index:3}.copy h2{font-size:clamp(46px,16vw,76px)}.copy p{font-size:15px}.frame{width:min(78vw,410px);justify-self:end;aspect-ratio:4/5}.chapter:nth-child(even) .frame{justify-self:start}.outro{padding:10vh 14px}.tap{display:none}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.frame img,.frame::before,.frame::after{transition:none}}
+</style>
+</head>
+<body>
+<canvas id="world" aria-hidden="true"></canvas><div class="grain" aria-hidden="true"></div>
+<header><div class="mark">FORMIKAT<span>EXPERIMENT 04 / SALZKERN</span></div><div class="counter"><span id="num">00</span> / 04<br>Zukunftswerkstatt</div></header>
+<main>
+<section class="intro"><h1>Geschichte<br><i>kristallisiert</i><br>Zukunft.</h1><div class="sub"><span><b>Zukunftswerkstatt Salinemuseum</b> · Halle · 2023</span><span>Scroll ↓ durch den Salzspeicher</span></div></section>
+<section class="sequence">
+<article class="chapter" data-index="1"><div class="copy"><div class="kicker">Schicht 01 · Speicher</div><h2>Salz hält Zeit fest.</h2><p>Die Ausstellung verband Salzgeschichte, Industriekultur und die Tradition der Halloren mit Fragen von morgen. Hier wird daraus kein Rundgang, sondern ein geologischer Speicher: Bilder liegen wie Einschlüsse in einem digitalen Salzkörper.</p></div><div class="frame" style="--r:-5deg"><img loading="eager" src="https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_01_Foto_Ingo-Beljan.jpg" alt="Zukunftswerkstatt Salinemuseum, Foto Ingo Beljan"><div class="salt"></div><div class="tap">bewegen / berühren</div></div></article>
+<article class="chapter" data-index="2"><div class="copy"><div class="kicker">Schicht 02 · Bruch</div><h2>Freilegen statt blättern.</h2><p>Mit jedem Scroll-Schritt verschiebt sich der räumliche Kern. Nicht Seiten wechseln, sondern Schichten durchdringen: Vergangenheit, Gegenwart und Zukunft werden als Materialzustände desselben Raumes lesbar.</p></div><div class="frame" style="--r:4deg"><img loading="lazy" src="https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_02_Foto_Ingo-Beljan.jpg" alt="Zukunftswerkstatt Salinemuseum, Foto Ingo Beljan"><div class="salt"></div><div class="tap">bewegen / berühren</div></div></article>
+<article class="chapter" data-index="3"><div class="copy"><div class="kicker">Schicht 03 · Werkstatt</div><h2>Zukunft ist kein Endbild.</h2><p>Die reale Ausstellung lud Besuchende ein, Ideen auszuprobieren, Szenarien zu entwickeln und Zukunft im Dialog mitzugestalten. Der digitale Raum bleibt deshalb absichtlich instabil: Perspektive und Kristall reagieren auf die Bewegung.</p></div><div class="frame" style="--r:-2deg"><img loading="lazy" src="https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_03_Foto_Matthias-Zaensler.jpg" alt="Zukunftswerkstatt Salinemuseum, Foto Matthias Zänsler"><div class="salt"></div><div class="tap">bewegen / berühren</div></div></article>
+<article class="chapter" data-index="4"><div class="copy"><div class="kicker">Schicht 04 · Morgen</div><h2>Ein Archiv, das sich bewegt.</h2><p>Das Präsentationsprinzip könnte künftig viele FORMIKAT-Projekte aufnehmen: nicht als Kacheln, sondern als räumliche Körper mit eigener Materiallogik. Jedes Projekt bekäme eine digitale Physik statt nur ein Layout.</p></div><div class="frame" style="--r:5deg"><img loading="lazy" src="https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_04_Foto_Ingo-Beljan.jpg" alt="Zukunftswerkstatt Salinemuseum, Foto Ingo Beljan"><div class="salt"></div><div class="tap">bewegen / berühren</div></div></article>
+</section>
+<section class="outro"><div><p class="big">Ideen<br><em>greifbar</em><br>machen.</p><p class="meta">FORMIKAT · Experimenteller Prototyp. Inhalt und Fotografien aus dem realen Projekt „Zukunftswerkstatt Salinemuseum“. Die WebGL-Schicht ist keine Rekonstruktion des Raums, sondern ein neues Präsentationsprinzip: Projektinhalte werden zu räumlich durchquerbaren Materialarchiven.</p></div></section>
+</main>
+<div class="hint" id="hint">scroll / swipe</div>
+<script type="module">
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.164/build/three.module.js';
+const canvas=document.querySelector('#world');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,1.6));renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x081011);scene.fog=new THREE.FogExp2(0x081011,.045);
+const camera=new THREE.PerspectiveCamera(48,innerWidth/innerHeight,.1,100);camera.position.set(0,0,9);
+scene.add(new THREE.AmbientLight(0xbce8dc,1.1));const key=new THREE.PointLight(0xd8fff4,22,18);key.position.set(4,5,6);scene.add(key);const fill=new THREE.PointLight(0x527f85,15,16);fill.position.set(-5,-3,2);scene.add(fill);
+const group=new THREE.Group();scene.add(group);
+const mat=new THREE.MeshPhysicalMaterial({color:0xb9d6cd,roughness:.28,metalness:.02,transmission:.62,thickness:1.3,transparent:true,opacity:.34,ior:1.38,clearcoat:.8,clearcoatRoughness:.18,side:THREE.DoubleSide});
+const geo=new THREE.IcosahedronGeometry(2.7,2);const crystal=new THREE.Mesh(geo,mat);crystal.scale.set(.72,1.65,.78);crystal.rotation.set(.2,.4,-.15);group.add(crystal);
+const edge=new THREE.LineSegments(new THREE.EdgesGeometry(geo,22),new THREE.LineBasicMaterial({color:0xc9eee4,transparent:true,opacity:.14}));edge.scale.copy(crystal.scale);edge.rotation.copy(crystal.rotation);group.add(edge);
+for(let i=0;i<34;i++){const g=new THREE.TetrahedronGeometry(.05+Math.random()*.09);const m=new THREE.MeshBasicMaterial({color:i%3?0xccebe3:0x7aa9a4,transparent:true,opacity:.12+Math.random()*.26});const p=new THREE.Mesh(g,m);p.position.set((Math.random()-.5)*13,(Math.random()-.5)*18,(Math.random()-.5)*8-2);p.rotation.set(Math.random()*3,Math.random()*3,Math.random()*3);p.userData.s=.2+Math.random()*.6;scene.add(p)}
+let tx=0,ty=0,scrollP=0,active=0;const pointer={x:0,y:0};
+function updatePointer(x,y){pointer.x=(x/innerWidth-.5)*2;pointer.y=(y/innerHeight-.5)*2}
+addEventListener('pointermove',e=>updatePointer(e.clientX,e.clientY),{passive:true});addEventListener('touchmove',e=>{if(e.touches[0])updatePointer(e.touches[0].clientX,e.touches[0].clientY)},{passive:true});
+const chapters=[...document.querySelectorAll('.chapter')];const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&e.intersectionRatio>.45){chapters.forEach(x=>x.classList.remove('is-active'));e.target.classList.add('is-active');active=+e.target.dataset.index;document.querySelector('#num').textContent=String(active).padStart(2,'0')}}),{threshold:[.45,.6]});chapters.forEach(c=>io.observe(c));
+chapters.forEach(c=>{const f=c.querySelector('.frame');f.addEventListener('pointermove',e=>{const r=f.getBoundingClientRect();f.style.setProperty('--ry',`${((e.clientX-r.left)/r.width-.5)*10}deg`);f.style.setProperty('--rx',`${-((e.clientY-r.top)/r.height-.5)*8}deg`)});f.addEventListener('pointerleave',()=>{f.style.setProperty('--ry','0deg');f.style.setProperty('--rx','0deg')})});
+addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-innerHeight;scrollP=max?scrollY/max:0;if(scrollY>40)document.querySelector('#hint').style.opacity=0},{passive:true});
+function animate(t){requestAnimationFrame(animate);const tt=t*.00018;tx+=(pointer.x-tx)*.025;ty+=(pointer.y-ty)*.025;group.rotation.y=tt+tx*.28+scrollP*5.3;group.rotation.x=.2+ty*.18+Math.sin(scrollP*Math.PI*4)*.08;group.position.y=(.5-scrollP)*1.5;group.scale.setScalar(1+Math.sin(scrollP*Math.PI*5)*.12);camera.position.z=8.5-scrollP*1.8;camera.position.x=tx*.45;camera.position.y=-ty*.25;camera.lookAt(0,0,0);scene.children.forEach(o=>{if(o.userData?.s){o.rotation.x+=.002*o.userData.s;o.rotation.y+=.003*o.userData.s;o.position.y+=Math.sin(tt*4+o.position.x)*.0007}});renderer.render(scene,camera)}animate(0);
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)},{passive:true});
+</script>
+</body>
+</html>

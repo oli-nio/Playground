@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>FORMIKAT — Im Steinbruch der Zeit / States Demo</title>
+<style>
+:root{--bg:#0a0a0a;--fg:#f3f1eb;--muted:#aaa7a0;--line:rgba(255,255,255,.2);--accent:#f3f1eb}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg);font-family:Arial,Helvetica,sans-serif}body{overflow-x:hidden}
+a{color:inherit}.top{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;position:fixed;z-index:30;left:0;right:0;top:0;mix-blend-mode:difference}.brand{font-weight:800;letter-spacing:-.04em;font-size:20px}.tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase}.hero{height:100svh;min-height:620px;position:relative;overflow:hidden;background:#111}.stage{position:absolute;inset:0}.state{position:absolute;inset:-2%;background-position:center;background-size:cover;transition:opacity 1.25s cubic-bezier(.2,.7,.2,1),transform 5s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}.build{background-image:url('https://formikat.de/wp-content/uploads/2020/10/AUFBAU_formikat_FS_2020_03.jpg');filter:grayscale(1) contrast(1.05);opacity:1}.final{background-image:url('https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-280_bmz.jpg');opacity:0;transform:scale(1.035)}.hero[data-state="final"] .build{opacity:0;transform:scale(1.035)}.hero[data-state="final"] .final{opacity:1;transform:scale(1)}.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),transparent 35%,rgba(0,0,0,.5));pointer-events:none}.copy{position:absolute;left:28px;right:28px;bottom:128px;z-index:5;display:flex;align-items:flex-end;justify-content:space-between;gap:30px}.title{font-size:clamp(44px,8vw,120px);line-height:.84;letter-spacing:-.065em;max-width:900px;margin:0}.meta{text-align:right;max-width:270px;font-size:13px;line-height:1.4}.controls{position:absolute;z-index:10;left:28px;right:28px;bottom:32px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px}.label{font-size:11px;text-transform:uppercase;letter-spacing:.13em;white-space:nowrap}.track{height:1px;background:rgba(255,255,255,.45);position:relative;cursor:pointer}.knob{position:absolute;top:50%;left:0;width:18px;height:18px;border-radius:50%;background:white;transform:translate(-50%,-50%);transition:left 1.25s cubic-bezier(.2,.7,.2,1)}.hero[data-state="final"] .knob{left:100%}.hint{position:absolute;right:28px;top:90px;z-index:5;font-size:11px;text-transform:uppercase;letter-spacing:.12em;opacity:.8}.section{padding:100px 28px;max-width:1500px;margin:auto}.intro{display:grid;grid-template-columns:1.2fr .8fr;gap:80px}.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}.big{font-size:clamp(32px,5vw,72px);line-height:.98;letter-spacing:-.045em;margin:0}.body{font-size:18px;line-height:1.45;max-width:580px;color:#d2d0ca}.states{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:70px}.card{aspect-ratio:4/5;background-size:cover;background-position:center;position:relative;overflow:hidden;cursor:pointer}.card:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.75))}.card span{position:absolute;z-index:2;left:18px;bottom:18px;font-size:12px;letter-spacing:.12em;text-transform:uppercase}.c1{background-image:url('https://formikat.de/wp-content/uploads/2020/10/AUFBAU_formikat_FS_2020_05.jpg');filter:grayscale(1)}.c2{background-image:url('https://formikat.de/wp-content/uploads/2020/10/AUFBAU_formikat_FS_2020_04.jpg');filter:grayscale(1)}.c3{background-image:url('https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-157.jpg')}.footer{border-top:1px solid var(--line);padding:30px 28px 60px;display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.demo-note{position:fixed;z-index:50;right:12px;bottom:12px;padding:8px 10px;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#bbb}
+@media(max-width:760px){.top{padding:0 16px}.copy{left:16px;right:16px;bottom:130px;display:block}.meta{text-align:left;margin-top:18px}.controls{left:16px;right:16px}.hint{right:16px}.section{padding:70px 16px}.intro{grid-template-columns:1fr;gap:32px}.states{grid-template-columns:1fr}.footer{padding-left:16px;padding-right:16px}.title{font-size:15vw}}
+</style>
+</head>
+<body>
+<header class="top"><div class="brand">FORMIKAT</div><div class="tag">Project states / prototype 01</div></header>
+<main>
+<section class="hero" id="hero" data-state="build" aria-label="Interaktive Projektzustände">
+  <div class="stage"><div class="state build"></div><div class="state final"></div><div class="shade"></div></div>
+  <div class="hint">Tippen / klicken zum Wechseln</div>
+  <div class="copy">
+    <h1 class="title">Im Steinbruch<br>der Zeit</h1>
+    <div class="meta">Franckesche Stiftungen<br>Halle (Saale) · 2020<br><br>Ausstellungsdesign</div>
+  </div>
+  <div class="controls">
+    <div class="label">01 Aufbau</div><div class="track" id="track"><div class="knob"></div></div><div class="label">02 Ausstellung</div>
+  </div>
+</section>
+<section class="section">
+  <div class="intro"><div><div class="eyebrow">Nicht Galerie. Transformation.</div><h2 class="big">Eine Ausstellung als Folge realer Zustände.</h2></div><div class="body">Die Projektseite erzählt nicht nur das Ergebnis. Sie macht den Weg dorthin sichtbar: Konstruktion, Aufbau, Detail und fertiger Raum. In einer späteren Fassung können zwischen den dokumentierten Zuständen vorbereitete generative Video-Transitions liegen – der Browser spielt nur die passende, kuratierte Transformation ab.</div></div>
+  <div class="states"><div class="card c1"><span>Struktur / Aufbau</span></div><div class="card c2"><span>Detail / Montage</span></div><div class="card c3"><span>Raum / Erfahrung</span></div></div>
+</section>
+</main>
+<footer class="footer"><div>FORMIKAT · WEBSITE EXPERIMENT</div><div>Real project material · transition prototype</div></footer>
+<div class="demo-note">Prototype: image states · video slot next</div>
+<script>
+const hero=document.getElementById('hero');
+function toggle(){hero.dataset.state=hero.dataset.state==='build'?'final':'build'}
+hero.addEventListener('click',e=>{if(!e.target.closest('.controls'))toggle()});
+document.getElementById('track').addEventListener('click',e=>{const r=e.currentTarget.getBoundingClientRect();hero.dataset.state=(e.clientX-r.left)/r.width>.5?'final':'build'});
+let x0=null;hero.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});hero.addEventListener('touchend',e=>{if(x0===null)return;let dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>35)hero.dataset.state=dx>0?'final':'build';x0=null},{passive:true});
+</script>
+</body>
+</html>

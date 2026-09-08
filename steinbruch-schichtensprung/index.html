@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>FORMIKAT — Schichtensprung</title>
+<meta name="theme-color" content="#16120f" />
+<style>
+  *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#16120f;color:#f4efe6;font-family:Arial,Helvetica,sans-serif}body{touch-action:none}
+  canvas{position:fixed;inset:0;width:100%;height:100%;display:block}
+  #grain{position:fixed;inset:0;pointer-events:none;opacity:.18;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}
+  #top{position:fixed;left:18px;right:18px;top:16px;display:flex;justify-content:space-between;align-items:flex-start;z-index:10;pointer-events:none}.brand{font-size:12px;font-weight:800;letter-spacing:.18em}.counter{font-size:11px;letter-spacing:.12em;opacity:.7;text-align:right}
+  #intro{position:fixed;inset:0;z-index:30;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at 50% 40%,rgba(92,69,51,.35),rgba(22,18,15,.98) 65%);transition:opacity .8s ease,visibility .8s ease}.introbox{width:min(670px,92vw);text-align:center}.kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;opacity:.65}.introbox h1{font-size:clamp(40px,9vw,112px);line-height:.82;letter-spacing:-.065em;margin:16px 0 20px;font-weight:800}.introbox p{max-width:520px;margin:0 auto 26px;font-size:14px;line-height:1.5;opacity:.75}.start{appearance:none;border:1px solid rgba(255,255,255,.45);background:#f3e9d8;color:#17120f;border-radius:999px;padding:13px 20px;font-weight:700;letter-spacing:.05em;cursor:pointer}.hide{opacity:0;visibility:hidden}
+  #hud{position:fixed;inset:0;z-index:9;pointer-events:none}.label{position:absolute;left:18px;bottom:22px;max-width:min(520px,calc(100vw - 36px));transition:transform .45s ease,opacity .45s ease}.label .room{font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.55}.label h2{font-size:clamp(30px,6vw,72px);line-height:.95;letter-spacing:-.045em;margin:5px 0 7px}.label p{margin:0;max-width:420px;font-size:13px;line-height:1.45;opacity:.65}.hint{position:absolute;right:18px;bottom:22px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;text-align:right}
+  #card{position:fixed;z-index:20;right:18px;top:50%;transform:translateY(-50%) translateX(120%);width:min(360px,calc(100vw - 36px));background:rgba(20,17,14,.92);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);padding:10px;border-radius:18px;transition:transform .5s cubic-bezier(.2,.8,.2,1);box-shadow:0 20px 70px #0008}.cardopen #card{transform:translateY(-50%) translateX(0)}#card img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:11px;display:block}.meta{padding:12px 6px 7px}.meta b{display:block;font-size:14px;margin-bottom:4px}.meta span{font-size:11px;opacity:.6;line-height:1.4}.close{position:absolute;right:18px;top:18px;border:0;background:#f3e9d8;color:#17120f;width:30px;height:30px;border-radius:50%;font-size:18px;cursor:pointer}
+  #mobileNav{display:none;position:fixed;z-index:15;right:14px;bottom:92px;gap:8px}.navbtn{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(20,17,14,.7);color:white;font-size:18px;backdrop-filter:blur(8px)}
+  @media(max-width:700px){#mobileNav{display:flex}.hint{display:none}#card{top:auto;bottom:14px;right:14px;left:14px;transform:translateY(120%);width:auto}.cardopen #card{transform:translateY(0)}#card img{aspect-ratio:16/9}.label{bottom:24px}.cardopen .label{opacity:0}.introbox p{font-size:13px}}
+</style>
+</head>
+<body>
+<div id="top"><div class="brand">FORMIKAT / EXPERIMENT 07</div><div class="counter"><span id="count">01</span> / 06<br>IM STEINBRUCH DER ZEIT</div></div>
+<div id="hud"><div class="label" id="label"><div class="room" id="room">Schicht 01</div><h2 id="title">Ursprung</h2><p id="desc">Eine Ausstellung als begehbarer Querschnitt: nicht Seite für Seite, sondern Schicht für Schicht.</p></div><div class="hint">ziehen / wischen · tippen: Fundstück öffnen<br>← → oder scrollen: Schicht wechseln</div></div>
+<div id="mobileNav"><button class="navbtn" id="prev">←</button><button class="navbtn" id="next">→</button></div>
+<div id="card"><button class="close" id="close">×</button><img id="photo" alt="Ausstellungsfoto"><div class="meta"><b id="cardtitle"></b><span id="cardmeta"></span></div></div>
+<div id="intro"><div class="introbox"><div class="kicker">FORMIKAT × INTERLAND — WEBEXPERIMENT</div><h1>Schichten<br>springen.</h1><p>Ein spielbarer Querschnitt durch „Im Steinbruch der Zeit“. Bewege dich durch sechs geologische Inseln — jede Schicht trägt ein reales Stück Ausstellung in sich.</p><button class="start" id="start">AB IN DEN STEINBRUCH</button></div></div>
+<div id="grain"></div>
+<script type="module">
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js';
+
+const data=[
+{title:'Ursprung',desc:'Die erste Schicht öffnet den Blick unter die Erde — ein heller Durchbruch im dunklen Raum.',img:'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-280_bmz.jpg',meta:'Raum 1 · Foto: Marco Warmuth',c:0x8a684f},
+{title:'Ordnen',desc:'Wissen wird Landschaft: Vitrinen und horizontale Bänder werden zu einem abstrakten Terrain.',img:'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-36_bmz.jpg',meta:'Raum 3 · Foto: Marco Warmuth',c:0xb66f79},
+{title:'Messen',desc:'Der Blick wandert vom Gestein zum Instrument — Geologie als Geschichte des Sehens.',img:'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-257_bmz.jpg',meta:'Raum 5 · Foto: Marco Warmuth',c:0x6579ad},
+{title:'Berühren',desc:'Nicht nur betrachten: Die Ausstellung kippt vom Objekt in Handlung und Bedienung.',img:'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-143.jpg',meta:'Raum 6 · Foto: Marco Warmuth',c:0x6f8355},
+{title:'Schichten',desc:'Jede Insel ist aus vielen dünnen Ebenen gebaut — wie die reale Architektur, die Themen räumlich übersetzt.',img:'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-36_bmz.jpg',meta:'Ausstellungsarchitektur · Formikat',c:0x7e5048},
+{title:'Anthropozän',desc:'Am Ende kippt die Zeitachse: Der Mensch wird selbst zur geologischen Kraft.',img:'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-280_bmz.jpg',meta:'Im Steinbruch der Zeit · 2020',c:0x433d37}
+];
+
+const scene=new THREE.Scene(); scene.fog=new THREE.FogExp2(0x171310,.035);
+const camera=new THREE.PerspectiveCamera(48,innerWidth/innerHeight,.1,200);camera.position.set(0,6.2,12);
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.setClearColor(0x171310,1);renderer.outputColorSpace=THREE.SRGBColorSpace;document.body.prepend(renderer.domElement);
+scene.add(new THREE.HemisphereLight(0xffead0,0x23170f,2.2)); const dl=new THREE.DirectionalLight(0xffffff,3);dl.position.set(2,8,3);scene.add(dl);
+
+const world=new THREE.Group();scene.add(world); const islands=[];
+const geo=new THREE.IcosahedronGeometry(2.5,2);const pos=geo.attributes.position;
+for(let i=0;i<pos.count;i++){const y=pos.getY(i); const r=1+Math.sin(i*12.9898)*.11; pos.setXYZ(i,pos.getX(i)*r,y*.55 + Math.sin(i*4.7)*.13,pos.getZ(i)*r)}geo.computeVertexNormals();
+
+data.forEach((d,i)=>{
+ const g=new THREE.Group();g.position.set((i-2.5)*7,Math.sin(i*1.7)*1.2,(i%2? -1.1:0.8));world.add(g);
+ const mat=new THREE.MeshStandardMaterial({color:d.c,roughness:.93,metalness:.02,flatShading:true});const rock=new THREE.Mesh(geo,mat);rock.scale.set(1.25,1,1.15);g.add(rock);
+ for(let s=0;s<6;s++){const ring=new THREE.Mesh(new THREE.TorusGeometry(1.55+s*.12,.025,5,80),new THREE.MeshBasicMaterial({color:0xf3dfc4,transparent:true,opacity:.18}));ring.rotation.x=Math.PI/2;ring.position.y=-.7+s*.26;ring.scale.z=.72;g.add(ring)}
+ const shard=new THREE.Mesh(new THREE.OctahedronGeometry(.44,0),new THREE.MeshStandardMaterial({color:0xf0e0c4,emissive:0x3a2417,roughness:.4}));shard.position.set(.2,1.45,0);shard.userData={index:i,clickable:true};g.add(shard);
+ const halo=new THREE.Mesh(new THREE.RingGeometry(.6,.78,40),new THREE.MeshBasicMaterial({color:0xffe8bf,transparent:true,opacity:.25,side:THREE.DoubleSide}));halo.rotation.x=-Math.PI/2;halo.position.copy(shard.position);g.add(halo);
+ g.userData={rock,shard,halo,baseY:g.position.y};islands.push(g)
+});
+
+const dustGeo=new THREE.BufferGeometry();const a=[];for(let i=0;i<700;i++)a.push((Math.random()-.5)*70,(Math.random()-.5)*25,(Math.random()-.5)*35);dustGeo.setAttribute('position',new THREE.Float32BufferAttribute(a,3));const dust=new THREE.Points(dustGeo,new THREE.PointsMaterial({size:.035,color:0xd6bd9e,transparent:true,opacity:.35}));scene.add(dust);
+
+let current=0,targetX=islands[0].position.x,drag=false,startX=0,lastX=0,camYaw=0,cardOpen=false;
+const label=document.getElementById('label'),room=document.getElementById('room'),title=document.getElementById('title'),desc=document.getElementById('desc'),count=document.getElementById('count');
+function updateUI(){const d=data[current];room.textContent=`Schicht ${String(current+1).padStart(2,'0')}`;title.textContent=d.title;desc.textContent=d.desc;count.textContent=String(current+1).padStart(2,'0');targetX=islands[current].position.x;label.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:450,easing:'ease-out'});}
+function go(n){current=(n+data.length)%data.length;updateUI();closeCard()}
+function openCard(i){current=i;updateUI();const d=data[i];document.getElementById('photo').src=d.img;document.getElementById('cardtitle').textContent=d.title;document.getElementById('cardmeta').textContent=d.meta+' · FORMIKAT / Franckesche Stiftungen Halle';document.body.classList.add('cardopen');cardOpen=true}
+function closeCard(){document.body.classList.remove('cardopen');cardOpen=false}
+document.getElementById('start').onclick=()=>document.getElementById('intro').classList.add('hide');document.getElementById('close').onclick=closeCard;document.getElementById('next').onclick=()=>go(current+1);document.getElementById('prev').onclick=()=>go(current-1);
+
+const ray=new THREE.Raycaster(),mouse=new THREE.Vector2();function tap(x,y){mouse.x=x/innerWidth*2-1;mouse.y=-(y/innerHeight)*2+1;ray.setFromCamera(mouse,camera);const hits=ray.intersectObjects(world.children,true);const h=hits.find(o=>o.object.userData.clickable);if(h)openCard(h.object.userData.index)}
+addEventListener('pointerdown',e=>{drag=true;startX=lastX=e.clientX});addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-lastX;lastX=e.clientX;camYaw+=dx*.002});addEventListener('pointerup',e=>{if(!drag)return;drag=false;const dx=e.clientX-startX;if(Math.abs(dx)>55)go(current+(dx<0?1:-1));else tap(e.clientX,e.clientY)});
+addEventListener('wheel',e=>{if(Math.abs(e.deltaY)>25)go(current+(e.deltaY>0?1:-1))},{passive:true});addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(current+1);if(e.key==='ArrowLeft')go(current-1);if(e.key==='Escape')closeCard()});
+
+const clock=new THREE.Clock();function animate(){requestAnimationFrame(animate);const t=clock.getElapsedTime();const active=islands[current];camera.position.x+=(targetX-camera.position.x)*.055;camera.position.y=5.2+Math.sin(t*.35)*.12;camera.position.z=10.5;camera.lookAt(camera.position.x+Math.sin(camYaw)*1.2,.3,-1);
+ islands.forEach((g,i)=>{g.rotation.y+=.0015*(i%2?1:-1);g.position.y=g.userData.baseY+Math.sin(t*.8+i)*.12;const s=g.userData.shard;s.rotation.x=t*.5+i;s.rotation.y=t*.8;g.userData.halo.material.opacity=.16+.12*Math.sin(t*2+i);const k=i===current?1.06:1;g.scale.lerp(new THREE.Vector3(k,k,k),.06)});dust.rotation.y=t*.01;renderer.render(scene,camera)}animate();
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+updateUI();
+</script>
+</body>
+</html>

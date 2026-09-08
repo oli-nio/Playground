@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+<title>FORMIKAT — Doodle Walk</title>
+<meta name="description" content="Eine spielbare, handgezeichnete FORMIKAT-Ausstellungswelt. Konzept-Dummy." />
+<style>
+  :root{--ink:#141414;--paper:#f6f2e8;--red:#ef3d31;--yellow:#ffd93d;--blue:#6bc8ff;--violet:#b18cff;--green:#8fd694}
+  *{box-sizing:border-box} html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--paper);color:var(--ink);font-family:"Arial Narrow",Arial,sans-serif}
+  body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(20,20,20,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(20,20,20,.035) 1px,transparent 1px);background-size:24px 24px;mix-blend-mode:multiply}
+  #stage{position:fixed;inset:0;z-index:1;touch-action:none}
+  canvas{display:block}
+  .topbar{position:fixed;left:18px;right:18px;top:16px;z-index:10;display:flex;justify-content:space-between;align-items:flex-start;pointer-events:none}
+  .logo{font:900 clamp(24px,4vw,52px)/.85 Arial,sans-serif;letter-spacing:-.08em;transform:rotate(-1deg);text-shadow:1px 1px 0 #fff}
+  .logo small{display:block;font:800 11px/1.1 Arial,sans-serif;letter-spacing:.08em;margin-top:8px;transform:rotate(1deg)}
+  .counter{background:rgba(246,242,232,.9);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);padding:8px 11px;font-weight:900;font-size:12px;transform:rotate(1deg)}
+  #hint{position:fixed;z-index:11;left:50%;bottom:18px;transform:translateX(-50%) rotate(-1deg);background:var(--yellow);border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:9px 13px;font-weight:900;font-size:12px;white-space:nowrap;transition:.2s;pointer-events:none}
+  #projectCard{position:fixed;z-index:12;right:18px;top:95px;width:min(360px,calc(100vw - 36px));background:rgba(246,242,232,.96);border:3px solid var(--ink);box-shadow:7px 7px 0 var(--ink);padding:14px;transform:translateX(125%) rotate(1deg);transition:transform .28s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+  #projectCard.show{transform:translateX(0) rotate(1deg)}
+  #projectCard .eyebrow{font-weight:900;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+  #projectCard h2{margin:4px 0 7px;font-size:25px;line-height:.93;letter-spacing:-.04em}
+  #projectCard p{font-size:12px;line-height:1.35;margin:0 0 10px}.key{display:inline-block;border:2px solid var(--ink);padding:2px 6px;background:#fff;font-weight:900}
+  #start{position:fixed;inset:0;z-index:30;display:grid;place-items:center;background:rgba(246,242,232,.93);padding:24px}
+  #start .sheet{width:min(680px,100%);border:3px solid var(--ink);box-shadow:10px 10px 0 var(--ink);background:var(--paper);padding:clamp(22px,5vw,46px);transform:rotate(-.6deg);position:relative;overflow:hidden}
+  #start .sheet:after{content:"";position:absolute;width:170px;height:170px;border:4px solid var(--red);border-radius:50%;right:-50px;top:-70px;transform:rotate(20deg)}
+  #start h1{margin:0 0 12px;font-size:clamp(46px,10vw,94px);line-height:.75;letter-spacing:-.08em;text-transform:uppercase}
+  #start h1 span{display:block;color:var(--red);transform:translateX(8%) rotate(-2deg)}
+  #start p{max-width:520px;font-size:15px;line-height:1.4;font-weight:700}
+  #start button,#modalClose{border:3px solid var(--ink);background:var(--yellow);color:var(--ink);font:900 15px Arial,sans-serif;padding:11px 16px;box-shadow:5px 5px 0 var(--ink);cursor:pointer;transform:rotate(.7deg)}
+  #start .micro{font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-top:16px}
+  #modal{position:fixed;inset:0;z-index:40;background:rgba(20,20,20,.86);display:none;place-items:center;padding:18px}
+  #modal.open{display:grid}.modalSheet{width:min(980px,100%);max-height:92vh;overflow:auto;background:var(--paper);border:3px solid #fff;box-shadow:10px 10px 0 #000;display:grid;grid-template-columns:1.15fr .85fr}
+  .modalImg{min-height:420px;background:#ddd center/cover no-repeat;filter:saturate(.85) contrast(1.06)}
+  .modalText{padding:24px;position:relative}.modalText .scribble{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:900}.modalText h2{font-size:clamp(34px,5vw,62px);line-height:.86;letter-spacing:-.07em;margin:8px 0 16px}.modalText p{font-size:14px;line-height:1.5}.modalText a{display:inline-block;margin-top:10px;color:var(--ink);font-weight:900;text-decoration-thickness:2px}.modalText button{margin-top:20px}
+  #touch{position:fixed;inset:0;z-index:15;pointer-events:none;display:none}.pad{position:absolute;left:22px;bottom:25px;width:120px;height:120px;border:2px solid var(--ink);border-radius:50%;background:rgba(246,242,232,.66);pointer-events:auto;touch-action:none}.nub{position:absolute;left:40px;top:40px;width:40px;height:40px;border:2px solid var(--ink);border-radius:50%;background:var(--yellow)}.inspectBtn{position:absolute;right:24px;bottom:35px;width:86px;height:86px;border:3px solid var(--ink);border-radius:50%;background:var(--red);color:#fff;font-weight:900;box-shadow:4px 4px 0 var(--ink);pointer-events:auto;touch-action:none}
+  .stamp{position:fixed;z-index:9;left:16px;bottom:18px;font:900 10px Arial,sans-serif;letter-spacing:.08em;transform:rotate(-90deg) translateY(-110%);transform-origin:left bottom;opacity:.45;pointer-events:none}
+  @media(max-width:760px){#touch{display:block}#hint{bottom:145px}.counter{font-size:10px}.modalSheet{grid-template-columns:1fr}.modalImg{min-height:260px}.modalText{padding:18px}#projectCard{top:auto;bottom:145px;right:12px;width:calc(100vw - 24px)}.stamp{display:none}}
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<div class="topbar"><div class="logo">formikat<small>DOODLE WALK / WEBSITE STUDY 01</small></div><div class="counter" id="counter">0 / 5 AUSSTELLUNGEN</div></div>
+<div id="projectCard"><div class="eyebrow" id="cardMeta"></div><h2 id="cardTitle"></h2><p id="cardDesc"></p><span class="key">SPACE / TAP = REINGEHEN</span></div>
+<div id="hint">WASD / PFEILE — LAUF LOS ✎</div>
+<div class="stamp">PLAYGROUND — NICHT DIE FINALE WEBSITE</div>
+<div id="touch"><div class="pad" id="pad"><div class="nub" id="nub"></div></div><button class="inspectBtn" id="inspectBtn">REIN!</button></div>
+<div id="start"><div class="sheet"><h1>GEH DURCH <span>UNSERE IDEEN.</span></h1><p>Keine Projektliste. Eine kleine begehbare Kritzelwelt aus echten FORMIKAT-Ausstellungen. Lauf herum, finde fünf Räume und spring in die Projekte.</p><button id="go">LOSLAUFEN →</button><div class="micro">Desktop: WASD / Pfeile + Space · Mobile: Joystick + REIN!</div></div></div>
+<div id="modal"><div class="modalSheet"><div class="modalImg" id="modalImg"></div><div class="modalText"><div class="scribble" id="modalMeta"></div><h2 id="modalTitle"></h2><p id="modalDesc"></p><a id="modalLink" href="#" target="_blank" rel="noopener">Projekt auf formikat.de ansehen ↗</a><br><button id="modalClose">ZURÜCK IN DIE WELT</button></div></div></div>
+<script type="module">
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js';
+
+const projects=[
+ {title:'Zukunftswerkstatt Salinemuseum',short:'Salzgeschichte trifft Fragen von morgen. Ein Raum zum Ausprobieren, Szenarien bauen und Zukunft verhandeln.',meta:'SALINEMUSEUM HALLE · 2023',x:-18,z:-12,c:'#ef3d31',img:'https://formikat.de/wp-content/uploads/2025/09/SoA_Zukunftswerkstatt_Saline_01_Foto_Ingo-Beljan.jpg',url:'https://formikat.de/2023/zukunftswerkstatt-salinemuseum/'},
+ {title:'MOVE! Verkehr macht Stadt',short:'Eine interaktive Zeitreise durch urbane Mobilität: Parcours, Gerüche, Simulatoren und die Frage, in welcher Stadt wir leben wollen.',meta:'VERKEHRSMUSEUM DRESDEN · 2023',x:18,z:-12,c:'#ffd93d',img:'https://formikat.de/wp-content/uploads/2025/09/Soa-MOVE_01_VMD_formikat_Foto-PhilippHerfort_web.jpg',url:'https://formikat.de/2023/move-verkehr-macht-stadt/'},
+ {title:'Streit.',short:'Sieben Themenräume bringen historische Exponate und aktuelle Medien in Dialog — über Konflikt, Gesellschaft und die Grenzen des Sagbaren.',meta:'FRANCKESCHE STIFTUNGEN · 2023',x:22,z:14,c:'#b18cff',img:'https://formikat.de/wp-content/uploads/2025/09/SoA_STREIT_01_ak_bmz_web.jpg',url:'https://formikat.de/2023/streit/'},
+ {title:'Im Steinbruch der Zeit',short:'Schicht für Schicht: Die Ausstellungsarchitektur übersetzt Erscheinungsformen von Stein in eigene räumliche Gestaltungsprinzipien.',meta:'FRANCKESCHE STIFTUNGEN · 2020',x:0,z:22,c:'#6bc8ff',img:'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-280_bmz.jpg',url:'https://formikat.de/2020/im-steinbruch-der-zeit/'},
+ {title:'Total Real.',short:'Anschaulichkeit als Prinzip: historische Wissensmodelle treffen auf Aktivstationen und die Frage, wie Begreifen heute funktionieren kann.',meta:'FRANCKESCHE STIFTUNGEN · 2024',x:-22,z:12,c:'#8fd694',img:'https://formikat.de/wp-content/uploads/2025/09/SoA_TotalReal_01_Foto-Matthias-Zaensler.jpg',url:'https://formikat.de/2024/total-real-die-entdeckung-der-anschaulichkeit/'}
+];
+
+const stage=document.getElementById('stage');
+const scene=new THREE.Scene(); scene.background=new THREE.Color(0xf6f2e8);
+const camera=new THREE.PerspectiveCamera(48,innerWidth/innerHeight,.1,200); camera.position.set(0,18,20); camera.lookAt(0,0,0);
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false}); renderer.setPixelRatio(Math.min(devicePixelRatio,1.8)); renderer.setSize(innerWidth,innerHeight); stage.appendChild(renderer.domElement);
+
+const ink=new THREE.LineBasicMaterial({color:0x171717});
+function outlinedBox(w,h,d,color=0xffffff){
+ const g=new THREE.BoxGeometry(w,h,d); const group=new THREE.Group();
+ const m=new THREE.Mesh(g,new THREE.MeshBasicMaterial({color,transparent:true,opacity:.72})); group.add(m);
+ const e=new THREE.LineSegments(new THREE.EdgesGeometry(g),ink); e.scale.set(1.006,1.006,1.006); group.add(e); return group;
+}
+function doodleCircle(r,color){const pts=[];for(let i=0;i<=64;i++){const a=i/64*Math.PI*2;const rr=r*(1+Math.sin(i*5.7)*.025+Math.sin(i*11.3)*.015);pts.push(new THREE.Vector3(Math.cos(a)*rr,.05,Math.sin(a)*rr))}const geo=new THREE.BufferGeometry().setFromPoints(pts);return new THREE.Line(geo,new THREE.LineBasicMaterial({color}));}
+function labelSprite(text,bg='#ffffff'){const c=document.createElement('canvas');c.width=700;c.height=220;const x=c.getContext('2d');x.fillStyle=bg;x.fillRect(8,8,684,204);x.strokeStyle='#141414';x.lineWidth=10;x.strokeRect(8,8,684,204);x.fillStyle='#141414';x.font='900 48px Arial';x.textAlign='center';x.textBaseline='middle';const words=text.toUpperCase().split(' ');let lines=[''];for(const w of words){const n=(lines.at(-1)+' '+w).trim();if(x.measureText(n).width>610)lines.push(w);else lines[lines.length-1]=n}lines.slice(0,2).forEach((l,i)=>x.fillText(l,350,90+i*55));const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;const s=new THREE.Sprite(new THREE.SpriteMaterial({map:t,transparent:true}));s.scale.set(8.4,2.65,1);return s}
+
+const floor=outlinedBox(58,.35,58,0xf6f2e8);floor.position.y=-.22;scene.add(floor);
+for(let i=-28;i<=28;i+=4){const a=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(i,0,-28),new THREE.Vector3(i,0,28)]);scene.add(new THREE.Line(a,new THREE.LineBasicMaterial({color:0x141414,transparent:true,opacity:.06})));const b=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-28,0,i),new THREE.Vector3(28,0,i)]);scene.add(new THREE.Line(b,new THREE.LineBasicMaterial({color:0x141414,transparent:true,opacity:.06})))}
+
+const center=outlinedBox(10,.7,7,0xffffff);center.position.set(0,.35,0);scene.add(center);
+const centerLabel=labelSprite('IDEEN GREIFBAR MACHEN','#ffd93d');centerLabel.position.set(0,3.2,0);scene.add(centerLabel);
+for(let i=0;i<7;i++){const p=outlinedBox(.18,THREE.MathUtils.randFloat(2.5,5),.18,0x141414);p.position.set(-4.2+i*1.4,1.2,THREE.MathUtils.randFloat(-2.8,2.8));p.rotation.z=THREE.MathUtils.randFloat(-.06,.06);scene.add(p)}
+
+projects.forEach((p)=>{
+ const color=new THREE.Color(p.c).getHex();
+ const zone=new THREE.Group();zone.position.set(p.x,0,p.z);scene.add(zone);p.group=zone;
+ const base=outlinedBox(12,.55,9,color);base.position.y=.15;zone.add(base);
+ const ring=doodleCircle(7,color);ring.position.y=.02;zone.add(ring);
+ const back=outlinedBox(10,4,.35,0xffffff);back.position.set(0,2,-3);zone.add(back);
+ const side=outlinedBox(.35,2.8,6,0xffffff);side.position.set(-4.8,1.5,0);side.rotation.y=.08;zone.add(side);
+ const sign=labelSprite(p.title,p.c);sign.position.set(0,5,-2.6);zone.add(sign);
+ for(let k=0;k<5;k++){const prop=outlinedBox(THREE.MathUtils.randFloat(.6,2.4),THREE.MathUtils.randFloat(.5,2.2),THREE.MathUtils.randFloat(.6,2),k%2?0xffffff:color);prop.position.set(THREE.MathUtils.randFloat(-3.7,3.7),.5+Math.random(),THREE.MathUtils.randFloat(-1.8,2.8));prop.rotation.y=THREE.MathUtils.randFloat(-.35,.35);zone.add(prop)}
+ const dot=doodleCircle(.75,0x141414);dot.position.set(4.3,.03,3);zone.add(dot);
+ p.visited=false;
+});
+
+for(let i=0;i<38;i++){const q=doodleCircle(THREE.MathUtils.randFloat(.05,.14),0x141414);q.position.set(THREE.MathUtils.randFloat(-26,26),.03,THREE.MathUtils.randFloat(-26,26));scene.add(q)}
+
+const player=new THREE.Group();scene.add(player);
+const body=outlinedBox(.65,1.2,.65,0xffd93d);body.position.y=.8;player.add(body);
+const head=new THREE.Mesh(new THREE.SphereGeometry(.38,12,8),new THREE.MeshBasicMaterial({color:0xf6f2e8}));head.position.y=1.65;player.add(head);player.add(new THREE.LineSegments(new THREE.EdgesGeometry(head.geometry),ink));
+const arrow=new THREE.Mesh(new THREE.ConeGeometry(.32,.8,3),new THREE.MeshBasicMaterial({color:0xef3d31}));arrow.rotation.x=Math.PI/2;arrow.position.set(0,.8,-.65);player.add(arrow);
+player.position.set(0,0,9);
+
+let current=null, started=false;const keys={};const vel=new THREE.Vector2();let joy={x:0,y:0};
+const card=document.getElementById('projectCard'),cardTitle=document.getElementById('cardTitle'),cardMeta=document.getElementById('cardMeta'),cardDesc=document.getElementById('cardDesc'),counter=document.getElementById('counter'),hint=document.getElementById('hint');
+function inspect(){if(!current)return;current.visited=true;counter.textContent=`${projects.filter(p=>p.visited).length} / ${projects.length} AUSSTELLUNGEN`;document.getElementById('modalTitle').textContent=current.title;document.getElementById('modalMeta').textContent=current.meta;document.getElementById('modalDesc').textContent=current.short;document.getElementById('modalImg').style.backgroundImage=`url("${current.img}")`;document.getElementById('modalLink').href=current.url;document.getElementById('modal').classList.add('open')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+document.getElementById('modalClose').onclick=closeModal;document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});
+document.getElementById('go').onclick=()=>{document.getElementById('start').style.display='none';started=true};
+document.getElementById('inspectBtn').onclick=inspect;
+addEventListener('keydown',e=>{keys[e.code]=true;if(e.code==='Space'){e.preventDefault();inspect()}if(e.code==='Escape')closeModal()});addEventListener('keyup',e=>keys[e.code]=false);
+
+const pad=document.getElementById('pad'),nub=document.getElementById('nub');let pid=null;
+function moveJoy(e){const r=pad.getBoundingClientRect(),t=[...e.touches].find(t=>t.identifier===pid);if(!t)return;let x=t.clientX-(r.left+r.width/2),y=t.clientY-(r.top+r.height/2);const l=Math.hypot(x,y),m=42;if(l>m){x=x/l*m;y=y/l*m}joy.x=x/m;joy.y=y/m;nub.style.transform=`translate(${x}px,${y}px)`}
+pad.addEventListener('touchstart',e=>{pid=e.changedTouches[0].identifier;moveJoy(e)},{passive:false});pad.addEventListener('touchmove',e=>{e.preventDefault();moveJoy(e)},{passive:false});pad.addEventListener('touchend',()=>{pid=null;joy.x=joy.y=0;nub.style.transform='translate(0,0)'});
+
+const clock=new THREE.Clock();
+function loop(){requestAnimationFrame(loop);const dt=Math.min(clock.getDelta(),.04);if(started&&!document.getElementById('modal').classList.contains('open')){
+ let x=(keys.KeyD||keys.ArrowRight?1:0)-(keys.KeyA||keys.ArrowLeft?1:0)+joy.x;
+ let z=(keys.KeyS||keys.ArrowDown?1:0)-(keys.KeyW||keys.ArrowUp?1:0)+joy.y;
+ const l=Math.hypot(x,z);if(l>.02){x/=Math.max(1,l);z/=Math.max(1,l);vel.x=THREE.MathUtils.lerp(vel.x,x*8,dt*8);vel.y=THREE.MathUtils.lerp(vel.y,z*8,dt*8);player.rotation.y=Math.atan2(-vel.x,-vel.y)}else{vel.multiplyScalar(Math.pow(.0008,dt))}
+ player.position.x=THREE.MathUtils.clamp(player.position.x+vel.x*dt,-27,27);player.position.z=THREE.MathUtils.clamp(player.position.z+vel.y*dt,-27,27);body.rotation.z=Math.sin(performance.now()*.012)*.035*(l>.02?1:0);
+ }
+ let nearest=null,nd=1e9;for(const p of projects){const d=Math.hypot(player.position.x-p.x,player.position.z-p.z);p.group.rotation.y=Math.sin(performance.now()*.0005+projects.indexOf(p))*.012;if(d<nd){nd=d;nearest=p}}
+ if(nd<7.2){if(current!==nearest){current=nearest;cardMeta.textContent=current.meta;cardTitle.textContent=current.title;cardDesc.textContent=current.short;card.classList.add('show')}hint.textContent='SPACE / REIN! — PROJEKT ÖFFNEN ✦'}else{current=null;card.classList.remove('show');hint.textContent='WASD / PFEILE — NÄCHSTE AUSSTELLUNG FINDEN ✎'}
+ const target=new THREE.Vector3(player.position.x,0,player.position.z);camera.position.x=THREE.MathUtils.lerp(camera.position.x,target.x,dt*2.5);camera.position.z=THREE.MathUtils.lerp(camera.position.z,target.z+18,dt*2.5);camera.position.y=17;camera.lookAt(target.x,0,target.z-2);
+ renderer.render(scene,camera)}
+loop();
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+</script>
+</body>
+</html>

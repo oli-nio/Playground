@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#080808" />
+  <title>FORMIKAT — Im Steinbruch der Zeit / STRATA</title>
+  <style>
+    *{box-sizing:border-box} html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#080808;color:#f3eee6;font-family:Arial,Helvetica,sans-serif}
+    body{touch-action:none}.stage{position:fixed;inset:0}.stage canvas{display:block;width:100%;height:100%}
+    .grain{position:fixed;inset:-50%;pointer-events:none;opacity:.055;mix-blend-mode:screen;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E");animation:grain .18s steps(2) infinite}@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(3%,-2%)}50%{transform:translate(-2%,3%)}75%{transform:translate(2%,2%)}100%{transform:translate(-3%,-1%)}}
+    .top{position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:flex-start;padding:18px 20px;z-index:10;pointer-events:none;mix-blend-mode:difference}.brand{font-size:12px;letter-spacing:.16em;font-weight:700}.meta{text-align:right;font-size:10px;line-height:1.35;letter-spacing:.08em;text-transform:uppercase;opacity:.78}
+    .hero{position:fixed;left:20px;bottom:20px;z-index:10;max-width:min(620px,72vw);pointer-events:none}.eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px;opacity:.72}.hero h1{font-weight:400;font-size:clamp(31px,5.2vw,78px);line-height:.9;letter-spacing:-.045em;margin:0}.hero h1 span{display:block}.caption{margin-top:14px;font-size:12px;line-height:1.45;max-width:420px;opacity:.72}
+    .counter{position:fixed;right:20px;bottom:20px;z-index:10;text-align:right;pointer-events:none}.counter .n{font-size:48px;line-height:.8;font-weight:400;letter-spacing:-.06em}.counter .label{font-size:9px;text-transform:uppercase;letter-spacing:.16em;margin-top:8px;opacity:.65}
+    .rail{position:fixed;top:50%;right:20px;transform:translateY(-50%);height:32vh;width:1px;background:rgba(255,255,255,.18);z-index:11}.rail i{position:absolute;left:-2px;width:5px;height:18%;background:#fff;transform:translateY(-50%);transition:top .7s cubic-bezier(.22,.8,.2,1)}
+    .hint{position:fixed;top:50%;left:20px;transform:translateY(-50%) rotate(-90deg) translateX(-50%);transform-origin:left center;z-index:12;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.46;pointer-events:none}
+    .flash{position:fixed;inset:0;background:white;opacity:0;pointer-events:none;z-index:20}
+    .enter{position:fixed;inset:0;z-index:30;background:#0a0908;display:grid;place-items:center;transition:opacity .8s ease,visibility .8s ease}.enter.hide{opacity:0;visibility:hidden}.enter-inner{text-align:center;width:min(600px,88vw)}.enter .small{font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.55}.enter h2{font-size:clamp(42px,9vw,110px);font-weight:400;letter-spacing:-.065em;line-height:.82;margin:16px 0 24px}.enter button{appearance:none;border:1px solid rgba(255,255,255,.45);background:transparent;color:#fff;border-radius:100px;padding:13px 22px;font:inherit;font-size:11px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}.enter p{font-size:11px;line-height:1.5;opacity:.55;margin:18px auto 0;max-width:360px}
+    .photo-label{position:fixed;left:50%;top:16%;transform:translateX(-50%);z-index:9;text-align:center;pointer-events:none;opacity:.8}.photo-label b{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}.photo-label span{font-size:9px;letter-spacing:.1em;opacity:.6}
+    @media(max-width:700px){.top{padding:14px}.hero{left:14px;bottom:16px;max-width:72vw}.hero h1{font-size:40px}.caption{font-size:10px;max-width:270px}.counter{right:14px;bottom:18px}.counter .n{font-size:36px}.rail{right:14px}.hint{left:14px}.photo-label{top:12%}}
+    @media(prefers-reduced-motion:reduce){.grain{animation:none}.rail i{transition:none}}
+  </style>
+</head>
+<body>
+  <div class="stage" id="stage"></div><div class="grain"></div><div class="flash" id="flash"></div>
+  <div class="top"><div class="brand">FORMIKAT</div><div class="meta">Franckesche Stiftungen<br>Halle (Saale) · 2020</div></div>
+  <div class="photo-label"><b id="layerTitle">SCHICHT 01 · URSPRUNG</b><span id="layerSub">unter die Oberfläche</span></div>
+  <div class="hero"><div class="eyebrow">Digitales Experiment / Ausstellungsdesign</div><h1><span>Im Steinbruch</span><span>der Zeit</span></h1><div class="caption" id="caption">Eine Ausstellung über Steine, Erdgeschichte und Zeit — als begehbarer digitaler Schnitt: Jede Bewegung legt eine neue Schicht frei.</div></div>
+  <div class="counter"><div class="n" id="counter">01</div><div class="label">von 06 Schichten</div></div>
+  <div class="rail"><i id="railDot" style="top:8%"></i></div><div class="hint">scroll / drag to excavate</div>
+  <div class="enter" id="enter"><div class="enter-inner"><div class="small">FORMIKAT / Versuch 2026</div><h2>STRATA<br>VIEWER</h2><button id="enterBtn">Schicht freilegen</button><p>Ein reales Ausstellungsprojekt wird nicht als Galerie gezeigt, sondern als geologischer Körper: Bilder, Raum und Zeit liegen übereinander.</p></div></div>
+
+  <script type="module">
+    import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js';
+
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const images = [
+      'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-280_bmz.jpg',
+      'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-9_bmz.jpg',
+      'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-36_bmz.jpg',
+      'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-49_bmz.jpg',
+      'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-257_bmz.jpg',
+      'https://formikat.de/wp-content/uploads/2020/10/20201012_formikat_Frankesche_Stiftung-98_bmz.jpg'
+    ];
+    const labels = [
+      ['SCHICHT 01 · URSPRUNG','unter die Oberfläche'],['SCHICHT 02 · ABDRUCK','Stein als Speicher'],['SCHICHT 03 · STRATUM','Geschichte liegt übereinander'],['SCHICHT 04 · BRUCH','Architektur wird Geologie'],['SCHICHT 05 · ZEUGE','Fundstücke im Raum'],['SCHICHT 06 · ANTHROPOZÄN','wir werden selbst zur Schicht']
+    ];
+    const captions = [
+      'Eine Ausstellung über Steine, Erdgeschichte und Zeit — als begehbarer digitaler Schnitt: Jede Bewegung legt eine neue Schicht frei.',
+      'Fotografie wird hier nicht zum Bild an der Wand, sondern zu einer Materialschicht im Raum.',
+      'Wie in der Ausstellung erzählen die Ebenen nacheinander — nicht chronologisch als Menü, sondern räumlich als Sediment.',
+      'Die scharf geschnittene Ausstellungsarchitektur wird zu einem beweglichen Profil, das sich beim Navigieren gegeneinander verschiebt.',
+      'Objekt, Grafik, Licht und Architektur tauchen als Fragmente aus dem digitalen Gestein auf und verschwinden wieder.',
+      'Am Ende kippt der Blick: Nicht nur Steine speichern Zeit. Auch unsere Gegenwart hinterlässt eine lesbare Schicht.'
+    ];
+
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.FogExp2(0x080707,.055);
+    const camera = new THREE.PerspectiveCamera(44,innerWidth/innerHeight,.1,100);
+    camera.position.set(0,0,10);
+    const renderer = new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});
+    renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));renderer.setSize(innerWidth,innerHeight);renderer.setClearColor(0x080707,1);
+    renderer.outputColorSpace = THREE.SRGBColorSpace;document.querySelector('#stage').appendChild(renderer.domElement);
+
+    const root = new THREE.Group();scene.add(root);
+    const layers = [];
+    const loader = new THREE.TextureLoader();loader.setCrossOrigin('anonymous');
+
+    const colors = [0xd7b58d,0x7d8079,0xa65358,0x9f826b,0x586c58,0x9d8cbd];
+    for(let i=0;i<6;i++){
+      const g=new THREE.Group();g.position.z=-i*3.6;root.add(g);layers.push(g);
+      const geo=new THREE.PlaneGeometry(6.8,4.25,46,30);
+      const pos=geo.attributes.position;for(let j=0;j<pos.count;j++){const x=pos.getX(j),y=pos.getY(j);const edge=Math.pow(Math.abs(y)/2.13,2.6);pos.setZ(j,(Math.sin(x*2.2+i*.7)+Math.sin(y*4.7-i))*0.035+edge*.18)}geo.computeVertexNormals();
+      const mat=new THREE.MeshStandardMaterial({color:0xffffff,roughness:.7,metalness:.02,side:THREE.DoubleSide,transparent:true,opacity:.93});
+      loader.load(images[i],t=>{t.colorSpace=THREE.SRGBColorSpace;t.minFilter=THREE.LinearFilter;mat.map=t;mat.needsUpdate=true},undefined,()=>{mat.color.set(colors[i])});
+      const plane=new THREE.Mesh(geo,mat);plane.rotation.z=(i%2?-.025:.025);g.add(plane);
+      const rim=new THREE.Mesh(new THREE.PlaneGeometry(7.2,4.65),new THREE.MeshBasicMaterial({color:colors[i],transparent:true,opacity:.13,side:THREE.DoubleSide}));rim.position.z=-.09;rim.rotation.z=plane.rotation.z;g.add(rim);
+      for(let s=0;s<6;s++){const strip=new THREE.Mesh(new THREE.PlaneGeometry(7.4,.075+Math.random()*.12),new THREE.MeshBasicMaterial({color:colors[(i+s)%colors.length],transparent:true,opacity:.22,side:THREE.DoubleSide}));strip.position.set((Math.random()-.5)*.3,-2.4-s*.19,-.14-s*.02);strip.rotation.z=(Math.random()-.5)*.055;g.add(strip)}
+    }
+
+    const amb=new THREE.AmbientLight(0xffffff,1.4);scene.add(amb);const key=new THREE.PointLight(0xffd8b0,26,20);key.position.set(-4,3,6);scene.add(key);const cool=new THREE.PointLight(0x7788ff,18,18);cool.position.set(4,-2,3);scene.add(cool);
+
+    const shellMat=new THREE.ShaderMaterial({transparent:true,depthWrite:false,side:THREE.BackSide,uniforms:{time:{value:0},progress:{value:0},res:{value:new THREE.Vector2(innerWidth,innerHeight)}},vertexShader:`varying vec3 vPos; varying vec3 vN; void main(){vPos=position;vN=normal;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+    fragmentShader:`precision highp float;uniform float time;uniform float progress;varying vec3 vPos;varying vec3 vN;float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}float noise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(hash(i),hash(i+vec2(1,0)),f.x),mix(hash(i+vec2(0,1)),hash(i+vec2(1,1)),f.x),f.y);}float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*noise(p);p*=2.03;a*=.5;}return v;}void main(){vec2 p=vPos.xy*.5;float n=fbm(p*2.5+vec2(time*.025,-progress*.5));float strata=sin((p.y+n*.42+progress*.11)*24.);float bands=smoothstep(.2,.9,abs(strata));vec3 c1=vec3(.08,.055,.045),c2=vec3(.42,.18,.16),c3=vec3(.13,.17,.14);vec3 col=mix(c1,c2,bands*.55+n*.25);col=mix(col,c3,smoothstep(.58,.9,n));float edge=pow(1.-abs(dot(normalize(vN),normalize(-vPos))),2.);gl_FragColor=vec4(col,.28+.30*edge);}`});
+    const shell=new THREE.Mesh(new THREE.SphereGeometry(13,48,32),shellMat);scene.add(shell);
+
+    let target=0,progress=0,drag=false,lastY=0,velocity=0,entered=false;
+    const counter=document.querySelector('#counter'),title=document.querySelector('#layerTitle'),sub=document.querySelector('#layerSub'),caption=document.querySelector('#caption'),dot=document.querySelector('#railDot'),flash=document.querySelector('#flash');
+    function setTarget(v){target=Math.max(0,Math.min(5,v));const i=Math.round(target);counter.textContent=String(i+1).padStart(2,'0');title.textContent=labels[i][0];sub.textContent=labels[i][1];caption.textContent=captions[i];dot.style.top=(8+i*16.8)+'%';flash.animate([{opacity:.14},{opacity:0}],{duration:420,easing:'ease-out'});}
+    addEventListener('wheel',e=>{if(!entered)return;e.preventDefault();velocity+=e.deltaY*.0022},{passive:false});
+    addEventListener('pointerdown',e=>{if(!entered)return;drag=true;lastY=e.clientY});addEventListener('pointermove',e=>{if(!drag)return;velocity+=(lastY-e.clientY)*.012;lastY=e.clientY});addEventListener('pointerup',()=>drag=false);addEventListener('pointercancel',()=>drag=false);
+    addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='ArrowRight')setTarget(Math.min(5,Math.round(target)+1));if(e.key==='ArrowUp'||e.key==='ArrowLeft')setTarget(Math.max(0,Math.round(target)-1))});
+    document.querySelector('#enterBtn').onclick=()=>{entered=true;document.querySelector('#enter').classList.add('hide')};
+
+    let t0=performance.now();
+    function tick(now){requestAnimationFrame(tick);const dt=Math.min(.033,(now-t0)/1000);t0=now;if(entered&&!reduced){if(Math.abs(velocity)>.001){target+=velocity;velocity*=Math.pow(.065,dt);target=Math.max(0,Math.min(5,target));const nearest=Math.round(target);if(Math.abs(target-nearest)<.06){target=nearest;velocity*=.55}setTarget(target)}}
+      progress+=(target-progress)*(reduced?1:.055);root.position.z=progress*3.6;root.rotation.y=Math.sin(now*.00018)*.045;root.rotation.x=Math.cos(now*.00015)*.018;shell.rotation.y=now*.00004;shellMat.uniforms.time.value=now*.001;shellMat.uniforms.progress.value=progress;
+      const aspect=innerWidth/innerHeight;camera.position.x=Math.sin(now*.00025)*.24+(innerWidth<700?0:.15);camera.position.y=Math.cos(now*.00021)*.13;camera.position.z=innerWidth<700?11.8:10;camera.lookAt(0,0,root.position.z-1.2);
+      layers.forEach((g,i)=>{const d=Math.abs(i-progress);const scale=1+Math.max(0,1-d)*.035;g.scale.setScalar(scale);g.rotation.z=(i%2?-.012:.012)+Math.sin(now*.0004+i)*.008});renderer.render(scene,camera)}requestAnimationFrame(tick);
+
+    addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));shellMat.uniforms.res.value.set(innerWidth,innerHeight)});
+  </script>
+</body>
+</html>

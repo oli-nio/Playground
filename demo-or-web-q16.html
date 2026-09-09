@@ -1,145 +1,25 @@
-<!doctype html>
-<html lang="de">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>FORMIKAT OR — Web Q16 Baseline</title>
-<style>
-  html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#ecebe7;color:#111;font-family:Arial,Helvetica,sans-serif}
-  canvas{display:block;width:100%;height:100%;touch-action:none}
-  #ui{position:fixed;inset:0;pointer-events:none;padding:18px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between}
-  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
-  .brand{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.35}
-  .status{font-size:11px;line-height:1.4;text-align:right;max-width:46ch;background:rgba(255,255,255,.72);backdrop-filter:blur(10px);padding:8px 10px;border-radius:999px}
-  .bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;font-size:11px;line-height:1.4}
-  .hint{background:rgba(255,255,255,.72);backdrop-filter:blur(10px);padding:8px 10px;border-radius:999px}
-  .stats{text-align:right;background:rgba(255,255,255,.72);backdrop-filter:blur(10px);padding:8px 10px;border-radius:12px}
-  #bar{position:fixed;left:0;top:0;height:2px;width:0;background:#111;transition:width .15s ease}
-  #error{position:fixed;left:18px;right:18px;top:60px;background:#fff;padding:14px;border:1px solid #111;display:none;white-space:pre-wrap;font:12px/1.45 monospace;z-index:5}
-</style>
-</head>
-<body>
-<div id="bar"></div>
-<div id="error"></div>
-<div id="ui">
-  <div class="top">
-    <div class="brand">FORMIKAT<br>OR / WEB BASELINE<br>Q16</div>
-    <div class="status" id="status">Lade ortest2-web-q16.glb …</div>
-  </div>
-  <div class="bottom">
-    <div class="hint">Drag = Orbit · Wheel/Pinch = Zoom · Right drag = Pan</div>
-    <div class="stats" id="stats"></div>
-  </div>
-</div>
-<script type="importmap">
-{
-  "imports": {
-    "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
-    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
-  }
-}
-</script>
-<script type="module">
-import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
-
-const renderer = new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});
-renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-renderer.setSize(innerWidth,innerHeight);
-renderer.outputColorSpace = THREE.SRGBColorSpace;
-renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.05;
-renderer.shadowMap.enabled = false;
-document.body.prepend(renderer.domElement);
-
-const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xecebe7);
-const pmrem = new THREE.PMREMGenerator(renderer);
-scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
-
-const camera = new THREE.PerspectiveCamera(42, innerWidth/innerHeight, 0.01, 500);
-camera.position.set(14,10,16);
-const controls = new OrbitControls(camera,renderer.domElement);
-controls.enableDamping = true;
-controls.dampingFactor = 0.06;
-controls.screenSpacePanning = true;
-controls.minDistance = 0.2;
-controls.maxDistance = 120;
-
-scene.add(new THREE.HemisphereLight(0xffffff,0x777777,1.2));
-const sun = new THREE.DirectionalLight(0xffffff,1.5);
-sun.position.set(10,20,8);
-scene.add(sun);
-
-const status = document.getElementById('status');
-const stats = document.getElementById('stats');
-const bar = document.getElementById('bar');
-const error = document.getElementById('error');
-
-function frameObject(root){
-  const box = new THREE.Box3().setFromObject(root);
-  const size = box.getSize(new THREE.Vector3());
-  const center = box.getCenter(new THREE.Vector3());
-  const maxDim = Math.max(size.x,size.y,size.z);
-  const fov = camera.fov * Math.PI/180;
-  let distance = maxDim / (2*Math.tan(fov/2));
-  distance *= 1.25;
-  const dir = new THREE.Vector3(1,0.72,1).normalize();
-  camera.position.copy(center).add(dir.multiplyScalar(distance));
-  camera.near = Math.max(0.01, distance/1000);
-  camera.far = distance*20;
-  camera.updateProjectionMatrix();
-  controls.target.copy(center);
-  controls.update();
-}
-
-const loader = new GLTFLoader();
-const t0 = performance.now();
-loader.load('ortest2-web-q16.glb', gltf => {
-  scene.add(gltf.scene);
-  frameObject(gltf.scene);
-  let meshes=0, tris=0;
-  gltf.scene.traverse(o=>{
-    if(o.isMesh){
-      meshes++;
-      const g=o.geometry;
-      tris += g.index ? g.index.count/3 : (g.attributes.position?.count||0)/3;
-      if(Array.isArray(o.material)) o.material.forEach(m=>m.needsUpdate=true);
-      else if(o.material) o.material.needsUpdate=true;
-    }
-  });
-  const sec=((performance.now()-t0)/1000).toFixed(2);
-  status.textContent = `Bereit · ${sec}s`;
-  stats.innerHTML = `${meshes.toLocaleString('de-DE')} Meshes<br>${Math.round(tris).toLocaleString('de-DE')} Triangles<br>24.66 MiB GLB`;
-  bar.style.width='100%';
-  setTimeout(()=>bar.style.opacity='0',350);
-}, xhr => {
-  if(xhr.total){
-    const p=Math.min(100,xhr.loaded/xhr.total*100);
-    bar.style.width=p+'%';
-    status.textContent=`Lade ${p.toFixed(0)} %`;
-  }
-}, e => {
-  console.error(e);
-  status.textContent='Fehler beim Laden';
-  error.style.display='block';
-  error.textContent=String(e?.message||e)+'\n\nHinweis: HTML und GLB über einen Webserver ausliefern, nicht direkt per file:// öffnen.';
-});
-
-function animate(){
-  requestAnimationFrame(animate);
-  controls.update();
-  renderer.render(scene,camera);
-}
-animate();
-
-addEventListener('resize',()=>{
-  camera.aspect=innerWidth/innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(innerWidth,innerHeight);
-});
-</script>
-</body>
-</html>
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>FORMIKAT OR — Process Notes</title><style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#ecebe7;color:#111;font-family:Arial,Helvetica,sans-serif}canvas{display:block;width:100%;height:100%;touch-action:none}#ui{position:fixed;inset:0;pointer-events:none;padding:18px;display:flex;flex-direction:column;justify-content:space-between;z-index:3}.top,.bottom{display:flex;justify-content:space-between;gap:18px}.brand{font:700 12px/1.35 Arial;letter-spacing:.08em;text-transform:uppercase}.status,.hint,.stats,.key{background:rgba(255,255,255,.78);backdrop-filter:blur(10px);padding:8px 10px;border-radius:999px;font:11px/1.35 Arial}.status,.stats{text-align:right}.stats{border-radius:12px}.key{position:fixed;left:18px;top:72px;z-index:6;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;pointer-events:none}#bar{position:fixed;left:0;top:0;height:2px;background:#111;width:0;z-index:10}#error{position:fixed;left:18px;right:18px;top:60px;background:white;padding:14px;display:none;z-index:12}
+#markers{position:fixed;inset:0;pointer-events:none;z-index:5}.marker{position:absolute;pointer-events:auto;border:0;background:none;padding:0;cursor:pointer}.pin{position:relative;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.94);border:1px solid rgba(17,17,17,.7);box-shadow:0 5px 18px #0002;font:700 10px Arial}.pin:after{content:"";position:absolute;inset:-7px;border:1px solid #1114;border-radius:50%;animation:pulse 2.4s ease-out infinite}.tag{position:absolute;left:36px;top:50%;transform:translateY(-50%);white-space:nowrap;background:#ffffffe8;border:1px solid #1112;border-radius:999px;padding:6px 9px;font:700 10px Arial;letter-spacing:.04em;text-transform:uppercase;opacity:0;transition:.18s}.marker:hover .tag,.marker.active .tag{opacity:1}.marker.active .pin{background:#111;color:#fff}@keyframes pulse{0%{opacity:.6;transform:scale(.75)}75%,100%{opacity:0;transform:scale(1.35)}}
+#note{position:fixed;right:18px;top:72px;width:min(390px,calc(100vw - 36px));max-height:calc(100vh - 144px);overflow:auto;z-index:7;background:rgba(255,255,255,.96);backdrop-filter:blur(18px);border:1px solid #1112;border-radius:18px;box-shadow:0 24px 70px #0003;opacity:0;pointer-events:none;transform:translateX(18px);transition:.2s}#note.open{opacity:1;pointer-events:auto;transform:none}.nb{padding:16px}.nh{display:flex;justify-content:space-between;gap:14px}.ey{font:700 9px Arial;letter-spacing:.12em;text-transform:uppercase;color:#666;margin-bottom:5px}h2{font-size:24px;line-height:1;margin:0;letter-spacing:-.03em}.close{width:30px;height:30px;border-radius:50%;border:1px solid #1112;background:white;font-size:18px;cursor:pointer}.txt{font-size:13px;line-height:1.5;margin-top:13px}.facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:13px}.fact{border-top:1px solid #1112;padding-top:7px;font-size:10px;line-height:1.35}.fact b{display:block;font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:#666;margin-bottom:2px}.src{border-top:1px solid #1112;margin-top:13px;padding-top:9px;font-size:9px;line-height:1.4;color:#777}.focus{margin-top:13px;border:0;background:#111;color:white;border-radius:999px;padding:9px 12px;font:700 10px Arial;text-transform:uppercase;cursor:pointer}
+@media(max-width:700px){#ui{padding:12px}.status{max-width:48vw}.hint{display:none}.key{left:12px;top:62px}.tag{display:none}#note{left:12px;right:12px;top:auto;bottom:12px;width:auto;max-height:58vh}h2{font-size:20px}}
+</style></head><body><div id="bar"></div><div id="error"></div><div id="markers"></div><div class="key">6 Process Notes · anklicken</div><aside id="note"><div class="nb"><div class="nh"><div><div class="ey" id="ey"></div><h2 id="nt"></h2></div><button class="close" id="x">×</button></div><div class="txt" id="tx"></div><div class="facts" id="fa"></div><button class="focus" id="fo">Im Raum fokussieren</button><div class="src" id="sr"></div></div></aside><div id="ui"><div class="top"><div class="brand">FORMIKAT<br>OR / SONNE. SATT.<br>Q16 · PROCESS NOTES</div><div class="status" id="status">Lade Modell …</div></div><div class="bottom"><div class="hint">Drag = Orbit · Wheel/Pinch = Zoom · Marker = Process Note</div><div class="stats" id="stats"></div></div></div>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script><script type="module">
+import * as THREE from 'three';import{OrbitControls}from'three/addons/controls/OrbitControls.js';import{GLTFLoader}from'three/addons/loaders/GLTFLoader.js';import{RoomEnvironment}from'three/addons/environments/RoomEnvironment.js';
+const R=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});R.setPixelRatio(Math.min(devicePixelRatio,2));R.setSize(innerWidth,innerHeight);R.outputColorSpace=THREE.SRGBColorSpace;R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=1.05;document.body.prepend(R.domElement);const S=new THREE.Scene();S.background=new THREE.Color(0xecebe7);const P=new THREE.PMREMGenerator(R);S.environment=P.fromScene(new RoomEnvironment(),.04).texture;const C=new THREE.PerspectiveCamera(42,innerWidth/innerHeight,.01,500),O=new OrbitControls(C,R.domElement);O.enableDamping=true;O.dampingFactor=.06;O.screenSpacePanning=true;O.maxDistance=120;S.add(new THREE.HemisphereLight(0xffffff,0x777777,1.2));const sun=new THREE.DirectionalLight(0xffffff,1.5);sun.position.set(10,20,8);S.add(sun);
+const $=id=>document.getElementById(id),status=$('status'),stats=$('stats'),bar=$('bar'),err=$('error'),markers=$('markers'),panel=$('note'),ey=$('ey'),nt=$('nt'),tx=$('tx'),fa=$('fa'),sr=$('sr');let active=null,tween=null;
+function frame(root){const b=new THREE.Box3().setFromObject(root),sz=b.getSize(new THREE.Vector3()),ct=b.getCenter(new THREE.Vector3()),m=Math.max(sz.x,sz.y,sz.z),d=m/(2*Math.tan(C.fov*Math.PI/360))*1.25;C.position.copy(ct).add(new THREE.Vector3(1,.72,1).normalize().multiplyScalar(d));C.near=Math.max(.01,d/1000);C.far=d*20;C.updateProjectionMatrix();O.target.copy(ct);O.update()}
+function mats(o){return!o.material?[]:Array.isArray(o.material)?o.material:[o.material]}
+function zfix(root){root.updateWorldMatrix(true,true);const sc=new THREE.Box3().setFromObject(root).getCenter(new THREE.Vector3()),p0=new THREE.Vector3(),p1=new THREE.Vector3(),p2=new THREE.Vector3(),a=new THREE.Vector3(),b=new THREE.Vector3(),n=new THREE.Vector3(),wc=new THREE.Vector3(),wp=new THREE.Vector3(),tg=new THREE.Vector3();let moved=0;root.traverse(o=>{const g=o.geometry;if(!o.isMesh||!g?.attributes?.position)return;if(!g.boundingBox)g.computeBoundingBox();const s=g.boundingBox.getSize(new THREE.Vector3()),ds=[s.x,s.y,s.z].sort((x,y)=>x-y);if(ds[0]>.0016||ds[1]*ds[2]<.008||ds[2]<.08)return;const pos=g.attributes.position,idx=g.index,tc=Math.min(idx?idx.count/3:pos.count/3,24);let ok=false;for(let t=0;t<tc;t++){const ia=idx?idx.getX(t*3):t*3,ib=idx?idx.getX(t*3+1):t*3+1,ic=idx?idx.getX(t*3+2):t*3+2;p0.fromBufferAttribute(pos,ia);p1.fromBufferAttribute(pos,ib);p2.fromBufferAttribute(pos,ic);a.subVectors(p1,p0);b.subVectors(p2,p0);n.crossVectors(a,b);if(n.lengthSq()>1e-12){ok=true;break}}if(!ok)return;n.normalize().transformDirection(o.matrixWorld);wc.copy(g.boundingBox.getCenter(new THREE.Vector3())).applyMatrix4(o.matrixWorld);if(Math.abs(n.y)>.72){if(n.y<0)n.negate()}else if(n.dot(sc.clone().sub(wc))<0)n.negate();o.getWorldPosition(wp);tg.copy(wp).addScaledVector(n,.001);if(o.parent){o.parent.worldToLocal(tg);o.position.copy(tg)}else o.position.copy(tg);o.updateMatrix();if(Array.isArray(o.material))o.material=o.material.map(m=>m?.clone?.()||m);else if(o.material?.clone)o.material=o.material.clone();mats(o).forEach(m=>{if(m){m.polygonOffset=true;m.polygonOffsetFactor=-1;m.polygonOffsetUnits=-1;m.needsUpdate=true}});moved++});root.updateWorldMatrix(true,true);return moved}
+const N=[
+['01','Schwammstadt',[29.435,2.75,-33.021],'Kapitel 04 · Klima','Schwammstadt','Gebäude, Straßen, Bäume und Wasserwege übersetzen das Prinzip der Schwammstadt in ein räumliches Modell. Die Station ist als eigenständiger Möbelkörper mit Modellbau-Elementen geplant.',[['Prinzip','Klimaanpassung räumlich übersetzt'],['Konstruktion','Teil A/B/C, bündige Plattenstöße'],['Werkstatt','MDF/KVH + Modellbau'],['Planstand','Ausarbeitung 03/2026']],'FORMIKAT Ausarbeitung SONNE. SATT., S. 69 und Werkstattzeichnung S. 83.'],
+['02','Kühle Orte',[32.542,2.111,-28.708],'Vermittlung · Partizipation','Hot & Cool Spots','Eine Leipzig-Karte wird zum kollektiven Wissensspeicher: Besucher markieren kühle bzw. heiße Orte mit farbigen Fähnchen und verknüpfen sie über nummerierte Notizen mit dem Ortebuch. Ergänzend war eine Cool-down-Karte auf Touchscreen vorgesehen.',[['Interface','Karte + Fähnchen + Ortebuch'],['Farblogik','rot / blau'],['Möbel','3 Freiraum-Module + Deckplatte'],['Interaktion','eigene Orte eintragen']],'FORMIKAT Ideenskizze 07/2025, S. 14–15; Ausarbeitung 03/2026, S. 63/84.'],
+['03','Sommer-Hits',[25.682,1.819,-27.698],'Vermittlung · Audio/NFC','Sommer-Hits im Koffer','Gegenstände im Reisekoffer dienen als Musikauswahl. NFC-Tags koppeln reale Sommerobjekte an Songs; Kopfhörer machen die Station zu einer haptischen Audiostation. Die spätere Werkplanung sieht Präsentationskästen auf Freiraum-Modulen vor.',[['Trigger','NFC im Objekt'],['Ausgabe','Kopfhörer'],['Beispiel','Knirps / Rudi Carell, 1975'],['Möbel','2 Freiraum-Module']],'FORMIKAT Ideenskizze 07/2025, S. 21–23; NFC-Skizze 02/2026, S. 24–25.'],
+['04','Riechstation',[26.946,2.298,-24.925],'Vermittlung · Sinne','Wie riecht der Sommer?','Die rote Eiswagen-Silhouette wird zur Riechstation. Vorgeschlagene Sommergerüche reichen von Sonnencreme und nasser chloriger Badehose bis rote Brause, Gummi-Luftmatratze oder Pinien.',[['Typologie','Eiswagen / Marktstand'],['Sinn','Geruch'],['Interaktion','Duftklappen'],['Frage','Welcher Duft ist dein Sommer?']],'FORMIKAT Ideenskizze 07/2025, S. 24; Ausarbeitung 03/2026, S. 72.'],
+['05','Klimadaten',[28.683,1.299,-29.612],'Kapitel 04 · Daten im Raum','Dürre, Hitze, Niederschlag','Klimadaten werden als physische Diagramme aufgebaut: rote und blaue Balken, eine Wassersäule aus Eimern und ein räumliches Tortendiagramm machen Temperatur, Niederschlag und Flächenverteilung körperlich vergleichbar.',[['Zeitraum','140 Jahre Niederschlag'],['Diagramme','Balken + Säule + Torte'],['Materialität','Modellbau-Elemente'],['Ziel','Daten räumlich vergleichen']],'FORMIKAT Ideenskizze 07/2025, S. 13; Ausarbeitung 03/2026, S. 70–71.'],
+['06','Sonnensegel',[32.034,3.16,-23.849],'Vermittlung · Ruheinsel','Sonnensegel & Hörort','Die Vermittlungsinsel verbindet Rasen, textile Verschattung und Sitz-/Hörsituationen. Das Sonnensegel besteht in der Werkplanung aus fünf Meshbahnen und fasst einen sommerlichen Gegenraum innerhalb der Ausstellung.',[['Textil','5 × Meshbanner'],['Format','1277 × 3463 mm je Bahn'],['Material','270 g/m² Mesh B1'],['Boden','Kunstrasen 4000 × 3500 mm']],'FORMIKAT Ausarbeitung 03/2026, S. 74–82; Werkstatt/Druckerei S. 80–82.']];
+const ME=N.map(d=>{const e=document.createElement('button');e.className='marker';e.innerHTML=`<span class="pin">${d[0]}</span><span class="tag">${d[1]}</span>`;e.onclick=ev=>{ev.stopPropagation();ME.forEach(x=>x.e.classList.toggle('active',x.e===e));active=d;ey.textContent=d[3];nt.textContent=d[4];tx.textContent=d[5];fa.innerHTML=d[6].map(x=>`<div class="fact"><b>${x[0]}</b>${x[1]}</div>`).join('');sr.textContent=d[7];panel.classList.add('open')};markers.appendChild(e);return{d,e,p:new THREE.Vector3(...d[2])}});$('x').onclick=()=>{panel.classList.remove('open');ME.forEach(x=>x.e.classList.remove('active'));active=null};$('fo').onclick=()=>{if(!active)return;const t=new THREE.Vector3(...active[2]),dir=C.position.clone().sub(O.target).normalize();tween={t0:performance.now(),a:C.position.clone(),b:t.clone().add(dir.multiplyScalar(4.2)).add(new THREE.Vector3(0,1,0)),c:O.target.clone(),d:t.clone().add(new THREE.Vector3(0,-.45,0))}};
+function marks(){const dir=new THREE.Vector3();C.getWorldDirection(dir);ME.forEach(m=>{if(dir.dot(m.p.clone().sub(C.position))<=0){m.e.style.display='none';return}const q=m.p.clone().project(C);if(q.z<-1||q.z>1||Math.abs(q.x)>1.06||Math.abs(q.y)>1.06){m.e.style.display='none';return}m.e.style.display='block';m.e.style.left=(q.x*.5+.5)*innerWidth+'px';m.e.style.top=(-q.y*.5+.5)*innerHeight+'px';m.e.style.transform=`translate(-50%,-50%) scale(${THREE.MathUtils.clamp(8/C.position.distanceTo(m.p),.72,1.05)})`})}
+const t0=performance.now();new GLTFLoader().load('ortest2-web-q16.glb',g=>{S.add(g.scene);const z=zfix(g.scene);frame(g.scene);let ms=0,tr=0;g.scene.traverse(o=>{if(o.isMesh){ms++;tr+=o.geometry.index?o.geometry.index.count/3:(o.geometry.attributes.position?.count||0)/3}});status.textContent=`Bereit · ${((performance.now()-t0)/1000).toFixed(2)}s · ${z} Grafikflächen: 1 mm Z-Fix`;stats.innerHTML=`${ms.toLocaleString('de-DE')} Meshes<br>${Math.round(tr).toLocaleString('de-DE')} Triangles<br>24.66 MiB GLB<br>6 Process Notes`;bar.style.width='100%';setTimeout(()=>bar.style.opacity='0',350)},x=>{if(x.total){const p=x.loaded/x.total*100;bar.style.width=p+'%';status.textContent=`Lade ${p.toFixed(0)} %`}},e=>{err.style.display='block';err.textContent=String(e?.message||e)});
+function loop(){requestAnimationFrame(loop);if(tween){const u=Math.min(1,(performance.now()-tween.t0)/900),k=1-Math.pow(1-u,3);C.position.lerpVectors(tween.a,tween.b,k);O.target.lerpVectors(tween.c,tween.d,k);if(u>=1)tween=null}O.update();marks();R.render(S,C)}loop();addEventListener('resize',()=>{C.aspect=innerWidth/innerHeight;C.updateProjectionMatrix();R.setSize(innerWidth,innerHeight)});
+</script></body></html>

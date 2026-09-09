@@ -1,0 +1,208 @@
+{
+  "source": "ortest2.glb",
+  "output": "ortest2-web-q16.glb",
+  "source_bytes": 57908572,
+  "output_bytes": 25859204,
+  "reduction_percent": 55.34,
+  "source_mib": 55.23,
+  "output_mib": 24.66,
+  "triangles_before": 1108345,
+  "triangles_after": 1108345,
+  "world_bbox_before": [
+    [
+      25.0215078125,
+      -0.05999999999999674,
+      -34.05202343749998
+    ],
+    [
+      38.2429453125,
+      5.900000000000002,
+      -21.56999023437499
+    ]
+  ],
+  "world_bbox_after": [
+    [
+      25.0215078125,
+      -0.05999999999999674,
+      -34.05203651558446
+    ],
+    [
+      38.2429368851389,
+      5.900000000000002,
+      -21.56999023437499
+    ]
+  ],
+  "max_world_bbox_error": 1.3078084478479468e-05,
+  "counts_before": {
+    "nodes": 1887,
+    "meshes": 1609,
+    "materials": 225,
+    "textures": 317,
+    "images": 317,
+    "accessors": 4973,
+    "bufferViews": 5290
+  },
+  "counts_after": {
+    "nodes": 1887,
+    "meshes": 1609,
+    "materials": 225,
+    "textures": 317,
+    "images": 317,
+    "accessors": 1647,
+    "bufferViews": 1915
+  },
+  "rhino_candidate_reuse_groups": 72,
+  "rhino_candidate_reused_instances": 193,
+  "largest_reuse_groups": [
+    {
+      "group_id": "G0001",
+      "group_count": 34,
+      "reused_count": 32,
+      "layer": "BEREICH OR::Großvitrinen::Streifenfolie::Ebene 08"
+    },
+    {
+      "group_id": "G0002",
+      "group_count": 32,
+      "reused_count": 16,
+      "layer": "BEREICH OR::590.4.2 Wetterkapriolen und Klimawandel::Heatmap /  Partizipation kühle Orte::buch rot"
+    },
+    {
+      "group_id": "G0005",
+      "group_count": 16,
+      "reused_count": 15,
+      "layer": "STATISITIk-NEU::BLAU"
+    },
+    {
+      "group_id": "G0011",
+      "group_count": 10,
+      "reused_count": 9,
+      "layer": "SOUNDSTATION::Birke 18mm"
+    },
+    {
+      "group_id": "G0014",
+      "group_count": 9,
+      "reused_count": 9,
+      "layer": "BEREICH OR::590.4.2 Wetterkapriolen und Klimawandel::Schwammstadt-Modell::Gebäude"
+    },
+    {
+      "group_id": "G0016",
+      "group_count": 7,
+      "reused_count": 7,
+      "layer": "STATISITIk-NEU::ROT"
+    },
+    {
+      "group_id": "G0017",
+      "group_count": 7,
+      "reused_count": 6,
+      "layer": "STATISITIk-NEU::ROT"
+    },
+    {
+      "group_id": "G0019",
+      "group_count": 6,
+      "reused_count": 5,
+      "layer": "GEBAEUDE::02_SÄULEN"
+    },
+    {
+      "group_id": "G0026",
+      "group_count": 5,
+      "reused_count": 5,
+      "layer": "BEREICH OR::590.4.2 Wetterkapriolen und Klimawandel::Schwammstadt-Modell::Gebäude"
+    },
+    {
+      "group_id": "G0027",
+      "group_count": 5,
+      "reused_count": 5,
+      "layer": "STATISITIk-NEU::ROT"
+    },
+    {
+      "group_id": "G0028",
+      "group_count": 5,
+      "reused_count": 5,
+      "layer": "STATISITIk-NEU::ROT"
+    },
+    {
+      "group_id": "G0029",
+      "group_count": 5,
+      "reused_count": 5,
+      "layer": "STATISITIk-NEU::ROT"
+    },
+    {
+      "group_id": "G0004",
+      "group_count": 20,
+      "reused_count": 4,
+      "layer": "BEREICH OR::Layer 28_rot_Eiswagen und Soundstation"
+    },
+    {
+      "group_id": "G0009",
+      "group_count": 11,
+      "reused_count": 4,
+      "layer": "BEREICH OR::Museumspädagogik::AKTIVINSEL::SONNENSEGEL::Latte 24x48mm"
+    },
+    {
+      "group_id": "G0031",
+      "group_count": 4,
+      "reused_count": 4,
+      "layer": "BEREICH OR::590.4.2 Wetterkapriolen und Klimawandel::Schwammstadt-Modell::Gebäude"
+    },
+    {
+      "group_id": "G0034",
+      "group_count": 4,
+      "reused_count": 4,
+      "layer": "BEREICH OR::Museumspädagogik::Eisdiele::deckel"
+    },
+    {
+      "group_id": "G0043",
+      "group_count": 4,
+      "reused_count": 4,
+      "layer": "STATISITIk-NEU::ROT"
+    },
+    {
+      "group_id": "G0044",
+      "group_count": 4,
+      "reused_count": 4,
+      "layer": "BEREICH OR::590.4.2 Wetterkapriolen und Klimawandel::Schwammstadt-Modell::Gebäude"
+    },
+    {
+      "group_id": "G0045",
+      "group_count": 4,
+      "reused_count": 4,
+      "layer": "STATISITIk-NEU::ROT"
+    },
+    {
+      "group_id": "G0047",
+      "group_count": 4,
+      "reused_count": 4,
+      "layer": "BEREICH OR::590.4.2 Wetterkapriolen und Klimawandel::Schwammstadt-Modell::Gebäude"
+    }
+  ],
+  "quantization": {
+    "positions": 1416,
+    "normals": 1416,
+    "uvs": 129,
+    "indices16": 1413,
+    "indices32": 3,
+    "other": 0
+  },
+  "dedupe": {
+    "unique_image_bytes": 2376692,
+    "duplicate_image_bytes_removed": 347892,
+    "unique_accessor_payloads": 1647,
+    "old_used_accessors": 4377
+  },
+  "extensionsUsed": [
+    "KHR_materials_transmission",
+    "KHR_mesh_quantization"
+  ],
+  "extensionsRequired": [
+    "KHR_mesh_quantization"
+  ],
+  "notes": [
+    "Topology and triangle count are unchanged.",
+    "POSITION uses uniform 16-bit quantization with per-node decode transform.",
+    "NORMAL uses normalized signed 8-bit storage.",
+    "TEXCOORD_0 uses normalized signed 16-bit storage when UVs are within [-1,1].",
+    "Indices are converted to 16-bit where possible.",
+    "Repeated Rhino fingerprint candidates reuse geometry accessors when rigidly equivalent.",
+    "Duplicate embedded image payloads are deduplicated."
+  ]
+}

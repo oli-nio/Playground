@@ -1,0 +1,18 @@
+{
+  "updated": "2026-09-13",
+  "flow": ["Real work", "Resolvable evidence", "Signal", "Candidate", "Test", "Outcome", "Review", "Human decision", "Operational baseline", "New evidence"],
+  "nodes": [
+    {"id":"mongolia","group":"Learning","title":"Mongolia Live Slice","status":"ACTIVE","text":"Erster realer Improvement-Loop-Pilot; wartet auf belegte Source Events."},
+    {"id":"replay","group":"Learning","title":"Historical Replay","status":"PARKED","text":"Supporting Eval; Episode-Auswahl bis ausreichender Source Coverage geparkt."},
+    {"id":"oliver","group":"Sources","title":"Oliver ChatGPT","status":"LIVE","text":"Live Signal Source."},
+    {"id":"matthias","group":"Sources","title":"Matthias ChatGPT","status":"UNKNOWN","text":"Noch kein tatsächliches Signal im gemeinsamen Repo belegt."},
+    {"id":"mail","group":"Sources","title":"Shared Mail","status":"PARTIAL","text":"Transport live; Projektabdeckung noch unbekannt."},
+    {"id":"3dm","group":"Capabilities","title":"3DM Geometry","status":"PASS","text":"Frische technische Reproduktion bestanden."},
+    {"id":"path","group":"Capabilities","title":"Project + Path","status":"PASS","text":"Resolver reproduziert; Content Identity bleibt von Projektkontext getrennt."},
+    {"id":"dxf","group":"Capabilities","title":"DXF","status":"PARTIAL","text":"Capability nur teilweise belegt."},
+    {"id":"video","group":"Capabilities","title":"Video","status":"UNKNOWN","text":"Capability noch nicht ausreichend belegt."},
+    {"id":"loopold","group":"Learning","title":"Loopold v0.3","status":"ACTIVE","text":"Konzeptionell eingefroren; Maintenance erlaubt, Live Evidence hat Vorrang."},
+    {"id":"os","group":"Governance","title":"FORMIKAT OS Control","status":"ACTIVE","text":"Human-gated; Improvement Loop darf nicht direkt in operative Wahrheit schreiben."}
+  ],
+  "advisors": [["Chase","Harness · Kontext · Observability"],["Karpathy","kleinster reproduzierbarer Test"],["Guzman","Grenzen · Routing · Human Gate"],["Chollet","Generalisierung · Eval-Integrität"],["Leveson","Control · Feedback · Kausalität"],["Allspaw","Lernen · adaptive Arbeit"],["van der Aalst","reale Events · Actual Process"],["Woods","adaptive capacity · Brittleness"]]
+}

@@ -1,0 +1,359 @@
+UNT)-1;
+    const raw=Math.max(0,Math.min(maxIndex,(Number(video.currentTime)||0)*FPS));
+    const day0=Math.floor(raw);
+    const day1=Math.min(maxIndex,day0+1);
+    const alpha=Math.max(0,Math.min(1,raw-day0));
+    return {raw,day0,day1,alpha};
+  }
+
+  function windAnchorFieldForDay(day){
+    const anchors=[];
+    for(const pt of THEME_WIND_POINTS){
+      const key=coreRegionKey(pt.name);
+      if(!key) continue;
+      const rec=stationCore?.regions?.[key]?.daily_2023_24?.[day];
+      if(!rec) continue;
+      const u=Number(rec.u10_daily_mean_ms);
+      const v=Number(rec.v10_daily_mean_ms);
+      const speed=Number(rec.wind_speed_from_daily_mean_components_ms);
+      if(!Number.isFinite(u)||!Number.isFinite(v)) continue;
+      const [x,y]=lonLatToXY(pt.lon,pt.lat);
+      anchors.push({x,y,u,v,speed:Number.isFinite(speed)?speed:Math.hypot(u,v)});
+    }
+    return anchors;
+  }
+
+  function buildWindFieldForDay(day){
+    if(windFieldCache.has(day)) return windFieldCache.get(day);
+    const anchors=windAnchorFieldForDay(day);
+    const data=new Float32Array(WIND_FIELD_COLS*WIND_FIELD_ROWS*3);
+
+    for(let gy=0; gy<WIND_FIELD_ROWS; gy++){
+      const y=WIND_MAP_Y0 + (gy/(WIND_FIELD_ROWS-1))*(WIND_MAP_Y1-WIND_MAP_Y0);
+      for(let gx=0; gx<WIND_FIELD_COLS; gx++){
+        const x=(gx/(WIND_FIELD_COLS-1))*1920;
+        const nearest=anchors
+          .map(a=>{ const dx=x-a.x,dy=y-a.y; return {a,d2:dx*dx+dy*dy}; })
+          .sort((a,b)=>a.d2-b.d2)
+          .slice(0,6);
+
+        let sw=0,su=0,sv=0;
+        for(const item of nearest){
+          const w=1/Math.pow(item.d2+900,1.12);
+          sw+=w; su+=item.a.u*w; sv+=item.a.v*w;
+        }
+        const u=sw?su/sw:0;
+        const v=sw?sv/sw:0;
+        const speed=Math.hypot(u,v);
+        const idx=(gy*WIND_FIELD_COLS+gx)*3;
+        data[idx]=u; data[idx+1]=v; data[idx+2]=speed;
+      }
+    }
+
+    const field={data,day};
+    windFieldCache.set(day,field);
+    return field;
+  }
+
+  function sampleFromField(field,x0,y0,x1,y1,tx,ty,c){
+    const f=field.data;
+    const at=(gx,gy,cc)=>f[(gy*WIND_FIELD_COLS+gx)*3+cc];
+    const a=at(x0,y0,c)*(1-tx)+at(x1,y0,c)*tx;
+    const b=at(x0,y1,c)*(1-tx)+at(x1,y1,c)*tx;
+    return a*(1-ty)+b*ty;
+  }
+
+  function sampleWindField(x,y){
+    if(x<0||x>1920||y<WIND_MAP_Y0||y>WIND_MAP_Y1) return null;
+    const fx=(x/1920)*(WIND_FIELD_COLS-1);
+    const fy=((y-WIND_MAP_Y0)/(WIND_MAP_Y1-WIND_MAP_Y0))*(WIND_FIELD_ROWS-1);
+    const x0=Math.floor(fx), y0=Math.floor(fy);
+    const x1=Math.min(WIND_FIELD_COLS-1,x0+1), y1=Math.min(WIND_FIELD_ROWS-1,y0+1);
+    const tx=fx-x0, ty=fy-y0;
+    const state=windTimeState();
+    const f0=buildWindFieldForDay(state.day0);
+    const f1=buildWindFieldForDay(state.day1);
+    const alpha=state.alpha;
+
+    const u0=sampleFromField(f0,x0,y0,x1,y1,tx,ty,0);
+    const v0=sampleFromField(f0,x0,y0,x1,y1,tx,ty,1);
+    if(alpha<=0 || state.day0===state.day1){
+      return {u:u0,v:v0,speed:Math.hypot(u0,v0)};
+    }
+    const u1=sampleFromField(f1,x0,y0,x1,y1,tx,ty,0);
+    const v1=sampleFromField(f1,x0,y0,x1,y1,tx,ty,1);
+    const u=u0*(1-alpha)+u1*alpha;
+    const v=v0*(1-alpha)+v1*alpha;
+    return {u,v,speed:Math.hypot(u,v)};
+  }
+
+  function respawnWindParticle(p,first=false){
+    let x=0,y=0,tries=0;
+    do{
+      x=Math.random()*1920;
+      y=WIND_MAP_Y0+Math.random()*(WIND_MAP_Y1-WIND_MAP_Y0);
+      tries++;
+    }while(tries<60 && !pointInsideWindMask(x,y));
+    p.x=x;p.y=y;p.px=x;p.py=y;
+    p.age=first?Math.floor(Math.random()*WIND_MAX_AGE):0;
+    p.maxAge=WIND_MAX_AGE+Math.floor(Math.random()*70);
+  }
+
+  function initWindParticles(){
+    buildWindMask();
+    windParticles=Array.from({length:WIND_PARTICLE_COUNT},()=>{
+      const p={x:0,y:0,px:0,py:0,age:0,maxAge:WIND_MAX_AGE};
+      respawnWindParticle(p,true);
+      return p;
+    });
+    stage.dataset.windParticlesReady="1";
+  }
+
+  function clearWindCanvas(opaque=false){
+    windCtx.save();
+    windCtx.clearRect(0,0,1920,1080);
+    if(opaque){
+      windCtx.fillStyle="rgba(239,236,228,.97)";
+      windCtx.fillRect(0,WIND_MAP_Y0,1920,WIND_MAP_Y1-WIND_MAP_Y0);
+    }
+    windCtx.restore();
+  }
+
+  function drawWindSpeedWash(){
+    // Repaint a very subtle magnitude wash using the current interpolated time state.
+    const state=windTimeState();
+    const f0=buildWindFieldForDay(state.day0).data;
+    const f1=buildWindFieldForDay(state.day1).data;
+    const alpha=state.alpha;
+    windCtx.save();
+    if(windMaskAvailable && windMaskPath) windCtx.clip(windMaskPath);
+
+    const cw=1920/(WIND_FIELD_COLS-1);
+    const ch=(WIND_MAP_Y1-WIND_MAP_Y0)/(WIND_FIELD_ROWS-1);
+    for(let gy=0;gy<WIND_FIELD_ROWS-1;gy+=2){
+      for(let gx=0;gx<WIND_FIELD_COLS-1;gx+=2){
+        const idx=(gy*WIND_FIELD_COLS+gx)*3+2;
+        const s0=f0[idx];
+        const s1=f1[idx];
+        const speed=s0*(1-alpha)+s1*alpha;
+        const a=Math.max(0,Math.min(.11,(speed-1)*.018));
+        if(a<=0) continue;
+        windCtx.fillStyle=`rgba(100,145,160,${a.toFixed(3)})`;
+        windCtx.fillRect(gx*cw,WIND_MAP_Y0+gy*ch,cw*2+1,ch*2+1);
+      }
+    }
+    windCtx.restore();
+  }
+
+  const windSegmentBuckets=[[],[],[],[]];
+  const WIND_BUCKET_ALPHA=[.13,.20,.29,.39];
+
+  function drawWindSegmentBuckets(){
+    windCtx.lineWidth=1.15;
+    windCtx.lineCap="round";
+    for(let b=0;b<windSegmentBuckets.length;b++){
+      const segs=windSegmentBuckets[b];
+      if(!segs.length) continue;
+      windCtx.strokeStyle=`rgba(69,96,110,${WIND_BUCKET_ALPHA[b]})`;
+      windCtx.beginPath();
+      for(let i=0;i<segs.length;i+=4){
+        windCtx.moveTo(segs[i],segs[i+1]);
+        windCtx.lineTo(segs[i+2],segs[i+3]);
+      }
+      windCtx.stroke();
+      segs.length=0;
+    }
+  }
+
+  function windParticleFrame(ts){
+    if(activeTheme!=="wind"){
+      windRAF=0;
+      return;
+    }
+
+    if(!windParticles.length) initWindParticles();
+
+    // ~30 fps is sufficient here and cuts CPU/GPU load markedly.
+    if(windLastTs && ts-windLastTs<30){
+      windRAF=requestAnimationFrame(windParticleFrame);
+      return;
+    }
+    const dt=Math.min(42,Math.max(16,windLastTs?ts-windLastTs:33.3));
+    windLastTs=ts;
+
+    // v9.4.2: do not respawn particles on day changes.
+    // Instead, interpolate continuously between day N and N+1.
+    const state=windTimeState();
+    const washKey=`${state.day0}-${state.day1}-${Math.round(state.alpha*8)}`;
+    if(windFieldDay!==washKey){
+      clearWindCanvas(true);
+      drawWindSpeedWash();
+      windFieldDay=washKey;
+      stage.dataset.windFieldDay=washKey;
+    }
+
+    windCtx.save();
+    if(windMaskAvailable && windMaskPath) windCtx.clip(windMaskPath);
+
+    // Persistent trails.
+    windCtx.fillStyle="rgba(239,236,228,.055)";
+    windCtx.fillRect(0,WIND_MAP_Y0,1920,WIND_MAP_Y1-WIND_MAP_Y0);
+
+    const scale=.48*(dt/16.7);
+    windCtx.lineWidth=1.25;
+    windCtx.lineCap="round";
+
+    for(const p of windParticles){
+      const w=sampleWindField(p.x,p.y);
+      if(!w || !Number.isFinite(w.u) || !Number.isFinite(w.v)){
+        respawnWindParticle(p);continue;
+      }
+
+      p.px=p.x;p.py=p.y;
+      p.x += w.u*scale;
+      p.y += w.v*scale;
+      p.age++;
+
+      if(
+        p.age>p.maxAge ||
+        p.x<0 || p.x>1920 ||
+        p.y<WIND_MAP_Y0 || p.y>WIND_MAP_Y1 ||
+        w.speed<.15
+      ){
+        respawnWindParticle(p);
+        continue;
+      }
+
+      const bucket=Math.max(0,Math.min(3,Math.floor(w.speed/1.6)));
+      windSegmentBuckets[bucket].push(p.px,p.py,p.x,p.y);
+    }
+
+    drawWindSegmentBuckets();
+    windCtx.restore();
+    windRAF=requestAnimationFrame(windParticleFrame);
+  }
+
+  function startWindParticles(){
+    if(!windParticles.length) initWindParticles();
+    const state=windTimeState();
+    buildWindFieldForDay(state.day0);
+    buildWindFieldForDay(state.day1);
+    windFieldDay="";
+    clearWindCanvas(true);
+    drawWindSpeedWash();
+    windLastTs=0;
+    if(!windRAF) windRAF=requestAnimationFrame(windParticleFrame);
+
+    // The old 22 SVG arrows were useful diagnostically but made the layer
+    // look static. Hide them in v9.4 preview.
+    const old=document.getElementById("themeWind");
+    if(old) old.style.display="none";
+
+    const veil=document.getElementById("mapVeil");
+    if(veil) veil.style.display="none";
+  }
+
+  function stopWindParticles(){
+    if(windRAF){
+      cancelAnimationFrame(windRAF);
+      windRAF=0;
+    }
+    windLastTs=0;
+    clearWindCanvas(false);
+  }
+
+  const __v94SetTheme=setTheme;
+  setTheme=function(theme){
+    const r=__v94SetTheme.apply(this,arguments);
+    if(theme==="wind"){
+      startWindParticles();
+    }else{
+      stopWindParticles();
+    }
+    return r;
+  };
+
+  // Existing slider/timeline updates still call updateWindLayer().
+  // In v9.4.2 we simply warm the adjacent day caches and let the
+  // particle renderer interpolate continuously without resets.
+  const __v94UpdateWindLayer=updateWindLayer;
+  updateWindLayer=function(){
+    const r=__v94UpdateWindLayer.apply(this,arguments);
+    if(activeTheme==="wind"){
+      const state=windTimeState();
+      buildWindFieldForDay(state.day0);
+      buildWindFieldForDay(state.day1);
+    }
+    return r;
+  };
+
+  // Language-aware method note.
+  function updateWindParticleBadge(){
+    const b=document.getElementById("windParticleBadge");
+    if(!b) return;
+    if(typeof currentLang!=="undefined" && currentLang==="en"){
+      b.textContent="Continuous flow · no day jumps · interpolated from 22 daily Aimag vectors";
+    }else if(typeof currentLang!=="undefined" && currentLang==="mn"){
+      b.textContent="Тасралтгүй урсгал · өдрийн үсрэлтгүй · 22 аймгийн өдрийн вектороос интерполяцлав";
+    }else{
+      b.textContent="Kontinuierliches Strömungsfeld · ohne Tages-Sprünge · aus 22 Aimag-Tagesvektoren interpoliert";
+    }
+  }
+
+  const __v94ApplyStaticI18n=applyStaticI18n;
+  applyStaticI18n=function(){
+    const r=__v94ApplyStaticI18n.apply(this,arguments);
+    updateWindParticleBadge();
+    return r;
+  };
+
+
+  // ------------------------------------------------------------
+  // v9.4.2 iPad single-file transport:
+  // the MP4 is embedded as Base64 chunks and reconstructed into a Blob URL.
+  // No sibling files, no fetch(), no network required.
+  // ------------------------------------------------------------
+  const __IPAD_VIDEO_PARTS = ["video/part-00.b64", "video/part-01.b64", "video/part-02.b64", "video/part-03.b64", "video/part-04.b64", "video/part-05.b64", "video/part-06.b64", "video/part-07.b64", "video/part-08.b64", "video/part-09.b64", "video/part-10.b64", "video/part-11.b64", "video/part-12.b64", "video/part-13.b64", "video/part-14.b64", "video/part-15.b64", "video/part-16.b64", "video/part-17.b64", "video/part-18.b64", "video/part-19.b64", "video/part-20.b64"];
+
+  async function __initEmbeddedVideo(){
+    try{
+      const parts=[];
+      for(const url of __IPAD_VIDEO_PARTS){
+        const response=await fetch(url,{cache:"force-cache"});
+        if(!response.ok) throw new Error(`Video part failed: ${url} ${response.status}`);
+        const b64=(await response.text()).trim();
+        const bin=atob(b64);
+        const bytes=new Uint8Array(bin.length);
+        for(let i=0;i<bin.length;i++) bytes[i]=bin.charCodeAt(i);
+        parts.push(bytes);
+      }
+      const blob=new Blob(parts,{type:"video/mp4"});
+      const objectUrl=URL.createObjectURL(blob);
+      video.src=objectUrl;
+      video.load();
+
+      const resumeOnFirstGesture=()=>{
+        if(video.paused && video.readyState>=2){
+          video.play().catch(()=>{});
+        }
+      };
+      document.addEventListener("pointerdown",resumeOnFirstGesture,{once:true,capture:true});
+      document.addEventListener("touchstart",resumeOnFirstGesture,{once:true,capture:true,passive:true});
+      window.addEventListener("beforeunload",()=>URL.revokeObjectURL(objectUrl),{once:true});
+      stage.dataset.embeddedVideoReady="1";
+    }catch(err){
+      console.error("Hosted video init failed",err);
+      errorBox.textContent="Video konnte nicht geladen werden.";
+      errorBox.classList.add("show");
+    }
+  }
+
+  __initEmbeddedVideo();
+
+
+
+  loadData();
+})();
+</script>
+</body>
+</html>

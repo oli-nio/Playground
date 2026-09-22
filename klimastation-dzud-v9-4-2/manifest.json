@@ -1,0 +1,126 @@
+{
+  "README.txt": {
+    "size": 121,
+    "sha256": "66e61c71dd7643a874c75730b7e1913c5e29dc3745296abd5ac8cf0c8d6805fa"
+  },
+  "html/part-00.txt": {
+    "size": 900013,
+    "sha256": "ddd93372d296d9cedc35d6dc548814a872a38a1b2d1649f50c539d47ca17ae14"
+  },
+  "html/part-01.txt": {
+    "size": 900140,
+    "sha256": "9715a01c095cb273befe3e30fc4e02f0f7d7704130b73641f3f5bc144159b710"
+  },
+  "html/part-02.txt": {
+    "size": 900093,
+    "sha256": "4110ed606773b768d73ad78cbd69ef8938af83bbb0ab954c54213288a7453f76"
+  },
+  "html/part-03.txt": {
+    "size": 900031,
+    "sha256": "14421ccbf56084813c666f139e41bca88f8377416e5435e40f73485f6dbea4cd"
+  },
+  "html/part-04.txt": {
+    "size": 900174,
+    "sha256": "f23e0e318ed8a75a9b9b664800a060b865527a04134d9feea2a9ffe31d3a5d41"
+  },
+  "html/part-05.txt": {
+    "size": 900002,
+    "sha256": "5b6f4c1581ed0ce922c7353c7befc5184b9683984cd6819a83c9303ddc7f5a37"
+  },
+  "html/part-06.txt": {
+    "size": 902063,
+    "sha256": "6c3f3481788e1d5f90f99a4adc397abf81496c57847247793aa9e029c730d6f8"
+  },
+  "html/part-07.txt": {
+    "size": 12136,
+    "sha256": "6a4111eea7da55b9c59906da9e5c23a697d7cc6ce882865baab0460219e5c513"
+  },
+  "index.html": {
+    "size": 938,
+    "sha256": "a1b99da2f0c5990e4248d3ab47b8c1ab74f9d618496462bdeac66d8283a40a9b"
+  },
+  "video/part-00.b64": {
+    "size": 1750000,
+    "sha256": "6748fee94f7ff40d3f5d262f95474bc82338a7c1f5bbb532fc12428c9e268338"
+  },
+  "video/part-01.b64": {
+    "size": 1750000,
+    "sha256": "b5b955be986b446b3c55335bc685c8f8e23a7be2b3f4570f261eae82e838cb6d"
+  },
+  "video/part-02.b64": {
+    "size": 1750000,
+    "sha256": "fbd064f7b29b1d8403899b2527e13ba4e96fcc3464edae70f7bfbbfd670a6732"
+  },
+  "video/part-03.b64": {
+    "size": 1750000,
+    "sha256": "53a15a522f8cf26feaa05f3a1b548497506659991cef303d35a20af5926203ff"
+  },
+  "video/part-04.b64": {
+    "size": 1750000,
+    "sha256": "cfd14a985c72ec57ce897515843aa143c7f49fbb22492b517ced01b6fb4b58c8"
+  },
+  "video/part-05.b64": {
+    "size": 1750000,
+    "sha256": "05992c8cc31cd031c8bb03c2b80504618e3eb921d8b90c18f8db8aeeffb12bea"
+  },
+  "video/part-06.b64": {
+    "size": 1750000,
+    "sha256": "9689acb852d8089e640987fac85537752202b009405aae2d024053faec2fceef"
+  },
+  "video/part-07.b64": {
+    "size": 1750000,
+    "sha256": "96975ba4e92f2dcec3c1f7751a6968108f186a61e43de210da0ef4e08298dcbe"
+  },
+  "video/part-08.b64": {
+    "size": 1750000,
+    "sha256": "5aeeb161c9b95c71ccf42b6b6d901e1731206d52bc9bc512334b22bd4ef6e7bb"
+  },
+  "video/part-09.b64": {
+    "size": 1750000,
+    "sha256": "a80335bc7d84ddb00bb463424ee2f10150745b306218acbda0c411f970798fff"
+  },
+  "video/part-10.b64": {
+    "size": 1750000,
+    "sha256": "2adfcda2d1abd28a99e97f52c00467a8bf9e0eb9e5c9541f908e9bd9a8ad90dd"
+  },
+  "video/part-11.b64": {
+    "size": 1750000,
+    "sha256": "d585a08560bf433fe8ee5628f8b753f32452f8c9600d38f7ab85f0668470665c"
+  },
+  "video/part-12.b64": {
+    "size": 1750000,
+    "sha256": "8e0a2b2819d78b1220a66f41196ef42665a345568e67f4d4b1d36181b8b379c0"
+  },
+  "video/part-13.b64": {
+    "size": 1750000,
+    "sha256": "7561bb3fa8501f413749cfc0c450bff34abaa4479320dbbf0a2c2fadd38576ae"
+  },
+  "video/part-14.b64": {
+    "size": 1750000,
+    "sha256": "6fd8566318d2a55a0d0b6612865454438375660ba05846892b4719b022e4dc02"
+  },
+  "video/part-15.b64": {
+    "size": 1750000,
+    "sha256": "c3d82e8770752910040f05c7f7f89ca95d01b9ac5970d9306ae041c412a1dc61"
+  },
+  "video/part-16.b64": {
+    "size": 1750000,
+    "sha256": "33051472efaa5462db236d17744b1e2695fa8d832ef1952dafd27d2da2402f45"
+  },
+  "video/part-17.b64": {
+    "size": 1750000,
+    "sha256": "6dfcc68efbc2368e6037fc8b35486b3536e31ecaa74990a0baf3b48d19926f5d"
+  },
+  "video/part-18.b64": {
+    "size": 1750000,
+    "sha256": "5e67952b77f462056fa751cad8ead357e1515b911e03c04badc290e4139ebc9f"
+  },
+  "video/part-19.b64": {
+    "size": 1750000,
+    "sha256": "96e829ca3510a4b4937054047e2ce332640e2dc5496b3119edb5951bcd975598"
+  },
+  "video/part-20.b64": {
+    "size": 1130360,
+    "sha256": "b4d3fde6b29e600c13b01075ed09b68700d1e6fe73e8ca33b7bf8f25a359bed4"
+  }
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FORMIKAT Opportunity Radar V1</title>
+<style>
+:root{
+  --ink:#161410;--paper:#f4efe6;--card:#fffdf8;--line:#d9d0c2;--mute:#6f675c;
+  --accent:#9b2c1a;--ok:#2b6b3f;--warn:#9a6b12;--dead:#7a746a;
+  --fit:#1d4f6e;--ready:#9b2c1a;--chip:#efe8dc;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:"Avenir Next",Avenir,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono","SF Mono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.45 var(--sans)}
+button,input,select{font:inherit}
+a{color:var(--accent)}
+.app{display:grid;grid-template-columns:220px 1fr;min-height:100vh}
+.side{background:#211e19;color:#efe8dc;padding:22px 16px;position:sticky;top:0;height:100vh}
+.brand{font-family:var(--serif);font-size:22px;line-height:1.1;margin:0 0 4px}
+.brand small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#c9bba6;margin-top:8px}
+.nav{display:flex;flex-direction:column;gap:4px;margin-top:28px}
+.nav button{text-align:left;background:transparent;border:0;color:#efe8dc;padding:9px 10px;border-radius:6px;cursor:pointer}
+.nav button.on{background:#3a342c}
+.nav button.dim{color:#9a9083}
+.side p{color:#b7ad9e;font-size:12px;margin:28px 8px 0}
+.main{padding:22px 28px 60px}
+.top{display:flex;justify-content:space-between;gap:16px;align-items:end;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:18px}
+h1{font-family:var(--serif);font-size:34px;font-weight:500;margin:0}
+.meta{color:var(--mute);font-size:12px;text-align:right}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0 20px}
+.kpi{background:var(--card);border:1px solid var(--line);padding:12px 14px}
+.kpi b{display:block;font-size:26px;font-family:var(--serif);font-weight:500}
+.kpi span{color:var(--mute);font-size:12px}
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.brief{background:var(--card);border:1px solid var(--line);padding:12px;min-height:150px}
+.brief .tag{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.brief h3{margin:8px 0 6px;font-size:16px}
+.brief p{margin:0;color:#3b372f;font-size:13px}
+.lanes{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:16px}
+.lane{background:var(--card);border:1px solid var(--line);padding:14px}
+.lane h2{font-size:15px;margin:0 0 10px}
+.item{border-top:1px solid var(--line);padding:10px 0}
+.item:first-of-type{border-top:0;padding-top:0}
+.item b{display:block}
+.item small{color:var(--mute)}
+.next{margin-top:6px;font-size:13px}
+.view{display:none}
+.view.on{display:block}
+.table{width:100%;border-collapse:collapse;background:var(--card)}
+.table th,.table td{border-bottom:1px solid var(--line);text-align:left;padding:9px 8px;vertical-align:top;font-size:13px}
+.table th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);font-weight:600}
+.table tr{cursor:pointer}
+.table tr:hover td{background:#f8f3ea}
+.table tr.on td{background:#efe4d4}
+.pill{display:inline-block;padding:2px 7px;border-radius:99px;font-size:11px;background:var(--chip)}
+.pill.unk{background:#ece7df;color:#6a6358}
+.pill.likely{background:#dce9df;color:var(--ok)}
+.pill.possible{background:#f4e6c4;color:#7a5608}
+.pill.unlikely{background:#eadfdf;color:var(--accent)}
+.scorebox{display:flex;gap:8px;align-items:center}
+.bar{width:72px;height:8px;background:#e7e0d4;position:relative}
+.bar i{position:absolute;inset:0 auto 0 0;background:var(--fit)}
+.bar.ready i{background:var(--ready)}
+.dossier{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-top:16px}
+.card{background:var(--card);border:1px solid var(--line);padding:16px}
+.card h2{font-family:var(--serif);font-weight:500;margin:0 0 8px}
+.dl{display:grid;grid-template-columns:140px 1fr;gap:6px 10px;font-size:13px}
+.dl dt{color:var(--mute)}
+.people{margin:0;padding:0;list-style:none}
+.people li{padding:8px 0;border-bottom:1px solid var(--line);font-size:13px}
+.why{background:#f8f1e6;border-left:3px solid var(--accent);padding:10px 12px;margin:12px 0;font-size:13px}
+.id{font-family:var(--mono);font-size:11px;color:var(--mute)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.btn{border:1px solid var(--ink);background:var(--ink);color:#fff;padding:8px 12px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink)}
+.note{font-size:12px;color:var(--mute);margin-top:10px}
+.docs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.check{font-size:13px;margin:6px 0}
+.box{border:1px solid var(--line);padding:8px;margin-top:8px;min-height:70px;background:#fff}
+h2.sec{font-family:var(--serif);font-weight:500;font-size:26px;margin:0 0 6px}
+.lead{color:#3f3a33;max-width:68ch}
+.frozen{border:1px dashed var(--line);padding:18px;color:var(--mute);background:#f7f2ea}
+@media(max-width:980px){
+  .app{grid-template-columns:1fr}
+  .side{height:auto;position:relative}
+  .grid5,.lanes,.dossier,.docs,.kpis{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <p class="brand">FORMIKAT<br>Opportunity Radar<small>V1 · 10-case pilot</small></p>
+    <nav class="nav">
+      <button data-view="heute" class="on">Heute</button>
+      <button data-view="faelle">Fälle</button><button data-view="accounts">Accounts</button>
+      <button data-view="direkt">Direkt</button>
+      <button data-view="tender">Tender</button>
+      <button data-view="formikat">FORMIKAT</button>
+      <button data-view="outcomes">Outcomes</button>
+      <button data-view="research" class="dim">Research · eingefroren</button>
+    </nav>
+    <p>Account → Project → Scope → Action. Funding ist ein Signal, nicht das Produkt.</p>
+  </aside>
+  <main class="main">
+    <section id="heute" class="view on">
+      <div class="top">
+        <div>
+          <h1>Was tun — heute</h1>
+          <p class="lead">Nur berechnete Zahlen. Nur Fälle mit nächstem Schritt. Money Flow ist absichtlich nicht hier.</p>
+        </div>
+        <div class="meta">Stand der Daten: 26.09.2026<br>Quelle: Prototyp SHA f09d190 · Review-Pilot<br>Änderungen seit gestern: <b id="chgCount">0 neue Notices</b></div>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><b id="kOpen">—</b><span>offene Aktionen (berechnet)</span></div>
+        <div class="kpi"><b id="kDossier">—</b><span>Dossiers mit benanntem Träger</span></div>
+        <div class="kpi"><b id="kScope">—</b><span>addressierbarer Scope likely/possible</span></div>
+        <div class="kpi"><b id="kTender">—</b><span>echte Tender-Objekte</span></div>
+      </div>
+      <div class="grid5" id="brief"></div>
+      <div class="lanes">
+        <div class="lane"><h2>1 · Eigene Finanzierung</h2><div id="laneDirect"></div></div>
+        <div class="lane"><h2>2 · Fälle mit nächstem Schritt</h2><div id="laneCases"></div></div>
+        <div class="lane"><h2>3 · Tender-Lücken</h2><div id="laneGaps"></div></div>
+      </div>
+    </section>
+    <section id="faelle" class="view">
+      <div class="top"><div><h2 class="sec">Zehn Pilotfälle · V1 Fixture</h2><p class="lead">Fit und Readiness getrennt. Procurement wird auf Scope-Ebene bewertet. UNKNOWN bleibt UNKNOWN.</p></div></div>
+      <table class="table" id="caseTable"></table>
+      <div class="dossier"><article class="card" id="dossierMain"></article><aside class="card" id="dossierSide"></aside></div>
+    </section>
+    <section id="accounts" class="view"><div class="top"><div><h2 class="sec">Accounts</h2><p class="lead">Organisationen mit wiederkehrendem Projekt- oder Beziehungspotenzial.</p></div></div><div class="docs"><div class="card"><h2>Talsperrenbetrieb Sachsen-Anhalt</h2><p>NESt Kelbra · aktives Procurement Window</p></div><div class="card"><h2>Stadt Sangerhausen / Rosenstadt Sangerhausen</h2><p>Röhrigschacht · musealer Scope teilweise offen</p></div><div class="card"><h2>Kulturstiftung Dessau-Wörlitz</h2><p>Mosigkau + langfristige Masterplan-Pipeline</p></div><div class="card"><h2>science2public e. V.</h2><p>Science Cube / OpenLab / Netzwerk-Opportunity</p></div></div></section><section id="direkt" class="view">
+      <div class="top"><div><h2 class="sec">Direktfinanzierung</h2><p class="lead">Hier zählt nur, ob ein Dokument existiert.</p></div></div>
+      <div class="docs" id="directDocs"></div>
+    </section>
+    <section id="tender" class="view">
+      <div class="top"><div><h2 class="sec">Tender-Objekte</h2><p class="lead">Ohne Notice-ID keine Pipeline.</p></div></div>
+      <table class="table" id="tenderTable"></table>
+    </section>
+    <section id="formikat" class="view">
+      <div class="top"><div><h2 class="sec">Matching-Prior</h2><p class="lead">Nicht InvKG-Volumen.</p></div></div>
+      <div class="docs">
+        <div class="card"><h2>Leistungen</h2><p>Ausstellungsdesign · Szenografie · Sonderbau · Medien · digitale Fertigung · Raum · HOAS LP 1–7</p></div>
+        <div class="card"><h2>Referenzanker</h2><p>Stadtmuseum Halle · Salinemuseum · Franckesche Stiftungen · Verkehrsmuseum Dresden.</p></div>
+      </div>
+    </section>
+    <section id="outcomes" class="view">
+      <div class="top"><div><h2 class="sec">Freitag-Review</h2><p class="lead">Outcomes müssen den Score ändern können.</p></div></div>
+      <table class="table" id="outTable"></table>
+    </section>
+    <section id="research" class="view">
+      <div class="frozen"><p>Money Flow, Parallel Sets und Provenance bleiben Research-Infrastruktur. V1 erweitert sie nicht.</p></div>
+    </section>
+  </main>
+</div>
+<script>
+const cases=[
+{id:'FM-OPP-001',name:'Besucherzentrum Süßer See',region:'Mansfeld-Südharz',award:15800000,fit:92,ready:28,scope:'possible',scopeBand:'0,08–0,8 Mio. €',owner:'unbekannt — Träger nicht atomar',operator:'unbekannt',authority:'unbekannt',planner:'unbekannt',people:[],phase:'Award + Projekt öffentlich',openLots:'Ausstellung/Medien nicht belegt',next:'Träger und Vergabestelle benennen',trigger:'Projektwebsite oder Ratsbeschluss',why:'Hoher Fit, niedrige Readiness. 15,8 Mio. sind nicht die Opportunity.',known:['AWARD','PROJECT'],notice:null},
+{id:'FM-OPP-002',name:'Königspfalz Helfta',region:'Eisleben',award:8500000,fit:91,ready:30,scope:'possible',scopeBand:'0,05–0,6 Mio. €',owner:'Eisleben / Umfeld — nicht atomar',operator:'unbekannt',authority:'unbekannt',planner:'unbekannt',people:[],phase:'Frischer Bescheid',openLots:'Ausstellung nicht getrennt',next:'Buyer benennen, dann TED',trigger:'Planerbestellung oder PIN',why:'Score darf nicht 86 sein ohne Namen.',known:['AWARD','PROJECT'],notice:null},
+{id:'FM-OPP-003',name:'Wissenschaftskubus (H)ALLE',region:'Halle',award:1870000,fit:78,ready:18,scope:'unknown',scopeBand:'unbekannt',owner:'science2public e. V.',operator:'science2public e. V.',authority:'unbekannt',planner:'unbekannt',people:[{role:'Träger',name:'science2public e. V.',src:'Förderbescheid 2023'}],phase:'Award 2023',openLots:'möglicherweise schon vergeben',next:'Vergaben seit 12/2023 suchen oder NO OPPORTUNITY',trigger:'Negativbefund',why:'Wenn Funding kein Vorlauf war, fällt die These.',known:['AWARD','PROJECT'],notice:null},
+{id:'FM-OPP-004',name:'Museum Alte Münze Stolberg',region:'Stolberg',award:1127000,fit:88,ready:22,scope:'likely',scopeBand:'0,08–0,4 Mio. €',owner:'unbekannt — Museum/Kommune',operator:'Museum Alte Münze',authority:'unbekannt',planner:'unbekannt',people:[],phase:'Projekt öffentlich',openLots:'digitale Information, Interaktion, Medien',next:'Betreiber + Tender suchen',trigger:'CPV Museum/Medientechnik',why:'Bester Scope-Text, trotzdem keine Notice.',known:['PROJECT'],notice:null},
+{id:'FM-OPP-005',name:'Röhrigschacht',region:'Mansfeld-Südharz',award:9775000,fit:86,ready:24,scope:'possible',scopeBand:'0,05–0,5 Mio. €',owner:'Landkreis / Museumsumfeld — nicht atomar',operator:'ErlebnisZentrum Bergbau',authority:'unbekannt',planner:'unbekannt',people:[],phase:'Betrieb + Förderprojekt',openLots:'intern möglich',next:'Bereits vergebene Lose listen',trigger:'Award Notice',why:'Brutto täuscht.',known:['PROJECT'],notice:null},
+{id:'FM-OPP-006',name:'Herrmannschacht',region:'Burgenlandkreis',award:3970000,fit:84,ready:22,scope:'possible',scopeBand:'0,04–0,35 Mio. €',owner:'Museum Brikettfabrik Herrmannschacht',operator:'Museum Brikettfabrik Herrmannschacht',authority:'unbekannt',planner:'unbekannt',people:[],phase:'unscharf',openLots:'Vermittlung nicht belegt',next:'Website + Amtsblatt BLK',trigger:'Planungsbeschluss',why:'Ohne Los nur Themenmarkierung.',known:['PROJECT'],notice:null},
+{id:'FM-OPP-007',name:'Schloss Mosigkau',region:'Dessau-Roßlau',award:5100000,fit:76,ready:20,scope:'unlikely',scopeBand:'0–0,15 Mio. €',owner:'Gartenreich-Umfeld — nicht atomar',operator:'unbekannt',authority:'unbekannt',planner:'unbestätigt',people:[],phase:'Kulturbau',openLots:'Ausstellung unsicher',next:'Prüfen ob Los getrennt existiert',trigger:'Wettbewerb / HOAI',why:'False-Positive-Risiko.',known:['BUDGET','AWARD','PROJECT'],notice:null},
+{id:'FM-OPP-008',name:'LEHM – BAU – KULTUR',region:'Halle',award:2398000,fit:62,ready:16,scope:'unknown',scopeBand:'unbekannt',owner:'Schwemme e. V.',operator:'Schwemme e. V.',authority:'unbekannt',planner:'unbekannt',people:[{role:'Träger',name:'Schwemme e. V.',src:'JTF/NEB'}],phase:'NEB',openLots:'zu vage',next:'Negativkontrolle',trigger:'Projektseite mit Gewerken',why:'Kontrolle, keine Pipeline-Spitze.',known:['AWARD','PROJECT'],notice:null},
+{id:'FM-OPP-009',name:'NESt Kelbra',region:'Mansfeld-Südharz',award:8711000,fit:80,ready:21,scope:'possible',scopeBand:'0,06–0,5 Mio. €',owner:'unbekannt — Talsperrenbetrieb genannt',operator:'unbekannt',authority:'unbekannt',planner:'unbekannt',people:[],phase:'Beträge widersprechen sich',openLots:'Ausstellung möglich',next:'Als FM-OPP führen oder Behauptung streichen',trigger:'Atlas + Trägername',why:'Im Money-Flow, nicht als Fall. Das ist der Fehler.',known:['PROJECT'],notice:null},
+{id:'FM-OPP-010',name:'Heinrich-Schütz-Haus',region:'Weißenfels',award:3850000,fit:74,ready:19,scope:'possible',scopeBand:'0,04–0,3 Mio. €',owner:'unbekannt',operator:'Heinrich-Schütz-Haus',authority:'unbekannt',planner:'unbekannt',people:[],phase:'Sanierung/Nutzung',openLots:'pädagogische Nutzung erwähnt',next:'Buyer festziehen',trigger:'Sanierung ≠ Ausstellungslos',why:'Bescheid ist kein Auftrag.',known:['AWARD','PROJECT'],notice:null},
+{id:'FM-OPP-011',name:'Königspfalz Tilleda',region:'Mansfeld-Südharz',award:2557000,fit:82,ready:18,scope:'possible',scopeBand:'0,04–0,35 Mio. €',owner:'unbekannt',operator:'Museum Tilleda',authority:'unbekannt',planner:'unbekannt',people:[],phase:'eigene Entity nötig',openLots:'unbelegt',next:'Nicht unter Helfta mischen',trigger:'eigener Buyer',why:'Entity-Resolution-Test.',known:['PROJECT'],notice:null}
+];
+const directs=[
+{id:'DIRECT-INVEST',name:'INVESTIERT',status:'Dokument fehlt',need:'Investitionsliste Compute/Storage/Technik/Software'},
+{id:'DIRECT-FZUL',name:'Forschungszulage',status:'Dokument fehlt',need:'Eine Seite Experiment zu FORMIKAT OS'},
+{id:'DIRECT-WTT',name:'WTT · GbR',status:'Blocker offen',need:'Schriftliches JA/NEIN der Primärstelle'},
+{id:'DIRECT-TRAIN',name:'Weiterbildung',status:'unkonkret',need:'Kurs, Träger, Dauer, Kosten'}
+];
+const outcomes=JSON.parse(localStorage.getItem('fallradarOutcomes')||'{}');
+const opts=['WATCHED','CONTACTED','TENDER FOUND','GO','NO-GO','WON','LOST','NO OPPORTUNITY'];
+let selected='FM-OPP-001';
+function euro(n){return n==null?'—':new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n)}
+function $(id){return document.getElementById(id)}
+function namedOwner(c){return c.people.length>0 || (c.owner && !c.owner.includes('unbekannt') && !c.owner.includes('nicht atomar'))}
+function renderKPIs(){
+ $('kOpen').textContent=directs.length+3;
+ $('kDossier').textContent=cases.filter(namedOwner).length+'/'+cases.length;
+ $('kScope').textContent=cases.filter(c=>c.scope==='likely'||c.scope==='possible').length+'/'+cases.length;
+ $('kTender').textContent=cases.filter(c=>c.notice).length;
+}
+function renderBrief(){
+ const cards=[
+  {tag:'Direkt · Blocker',title:'WTT × GbR',text:'Ohne JA/NEIN bleibt die halbe Nordstern-Seite Theater.'},
+  {tag:'Direkt · Artefakt',title:'INVESTIERT-Liste',text:'Kostenbasis bevor der Aufruf öffnet.'},
+  {tag:'Fall · jetzt',title:'Süßer See',text:'Nicht 15,8 Mio. anstarren. Träger benennen.'},
+  {tag:'Hypothesentest',title:'Wissenschaftskubus',text:'Award 2023, keine Notice 2026.'},
+  {tag:'Konsistenz',title:'Kelbra / Tilleda / Schütz',text:'Entweder FM-OPP oder aus der Behauptung streichen.'}
+ ];
+ $('brief').innerHTML=cards.map(c=>'<article class="brief"><div class="tag">'+c.tag+'</div><h3>'+c.title+'</h3><p>'+c.text+'</p></article>').join('');
+}
+function renderLanes(){
+ $('laneDirect').innerHTML=directs.map(d=>'<div class="item"><b>'+d.name+'</b><small>'+d.status+'</small><div class="next">'+d.need+'</div></div>').join('');
+ $('laneCases').innerHTML=cases.slice(0,4).map(c=>'<div class="item"><b>'+c.name+'</b><small>Fit '+c.fit+' · Ready '+c.ready+' · '+c.scope+'</small><div class="next">'+c.next+'</div></div>').join('');
+ $('laneGaps').innerHTML=cases.filter(c=>!c.notice).slice(0,4).map(c=>'<div class="item"><b>'+c.name+'</b><small>keine FM-TENDER-ID</small><div class="next">Notice suchen oder Nicht-gefunden datieren</div></div>').join('');
+}
+function bar(v,kind){return '<span class="bar '+(kind||'')+'"><i style="width:'+v+'%"></i></span>'}
+function renderTable(){
+ $('caseTable').innerHTML='<tr><th>ID</th><th>Fall</th><th>Fit</th><th>Ready</th><th>Scope</th><th>Brutto</th><th>Addressierbar</th><th>Notice</th></tr>'+
+  cases.map(c=>'<tr data-id="'+c.id+'" class="'+(c.id===selected?'on':'')+'"><td class="id">'+c.id+'</td><td><b>'+c.name+'</b><br><small>'+c.region+'</small></td><td><div class="scorebox">'+bar(c.fit)+c.fit+'</div></td><td><div class="scorebox">'+bar(c.ready,'ready')+c.ready+'</div></td><td><span class="pill '+c.scope+'">'+c.scope+'</span></td><td>'+euro(c.award)+'</td><td>'+c.scopeBand+'</td><td>'+(c.notice||'—')+'</td></tr>').join('');
+}
+function renderDossier(){
+ const c=cases.find(x=>x.id===selected);
+ $('dossierMain').innerHTML='<div class="id">'+c.id+'</div><h2>'+c.name+'</h2><div class="why">'+c.why+'</div><dl class="dl"><dt>Träger</dt><dd>'+c.owner+'</dd><dt>Betreiber</dt><dd>'+c.operator+'</dd><dt>Vergabestelle</dt><dd>'+c.authority+'</dd><dt>Planer</dt><dd>'+c.planner+'</dd><dt>Phase</dt><dd>'+c.phase+'</dd><dt>Offene Lose</dt><dd>'+c.openLots+'</dd><dt>Trigger</dt><dd>'+c.trigger+'</dd></dl><div class="actions"><button class="btn" onclick="setOut(\''+c.id+'\',\'CONTACTED\')">Kontaktiert</button><button class="btn ghost" onclick="setOut(\''+c.id+'\',\'NO OPPORTUNITY\')">Kein Los</button></div>';
+ $('dossierSide').innerHTML='<h2>Personen</h2><ul class="people">'+(c.people.length?c.people.map(p=>'<li><b>'+p.name+'</b><br><small>'+p.role+' · '+p.src+'</small></li>').join(''):'<li>Keine benannte Person. Das ist der Blocker.</li>')+'</ul><p><b>Nächster Schritt:</b> '+c.next+'</p><p>Outcome: <b>'+(outcomes[c.id]||'WATCHED')+'</b></p>';
+}
+function renderDirect(){
+ $('directDocs').innerHTML=directs.map(d=>'<div class="card"><div class="id">'+d.id+'</div><h2>'+d.name+'</h2><p>'+d.need+'</p><div class="box">Dokumentkörper leer — Pilotwoche 1 füllt das.</div></div>').join('');
+}
+function renderTender(){
+ $('tenderTable').innerHTML='<tr><th>Tender-ID</th><th>Fall</th><th>Notice</th><th>Buyer</th><th>Befund</th></tr>'+cases.map(c=>'<tr><td class="id">—</td><td>'+c.name+'</td><td>—</td><td>'+c.authority+'</td><td>keine Evidence. Handoff nicht erlaubt.</td></tr>').join('');
+}
+function renderOut(){
+ $('outTable').innerHTML='<tr><th>Fall</th><th>Outcome</th><th>Wirkung</th></tr>'+cases.map(c=>'<tr><td>'+c.name+'</td><td><select data-oid="'+c.id+'">'+opts.map(o=>'<option '+(((outcomes[c.id]||'WATCHED')===o)?'selected':'')+'>'+o+'</option>').join('')+'</select></td><td>Ready steigt nur bei Notice oder Kontakt</td></tr>').join('');
+}
+function setOut(id,val){outcomes[id]=val;localStorage.setItem('fallradarOutcomes',JSON.stringify(outcomes));renderAll()}
+function renderAll(){renderKPIs();renderBrief();renderLanes();renderTable();renderDossier();renderDirect();renderTender();renderOut()}
+document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-view]').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.querySelectorAll('.view').forEach(v=>v.classList.remove('on'));$(b.dataset.view).classList.add('on')});
+document.addEventListener('click',e=>{const tr=e.target.closest('#caseTable tr[data-id]');if(!tr)return;selected=tr.dataset.id;renderTable();renderDossier()});
+document.addEventListener('change',e=>{if(e.target.dataset.oid)setOut(e.target.dataset.oid,e.target.value)});
+renderAll();
+</script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RENDOSHI-STAT · Paper</title>
+  <title>Paper-Spiegel · Rendoshi / Bluntz</title>
   <style>
     :root { --bg:#14160f; --ink:#efe7d4; --muted:#a39b88; --line:#2c2e24; --card:#1c1e15; --paper:#e7dfc8; --paper-ink:#1a1c14; --gain:#d6f25c; --loss:#ff6a45; }
     * { box-sizing: border-box; }
@@ -14,6 +14,9 @@
     h2 { font: 500 13px/1 ui-monospace, monospace; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
     .sub { color: var(--muted); margin: 6px 0 0; font-size: 13px; }
     .badge { border: 1px solid var(--gain); color: var(--gain); padding: 4px 8px; font: 12px ui-monospace, monospace; }
+    nav { display: flex; gap: 8px; margin: 18px 0 0; }
+    nav button { background: transparent; color: var(--ink); border: 1px solid var(--line); padding: 8px 12px; font: 13px ui-monospace, monospace; cursor: pointer; }
+    nav button.on { background: var(--paper); color: var(--paper-ink); border-color: var(--paper); }
     .hero { margin: 18px 0; background: var(--paper); color: var(--paper-ink); padding: 22px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 18px; }
     .equity { font: 500 64px/0.9 Georgia, serif; letter-spacing: -0.04em; }
     .pnl { font: 13px ui-monospace, monospace; margin-top: 8px; }
@@ -38,12 +41,16 @@
 <body>
   <header>
     <div>
-      <h1>RENDOSHI-STAT</h1>
-      <p class="sub">Paper-Spiegel auf @Rendoshi1 · 1000 USD Spielgeld · Push nur bei Signal oder Handlung</p>
+      <h1 id="title">Paper-Spiegel</h1>
+      <p class="sub" id="sub">Zwei getrennte Bücher, gleiche Regeln.</p>
     </div>
     <div class="badge">PAPER</div>
   </header>
   <main>
+    <nav>
+      <button id="tab-rendoshi" type="button">Rendoshi · 1000 USD</button>
+      <button id="tab-bluntz" type="button">Bluntz · 1000 EUR</button>
+    </nav>
     <section class="hero">
       <div>
         <div class="k">Paper-Eigenkapital</div>
@@ -67,43 +74,52 @@
       </div>
     </section>
     <footer>
-      Quelle der Zahlen: <a href="state.json">state.json</a> im selben Ordner.
-      Grok schreibt diese Datei nur, wenn ein neuer Post ein Signal, einen Skip oder einen Exit auslöst.
+      Jeder Tab liest sein eigenes Buch. Grok schreibt nur, wenn ein Post dieses Accounts ein Signal, einen Skip oder einen Exit auslöst.
       Preise ohne Marktquelle bleiben leer und zählen nicht als Rendite.
     </footer>
   </main>
   <script>
+    const books = { rendoshi: { file: "state.json", label: "Rendoshi" }, bluntz: { file: "state-bluntz.json", label: "Bluntz" } };
+    let current = location.hash === "#bluntz" ? "bluntz" : "rendoshi";
     const $ = (id) => document.getElementById(id);
-    const money = (n) => n == null ? "—" : Number(n).toLocaleString("de-DE", { style: "currency", currency: "USD" });
+    const money = (n, c) => n == null ? "—" : Number(n).toLocaleString("de-DE", { style: "currency", currency: c || "USD" });
     const pct = (n) => n == null ? "—" : Number(n).toLocaleString("de-DE", { maximumFractionDigits: 1 }) + " %";
     const num = (n) => n == null ? "—" : String(n);
     function tile(k, v) { return `<div class="card"><div class="k">${k}</div><div class="v">${v}</div></div>`; }
-    function draw(curve) {
+    function draw(curve, start) {
       const c = $("curve"), g = c.getContext("2d"), w = c.width, h = c.height;
       g.clearRect(0, 0, w, h);
       const pts = (curve || []).map(p => Number(p.equity)).filter(n => !Number.isNaN(n));
       if (pts.length < 2) { g.fillStyle = "#a39b88"; g.font = "16px ui-monospace, monospace"; g.fillText("Kurve beginnt mit der ersten Buchung", 16, 32); return; }
-      const min = Math.min(...pts, 1000), max = Math.max(...pts, 1000), span = Math.max(1, max - min);
+      const min = Math.min(...pts, start), max = Math.max(...pts, start), span = Math.max(1, max - min);
       g.strokeStyle = "#d6f25c"; g.lineWidth = 2; g.beginPath();
       pts.forEach((v, i) => { const x = 12 + (i / (pts.length - 1)) * (w - 24); const y = h - 16 - ((v - min) / span) * (h - 32); i ? g.lineTo(x, y) : g.moveTo(x, y); });
       g.stroke();
     }
     function render(s) {
       const m = s.metrics || {};
+      const ccy = s.currency || "USD";
       const pnl = s.equity - s.capital_start;
-      $("equity").textContent = money(s.equity);
-      $("pnl").textContent = `${pnl >= 0 ? "+" : ""}${money(pnl)} seit Start · Cash ${money(s.cash)}`;
+      const handle = (s.source || "").replace("@", "");
+      $("title").textContent = s.pilot || "Paper-Spiegel";
+      $("sub").textContent = `Paper-Spiegel auf ${s.source} · ${s.capital_start} ${ccy} Spielgeld · Push nur bei Signal oder Handlung`;
+      $("equity").textContent = money(s.equity, ccy);
+      $("pnl").textContent = `${pnl >= 0 ? "+" : ""}${money(pnl, ccy)} seit Start · Cash ${money(s.cash, ccy)}`;
       $("rules").innerHTML = `Deckel ${s.rules.max_deployed_pct} % · ${s.rules.max_positions} Positionen · Entry ${s.rules.entry_pct} %<br>Slippage ${s.rules.slippage_pct} % · Stop −${s.rules.stop_pct} % · Halt max. ${s.rules.max_hold_days} Tage<br>Belegt ${pct(m.deployed_pct)} · Slots ${num(m.open_slots)} / ${s.rules.max_positions}<div class="bar"><span style="width:${Math.min(100, m.deployed_pct || 0)}%"></span></div>`;
       $("metrics").innerHTML = [tile("Signale", num(m.signals)), tile("Käufe / Verkäufe", `${num(m.buys)} / ${num(m.sells)}`), tile("Skip Slot / Late", `${num(m.skip_slot)} / ${num(m.skip_late)}`), tile("Trefferquote", pct(m.win_rate)), tile("Median", pct(m.median_return_pct)), tile("Profit-Factor", num(m.profit_factor)), tile("Max. Drawdown", pct(m.max_drawdown_pct)), tile("Issuer / andere", `${num(m.issuer && m.issuer.closed)} / ${num(m.non_issuer && m.non_issuer.closed)}`)].join("");
       const pos = s.positions || [];
-      $("positions").innerHTML = pos.length ? `<table><thead><tr><th>Asset</th><th>Size</th><th>Fill</th><th>Issuer</th><th>Post</th></tr></thead><tbody>${pos.map(p => `<tr><td>${p.asset}</td><td>${pct(p.size_pct)}</td><td>${p.fill == null ? "offen" : money(p.fill)}</td><td>${p.source_is_issuer ? "ja" : "nein"}</td><td><a href="https://x.com/Rendoshi1/status/${p.post_id}">${p.post_id}</a></td></tr>`).join("")}</tbody></table>` : `<p class="empty">Keine offene Position.</p>`;
+      $("positions").innerHTML = pos.length ? `<table><thead><tr><th>Asset</th><th>Size</th><th>Fill</th><th>Issuer</th><th>Post</th></tr></thead><tbody>${pos.map(p => `<tr><td>${p.asset}</td><td>${pct(p.size_pct)}</td><td>${p.fill == null ? "offen" : money(p.fill, ccy)}</td><td>${p.source_is_issuer ? "ja" : "nein"}</td><td><a href="https://x.com/${handle}/status/${p.post_id}">${p.post_id}</a></td></tr>`).join("")}</tbody></table>` : `<p class="empty">Keine offene Position.</p>`;
       const ev = (s.events || []).slice().reverse();
       $("events").innerHTML = ev.length ? `<table><thead><tr><th>Zeit</th><th>Aktion</th><th>Asset</th><th>Grund</th></tr></thead><tbody>${ev.slice(0, 20).map(e => `<tr><td>${(e.t || "").replace("T", " ").slice(0, 16)}</td><td>${e.action}</td><td>${e.asset || "—"}</td><td>${e.reason || ""}</td></tr>`).join("")}</tbody></table>` : `<p class="empty">${s.note || "Noch keine Handlung."}</p>`;
-      draw(s.equity_curve);
-      $("stamp").textContent = s.updated_at ? `Letzter Push ${s.updated_at}` : "Noch kein Push. Die Seite prüft die Lage jede Minute.";
+      draw(s.equity_curve, s.capital_start);
+      $("stamp").textContent = (s.updated_at ? `Letzter Push ${s.updated_at}` : "Noch kein Push. Die Seite prüft die Lage jede Minute.") + ` · ${books[current].file}`;
     }
-    async function load() { const r = await fetch("state.json?t=" + Date.now(), { cache: "no-store" }); render(await r.json()); }
-    load().catch(() => { $("events").innerHTML = `<p class="empty">state.json nicht lesbar.</p>`; });
+    function mark() { $("tab-rendoshi").className = current === "rendoshi" ? "on" : ""; $("tab-bluntz").className = current === "bluntz" ? "on" : ""; }
+    async function load() { mark(); const r = await fetch(books[current].file + "?t=" + Date.now(), { cache: "no-store" }); render(await r.json()); }
+    function select(id) { current = id; history.replaceState(null, "", id === "bluntz" ? "#bluntz" : "#rendoshi"); load().catch(() => { $("events").innerHTML = `<p class="empty">${books[current].file} nicht lesbar.</p>`; }); }
+    $("tab-rendoshi").onclick = () => select("rendoshi");
+    $("tab-bluntz").onclick = () => select("bluntz");
+    load().catch(() => { $("events").innerHTML = `<p class="empty">Buch nicht lesbar.</p>`; });
     setInterval(load, 60000);
   </script>
 </body>

@@ -31,3 +31,9 @@ Screenshots `assets/overview.jpg` and `assets/mobile.jpg` are actual browser cap
 No usability study with a twelve-year-old, screen-reader certification or exhaustive browser-matrix test is claimed. Story chapters and controls were exercised; this is not a claim of a timed 80-second audience comprehension test. Underlying source dates and epistemic scope remain those of the original prototype snapshot, with no new operational audit.
 
 The page makes no live AI, source-system or business calls. It issues no real human permission. Private mail and file contents are not part of this page.
+
+## Publication witness
+
+Published implementation commit: `215b7c0c3475e92d0af8f796c14fe5d6e26a6766` in `oli-nio/Playground`. All 14 files were read back at that commit, matching local content and Git blob IDs. A recursive tree comparison found changes only beneath `understanding-surfaces/formikat-os-work-atlas-einfach/`; the previous V3 HTML blob was unchanged. Pages workflow `37141570286` completed successfully.
+
+The public page was opened in Chrome at `https://oli-nio.github.io/Playground/understanding-surfaces/formikat-os-work-atlas-einfach/`. Its initial scene and 23-entry evidence view were observed. Search found the Senckenberg record with its still-pending source scope. `assets/published.jpg` captures the actual public page.

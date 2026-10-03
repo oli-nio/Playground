@@ -5,10 +5,10 @@
   "currency": "USD",
   "disclaimer": "Spielgeld. Keine Orders, keine Anlageberatung. Buchungen nur nach einem Post, der ein Signal oder eine Handlung ausgelöst hat.",
   "started_at": "2026-10-03T00:47:00+02:00",
-  "updated_at": "2026-10-03T10:12:00+02:00",
-  "last_run_at": "2026-10-03T10:12:00+02:00",
-  "last_post_id": "2106292368836284469",
-  "last_action_post_id": "2106292368836284469",
+  "updated_at": "2026-10-03T13:15:00+02:00",
+  "last_run_at": "2026-10-03T13:15:00+02:00",
+  "last_post_id": "2106338107121377590",
+  "last_action_post_id": "2106338107121377590",
   "capital_start": 1000,
   "cash": 1000,
   "equity": 1000,
@@ -43,25 +43,89 @@
       "notional_usd": null,
       "source_is_issuer": false,
       "reason": "Kein Mint und kein Preis im Post. Token nicht geraten. Nicht als Rendite gezählt."
+    },
+    {
+      "t": "2026-10-03T12:58:33+02:00",
+      "post_id": "2106338107121377590",
+      "type": "SIGNAL",
+      "asset": "MASK",
+      "side": "long",
+      "source_is_issuer": false,
+      "note": "Quote mit eigener Richtung: All 3 of these could go to $1B+ this cycle. Asset im Post genannt."
+    },
+    {
+      "t": "2026-10-03T12:58:33+02:00",
+      "post_id": "2106338107121377590",
+      "type": "SIGNAL",
+      "asset": "ZCAT",
+      "side": "long",
+      "source_is_issuer": false,
+      "note": "Gleiche Quote, zweites genanntes Asset, Richtung $1B+. Kein Issuer-Launch."
+    },
+    {
+      "t": "2026-10-03T12:58:33+02:00",
+      "post_id": "2106338107121377590",
+      "type": "SIGNAL",
+      "asset": "SI",
+      "side": "long",
+      "source_is_issuer": false,
+      "note": "Gleiche Quote, drittes genanntes Asset, Richtung $1B+. Kein Issuer-Launch."
+    },
+    {
+      "t": "2026-10-03T13:15:00+02:00",
+      "post_id": "2106338107121377590",
+      "type": "BUY",
+      "asset": "MASK",
+      "side": "long",
+      "fill": null,
+      "qty": null,
+      "notional_usd": null,
+      "source_is_issuer": false,
+      "reason": "Kein Preis im Post und kein prüfbarer Preis direkt davor. Nicht geschätzt, nicht als Rendite gezählt."
+    },
+    {
+      "t": "2026-10-03T13:15:00+02:00",
+      "post_id": "2106338107121377590",
+      "type": "BUY",
+      "asset": "ZCAT",
+      "side": "long",
+      "fill": null,
+      "qty": null,
+      "notional_usd": null,
+      "source_is_issuer": false,
+      "reason": "Kein Preis im Post und kein prüfbarer Preis direkt davor. Nicht geschätzt, nicht als Rendite gezählt."
+    },
+    {
+      "t": "2026-10-03T13:15:00+02:00",
+      "post_id": "2106338107121377590",
+      "type": "BUY",
+      "asset": "SI",
+      "side": "long",
+      "fill": null,
+      "qty": null,
+      "notional_usd": null,
+      "source_is_issuer": false,
+      "reason": "Kein Preis im Post und kein prüfbarer Preis direkt davor. Nicht geschätzt, nicht als Rendite gezählt."
     }
   ],
   "equity_curve": [
     { "t": "2026-10-03T00:47:00+02:00", "equity": 1000 },
-    { "t": "2026-10-03T10:12:00+02:00", "equity": 1000 }
+    { "t": "2026-10-03T10:12:00+02:00", "equity": 1000 },
+    { "t": "2026-10-03T13:15:00+02:00", "equity": 1000 }
   ],
   "metrics": {
     "deployed_usd": 0,
     "deployed_pct": 0,
     "open_slots": 0,
-    "posts_seen": 1,
-    "signals": 1,
+    "posts_seen": 2,
+    "signals": 4,
     "issuer_signals": 0,
     "noise": 0,
     "buys": 0,
     "sells": 0,
     "skip_slot": 0,
     "skip_late": 0,
-    "unpriced": 1,
+    "unpriced": 4,
     "closed_trades": 0,
     "wins": 0,
     "losses": 0,
@@ -75,5 +139,5 @@
     "issuer": { "closed": 0, "win_rate": null, "mean_return_pct": null },
     "non_issuer": { "closed": 0, "win_rate": null, "mean_return_pct": null }
   },
-  "note": "SIGNAL ZCAT aus 2106292368836284469, Fill null, unpriced. Cash unverändert 1000 USD."
+  "note": "SIGNAL MASK ZCAT SI aus 2106338107121377590, alle drei Fill null, unpriced. Cash unverändert 1000 USD. Keine offene Position."
 }

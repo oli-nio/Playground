@@ -5,10 +5,10 @@
   "currency": "USD",
   "disclaimer": "Spielgeld. Keine Orders, keine Anlageberatung. Kauf entsteht aus positiver Semantik zu einem genannten Coin, nicht daraus, ob ein Preis im Post steht.",
   "started_at": "2026-10-03T00:47:00+02:00",
-  "updated_at": "2026-10-03T18:13:00+02:00",
-  "last_run_at": "2026-10-03T18:13:00+02:00",
-  "last_post_id": "2106412532420194436",
-  "last_action_post_id": "2106410545431888018",
+  "updated_at": "2026-10-03T19:11:00+02:00",
+  "last_run_at": "2026-10-03T19:11:00+02:00",
+  "last_post_id": "2106419939858907170",
+  "last_action_post_id": "2106419820736520466",
   "capital_start": 1000,
   "cash": 700,
   "equity": 1000,
@@ -141,24 +141,67 @@
       "action": "SKIP_SLOT",
       "asset": "STONK",
       "reason": "Drei Positionen offen. Max 3. Kein vierter Slot."
+    },
+    {
+      "t": "2026-10-03T18:23:15+02:00",
+      "post_id": "2106419820736520466",
+      "action": "SIGNAL",
+      "asset": "PONS",
+      "reason": "Positive Semantik: really want PONS to succeed, cool platform."
+    },
+    {
+      "t": "2026-10-03T19:11:00+02:00",
+      "post_id": "2106419820736520466",
+      "action": "SKIP_SLOT",
+      "asset": "PONS",
+      "reason": "Drei Positionen offen (ZCAT, MASK, SI). Max 3. Kein vierter Slot."
+    },
+    {
+      "t": "2026-10-03T18:23:15+02:00",
+      "post_id": "2106419820736520466",
+      "action": "SIGNAL",
+      "asset": "HOOD",
+      "reason": "Positive Semantik: HOOD is my second biggest stock position. Halten."
+    },
+    {
+      "t": "2026-10-03T19:11:00+02:00",
+      "post_id": "2106419820736520466",
+      "action": "SKIP_SLOT",
+      "asset": "HOOD",
+      "reason": "Drei Positionen offen (ZCAT, MASK, SI). Max 3. Kein vierter Slot."
+    },
+    {
+      "t": "2026-10-03T18:23:15+02:00",
+      "post_id": "2106419820736520466",
+      "action": "SIGNAL",
+      "asset": "STONK",
+      "reason": "Positive Semantik: Stonk is more undervalued."
+    },
+    {
+      "t": "2026-10-03T19:11:00+02:00",
+      "post_id": "2106419820736520466",
+      "action": "SKIP_SLOT",
+      "asset": "STONK",
+      "reason": "Drei Positionen offen. STONK nicht offen, aber Max 3. Kein vierter Slot."
     }
   ],
   "equity_curve": [
     { "t": "2026-10-03T00:47:00+02:00", "equity": 1000 },
     { "t": "2026-10-03T15:08:00+02:00", "equity": 1000 },
-    { "t": "2026-10-03T18:13:00+02:00", "equity": 1000 }
+    { "t": "2026-10-03T18:13:00+02:00", "equity": 1000 },
+    { "t": "2026-10-03T19:11:00+02:00", "equity": 1000 }
   ],
   "metrics": {
     "deployed_usd": 300,
     "deployed_pct": 30,
     "open_slots": 3,
-    "posts_seen": 9,
-    "signals": 5,
+    "posts_seen": 11,
+    "signals": 8,
     "issuer_signals": 0,
-    "noise": 5,
+    "noise": 6,
     "buys": 3,
     "sells": 0,
-    "skip_slot": 4,
+    "skip_slot": 7,
     "skip_late": 0,
     "unpriced": 3,
     "closed_trades": 0,
@@ -174,5 +217,5 @@
     "issuer": { "closed": 0, "win_rate": null, "mean_return_pct": null },
     "non_issuer": { "closed": 0, "win_rate": null, "mean_return_pct": null }
   },
-  "note": "Slots voll. PUMP und STONK positiv, SKIP_SLOT. MASK-Wiederholung kein zweiter Slot. Kein Sell/Reduce der Quelle, Halt unter 7 Tagen, Fills weiter null, kein Stop. Equity 1000 USD."
+  "note": "Slots voll. PONS, HOOD, STONK positiv, SKIP_SLOT. FDV-Reply Rauschen, kein Coin. Kein Sell/Reduce der Quelle, Halt unter 7 Tagen, Fills weiter null, kein Stop. Equity 1000 USD."
 }

@@ -1,0 +1,14 @@
+const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
+const root=__dirname,read=f=>fs.readFileSync(path.join(root,f),'utf8');
+const content=read('src/content.js'),app=read('src/app.js');
+const data=id=>'<script type="application/json" id="'+id+'">'+read(id==='originalRecords'?'src/records.json':'src/source-snapshot.json').replace(/</g,'\\u003c')+'</script>';
+const html=read('src/shell.html').replace('<!-- DATA -->',data('originalRecords')+'\n'+data('sourceSnapshot')).replace('/* CONTENT */',content).replace('/* APP */',app);
+fs.writeFileSync(path.join(root,'index.html'),html);
+const ctx={};vm.runInNewContext(content+'\nthis.plain=PLAIN;this.words=GLOSSARY;this.modes=MODES;',ctx);
+let md='# FORMIKAT OS — alles einfach erklärt\n\nDiese Erklärungen gehören zur neuen Work-Atlas-Fassung. Sie bewahren die Grenzen des ursprünglichen Quellenstands vom 2026-10-02. Beispiele sind zum Verstehen da; sie beweisen keine neue Fähigkeit.\n\n';
+for(const m of Object.values(ctx.modes))md+='## '+m.nav+'\n\n'+m.intro+'\n\n'+m.lesson+' '+m.body+'\n\n'+m.note+'\n\n';
+md+='## Alle 23 Bausteine\n\n';for(const [id,p]of Object.entries(ctx.plain))md+='### '+p.name+'\n\n'+p.what+'\n\n'+p.example+'\n\n**Was wissen wir wirklich?** '+p.today+'\n\n';
+md+='## Wörterbuch\n\n';for(const [term,def]of ctx.words)md+='### '+term+'\n\n'+def+'\n\n';
+fs.writeFileSync(path.join(root,'EXPLAINED_CONTENT.md'),md);
+const records=JSON.parse(read('src/records.json'));if(records.length!==23||records.some(c=>!ctx.plain[c.id])||Object.keys(ctx.plain).length!==23)throw new Error('Plain-language coverage must match all original records');
+console.log('Built standalone index.html. Coverage: 23 / 23 records; '+ctx.words.length+' glossary entries; '+Object.keys(ctx.modes).length+' modes.');

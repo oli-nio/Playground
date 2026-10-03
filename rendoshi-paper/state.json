@@ -2,12 +2,13 @@
   "pilot": "RENDOSHI-STAT",
   "mode": "paper",
   "source": "@Rendoshi1",
+  "currency": "USD",
   "disclaimer": "Spielgeld. Keine Orders, keine Anlageberatung. Buchungen nur nach einem Post, der ein Signal oder eine Handlung ausgelöst hat.",
   "started_at": "2026-10-03T00:47:00+02:00",
-  "updated_at": null,
-  "last_run_at": null,
-  "last_post_id": null,
-  "last_action_post_id": null,
+  "updated_at": "2026-10-03T10:12:00+02:00",
+  "last_run_at": "2026-10-03T10:12:00+02:00",
+  "last_post_id": "2106292368836284469",
+  "last_action_post_id": "2106292368836284469",
   "capital_start": 1000,
   "cash": 1000,
   "equity": 1000,
@@ -21,23 +22,46 @@
     "skip_late_pct": 15
   },
   "positions": [],
-  "events": [],
+  "events": [
+    {
+      "t": "2026-10-03T09:56:48+02:00",
+      "post_id": "2106292368836284469",
+      "type": "SIGNAL",
+      "asset": "ZCAT",
+      "side": "long",
+      "source_is_issuer": false,
+      "note": "Quote mit eigenem Asset und Richtung: ZCAT will pump when ZEC pump again. MASK in dem Satz nur Kategorie, kein frischer Long."
+    },
+    {
+      "t": "2026-10-03T10:12:00+02:00",
+      "post_id": "2106292368836284469",
+      "type": "BUY",
+      "asset": "ZCAT",
+      "side": "long",
+      "fill": null,
+      "qty": null,
+      "notional_usd": null,
+      "source_is_issuer": false,
+      "reason": "Kein Mint und kein Preis im Post. Token nicht geraten. Nicht als Rendite gezählt."
+    }
+  ],
   "equity_curve": [
-    { "t": "2026-10-03T00:47:00+02:00", "equity": 1000 }
+    { "t": "2026-10-03T00:47:00+02:00", "equity": 1000 },
+    { "t": "2026-10-03T10:12:00+02:00", "equity": 1000 }
   ],
   "metrics": {
     "deployed_usd": 0,
     "deployed_pct": 0,
     "open_slots": 0,
-    "posts_seen": 0,
-    "signals": 0,
+    "posts_seen": 1,
+    "signals": 1,
     "issuer_signals": 0,
     "noise": 0,
     "buys": 0,
     "sells": 0,
     "skip_slot": 0,
     "skip_late": 0,
-    "unpriced": 0,
+    "unpriced": 1,
     "closed_trades": 0,
     "wins": 0,
     "losses": 0,
@@ -51,5 +75,5 @@
     "issuer": { "closed": 0, "win_rate": null, "mean_return_pct": null },
     "non_issuer": { "closed": 0, "win_rate": null, "mean_return_pct": null }
   },
-  "note": "Buch ist leer. Der erste Push kommt, wenn ein Rendoshi-Post ein Signal oder eine Handlung auslöst."
+  "note": "SIGNAL ZCAT aus 2106292368836284469, Fill null, unpriced. Cash unverändert 1000 USD."
 }

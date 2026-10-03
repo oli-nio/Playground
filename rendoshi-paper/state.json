@@ -3,14 +3,14 @@
   "mode": "paper",
   "source": "@Rendoshi1",
   "currency": "USD",
-  "disclaimer": "Spielgeld. Keine Orders, keine Anlageberatung. Buchungen nur nach einem Post, der ein Signal oder eine Handlung ausgelöst hat.",
+  "disclaimer": "Spielgeld. Keine Orders, keine Anlageberatung. Kauf entsteht aus positiver Semantik zu einem genannten Coin, nicht daraus, ob ein Preis im Post steht.",
   "started_at": "2026-10-03T00:47:00+02:00",
-  "updated_at": "2026-10-03T13:15:00+02:00",
-  "last_run_at": "2026-10-03T13:15:00+02:00",
+  "updated_at": "2026-10-03T15:08:00+02:00",
+  "last_run_at": "2026-10-03T15:08:00+02:00",
   "last_post_id": "2106338107121377590",
   "last_action_post_id": "2106338107121377590",
   "capital_start": 1000,
-  "cash": 1000,
+  "cash": 700,
   "equity": 1000,
   "rules": {
     "max_deployed_pct": 40,
@@ -19,113 +19,112 @@
     "slippage_pct": 0.5,
     "stop_pct": 25,
     "max_hold_days": 7,
-    "skip_late_pct": 15
+    "skip_late_pct": 15,
+    "entry_basis": "semantic_positive"
   },
-  "positions": [],
+  "positions": [
+    {
+      "asset": "ZCAT",
+      "side": "long",
+      "size_pct": 10,
+      "notional_usd": 100,
+      "fill": null,
+      "opened_at": "2026-10-03T09:56:48+02:00",
+      "post_id": "2106292368836284469",
+      "source_is_issuer": false,
+      "reason": "Semantik: ZCAT will pump when ZEC pump again. Kein Preis im Post nötig. Fill noch ohne Marktquelle."
+    },
+    {
+      "asset": "MASK",
+      "side": "long",
+      "size_pct": 10,
+      "notional_usd": 100,
+      "fill": null,
+      "opened_at": "2026-10-03T12:58:33+02:00",
+      "post_id": "2106338107121377590",
+      "source_is_issuer": false,
+      "reason": "Semantik: could go to $1B+ this cycle. Preis im Post ist Ziel, kein Einstieg."
+    },
+    {
+      "asset": "SI",
+      "side": "long",
+      "size_pct": 10,
+      "notional_usd": 100,
+      "fill": null,
+      "opened_at": "2026-10-03T12:58:33+02:00",
+      "post_id": "2106338107121377590",
+      "source_is_issuer": false,
+      "reason": "Semantik: could go to $1B+ this cycle. Preis im Post ist Ziel, kein Einstieg."
+    }
+  ],
   "events": [
     {
       "t": "2026-10-03T09:56:48+02:00",
       "post_id": "2106292368836284469",
-      "type": "SIGNAL",
+      "action": "SIGNAL",
       "asset": "ZCAT",
-      "side": "long",
-      "source_is_issuer": false,
-      "note": "Quote mit eigenem Asset und Richtung: ZCAT will pump when ZEC pump again. MASK in dem Satz nur Kategorie, kein frischer Long."
+      "reason": "Positive Semantik: ZCAT will pump when ZEC pump again."
     },
     {
-      "t": "2026-10-03T10:12:00+02:00",
+      "t": "2026-10-03T15:08:00+02:00",
       "post_id": "2106292368836284469",
-      "type": "BUY",
+      "action": "BUY",
       "asset": "ZCAT",
-      "side": "long",
-      "fill": null,
-      "qty": null,
-      "notional_usd": null,
-      "source_is_issuer": false,
-      "reason": "Kein Mint und kein Preis im Post. Token nicht geraten. Nicht als Rendite gezählt."
+      "reason": "Nachgezogen. Fehlender Preis im Post ist kein Skip. 10 Prozent reserviert, Fill offen bis Marktquelle."
     },
     {
       "t": "2026-10-03T12:58:33+02:00",
       "post_id": "2106338107121377590",
-      "type": "SIGNAL",
+      "action": "SIGNAL",
       "asset": "MASK",
-      "side": "long",
-      "source_is_issuer": false,
-      "note": "Quote mit eigener Richtung: All 3 of these could go to $1B+ this cycle. Asset im Post genannt."
+      "reason": "Positive Semantik: could go to $1B+ this cycle."
     },
     {
-      "t": "2026-10-03T12:58:33+02:00",
+      "t": "2026-10-03T15:08:00+02:00",
       "post_id": "2106338107121377590",
-      "type": "SIGNAL",
-      "asset": "ZCAT",
-      "side": "long",
-      "source_is_issuer": false,
-      "note": "Gleiche Quote, zweites genanntes Asset, Richtung $1B+. Kein Issuer-Launch."
-    },
-    {
-      "t": "2026-10-03T12:58:33+02:00",
-      "post_id": "2106338107121377590",
-      "type": "SIGNAL",
-      "asset": "SI",
-      "side": "long",
-      "source_is_issuer": false,
-      "note": "Gleiche Quote, drittes genanntes Asset, Richtung $1B+. Kein Issuer-Launch."
-    },
-    {
-      "t": "2026-10-03T13:15:00+02:00",
-      "post_id": "2106338107121377590",
-      "type": "BUY",
+      "action": "BUY",
       "asset": "MASK",
-      "side": "long",
-      "fill": null,
-      "qty": null,
-      "notional_usd": null,
-      "source_is_issuer": false,
-      "reason": "Kein Preis im Post und kein prüfbarer Preis direkt davor. Nicht geschätzt, nicht als Rendite gezählt."
+      "reason": "Nachgezogen. Zielpreis ist keine Einstiegsbedingung. 10 Prozent reserviert."
     },
     {
-      "t": "2026-10-03T13:15:00+02:00",
+      "t": "2026-10-03T12:58:33+02:00",
       "post_id": "2106338107121377590",
-      "type": "BUY",
-      "asset": "ZCAT",
-      "side": "long",
-      "fill": null,
-      "qty": null,
-      "notional_usd": null,
-      "source_is_issuer": false,
-      "reason": "Kein Preis im Post und kein prüfbarer Preis direkt davor. Nicht geschätzt, nicht als Rendite gezählt."
-    },
-    {
-      "t": "2026-10-03T13:15:00+02:00",
-      "post_id": "2106338107121377590",
-      "type": "BUY",
+      "action": "SIGNAL",
       "asset": "SI",
-      "side": "long",
-      "fill": null,
-      "qty": null,
-      "notional_usd": null,
-      "source_is_issuer": false,
-      "reason": "Kein Preis im Post und kein prüfbarer Preis direkt davor. Nicht geschätzt, nicht als Rendite gezählt."
+      "reason": "Positive Semantik: could go to $1B+ this cycle."
+    },
+    {
+      "t": "2026-10-03T15:08:00+02:00",
+      "post_id": "2106338107121377590",
+      "action": "BUY",
+      "asset": "SI",
+      "reason": "Nachgezogen. Zielpreis ist keine Einstiegsbedingung. 10 Prozent reserviert."
+    },
+    {
+      "t": "2026-10-03T12:58:33+02:00",
+      "post_id": "2106338107121377590",
+      "action": "SKIP_SLOT",
+      "asset": "ZCAT",
+      "reason": "ZCAT schon offen aus früherem Post. Kein zweiter Slot."
     }
   ],
   "equity_curve": [
     { "t": "2026-10-03T00:47:00+02:00", "equity": 1000 },
-    { "t": "2026-10-03T10:12:00+02:00", "equity": 1000 },
-    { "t": "2026-10-03T13:15:00+02:00", "equity": 1000 }
+    { "t": "2026-10-03T15:08:00+02:00", "equity": 1000 }
   ],
   "metrics": {
-    "deployed_usd": 0,
-    "deployed_pct": 0,
-    "open_slots": 0,
+    "deployed_usd": 300,
+    "deployed_pct": 30,
+    "open_slots": 3,
     "posts_seen": 2,
-    "signals": 4,
+    "signals": 3,
     "issuer_signals": 0,
     "noise": 0,
-    "buys": 0,
+    "buys": 3,
     "sells": 0,
-    "skip_slot": 0,
+    "skip_slot": 1,
     "skip_late": 0,
-    "unpriced": 4,
+    "unpriced": 3,
     "closed_trades": 0,
     "wins": 0,
     "losses": 0,
@@ -139,5 +138,5 @@
     "issuer": { "closed": 0, "win_rate": null, "mean_return_pct": null },
     "non_issuer": { "closed": 0, "win_rate": null, "mean_return_pct": null }
   },
-  "note": "SIGNAL MASK ZCAT SI aus 2106338107121377590, alle drei Fill null, unpriced. Cash unverändert 1000 USD. Keine offene Position."
+  "note": "Kaufregel korrigiert: positive Semantik reicht. ZCAT, MASK, SI offen je 10 Prozent. Fills fehlen noch, Equity deshalb unverändert 1000."
 }

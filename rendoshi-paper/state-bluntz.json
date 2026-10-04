@@ -3,15 +3,15 @@
   "mode": "paper",
   "source": "@Bluntz_Capital",
   "currency": "USD",
-  "disclaimer": "Spielgeld. Keine Orders, keine Anlageberatung. Buchungen nur nach einem Post, der ein Signal oder eine Handlung ausgelöst hat.",
+  "disclaimer": "Spielgeld. Equity ist Cash plus aktueller Marktwert.",
   "started_at": "2026-10-03T01:09:00+02:00",
-  "updated_at": "2026-10-04T09:45:00+02:00",
-  "last_run_at": "2026-10-04T09:45:00+02:00",
+  "updated_at": "2026-10-04T09:51:00+02:00",
+  "last_run_at": "2026-10-04T09:51:00+02:00",
   "last_post_id": "2106607533767176217",
   "last_action_post_id": "2106529508794998917",
   "capital_start": 1000,
   "cash": 900,
-  "equity": 999.5,
+  "equity": 999.03,
   "rules": {
     "max_deployed_pct": 40,
     "max_positions": 3,
@@ -27,29 +27,31 @@
       "side": "long",
       "size_pct": 10,
       "notional_usd": 100,
+      "qty": 414.023,
       "fill": 0.241531,
       "market_at_post": 0.240329,
       "mark": 0.2392,
+      "market_value_usd": 99.03,
       "mark_asof": "2026-10-04T07:45:00Z",
-      "mark_source": "CoinMarketCap live 0.2392. CoinGlass 0.24009. Fill bleibt der Tagesclose plus Slippage.",
+      "mark_source": "CoinMarketCap 0.2392. Fill unverändert Tagesclose plus 0,5 Prozent.",
       "opened_at": "2026-10-04T01:39:06+02:00",
       "post_id": "2106529508794998917",
       "source_is_issuer": false,
-      "reason": "Semantik long. Fill = CoinGecko-Close 2026-10-03 0.240329 USD plus 0.5 Prozent. Mark separat."
+      "reason": "Semantik long. Equity jetzt mark-to-market."
     }
   ],
   "events": [
-    {"t": "2026-10-04T01:39:06+02:00", "post_id": "2106529508794998917", "action": "SIGNAL", "asset": "USELESS", "reason": "Positive Semantik: next leg up finally looking ready to start."},
-    {"t": "2026-10-04T08:15:00+02:00", "post_id": "2106529508794998917", "action": "BUY", "asset": "USELESS", "reason": "10 Prozent. Fill 0.241531 nach Tagesclose plus 0.5 Prozent Slippage."},
-    {"t": "2026-10-04T09:45:00+02:00", "post_id": "2106529508794998917", "action": "MARK", "asset": "USELESS", "reason": "Kurs 0.2392 USD, CoinMarketCap. Fill unverändert."}
+    {"t": "2026-10-04T01:39:06+02:00", "post_id": "2106529508794998917", "action": "BUY", "asset": "USELESS", "reason": "Fill 0.241531."},
+    {"t": "2026-10-04T09:51:00+02:00", "post_id": "2106529508794998917", "action": "MARK", "asset": "USELESS", "reason": "Marktwert 99.03 plus Cash 900 = Equity 999.03."}
   ],
   "equity_curve": [
     { "t": "2026-10-03T01:09:00+02:00", "equity": 1000 },
-    { "t": "2026-10-04T08:15:00+02:00", "equity": 999.5 }
+    { "t": "2026-10-04T08:15:00+02:00", "equity": 999.5 },
+    { "t": "2026-10-04T09:51:00+02:00", "equity": 999.03 }
   ],
   "metrics": {
-    "deployed_usd": 100,
-    "deployed_pct": 10,
+    "deployed_usd": 99.03,
+    "deployed_pct": 9.9,
     "open_slots": 1,
     "posts_seen": 2,
     "signals": 1,
@@ -69,9 +71,9 @@
     "best_pct": null,
     "worst_pct": null,
     "profit_factor": null,
-    "max_drawdown_pct": 0.05,
+    "max_drawdown_pct": 0.1,
     "issuer": { "closed": 0, "win_rate": null, "mean_return_pct": null },
     "non_issuer": { "closed": 0, "win_rate": null, "mean_return_pct": null }
   },
-  "note": "USELESS Fill 0.241531, Kurs 0.2392. Equity weiter 999.50, nur Slippage, kein Mark-to-Market."
+  "note": "Equity 999.03 = Cash 900 plus USELESS-Marktwert 99.03."
 }

@@ -5,12 +5,12 @@
   "currency": "USD",
   "disclaimer": "Spielgeld. Keine Orders, keine Anlageberatung. Fill ist Stundenkerze zum Post plus 0,5 Prozent, Equity ist Cash plus aktueller Marktwert.",
   "started_at": "2026-10-03T00:47:00+02:00",
-  "updated_at": "2026-10-04T10:11:00+02:00",
-  "last_run_at": "2026-10-04T10:11:00+02:00",
-  "last_post_id": "2106419939858907170",
-  "last_action_post_id": "2106419820736520466",
+  "updated_at": "2026-10-04T13:14:00+02:00",
+  "last_run_at": "2026-10-04T13:14:00+02:00",
+  "last_post_id": "2106703979673444702",
+  "last_action_post_id": "2106676756774289817",
   "capital_start": 1000,
-  "cash": 850,
+  "cash": 753.5,
   "equity": 964.96,
   "rules": {
     "max_deployed_pct": 40,
@@ -39,6 +39,23 @@
       "post_id": "2106292368836284469",
       "source_is_issuer": false,
       "reason": "Semantik long. Fill aus der Stundenkerze, nicht aus dem Post."
+    },
+    {
+      "asset": "BTC",
+      "side": "long",
+      "size_pct": 10,
+      "notional_usd": 96.5,
+      "qty": null,
+      "fill": null,
+      "market_at_post": null,
+      "mark": null,
+      "market_value_usd": null,
+      "mark_asof": null,
+      "mark_source": "Stundenkerze zum Post 2026-10-04T09:24:13Z nicht gefunden. Tagesrange etwa 84572-85401, kein Skip-Late, kein Schaetzwert.",
+      "opened_at": "2026-10-04T09:24:13+00:00",
+      "post_id": "2106676756774289817",
+      "source_is_issuer": false,
+      "reason": "Semantik long. BTC plus bull market. Notional reserviert, Fill offen."
     }
   ],
   "events": [
@@ -47,28 +64,32 @@
     {"t": "2026-10-03T12:58:33+02:00", "post_id": "2106338107121377590", "action": "BUY", "asset": "SI", "reason": "Fill 0.047988 = Stundenclose 0.047749 plus 0,5 Prozent."},
     {"t": "2026-10-04T09:51:00+02:00", "post_id": null, "action": "MARK", "asset": "PORTFOLIO", "reason": "Marktwert 278.36 plus Cash 700 = Equity 978.36. ZCAT +11.17, MASK -9.24, SI -23.57."},
     {"t": "2026-10-04T10:11:00+02:00", "post_id": null, "action": "SELL", "asset": "MASK", "reason": "Hart-Stop -25 Prozent. Pool D1rDVEp 24h-Tief 0.03261 um 23:13 UTC nach Einstieg, Stop 0.032735. Exit am Stop, Erloes 75.00."},
-    {"t": "2026-10-04T10:11:00+02:00", "post_id": null, "action": "SELL", "asset": "SI", "reason": "Hart-Stop -25 Prozent. Pool 8uwFMFC 24h-Tief 0.03508 um 04:35 UTC nach Einstieg, Stop 0.035991. Exit am Stop, Erloes 75.00."}
+    {"t": "2026-10-04T10:11:00+02:00", "post_id": null, "action": "SELL", "asset": "SI", "reason": "Hart-Stop -25 Prozent. Pool 8uwFMFC 24h-Tief 0.03508 um 04:35 UTC nach Einstieg, Stop 0.035991. Exit am Stop, Erloes 75.00."},
+    {"t": "2026-10-04T09:24:13+00:00", "post_id": "2106676756774289817", "action": "SIGNAL", "asset": "BTC", "reason": "Eigene Aeusserung nennt BTC und bull market. Kursziel keines."},
+    {"t": "2026-10-04T09:24:13+00:00", "post_id": "2106676756774289817", "action": "BUY", "asset": "BTC", "reason": "10 Prozent Equity 96.50 reserviert. Stundenpreis fehlt, fill null, unpriced. Slippage erst bei Fill."},
+    {"t": "2026-10-04T11:12:24+00:00", "post_id": "2106703979673444702", "action": "NOISE", "asset": null, "reason": "Nur Bullish. Quote von @ethena ist ein Hash. Eigene Aeusserung nennt keinen Coin."}
   ],
   "equity_curve": [
     { "t": "2026-10-03T00:47:00+02:00", "equity": 1000 },
     { "t": "2026-10-03T09:56:48+02:00", "equity": 999.5 },
     { "t": "2026-10-03T12:58:33+02:00", "equity": 998.5 },
     { "t": "2026-10-04T09:51:00+02:00", "equity": 978.36 },
-    { "t": "2026-10-04T10:11:00+02:00", "equity": 964.96 }
+    { "t": "2026-10-04T10:11:00+02:00", "equity": 964.96 },
+    { "t": "2026-10-04T13:14:00+02:00", "equity": 964.96 }
   ],
   "metrics": {
-    "deployed_usd": 114.96,
-    "deployed_pct": 11.9,
-    "open_slots": 1,
-    "posts_seen": 11,
-    "signals": 8,
+    "deployed_usd": 211.46,
+    "deployed_pct": 21.9,
+    "open_slots": 2,
+    "posts_seen": 13,
+    "signals": 9,
     "issuer_signals": 0,
-    "noise": 6,
-    "buys": 3,
+    "noise": 7,
+    "buys": 4,
     "sells": 2,
     "skip_slot": 7,
     "skip_late": 0,
-    "unpriced": 0,
+    "unpriced": 1,
     "closed_trades": 2,
     "wins": 0,
     "losses": 2,
@@ -82,5 +103,5 @@
     "issuer": { "closed": 0, "win_rate": null, "mean_return_pct": null },
     "non_issuer": { "closed": 2, "win_rate": 0, "mean_return_pct": -25 }
   },
-  "note": "Equity 964.96 = Cash 850 plus ZCAT-Marktwert 114.96. MASK und SI am Hart-Stop geschlossen. Keine neuen Posts seit 2106419939858907170."
+  "note": "Equity 964.96 = Cash 753.50 plus ZCAT 114.96 plus reserviertes BTC-Notional 96.50. BTC fill null bis Stundenkerze. ZCAT-Stop 0.029032 nicht erreicht. Ethena-Quote Rauschen."
 }

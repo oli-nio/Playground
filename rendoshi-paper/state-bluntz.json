@@ -5,8 +5,8 @@
   "currency": "USD",
   "disclaimer": "Spielgeld. Keine Orders, keine Anlageberatung. Buchungen nur nach einem Post, der ein Signal oder eine Handlung ausgelöst hat.",
   "started_at": "2026-10-03T01:09:00+02:00",
-  "updated_at": "2026-10-04T08:15:00+02:00",
-  "last_run_at": "2026-10-04T08:15:00+02:00",
+  "updated_at": "2026-10-04T09:45:00+02:00",
+  "last_run_at": "2026-10-04T09:45:00+02:00",
   "last_post_id": "2106607533767176217",
   "last_action_post_id": "2106529508794998917",
   "capital_start": 1000,
@@ -29,27 +29,19 @@
       "notional_usd": 100,
       "fill": 0.241531,
       "market_at_post": 0.240329,
+      "mark": 0.2392,
+      "mark_asof": "2026-10-04T07:45:00Z",
+      "mark_source": "CoinMarketCap live 0.2392. CoinGlass 0.24009. Fill bleibt der Tagesclose plus Slippage.",
       "opened_at": "2026-10-04T01:39:06+02:00",
       "post_id": "2106529508794998917",
       "source_is_issuer": false,
-      "reason": "Semantik: next leg up finally looking ready to start auf $useless. Fill = CoinGecko-Close 2026-10-03 0.240329 USD plus 0.5 Prozent Slippage."
+      "reason": "Semantik long. Fill = CoinGecko-Close 2026-10-03 0.240329 USD plus 0.5 Prozent. Mark separat."
     }
   ],
   "events": [
-    {
-      "t": "2026-10-04T01:39:06+02:00",
-      "post_id": "2106529508794998917",
-      "action": "SIGNAL",
-      "asset": "USELESS",
-      "reason": "Positive Semantik: after a months of sideways on $useless, the next leg up finally looking ready to start."
-    },
-    {
-      "t": "2026-10-04T08:15:00+02:00",
-      "post_id": "2106529508794998917",
-      "action": "BUY",
-      "asset": "USELESS",
-      "reason": "10 Prozent vom Eigenkapital. Markt zum Post: CoinGecko-Tagesclose 2026-10-03 0.240329 USD, Fill 0.241531 nach 0.5 Prozent Slippage. Lauf bis jetzt unter 15 Prozent, kein SKIP_LATE."
-    }
+    {"t": "2026-10-04T01:39:06+02:00", "post_id": "2106529508794998917", "action": "SIGNAL", "asset": "USELESS", "reason": "Positive Semantik: next leg up finally looking ready to start."},
+    {"t": "2026-10-04T08:15:00+02:00", "post_id": "2106529508794998917", "action": "BUY", "asset": "USELESS", "reason": "10 Prozent. Fill 0.241531 nach Tagesclose plus 0.5 Prozent Slippage."},
+    {"t": "2026-10-04T09:45:00+02:00", "post_id": "2106529508794998917", "action": "MARK", "asset": "USELESS", "reason": "Kurs 0.2392 USD, CoinMarketCap. Fill unverändert."}
   ],
   "equity_curve": [
     { "t": "2026-10-03T01:09:00+02:00", "equity": 1000 },
@@ -81,5 +73,5 @@
     "issuer": { "closed": 0, "win_rate": null, "mean_return_pct": null },
     "non_issuer": { "closed": 0, "win_rate": null, "mean_return_pct": null }
   },
-  "note": "USELESS long, Fill 0.241531 USD. QT-Post ohne Coin ist Rauschen. Kein Sell, Halt unter 7 Tagen, kein -25-Prozent-Stop. Equity 999.50 USD nach Slippage."
+  "note": "USELESS Fill 0.241531, Kurs 0.2392. Equity weiter 999.50, nur Slippage, kein Mark-to-Market."
 }

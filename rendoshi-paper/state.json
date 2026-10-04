@@ -5,8 +5,8 @@
   "currency": "USD",
   "disclaimer": "Spielgeld. Keine Orders, keine Anlageberatung. Kauf entsteht aus positiver Semantik zu einem genannten Coin, nicht daraus, ob ein Preis im Post steht.",
   "started_at": "2026-10-03T00:47:00+02:00",
-  "updated_at": "2026-10-03T19:11:00+02:00",
-  "last_run_at": "2026-10-03T19:11:00+02:00",
+  "updated_at": "2026-10-04T09:45:00+02:00",
+  "last_run_at": "2026-10-04T09:45:00+02:00",
   "last_post_id": "2106419939858907170",
   "last_action_post_id": "2106419820736520466",
   "capital_start": 1000,
@@ -29,10 +29,13 @@
       "size_pct": 10,
       "notional_usd": 100,
       "fill": null,
+      "mark": 0.03735,
+      "mark_asof": "2026-10-03T21:09:00Z",
+      "mark_source": "Stonk Board, verzögert. Mint HcRLc9VDgjLeK154xDawfb1dmVJ98DoSqcwTHGqiDeJR. GeckoTerminal zeigte 0.03421. Kein Minutenkurs zum Post 07:56 UTC.",
       "opened_at": "2026-10-03T09:56:48+02:00",
       "post_id": "2106292368836284469",
       "source_is_issuer": false,
-      "reason": "Semantik: ZCAT will pump when ZEC pump again. Kein Preis im Post nötig. Fill noch ohne Marktquelle."
+      "reason": "Semantik long. Fill fehlt, weil der Kurs zum Postzeitpunkt nicht vorliegt. Mark ist nicht der Einstieg."
     },
     {
       "asset": "MASK",
@@ -40,10 +43,13 @@
       "size_pct": 10,
       "notional_usd": 100,
       "fill": null,
+      "mark": 0.04634,
+      "mark_asof": "2026-10-03T21:10:00Z",
+      "mark_source": "Stonk Board. GeckoTerminal MASK/SOL zeigte 0.03874. Quellen widersprechen sich. Kein Minutenkurs zum Post 10:58 UTC.",
       "opened_at": "2026-10-03T12:58:33+02:00",
       "post_id": "2106338107121377590",
       "source_is_issuer": false,
-      "reason": "Semantik: could go to $1B+ this cycle. Preis im Post ist Ziel, kein Einstieg."
+      "reason": "Semantik long. Fill fehlt. Mark ist nicht der Einstieg."
     },
     {
       "asset": "SI",
@@ -51,145 +57,41 @@
       "size_pct": 10,
       "notional_usd": 100,
       "fill": null,
+      "mark": 0.03966,
+      "mark_asof": "2026-10-03T21:10:00Z",
+      "mark_source": "Stonk Board, Super Inu. Keine zweite Quelle, kein Minutenkurs zum Post 10:58 UTC.",
       "opened_at": "2026-10-03T12:58:33+02:00",
       "post_id": "2106338107121377590",
       "source_is_issuer": false,
-      "reason": "Semantik: could go to $1B+ this cycle. Preis im Post ist Ziel, kein Einstieg."
+      "reason": "Semantik long. Fill fehlt. Mark ist nicht der Einstieg."
     }
   ],
   "events": [
-    {
-      "t": "2026-10-03T09:56:48+02:00",
-      "post_id": "2106292368836284469",
-      "action": "SIGNAL",
-      "asset": "ZCAT",
-      "reason": "Positive Semantik: ZCAT will pump when ZEC pump again."
-    },
-    {
-      "t": "2026-10-03T15:08:00+02:00",
-      "post_id": "2106292368836284469",
-      "action": "BUY",
-      "asset": "ZCAT",
-      "reason": "Nachgezogen. Fehlender Preis im Post ist kein Skip. 10 Prozent reserviert, Fill offen bis Marktquelle."
-    },
-    {
-      "t": "2026-10-03T12:58:33+02:00",
-      "post_id": "2106338107121377590",
-      "action": "SIGNAL",
-      "asset": "MASK",
-      "reason": "Positive Semantik: could go to $1B+ this cycle."
-    },
-    {
-      "t": "2026-10-03T15:08:00+02:00",
-      "post_id": "2106338107121377590",
-      "action": "BUY",
-      "asset": "MASK",
-      "reason": "Nachgezogen. Zielpreis ist keine Einstiegsbedingung. 10 Prozent reserviert."
-    },
-    {
-      "t": "2026-10-03T12:58:33+02:00",
-      "post_id": "2106338107121377590",
-      "action": "SIGNAL",
-      "asset": "SI",
-      "reason": "Positive Semantik: could go to $1B+ this cycle."
-    },
-    {
-      "t": "2026-10-03T15:08:00+02:00",
-      "post_id": "2106338107121377590",
-      "action": "BUY",
-      "asset": "SI",
-      "reason": "Nachgezogen. Zielpreis ist keine Einstiegsbedingung. 10 Prozent reserviert."
-    },
-    {
-      "t": "2026-10-03T12:58:33+02:00",
-      "post_id": "2106338107121377590",
-      "action": "SKIP_SLOT",
-      "asset": "ZCAT",
-      "reason": "ZCAT schon offen aus früherem Post. Kein zweiter Slot."
-    },
-    {
-      "t": "2026-10-03T17:30:03+02:00",
-      "post_id": "2106406434460307588",
-      "action": "SKIP_SLOT",
-      "asset": "MASK",
-      "reason": "MASK schon offen. Kein zweiter Slot. $MASK to $1B ist positive Semantik, Slot belegt."
-    },
-    {
-      "t": "2026-10-03T17:46:23+02:00",
-      "post_id": "2106410545431888018",
-      "action": "SIGNAL",
-      "asset": "PUMP",
-      "reason": "Positive Semantik: 4x für $PUMP."
-    },
-    {
-      "t": "2026-10-03T18:13:00+02:00",
-      "post_id": "2106410545431888018",
-      "action": "SKIP_SLOT",
-      "asset": "PUMP",
-      "reason": "Drei Positionen offen (ZCAT, MASK, SI). Max 3. Kein vierter Slot."
-    },
-    {
-      "t": "2026-10-03T17:46:23+02:00",
-      "post_id": "2106410545431888018",
-      "action": "SIGNAL",
-      "asset": "STONK",
-      "reason": "Positive Semantik: 15X für $STONK, Outperformance größer."
-    },
-    {
-      "t": "2026-10-03T18:13:00+02:00",
-      "post_id": "2106410545431888018",
-      "action": "SKIP_SLOT",
-      "asset": "STONK",
-      "reason": "Drei Positionen offen. Max 3. Kein vierter Slot."
-    },
-    {
-      "t": "2026-10-03T18:23:15+02:00",
-      "post_id": "2106419820736520466",
-      "action": "SIGNAL",
-      "asset": "PONS",
-      "reason": "Positive Semantik: really want PONS to succeed, cool platform."
-    },
-    {
-      "t": "2026-10-03T19:11:00+02:00",
-      "post_id": "2106419820736520466",
-      "action": "SKIP_SLOT",
-      "asset": "PONS",
-      "reason": "Drei Positionen offen (ZCAT, MASK, SI). Max 3. Kein vierter Slot."
-    },
-    {
-      "t": "2026-10-03T18:23:15+02:00",
-      "post_id": "2106419820736520466",
-      "action": "SIGNAL",
-      "asset": "HOOD",
-      "reason": "Positive Semantik: HOOD is my second biggest stock position. Halten."
-    },
-    {
-      "t": "2026-10-03T19:11:00+02:00",
-      "post_id": "2106419820736520466",
-      "action": "SKIP_SLOT",
-      "asset": "HOOD",
-      "reason": "Drei Positionen offen (ZCAT, MASK, SI). Max 3. Kein vierter Slot."
-    },
-    {
-      "t": "2026-10-03T18:23:15+02:00",
-      "post_id": "2106419820736520466",
-      "action": "SIGNAL",
-      "asset": "STONK",
-      "reason": "Positive Semantik: Stonk is more undervalued."
-    },
-    {
-      "t": "2026-10-03T19:11:00+02:00",
-      "post_id": "2106419820736520466",
-      "action": "SKIP_SLOT",
-      "asset": "STONK",
-      "reason": "Drei Positionen offen. STONK nicht offen, aber Max 3. Kein vierter Slot."
-    }
+    {"t": "2026-10-03T09:56:48+02:00", "post_id": "2106292368836284469", "action": "SIGNAL", "asset": "ZCAT", "reason": "Positive Semantik: ZCAT will pump when ZEC pump again."},
+    {"t": "2026-10-03T15:08:00+02:00", "post_id": "2106292368836284469", "action": "BUY", "asset": "ZCAT", "reason": "Nachgezogen. Fehlender Preis im Post ist kein Skip. 10 Prozent reserviert, Fill offen bis Marktquelle."},
+    {"t": "2026-10-03T12:58:33+02:00", "post_id": "2106338107121377590", "action": "SIGNAL", "asset": "MASK", "reason": "Positive Semantik: could go to $1B+ this cycle."},
+    {"t": "2026-10-03T15:08:00+02:00", "post_id": "2106338107121377590", "action": "BUY", "asset": "MASK", "reason": "Nachgezogen. Zielpreis ist keine Einstiegsbedingung. 10 Prozent reserviert."},
+    {"t": "2026-10-03T12:58:33+02:00", "post_id": "2106338107121377590", "action": "SIGNAL", "asset": "SI", "reason": "Positive Semantik: could go to $1B+ this cycle."},
+    {"t": "2026-10-03T15:08:00+02:00", "post_id": "2106338107121377590", "action": "BUY", "asset": "SI", "reason": "Nachgezogen. Zielpreis ist keine Einstiegsbedingung. 10 Prozent reserviert."},
+    {"t": "2026-10-03T12:58:33+02:00", "post_id": "2106338107121377590", "action": "SKIP_SLOT", "asset": "ZCAT", "reason": "ZCAT schon offen aus früherem Post. Kein zweiter Slot."},
+    {"t": "2026-10-03T17:30:03+02:00", "post_id": "2106406434460307588", "action": "SKIP_SLOT", "asset": "MASK", "reason": "MASK schon offen. Kein zweiter Slot."},
+    {"t": "2026-10-03T17:46:23+02:00", "post_id": "2106410545431888018", "action": "SIGNAL", "asset": "PUMP", "reason": "Positive Semantik: 4x für $PUMP."},
+    {"t": "2026-10-03T18:13:00+02:00", "post_id": "2106410545431888018", "action": "SKIP_SLOT", "asset": "PUMP", "reason": "Drei Positionen offen. Max 3."},
+    {"t": "2026-10-03T17:46:23+02:00", "post_id": "2106410545431888018", "action": "SIGNAL", "asset": "STONK", "reason": "Positive Semantik: 15X für $STONK."},
+    {"t": "2026-10-03T18:13:00+02:00", "post_id": "2106410545431888018", "action": "SKIP_SLOT", "asset": "STONK", "reason": "Drei Positionen offen. Max 3."},
+    {"t": "2026-10-03T18:23:15+02:00", "post_id": "2106419820736520466", "action": "SIGNAL", "asset": "PONS", "reason": "Positive Semantik: really want PONS to succeed."},
+    {"t": "2026-10-03T19:11:00+02:00", "post_id": "2106419820736520466", "action": "SKIP_SLOT", "asset": "PONS", "reason": "Drei Positionen offen. Max 3."},
+    {"t": "2026-10-03T18:23:15+02:00", "post_id": "2106419820736520466", "action": "SIGNAL", "asset": "HOOD", "reason": "Positive Semantik: HOOD is my second biggest stock position."},
+    {"t": "2026-10-03T19:11:00+02:00", "post_id": "2106419820736520466", "action": "SKIP_SLOT", "asset": "HOOD", "reason": "Drei Positionen offen. Max 3."},
+    {"t": "2026-10-03T18:23:15+02:00", "post_id": "2106419820736520466", "action": "SIGNAL", "asset": "STONK", "reason": "Positive Semantik: Stonk is more undervalued."},
+    {"t": "2026-10-03T19:11:00+02:00", "post_id": "2106419820736520466", "action": "SKIP_SLOT", "asset": "STONK", "reason": "Drei Positionen offen. Max 3."},
+    {"t": "2026-10-04T09:45:00+02:00", "post_id": null, "action": "MARK", "asset": "ZCAT", "reason": "Kurs 0.03735 USD vom Stonk Board nachgetragen. Fill bleibt leer."},
+    {"t": "2026-10-04T09:45:00+02:00", "post_id": null, "action": "MARK", "asset": "MASK", "reason": "Kurs 0.04634 USD vom Stonk Board nachgetragen. GeckoTerminal 0.03874. Fill bleibt leer."},
+    {"t": "2026-10-04T09:45:00+02:00", "post_id": null, "action": "MARK", "asset": "SI", "reason": "Kurs 0.03966 USD vom Stonk Board nachgetragen. Fill bleibt leer."}
   ],
   "equity_curve": [
     { "t": "2026-10-03T00:47:00+02:00", "equity": 1000 },
-    { "t": "2026-10-03T15:08:00+02:00", "equity": 1000 },
-    { "t": "2026-10-03T18:13:00+02:00", "equity": 1000 },
-    { "t": "2026-10-03T19:11:00+02:00", "equity": 1000 }
+    { "t": "2026-10-04T09:45:00+02:00", "equity": 1000 }
   ],
   "metrics": {
     "deployed_usd": 300,
@@ -217,5 +119,5 @@
     "issuer": { "closed": 0, "win_rate": null, "mean_return_pct": null },
     "non_issuer": { "closed": 0, "win_rate": null, "mean_return_pct": null }
   },
-  "note": "Slots voll. PONS, HOOD, STONK positiv, SKIP_SLOT. FDV-Reply Rauschen, kein Coin. Kein Sell/Reduce der Quelle, Halt unter 7 Tagen, Fills weiter null, kein Stop. Equity 1000 USD."
+  "note": "Fills fehlen weiter, deshalb Equity 1000. Kurse sind Mark, nicht Einstieg: ZCAT 0.03735, MASK 0.04634, SI 0.03966 USD, Stonk Board, verzögert. MASK widerspricht GeckoTerminal 0.03874."
 }

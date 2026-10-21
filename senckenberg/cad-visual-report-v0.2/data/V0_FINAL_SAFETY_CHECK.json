@@ -1,0 +1,41 @@
+{
+  "checked_at_utc": "2026-10-21T15:51:41.417254+00:00",
+  "source_checks": [
+    {
+      "role": "NAS_ORIGINAL",
+      "path": "\\\\formidrive\\FORMIKAT_PROJEKTE\\AUSSTELLUNGSDESIGN\\SENCKENBERG\\PLANUNG_MZ\\CAD\\MODULTEST_OR-MZ.3dm",
+      "bytes": 62074845,
+      "sha256": "89ba1a6fd1c8a6c8fb22c991e96a581bf663380aed14ecbdbabf3245a5c02a88",
+      "unchanged_during_read": true,
+      "matches_expected": true,
+      "status": "PASS"
+    },
+    {
+      "role": "LOCAL_UNMODIFIED_COPY",
+      "path": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODUL_ZUSCHNITT_PILOT_V0_2026-10-21\\models\\MODULTEST_OR-MZ.3dm",
+      "bytes": 62074845,
+      "sha256": "89ba1a6fd1c8a6c8fb22c991e96a581bf663380aed14ecbdbabf3245a5c02a88",
+      "unchanged_during_read": true,
+      "matches_expected": true,
+      "status": "PASS"
+    }
+  ],
+  "baseline_checks": [
+    {
+      "directory": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_CAD_VERSION_COMPARE_V4_2026-10-20",
+      "manifest_sha256": "27660fb334527d8830a9ac1491b3418590a9005a96b0caafdbcbb6a0935e3073",
+      "checked_files": 1380,
+      "differences": [],
+      "status": "PASS"
+    },
+    {
+      "directory": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_CAD_NATIVE_V4_1_2026-10-21",
+      "manifest_sha256": "a5e934a4c59f29f0cc603bd16fdc40eb22624afff0f013754908504bd0cd85c8",
+      "checked_files": 134,
+      "differences": [],
+      "status": "PASS"
+    }
+  ],
+  "scope": "Only exact NAS source and exact file paths enumerated in two existing baseline manifests. No NAS directory listing or search. No package, task, service, source-model or product changes.",
+  "status": "PASS"
+}

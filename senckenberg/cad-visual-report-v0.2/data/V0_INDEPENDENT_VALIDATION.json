@@ -1,0 +1,1055 @@
+{
+  "status": "PASS",
+  "native_build": "Existing rhino3dm WASM 8.17; Python primary 8.32",
+  "source_sha256": "89ba1a6fd1c8a6c8fb22c991e96a581bf663380aed14ecbdbabf3245a5c02a88",
+  "source_object_count": 1800,
+  "source_block_definitions": 0,
+  "all_physical_bbox_crosscheck_max_mm": 0,
+  "group_checks": [
+    {
+      "study": "S01",
+      "count": 70,
+      "strict_core_connected": true,
+      "min_AABB_gap_to_outside_mm": 35.63847657627388,
+      "ambiguous_satellite_count": 0,
+      "status": "PASS"
+    },
+    {
+      "study": "S02",
+      "count": 21,
+      "strict_core_connected": true,
+      "min_AABB_gap_to_outside_mm": 309.07054795655495,
+      "ambiguous_satellite_count": 0,
+      "status": "PASS"
+    },
+    {
+      "study": "S03",
+      "count": 18,
+      "strict_core_connected": true,
+      "min_AABB_gap_to_outside_mm": 1084.7543003980957,
+      "ambiguous_satellite_count": 0,
+      "status": "PASS"
+    },
+    {
+      "study": "S04",
+      "count": 21,
+      "strict_core_connected": true,
+      "min_AABB_gap_to_outside_mm": 0.2643860947639496,
+      "ambiguous_satellite_count": 1,
+      "status": "PASS"
+    },
+    {
+      "study": "S05",
+      "count": 23,
+      "strict_core_connected": true,
+      "min_AABB_gap_to_outside_mm": 139.79509525202377,
+      "ambiguous_satellite_count": 0,
+      "status": "PASS"
+    }
+  ],
+  "measurements": [
+    {
+      "part_label": "S01-P004",
+      "guid": "059a6e64-5611-4745-bdcf-87a575dbc79b",
+      "study": "S01",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          8,
+          600.0000000000018,
+          1272.0172439427115
+        ],
+        "thickness_mm": 8,
+        "width_mm": 600.0000000000018,
+        "length_mm": 1272.0172439427115,
+        "area_m2": 0.7632103463656292
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S01-P055",
+      "guid": "c5c9ca65-56eb-4c39-b204-5b71708ce7f4",
+      "study": "S01",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          6,
+          1227.9999998671083,
+          1270.0172439427042
+        ],
+        "thickness_mm": 6,
+        "width_mm": 1227.9999998671083,
+        "length_mm": 1270.0172439427042,
+        "area_m2": 1.559581175392866
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S01-P056",
+      "guid": "c9c7fa44-04fa-4cc9-9c44-def94f832a22",
+      "study": "S01",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          6,
+          568.0000000000073,
+          1227.9999998671083
+        ],
+        "thickness_mm": 6,
+        "width_mm": 568.0000000000073,
+        "length_mm": 1227.9999998671083,
+        "area_m2": 0.6975039999245264
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S01-P070",
+      "guid": "ffdf1c81-6ac0-445d-828b-22aa55940ac1",
+      "study": "S01",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          8,
+          570.0000000000146,
+          600.0000000000018
+        ],
+        "thickness_mm": 8,
+        "width_mm": 570.0000000000146,
+        "length_mm": 600.0000000000018,
+        "area_m2": 0.3420000000000098
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S02-P001",
+      "guid": "162e8589-5cae-4ba8-af14-780e7ed16964",
+      "study": "S02",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          8,
+          578.0172439427115,
+          1100.9999999999995
+        ],
+        "thickness_mm": 8,
+        "width_mm": 578.0172439427115,
+        "length_mm": 1100.9999999999995,
+        "area_m2": 0.6363969855809252
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S02-P002",
+      "guid": "201d9dc1-d68a-42b5-be96-ecc9ab58ddeb",
+      "study": "S02",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 30,
+        "length_mm": 1302.017243942486
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S02-P003",
+      "guid": "211fac58-9c9b-4900-a24c-0fd3a9ef7f22",
+      "study": "S02",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          8,
+          571.0000000000002,
+          578.0172439427115
+        ],
+        "thickness_mm": 8,
+        "width_mm": 571.0000000000002,
+        "length_mm": 578.0172439427115,
+        "area_m2": 0.33004784629128836
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S02-P004",
+      "guid": "2c15516e-85cf-4585-adfa-cbadac92645c",
+      "study": "S02",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 39.999999999992724,
+        "length_mm": 2000
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S02-P011",
+      "guid": "62b153ea-21ce-40a7-8d5c-a095b5669f94",
+      "study": "S02",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 39.999999999992724,
+        "length_mm": 2000
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S02-P014",
+      "guid": "820d313b-8997-44a8-a1fd-71d585656d84",
+      "study": "S02",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          8,
+          571.0000000000002,
+          1278.0172439427133
+        ],
+        "thickness_mm": 8,
+        "width_mm": 571.0000000000002,
+        "length_mm": 1278.0172439427133,
+        "area_m2": 0.7297478462912895
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S02-P015",
+      "guid": "8c6aace8-3d1f-48d7-9959-ef4064eaa48b",
+      "study": "S02",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 30,
+        "length_mm": 1302.017243942486
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S02-P018",
+      "guid": "9ab2c203-8253-44b4-aad7-8cfa730bd9e3",
+      "study": "S02",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          8,
+          1100.9999999999995,
+          1278.0172439427133
+        ],
+        "thickness_mm": 8,
+        "width_mm": 1100.9999999999995,
+        "length_mm": 1278.0172439427133,
+        "area_m2": 1.4070969855809268
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S02-P019",
+      "guid": "ea8b2a9a-7648-4a64-b24c-ce5165a29c6a",
+      "study": "S02",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 39.999999999992724,
+        "length_mm": 2000
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S03-P001",
+      "guid": "0686988b-03ab-40e5-b536-5c69472f6a32",
+      "study": "S03",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 39.999999999992724,
+        "length_mm": 2000
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S03-P003",
+      "guid": "149c6fbb-58f3-42b8-a257-b2300b296b63",
+      "study": "S03",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          8,
+          571.0000000000002,
+          1278.0172439427133
+        ],
+        "thickness_mm": 8,
+        "width_mm": 571.0000000000002,
+        "length_mm": 1278.0172439427133,
+        "area_m2": 0.7297478462912895
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S03-P004",
+      "guid": "3a64285b-bf71-4a8f-b962-154af6c5fd94",
+      "study": "S03",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 39.999999999992724,
+        "length_mm": 2000
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S03-P006",
+      "guid": "407a2c10-c352-49fc-8818-203dd2e5df6a",
+      "study": "S03",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          8,
+          1100.9999999999995,
+          1278.0172439427133
+        ],
+        "thickness_mm": 8,
+        "width_mm": 1100.9999999999995,
+        "length_mm": 1278.0172439427133,
+        "area_m2": 1.4070969855809268
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S03-P007",
+      "guid": "49bc8931-e1bb-4e41-9036-0a9cbf365862",
+      "study": "S03",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          8,
+          571.0000000000002,
+          578.0172439427115
+        ],
+        "thickness_mm": 8,
+        "width_mm": 571.0000000000002,
+        "length_mm": 578.0172439427115,
+        "area_m2": 0.33004784629128836
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S03-P008",
+      "guid": "4e30559b-c108-4a8b-aab4-ab0dbc27becb",
+      "study": "S03",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 39.999999999992724,
+        "length_mm": 2000
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S03-P011",
+      "guid": "5cd7b64f-78a3-4abb-9030-249e14656314",
+      "study": "S03",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 30,
+        "length_mm": 1302.017243942486
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S03-P013",
+      "guid": "8f9ece63-e1ec-4d06-a71a-50cea74bd822",
+      "study": "S03",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 30,
+        "length_mm": 1302.017243942486
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S03-P015",
+      "guid": "a64bb6dd-cd4a-4282-b3c1-45aa6eb7eae8",
+      "study": "S03",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          8,
+          578.0172439427115,
+          1100.9999999999995
+        ],
+        "thickness_mm": 8,
+        "width_mm": 578.0172439427115,
+        "length_mm": 1100.9999999999995,
+        "area_m2": 0.6363969855809252
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S04-P003",
+      "guid": "1a70e148-f213-4779-8f34-1824e65bf8f5",
+      "study": "S04",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 39.999999999992724,
+        "length_mm": 2000
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S04-P007",
+      "guid": "28bf7221-ff96-4d5f-b68b-01334a0c59aa",
+      "study": "S04",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          8,
+          578.0172439427115,
+          1100.9999999999995
+        ],
+        "thickness_mm": 8,
+        "width_mm": 578.0172439427115,
+        "length_mm": 1100.9999999999995,
+        "area_m2": 0.6363969855809252
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S04-P008",
+      "guid": "30f892c6-a13c-454c-93c9-5153b8adc8f5",
+      "study": "S04",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 30,
+        "length_mm": 1302.017243942486
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S04-P009",
+      "guid": "5246571a-9854-4e9f-99ca-17b4b4aa1e8f",
+      "study": "S04",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          8,
+          571.0000000000002,
+          1278.0172439427133
+        ],
+        "thickness_mm": 8,
+        "width_mm": 571.0000000000002,
+        "length_mm": 1278.0172439427133,
+        "area_m2": 0.7297478462912895
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S04-P013",
+      "guid": "9102c064-a3b5-4040-b50b-6c313135f042",
+      "study": "S04",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          8,
+          1100.9999999999995,
+          1278.0172439427133
+        ],
+        "thickness_mm": 8,
+        "width_mm": 1100.9999999999995,
+        "length_mm": 1278.0172439427133,
+        "area_m2": 1.4070969855809268
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S04-P014",
+      "guid": "a393e599-0044-4692-be0c-9ee3e2a12ec9",
+      "study": "S04",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 30,
+        "length_mm": 1302.017243942486
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S04-P017",
+      "guid": "cb364047-27d3-44a0-9570-87f5c87c33a7",
+      "study": "S04",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 39.999999999992724,
+        "length_mm": 2000
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S04-P018",
+      "guid": "d1147ae2-46c2-4cb4-a4d1-38072fce2618",
+      "study": "S04",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          8,
+          571.0000000000002,
+          578.0172439427115
+        ],
+        "thickness_mm": 8,
+        "width_mm": 571.0000000000002,
+        "length_mm": 578.0172439427115,
+        "area_m2": 0.33004784629128836
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S04-P019",
+      "guid": "d662e980-c3b0-45b5-abf4-d87ad75d897b",
+      "study": "S04",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 39.999999999992724,
+        "length_mm": 2000
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S05-P003",
+      "guid": "1b6a8690-719d-47e3-a7e0-9c477cf3e56b",
+      "study": "S05",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 40,
+        "length_mm": 100
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S05-P011",
+      "guid": "7d3f3db2-6a5c-4666-8210-f752f31d5c97",
+      "study": "S05",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 40,
+        "length_mm": 100
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S05-P014",
+      "guid": "c01a9fbb-131f-4bc3-9904-b49d85259488",
+      "study": "S05",
+      "kind": "RECTANGULAR_SOLID",
+      "values": {
+        "sizes_mm": [
+          16,
+          80,
+          1070.4241056504688
+        ]
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S05-P016",
+      "guid": "cdaeb81b-923e-429a-99e1-541f3df76b67",
+      "study": "S05",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          16,
+          628,
+          1368
+        ],
+        "thickness_mm": 16,
+        "width_mm": 628,
+        "length_mm": 1368,
+        "area_m2": 0.859104
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S05-P017",
+      "guid": "d5f5e801-bdf7-4d77-90b6-099caca6d1f6",
+      "study": "S05",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 40,
+        "length_mm": 100
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S05-P019",
+      "guid": "de775da1-30e1-49fb-8882-a58b25c3db98",
+      "study": "S05",
+      "kind": "RECTANGULAR_SOLID",
+      "values": {
+        "sizes_mm": [
+          16,
+          80,
+          684
+        ]
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S05-P020",
+      "guid": "e11579a2-9b1e-449a-87d7-e757698bd7ec",
+      "study": "S05",
+      "kind": "STRAIGHT_ROUND_STOCK",
+      "values": {
+        "diameter_mm": 40,
+        "length_mm": 100
+      },
+      "status": "PASS",
+      "method": "Two native circular end edges: diameter by antipodal edge evaluations, axis length by end-circle centre distance."
+    },
+    {
+      "part_label": "S05-P021",
+      "guid": "e618bba9-ac85-442a-b5d0-a3e66cff6044",
+      "study": "S05",
+      "kind": "RECTANGULAR_SOLID",
+      "values": {
+        "sizes_mm": [
+          16,
+          80,
+          684
+        ]
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    },
+    {
+      "part_label": "S05-P023",
+      "guid": "f6f4cdaa-5aa1-48a4-8f3d-479baa56c1c5",
+      "study": "S05",
+      "kind": "RECTANGULAR_PLATE",
+      "values": {
+        "sizes_mm": [
+          8,
+          642.0000000000009,
+          1381.9999999999964
+        ],
+        "thickness_mm": 8,
+        "width_mm": 642.0000000000009,
+        "length_mm": 1381.9999999999964,
+        "area_m2": 0.8872439999999989
+      },
+      "status": "PASS",
+      "method": "Twelve native straight edge lengths in three groups of four, no AABB dimensional inference."
+    }
+  ],
+  "study_totals": [
+    {
+      "study": "S01",
+      "confirmed_rods": 0,
+      "rod_total_lfm": 0,
+      "confirmed_plates": 4,
+      "plate_total_m2": 3.3622955216830315,
+      "status": "PASS"
+    },
+    {
+      "study": "S02",
+      "confirmed_rods": 5,
+      "rod_total_lfm": 8.604034487884972,
+      "confirmed_plates": 4,
+      "plate_total_m2": 3.10328966374443,
+      "status": "PASS"
+    },
+    {
+      "study": "S03",
+      "confirmed_rods": 5,
+      "rod_total_lfm": 8.604034487884972,
+      "confirmed_plates": 4,
+      "plate_total_m2": 3.10328966374443,
+      "status": "PASS"
+    },
+    {
+      "study": "S04",
+      "confirmed_rods": 5,
+      "rod_total_lfm": 8.604034487884972,
+      "confirmed_plates": 4,
+      "plate_total_m2": 3.1032896637444294,
+      "status": "PASS"
+    },
+    {
+      "study": "S05",
+      "confirmed_rods": 4,
+      "rod_total_lfm": 0.4,
+      "confirmed_plates": 2,
+      "plate_total_m2": 1.746347999999999,
+      "status": "PASS"
+    }
+  ],
+  "processed_proxy_boundary_checks": [
+    {
+      "part_label": "S01-P014",
+      "guid": "1ead16fa-7951-4edd-9d46-9e327e629afe",
+      "edge_sample_spans_mm": [
+        39.999999999992724,
+        39.99999999999636,
+        2100.0000000000005
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S01-P021",
+      "guid": "3656e979-a93e-41bc-94d7-8c18e402f4c0",
+      "edge_sample_spans_mm": [
+        39.99999999999636,
+        39.999999999992724,
+        2100.0000000000005
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S01-P024",
+      "guid": "41eee5f5-c6fa-4f5d-9abe-798f5d99f25b",
+      "edge_sample_spans_mm": [
+        1302.0172439427297,
+        29.99902937411389,
+        29.456832294801373
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S01-P028",
+      "guid": "5785393d-5128-462a-a3b7-969ad1342bd6",
+      "edge_sample_spans_mm": [
+        1302.017243942717,
+        29.45634698187132,
+        29.456832295273216
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S01-P030",
+      "guid": "59c67b3d-ed56-4fb2-b565-cc1abd8d0cf0",
+      "edge_sample_spans_mm": [
+        29.45634698187132,
+        600.0000000000255,
+        29.456832295273216
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S01-P034",
+      "guid": "6d5a6bc6-c61f-4b7f-92ee-b6954b9f7640",
+      "edge_sample_spans_mm": [
+        29.456832294798005,
+        600.0000000000182,
+        28.91366458960374
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S01-P038",
+      "guid": "7f40d1be-aa51-4268-a2f9-20eb8431e4b3",
+      "edge_sample_spans_mm": [
+        39.99999999999636,
+        39.999999999992724,
+        2100.0000000000005
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S01-P054",
+      "guid": "c5398de1-4500-4f57-8b61-33aedb569755",
+      "edge_sample_spans_mm": [
+        39.999999999992724,
+        39.999999999992724,
+        2100.0000000000005
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S01-P065",
+      "guid": "ed6efb92-75d4-4d51-ab63-d274c02b17af",
+      "edge_sample_spans_mm": [
+        29.999029374119345,
+        600.0000000000364,
+        29.456832294801373
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S01-P069",
+      "guid": "ffcb8d2d-d2e3-4551-b139-82dc29c40c8b",
+      "edge_sample_spans_mm": [
+        1302.0172439427133,
+        29.470327105998877,
+        28.91366458960374
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S02-P005",
+      "guid": "304ca5b2-295b-477e-8b09-c019d802982a",
+      "edge_sample_spans_mm": [
+        30,
+        602.0172439424969,
+        30
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S02-P009",
+      "guid": "59787ede-5ca9-4a04-854e-f15e639a0c11",
+      "edge_sample_spans_mm": [
+        29.456346981858587,
+        602.0172439425041,
+        29.456832294802325
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S02-P012",
+      "guid": "77536d7c-3285-4ed8-9daf-bd864131f202",
+      "edge_sample_spans_mm": [
+        1302.017243942495,
+        29.455547260837193,
+        29.999810009576095
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S02-P013",
+      "guid": "7c982821-9c48-466d-983b-0226aa386ac2",
+      "edge_sample_spans_mm": [
+        30,
+        602.0172439424969,
+        30
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S02-P021",
+      "guid": "f40e6b73-b57a-43e3-9caa-7486642e796a",
+      "edge_sample_spans_mm": [
+        39.999999999992724,
+        39.999999999992724,
+        2000.0000000000005
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S03-P009",
+      "guid": "50d73629-3b20-4604-8acf-446906d4a6d5",
+      "edge_sample_spans_mm": [
+        29.456346981858587,
+        602.0172439425005,
+        29.456832294802325
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S03-P012",
+      "guid": "6bec8338-046d-42ac-aef4-187847627945",
+      "edge_sample_spans_mm": [
+        30,
+        602.0172439424932,
+        30
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S03-P016",
+      "guid": "bda0a2dc-3c9e-48d6-aace-43730b0c0501",
+      "edge_sample_spans_mm": [
+        30,
+        602.0172439424932,
+        30
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S03-P017",
+      "guid": "fecd792e-0ec4-4727-a81f-f0f6e0dd6d74",
+      "edge_sample_spans_mm": [
+        39.999999999992724,
+        39.999999999992724,
+        2000.0000000000005
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S03-P018",
+      "guid": "fffcc5cb-a784-4b87-bbea-2acc51cf6920",
+      "edge_sample_spans_mm": [
+        1302.017243942495,
+        29.455547260829917,
+        29.999810009576095
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S04-P002",
+      "guid": "1863b0be-a8f6-4319-baf4-e7a1d73b6fcd",
+      "edge_sample_spans_mm": [
+        30,
+        602.0172439424914,
+        30
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S04-P004",
+      "guid": "2294b5b7-0e40-42ab-ad3b-3248867747c9",
+      "edge_sample_spans_mm": [
+        1302.017243942495,
+        29.455547260833555,
+        29.999810009576095
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S04-P005",
+      "guid": "24ae08ad-a7a1-499a-85c4-65368f6d6dd1",
+      "edge_sample_spans_mm": [
+        30,
+        602.0172439424914,
+        30
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S04-P010",
+      "guid": "6c6a076c-5021-4076-a1c6-260a330c99bf",
+      "edge_sample_spans_mm": [
+        29.456346981858587,
+        602.0172439425005,
+        29.456832294802325
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S04-P020",
+      "guid": "dca25deb-f30a-4156-bd5a-50ed637b63ce",
+      "edge_sample_spans_mm": [
+        39.999999999992724,
+        39.999999999992724,
+        2000.0000000000005
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S05-P002",
+      "guid": "04ef5a10-33e4-4b84-a862-bbc39933f6a0",
+      "edge_sample_spans_mm": [
+        30,
+        679.0685498190851,
+        30.00000000000003
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S05-P004",
+      "guid": "27ce8b2c-7794-4c6a-a9e2-bd9cfe41ed45",
+      "edge_sample_spans_mm": [
+        30,
+        679.0685498190851,
+        30.00000000000003
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S05-P005",
+      "guid": "2d928077-8a9a-4191-b05a-ea1a3bbd2387",
+      "edge_sample_spans_mm": [
+        40,
+        40,
+        750.0000000000002
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S05-P006",
+      "guid": "32c99c6f-426c-4368-ac80-57588ae4b1ff",
+      "edge_sample_spans_mm": [
+        40,
+        40,
+        750.0000000000002
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S05-P007",
+      "guid": "3b9f69d8-218d-4d60-be23-ed72bcfe806f",
+      "edge_sample_spans_mm": [
+        40,
+        40,
+        750.0000000000002
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    },
+    {
+      "part_label": "S05-P012",
+      "guid": "86adb058-5eb2-4be1-86d6-ddc4b83657bd",
+      "edge_sample_spans_mm": [
+        40,
+        40,
+        750.0000000000002
+      ],
+      "residual_mm": 0,
+      "status": "PASS_SAME_FINITE_POINT_METHOD_CROSS_BUILD_NOT_GLOBAL_EXTREMUM"
+    }
+  ],
+  "maximum_dimension_residual_mm": 3.637978807091713e-12,
+  "manual_Rhino_baseline": "NOT_AVAILABLE_WITHOUT_NEW_RHINO_INTERACTION; not fabricated",
+  "limits": "AABB grouping crosschecked numerically, not design intent or physical contact. Cross-build agreement does not establish tight physical bounds. Measurements validate supported primitives only. The 31 detailed rods have separate user-requested proxies, not confirmed axis or cut lengths. Proxy boundary spans crosschecked in another build with the same finite point method, not a globally independent extremum proof. No optimizer executed."
+}

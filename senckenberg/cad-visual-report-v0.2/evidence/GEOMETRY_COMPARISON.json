@@ -1,0 +1,2052 @@
+{
+  "status": "PASS_WITH_EXPLICIT_TRIM_LIMIT",
+  "source_model": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODUL_ZUSCHNITT_PILOT_V0_2026-10-21\\models\\MODULTEST_OR-MZ.3dm",
+  "source_sha256": "89ba1a6fd1c8a6c8fb22c991e96a581bf663380aed14ecbdbabf3245a5c02a88",
+  "scope": "Only the existing 60 S02/S03/S04 assignments. Model opened once; no analysis of other objects. Existing parts and dimensions unchanged.",
+  "units": "mm",
+  "matching_tolerance_mm": 0.001,
+  "geometry_tolerance_mm": 0.001,
+  "datums": {
+    "S02": [
+      13766.728078655442,
+      -22535.013493518625,
+      0.0
+    ],
+    "S03": [
+      13766.728078655442,
+      -19195.41816000344,
+      0.0
+    ],
+    "S04": [
+      13766.728078655442,
+      -16659.397479449948,
+      0.0
+    ]
+  },
+  "datum_anchors": {
+    "S02": [
+      {
+        "guid": "2c15516e-85cf-4585-adfa-cbadac92645c",
+        "base": [
+          13766.728078655442,
+          -22506.02211548997,
+          2000.0
+        ],
+        "end": [
+          13766.728078655442,
+          -22506.02211548997,
+          0.0
+        ]
+      },
+      {
+        "guid": "62b153ea-21ce-40a7-8d5c-a095b5669f94",
+        "base": [
+          15097.736700626794,
+          -22535.01349351862,
+          2000.0
+        ],
+        "end": [
+          15097.736700626796,
+          -22535.013493518625,
+          0.0
+        ]
+      },
+      {
+        "guid": "ea8b2a9a-7648-4a64-b24c-ce5165a29c6a",
+        "base": [
+          13795.71945668409,
+          -22535.01349351862,
+          2000.0
+        ],
+        "end": [
+          13795.719456684092,
+          -22535.013493518625,
+          0.0
+        ]
+      }
+    ],
+    "S03": [
+      {
+        "guid": "0686988b-03ab-40e5-b536-5c69472f6a32",
+        "base": [
+          13795.71945668409,
+          -19195.418160003435,
+          2000.0
+        ],
+        "end": [
+          13795.719456684092,
+          -19195.41816000344,
+          0.0
+        ]
+      },
+      {
+        "guid": "3a64285b-bf71-4a8f-b962-154af6c5fd94",
+        "base": [
+          15097.736700626794,
+          -19195.418160003435,
+          2000.0
+        ],
+        "end": [
+          15097.736700626796,
+          -19195.41816000344,
+          0.0
+        ]
+      },
+      {
+        "guid": "4e30559b-c108-4a8b-aab4-ab0dbc27becb",
+        "base": [
+          13766.728078655442,
+          -19166.426781974784,
+          2000.0
+        ],
+        "end": [
+          13766.728078655442,
+          -19166.426781974784,
+          0.0
+        ]
+      }
+    ],
+    "S04": [
+      {
+        "guid": "1a70e148-f213-4779-8f34-1824e65bf8f5",
+        "base": [
+          13795.71945668409,
+          -16659.397479449945,
+          2000.0
+        ],
+        "end": [
+          13795.719456684092,
+          -16659.397479449948,
+          0.0
+        ]
+      },
+      {
+        "guid": "cb364047-27d3-44a0-9570-87f5c87c33a7",
+        "base": [
+          15097.736700626794,
+          -16659.397479449945,
+          2000.0
+        ],
+        "end": [
+          15097.736700626796,
+          -16659.397479449948,
+          0.0
+        ]
+      },
+      {
+        "guid": "d662e980-c3b0-45b5-abf4-d87ad75d897b",
+        "base": [
+          13766.728078655442,
+          -16630.406101421293,
+          2000.0
+        ],
+        "end": [
+          13766.728078655442,
+          -16630.406101421293,
+          0.0
+        ]
+      }
+    ]
+  },
+  "pairs": [
+    {
+      "pair": [
+        "S02",
+        "S03"
+      ],
+      "translation_of_study_datum_mm": [
+        0.0,
+        3339.595333515186,
+        0.0
+      ],
+      "matches": [
+        {
+          "source_guid": "162e8589-5cae-4ba8-af14-780e7ed16964",
+          "source_part": "S02-P001",
+          "target_guid": "a64bb6dd-cd4a-4282-b3c1-45aa6eb7eae8",
+          "target_part": "S03-P015",
+          "kind": "RECTANGULAR_PLATE",
+          "placement_and_box_residual_mm": 7.275957614183426e-12,
+          "normalized_serialization_sha256": [
+            "cac80455508a1ab8790a4085c66989399f6008c8255a05b191ee1e6c0097af22",
+            "31dbd4764bc13fe430fa9c131d25ab42ec6534309ac1fa9a8e6febc8ad37e322"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1122,
+            "target_count": 1122,
+            "max_numeric_residual": 3.751665644813329e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 3.637978807091713e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "201d9dc1-d68a-42b5-be96-ecc9ab58ddeb",
+          "source_part": "S02-P002",
+          "target_guid": "5cd7b64f-78a3-4abb-9030-249e14656314",
+          "target_part": "S03-P011",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "fd16eb27dc70e8aa7f92fc5144bd15195e4edb94de5eacaa071003481a0a0b0e",
+            "7bcf33ad7ca7e8e31d5ed1de4ed4386ef3c9f0b8e783f3a538ba98c726eaff81"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 462,
+            "target_count": 462,
+            "max_numeric_residual": 0.0,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 0.0,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "211fac58-9c9b-4900-a24c-0fd3a9ef7f22",
+          "source_part": "S02-P003",
+          "target_guid": "49bc8931-e1bb-4e41-9036-0a9cbf365862",
+          "target_part": "S03-P007",
+          "kind": "RECTANGULAR_PLATE",
+          "placement_and_box_residual_mm": 7.275957614183426e-12,
+          "normalized_serialization_sha256": [
+            "c28363e3c86949c80c7439b31e59616cb2cf061a27eef14f2580e31c38c6ae8f",
+            "c7b64c5e64eb97436e969f6a25c2322af843df81e36a43825290df6fe04275c0"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1122,
+            "target_count": 1122,
+            "max_numeric_residual": 3.751665644813329e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 3.637978807091713e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "2c15516e-85cf-4585-adfa-cbadac92645c",
+          "source_part": "S02-P004",
+          "target_guid": "4e30559b-c108-4a8b-aab4-ab0dbc27becb",
+          "target_part": "S03-P008",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "5bb37bf558b4258fed13095e3c99d64410172e9e68f54ea75b72be8cb39c7120",
+            "fa2bf040909a0c30fd712527c0f08ce8a489f62762e3218fb31dd53e48544fb4"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 462,
+            "target_count": 462,
+            "max_numeric_residual": 0.0,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 0.0,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "304ca5b2-295b-477e-8b09-c019d802982a",
+          "source_part": "S02-P005",
+          "target_guid": "bda0a2dc-3c9e-48d6-aace-43730b0c0501",
+          "target_part": "S03-P016",
+          "kind": "PROCESSED_ROD_BBOX",
+          "placement_and_box_residual_mm": 3.637978807091713e-12,
+          "normalized_serialization_sha256": [
+            "5702ee07af12675dad2540caee5859b520a14e6d047130f0f6bcd3d258bae4e7",
+            "8d1bf3984a08f0e2d7124dda213f3b523e208c29cd62a2d7605c2196331ba977"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 2.5721647034515627e-12,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 462,
+            "target_count": 462,
+            "max_numeric_residual": 3.637978807091713e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 3.637978807091713e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "45c1f18c-f25e-45d1-ad77-7ae0bbd91a7b",
+          "source_part": "S02-P007",
+          "target_guid": "3dec3e66-20e1-45bf-bac9-cc490cc6d7da",
+          "target_part": "S03-P005",
+          "kind": "UNKNOWN",
+          "placement_and_box_residual_mm": 3.637978807091713e-12,
+          "normalized_serialization_sha256": [
+            "e0985975ae907fb74f4440d55e00666416dfd8065853a6d4f9a3e8abe0043272",
+            "37662459ab2145de4a59ca6c973e31658fb7106256e52d2e45066a551f2b9876"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1562,
+            "target_count": 1562,
+            "max_numeric_residual": 3.652189661806915e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 3.637978807091713e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "59787ede-5ca9-4a04-854e-f15e639a0c11",
+          "source_part": "S02-P009",
+          "target_guid": "50d73629-3b20-4604-8acf-446906d4a6d5",
+          "target_part": "S03-P009",
+          "kind": "PROCESSED_ROD_BBOX",
+          "placement_and_box_residual_mm": 3.637978807091713e-12,
+          "normalized_serialization_sha256": [
+            "093d61e4744965cba774fd87974ae6bd60fe6bc6a2e2f71dea4f057dd9849331",
+            "f34cf288196de319eb658ea8a44eb7582f64001110d96445f692c26df6fb7151"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 5.4569682106375694e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 3.751665644813329e-12,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1980,
+            "target_count": 1980,
+            "max_numeric_residual": 4.757083615913871e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 5.4569682106375694e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "6117d509-66c8-4dcc-bd41-23e00e2c86cf",
+          "source_part": "S02-P010",
+          "target_guid": "0822b7b2-7a59-43a9-b204-a79e1b32c924",
+          "target_part": "S03-P002",
+          "kind": "UNKNOWN",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "3d7fa5f33ebef5374a0e7d56ce042eaefda081764dfb3189ad7752ebb7592fb7",
+            "909905028760d018cfddee4f2ceaa09dc9287408d3077b8d6f5cf2a31f074d30"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1562,
+            "target_count": 1562,
+            "max_numeric_residual": 3.751665644813329e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 3.637978807091713e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "62b153ea-21ce-40a7-8d5c-a095b5669f94",
+          "source_part": "S02-P011",
+          "target_guid": "3a64285b-bf71-4a8f-b962-154af6c5fd94",
+          "target_part": "S03-P004",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "48bcf6ad2f48373434d5e22996dd10658752955579043698b238fb5b58ab7fd4",
+            "1a793534ef94b4fd87bb1694fc9c76acafed710a72b611c6673083fb6f51c40b"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 462,
+            "target_count": 462,
+            "max_numeric_residual": 0.0,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 0.0,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "77536d7c-3285-4ed8-9daf-bd864131f202",
+          "source_part": "S02-P012",
+          "target_guid": "fffcc5cb-a784-4b87-bbea-2acc51cf6920",
+          "target_part": "S03-P018",
+          "kind": "PROCESSED_ROD_BBOX",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "c1df5f2d0a7cca7e58af8cfd10c8e821fb5ef8a1be26239fa102906a5faef96d",
+            "0d85818d9dfa56f7a59f3c05d20e01e61779b4ee7064737e253b1a9376c5e651"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 5.4569682106375694e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1221,
+            "target_count": 1221,
+            "max_numeric_residual": 4.7410964043592685e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 5.4569682106375694e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "7c982821-9c48-466d-983b-0226aa386ac2",
+          "source_part": "S02-P013",
+          "target_guid": "6bec8338-046d-42ac-aef4-187847627945",
+          "target_part": "S03-P012",
+          "kind": "PROCESSED_ROD_BBOX",
+          "placement_and_box_residual_mm": 3.637978807091713e-12,
+          "normalized_serialization_sha256": [
+            "2d3e8e83dde005a27fe1d34155fc41e4171818d6f794c7607105c83ad4b14721",
+            "a72af621243d68366dba0f75fbb5b175f643841505c18cf4f9cb402656154f12"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 2.5721647034515627e-12,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 462,
+            "target_count": 462,
+            "max_numeric_residual": 3.637978807091713e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 3.637978807091713e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "820d313b-8997-44a8-a1fd-71d585656d84",
+          "source_part": "S02-P014",
+          "target_guid": "149c6fbb-58f3-42b8-a257-b2300b296b63",
+          "target_part": "S03-P003",
+          "kind": "RECTANGULAR_PLATE",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "c6902af92ee662ae6855bf78cd4a267698307277de0968f9887a523fc0198ab7",
+            "2958a8489a50d812c921fbff948e261b762a1782a3c24720ea1b55ea1754b47a"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1122,
+            "target_count": 1122,
+            "max_numeric_residual": 0.0,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 0.0,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "8c6aace8-3d1f-48d7-9959-ef4064eaa48b",
+          "source_part": "S02-P015",
+          "target_guid": "8f9ece63-e1ec-4d06-a71a-50cea74bd822",
+          "target_part": "S03-P013",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "b56794a21f3c2bc6c05749867665df8bd6ff3eec7232f593c1b8381c97604caa",
+            "f6e2930a26b94d9a26c9c58fda1c0724d03f6b907b5c9acfdd2c538f0a141ed8"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 462,
+            "target_count": 462,
+            "max_numeric_residual": 0.0,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 0.0,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "9ab2c203-8253-44b4-aad7-8cfa730bd9e3",
+          "source_part": "S02-P018",
+          "target_guid": "407a2c10-c352-49fc-8818-203dd2e5df6a",
+          "target_part": "S03-P006",
+          "kind": "RECTANGULAR_PLATE",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "b4621821f8fb106eaa89845084e7c47f58bdb849a22be3180511ea971ce2bdb9",
+            "70ee5d88deea89eaefe9144cf576b3d85a3e3088734ff5fbff5cabc6c47abed9"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1122,
+            "target_count": 1122,
+            "max_numeric_residual": 0.0,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 0.0,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "ea8b2a9a-7648-4a64-b24c-ce5165a29c6a",
+          "source_part": "S02-P019",
+          "target_guid": "0686988b-03ab-40e5-b536-5c69472f6a32",
+          "target_part": "S03-P001",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "861c6c673f3221df8ff7a9aa5156aa466c91d717e1a8e094ab40109b7dae23a7",
+            "f7261d3e5ae4eab849610d28f89e3316acc5f8ee2628ff5dfe1182d58965f882"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 462,
+            "target_count": 462,
+            "max_numeric_residual": 0.0,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 0.0,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "f40e6b73-b57a-43e3-9caa-7486642e796a",
+          "source_part": "S02-P021",
+          "target_guid": "fecd792e-0ec4-4727-a81f-f0f6e0dd6d74",
+          "target_part": "S03-P017",
+          "kind": "PROCESSED_ROD_BBOX",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "4dec79702d718806686520ad3d94cf8e6d4216eb260ca1114818b3f2639da7d0",
+            "9566fa165795f14e7adb0fe12f376aaa5c380f28e57f346cf0d57a633027f347"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 462,
+            "target_count": 462,
+            "max_numeric_residual": 3.637978807091713e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 3.637978807091713e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        }
+      ],
+      "source_only": [
+        {
+          "guid": "407f0039-7276-415e-be08-a953b94793cb",
+          "part": "S02-P006",
+          "status": "NO_CORRESPONDENCE",
+          "candidate_guids": []
+        },
+        {
+          "guid": "51038648-3e80-4bd4-95ad-7e9129e71141",
+          "part": "S02-P008",
+          "status": "NO_CORRESPONDENCE",
+          "candidate_guids": []
+        },
+        {
+          "guid": "8f136fdf-139d-40be-9dc0-8f7d6e950b50",
+          "part": "S02-P016",
+          "status": "NO_CORRESPONDENCE",
+          "candidate_guids": []
+        },
+        {
+          "guid": "9575265f-dc3c-4e1f-bacd-a8eb1722eeb7",
+          "part": "S02-P017",
+          "status": "NO_CORRESPONDENCE",
+          "candidate_guids": []
+        },
+        {
+          "guid": "f08876b9-e4f7-4e02-a679-a761eb18b2d3",
+          "part": "S02-P020",
+          "status": "NO_CORRESPONDENCE",
+          "candidate_guids": []
+        }
+      ],
+      "target_only": [
+        "59b648cf-9874-449e-9d19-de284f7ff4c7",
+        "a21d1366-e275-45f0-a0bf-81109c46a904"
+      ]
+    },
+    {
+      "pair": [
+        "S02",
+        "S04"
+      ],
+      "translation_of_study_datum_mm": [
+        0.0,
+        5875.616014068677,
+        0.0
+      ],
+      "matches": [
+        {
+          "source_guid": "162e8589-5cae-4ba8-af14-780e7ed16964",
+          "source_part": "S02-P001",
+          "target_guid": "28bf7221-ff96-4d5f-b68b-01334a0c59aa",
+          "target_part": "S04-P007",
+          "kind": "RECTANGULAR_PLATE",
+          "placement_and_box_residual_mm": 3.637978807091713e-12,
+          "normalized_serialization_sha256": [
+            "cac80455508a1ab8790a4085c66989399f6008c8255a05b191ee1e6c0097af22",
+            "a6b69463f7986ce761df9e11339b2658c69bea107c2ea0b0ff412547e73edb70"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1122,
+            "target_count": 1122,
+            "max_numeric_residual": 1.8189894035458565e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 1.8189894035458565e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "201d9dc1-d68a-42b5-be96-ecc9ab58ddeb",
+          "source_part": "S02-P002",
+          "target_guid": "30f892c6-a13c-454c-93c9-5153b8adc8f5",
+          "target_part": "S04-P008",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "fd16eb27dc70e8aa7f92fc5144bd15195e4edb94de5eacaa071003481a0a0b0e",
+            "ec04aef4fb5ff7bfa4e0eee3fa39b28825ed45a264e39eac9732d3b708a009af"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 462,
+            "target_count": 462,
+            "max_numeric_residual": 0.0,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 0.0,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "211fac58-9c9b-4900-a24c-0fd3a9ef7f22",
+          "source_part": "S02-P003",
+          "target_guid": "d1147ae2-46c2-4cb4-a4d1-38072fce2618",
+          "target_part": "S04-P018",
+          "kind": "RECTANGULAR_PLATE",
+          "placement_and_box_residual_mm": 3.637978807091713e-12,
+          "normalized_serialization_sha256": [
+            "c28363e3c86949c80c7439b31e59616cb2cf061a27eef14f2580e31c38c6ae8f",
+            "613963213aafe6a74e6598078c74e6a2468cb04e1be120f0d76d0415b3a56b4c"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1122,
+            "target_count": 1122,
+            "max_numeric_residual": 1.8189894035458565e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 1.8189894035458565e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "2c15516e-85cf-4585-adfa-cbadac92645c",
+          "source_part": "S02-P004",
+          "target_guid": "d662e980-c3b0-45b5-abf4-d87ad75d897b",
+          "target_part": "S04-P019",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "5bb37bf558b4258fed13095e3c99d64410172e9e68f54ea75b72be8cb39c7120",
+            "251a3324fd9dd3525b067c8df71a468800385cb258105853f944aaf91a379f08"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 462,
+            "target_count": 462,
+            "max_numeric_residual": 0.0,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 0.0,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "304ca5b2-295b-477e-8b09-c019d802982a",
+          "source_part": "S02-P005",
+          "target_guid": "1863b0be-a8f6-4319-baf4-e7a1d73b6fcd",
+          "target_part": "S04-P002",
+          "kind": "PROCESSED_ROD_BBOX",
+          "placement_and_box_residual_mm": 1.8189894035458565e-12,
+          "normalized_serialization_sha256": [
+            "5702ee07af12675dad2540caee5859b520a14e6d047130f0f6bcd3d258bae4e7",
+            "182d1293cb39ed7f28dea07a7b7fc9704b0293bb9f87c0b1e6a93f0a609bc801"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 1.1368683772161603e-12,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 462,
+            "target_count": 462,
+            "max_numeric_residual": 1.8189894035458565e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 1.8189894035458565e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "407f0039-7276-415e-be08-a953b94793cb",
+          "source_part": "S02-P006",
+          "target_guid": "fa8c57db-670c-41dc-88c7-3ac3375cb8c8",
+          "target_part": "S04-P021",
+          "kind": "HARDWARE_BY_LAYER",
+          "placement_and_box_residual_mm": 3.637978807091713e-12,
+          "normalized_serialization_sha256": [
+            "4b284b9dcb69d2ad1dee2be72a27b0044e06f01c6933e1251b2c4e9709ffac74",
+            "9d7960d84ceb445cec5ef756c6fc935d8afdb784159dc225ed25ac4248746516"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 2464,
+            "target_count": 2464,
+            "max_numeric_residual": 1.0658141036401503e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 1.8189894035458565e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "45c1f18c-f25e-45d1-ad77-7ae0bbd91a7b",
+          "source_part": "S02-P007",
+          "target_guid": "70a67dee-188f-46ac-9d88-74c52a53e667",
+          "target_part": "S04-P011",
+          "kind": "UNKNOWN",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "e0985975ae907fb74f4440d55e00666416dfd8065853a6d4f9a3e8abe0043272",
+            "8e989e8c2343e303c14faea24f24ed7cf6bfba4c3fd5314df9f77d9f441abff2"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1562,
+            "target_count": 1562,
+            "max_numeric_residual": 0.0,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 0.0,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "51038648-3e80-4bd4-95ad-7e9129e71141",
+          "source_part": "S02-P008",
+          "target_guid": "25cc72b9-9091-4965-a35d-d5dfe3f28b70",
+          "target_part": "S04-P006",
+          "kind": "UNKNOWN",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "8eb373a9f99041f8bf77b9346a9e43b3c1348fecd013ba752d587015b41ffdb9",
+            "3f41a86af85f8ef93eaca63ba1a05a628c96015728d2c1c9ef25b2efe3d13ae9"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 5082,
+            "target_count": 5082,
+            "max_numeric_residual": 2.6147972675971687e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 3.637978807091713e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "59787ede-5ca9-4a04-854e-f15e639a0c11",
+          "source_part": "S02-P009",
+          "target_guid": "6c6a076c-5021-4076-a1c6-260a330c99bf",
+          "target_part": "S04-P010",
+          "kind": "PROCESSED_ROD_BBOX",
+          "placement_and_box_residual_mm": 1.8189894035458565e-12,
+          "normalized_serialization_sha256": [
+            "093d61e4744965cba774fd87974ae6bd60fe6bc6a2e2f71dea4f057dd9849331",
+            "29a531ab94662b9b23e17358715fe846d05cc9d38734567b6f543f5ff25bca9e"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1980,
+            "target_count": 1980,
+            "max_numeric_residual": 3.986144747614162e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 3.637978807091713e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "6117d509-66c8-4dcc-bd41-23e00e2c86cf",
+          "source_part": "S02-P010",
+          "target_guid": "a41acda2-b038-4ceb-9399-89699c001685",
+          "target_part": "S04-P015",
+          "kind": "UNKNOWN",
+          "placement_and_box_residual_mm": 3.637978807091713e-12,
+          "normalized_serialization_sha256": [
+            "3d7fa5f33ebef5374a0e7d56ce042eaefda081764dfb3189ad7752ebb7592fb7",
+            "bd0476dbef28d3dc4b2364ab7212f1b68a681dd83c79194d1a762a1ddc64da90"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1562,
+            "target_count": 1562,
+            "max_numeric_residual": 1.8189894035458565e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 1.8189894035458565e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "62b153ea-21ce-40a7-8d5c-a095b5669f94",
+          "source_part": "S02-P011",
+          "target_guid": "cb364047-27d3-44a0-9570-87f5c87c33a7",
+          "target_part": "S04-P017",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "48bcf6ad2f48373434d5e22996dd10658752955579043698b238fb5b58ab7fd4",
+            "53124b21b4b5538c3e27adba07a0dd7d5124b2eec03430e0181c7dc68f99aa25"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 462,
+            "target_count": 462,
+            "max_numeric_residual": 0.0,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 0.0,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "77536d7c-3285-4ed8-9daf-bd864131f202",
+          "source_part": "S02-P012",
+          "target_guid": "2294b5b7-0e40-42ab-ad3b-3248867747c9",
+          "target_part": "S04-P004",
+          "kind": "PROCESSED_ROD_BBOX",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "c1df5f2d0a7cca7e58af8cfd10c8e821fb5ef8a1be26239fa102906a5faef96d",
+            "aa6674954eb41751033a2c4defc5a33b6d6b2f89c13160785e1eefcb5a7d2804"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1221,
+            "target_count": 1221,
+            "max_numeric_residual": 2.0303758674344863e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 1.8189894035458565e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "7c982821-9c48-466d-983b-0226aa386ac2",
+          "source_part": "S02-P013",
+          "target_guid": "24ae08ad-a7a1-499a-85c4-65368f6d6dd1",
+          "target_part": "S04-P005",
+          "kind": "PROCESSED_ROD_BBOX",
+          "placement_and_box_residual_mm": 1.8189894035458565e-12,
+          "normalized_serialization_sha256": [
+            "2d3e8e83dde005a27fe1d34155fc41e4171818d6f794c7607105c83ad4b14721",
+            "5a569b237084910b2699d258baa8d1e4937b6472cf24026c81c8ba3c293307d6"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 1.1368683772161603e-12,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 462,
+            "target_count": 462,
+            "max_numeric_residual": 1.8189894035458565e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 1.8189894035458565e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "820d313b-8997-44a8-a1fd-71d585656d84",
+          "source_part": "S02-P014",
+          "target_guid": "5246571a-9854-4e9f-99ca-17b4b4aa1e8f",
+          "target_part": "S04-P009",
+          "kind": "RECTANGULAR_PLATE",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "c6902af92ee662ae6855bf78cd4a267698307277de0968f9887a523fc0198ab7",
+            "b82c8d84c979378ca849e37167d9456ab6341ccbf8f9c00c6db323ffe653b459"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1122,
+            "target_count": 1122,
+            "max_numeric_residual": 0.0,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 0.0,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "8c6aace8-3d1f-48d7-9959-ef4064eaa48b",
+          "source_part": "S02-P015",
+          "target_guid": "a393e599-0044-4692-be0c-9ee3e2a12ec9",
+          "target_part": "S04-P014",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "b56794a21f3c2bc6c05749867665df8bd6ff3eec7232f593c1b8381c97604caa",
+            "d2e8d5b818e418d49270043abae54aaac5216af4a8478a2e3ec9d588ab65b340"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 462,
+            "target_count": 462,
+            "max_numeric_residual": 0.0,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 0.0,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "8f136fdf-139d-40be-9dc0-8f7d6e950b50",
+          "source_part": "S02-P016",
+          "target_guid": "72448f61-3986-4552-9ef3-05ce487fbe86",
+          "target_part": "S04-P012",
+          "kind": "HARDWARE_BY_LAYER",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "baec4ecbe3750c6ea10fb81cea9dcef9a8b36ce200302f9f3ce413d8738faba0",
+            "26812bf5b529c1a0f1713de33838ff377b6febd26d6039cee94c283fad18ddd3"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1342,
+            "target_count": 1342,
+            "max_numeric_residual": 9.734435479913373e-13,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 1.8189894035458565e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "9575265f-dc3c-4e1f-bacd-a8eb1722eeb7",
+          "source_part": "S02-P017",
+          "target_guid": "accb7a94-f36e-48e9-982d-03720e4a28c7",
+          "target_part": "S04-P016",
+          "kind": "HARDWARE_BY_LAYER",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "6cb37effbccd86960a24ca361189b2d95e7178c8bbed477b5e87b1ca44ed578c",
+            "a744fc22dbe7d18594c0ce232682d497986a4937548fa35b9f8ab003e94f7437"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 869,
+            "target_count": 869,
+            "max_numeric_residual": 0.0,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 0.0,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "9ab2c203-8253-44b4-aad7-8cfa730bd9e3",
+          "source_part": "S02-P018",
+          "target_guid": "9102c064-a3b5-4040-b50b-6c313135f042",
+          "target_part": "S04-P013",
+          "kind": "RECTANGULAR_PLATE",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "b4621821f8fb106eaa89845084e7c47f58bdb849a22be3180511ea971ce2bdb9",
+            "7812ed71e293984ece17fb7b5d65dc3a73017973b5d3a92a8ffcb875951b55b3"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 1122,
+            "target_count": 1122,
+            "max_numeric_residual": 0.0,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 0.0,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "ea8b2a9a-7648-4a64-b24c-ce5165a29c6a",
+          "source_part": "S02-P019",
+          "target_guid": "1a70e148-f213-4779-8f34-1824e65bf8f5",
+          "target_part": "S04-P003",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "861c6c673f3221df8ff7a9aa5156aa466c91d717e1a8e094ab40109b7dae23a7",
+            "8fa8188f1601d916ec64b729922c11fc5fbcbf1673649541b5e77c7f56c55d85"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 462,
+            "target_count": 462,
+            "max_numeric_residual": 0.0,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 0.0,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "f08876b9-e4f7-4e02-a679-a761eb18b2d3",
+          "source_part": "S02-P020",
+          "target_guid": "01f42681-08bf-4bb5-9469-631beb1fb0ab",
+          "target_part": "S04-P001",
+          "kind": "UNKNOWN",
+          "placement_and_box_residual_mm": 0.0,
+          "normalized_serialization_sha256": [
+            "0d704a683bad172453d24642555ac87af721d879f971b0ab4b9b44c51651d1c4",
+            "317271056fa8dea96e60b12c2b5f63bf15167362e31bfce07f4776481dea3d45"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 3.637978807091713e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 5082,
+            "target_count": 5082,
+            "max_numeric_residual": 1.98596694644948e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 3.637978807091713e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        },
+        {
+          "source_guid": "f40e6b73-b57a-43e3-9caa-7486642e796a",
+          "source_part": "S02-P021",
+          "target_guid": "dca25deb-f30a-4156-bd5a-50ed637b63ce",
+          "target_part": "S04-P020",
+          "kind": "PROCESSED_ROD_BBOX",
+          "placement_and_box_residual_mm": 7.275957614183426e-12,
+          "normalized_serialization_sha256": [
+            "4dec79702d718806686520ad3d94cf8e6d4216eb260ca1114818b3f2639da7d0",
+            "81b976e92c14c661ca606d50d0b0032ba1a12be74a93ea598a93e65170d82eeb"
+          ],
+          "normalized_serialization_exact": false,
+          "native_checks": {
+            "vertices": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "surfaces": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "edges": {
+              "max_numeric_residual": 1.8189894035458565e-12,
+              "structural_mismatches": []
+            },
+            "topology": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            },
+            "bbox": {
+              "max_numeric_residual": 0.0,
+              "structural_mismatches": []
+            }
+          },
+          "topology_exact": true,
+          "edge_and_untrimmed_surface_samples": {
+            "source_count": 462,
+            "target_count": 462,
+            "max_numeric_residual": 1.9326762412674725e-12,
+            "structural_mismatches": []
+          },
+          "status": "NO_DIFFERENCE_IN_CHECKED_REPRESENTATION",
+          "max_native_numeric_residual": 1.8189894035458565e-12,
+          "trim_limit": "Loop types, trim-edge/vertex indices and reversal flags checked; exact 2D trim curves not exposed by installed rhino3dm. Full trimmed-face equivalence not claimed unless serialization exact."
+        }
+      ],
+      "source_only": [],
+      "target_only": []
+    }
+  ],
+  "extra_by_layer_guids": {
+    "S02": [
+      "407f0039-7276-415e-be08-a953b94793cb",
+      "8f136fdf-139d-40be-9dc0-8f7d6e950b50",
+      "9575265f-dc3c-4e1f-bacd-a8eb1722eeb7"
+    ],
+    "S03": [],
+    "S04": [
+      "72448f61-3986-4552-9ef3-05ce487fbe86",
+      "accb7a94-f36e-48e9-982d-03720e4a28c7",
+      "fa8c57db-670c-41dc-88c7-3ac3375cb8c8"
+    ]
+  },
+  "changed_upper_parts": [
+    {
+      "source_guid": "51038648-3e80-4bd4-95ad-7e9129e71141",
+      "source_part": "S02-P008",
+      "target_guid": "a21d1366-e275-45f0-a0bf-81109c46a904",
+      "target_part": "S03-P014",
+      "pairing_basis": "Unique remaining upper elongated UNKNOWN object of same dominant world axis; comparison correspondence, not historical part identity.",
+      "dominant_axis": "Y",
+      "status": "FORM_DIFFERENCE_PROVEN_AT_COMMON_MODULE_DATUM",
+      "pure_module_translation_excluded": true,
+      "source_native_vertex_extents": {
+        "min": [
+          5.985793025012754,
+          42.30996833030076,
+          1844.9999999998586
+        ],
+        "max": [
+          55.985793025027306,
+          617.4131385624787,
+          1854.999999999794
+        ]
+      },
+      "target_native_vertex_extents": {
+        "min": [
+          5.985793025012754,
+          42.309968330297124,
+          1845.9999999999945
+        ],
+        "max": [
+          55.985793025027306,
+          617.4131385624751,
+          1853.9999999999973
+        ]
+      },
+      "source_counts": {
+        "vertices": 44,
+        "edges": 66,
+        "faces": 24,
+        "solid": true,
+        "valid": true
+      },
+      "target_counts": {
+        "vertices": 32,
+        "edges": 48,
+        "faces": 18,
+        "solid": true,
+        "valid": true
+      },
+      "strongest_witness": {
+        "source_vertex_index": 0,
+        "source_vertex_module_mm": [
+          5.985793025012754,
+          617.4131385624751,
+          1844.9999999998586
+        ],
+        "axis": 2,
+        "outside_target_native_bounding_box_mm": 0.20000000013442332,
+        "target_bbox_module_mm": {
+          "min": [
+            5.985793025012754,
+            38.41047339371947,
+            1845.199999999993
+          ],
+          "max": [
+            59.88528796160401,
+            621.3126334990492,
+            1854.7999999999988
+          ]
+        }
+      },
+      "proof": "An actual source Brep vertex lies outside the complete conservative native target bounding box after alignment using unchanged posts. Thus this is not just a different loose box or display mesh.",
+      "measurement_status_unchanged": "UNKNOWN_UNSUPPORTED_BREP; no stock/part function or manufacturing length promoted."
+    },
+    {
+      "source_guid": "f08876b9-e4f7-4e02-a679-a761eb18b2d3",
+      "source_part": "S02-P020",
+      "target_guid": "59b648cf-9874-449e-9d19-de284f7ff4c7",
+      "target_part": "S03-P010",
+      "pairing_basis": "Unique remaining upper elongated UNKNOWN object of same dominant world axis; comparison correspondence, not historical part identity.",
+      "dominant_axis": "X",
+      "status": "FORM_DIFFERENCE_PROVEN_AT_COMMON_MODULE_DATUM",
+      "pure_module_translation_excluded": true,
+      "source_native_vertex_extents": {
+        "min": [
+          42.30996833028439,
+          5.985793025018211,
+          1844.9999999999977
+        ],
+        "max": [
+          1317.779865416056,
+          55.985793025334715,
+          1855.0000000000032
+        ]
+      },
+      "target_native_vertex_extents": {
+        "min": [
+          42.30996833028439,
+          5.985793025010935,
+          1845.9999999999943
+        ],
+        "max": [
+          1317.779865416056,
+          55.9857930253238,
+          1853.9999999999975
+        ]
+      },
+      "source_counts": {
+        "vertices": 44,
+        "edges": 66,
+        "faces": 24,
+        "solid": true,
+        "valid": true
+      },
+      "target_counts": {
+        "vertices": 32,
+        "edges": 48,
+        "faces": 18,
+        "solid": true,
+        "valid": true
+      },
+      "strongest_witness": {
+        "source_vertex_index": 2,
+        "source_vertex_module_mm": [
+          1317.779865416056,
+          41.98579302534927,
+          1855.0000000000032
+        ],
+        "axis": 2,
+        "outside_target_native_bounding_box_mm": 0.20000000000345608,
+        "target_bbox_module_mm": {
+          "min": [
+            38.41047339371029,
+            5.985793025010935,
+            1845.199999999992
+          ],
+          "max": [
+            1321.6793603528818,
+            59.88528796182328,
+            1854.7999999999997
+          ]
+        }
+      },
+      "proof": "An actual source Brep vertex lies outside the complete conservative native target bounding box after alignment using unchanged posts. Thus this is not just a different loose box or display mesh.",
+      "measurement_status_unchanged": "UNKNOWN_UNSUPPORTED_BREP; no stock/part function or manufacturing length promoted."
+    }
+  ],
+  "comparison_count": 37,
+  "max_native_numeric_residual": 5.4569682106375694e-12,
+  "exact_serialization_pair_count": 0,
+  "confirmed_difference": "Two upper elongated parts have proven form differences between S02/S04 and S03. Additionally three extra CAD geometries on layer KORPUS-VERBINDER occur in selected S02/S04 cores, none in selected S03 core.",
+  "not_proven": [
+    "Three installed connectors or three purchasable items",
+    "Functional interchangeability or assembly/contact correctness",
+    "Full trimmed-face equivalence where exact serialization differs",
+    "Historical/production intention of alternatives",
+    "Absence of this hardware throughout the whole project outside the selected S03 core"
+  ]
+}

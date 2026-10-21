@@ -1,0 +1,29 @@
+{
+  "version": "V0.2",
+  "focus_studies": [
+    "S02",
+    "S03",
+    "S04"
+  ],
+  "focus_objects": 60,
+  "retained_objects_all_studies": 153,
+  "bom_display_rows": 67,
+  "proven_changed_upper_parts": 2,
+  "extra_cad_geometry_counts": {
+    "S02": 3,
+    "S03": 0,
+    "S04": 3
+  },
+  "S02_S04": "21/21 no difference in checked native representation; not full trim equivalence",
+  "S02_S03": "16 unchanged in checked representation, 2 form changes proven, 3 extra layer geometries absent in S03 core",
+  "native_tolerance_mm": 0.001,
+  "baseline_measurements_promoted": false,
+  "new_render_images": 15,
+  "native_profile_images": 2,
+  "one_minute_readability": "UNVERIFIED: no timed independent human/browser test; source/pixel/projection/mapping checks are separate.",
+  "technical_blockers": [
+    "In-app browser policy disallows file-protocol report access. No alternate browser/report workaround used.",
+    "Initial CAD raster process blocked by sandbox; finite existing CAD image tool executed after scoped elevation."
+  ],
+  "not_a_production_or_optimization_report": true
+}

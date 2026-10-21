@@ -1,0 +1,11 @@
+SENCKENBERG Visual Report V0.2
+
+Das ZIP vollständig in einen eigenen Ordner entpacken und START.html lokal öffnen. Kein Rhino und kein Internet nötig. Nicht nur die HTML-Datei aus dem ZIP heraus öffnen.
+
+Befund: S03 hat zwei nachweislich anders geformte obere Teile und keine der drei zusätzlichen KORPUS-VERBINDER-CAD-Geometrien von S02/S04 im ausgewählten Kern. S02/S04: kein Unterschied in den geprüften nativen Darstellungen; vollständige Trim-Identität ist nicht bewiesen.
+
+Die Hauptansicht reduziert technische Angaben und zeigt große, gleich projizierte Rahmenbilder. Die obere Ecke und native Kanten-Endprojektionen zeigen die Unterschiede. Stücklisten enthalten alle Original-GUIDs, V0-Einzelbilder, Mengen und unveränderte Maßstatus.
+
+Ein-Minuten-Lesetest: noch nicht unabhängig gemessen; UNVERIFIED. Das ist kein verpflichtender Fachreview und keine Produktionsfreigabe. Alle technischen Bild-/Objekt-/Mengenzuordnungen werden separat dokumentiert.
+
+Originalmodell, V0 und V0.1 unverändert. Keine .3dm-Dateien, Scanner, Dienste, Datenbanken oder interaktiven Viewer im Paket.

@@ -1,0 +1,33 @@
+{
+  "corrected_parts": [
+    {
+      "part_label": "S01-P028",
+      "original_guid": "5785393d-5128-462a-a3b7-969ad1342bd6",
+      "withdrawn_bbox_physical_length_mm": 1514.2264468067315,
+      "current_sampled_diagonal_proxy_mm": 1302.3628156255645
+    },
+    {
+      "part_label": "S01-P069",
+      "original_guid": "ffcb8d2d-d2e3-4551-b139-82dc29c40c8b",
+      "withdrawn_bbox_physical_length_mm": 1514.2264468067297,
+      "current_sampled_diagonal_proxy_mm": 1302.3628156255627
+    }
+  ],
+  "S01_phi30_proxy_sum_lfm": 5.7070884238544695,
+  "withdrawn_bbox_only_S01_phi30_sum_lfm": 6.3799255928550265,
+  "raw_cut_length_field_correction": "All 31 processed rods moved from raw_cut_length_mm to raw_length_proxy_mm; native geometric blank lengths preserved. All 28 non-diagonal proxies now use sampled native-boundary bbox spans (65/129 refinement) rather than API enclosure spans.",
+  "all_detected_loose_bound_parts": [
+    "S01-P028",
+    "S01-P030",
+    "S01-P034",
+    "S01-P065",
+    "S01-P069",
+    "S02-P009",
+    "S02-P012",
+    "S03-P009",
+    "S03-P018",
+    "S04-P004",
+    "S04-P010"
+  ],
+  "S04_boundary": "One 10-mm-group satellite plate excluded from stable 0.1-mm core, remains ambiguous, not silently dropped."
+}

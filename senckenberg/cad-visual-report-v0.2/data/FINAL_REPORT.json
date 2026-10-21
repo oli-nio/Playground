@@ -1,0 +1,475 @@
+{
+  "status": "COMPLETED_BOUNDED_PILOT_WITH_PARTIAL_GEOMETRY_AND_MATERIAL_RESULTS",
+  "date": "2026-10-21",
+  "source_sha256": "89ba1a6fd1c8a6c8fb22c991e96a581bf663380aed14ecbdbabf3245a5c02a88",
+  "answer": "Yes for spatially plausible module overviews and a verified subset of geometric quantities; no for a fully automatic production-ready material/cut list.",
+  "source_objects": 1800,
+  "physical_geometry_objects": 1686,
+  "reference_or_annotation_objects": 114,
+  "spatial_groups_10mm": 55,
+  "larger_3D_study_candidates": 34,
+  "selected_studies": 5,
+  "selected_cad_objects": 153,
+  "native_dimension_confirmed": 40,
+  "native_straight_rods": 19,
+  "native_rectangular_plates": 18,
+  "other_native_cuboids": 3,
+  "processed_rod_proxies": 31,
+  "sampled_bbox_proxies": 28,
+  "sampled_diagonal_proxies": 3,
+  "proven_oblique_rods": 0,
+  "unknown_nonhardware_objects": 20,
+  "hardware_cad_objects": 62,
+  "detected_loose_API_bbox_longest_spans": 11,
+  "part_isolation_images": 153,
+  "total_images": 160,
+  "study_summaries": [
+    {
+      "study": "S01",
+      "physical_objects": 70,
+      "native_dimension_confirmed_objects": 4,
+      "processed_rod_proxies": 10,
+      "unknown_nonhardware_objects": 0,
+      "hardware_cad_objects": 56,
+      "named_hardware_objects": {
+        "Glasschutz-Klebeband": 7,
+        "M8_Gewundemuffe_DIN7965": 24,
+        "DIN912_M8-30": 12,
+        "Abdeckkappe": 13
+      },
+      "rods": [],
+      "plates": [
+        {
+          "material_hint": "BUCHE_MTPLX_8mm",
+          "material_status": "LAYER_HINT_ONLY",
+          "thickness_mm": 8,
+          "count": 2,
+          "total_area_m2": 1.105210346365639,
+          "parts": [
+            "S01-P004",
+            "S01-P070"
+          ]
+        },
+        {
+          "material_hint": "Glas_ESG_6mm",
+          "material_status": "LAYER_HINT_ONLY",
+          "thickness_mm": 6,
+          "count": 2,
+          "total_area_m2": 2.257085175317392,
+          "parts": [
+            "S01-P055",
+            "S01-P056"
+          ]
+        }
+      ],
+      "rod_raw_proxy_groups": [
+        {
+          "material_hint": "BUHCE_STAB_40mm",
+          "material_status": "LAYER_HINT_ONLY",
+          "nominal_diameter_hint_mm": 40,
+          "count": 4,
+          "raw_proxy_length_sum_lfm": 8.400000000000002,
+          "diagonal_parts": 0,
+          "parts": [
+            "S01-P014",
+            "S01-P021",
+            "S01-P038",
+            "S01-P054"
+          ],
+          "status": "USER_REQUESTED_PROXIES_NOT_EXACT_CUT_OR_AXIS_LENGTH"
+        },
+        {
+          "material_hint": "BUCHE_STAB_30mm",
+          "material_status": "LAYER_HINT_ONLY",
+          "nominal_diameter_hint_mm": 30,
+          "count": 6,
+          "raw_proxy_length_sum_lfm": 5.7070884238544695,
+          "diagonal_parts": 3,
+          "parts": [
+            "S01-P024",
+            "S01-P028",
+            "S01-P030",
+            "S01-P034",
+            "S01-P065",
+            "S01-P069"
+          ],
+          "status": "USER_REQUESTED_PROXIES_NOT_EXACT_CUT_OR_AXIS_LENGTH"
+        }
+      ],
+      "completeness": "PARTIAL_MATERIAL_AND_GEOMETRY_GAPS_REMAIN",
+      "production_quantity": null,
+      "do_not_sum_as_production": true
+    },
+    {
+      "study": "S02",
+      "physical_objects": 21,
+      "native_dimension_confirmed_objects": 9,
+      "processed_rod_proxies": 5,
+      "unknown_nonhardware_objects": 4,
+      "hardware_cad_objects": 3,
+      "named_hardware_objects": {
+        "KORPUS-VERBINDER": 3
+      },
+      "rods": [
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "diameter_mm": 30,
+          "count": 2,
+          "total_length_lfm": 2.604034487884972,
+          "parts": [
+            "S02-P002",
+            "S02-P015"
+          ]
+        },
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "diameter_mm": 39.999999999992724,
+          "count": 3,
+          "total_length_lfm": 6.0,
+          "parts": [
+            "S02-P004",
+            "S02-P011",
+            "S02-P019"
+          ]
+        }
+      ],
+      "plates": [
+        {
+          "material_hint": "Ebene 01",
+          "material_status": "MATERIAL_UNKNOWN",
+          "thickness_mm": 8,
+          "count": 2,
+          "total_area_m2": 2.043493971161852,
+          "parts": [
+            "S02-P001",
+            "S02-P018"
+          ]
+        },
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "thickness_mm": 8,
+          "count": 2,
+          "total_area_m2": 1.0597956925825778,
+          "parts": [
+            "S02-P003",
+            "S02-P014"
+          ]
+        }
+      ],
+      "rod_raw_proxy_groups": [
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "nominal_diameter_hint_mm": 30,
+          "count": 4,
+          "raw_proxy_length_sum_lfm": 3.108068975769993,
+          "diagonal_parts": 0,
+          "parts": [
+            "S02-P005",
+            "S02-P009",
+            "S02-P012",
+            "S02-P013"
+          ],
+          "status": "USER_REQUESTED_PROXIES_NOT_EXACT_CUT_OR_AXIS_LENGTH"
+        },
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "nominal_diameter_hint_mm": 40,
+          "count": 1,
+          "raw_proxy_length_sum_lfm": 2.0000000000000004,
+          "diagonal_parts": 0,
+          "parts": [
+            "S02-P021"
+          ],
+          "status": "USER_REQUESTED_PROXIES_NOT_EXACT_CUT_OR_AXIS_LENGTH"
+        }
+      ],
+      "completeness": "PARTIAL_MATERIAL_AND_GEOMETRY_GAPS_REMAIN",
+      "production_quantity": null,
+      "do_not_sum_as_production": true
+    },
+    {
+      "study": "S03",
+      "physical_objects": 18,
+      "native_dimension_confirmed_objects": 9,
+      "processed_rod_proxies": 5,
+      "unknown_nonhardware_objects": 4,
+      "hardware_cad_objects": 0,
+      "named_hardware_objects": {},
+      "rods": [
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "diameter_mm": 39.999999999992724,
+          "count": 3,
+          "total_length_lfm": 6.0,
+          "parts": [
+            "S03-P001",
+            "S03-P004",
+            "S03-P008"
+          ]
+        },
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "diameter_mm": 30,
+          "count": 2,
+          "total_length_lfm": 2.604034487884972,
+          "parts": [
+            "S03-P011",
+            "S03-P013"
+          ]
+        }
+      ],
+      "plates": [
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "thickness_mm": 8,
+          "count": 2,
+          "total_area_m2": 1.0597956925825778,
+          "parts": [
+            "S03-P003",
+            "S03-P007"
+          ]
+        },
+        {
+          "material_hint": "Ebene 01",
+          "material_status": "MATERIAL_UNKNOWN",
+          "thickness_mm": 8,
+          "count": 2,
+          "total_area_m2": 2.043493971161852,
+          "parts": [
+            "S03-P006",
+            "S03-P015"
+          ]
+        }
+      ],
+      "rod_raw_proxy_groups": [
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "nominal_diameter_hint_mm": 30,
+          "count": 4,
+          "raw_proxy_length_sum_lfm": 3.108068975769982,
+          "diagonal_parts": 0,
+          "parts": [
+            "S03-P009",
+            "S03-P012",
+            "S03-P016",
+            "S03-P018"
+          ],
+          "status": "USER_REQUESTED_PROXIES_NOT_EXACT_CUT_OR_AXIS_LENGTH"
+        },
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "nominal_diameter_hint_mm": 40,
+          "count": 1,
+          "raw_proxy_length_sum_lfm": 2.0000000000000004,
+          "diagonal_parts": 0,
+          "parts": [
+            "S03-P017"
+          ],
+          "status": "USER_REQUESTED_PROXIES_NOT_EXACT_CUT_OR_AXIS_LENGTH"
+        }
+      ],
+      "completeness": "PARTIAL_MATERIAL_AND_GEOMETRY_GAPS_REMAIN",
+      "production_quantity": null,
+      "do_not_sum_as_production": true
+    },
+    {
+      "study": "S04",
+      "physical_objects": 21,
+      "native_dimension_confirmed_objects": 9,
+      "processed_rod_proxies": 5,
+      "unknown_nonhardware_objects": 4,
+      "hardware_cad_objects": 3,
+      "named_hardware_objects": {
+        "KORPUS-VERBINDER": 3
+      },
+      "rods": [
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "diameter_mm": 39.999999999992724,
+          "count": 3,
+          "total_length_lfm": 6.0,
+          "parts": [
+            "S04-P003",
+            "S04-P017",
+            "S04-P019"
+          ]
+        },
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "diameter_mm": 30,
+          "count": 2,
+          "total_length_lfm": 2.604034487884972,
+          "parts": [
+            "S04-P008",
+            "S04-P014"
+          ]
+        }
+      ],
+      "plates": [
+        {
+          "material_hint": "Ebene 01",
+          "material_status": "MATERIAL_UNKNOWN",
+          "thickness_mm": 8,
+          "count": 2,
+          "total_area_m2": 2.043493971161852,
+          "parts": [
+            "S04-P007",
+            "S04-P013"
+          ]
+        },
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "thickness_mm": 8,
+          "count": 2,
+          "total_area_m2": 1.0597956925825778,
+          "parts": [
+            "S04-P009",
+            "S04-P018"
+          ]
+        }
+      ],
+      "rod_raw_proxy_groups": [
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "nominal_diameter_hint_mm": 30,
+          "count": 4,
+          "raw_proxy_length_sum_lfm": 3.1080689757699784,
+          "diagonal_parts": 0,
+          "parts": [
+            "S04-P002",
+            "S04-P004",
+            "S04-P005",
+            "S04-P010"
+          ],
+          "status": "USER_REQUESTED_PROXIES_NOT_EXACT_CUT_OR_AXIS_LENGTH"
+        },
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "nominal_diameter_hint_mm": 40,
+          "count": 1,
+          "raw_proxy_length_sum_lfm": 2.0000000000000004,
+          "diagonal_parts": 0,
+          "parts": [
+            "S04-P020"
+          ],
+          "status": "USER_REQUESTED_PROXIES_NOT_EXACT_CUT_OR_AXIS_LENGTH"
+        }
+      ],
+      "completeness": "PARTIAL_MATERIAL_AND_GEOMETRY_GAPS_REMAIN",
+      "production_quantity": null,
+      "do_not_sum_as_production": true
+    },
+    {
+      "study": "S05",
+      "physical_objects": 23,
+      "native_dimension_confirmed_objects": 9,
+      "processed_rod_proxies": 6,
+      "unknown_nonhardware_objects": 8,
+      "hardware_cad_objects": 0,
+      "named_hardware_objects": {},
+      "rods": [
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "diameter_mm": 40,
+          "count": 4,
+          "total_length_lfm": 0.4,
+          "parts": [
+            "S05-P003",
+            "S05-P011",
+            "S05-P017",
+            "S05-P020"
+          ]
+        }
+      ],
+      "plates": [
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "thickness_mm": 16,
+          "count": 1,
+          "total_area_m2": 0.859104,
+          "parts": [
+            "S05-P016"
+          ]
+        },
+        {
+          "material_hint": "Ebene 01",
+          "material_status": "MATERIAL_UNKNOWN",
+          "thickness_mm": 8,
+          "count": 1,
+          "total_area_m2": 0.8872439999999975,
+          "parts": [
+            "S05-P023"
+          ]
+        }
+      ],
+      "rod_raw_proxy_groups": [
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "nominal_diameter_hint_mm": 30,
+          "count": 2,
+          "raw_proxy_length_sum_lfm": 1.35813709963817,
+          "diagonal_parts": 0,
+          "parts": [
+            "S05-P002",
+            "S05-P004"
+          ],
+          "status": "USER_REQUESTED_PROXIES_NOT_EXACT_CUT_OR_AXIS_LENGTH"
+        },
+        {
+          "material_hint": "Default",
+          "material_status": "MATERIAL_UNKNOWN",
+          "nominal_diameter_hint_mm": 40,
+          "count": 4,
+          "raw_proxy_length_sum_lfm": 3.000000000000001,
+          "diagonal_parts": 0,
+          "parts": [
+            "S05-P005",
+            "S05-P006",
+            "S05-P007",
+            "S05-P012"
+          ],
+          "status": "USER_REQUESTED_PROXIES_NOT_EXACT_CUT_OR_AXIS_LENGTH"
+        }
+      ],
+      "completeness": "PARTIAL_MATERIAL_AND_GEOMETRY_GAPS_REMAIN",
+      "production_quantity": null,
+      "do_not_sum_as_production": true
+    }
+  ],
+  "optimizer_status": "STOP_INCONCLUSIVE",
+  "manual_Rhino_baseline": "NOT_AVAILABLE",
+  "boundary_corrections": 1,
+  "checks": {
+    "native_primitive_second_method": "PASS",
+    "source_and_old_baselines": "PASS",
+    "mesh_nonempty": "PASS",
+    "csv_actual_file_readback": "PASS",
+    "spreadsheet_tool_import": "PASS"
+  },
+  "limits": [
+    "Spatial groups are not confirmed semantic modules or physical contacts.",
+    "Material is layer hint only or unknown. Alternatives are never summed as production.",
+    "Processed rod lengths are sampled proxies, not certified axial/raw cut dimensions.",
+    "No existing cut optimizer available in the bounded checks; optimization not executed.",
+    "No persistent interactive 3D frontend, manual Rhino baseline or production integration."
+  ],
+  "recommendation": "Use source-bound study/part pictures and separate quantity confidence for variant comparison. Do not expand into general Brep/ACIS, a new nesting engine or automatic workplanning."
+}

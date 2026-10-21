@@ -1,0 +1,1499 @@
+{
+  "version": "V0.1",
+  "source_sha256": "89ba1a6fd1c8a6c8fb22c991e96a581bf663380aed14ecbdbabf3245a5c02a88",
+  "cards": [
+    {
+      "study": "S01",
+      "title": "Vitrine mit Materialhinweisen",
+      "spatial_group_id": "G03",
+      "guids": [
+        "013c37eb-7140-48b8-8807-a4d27bfece90",
+        "0197f36a-4eb1-40ec-b061-891b0d61e45c",
+        "01af0d4c-ed23-4f04-b07e-ada803670581",
+        "059a6e64-5611-4745-bdcf-87a575dbc79b",
+        "05f71441-2427-41fc-91c2-703c7b7d35db",
+        "0912d1a7-d84a-49f2-80e3-40f9a44f671c",
+        "1192bc51-dcc5-4898-ae1d-d9ae668b6978",
+        "13583016-8a9c-405b-979f-ed9ffbaa1c11",
+        "14f7a561-ffe2-47f2-9f31-9ee7ad92805e",
+        "19804e18-aa05-4327-a542-b36bb75014af",
+        "1b1987d4-d741-4aad-8b04-dcb2fb63a760",
+        "1d4c6e17-8244-42ce-a903-2458bd4ac592",
+        "1d7e4ba2-5bf8-450e-bf57-2c468dcd7061",
+        "1ead16fa-7951-4edd-9d46-9e327e629afe",
+        "20b02f3c-acda-4a68-b9f6-db9ab0028ee5",
+        "2781176b-d30a-465d-8da1-a3f9231d9ccd",
+        "29b6e052-c015-456e-99b5-b038e700439e",
+        "2bf5643d-ef90-4f6f-aca8-c40dd37e2737",
+        "2cbac45f-54e2-4ed4-a1aa-4b938e3b952a",
+        "337d9506-e84f-462e-9a7f-09d4997f85fe",
+        "3656e979-a93e-41bc-94d7-8c18e402f4c0",
+        "374629b4-2027-4dc0-900b-8876340fbb6b",
+        "3af0aa1b-99fe-4273-b163-0c17c6fca75a",
+        "41eee5f5-c6fa-4f5d-9abe-798f5d99f25b",
+        "45c3c3e5-e9aa-4485-bcfb-51676561f325",
+        "48f4f09c-cdfb-461c-af5e-f158179cb451",
+        "4f5fbe73-3140-4456-8f0e-f0cb1af221fb",
+        "5785393d-5128-462a-a3b7-969ad1342bd6",
+        "59959240-0155-485f-9cc6-254a280e06be",
+        "59c67b3d-ed56-4fb2-b565-cc1abd8d0cf0",
+        "5ab25b92-4858-42d8-afe8-6d39f6025b0d",
+        "5c971636-84ef-460c-ab44-cd1c8b8ddb64",
+        "600cceae-5398-4318-b94f-8ed514415cd6",
+        "6d5a6bc6-c61f-4b7f-92ee-b6954b9f7640",
+        "6e0adccf-dbab-4ac1-9e59-023f35c31fc0",
+        "6fcfdcb0-2ca6-4e7b-91bc-eb0075a7e359",
+        "7e9d84cb-23b3-4f38-a1d4-9a8239911465",
+        "7f40d1be-aa51-4268-a2f9-20eb8431e4b3",
+        "839d5b88-4291-48eb-aca4-bc6b57d49f93",
+        "85caebf0-3a74-456c-8344-3a16a887e381",
+        "86740115-6cf5-4999-9d37-a4ed3d6040cd",
+        "87c2095c-a0ff-43ab-afe3-ba900290b13e",
+        "89387961-ca72-45e6-9484-e723cdf2d87d",
+        "8c22dc40-18b0-4fe6-a989-a45e8e042027",
+        "9acc089f-52f5-42ac-bca9-84aec08b328b",
+        "9cf819bf-d43b-4e3e-9c1d-80dc79d281ec",
+        "9e8c1b36-c660-40d5-a382-6f5630eb8a5b",
+        "a5e11eb2-8278-4ae3-9b96-5c739a7a2d4d",
+        "ac7c3fa7-4bdb-4fe6-85b0-8830e596c850",
+        "b0d955fb-d74f-40c6-bafa-253bf9e223aa",
+        "b1fb4c05-0f32-43ea-8442-5a73ab343892",
+        "bc9cf64d-3a0b-4976-b7c8-e2cdd12bb478",
+        "c2d6200f-f400-4f20-9d07-c2959f405aa9",
+        "c5398de1-4500-4f57-8b61-33aedb569755",
+        "c5c9ca65-56eb-4c39-b204-5b71708ce7f4",
+        "c9c7fa44-04fa-4cc9-9c44-def94f832a22",
+        "cc0535cc-3e86-4629-ac0e-c836b9aaa612",
+        "cd36aa9f-1fe3-471f-b941-63bd756aee41",
+        "ce784795-691a-4624-ab68-75f8db82ab9c",
+        "d31d6057-d7c4-4977-80c9-f7882e02e69d",
+        "d4c1f571-1f7a-45f8-98b4-0a718655e4be",
+        "d854fada-2ddc-4d3f-8957-f6c8efd636c6",
+        "e47f50dc-8841-4cb0-bbbf-3caed22127e3",
+        "e664b66f-ee27-4f0a-b9c7-a3833aa859c6",
+        "ed6efb92-75d4-4d51-ab63-d274c02b17af",
+        "f491cf67-ec1f-41cb-9a73-6ea77479f17f",
+        "fc482b1f-a9fe-4057-b2c9-6e53be13fef5",
+        "ffba1971-64fa-4fb3-9e5f-2ceadb094388",
+        "ffcb8d2d-d2e3-4551-b139-82dc29c40c8b",
+        "ffdf1c81-6ac0-445d-828b-22aa55940ac1"
+      ],
+      "ambiguous_satellite_guids": [],
+      "part_count": 70,
+      "bom_groups": [
+        {
+          "id": "S01-B01",
+          "number": "01",
+          "kind": "PROCESSED_ROD_BBOX",
+          "measurement_status": "USER_ACCEPTED_BBOX_PROXY",
+          "material_hint": "BUCHE_STAB_30mm",
+          "count": 3,
+          "part_labels": [
+            "S01-P030",
+            "S01-P034",
+            "S01-P065"
+          ],
+          "guids": [
+            "59c67b3d-ed56-4fb2-b565-cc1abd8d0cf0",
+            "6d5a6bc6-c61f-4b7f-92ee-b6954b9f7640",
+            "ed6efb92-75d4-4d51-ab63-d274c02b17af"
+          ],
+          "example_part": "S01-P030",
+          "image_file": "images/S01-P030.png"
+        },
+        {
+          "id": "S01-B02",
+          "number": "02",
+          "kind": "PROCESSED_ROD_BBOX",
+          "measurement_status": "USER_ACCEPTED_DIAGONAL_PROXY",
+          "material_hint": "BUCHE_STAB_30mm",
+          "count": 3,
+          "part_labels": [
+            "S01-P024",
+            "S01-P028",
+            "S01-P069"
+          ],
+          "guids": [
+            "41eee5f5-c6fa-4f5d-9abe-798f5d99f25b",
+            "5785393d-5128-462a-a3b7-969ad1342bd6",
+            "ffcb8d2d-d2e3-4551-b139-82dc29c40c8b"
+          ],
+          "example_part": "S01-P024",
+          "image_file": "images/S01-P024.png"
+        },
+        {
+          "id": "S01-B03",
+          "number": "03",
+          "kind": "PROCESSED_ROD_BBOX",
+          "measurement_status": "USER_ACCEPTED_BBOX_PROXY",
+          "material_hint": "BUHCE_STAB_40mm",
+          "count": 4,
+          "part_labels": [
+            "S01-P014",
+            "S01-P021",
+            "S01-P038",
+            "S01-P054"
+          ],
+          "guids": [
+            "1ead16fa-7951-4edd-9d46-9e327e629afe",
+            "3656e979-a93e-41bc-94d7-8c18e402f4c0",
+            "7f40d1be-aa51-4268-a2f9-20eb8431e4b3",
+            "c5398de1-4500-4f57-8b61-33aedb569755"
+          ],
+          "example_part": "S01-P014",
+          "image_file": "images/S01-P014.png"
+        },
+        {
+          "id": "S01-B04",
+          "number": "04",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "BUCHE_MTPLX_8mm",
+          "count": 1,
+          "part_labels": [
+            "S01-P004"
+          ],
+          "guids": [
+            "059a6e64-5611-4745-bdcf-87a575dbc79b"
+          ],
+          "example_part": "S01-P004",
+          "image_file": "images/S01-P004.png"
+        },
+        {
+          "id": "S01-B05",
+          "number": "05",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "BUCHE_MTPLX_8mm",
+          "count": 1,
+          "part_labels": [
+            "S01-P070"
+          ],
+          "guids": [
+            "ffdf1c81-6ac0-445d-828b-22aa55940ac1"
+          ],
+          "example_part": "S01-P070",
+          "image_file": "images/S01-P070.png"
+        },
+        {
+          "id": "S01-B06",
+          "number": "06",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Glas_ESG_6mm",
+          "count": 1,
+          "part_labels": [
+            "S01-P056"
+          ],
+          "guids": [
+            "c9c7fa44-04fa-4cc9-9c44-def94f832a22"
+          ],
+          "example_part": "S01-P056",
+          "image_file": "images/S01-P056.png"
+        },
+        {
+          "id": "S01-B07",
+          "number": "07",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Glas_ESG_6mm",
+          "count": 1,
+          "part_labels": [
+            "S01-P055"
+          ],
+          "guids": [
+            "c5c9ca65-56eb-4c39-b204-5b71708ce7f4"
+          ],
+          "example_part": "S01-P055",
+          "image_file": "images/S01-P055.png"
+        },
+        {
+          "id": "S01-B08",
+          "number": "08",
+          "kind": "HARDWARE_BY_LAYER",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Abdeckkappe",
+          "count": 13,
+          "part_labels": [
+            "S01-P010",
+            "S01-P016",
+            "S01-P020",
+            "S01-P023",
+            "S01-P029",
+            "S01-P033",
+            "S01-P035",
+            "S01-P036",
+            "S01-P047",
+            "S01-P048",
+            "S01-P051",
+            "S01-P053",
+            "S01-P058"
+          ],
+          "guids": [
+            "19804e18-aa05-4327-a542-b36bb75014af",
+            "2781176b-d30a-465d-8da1-a3f9231d9ccd",
+            "337d9506-e84f-462e-9a7f-09d4997f85fe",
+            "3af0aa1b-99fe-4273-b163-0c17c6fca75a",
+            "59959240-0155-485f-9cc6-254a280e06be",
+            "600cceae-5398-4318-b94f-8ed514415cd6",
+            "6e0adccf-dbab-4ac1-9e59-023f35c31fc0",
+            "6fcfdcb0-2ca6-4e7b-91bc-eb0075a7e359",
+            "9e8c1b36-c660-40d5-a382-6f5630eb8a5b",
+            "a5e11eb2-8278-4ae3-9b96-5c739a7a2d4d",
+            "b1fb4c05-0f32-43ea-8442-5a73ab343892",
+            "c2d6200f-f400-4f20-9d07-c2959f405aa9",
+            "cd36aa9f-1fe3-471f-b941-63bd756aee41"
+          ],
+          "example_part": "S01-P010",
+          "image_file": "images/S01-P010.png"
+        },
+        {
+          "id": "S01-B09",
+          "number": "09",
+          "kind": "HARDWARE_BY_LAYER",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "DIN912_M8-30",
+          "count": 12,
+          "part_labels": [
+            "S01-P005",
+            "S01-P006",
+            "S01-P007",
+            "S01-P008",
+            "S01-P009",
+            "S01-P018",
+            "S01-P037",
+            "S01-P041",
+            "S01-P042",
+            "S01-P050",
+            "S01-P063",
+            "S01-P068"
+          ],
+          "guids": [
+            "05f71441-2427-41fc-91c2-703c7b7d35db",
+            "0912d1a7-d84a-49f2-80e3-40f9a44f671c",
+            "1192bc51-dcc5-4898-ae1d-d9ae668b6978",
+            "13583016-8a9c-405b-979f-ed9ffbaa1c11",
+            "14f7a561-ffe2-47f2-9f31-9ee7ad92805e",
+            "2bf5643d-ef90-4f6f-aca8-c40dd37e2737",
+            "7e9d84cb-23b3-4f38-a1d4-9a8239911465",
+            "86740115-6cf5-4999-9d37-a4ed3d6040cd",
+            "87c2095c-a0ff-43ab-afe3-ba900290b13e",
+            "b0d955fb-d74f-40c6-bafa-253bf9e223aa",
+            "e47f50dc-8841-4cb0-bbbf-3caed22127e3",
+            "ffba1971-64fa-4fb3-9e5f-2ceadb094388"
+          ],
+          "example_part": "S01-P005",
+          "image_file": "images/S01-P005.png"
+        },
+        {
+          "id": "S01-B10",
+          "number": "10",
+          "kind": "HARDWARE_BY_LAYER",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Glasschutz-Klebeband",
+          "count": 7,
+          "part_labels": [
+            "S01-P001",
+            "S01-P025",
+            "S01-P026",
+            "S01-P032",
+            "S01-P049",
+            "S01-P060",
+            "S01-P061"
+          ],
+          "guids": [
+            "013c37eb-7140-48b8-8807-a4d27bfece90",
+            "45c3c3e5-e9aa-4485-bcfb-51676561f325",
+            "48f4f09c-cdfb-461c-af5e-f158179cb451",
+            "5c971636-84ef-460c-ab44-cd1c8b8ddb64",
+            "ac7c3fa7-4bdb-4fe6-85b0-8830e596c850",
+            "d31d6057-d7c4-4977-80c9-f7882e02e69d",
+            "d4c1f571-1f7a-45f8-98b4-0a718655e4be"
+          ],
+          "example_part": "S01-P001",
+          "image_file": "images/S01-P001.png"
+        },
+        {
+          "id": "S01-B11",
+          "number": "11",
+          "kind": "HARDWARE_BY_LAYER",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "M8_Gewundemuffe_DIN7965",
+          "count": 24,
+          "part_labels": [
+            "S01-P002",
+            "S01-P003",
+            "S01-P011",
+            "S01-P012",
+            "S01-P013",
+            "S01-P015",
+            "S01-P017",
+            "S01-P019",
+            "S01-P022",
+            "S01-P027",
+            "S01-P031",
+            "S01-P039",
+            "S01-P040",
+            "S01-P043",
+            "S01-P044",
+            "S01-P045",
+            "S01-P046",
+            "S01-P052",
+            "S01-P057",
+            "S01-P059",
+            "S01-P062",
+            "S01-P064",
+            "S01-P066",
+            "S01-P067"
+          ],
+          "guids": [
+            "0197f36a-4eb1-40ec-b061-891b0d61e45c",
+            "01af0d4c-ed23-4f04-b07e-ada803670581",
+            "1b1987d4-d741-4aad-8b04-dcb2fb63a760",
+            "1d4c6e17-8244-42ce-a903-2458bd4ac592",
+            "1d7e4ba2-5bf8-450e-bf57-2c468dcd7061",
+            "20b02f3c-acda-4a68-b9f6-db9ab0028ee5",
+            "29b6e052-c015-456e-99b5-b038e700439e",
+            "2cbac45f-54e2-4ed4-a1aa-4b938e3b952a",
+            "374629b4-2027-4dc0-900b-8876340fbb6b",
+            "4f5fbe73-3140-4456-8f0e-f0cb1af221fb",
+            "5ab25b92-4858-42d8-afe8-6d39f6025b0d",
+            "839d5b88-4291-48eb-aca4-bc6b57d49f93",
+            "85caebf0-3a74-456c-8344-3a16a887e381",
+            "89387961-ca72-45e6-9484-e723cdf2d87d",
+            "8c22dc40-18b0-4fe6-a989-a45e8e042027",
+            "9acc089f-52f5-42ac-bca9-84aec08b328b",
+            "9cf819bf-d43b-4e3e-9c1d-80dc79d281ec",
+            "bc9cf64d-3a0b-4976-b7c8-e2cdd12bb478",
+            "cc0535cc-3e86-4629-ac0e-c836b9aaa612",
+            "ce784795-691a-4624-ab68-75f8db82ab9c",
+            "d854fada-2ddc-4d3f-8957-f6c8efd636c6",
+            "e664b66f-ee27-4f0a-b9c7-a3833aa859c6",
+            "f491cf67-ec1f-41cb-9a73-6ea77479f17f",
+            "fc482b1f-a9fe-4057-b2c9-6e53be13fef5"
+          ],
+          "example_part": "S01-P002",
+          "image_file": "images/S01-P002.png"
+        }
+      ],
+      "comparison_group": null,
+      "counts": {
+        "HARDWARE_BY_LAYER": 56,
+        "RECTANGULAR_PLATE": 4,
+        "PROCESSED_ROD_BBOX": 10
+      }
+    },
+    {
+      "study": "S02",
+      "title": "Rahmenvariante A",
+      "spatial_group_id": "G05",
+      "guids": [
+        "162e8589-5cae-4ba8-af14-780e7ed16964",
+        "201d9dc1-d68a-42b5-be96-ecc9ab58ddeb",
+        "211fac58-9c9b-4900-a24c-0fd3a9ef7f22",
+        "2c15516e-85cf-4585-adfa-cbadac92645c",
+        "304ca5b2-295b-477e-8b09-c019d802982a",
+        "407f0039-7276-415e-be08-a953b94793cb",
+        "45c1f18c-f25e-45d1-ad77-7ae0bbd91a7b",
+        "51038648-3e80-4bd4-95ad-7e9129e71141",
+        "59787ede-5ca9-4a04-854e-f15e639a0c11",
+        "6117d509-66c8-4dcc-bd41-23e00e2c86cf",
+        "62b153ea-21ce-40a7-8d5c-a095b5669f94",
+        "77536d7c-3285-4ed8-9daf-bd864131f202",
+        "7c982821-9c48-466d-983b-0226aa386ac2",
+        "820d313b-8997-44a8-a1fd-71d585656d84",
+        "8c6aace8-3d1f-48d7-9959-ef4064eaa48b",
+        "8f136fdf-139d-40be-9dc0-8f7d6e950b50",
+        "9575265f-dc3c-4e1f-bacd-a8eb1722eeb7",
+        "9ab2c203-8253-44b4-aad7-8cfa730bd9e3",
+        "ea8b2a9a-7648-4a64-b24c-ce5165a29c6a",
+        "f08876b9-e4f7-4e02-a679-a761eb18b2d3",
+        "f40e6b73-b57a-43e3-9caa-7486642e796a"
+      ],
+      "ambiguous_satellite_guids": [],
+      "part_count": 21,
+      "bom_groups": [
+        {
+          "id": "S02-B01",
+          "number": "01",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Default",
+          "count": 2,
+          "part_labels": [
+            "S02-P002",
+            "S02-P015"
+          ],
+          "guids": [
+            "201d9dc1-d68a-42b5-be96-ecc9ab58ddeb",
+            "8c6aace8-3d1f-48d7-9959-ef4064eaa48b"
+          ],
+          "example_part": "S02-P002",
+          "image_file": "images/S02-P002.png"
+        },
+        {
+          "id": "S02-B02",
+          "number": "02",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Default",
+          "count": 3,
+          "part_labels": [
+            "S02-P004",
+            "S02-P011",
+            "S02-P019"
+          ],
+          "guids": [
+            "2c15516e-85cf-4585-adfa-cbadac92645c",
+            "62b153ea-21ce-40a7-8d5c-a095b5669f94",
+            "ea8b2a9a-7648-4a64-b24c-ce5165a29c6a"
+          ],
+          "example_part": "S02-P004",
+          "image_file": "images/S02-P004.png"
+        },
+        {
+          "id": "S02-B03",
+          "number": "03",
+          "kind": "PROCESSED_ROD_BBOX",
+          "measurement_status": "USER_ACCEPTED_BBOX_PROXY",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S02-P012"
+          ],
+          "guids": [
+            "77536d7c-3285-4ed8-9daf-bd864131f202"
+          ],
+          "example_part": "S02-P012",
+          "image_file": "images/S02-P012.png"
+        },
+        {
+          "id": "S02-B04",
+          "number": "04",
+          "kind": "PROCESSED_ROD_BBOX",
+          "measurement_status": "USER_ACCEPTED_BBOX_PROXY",
+          "material_hint": "Default",
+          "count": 3,
+          "part_labels": [
+            "S02-P005",
+            "S02-P009",
+            "S02-P013"
+          ],
+          "guids": [
+            "304ca5b2-295b-477e-8b09-c019d802982a",
+            "59787ede-5ca9-4a04-854e-f15e639a0c11",
+            "7c982821-9c48-466d-983b-0226aa386ac2"
+          ],
+          "example_part": "S02-P005",
+          "image_file": "images/S02-P005.png"
+        },
+        {
+          "id": "S02-B05",
+          "number": "05",
+          "kind": "PROCESSED_ROD_BBOX",
+          "measurement_status": "USER_ACCEPTED_BBOX_PROXY",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S02-P021"
+          ],
+          "guids": [
+            "f40e6b73-b57a-43e3-9caa-7486642e796a"
+          ],
+          "example_part": "S02-P021",
+          "image_file": "images/S02-P021.png"
+        },
+        {
+          "id": "S02-B06",
+          "number": "06",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S02-P014"
+          ],
+          "guids": [
+            "820d313b-8997-44a8-a1fd-71d585656d84"
+          ],
+          "example_part": "S02-P014",
+          "image_file": "images/S02-P014.png"
+        },
+        {
+          "id": "S02-B07",
+          "number": "07",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S02-P003"
+          ],
+          "guids": [
+            "211fac58-9c9b-4900-a24c-0fd3a9ef7f22"
+          ],
+          "example_part": "S02-P003",
+          "image_file": "images/S02-P003.png"
+        },
+        {
+          "id": "S02-B08",
+          "number": "08",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Ebene 01",
+          "count": 1,
+          "part_labels": [
+            "S02-P001"
+          ],
+          "guids": [
+            "162e8589-5cae-4ba8-af14-780e7ed16964"
+          ],
+          "example_part": "S02-P001",
+          "image_file": "images/S02-P001.png"
+        },
+        {
+          "id": "S02-B09",
+          "number": "09",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Ebene 01",
+          "count": 1,
+          "part_labels": [
+            "S02-P018"
+          ],
+          "guids": [
+            "9ab2c203-8253-44b4-aad7-8cfa730bd9e3"
+          ],
+          "example_part": "S02-P018",
+          "image_file": "images/S02-P018.png"
+        },
+        {
+          "id": "S02-B10",
+          "number": "10",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S02-P007"
+          ],
+          "guids": [
+            "45c1f18c-f25e-45d1-ad77-7ae0bbd91a7b"
+          ],
+          "example_part": "S02-P007",
+          "image_file": "images/S02-P007.png"
+        },
+        {
+          "id": "S02-B11",
+          "number": "11",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S02-P008"
+          ],
+          "guids": [
+            "51038648-3e80-4bd4-95ad-7e9129e71141"
+          ],
+          "example_part": "S02-P008",
+          "image_file": "images/S02-P008.png"
+        },
+        {
+          "id": "S02-B12",
+          "number": "12",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S02-P010"
+          ],
+          "guids": [
+            "6117d509-66c8-4dcc-bd41-23e00e2c86cf"
+          ],
+          "example_part": "S02-P010",
+          "image_file": "images/S02-P010.png"
+        },
+        {
+          "id": "S02-B13",
+          "number": "13",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S02-P020"
+          ],
+          "guids": [
+            "f08876b9-e4f7-4e02-a679-a761eb18b2d3"
+          ],
+          "example_part": "S02-P020",
+          "image_file": "images/S02-P020.png"
+        },
+        {
+          "id": "S02-B14",
+          "number": "14",
+          "kind": "HARDWARE_BY_LAYER",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "KORPUS-VERBINDER",
+          "count": 3,
+          "part_labels": [
+            "S02-P006",
+            "S02-P016",
+            "S02-P017"
+          ],
+          "guids": [
+            "407f0039-7276-415e-be08-a953b94793cb",
+            "8f136fdf-139d-40be-9dc0-8f7d6e950b50",
+            "9575265f-dc3c-4e1f-bacd-a8eb1722eeb7"
+          ],
+          "example_part": "S02-P006",
+          "image_file": "images/S02-P006.png"
+        }
+      ],
+      "comparison_group": "S02_S03_S04",
+      "counts": {
+        "RECTANGULAR_PLATE": 4,
+        "STRAIGHT_ROUND_STOCK": 5,
+        "PROCESSED_ROD_BBOX": 5,
+        "HARDWARE_BY_LAYER": 3,
+        "UNKNOWN": 4
+      }
+    },
+    {
+      "study": "S03",
+      "title": "Rahmenvariante B",
+      "spatial_group_id": "G07",
+      "guids": [
+        "0686988b-03ab-40e5-b536-5c69472f6a32",
+        "0822b7b2-7a59-43a9-b204-a79e1b32c924",
+        "149c6fbb-58f3-42b8-a257-b2300b296b63",
+        "3a64285b-bf71-4a8f-b962-154af6c5fd94",
+        "3dec3e66-20e1-45bf-bac9-cc490cc6d7da",
+        "407a2c10-c352-49fc-8818-203dd2e5df6a",
+        "49bc8931-e1bb-4e41-9036-0a9cbf365862",
+        "4e30559b-c108-4a8b-aab4-ab0dbc27becb",
+        "50d73629-3b20-4604-8acf-446906d4a6d5",
+        "59b648cf-9874-449e-9d19-de284f7ff4c7",
+        "5cd7b64f-78a3-4abb-9030-249e14656314",
+        "6bec8338-046d-42ac-aef4-187847627945",
+        "8f9ece63-e1ec-4d06-a71a-50cea74bd822",
+        "a21d1366-e275-45f0-a0bf-81109c46a904",
+        "a64bb6dd-cd4a-4282-b3c1-45aa6eb7eae8",
+        "bda0a2dc-3c9e-48d6-aace-43730b0c0501",
+        "fecd792e-0ec4-4727-a81f-f0f6e0dd6d74",
+        "fffcc5cb-a784-4b87-bbea-2acc51cf6920"
+      ],
+      "ambiguous_satellite_guids": [],
+      "part_count": 18,
+      "bom_groups": [
+        {
+          "id": "S03-B01",
+          "number": "01",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Default",
+          "count": 2,
+          "part_labels": [
+            "S03-P011",
+            "S03-P013"
+          ],
+          "guids": [
+            "5cd7b64f-78a3-4abb-9030-249e14656314",
+            "8f9ece63-e1ec-4d06-a71a-50cea74bd822"
+          ],
+          "example_part": "S03-P011",
+          "image_file": "images/S03-P011.png"
+        },
+        {
+          "id": "S03-B02",
+          "number": "02",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Default",
+          "count": 3,
+          "part_labels": [
+            "S03-P001",
+            "S03-P004",
+            "S03-P008"
+          ],
+          "guids": [
+            "0686988b-03ab-40e5-b536-5c69472f6a32",
+            "3a64285b-bf71-4a8f-b962-154af6c5fd94",
+            "4e30559b-c108-4a8b-aab4-ab0dbc27becb"
+          ],
+          "example_part": "S03-P001",
+          "image_file": "images/S03-P001.png"
+        },
+        {
+          "id": "S03-B03",
+          "number": "03",
+          "kind": "PROCESSED_ROD_BBOX",
+          "measurement_status": "USER_ACCEPTED_BBOX_PROXY",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S03-P018"
+          ],
+          "guids": [
+            "fffcc5cb-a784-4b87-bbea-2acc51cf6920"
+          ],
+          "example_part": "S03-P018",
+          "image_file": "images/S03-P018.png"
+        },
+        {
+          "id": "S03-B04",
+          "number": "04",
+          "kind": "PROCESSED_ROD_BBOX",
+          "measurement_status": "USER_ACCEPTED_BBOX_PROXY",
+          "material_hint": "Default",
+          "count": 3,
+          "part_labels": [
+            "S03-P009",
+            "S03-P012",
+            "S03-P016"
+          ],
+          "guids": [
+            "50d73629-3b20-4604-8acf-446906d4a6d5",
+            "6bec8338-046d-42ac-aef4-187847627945",
+            "bda0a2dc-3c9e-48d6-aace-43730b0c0501"
+          ],
+          "example_part": "S03-P009",
+          "image_file": "images/S03-P009.png"
+        },
+        {
+          "id": "S03-B05",
+          "number": "05",
+          "kind": "PROCESSED_ROD_BBOX",
+          "measurement_status": "USER_ACCEPTED_BBOX_PROXY",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S03-P017"
+          ],
+          "guids": [
+            "fecd792e-0ec4-4727-a81f-f0f6e0dd6d74"
+          ],
+          "example_part": "S03-P017",
+          "image_file": "images/S03-P017.png"
+        },
+        {
+          "id": "S03-B06",
+          "number": "06",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S03-P003"
+          ],
+          "guids": [
+            "149c6fbb-58f3-42b8-a257-b2300b296b63"
+          ],
+          "example_part": "S03-P003",
+          "image_file": "images/S03-P003.png"
+        },
+        {
+          "id": "S03-B07",
+          "number": "07",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S03-P007"
+          ],
+          "guids": [
+            "49bc8931-e1bb-4e41-9036-0a9cbf365862"
+          ],
+          "example_part": "S03-P007",
+          "image_file": "images/S03-P007.png"
+        },
+        {
+          "id": "S03-B08",
+          "number": "08",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Ebene 01",
+          "count": 1,
+          "part_labels": [
+            "S03-P015"
+          ],
+          "guids": [
+            "a64bb6dd-cd4a-4282-b3c1-45aa6eb7eae8"
+          ],
+          "example_part": "S03-P015",
+          "image_file": "images/S03-P015.png"
+        },
+        {
+          "id": "S03-B09",
+          "number": "09",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Ebene 01",
+          "count": 1,
+          "part_labels": [
+            "S03-P006"
+          ],
+          "guids": [
+            "407a2c10-c352-49fc-8818-203dd2e5df6a"
+          ],
+          "example_part": "S03-P006",
+          "image_file": "images/S03-P006.png"
+        },
+        {
+          "id": "S03-B10",
+          "number": "10",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S03-P002"
+          ],
+          "guids": [
+            "0822b7b2-7a59-43a9-b204-a79e1b32c924"
+          ],
+          "example_part": "S03-P002",
+          "image_file": "images/S03-P002.png"
+        },
+        {
+          "id": "S03-B11",
+          "number": "11",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S03-P005"
+          ],
+          "guids": [
+            "3dec3e66-20e1-45bf-bac9-cc490cc6d7da"
+          ],
+          "example_part": "S03-P005",
+          "image_file": "images/S03-P005.png"
+        },
+        {
+          "id": "S03-B12",
+          "number": "12",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S03-P010"
+          ],
+          "guids": [
+            "59b648cf-9874-449e-9d19-de284f7ff4c7"
+          ],
+          "example_part": "S03-P010",
+          "image_file": "images/S03-P010.png"
+        },
+        {
+          "id": "S03-B13",
+          "number": "13",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S03-P014"
+          ],
+          "guids": [
+            "a21d1366-e275-45f0-a0bf-81109c46a904"
+          ],
+          "example_part": "S03-P014",
+          "image_file": "images/S03-P014.png"
+        }
+      ],
+      "comparison_group": "S02_S03_S04",
+      "counts": {
+        "STRAIGHT_ROUND_STOCK": 5,
+        "UNKNOWN": 4,
+        "RECTANGULAR_PLATE": 4,
+        "PROCESSED_ROD_BBOX": 5
+      }
+    },
+    {
+      "study": "S04",
+      "title": "Rahmenvariante C",
+      "spatial_group_id": "G15",
+      "guids": [
+        "01f42681-08bf-4bb5-9469-631beb1fb0ab",
+        "1863b0be-a8f6-4319-baf4-e7a1d73b6fcd",
+        "1a70e148-f213-4779-8f34-1824e65bf8f5",
+        "2294b5b7-0e40-42ab-ad3b-3248867747c9",
+        "24ae08ad-a7a1-499a-85c4-65368f6d6dd1",
+        "25cc72b9-9091-4965-a35d-d5dfe3f28b70",
+        "28bf7221-ff96-4d5f-b68b-01334a0c59aa",
+        "30f892c6-a13c-454c-93c9-5153b8adc8f5",
+        "5246571a-9854-4e9f-99ca-17b4b4aa1e8f",
+        "6c6a076c-5021-4076-a1c6-260a330c99bf",
+        "70a67dee-188f-46ac-9d88-74c52a53e667",
+        "72448f61-3986-4552-9ef3-05ce487fbe86",
+        "9102c064-a3b5-4040-b50b-6c313135f042",
+        "a393e599-0044-4692-be0c-9ee3e2a12ec9",
+        "a41acda2-b038-4ceb-9399-89699c001685",
+        "accb7a94-f36e-48e9-982d-03720e4a28c7",
+        "cb364047-27d3-44a0-9570-87f5c87c33a7",
+        "d1147ae2-46c2-4cb4-a4d1-38072fce2618",
+        "d662e980-c3b0-45b5-abf4-d87ad75d897b",
+        "dca25deb-f30a-4156-bd5a-50ed637b63ce",
+        "fa8c57db-670c-41dc-88c7-3ac3375cb8c8"
+      ],
+      "ambiguous_satellite_guids": [
+        "1a56dadb-a99c-4339-978e-91d060d84f67"
+      ],
+      "part_count": 21,
+      "bom_groups": [
+        {
+          "id": "S04-B01",
+          "number": "01",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Default",
+          "count": 2,
+          "part_labels": [
+            "S04-P008",
+            "S04-P014"
+          ],
+          "guids": [
+            "30f892c6-a13c-454c-93c9-5153b8adc8f5",
+            "a393e599-0044-4692-be0c-9ee3e2a12ec9"
+          ],
+          "example_part": "S04-P008",
+          "image_file": "images/S04-P008.png"
+        },
+        {
+          "id": "S04-B02",
+          "number": "02",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Default",
+          "count": 3,
+          "part_labels": [
+            "S04-P003",
+            "S04-P017",
+            "S04-P019"
+          ],
+          "guids": [
+            "1a70e148-f213-4779-8f34-1824e65bf8f5",
+            "cb364047-27d3-44a0-9570-87f5c87c33a7",
+            "d662e980-c3b0-45b5-abf4-d87ad75d897b"
+          ],
+          "example_part": "S04-P003",
+          "image_file": "images/S04-P003.png"
+        },
+        {
+          "id": "S04-B03",
+          "number": "03",
+          "kind": "PROCESSED_ROD_BBOX",
+          "measurement_status": "USER_ACCEPTED_BBOX_PROXY",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S04-P004"
+          ],
+          "guids": [
+            "2294b5b7-0e40-42ab-ad3b-3248867747c9"
+          ],
+          "example_part": "S04-P004",
+          "image_file": "images/S04-P004.png"
+        },
+        {
+          "id": "S04-B04",
+          "number": "04",
+          "kind": "PROCESSED_ROD_BBOX",
+          "measurement_status": "USER_ACCEPTED_BBOX_PROXY",
+          "material_hint": "Default",
+          "count": 3,
+          "part_labels": [
+            "S04-P002",
+            "S04-P005",
+            "S04-P010"
+          ],
+          "guids": [
+            "1863b0be-a8f6-4319-baf4-e7a1d73b6fcd",
+            "24ae08ad-a7a1-499a-85c4-65368f6d6dd1",
+            "6c6a076c-5021-4076-a1c6-260a330c99bf"
+          ],
+          "example_part": "S04-P002",
+          "image_file": "images/S04-P002.png"
+        },
+        {
+          "id": "S04-B05",
+          "number": "05",
+          "kind": "PROCESSED_ROD_BBOX",
+          "measurement_status": "USER_ACCEPTED_BBOX_PROXY",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S04-P020"
+          ],
+          "guids": [
+            "dca25deb-f30a-4156-bd5a-50ed637b63ce"
+          ],
+          "example_part": "S04-P020",
+          "image_file": "images/S04-P020.png"
+        },
+        {
+          "id": "S04-B06",
+          "number": "06",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S04-P009"
+          ],
+          "guids": [
+            "5246571a-9854-4e9f-99ca-17b4b4aa1e8f"
+          ],
+          "example_part": "S04-P009",
+          "image_file": "images/S04-P009.png"
+        },
+        {
+          "id": "S04-B07",
+          "number": "07",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S04-P018"
+          ],
+          "guids": [
+            "d1147ae2-46c2-4cb4-a4d1-38072fce2618"
+          ],
+          "example_part": "S04-P018",
+          "image_file": "images/S04-P018.png"
+        },
+        {
+          "id": "S04-B08",
+          "number": "08",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Ebene 01",
+          "count": 1,
+          "part_labels": [
+            "S04-P007"
+          ],
+          "guids": [
+            "28bf7221-ff96-4d5f-b68b-01334a0c59aa"
+          ],
+          "example_part": "S04-P007",
+          "image_file": "images/S04-P007.png"
+        },
+        {
+          "id": "S04-B09",
+          "number": "09",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Ebene 01",
+          "count": 1,
+          "part_labels": [
+            "S04-P013"
+          ],
+          "guids": [
+            "9102c064-a3b5-4040-b50b-6c313135f042"
+          ],
+          "example_part": "S04-P013",
+          "image_file": "images/S04-P013.png"
+        },
+        {
+          "id": "S04-B10",
+          "number": "10",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S04-P001"
+          ],
+          "guids": [
+            "01f42681-08bf-4bb5-9469-631beb1fb0ab"
+          ],
+          "example_part": "S04-P001",
+          "image_file": "images/S04-P001.png"
+        },
+        {
+          "id": "S04-B11",
+          "number": "11",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S04-P006"
+          ],
+          "guids": [
+            "25cc72b9-9091-4965-a35d-d5dfe3f28b70"
+          ],
+          "example_part": "S04-P006",
+          "image_file": "images/S04-P006.png"
+        },
+        {
+          "id": "S04-B12",
+          "number": "12",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S04-P011"
+          ],
+          "guids": [
+            "70a67dee-188f-46ac-9d88-74c52a53e667"
+          ],
+          "example_part": "S04-P011",
+          "image_file": "images/S04-P011.png"
+        },
+        {
+          "id": "S04-B13",
+          "number": "13",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S04-P015"
+          ],
+          "guids": [
+            "a41acda2-b038-4ceb-9399-89699c001685"
+          ],
+          "example_part": "S04-P015",
+          "image_file": "images/S04-P015.png"
+        },
+        {
+          "id": "S04-B14",
+          "number": "14",
+          "kind": "HARDWARE_BY_LAYER",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "KORPUS-VERBINDER",
+          "count": 3,
+          "part_labels": [
+            "S04-P012",
+            "S04-P016",
+            "S04-P021"
+          ],
+          "guids": [
+            "72448f61-3986-4552-9ef3-05ce487fbe86",
+            "accb7a94-f36e-48e9-982d-03720e4a28c7",
+            "fa8c57db-670c-41dc-88c7-3ac3375cb8c8"
+          ],
+          "example_part": "S04-P012",
+          "image_file": "images/S04-P012.png"
+        }
+      ],
+      "comparison_group": "S02_S03_S04",
+      "counts": {
+        "UNKNOWN": 4,
+        "PROCESSED_ROD_BBOX": 5,
+        "STRAIGHT_ROUND_STOCK": 5,
+        "RECTANGULAR_PLATE": 4,
+        "HARDWARE_BY_LAYER": 3
+      }
+    },
+    {
+      "study": "S05",
+      "title": "Niedrige Tischstudie",
+      "spatial_group_id": "G24",
+      "guids": [
+        "046cb0a3-5335-4103-a2f7-50704510842f",
+        "04ef5a10-33e4-4b84-a862-bbc39933f6a0",
+        "1b6a8690-719d-47e3-a7e0-9c477cf3e56b",
+        "27ce8b2c-7794-4c6a-a9e2-bd9cfe41ed45",
+        "2d928077-8a9a-4191-b05a-ea1a3bbd2387",
+        "32c99c6f-426c-4368-ac80-57588ae4b1ff",
+        "3b9f69d8-218d-4d60-be23-ed72bcfe806f",
+        "566add8a-ce10-4c9e-94c9-f7b046635f5f",
+        "57ec26fa-1a97-4ad5-bdc9-86066983921b",
+        "73343a3e-c8e9-46b2-a42a-1358214d9f11",
+        "7d3f3db2-6a5c-4666-8210-f752f31d5c97",
+        "86adb058-5eb2-4be1-86d6-ddc4b83657bd",
+        "bfb7651b-e61d-48b7-9f31-07e1aa40944c",
+        "c01a9fbb-131f-4bc3-9904-b49d85259488",
+        "c761cf0a-cbe3-4c06-95fe-1d558c1cb327",
+        "cdaeb81b-923e-429a-99e1-541f3df76b67",
+        "d5f5e801-bdf7-4d77-90b6-099caca6d1f6",
+        "d868ea2c-ec19-4ba5-8f7c-b0ef32efef41",
+        "de775da1-30e1-49fb-8882-a58b25c3db98",
+        "e11579a2-9b1e-449a-87d7-e757698bd7ec",
+        "e618bba9-ac85-442a-b5d0-a3e66cff6044",
+        "f288f36b-646b-46c0-bb9e-99380b61c917",
+        "f6f4cdaa-5aa1-48a4-8f3d-479baa56c1c5"
+      ],
+      "ambiguous_satellite_guids": [],
+      "part_count": 23,
+      "bom_groups": [
+        {
+          "id": "S05-B01",
+          "number": "01",
+          "kind": "STRAIGHT_ROUND_STOCK",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Default",
+          "count": 4,
+          "part_labels": [
+            "S05-P003",
+            "S05-P011",
+            "S05-P017",
+            "S05-P020"
+          ],
+          "guids": [
+            "1b6a8690-719d-47e3-a7e0-9c477cf3e56b",
+            "7d3f3db2-6a5c-4666-8210-f752f31d5c97",
+            "d5f5e801-bdf7-4d77-90b6-099caca6d1f6",
+            "e11579a2-9b1e-449a-87d7-e757698bd7ec"
+          ],
+          "example_part": "S05-P003",
+          "image_file": "images/S05-P003.png"
+        },
+        {
+          "id": "S05-B02",
+          "number": "02",
+          "kind": "PROCESSED_ROD_BBOX",
+          "measurement_status": "USER_ACCEPTED_BBOX_PROXY",
+          "material_hint": "Default",
+          "count": 2,
+          "part_labels": [
+            "S05-P002",
+            "S05-P004"
+          ],
+          "guids": [
+            "04ef5a10-33e4-4b84-a862-bbc39933f6a0",
+            "27ce8b2c-7794-4c6a-a9e2-bd9cfe41ed45"
+          ],
+          "example_part": "S05-P002",
+          "image_file": "images/S05-P002.png"
+        },
+        {
+          "id": "S05-B03",
+          "number": "03",
+          "kind": "PROCESSED_ROD_BBOX",
+          "measurement_status": "USER_ACCEPTED_BBOX_PROXY",
+          "material_hint": "Default",
+          "count": 4,
+          "part_labels": [
+            "S05-P005",
+            "S05-P006",
+            "S05-P007",
+            "S05-P012"
+          ],
+          "guids": [
+            "2d928077-8a9a-4191-b05a-ea1a3bbd2387",
+            "32c99c6f-426c-4368-ac80-57588ae4b1ff",
+            "3b9f69d8-218d-4d60-be23-ed72bcfe806f",
+            "86adb058-5eb2-4be1-86d6-ddc4b83657bd"
+          ],
+          "example_part": "S05-P005",
+          "image_file": "images/S05-P005.png"
+        },
+        {
+          "id": "S05-B04",
+          "number": "04",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S05-P016"
+          ],
+          "guids": [
+            "cdaeb81b-923e-429a-99e1-541f3df76b67"
+          ],
+          "example_part": "S05-P016",
+          "image_file": "images/S05-P016.png"
+        },
+        {
+          "id": "S05-B05",
+          "number": "05",
+          "kind": "RECTANGULAR_PLATE",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Ebene 01",
+          "count": 1,
+          "part_labels": [
+            "S05-P023"
+          ],
+          "guids": [
+            "f6f4cdaa-5aa1-48a4-8f3d-479baa56c1c5"
+          ],
+          "example_part": "S05-P023",
+          "image_file": "images/S05-P023.png"
+        },
+        {
+          "id": "S05-B06",
+          "number": "06",
+          "kind": "RECTANGULAR_SOLID",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S05-P014"
+          ],
+          "guids": [
+            "c01a9fbb-131f-4bc3-9904-b49d85259488"
+          ],
+          "example_part": "S05-P014",
+          "image_file": "images/S05-P014.png"
+        },
+        {
+          "id": "S05-B07",
+          "number": "07",
+          "kind": "RECTANGULAR_SOLID",
+          "measurement_status": "NATIVE_PRIMITIVE_CONFIRMED",
+          "material_hint": "Default",
+          "count": 2,
+          "part_labels": [
+            "S05-P019",
+            "S05-P021"
+          ],
+          "guids": [
+            "de775da1-30e1-49fb-8882-a58b25c3db98",
+            "e618bba9-ac85-442a-b5d0-a3e66cff6044"
+          ],
+          "example_part": "S05-P019",
+          "image_file": "images/S05-P019.png"
+        },
+        {
+          "id": "S05-B08",
+          "number": "08",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S05-P001"
+          ],
+          "guids": [
+            "046cb0a3-5335-4103-a2f7-50704510842f"
+          ],
+          "example_part": "S05-P001",
+          "image_file": "images/S05-P001.png"
+        },
+        {
+          "id": "S05-B09",
+          "number": "09",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S05-P010"
+          ],
+          "guids": [
+            "73343a3e-c8e9-46b2-a42a-1358214d9f11"
+          ],
+          "example_part": "S05-P010",
+          "image_file": "images/S05-P010.png"
+        },
+        {
+          "id": "S05-B10",
+          "number": "10",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S05-P013"
+          ],
+          "guids": [
+            "bfb7651b-e61d-48b7-9f31-07e1aa40944c"
+          ],
+          "example_part": "S05-P013",
+          "image_file": "images/S05-P013.png"
+        },
+        {
+          "id": "S05-B11",
+          "number": "11",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Default",
+          "count": 1,
+          "part_labels": [
+            "S05-P018"
+          ],
+          "guids": [
+            "d868ea2c-ec19-4ba5-8f7c-b0ef32efef41"
+          ],
+          "example_part": "S05-P018",
+          "image_file": "images/S05-P018.png"
+        },
+        {
+          "id": "S05-B12",
+          "number": "12",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Layer 02",
+          "count": 1,
+          "part_labels": [
+            "S05-P008"
+          ],
+          "guids": [
+            "566add8a-ce10-4c9e-94c9-f7b046635f5f"
+          ],
+          "example_part": "S05-P008",
+          "image_file": "images/S05-P008.png"
+        },
+        {
+          "id": "S05-B13",
+          "number": "13",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Layer 02",
+          "count": 1,
+          "part_labels": [
+            "S05-P009"
+          ],
+          "guids": [
+            "57ec26fa-1a97-4ad5-bdc9-86066983921b"
+          ],
+          "example_part": "S05-P009",
+          "image_file": "images/S05-P009.png"
+        },
+        {
+          "id": "S05-B14",
+          "number": "14",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Layer 02",
+          "count": 1,
+          "part_labels": [
+            "S05-P015"
+          ],
+          "guids": [
+            "c761cf0a-cbe3-4c06-95fe-1d558c1cb327"
+          ],
+          "example_part": "S05-P015",
+          "image_file": "images/S05-P015.png"
+        },
+        {
+          "id": "S05-B15",
+          "number": "15",
+          "kind": "UNKNOWN",
+          "measurement_status": "UNKNOWN_UNSUPPORTED_BREP",
+          "material_hint": "Layer 02",
+          "count": 1,
+          "part_labels": [
+            "S05-P022"
+          ],
+          "guids": [
+            "f288f36b-646b-46c0-bb9e-99380b61c917"
+          ],
+          "example_part": "S05-P022",
+          "image_file": "images/S05-P022.png"
+        }
+      ],
+      "comparison_group": null,
+      "counts": {
+        "UNKNOWN": 8,
+        "PROCESSED_ROD_BBOX": 6,
+        "STRAIGHT_ROUND_STOCK": 4,
+        "RECTANGULAR_SOLID": 3,
+        "RECTANGULAR_PLATE": 2
+      }
+    }
+  ],
+  "display_grouping_resolution_mm": 0.001,
+  "grouping_limit": "Rows combine display-equivalent measures only, not confirmed interchangeable manufacturing parts. Every original individual record is preserved byte-for-byte."
+}

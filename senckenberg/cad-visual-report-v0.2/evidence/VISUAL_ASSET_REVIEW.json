@@ -1,0 +1,22 @@
+{
+  "method": "Direct local image inspection, not an HTML browser inspection.",
+  "inspected": [
+    "images/views/S02_module_perspective_reverse_y.png",
+    "images/views/S02_corner_perspective_reverse_xy.png",
+    "images/views/S03_corner_perspective_reverse_xy.png",
+    "images/views/S04_corner_perspective_reverse_xy.png",
+    "images/native_profile_X.png",
+    "images/native_profile_Y.png"
+  ],
+  "observations": [
+    "Corner images show actual purple extra geometry in S02/S04 and open comparable zone in S03.",
+    "Native edge end-projections visibly differ in outline/features and corner-height span.",
+    "S02/S04 corner geometry appears consistent; separate native comparisons remain the actual check."
+  ],
+  "not_performed": [
+    "Live HTML layout/browser interaction check",
+    "Timed independent one-minute test",
+    "Blind user study",
+    "Manufacturing review"
+  ]
+}

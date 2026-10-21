@@ -1,0 +1,24 @@
+{
+  "status": "STOP_INCONCLUSIVE",
+  "not_executed": true,
+  "reasons": [
+    "No suitable existing optimizer found in the targeted V2/V3 tools or available rectpack/ortools/pulp/binpacking libraries. No new cutting engine was authorized.",
+    "No production combination or manufacturing material/stock assumptions selected. Native primitives are only a partial inventory; the 31 processed rod values are proxies, not confirmed optimizer input."
+  ],
+  "unexecuted_test_assumptions": {
+    "rod_stock_mm": 3000,
+    "sheet_mm": [
+      2750,
+      2000
+    ],
+    "kerf_mm": null,
+    "grain_direction": null,
+    "allowed_rotation": null,
+    "selected_combination": null
+  },
+  "rod_cut_plan": null,
+  "sheet_cut_plan": null,
+  "stock_need": null,
+  "offcuts": null,
+  "not_zero_stock_or_zero_waste": true
+}

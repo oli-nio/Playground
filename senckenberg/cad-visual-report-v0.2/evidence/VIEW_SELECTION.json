@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "selected": [
+    {
+      "study": "S02",
+      "module": "S02_module_perspective_reverse_y",
+      "corner": "S02_corner_perspective_reverse_xy"
+    },
+    {
+      "study": "S03",
+      "module": "S03_module_perspective_reverse_y",
+      "corner": "S03_corner_perspective_reverse_xy"
+    },
+    {
+      "study": "S04",
+      "module": "S04_module_perspective_reverse_y",
+      "corner": "S04_corner_perspective_reverse_xy"
+    }
+  ],
+  "scores": [
+    {
+      "camera_id": "perspective_reverse_xy",
+      "score": 609141
+    },
+    {
+      "camera_id": "perspective_v2_direction",
+      "score": 608477
+    },
+    {
+      "camera_id": "perspective_reverse_y",
+      "score": 606384
+    },
+    {
+      "camera_id": "perspective_reverse_x",
+      "score": 600064
+    }
+  ],
+  "equivalence": [
+    {
+      "scope": "module",
+      "projectionResidual": 4.440892098500626e-16,
+      "directionResidual": 3.637978807091713e-12
+    },
+    {
+      "scope": "corner",
+      "projectionResidual": 0,
+      "directionResidual": 3.637978807091713e-12
+    }
+  ],
+  "colors": {
+    "common": 7444372,
+    "changed": 15309365,
+    "extra": 9127806
+  },
+  "changed_guids": {
+    "S02": [
+      "51038648-3e80-4bd4-95ad-7e9129e71141",
+      "f08876b9-e4f7-4e02-a679-a761eb18b2d3"
+    ],
+    "S03": [
+      "a21d1366-e275-45f0-a0bf-81109c46a904",
+      "59b648cf-9874-449e-9d19-de284f7ff4c7"
+    ],
+    "S04": [
+      "25cc72b9-9091-4965-a35d-d5dfe3f28b70",
+      "01f42681-08bf-4bb5-9469-631beb1fb0ab"
+    ]
+  },
+  "selection_rule": "Same main camera and local datum fit for all three. Four bounded corner cameras; select common camera by visible changed-part count then capped extra-layer pixels. Cropped corner intentionally includes all module GUIDs, not a full-module coverage claim.",
+  "color_meaning": "Teal: no difference in checked representation. Orange: two proven changed upper parts, not confirmed material/function. Purple: extra CAD geometry by layer, not purchasable connector count.",
+  "report_browser_opened": false,
+  "limits": "Only source-bound saved display meshes. Small profile differences are shown separately by native edge projections, not asserted from these raster pixels."
+}

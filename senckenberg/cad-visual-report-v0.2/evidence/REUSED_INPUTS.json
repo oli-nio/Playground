@@ -1,0 +1,906 @@
+{
+  "files": [
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\data\\CUT_OPTIMIZATION.json",
+      "file": "data/CUT_OPTIMIZATION.json",
+      "sha256": "183a544c7fef168e1f72c541ccef9184489b78fb30d5029e34539dee33e4de73"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\data\\FINAL_REPORT.json",
+      "file": "data/FINAL_REPORT.json",
+      "sha256": "c0476a955e84722c326d081f89607dd661425a23ee44e8e1197ce694107d9758"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\data\\FUTURE_CUT_HANDOFF.json",
+      "file": "data/FUTURE_CUT_HANDOFF.json",
+      "sha256": "f32eb24cd5876102ee1c6e7b88901c082fdd118c44334bb9d40c53e535040397"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\data\\MODULE_CARDS.json",
+      "file": "data/MODULE_CARDS.json",
+      "sha256": "f084578d625642703d9c666e09689b8dd6231c1aff314d2314f9d3d258abc43b"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\data\\MODULE_GROUPS.json",
+      "file": "data/MODULE_GROUPS.json",
+      "sha256": "b5ed7486060a2c0bea46d4ca541b770982a1817e313329e4a2ed883a5d985725"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\data\\PARTS.json",
+      "file": "data/PARTS.json",
+      "sha256": "d883856fd2ba01523b6bc11062b6ebafbda77a8701ec61cb455ee59eb86748a5"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\data\\STOCK_SUMMARIES.json",
+      "file": "data/STOCK_SUMMARIES.json",
+      "sha256": "8d8f732e64f827cb5f435275873fb94f0a5259305b45edf6a366dc0750499430"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\data\\V01_REPORT_SUMMARY.json",
+      "file": "data/V01_REPORT_SUMMARY.json",
+      "sha256": "4ba39e240b4a255a154106f1f4566cb259c045f5440d99baaf9fb21d0f5cdafa"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\data\\V0_DIAGONAL_LENGTHS.json",
+      "file": "data/V0_DIAGONAL_LENGTHS.json",
+      "sha256": "98a93c3ae10ebc08961f3bcda8383f313a575c1a4dec7c530558eaa0ba6417a4"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\data\\V0_FINAL_GEOMETRY_COVERAGE.json",
+      "file": "data/V0_FINAL_GEOMETRY_COVERAGE.json",
+      "sha256": "d6e455bd87bcde1679411b8d14da1514cc0663d0585baab22d803a934a986545"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\data\\V0_FINAL_SAFETY_CHECK.json",
+      "file": "data/V0_FINAL_SAFETY_CHECK.json",
+      "sha256": "58e6d114244abf0c6592d95340b702e8ba6b8fb6cf7d9fe5d1a354eb47d1ec4b"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\data\\V0_INDEPENDENT_VALIDATION.json",
+      "file": "data/V0_INDEPENDENT_VALIDATION.json",
+      "sha256": "63133d99228f391cfde4f0861ab9421f6f87dc7ce1640c312e269fe6a36b2fcb"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\data\\V0_KNOWN_CORRECTIONS.json",
+      "file": "data/V0_KNOWN_CORRECTIONS.json",
+      "sha256": "b72e0a0cc54ff6623c1323dcb16b676e0b2a56015fdf5f6920f7d6c5f6dec153"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\data\\V0_PROBE.json",
+      "file": "data/V0_PROBE.json",
+      "sha256": "5ebeec011087452bdce6765a7259aac6044853ae14535ba9955a4f9c5e719900"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\exports\\parts_all_selected.csv",
+      "file": "exports/parts_all_selected.csv",
+      "sha256": "77e9c381e23c1cb52403dffec3218633ff70e24198ef449d240a64da55ee9aa8"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\exports\\S01_parts.csv",
+      "file": "exports/S01_parts.csv",
+      "sha256": "90873bb1657da244a04357c574fc1ba77f36afc4644bcceae37377e1a2b3117d"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\exports\\S02_parts.csv",
+      "file": "exports/S02_parts.csv",
+      "sha256": "607ac0e474827c9122ee17fddbb12f1c63a36307af8de3c2aeea95ff161df5f3"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\exports\\S03_parts.csv",
+      "file": "exports/S03_parts.csv",
+      "sha256": "e32dd8d11e778e6ae9211c807f4d120dd3f5b40637664b482b76e3de20c3c7b6"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\exports\\S04_parts.csv",
+      "file": "exports/S04_parts.csv",
+      "sha256": "0d4c4f35eeea7ab8832ca98e6735147f915c2b1244bfe82be0ec9924461c455b"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\exports\\S05_parts.csv",
+      "file": "exports/S05_parts.csv",
+      "sha256": "e7a9ddefbbfe0eb1557d2369db7914dc85071058be2a7ddaac6cc1630fa2bd55"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\exports\\spatial_groups.csv",
+      "file": "exports/spatial_groups.csv",
+      "sha256": "9abc30e5edfc0829228d16a1edec5747211a32dfe5153466ef0902d06a96fa0e"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\exports\\stock_summaries.csv",
+      "file": "exports/stock_summaries.csv",
+      "sha256": "5ebc07b6ccdeeb2976d93189bcac2b234ce5a1a6cde214535fc7c66ecf21375a"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\exports\\unknown_parts.csv",
+      "file": "exports/unknown_parts.csv",
+      "sha256": "48ca4b1803cf276acfc1706e0e69bcfc5637b3497f570c8081a57fe1465b51ed"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P001.png",
+      "file": "images/S01-P001.png",
+      "sha256": "2fa3e42483b5308a95085c228bb7cbd61980ec24414ab21f19dc128d900c21ef"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P002.png",
+      "file": "images/S01-P002.png",
+      "sha256": "4932a0c929b228e25813aa1b721f37f2d174bb1e86ddee3dec101695c135ee9e"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P003.png",
+      "file": "images/S01-P003.png",
+      "sha256": "0d15477c9e771b28c3d6c6846a0797c88876d487b4fa1df6dd84ec5e6240fb66"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P004.png",
+      "file": "images/S01-P004.png",
+      "sha256": "17d521d37daceedb2c452e8739f90b4b81e8e2c32739010110ee0ac5fbca9d3f"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P005.png",
+      "file": "images/S01-P005.png",
+      "sha256": "c717afd8a392efc31e8afc667a52af874d868b58c358616158094aa7c51462c4"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P006.png",
+      "file": "images/S01-P006.png",
+      "sha256": "692102544caeb625819cdf0947c9c846a9156f05977439827fd71e5e3c5fcbc9"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P007.png",
+      "file": "images/S01-P007.png",
+      "sha256": "211e4c294de44f4cffc9d0d05835b4a4db82da0e63cfd6b9c9194e9017486872"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P008.png",
+      "file": "images/S01-P008.png",
+      "sha256": "eed1b4300aec16ceeefba698dc9827a9d153de44d4850561f0c8529db19afa31"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P009.png",
+      "file": "images/S01-P009.png",
+      "sha256": "1e0c433a0e049b34353b09b77f8c365071cf37d7e314d2c4b46abadbfde35e48"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P010.png",
+      "file": "images/S01-P010.png",
+      "sha256": "7af1215a3a25232ed2664301fea590e5208d960a2fe0136b1c9e0b458f13005d"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P011.png",
+      "file": "images/S01-P011.png",
+      "sha256": "0c87c8c9e0c4ac54c700f8620312bcd2ea932149b4bb2ae51f942f0c4b614e7f"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P012.png",
+      "file": "images/S01-P012.png",
+      "sha256": "03b98bfc7cf01d424c814ee8aa39d0e4b9bf9f0ada44f028205229acd924873a"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P013.png",
+      "file": "images/S01-P013.png",
+      "sha256": "0459160733327baff56328a4fb256addc76f960fe1b46e74c7574bbbd6d33620"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P014.png",
+      "file": "images/S01-P014.png",
+      "sha256": "58c13a4a334cc7524719eb6857828ebcd6ce1602dfd17e5f15890cc610c9a3a2"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P015.png",
+      "file": "images/S01-P015.png",
+      "sha256": "9bc3ab6b47c5c6423a26f4ea4f49adb378fb00ff656d5ea8dceba75508827244"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P016.png",
+      "file": "images/S01-P016.png",
+      "sha256": "55ed51962e77efc0c6c7c8b8d659234aba0b7a8e0fbfa4cc32dc4ee40026a355"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P017.png",
+      "file": "images/S01-P017.png",
+      "sha256": "885e945f3540c2366baeda1bc05cbac124a02933ecd30b06bb62d9c420dd9a93"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P018.png",
+      "file": "images/S01-P018.png",
+      "sha256": "c0a51e3e835b034208a68ac3a17687d06823b55bd6a41ec1c070c523e9a35787"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P019.png",
+      "file": "images/S01-P019.png",
+      "sha256": "30221bab18b640b29c8902c5773cefe8ee77e12327b6ee7d2c002bfff01f0663"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P020.png",
+      "file": "images/S01-P020.png",
+      "sha256": "b94e713e3049c01c97dbe14f00b6b27d8f268a3f4aa40c122600890c005bc58b"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P021.png",
+      "file": "images/S01-P021.png",
+      "sha256": "8bab364420cd6f0eec186bb691b7b2a02bd9bd43ad6ef1755eaf9dd7b99ea672"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P022.png",
+      "file": "images/S01-P022.png",
+      "sha256": "ad355b221e2158feabae71192e6865f328663c75178f3a618ebd63b6ab034500"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P023.png",
+      "file": "images/S01-P023.png",
+      "sha256": "263979235be85de900d116f38fd47aaa6415c55473405c9733f5cf599958759c"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P024.png",
+      "file": "images/S01-P024.png",
+      "sha256": "53cd74ce68abd2c0a7faf91fbc79db2c44c374f6b322eca84751c3c6f71ebb9b"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P025.png",
+      "file": "images/S01-P025.png",
+      "sha256": "27e31019969d0d866f47c28110e943ed0f9ba04b96c6a9e66e491f45fec3c00d"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P026.png",
+      "file": "images/S01-P026.png",
+      "sha256": "b41905aad72ced4ed42795931f488e403755b91492547104439b0f35adda1b22"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P027.png",
+      "file": "images/S01-P027.png",
+      "sha256": "e8855f2b63578688d8c3b0cb9932508a3b56e323eae4c727c2b71fd058692787"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P028.png",
+      "file": "images/S01-P028.png",
+      "sha256": "bfe986174822c52408ef00c221d265473058a90f14284518e74b61d18f80a65f"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P029.png",
+      "file": "images/S01-P029.png",
+      "sha256": "43afa17d3fadcf8623529cd02b8e03bebe425ba7c95c00c36b9178d36bd566b6"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P030.png",
+      "file": "images/S01-P030.png",
+      "sha256": "53e9943e1c8d545764ea131dd6a9221b4152c96366a215dcb90a0f27bb3b826c"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P031.png",
+      "file": "images/S01-P031.png",
+      "sha256": "b87b7205ea9d239554cb3ae1d54cece6669fd7582be55ea41945e3ef5c418a0e"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P032.png",
+      "file": "images/S01-P032.png",
+      "sha256": "0b142c6d292917a95388259a50a654ba507518fc1fb80141bb9060a486676d9c"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P033.png",
+      "file": "images/S01-P033.png",
+      "sha256": "50616b2f07643d91035c55688ff56a1fd98ed14456c53d01850d2514d32b241f"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P034.png",
+      "file": "images/S01-P034.png",
+      "sha256": "0d588c2f3121e10db9219a40459ae1fb4083e1025965dba6060f02d62995137d"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P035.png",
+      "file": "images/S01-P035.png",
+      "sha256": "b9f11b5b87a8a7b67e17294900838003b29606a429f997cc2acbf0123def069c"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P036.png",
+      "file": "images/S01-P036.png",
+      "sha256": "6cdb18836ca57bdf3d214a18cb4c2fa4e4632242a579eeba0882626d2aa1b477"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P037.png",
+      "file": "images/S01-P037.png",
+      "sha256": "d80afd0f86af2d190b43e70423ed14e447255ed92a7fbaafae5c6fef49291f66"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P038.png",
+      "file": "images/S01-P038.png",
+      "sha256": "6a60177426d6224aa1eef0f0924e08ac631a30a5d3740d7317c7301d5351c743"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P039.png",
+      "file": "images/S01-P039.png",
+      "sha256": "5e741094be40e75589ea87ac39dae786b35fdf83a2f63d0f5abfc300c5f580ed"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P040.png",
+      "file": "images/S01-P040.png",
+      "sha256": "1701ef0836bfb77dec4c5c28e92b6457aae7927009adb70198d1f08a54e987ab"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P041.png",
+      "file": "images/S01-P041.png",
+      "sha256": "d1c9f4a8dbd3f3ff6384df1f7a07fcbe173ff6ef45062ac32b9ca6de84d8d3f4"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P042.png",
+      "file": "images/S01-P042.png",
+      "sha256": "f2f5d227f5b09c02e9a56c59c760d900a00c88d017704e96e82b6734b1c897e1"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P043.png",
+      "file": "images/S01-P043.png",
+      "sha256": "a6dd7ff2bd67f20a6fe47ece2c33c4e171ad9581f5e207f78bd6362912b9bd27"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P044.png",
+      "file": "images/S01-P044.png",
+      "sha256": "0aeaabc5c0bd19d8dab95ef40568094336ffb2562b4e6493cbf07d8bc1d561df"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P045.png",
+      "file": "images/S01-P045.png",
+      "sha256": "c3e3174d8fc0b87299e037d27d0a483ee5bb2aed84b20705eddc76a02898d660"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P046.png",
+      "file": "images/S01-P046.png",
+      "sha256": "d3c5d4990f415cbc55ff44e08e232a129b15ee90d194ea3c73920ebcb6e66a56"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P047.png",
+      "file": "images/S01-P047.png",
+      "sha256": "847bf159a275b94a327d37d1097ccaf28422625c7da01f826269cb116b65add7"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P048.png",
+      "file": "images/S01-P048.png",
+      "sha256": "fce0832d31aa20ea4663183f003a7ffc802803402d750518cb08250b24a7de10"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P049.png",
+      "file": "images/S01-P049.png",
+      "sha256": "a180e7a1efec0603791cd46873646ff2ebd8c03bde07210392fff079d12dad67"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P050.png",
+      "file": "images/S01-P050.png",
+      "sha256": "2990b34436cde730a62150fa03236a73178fbe5f3757bdbe803ed4301f981013"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P051.png",
+      "file": "images/S01-P051.png",
+      "sha256": "d13cfad294fac6dd2835a5d0501c276d308232005a2ae512202aeae00806aa15"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P052.png",
+      "file": "images/S01-P052.png",
+      "sha256": "ceb8e3d53cdbbef531ecac1f0cfdca7e3cab74b0492745f5ff83d61d58890bab"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P053.png",
+      "file": "images/S01-P053.png",
+      "sha256": "847bf159a275b94a327d37d1097ccaf28422625c7da01f826269cb116b65add7"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P054.png",
+      "file": "images/S01-P054.png",
+      "sha256": "fb04b63b7a749989e5fbab18c5f076a86f455d81585153b6472ef3b030a866a8"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P055.png",
+      "file": "images/S01-P055.png",
+      "sha256": "438760baf18392f55f47fe0c0ebdd440ef5d3a9d0d224fe4aa81b4fe1c81a2a8"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P056.png",
+      "file": "images/S01-P056.png",
+      "sha256": "2dccb1811c92e8cbea1193ddf5aa9e561d2265c0540995b8c642170587c1d3e9"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P057.png",
+      "file": "images/S01-P057.png",
+      "sha256": "129da9cc6965a00c0894be340680f1faa62a645838f26a79d059a013c1e8302f"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P058.png",
+      "file": "images/S01-P058.png",
+      "sha256": "7ad7d3e496abde20f55f35f37d94066e561326c0827d0ad0fee8b61ea33ceb3d"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P059.png",
+      "file": "images/S01-P059.png",
+      "sha256": "5a0491d952bde116879ed4a334d399ea7234f3460eacf7860809bed1a6ac2814"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P060.png",
+      "file": "images/S01-P060.png",
+      "sha256": "195acbaf75641527dd7859b59ce36c1ac47befe97c09e230ab93f3e7d91fe7f6"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P061.png",
+      "file": "images/S01-P061.png",
+      "sha256": "e47d257bbdd20f443afc6657eb218eb7d3fbe9318a3325992a450f4383c1482b"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P062.png",
+      "file": "images/S01-P062.png",
+      "sha256": "7f98de9b7ee2b3ba9d4fb15be806498c74f63010952bb867149c9d7603aa347a"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P063.png",
+      "file": "images/S01-P063.png",
+      "sha256": "919dc40ddeba8b0dc4301c50e3eddcbe92d339715130ea4d552c7635245e51a2"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P064.png",
+      "file": "images/S01-P064.png",
+      "sha256": "4e2d8ca551e38b0bad5c231dd4471496f5acffd426436b111bee5cb1ef9ea20e"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P065.png",
+      "file": "images/S01-P065.png",
+      "sha256": "9e9d5954b7e7cf9161195080fa5fc42c97f4242acf95e7181250d61bb3b59e7a"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P066.png",
+      "file": "images/S01-P066.png",
+      "sha256": "4a41a3aa3571ff9b55936d15c46ea0b49fdc6a28df1bab65a5b8b5553e2e90c7"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P067.png",
+      "file": "images/S01-P067.png",
+      "sha256": "33fa408494216c064438cc94577ce2c8a08394b6dc355ff3c94eb729428ca845"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P068.png",
+      "file": "images/S01-P068.png",
+      "sha256": "a46003a0870de0542c317f897640191793e6e4661d1d8c2850afa66cc54d822e"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P069.png",
+      "file": "images/S01-P069.png",
+      "sha256": "3d1dad8b011eadde9a89e20611ea5eaac9a6aa918cd8b314821950a4d8cc7edb"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S01-P070.png",
+      "file": "images/S01-P070.png",
+      "sha256": "12e7f3bf01607030cebde1da1d754dcaaf39a650e2af55b8f5b7e3fecb016838"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P001.png",
+      "file": "images/S02-P001.png",
+      "sha256": "dfa05b71d37fae886d1fbcb3caacbed657a1015007b56ec34f543edf4c1c0660"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P002.png",
+      "file": "images/S02-P002.png",
+      "sha256": "6209c71a8ee31f2f45dd4c823cdb3fa3fba8e1c69e7a49c9e01a2897ad486580"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P003.png",
+      "file": "images/S02-P003.png",
+      "sha256": "c37356ad11edd38f992315e28680d0d5cbbd03bdebd408987b09a05eb77cd8b3"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P004.png",
+      "file": "images/S02-P004.png",
+      "sha256": "b0fbba335facb5d0fa1aa51c29865662485140d49d5f89b6567c8b9267b1b7d7"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P005.png",
+      "file": "images/S02-P005.png",
+      "sha256": "12ba52da10411fab2485bb3a5fa43f2f5e2fd28adb423392313aba6a657c0af1"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P006.png",
+      "file": "images/S02-P006.png",
+      "sha256": "7359ef0fd6f5d6a0092292507d34c59e0762568b483ec57e71a06e835475df8e"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P007.png",
+      "file": "images/S02-P007.png",
+      "sha256": "1e32d827ef5fdd75e8a5caa042320dd0073fa0c49cbb7397af5d03a9a4c57a34"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P008.png",
+      "file": "images/S02-P008.png",
+      "sha256": "027b3379cf112b9b4a68418d2bb7d824d57b44327fde1fb57d421b3b51002cd6"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P009.png",
+      "file": "images/S02-P009.png",
+      "sha256": "aedca06fcce1524935f11e44f371aa6be4f222863a9fc0c195447dcd0c6aa41f"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P010.png",
+      "file": "images/S02-P010.png",
+      "sha256": "83b7394722fdd257aeb3c1d3d56d244c79aa2d7d0eb852e2798253e057dbe1b7"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P011.png",
+      "file": "images/S02-P011.png",
+      "sha256": "4fab6ed2a9e706c58f00fb988ac1066a5fa316c9efe5f0e0802cf87ddb2de62e"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P012.png",
+      "file": "images/S02-P012.png",
+      "sha256": "62be7e0195796d1d7a7c344e4a30ad03cbf1b3c0902c8f78ecafd5006fa49625"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P013.png",
+      "file": "images/S02-P013.png",
+      "sha256": "8aad7339594763a74ba9e84092ca2d14b47de947bceb9315de91b2171b45f38f"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P014.png",
+      "file": "images/S02-P014.png",
+      "sha256": "f29ee9501eb0061e7f848c47abf370c5664d96d3027f76736c11efee201145c4"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P015.png",
+      "file": "images/S02-P015.png",
+      "sha256": "de5dc41d4ab035bd6e5b4c2aea05d0a8dea0b43a2eee657cd58bd4fc9049cf4a"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P016.png",
+      "file": "images/S02-P016.png",
+      "sha256": "9afcdcf36e8eda04b9b2663b005f8bc584c0b553ce6d0fd9615a0df1045d4cb7"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P017.png",
+      "file": "images/S02-P017.png",
+      "sha256": "c08dc7a64ea05e91d32316691e9d08d4458936066b83562c0d110f0324c8b113"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P018.png",
+      "file": "images/S02-P018.png",
+      "sha256": "f3e027f235dcb716224b1dd57aedd5dad9f3e0865ee31ccaa5412cfa42a517bf"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P019.png",
+      "file": "images/S02-P019.png",
+      "sha256": "57d436d1d02f21aac19bbb65bcdb11dad738fe1cc1fd98d33525829c28c55b38"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P020.png",
+      "file": "images/S02-P020.png",
+      "sha256": "0b08aa1bb3eaf99081a72a970c8b5e0209d73cd7c50f4f13284a7636b58369ed"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S02-P021.png",
+      "file": "images/S02-P021.png",
+      "sha256": "69f48c25a5af5eac798179d4e250d04013364d46ae817dde739473596b857eca"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P001.png",
+      "file": "images/S03-P001.png",
+      "sha256": "c7a011658a63371aff666c1862b709aa6e55f5d0c483fcf1eb6c698005612b43"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P002.png",
+      "file": "images/S03-P002.png",
+      "sha256": "bb1c076e3a6124687b61b5c6411a5d65ac55104a9ed61b92da9bf65c761d680c"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P003.png",
+      "file": "images/S03-P003.png",
+      "sha256": "1194a71ae7a80b39ddc80098695057338289f16e96ccddf7cf3781c4c4434782"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P004.png",
+      "file": "images/S03-P004.png",
+      "sha256": "0427ad7b0b34d78c157dd446920aab25230f494e3d767eabbc6e043700d565da"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P005.png",
+      "file": "images/S03-P005.png",
+      "sha256": "2edddf3688ffb6b279940c227ea07ce2d67ffd967674a100c5d7ab2b3e3a6568"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P006.png",
+      "file": "images/S03-P006.png",
+      "sha256": "d62fca3073a7c41230c3ac1fe58f56e9be74a719d7298e1d563980a58d24989a"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P007.png",
+      "file": "images/S03-P007.png",
+      "sha256": "7db1d68502d9960f841e6fbb047a39f5b5317711728d744648f70166a5954149"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P008.png",
+      "file": "images/S03-P008.png",
+      "sha256": "93a68636ec647f4b53cf83b476f63ff57193647fe5d551c896b6e3e614059626"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P009.png",
+      "file": "images/S03-P009.png",
+      "sha256": "a0995eefdefbde4d6c8054ceab4b56802d7788039b1c31149a2a0b9df1f126ef"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P010.png",
+      "file": "images/S03-P010.png",
+      "sha256": "3b371b6a507994f19b43369137d1033f04617e6278836e5f44085c3621c5d699"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P011.png",
+      "file": "images/S03-P011.png",
+      "sha256": "2e663db62fd7108b93d8973911e90b973135bfd4f4b8cf8b6a1b433d4207178e"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P012.png",
+      "file": "images/S03-P012.png",
+      "sha256": "611b28fcb654ce12d179888d7814d61a181960fefb894b78d60181d4c5a5f10b"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P013.png",
+      "file": "images/S03-P013.png",
+      "sha256": "34daae9d39e2b2ddbc1254feee0ccce2d4e16aa8ff7baa5a73f16d1d49884ec1"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P014.png",
+      "file": "images/S03-P014.png",
+      "sha256": "d8d3e0d590b3a5160d357409dbc0a3b2f48669cfe60cc0b7a1b390c37743b2de"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P015.png",
+      "file": "images/S03-P015.png",
+      "sha256": "5f66795225dac6a9fc93d17bac0af6acad406a66855d6b359b5c3025caf52ae7"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P016.png",
+      "file": "images/S03-P016.png",
+      "sha256": "e3a5bc899e495a9b9bf4d4a01e5df4d54cf719476c9b5ce4cf948bbc7c8f15af"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P017.png",
+      "file": "images/S03-P017.png",
+      "sha256": "457e95ec58b1130315d9d74ebe3c9e1e7b0502baa109a48bf25e4a5e8fa11b60"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S03-P018.png",
+      "file": "images/S03-P018.png",
+      "sha256": "de1de87ad178d2816e7e23b0ef09cceb17d77a1130187eec7fb64161f805cfa2"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P001.png",
+      "file": "images/S04-P001.png",
+      "sha256": "e1b71dcc411efdb22b596dbf5f2f4a0dd62bd3f97bcfdb2d4e6b7108054f8762"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P002.png",
+      "file": "images/S04-P002.png",
+      "sha256": "e17c632d2b58f4aa3c3bde030e60bf49b1edca795c0535d240ca4ddf6da90543"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P003.png",
+      "file": "images/S04-P003.png",
+      "sha256": "027491a24b1f7119593649fe7bd1d16d44c75125a80bcf1bcdc4640acf8d66f5"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P004.png",
+      "file": "images/S04-P004.png",
+      "sha256": "386f4180f5036759cc48d809cb7764b63e20ca9cbfb872d027d6a8b4b302e5c4"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P005.png",
+      "file": "images/S04-P005.png",
+      "sha256": "ea73ae3a49d7fb0ba09fc6e879e147695b37438903517adab2f3de774e2e932a"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P006.png",
+      "file": "images/S04-P006.png",
+      "sha256": "8879d887a5cf0d245e04766be6ddfbc0d0b93fc8057b9fd34b659bdeea785045"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P007.png",
+      "file": "images/S04-P007.png",
+      "sha256": "bf6c2c50bd837788646e7e8eb8f38087b44bb17edfad2f74fae5fb8e432860e7"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P008.png",
+      "file": "images/S04-P008.png",
+      "sha256": "f6bba6db4bb5a1d776ddaea424270044f6dbd8a0b37976996584cc0c0834868f"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P009.png",
+      "file": "images/S04-P009.png",
+      "sha256": "a221682fb57967b70bdd0a1f3c323d9ba478b517f0e2ba88a7c4b26a7b214639"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P010.png",
+      "file": "images/S04-P010.png",
+      "sha256": "3a3a1a5c39a51d95584362c3753132fdcaffee4407d10f236c7b908c2bcdaf3a"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P011.png",
+      "file": "images/S04-P011.png",
+      "sha256": "2a6ff46233bd3abd7f0637abf9dde07ffb7a4e810ebfb8449ecbe843f688be04"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P012.png",
+      "file": "images/S04-P012.png",
+      "sha256": "5875e2b12cdc4af23f781b726322bdc43816a293b41ac5190223ed070a363a6d"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P013.png",
+      "file": "images/S04-P013.png",
+      "sha256": "a99b651460df3c5098eeb8f45cc5e24b595724e39ce21573c539507cb98ee2d6"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P014.png",
+      "file": "images/S04-P014.png",
+      "sha256": "d4db1f44961121d397c440f23a2490c7b2e56b0eace23a9b59b9b73d4d508726"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P015.png",
+      "file": "images/S04-P015.png",
+      "sha256": "49734f0b26272618d5a0cbd73655ad1737305eb0f073bcd91fe5cdfbcdc1f751"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P016.png",
+      "file": "images/S04-P016.png",
+      "sha256": "0fc5b7583cea34ee0b3c7a16724741414b34c09b1187270f35a01e4781d8e9ce"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P017.png",
+      "file": "images/S04-P017.png",
+      "sha256": "a7b4d5fe245ccbaa2a0975d2999b17e7518908f622840073cbf0420d05308fa0"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P018.png",
+      "file": "images/S04-P018.png",
+      "sha256": "c881b996c5495021b98e52b3ee93aeb1930fb1eb78cdc556bb023d90f6f415b4"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P019.png",
+      "file": "images/S04-P019.png",
+      "sha256": "ad52ffd4bf26fb931eb4a598521b22b9d7c0068117a71ab8c79aba14d7844ca1"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P020.png",
+      "file": "images/S04-P020.png",
+      "sha256": "6666d12e3cd1c6a56db3777249b8fddfed4d9b9ed53cd84357ecff4bd7b23116"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S04-P021.png",
+      "file": "images/S04-P021.png",
+      "sha256": "a5c022ab587593c5ef64bf3192cfbd16b1c87367d9de7f6dc8d814af9c2ba853"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P001.png",
+      "file": "images/S05-P001.png",
+      "sha256": "cb7e9d77ef4152bad3c2ed2ce516efa8746737c24e09c17728bed01cf936f6cf"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P002.png",
+      "file": "images/S05-P002.png",
+      "sha256": "1e76c91c7f6c53d369f5b3dde91f68ed12b6269c9139f43bdb79efc765d8856c"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P003.png",
+      "file": "images/S05-P003.png",
+      "sha256": "7bbea0c1d8f3bd13128227783ba989e2c619d5ed9c6bfb1d9720bf57709a774a"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P004.png",
+      "file": "images/S05-P004.png",
+      "sha256": "79c0fa079c55b4abbb44e6c0ee1376386a6770919d26b9af7385b516f7f159cc"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P005.png",
+      "file": "images/S05-P005.png",
+      "sha256": "4a784f9dcc9b717aa1320137ad6721f560b630d09d4d12f995803b9a1b3b85bb"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P006.png",
+      "file": "images/S05-P006.png",
+      "sha256": "c69dadee46d82e77228f12db4234d09dd2239d7ba4b825019683e1d779fcebc7"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P007.png",
+      "file": "images/S05-P007.png",
+      "sha256": "11b24604895b84bc2a12e6df4a3dcdb67264e00f1d16bcbdc3ebe83d0a4dbf32"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P008.png",
+      "file": "images/S05-P008.png",
+      "sha256": "f4863aa96f0800666165715383289a9611989f3ed51c7801a432a992d554f77d"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P009.png",
+      "file": "images/S05-P009.png",
+      "sha256": "0b348b478b410deee88b53b3b1c1ff3b0b18b49ef4a8ae907eef5649528aae9d"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P010.png",
+      "file": "images/S05-P010.png",
+      "sha256": "71ca86719cb31069184833cf3dbc912d81064a3567c32d61e3eefc8ec4bb3daf"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P011.png",
+      "file": "images/S05-P011.png",
+      "sha256": "9f17d7f04edf8de4fb385632cf3e812641ad3803f4570054ab0d89c29d2c1b14"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P012.png",
+      "file": "images/S05-P012.png",
+      "sha256": "e3a271ec4f17456caf3f14557a926ce4dac90f7b902d460ef7eb21de87092004"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P013.png",
+      "file": "images/S05-P013.png",
+      "sha256": "c0f6749e115e03ecfee89de303a8cd72fdf1f89f56e67bdb69093d60b42e0e92"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P014.png",
+      "file": "images/S05-P014.png",
+      "sha256": "270156ce1dc0928c7e25dc0488e1116971d76d0558f56120ea74aad7372e2164"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P015.png",
+      "file": "images/S05-P015.png",
+      "sha256": "ec8c4c32f15493b09b44055e07cba44ffd7650ec8a57fdd27cf58986d297aeee"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P016.png",
+      "file": "images/S05-P016.png",
+      "sha256": "e8bc4b31c7723946778f9bb7467f5a2fc89b0506ce74db760bae9f8a4470da70"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P017.png",
+      "file": "images/S05-P017.png",
+      "sha256": "ecd62b2167b481e09d676c28feaac31605342e064552b4d9dff964a6557c63cb"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P018.png",
+      "file": "images/S05-P018.png",
+      "sha256": "c3f3ff3e7c4e795566bebc83f3d0cc436b4864df73b99963890931498d126966"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P019.png",
+      "file": "images/S05-P019.png",
+      "sha256": "9ae79177164f9c6bfea8706645f1a535b859ef54ab9c20ae14ab3a8b3d371b3c"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P020.png",
+      "file": "images/S05-P020.png",
+      "sha256": "5593392258970c2423c6d74679597877a1f4b78d28c185288e7abce78032c6fc"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P021.png",
+      "file": "images/S05-P021.png",
+      "sha256": "d1fae552431ca4f0c9c7038f12d187a3d01f0d2305eb14577f5095ef2f435bf5"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P022.png",
+      "file": "images/S05-P022.png",
+      "sha256": "70c6ecb28822e03e096472882bcce6297674b31974d0e0cc4a886c0b6cef513e"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\images\\S05-P023.png",
+      "file": "images/S05-P023.png",
+      "sha256": "33d78ca75cb2c4c839abd496db8330046873a6f3493f720db38cc86c304fa6d6"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\evidence\\IMAGE_CANDIDATES.json",
+      "file": "evidence/V01_IMAGE_CANDIDATES.json",
+      "sha256": "5586fb008380e796cd25092d8b262b58c4bb16e4deae914a8d9bd6a484b90a29"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\evidence\\VIEW_SELECTION.json",
+      "file": "evidence/V01_VIEW_SELECTION.json",
+      "sha256": "224028e59a8b94fc53b165ad0f2974353008e76a7a7a5dd214ae367a614faece"
+    },
+    {
+      "source": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\evidence\\IMAGE_ANNOTATIONS.json",
+      "file": "evidence/V01_IMAGE_ANNOTATIONS.json",
+      "sha256": "4302260606dfd8c6f3238fa4b1862e6fc204a7c7a7748b3209235495e1e7f29b"
+    }
+  ],
+  "source_model_copied": false,
+  "source_sha256": "89ba1a6fd1c8a6c8fb22c991e96a581bf663380aed14ecbdbabf3245a5c02a88",
+  "read_only_model": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODUL_ZUSCHNITT_PILOT_V0_2026-10-21\\models\\MODULTEST_OR-MZ.3dm",
+  "renderer_reused_from": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21\\runtime\\v3_view.js",
+  "renderer_sha256": "b8d5833f7e7543ef80902dc47828ec94e548fcace9a609e19686f5529b6b09b3",
+  "parts_measures_unchanged": true,
+  "no_nas_access": true
+}

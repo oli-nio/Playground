@@ -1,0 +1,183 @@
+{
+  "results": [
+    {
+      "part_label": "S01-P024",
+      "guid": "41eee5f5-c6fa-4f5d-9abe-798f5d99f25b",
+      "axis_alignment_status": "AXIS_UNKNOWN",
+      "bbox_max_span_mm": 1302.0172439427351,
+      "coarse_result": {
+        "distance_mm": 1302.3624539626057,
+        "endpoint_a": {
+          "point_mm": [
+            13795.719456684094,
+            -23520.02134584628,
+            115.48529184107038
+          ],
+          "kind": "edge_parameter",
+          "edge_index": 20,
+          "parameter": 71.22140998713255
+        },
+        "endpoint_b": {
+          "point_mm": [
+            15097.736700626809,
+            -23550.00564119095,
+            115.48529184106843
+          ],
+          "kind": "edge_parameter",
+          "edge_index": 21,
+          "parameter": 23.0263696205635
+        },
+        "point_count": 326
+      },
+      "fine_result": {
+        "distance_mm": 1302.3627926032625,
+        "endpoint_a": {
+          "point_mm": [
+            13795.719456684094,
+            -23520.02134584628,
+            115.48529184107038
+          ],
+          "kind": "edge_parameter",
+          "edge_index": 20,
+          "parameter": 71.22140998713255
+        },
+        "endpoint_b": {
+          "point_mm": [
+            15097.736700626807,
+            -23549.995721017163,
+            114.27002795829021
+          ],
+          "kind": "edge_parameter",
+          "edge_index": 21,
+          "parameter": 24.365120741857073
+        },
+        "point_count": 646
+      },
+      "refinement_change_mm": 0.00033864065676425525,
+      "independent_WASM_endpoint_distance_mm": 1302.3627926032625,
+      "cross_build_residual_mm": 0,
+      "status": "FINITE_NATIVE_POINT_DIAGONAL_VERIFIED_NOT_GLOBAL_GEOMETRIC_EXTREMUM"
+    },
+    {
+      "part_label": "S01-P028",
+      "guid": "5785393d-5128-462a-a3b7-969ad1342bd6",
+      "axis_alignment_status": "AXIS_UNKNOWN",
+      "bbox_max_span_mm": 1514.2264468067315,
+      "coarse_result": {
+        "distance_mm": 1302.3628156255645,
+        "endpoint_a": {
+          "point_mm": [
+            13795.719456684094,
+            -23548.85819886222,
+            1990.772705946842
+          ],
+          "kind": "edge_parameter",
+          "edge_index": 0,
+          "parameter": 17.40376457754469
+        },
+        "endpoint_b": {
+          "point_mm": [
+            15097.736700626796,
+            -23521.168769903765,
+            1979.2273378733537
+          ],
+          "kind": "edge_parameter",
+          "edge_index": 24,
+          "parameter": 64.52770115141627
+        },
+        "point_count": 460
+      },
+      "fine_result": {
+        "distance_mm": 1302.3628156255645,
+        "endpoint_a": {
+          "point_mm": [
+            13795.719456684094,
+            -23548.85819886222,
+            1990.772705946842
+          ],
+          "kind": "edge_parameter",
+          "edge_index": 0,
+          "parameter": 17.40376457754469
+        },
+        "endpoint_b": {
+          "point_mm": [
+            15097.736700626796,
+            -23521.168769903765,
+            1979.2273378733537
+          ],
+          "kind": "edge_parameter",
+          "edge_index": 24,
+          "parameter": 64.52770115141627
+        },
+        "point_count": 908
+      },
+      "refinement_change_mm": 0,
+      "independent_WASM_endpoint_distance_mm": 1302.3628156255645,
+      "cross_build_residual_mm": 0,
+      "status": "FINITE_NATIVE_POINT_DIAGONAL_VERIFIED_NOT_GLOBAL_GEOMETRIC_EXTREMUM"
+    },
+    {
+      "part_label": "S01-P069",
+      "guid": "ffcb8d2d-d2e3-4551-b139-82dc29c40c8b",
+      "axis_alignment_status": "AXIS_UNKNOWN",
+      "bbox_max_span_mm": 1514.2264468067297,
+      "coarse_result": {
+        "distance_mm": 1302.3628156255618,
+        "endpoint_a": {
+          "point_mm": [
+            15097.736700626789,
+            -23546.295229261366,
+            744.8854660300216
+          ],
+          "kind": "edge_parameter",
+          "edge_index": 21,
+          "parameter": 12.718018725971259
+        },
+        "endpoint_b": {
+          "point_mm": [
+            13795.719456684086,
+            -23523.73169282278,
+            725.1146080978301
+          ],
+          "kind": "edge_parameter",
+          "edge_index": 32,
+          "parameter": 59.84200207087285
+        },
+        "point_count": 528
+      },
+      "fine_result": {
+        "distance_mm": 1302.3628156255627,
+        "endpoint_a": {
+          "point_mm": [
+            13795.719456684088,
+            -23542.927374056995,
+            747.7424681606034
+          ],
+          "kind": "edge_parameter",
+          "edge_index": 20,
+          "parameter": 8.500936324214997
+        },
+        "endpoint_b": {
+          "point_mm": [
+            15097.736700626789,
+            -23527.099571622108,
+            722.2575575254967
+          ],
+          "kind": "edge_parameter",
+          "edge_index": 33,
+          "parameter": 55.62487289858625
+        },
+        "point_count": 1040
+      },
+      "refinement_change_mm": 9.094947017729282e-13,
+      "independent_WASM_endpoint_distance_mm": 1302.3628156255627,
+      "cross_build_residual_mm": 0,
+      "status": "FINITE_NATIVE_POINT_DIAGONAL_VERIFIED_NOT_GLOBAL_GEOMETRIC_EXTREMUM"
+    }
+  ],
+  "world_axis_aligned_rod_count": 28,
+  "proven_oblique_rod_count": 0,
+  "unresolved_axis_diagonal_fallbacks": 3,
+  "method": "Maximum pairwise Euclidean distance in explicitly stored native vertices/edge samples, refinement 33 to 65 per curved edge. Endpoints independently reread in existing WASM build. Finite point set only, not full surface global-extremum proof; may exceed center-axis length.",
+  "user_instruction": "Schräg liegende stäbe über diagonale länge zwischen ässersten punkten"
+}

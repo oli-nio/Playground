@@ -1,0 +1,61 @@
+{
+  "status": "PASS_TECHNICAL_READABILITY_UNVERIFIED",
+  "source_model_sha256": "89ba1a6fd1c8a6c8fb22c991e96a581bf663380aed14ecbdbabf3245a5c02a88",
+  "baselines": [
+    {
+      "root": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODUL_ZUSCHNITT_PILOT_V0_2026-10-21",
+      "files_checked": 221,
+      "modified_or_missing": [],
+      "new_files": [],
+      "status": "UNCHANGED"
+    },
+    {
+      "root": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_SENCKENBERG_MODULPILOT_V0_1_2026-10-21",
+      "files_checked": 242,
+      "modified_or_missing": [],
+      "new_files": [],
+      "status": "UNCHANGED"
+    }
+  ],
+  "byte_identical_reused_files": 179,
+  "image_guid_bom_mapping": "PASS",
+  "all_153_original_parts_once_in_bom": true,
+  "bom_rows": 67,
+  "focus_full_module_guid_sets": {
+    "S02": 21,
+    "S03": 18,
+    "S04": 21
+  },
+  "pixel_bound_markers": 12,
+  "all_extra_objects_visible_in_selected_corner": true,
+  "matched_cameras": "PASS",
+  "html_references_missing": [],
+  "html_ids_unique": true,
+  "image_files_verified": 172,
+  "native_form_changes_proven": 2,
+  "independent_native_edge_controls": [
+    {
+      "axis": "Y",
+      "independent_native_edge_evaluation_outside_target_conservative_bbox_mm": 0.20000000013442332,
+      "edge_evaluations": 8514,
+      "status": "SUPPORTS_PROVEN_FORM_DIFFERENCE"
+    },
+    {
+      "axis": "X",
+      "independent_native_edge_evaluation_outside_target_conservative_bbox_mm": 0.20000000000436557,
+      "edge_evaluations": 8514,
+      "status": "SUPPORTS_PROVEN_FORM_DIFFERENCE"
+    }
+  ],
+  "one_minute_human_readability": "UNVERIFIED",
+  "html_browser_layout": "BLOCKED_BY_FILE_PROTOCOL_POLICY_NOT_CIRCUMVENTED",
+  "asset_visual_inspection": "COMPLETED_SEPARATELY",
+  "limits": [
+    "Full trimmed-face equivalence not certified; ordered native controls/edges/topology and samples are the checked scope.",
+    "Original UNKNOWN manufacturing status not promoted.",
+    "Three CAD hardware geometries are not asserted to be three installed connectors."
+  ],
+  "nas_originals_accessed": false,
+  "original_model_copied": false,
+  "new_scanner_database_scheduler_service": false
+}

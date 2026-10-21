@@ -1,0 +1,522 @@
+{
+  "source_sha256": "89ba1a6fd1c8a6c8fb22c991e96a581bf663380aed14ecbdbabf3245a5c02a88",
+  "rows": [
+    {
+      "study": "S01",
+      "category": "NATIVE_RECTANGULAR_PLATE",
+      "material_hint": "BUCHE_MTPLX_8mm",
+      "material_status": "LAYER_HINT_ONLY",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": 8,
+      "count": 2,
+      "length_lfm": null,
+      "area_m2": 1.105210346365639,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S01-P004",
+        "S01-P070"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S01",
+      "category": "NATIVE_RECTANGULAR_PLATE",
+      "material_hint": "Glas_ESG_6mm",
+      "material_status": "LAYER_HINT_ONLY",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": 6,
+      "count": 2,
+      "length_lfm": null,
+      "area_m2": 2.257085175317392,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S01-P055",
+        "S01-P056"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S01",
+      "category": "PROCESSED_ROD_PROXY",
+      "material_hint": "BUHCE_STAB_40mm",
+      "material_status": "LAYER_HINT_ONLY",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": 40,
+      "thickness_mm": null,
+      "count": 4,
+      "length_lfm": 8.400000000000002,
+      "area_m2": null,
+      "measure_status": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "parts": [
+        "S01-P014",
+        "S01-P021",
+        "S01-P038",
+        "S01-P054"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S01",
+      "category": "PROCESSED_ROD_PROXY",
+      "material_hint": "BUCHE_STAB_30mm",
+      "material_status": "LAYER_HINT_ONLY",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": 30,
+      "thickness_mm": null,
+      "count": 3,
+      "length_lfm": 3.9070884238543893,
+      "area_m2": null,
+      "measure_status": "SAMPLED_NATIVE_BOUNDARY_DIAGONAL",
+      "parts": [
+        "S01-P024",
+        "S01-P028",
+        "S01-P069"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S01",
+      "category": "PROCESSED_ROD_PROXY",
+      "material_hint": "BUCHE_STAB_30mm",
+      "material_status": "LAYER_HINT_ONLY",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": 30,
+      "thickness_mm": null,
+      "count": 3,
+      "length_lfm": 1.80000000000008,
+      "area_m2": null,
+      "measure_status": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "parts": [
+        "S01-P030",
+        "S01-P034",
+        "S01-P065"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S02",
+      "category": "NATIVE_STRAIGHT_ROD",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": 30,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": null,
+      "count": 2,
+      "length_lfm": 2.604034487884972,
+      "area_m2": null,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S02-P002",
+        "S02-P015"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S02",
+      "category": "NATIVE_STRAIGHT_ROD",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": 39.999999999992724,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": null,
+      "count": 3,
+      "length_lfm": 6.0,
+      "area_m2": null,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S02-P004",
+        "S02-P011",
+        "S02-P019"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S02",
+      "category": "NATIVE_RECTANGULAR_PLATE",
+      "material_hint": "Ebene 01",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": 8,
+      "count": 2,
+      "length_lfm": null,
+      "area_m2": 2.043493971161852,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S02-P001",
+        "S02-P018"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S02",
+      "category": "NATIVE_RECTANGULAR_PLATE",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": 8,
+      "count": 2,
+      "length_lfm": null,
+      "area_m2": 1.0597956925825778,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S02-P003",
+        "S02-P014"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S02",
+      "category": "PROCESSED_ROD_PROXY",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": 30,
+      "thickness_mm": null,
+      "count": 4,
+      "length_lfm": 3.108068975769993,
+      "area_m2": null,
+      "measure_status": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "parts": [
+        "S02-P005",
+        "S02-P009",
+        "S02-P012",
+        "S02-P013"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S02",
+      "category": "PROCESSED_ROD_PROXY",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": 40,
+      "thickness_mm": null,
+      "count": 1,
+      "length_lfm": 2.0000000000000004,
+      "area_m2": null,
+      "measure_status": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "parts": [
+        "S02-P021"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S03",
+      "category": "NATIVE_STRAIGHT_ROD",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": 39.999999999992724,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": null,
+      "count": 3,
+      "length_lfm": 6.0,
+      "area_m2": null,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S03-P001",
+        "S03-P004",
+        "S03-P008"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S03",
+      "category": "NATIVE_STRAIGHT_ROD",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": 30,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": null,
+      "count": 2,
+      "length_lfm": 2.604034487884972,
+      "area_m2": null,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S03-P011",
+        "S03-P013"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S03",
+      "category": "NATIVE_RECTANGULAR_PLATE",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": 8,
+      "count": 2,
+      "length_lfm": null,
+      "area_m2": 1.0597956925825778,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S03-P003",
+        "S03-P007"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S03",
+      "category": "NATIVE_RECTANGULAR_PLATE",
+      "material_hint": "Ebene 01",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": 8,
+      "count": 2,
+      "length_lfm": null,
+      "area_m2": 2.043493971161852,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S03-P006",
+        "S03-P015"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S03",
+      "category": "PROCESSED_ROD_PROXY",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": 30,
+      "thickness_mm": null,
+      "count": 4,
+      "length_lfm": 3.108068975769982,
+      "area_m2": null,
+      "measure_status": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "parts": [
+        "S03-P009",
+        "S03-P012",
+        "S03-P016",
+        "S03-P018"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S03",
+      "category": "PROCESSED_ROD_PROXY",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": 40,
+      "thickness_mm": null,
+      "count": 1,
+      "length_lfm": 2.0000000000000004,
+      "area_m2": null,
+      "measure_status": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "parts": [
+        "S03-P017"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S04",
+      "category": "NATIVE_STRAIGHT_ROD",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": 39.999999999992724,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": null,
+      "count": 3,
+      "length_lfm": 6.0,
+      "area_m2": null,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S04-P003",
+        "S04-P017",
+        "S04-P019"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S04",
+      "category": "NATIVE_STRAIGHT_ROD",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": 30,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": null,
+      "count": 2,
+      "length_lfm": 2.604034487884972,
+      "area_m2": null,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S04-P008",
+        "S04-P014"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S04",
+      "category": "NATIVE_RECTANGULAR_PLATE",
+      "material_hint": "Ebene 01",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": 8,
+      "count": 2,
+      "length_lfm": null,
+      "area_m2": 2.043493971161852,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S04-P007",
+        "S04-P013"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S04",
+      "category": "NATIVE_RECTANGULAR_PLATE",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": 8,
+      "count": 2,
+      "length_lfm": null,
+      "area_m2": 1.0597956925825778,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S04-P009",
+        "S04-P018"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S04",
+      "category": "PROCESSED_ROD_PROXY",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": 30,
+      "thickness_mm": null,
+      "count": 4,
+      "length_lfm": 3.1080689757699784,
+      "area_m2": null,
+      "measure_status": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "parts": [
+        "S04-P002",
+        "S04-P004",
+        "S04-P005",
+        "S04-P010"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S04",
+      "category": "PROCESSED_ROD_PROXY",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": 40,
+      "thickness_mm": null,
+      "count": 1,
+      "length_lfm": 2.0000000000000004,
+      "area_m2": null,
+      "measure_status": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "parts": [
+        "S04-P020"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S05",
+      "category": "NATIVE_STRAIGHT_ROD",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": 40,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": null,
+      "count": 4,
+      "length_lfm": 0.4,
+      "area_m2": null,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S05-P003",
+        "S05-P011",
+        "S05-P017",
+        "S05-P020"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S05",
+      "category": "NATIVE_RECTANGULAR_PLATE",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": 16,
+      "count": 1,
+      "length_lfm": null,
+      "area_m2": 0.859104,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S05-P016"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S05",
+      "category": "NATIVE_RECTANGULAR_PLATE",
+      "material_hint": "Ebene 01",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": null,
+      "thickness_mm": 8,
+      "count": 1,
+      "length_lfm": null,
+      "area_m2": 0.8872439999999975,
+      "measure_status": "NATIVE_PRIMITIVE_CONFIRMED",
+      "parts": [
+        "S05-P023"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S05",
+      "category": "PROCESSED_ROD_PROXY",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": 30,
+      "thickness_mm": null,
+      "count": 2,
+      "length_lfm": 1.35813709963817,
+      "area_m2": null,
+      "measure_status": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "parts": [
+        "S05-P002",
+        "S05-P004"
+      ],
+      "production_quantity": null
+    },
+    {
+      "study": "S05",
+      "category": "PROCESSED_ROD_PROXY",
+      "material_hint": "Default",
+      "material_status": "MATERIAL_UNKNOWN",
+      "diameter_mm": null,
+      "nominal_diameter_hint_mm": 40,
+      "thickness_mm": null,
+      "count": 4,
+      "length_lfm": 3.000000000000001,
+      "area_m2": null,
+      "measure_status": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "parts": [
+        "S05-P005",
+        "S05-P006",
+        "S05-P007",
+        "S05-P012"
+      ],
+      "production_quantity": null
+    }
+  ],
+  "scope": "Per-study alternatives only. Native and approximate quantities separated; material labels are not confirmed stock materials."
+}

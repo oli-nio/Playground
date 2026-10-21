@@ -1,0 +1,3501 @@
+{
+  "source_sha256": "89ba1a6fd1c8a6c8fb22c991e96a581bf663380aed14ecbdbabf3245a5c02a88",
+  "groups": [
+    {
+      "guids": [
+        "03f76145-1bda-4aa8-9562-b8554d1d783b",
+        "08b8fe84-0be1-4e50-b44f-34b82d38b061",
+        "1502ce86-8ed6-4502-b504-b602b1de41e9",
+        "15cb3d1e-4117-40e6-b7ef-6ba65664e1a4",
+        "1e753d64-d387-4ce7-a260-a81779553662",
+        "2445a939-8021-4df9-94fe-e09d5c312482",
+        "271c58dd-4c4b-43c6-92f9-9dec8f3ed08a",
+        "2938c573-6537-4a83-9a19-d136325173f1",
+        "39dc77c8-e38c-4042-8dd6-73629e498dbb",
+        "3cfe2a8d-2b88-4b8e-a248-ea563fe59772",
+        "4212e7e4-673b-4665-a6bf-f265def0731d",
+        "468411b1-eb5b-4478-a39e-24b966bb6de9",
+        "4a09fbf5-a761-4e0c-adcf-6252b4708b98",
+        "4eb76095-fbf0-4ff1-9371-1ed425e3d348",
+        "50b4db0e-8a9a-45dd-a211-89e5471ddb5f",
+        "589c5fdb-d8c6-4941-817a-bd421c97e3b0",
+        "58e0f79b-2277-4f3c-a18a-45134ebbda79",
+        "5a377855-9fcb-4dbc-bab4-5824c8508b75",
+        "64a83160-5eed-4216-a865-6e0cde1fd97c",
+        "6eb3178b-64c0-4708-8ade-b9b00b6822a6",
+        "7416ad87-cadd-40fe-9561-69ca34259a33",
+        "78f2717d-a95b-4c76-89f7-635b0a0e89f8",
+        "7ecfada4-ac39-4a7c-9fd2-41465c191e52",
+        "8273c751-4f6d-4126-9cd5-f2938a845c9c",
+        "89fb7456-fb21-4a38-b7af-81fd36415889",
+        "8e60bd0a-9ee5-4cd8-bb2a-70996de2d293",
+        "9331211f-4afa-474f-8bf5-f09db21c077a",
+        "9a216eb8-3995-4ddd-9b2d-c2ec51629d3b",
+        "a0d9c8e0-403e-47d0-ac9b-ef4e38915ca5",
+        "acbb717d-c3dd-4b4b-bfed-e9614e7f9fa2",
+        "c4a0a9b3-1839-4473-bacf-c19a88b56f2a",
+        "d5b718fe-0cdb-4ce1-9666-b9f304dc0a7e",
+        "d7b950ca-b3b5-433b-94b4-62f6e69c1a35",
+        "d9e8cc9d-e2b2-4a9c-b72c-99cced0f65c6",
+        "da426a0d-541c-420b-abbd-ddc4531946de",
+        "e7848c61-33b6-4e3d-9d8d-0b2141bff014",
+        "e7c6a7c7-5371-4dd1-946b-7c2967943f11",
+        "eb25fd39-d349-4a7b-acf7-159dbec3ddeb",
+        "edb577d9-a24b-4843-8903-57b5a273e578",
+        "f2687276-1755-4659-8829-6cedaf094006",
+        "f35d448c-3852-48c7-ba38-7337696aa387",
+        "f8421971-2e1f-4e55-a4fc-c7e74cc77cdb",
+        "fb81a949-7df6-45fd-83b1-71c126863d63"
+      ],
+      "count": 43,
+      "bbox": {
+        "min": [
+          12338.870562514314,
+          -25693.1709131241,
+          0.0
+        ],
+        "max": [
+          12386.87056251431,
+          -24976.971686934834,
+          2100.0
+        ]
+      },
+      "layers": {
+        "Default": 24,
+        "DIN912_M8-30": 6,
+        "M8_Gewundemuffe_DIN7965": 12,
+        "Einschlagmutter_TS3L": 1
+      },
+      "primitives": {
+        "CAPPED_CYLINDER_OTHER": 18,
+        "UNKNOWN": 24,
+        "RECTANGULAR_SOLID": 1
+      },
+      "id": "G01",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "0cb7ef1c-a4b1-46cb-937a-7c9d6613f366",
+        "14e2f8d7-db81-4642-bba8-16e0f1d5959b",
+        "2b87e05b-4499-4345-a801-e446ec91ade6",
+        "6a0589e5-e63d-4dfd-90d9-40c24949090e",
+        "91128a81-3ab9-4dcf-85f0-aaffdca349b5",
+        "967f287c-b5cd-4d30-9d70-77dd85d498bb",
+        "9d741235-9059-4846-9fea-f534cf4f3828",
+        "a1a8389b-08a1-4bcb-85c7-24c9e0b8e565",
+        "aa0b55e5-3d02-430a-a325-3d3feeffe993",
+        "b930319c-6948-46a5-9665-6992accbcf97",
+        "e1cf4132-afe3-4fe4-bd91-a8db957037b4"
+      ],
+      "count": 11,
+      "bbox": {
+        "min": [
+          13775.728078655437,
+          -24526.013493518683,
+          1980.9999999999986
+        ],
+        "max": [
+          15116.526864399666,
+          -23894.252124155482,
+          1991.7000000000046
+        ]
+      },
+      "layers": {
+        "KORPUS-VERBINDER": 9,
+        "BUCHE_MTPLX_8mm": 2
+      },
+      "primitives": {
+        "UNKNOWN": 11
+      },
+      "id": "G02",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "013c37eb-7140-48b8-8807-a4d27bfece90",
+        "0197f36a-4eb1-40ec-b061-891b0d61e45c",
+        "01af0d4c-ed23-4f04-b07e-ada803670581",
+        "059a6e64-5611-4745-bdcf-87a575dbc79b",
+        "05f71441-2427-41fc-91c2-703c7b7d35db",
+        "0912d1a7-d84a-49f2-80e3-40f9a44f671c",
+        "1192bc51-dcc5-4898-ae1d-d9ae668b6978",
+        "13583016-8a9c-405b-979f-ed9ffbaa1c11",
+        "14f7a561-ffe2-47f2-9f31-9ee7ad92805e",
+        "19804e18-aa05-4327-a542-b36bb75014af",
+        "1b1987d4-d741-4aad-8b04-dcb2fb63a760",
+        "1d4c6e17-8244-42ce-a903-2458bd4ac592",
+        "1d7e4ba2-5bf8-450e-bf57-2c468dcd7061",
+        "1ead16fa-7951-4edd-9d46-9e327e629afe",
+        "20b02f3c-acda-4a68-b9f6-db9ab0028ee5",
+        "2781176b-d30a-465d-8da1-a3f9231d9ccd",
+        "29b6e052-c015-456e-99b5-b038e700439e",
+        "2bf5643d-ef90-4f6f-aca8-c40dd37e2737",
+        "2cbac45f-54e2-4ed4-a1aa-4b938e3b952a",
+        "337d9506-e84f-462e-9a7f-09d4997f85fe",
+        "3656e979-a93e-41bc-94d7-8c18e402f4c0",
+        "374629b4-2027-4dc0-900b-8876340fbb6b",
+        "3af0aa1b-99fe-4273-b163-0c17c6fca75a",
+        "41eee5f5-c6fa-4f5d-9abe-798f5d99f25b",
+        "45c3c3e5-e9aa-4485-bcfb-51676561f325",
+        "48f4f09c-cdfb-461c-af5e-f158179cb451",
+        "4f5fbe73-3140-4456-8f0e-f0cb1af221fb",
+        "5785393d-5128-462a-a3b7-969ad1342bd6",
+        "59959240-0155-485f-9cc6-254a280e06be",
+        "59c67b3d-ed56-4fb2-b565-cc1abd8d0cf0",
+        "5ab25b92-4858-42d8-afe8-6d39f6025b0d",
+        "5c971636-84ef-460c-ab44-cd1c8b8ddb64",
+        "600cceae-5398-4318-b94f-8ed514415cd6",
+        "6d5a6bc6-c61f-4b7f-92ee-b6954b9f7640",
+        "6e0adccf-dbab-4ac1-9e59-023f35c31fc0",
+        "6fcfdcb0-2ca6-4e7b-91bc-eb0075a7e359",
+        "7e9d84cb-23b3-4f38-a1d4-9a8239911465",
+        "7f40d1be-aa51-4268-a2f9-20eb8431e4b3",
+        "839d5b88-4291-48eb-aca4-bc6b57d49f93",
+        "85caebf0-3a74-456c-8344-3a16a887e381",
+        "86740115-6cf5-4999-9d37-a4ed3d6040cd",
+        "87c2095c-a0ff-43ab-afe3-ba900290b13e",
+        "89387961-ca72-45e6-9484-e723cdf2d87d",
+        "8c22dc40-18b0-4fe6-a989-a45e8e042027",
+        "9acc089f-52f5-42ac-bca9-84aec08b328b",
+        "9cf819bf-d43b-4e3e-9c1d-80dc79d281ec",
+        "9e8c1b36-c660-40d5-a382-6f5630eb8a5b",
+        "a5e11eb2-8278-4ae3-9b96-5c739a7a2d4d",
+        "ac7c3fa7-4bdb-4fe6-85b0-8830e596c850",
+        "b0d955fb-d74f-40c6-bafa-253bf9e223aa",
+        "b1fb4c05-0f32-43ea-8442-5a73ab343892",
+        "bc9cf64d-3a0b-4976-b7c8-e2cdd12bb478",
+        "c2d6200f-f400-4f20-9d07-c2959f405aa9",
+        "c5398de1-4500-4f57-8b61-33aedb569755",
+        "c5c9ca65-56eb-4c39-b204-5b71708ce7f4",
+        "c9c7fa44-04fa-4cc9-9c44-def94f832a22",
+        "cc0535cc-3e86-4629-ac0e-c836b9aaa612",
+        "cd36aa9f-1fe3-471f-b941-63bd756aee41",
+        "ce784795-691a-4624-ab68-75f8db82ab9c",
+        "d31d6057-d7c4-4977-80c9-f7882e02e69d",
+        "d4c1f571-1f7a-45f8-98b4-0a718655e4be",
+        "d854fada-2ddc-4d3f-8957-f6c8efd636c6",
+        "e47f50dc-8841-4cb0-bbbf-3caed22127e3",
+        "e664b66f-ee27-4f0a-b9c7-a3833aa859c6",
+        "ed6efb92-75d4-4d51-ab63-d274c02b17af",
+        "f491cf67-ec1f-41cb-9a73-6ea77479f17f",
+        "fc482b1f-a9fe-4057-b2c9-6e53be13fef5",
+        "ffba1971-64fa-4fb3-9e5f-2ceadb094388",
+        "ffcb8d2d-d2e3-4551-b139-82dc29c40c8b",
+        "ffdf1c81-6ac0-445d-828b-22aa55940ac1"
+      ],
+      "count": 70,
+      "bbox": {
+        "min": [
+          13713.711978214338,
+          -23566.022115489977,
+          0.0
+        ],
+        "max": [
+          15227.938425021071,
+          -22875.29438784056,
+          2100.0
+        ]
+      },
+      "layers": {
+        "BUCHE_STAB_30mm": 6,
+        "BUCHE_MTPLX_8mm": 2,
+        "Glas_ESG_6mm": 2,
+        "Glasschutz-Klebeband": 7,
+        "Abdeckkappe": 13,
+        "BUHCE_STAB_40mm": 4,
+        "DIN912_M8-30": 12,
+        "M8_Gewundemuffe_DIN7965": 24
+      },
+      "primitives": {
+        "UNKNOWN": 66,
+        "RECTANGULAR_PLATE": 4
+      },
+      "id": "G03",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "2b0177b1-2977-4366-9cdb-fb7e9a61976c"
+      ],
+      "count": 1,
+      "bbox": {
+        "min": [
+          13825.728078655438,
+          -23232.950542614715,
+          1980.9999999999989
+        ],
+        "max": [
+          13825.728078655438,
+          -22936.737844242514,
+          1991.0
+        ]
+      },
+      "layers": {
+        "BUCHE_MTPLX_8mm": 1
+      },
+      "primitives": {
+        "UNKNOWN": 1
+      },
+      "id": "G04",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "162e8589-5cae-4ba8-af14-780e7ed16964",
+        "201d9dc1-d68a-42b5-be96-ecc9ab58ddeb",
+        "211fac58-9c9b-4900-a24c-0fd3a9ef7f22",
+        "2c15516e-85cf-4585-adfa-cbadac92645c",
+        "304ca5b2-295b-477e-8b09-c019d802982a",
+        "407f0039-7276-415e-be08-a953b94793cb",
+        "45c1f18c-f25e-45d1-ad77-7ae0bbd91a7b",
+        "51038648-3e80-4bd4-95ad-7e9129e71141",
+        "59787ede-5ca9-4a04-854e-f15e639a0c11",
+        "6117d509-66c8-4dcc-bd41-23e00e2c86cf",
+        "62b153ea-21ce-40a7-8d5c-a095b5669f94",
+        "77536d7c-3285-4ed8-9daf-bd864131f202",
+        "7c982821-9c48-466d-983b-0226aa386ac2",
+        "820d313b-8997-44a8-a1fd-71d585656d84",
+        "8c6aace8-3d1f-48d7-9959-ef4064eaa48b",
+        "8f136fdf-139d-40be-9dc0-8f7d6e950b50",
+        "9575265f-dc3c-4e1f-bacd-a8eb1722eeb7",
+        "9ab2c203-8253-44b4-aad7-8cfa730bd9e3",
+        "ea8b2a9a-7648-4a64-b24c-ce5165a29c6a",
+        "f08876b9-e4f7-4e02-a679-a761eb18b2d3",
+        "f40e6b73-b57a-43e3-9caa-7486642e796a"
+      ],
+      "count": 21,
+      "bbox": {
+        "min": [
+          13665.517732290047,
+          -22566.223839884005,
+          0.0
+        ],
+        "max": [
+          15227.938425021048,
+          -21843.803147153016,
+          2000.0
+        ]
+      },
+      "layers": {
+        "Default": 16,
+        "Ebene 01": 2,
+        "KORPUS-VERBINDER": 3
+      },
+      "primitives": {
+        "UNKNOWN": 12,
+        "STRAIGHT_ROUND_STOCK": 5,
+        "RECTANGULAR_PLATE": 4
+      },
+      "id": "G05",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "2259f746-afa4-4f25-92f0-23b38c52f48f",
+        "74544234-3ad0-4102-8919-e2a7ef520424",
+        "793c9a30-93a7-4965-a440-231cb24da83d",
+        "8c63b21d-26c5-4245-aad0-3258e598844f",
+        "8ee2d1b0-fc2b-43e5-9013-5f32920e9135",
+        "e2182411-7e9e-4b32-841d-b2b7546ecf70"
+      ],
+      "count": 6,
+      "bbox": {
+        "min": [
+          11681.49105727715,
+          -22555.01349351862,
+          0.0
+        ],
+        "max": [
+          13212.054933780075,
+          -21860.09003793293,
+          2000.0
+        ]
+      },
+      "layers": {
+        "Default": 6
+      },
+      "primitives": {
+        "STRAIGHT_ROUND_STOCK": 3,
+        "UNKNOWN": 3
+      },
+      "id": "G06",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "0686988b-03ab-40e5-b536-5c69472f6a32",
+        "0822b7b2-7a59-43a9-b204-a79e1b32c924",
+        "149c6fbb-58f3-42b8-a257-b2300b296b63",
+        "3a64285b-bf71-4a8f-b962-154af6c5fd94",
+        "3dec3e66-20e1-45bf-bac9-cc490cc6d7da",
+        "407a2c10-c352-49fc-8818-203dd2e5df6a",
+        "49bc8931-e1bb-4e41-9036-0a9cbf365862",
+        "4e30559b-c108-4a8b-aab4-ab0dbc27becb",
+        "50d73629-3b20-4604-8acf-446906d4a6d5",
+        "59b648cf-9874-449e-9d19-de284f7ff4c7",
+        "5cd7b64f-78a3-4abb-9030-249e14656314",
+        "6bec8338-046d-42ac-aef4-187847627945",
+        "8f9ece63-e1ec-4d06-a71a-50cea74bd822",
+        "a21d1366-e275-45f0-a0bf-81109c46a904",
+        "a64bb6dd-cd4a-4282-b3c1-45aa6eb7eae8",
+        "bda0a2dc-3c9e-48d6-aace-43730b0c0501",
+        "fecd792e-0ec4-4727-a81f-f0f6e0dd6d74",
+        "fffcc5cb-a784-4b87-bbea-2acc51cf6920"
+      ],
+      "count": 18,
+      "bbox": {
+        "min": [
+          13665.517732290047,
+          -19226.628506368823,
+          0.0
+        ],
+        "max": [
+          15227.938425021048,
+          -18504.207813637837,
+          2000.0
+        ]
+      },
+      "layers": {
+        "Default": 16,
+        "Ebene 01": 2
+      },
+      "primitives": {
+        "UNKNOWN": 9,
+        "STRAIGHT_ROUND_STOCK": 5,
+        "RECTANGULAR_PLATE": 4
+      },
+      "id": "G07",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "044b8623-3364-4f8e-bcb3-6c00ba31d732",
+        "0dae11da-20d7-4962-8000-9c9f3bc8a2e1",
+        "1df44da5-eb71-4743-b25b-9a1036a05940",
+        "21a9b81c-77eb-493c-b763-a23e206f3d03",
+        "2985c688-eeee-4b54-bbd0-ce14b6c3fc62",
+        "2c30b10e-f501-42e9-b403-aff34f658e4a",
+        "2efe4139-dbb4-43a8-aa5c-541a7662919d",
+        "30dc6efd-2445-4a0b-b170-3616d3f8bdd4",
+        "3fb417df-0a5d-42a0-9d3b-3b8aff3843cf",
+        "4c4f9a13-903c-4b85-a224-7f7f885e1f5c",
+        "5d8417fb-04a2-45d9-a9ac-7ae88c83c656",
+        "6301b313-88e7-47de-b2cc-03ddf7c494b7",
+        "6466cfd9-effb-4bd1-b10f-4b3c7a611b73",
+        "65c54c0a-7e93-4abf-bb0b-adf603b98308",
+        "6a57ed12-4187-436a-8812-73c604a2a416",
+        "73ccbc2b-226c-47ab-ac24-5ccfab2e0f01",
+        "760c7d7a-5915-46d9-864f-73a26c100e5b",
+        "7ba882f6-e57f-43e7-88fc-f7da60768b30",
+        "7e199a82-3d6c-4298-8451-57d743754fb7",
+        "85afb0d7-4e6c-4fde-a30e-2f03115420fa",
+        "8cb16d0c-a0ff-467a-876f-cf204628fab2",
+        "8d6b88cd-4ce0-4f3f-9f6d-4fe5ee60a3b7",
+        "911ccf9b-249a-46e5-9382-3a1832f97519",
+        "96f50b57-0944-4d85-88c2-2d74879e03ae",
+        "a47dc471-579b-4be3-b690-2cc0a6d2a28b",
+        "ad59370f-c8d2-4221-951e-4b57fcf86e0d",
+        "b46ba573-467b-4c0a-bc50-4142879e7f28",
+        "b55750c7-6455-4ce0-b3dc-fb57f257cbb4",
+        "c175800e-33a0-4b48-9d54-341aab40eb10",
+        "c3ca48a9-646a-445c-9ffe-e6ad0fa65686",
+        "c5b062a9-abf8-4893-86c3-dc70c40d6329",
+        "d764e47b-1c99-4082-baa7-2a5b050459c2",
+        "d908ff29-f5db-4865-9eb2-eb9f0e96ec9e",
+        "d97991d7-c38c-4078-b051-a73e4b8fc3ab",
+        "e1672391-6c3b-4424-a361-afdf45b19913",
+        "e1da70e2-58c8-4eab-a61e-cef5a45a888f",
+        "e2654905-3b8a-4567-b885-8e4f8ca4eb40",
+        "eee7d7cb-0443-454a-96e1-e09aa4801579",
+        "ef4bac9c-2ac1-4e45-9c04-e4211a14603d",
+        "f16d40f1-a6ac-4110-9280-33ab8a3cbb82",
+        "f20def0b-adde-4993-8bd2-f221d756fc9b",
+        "f5f2e4b1-ea22-471e-82f1-2de6ca8c4f33",
+        "f7a1954c-37ff-4c2d-bfb0-ab6df0a0bb4c",
+        "f7e70e7a-276a-4dfc-ad6e-f3d873564732",
+        "fb790858-0b2c-4fb0-95fb-1a013cf70077",
+        "fd0a6f4b-6f5d-4b8b-87a8-0279ed77b9c0"
+      ],
+      "count": 46,
+      "bbox": {
+        "min": [
+          16030.280779058736,
+          -18457.666984323027,
+          0.0
+        ],
+        "max": [
+          17405.780779058692,
+          -17735.24629159172,
+          2000.0
+        ]
+      },
+      "layers": {
+        "Default": 14,
+        "Ebene 01": 2,
+        "M8_Gewundemuffe_DIN7965": 20,
+        "Oesenschraube_M8": 10
+      },
+      "primitives": {
+        "UNKNOWN": 39,
+        "RECTANGULAR_PLATE": 4,
+        "STRAIGHT_ROUND_STOCK": 3
+      },
+      "id": "G08",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "07286a6a-3bb2-43da-b77a-6513a59258f8",
+        "0a65a961-e82f-49fa-9617-03f0968ef5fb",
+        "17aaa2b8-17d9-4fa2-8a0e-49535e8c3507",
+        "185aab41-38e6-46ca-8571-491813194a8f",
+        "1d2e5371-19f9-4b4b-88db-45fdcc0cbab5",
+        "200a400b-663a-4e9b-8524-557a974de4ec",
+        "28eb9852-9bd6-4999-b6d8-8e4de5ce7df2",
+        "35f8763d-a6a2-43e2-a432-cee97c7800e8",
+        "363d278c-f2cc-40c8-b137-4c3ac87a5c34",
+        "3c4ceecd-c3a8-473d-aaf4-bfab798379fa",
+        "3f91b48f-e24f-4f34-ab57-11ee3472d3d5",
+        "428d62d2-121b-4991-9a57-1e84f21e9c93",
+        "4c7c08fb-5f75-47e6-9c3f-387923e7ee25",
+        "51858702-af5e-4082-a8d5-2fcf4cbbf720",
+        "624acae1-84dc-49a1-9df6-4fb52e2ed661",
+        "6750cde5-9a69-4381-9423-22b34cf543b1",
+        "74e53163-cf0e-4a9f-829c-e19d58726aef",
+        "76267864-f2da-479d-a9f7-7d74ca590854",
+        "86d14084-bf36-4175-afc1-6166eb6627a4",
+        "889b4745-6a56-40a3-82d8-e1b75273082a",
+        "896e73c9-6d16-4322-946c-0c726f739036",
+        "89985b96-02cd-4a8b-a3eb-bc42123d1fb4",
+        "899d4788-1bea-47c8-b1b0-5721afcf70c3",
+        "8a35b329-be09-4082-9f02-206e2b363a4c",
+        "8b9101be-c5b2-48ca-ba60-4eee38b5ec85",
+        "935eb418-094b-4df3-acd1-2b93eb2f30b0",
+        "95d0125d-e13d-4729-a14d-e1edc4c7ca0e",
+        "96302db7-bc53-48c1-8209-b2d683eeda5d",
+        "965f58d0-e365-40db-9032-c6de0fe4f233",
+        "9924c46c-f9e3-4fcc-b11b-4861413d0a7a",
+        "9bf61fa2-25a2-41da-9c1a-56068b5a3310",
+        "9f90644f-432e-47b2-8967-7032fb2b226c",
+        "b8d4e07d-31f2-4baa-a7dc-5b2102c47749",
+        "bcc1c8df-856a-42f2-9af4-a9a589bf68fc",
+        "c915986e-6c2e-4ee1-b74f-5e279aa3d7c4",
+        "cbc95d23-5b57-4fab-ad87-0499e0ac4646",
+        "d096513a-1571-4dcf-aa99-37976115dd4f",
+        "d699af11-af00-4604-97fb-2ff8ce782feb",
+        "d764045f-7d2f-40ea-ad8e-82630579e74a",
+        "e13329df-eab2-467f-b4e3-7cbf3d99ccc0",
+        "e2b7e332-abf9-4e56-8ef4-8f1cac7ad67b",
+        "e80bafee-4cfc-44a9-9556-41435e35b81f",
+        "e8bb6826-e79f-424c-b12f-ee23e6a4d211",
+        "ec1a1a1a-5fd2-409a-85fe-4064474a1b6d",
+        "ec431d3c-689f-4dc6-b8ec-9ea8082e175c",
+        "ef1e5285-b0f0-4fac-9f6b-3a5d7e2debff"
+      ],
+      "count": 46,
+      "bbox": {
+        "min": [
+          18030.280779058732,
+          -18457.666984323027,
+          0.0
+        ],
+        "max": [
+          19405.780779058692,
+          -17735.24629159172,
+          2000.0
+        ]
+      },
+      "layers": {
+        "Ebene 01": 2,
+        "Default": 14,
+        "M8_Gewundemuffe_DIN7965": 20,
+        "Oesenschraube_M8": 10
+      },
+      "primitives": {
+        "RECTANGULAR_PLATE": 5,
+        "STRAIGHT_ROUND_STOCK": 3,
+        "UNKNOWN": 38
+      },
+      "id": "G09",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "033f79d4-48f7-4887-b322-1ea063563998",
+        "038f4404-ecc4-4fb0-b7cc-dcbd8624cc07",
+        "0657c8ad-5fe2-4159-b1a0-388659c12650",
+        "06dae93b-7696-46b4-b4a6-805836b35144",
+        "083e85c4-e1f2-45a4-bf71-7ad4580ec54f",
+        "0cbf511f-e302-48b3-acd2-c24c366b72af",
+        "0edbeac0-9aac-4f8f-bfea-141371bc992d",
+        "10f7ce0f-db80-4010-8760-c86dad19f091",
+        "13020f26-23a0-49d0-8fd5-27e3e29a8636",
+        "179acad5-ec37-454c-acd3-d3a258ef99e9",
+        "1cdd1734-d479-4ee5-8b62-159a2475287a",
+        "254abfa9-1881-4960-b071-0bc159d21487",
+        "2b5ad064-1132-483a-9e74-1f31867a2e77",
+        "2f6b51aa-8e51-4032-a319-bde2a66064f9",
+        "31600b14-aed1-450c-b6c9-90fd761a68e5",
+        "32bad4e5-7064-4ce3-bd7f-b6538c72175e",
+        "3545be24-6111-42a3-b0ee-6bb25266d6d4",
+        "385d791a-0fb4-42b9-afe5-7c47ad06941e",
+        "38bd760a-40da-42c7-9dc9-f6236f97fb1c",
+        "3d1beeb0-9201-44c9-acec-fb366ab58f2d",
+        "427bb365-1bd0-4645-8773-359706f64152",
+        "492fd5c9-0acb-4527-90d6-46104b267913",
+        "4a9d3302-afa9-4337-9531-3d58423b8aa8",
+        "4ba0832d-19c6-41a4-b881-20a5760bef6a",
+        "4fcab865-24cc-4c58-a910-5b24b093c279",
+        "54156b4e-6c56-408c-96b2-b88100dfdd4a",
+        "5602c2df-767b-4624-8f43-0b5cd961f3b3",
+        "56673f48-040c-4434-a89b-60106ffd9658",
+        "56aa1d99-f9ac-4fe1-9a11-24b70d67dfc9",
+        "57276825-d12e-4e4f-9c16-b95ac76a6eb3",
+        "6276d8a3-450d-4ca3-95b5-d0582e765038",
+        "649425d3-0f4c-426d-af87-0a108d4af164",
+        "6b96c4c6-22dc-4abc-873b-e30aa2b26eea",
+        "722fdd48-c84e-428a-8fcf-ebee6e1f0318",
+        "7427ef18-47d0-4224-8cf0-b9dc644d2aec",
+        "7627de01-e31e-4b77-99f9-370c044c0fc4",
+        "7bbe27ba-fba1-45b4-bff2-2cebb77a1809",
+        "7dbd2687-4559-499e-8bfc-1d2d54ee3e49",
+        "8379e5aa-35ad-42b6-8ae8-13b7793a5e38",
+        "867da8ad-e0d0-455d-bd85-41e1adf72979",
+        "880dd9a8-a77f-4d4f-ae67-5d761bb6c836",
+        "885e53af-9f3a-45b5-805f-bf860d286749",
+        "89cadfe3-057d-4e14-b28b-3d1a999fd7dd",
+        "8c407f88-c370-4404-b79a-bf57a9219ed6",
+        "8d53a3eb-0b10-489e-a2eb-8e6c15792f48",
+        "90b7ca1a-d9f2-4b21-b2f4-3c9ab64b3d34",
+        "919b5ca1-82d3-4329-bbcc-d8a91bdf29c4",
+        "9b58c9ee-bb5d-485c-beaf-f29c76f1e603",
+        "9eb77aca-51e3-419a-8724-5a80f8466e0a",
+        "a2b7e4d1-f124-4b3d-bea3-51f4f4d595b5",
+        "a46062be-bad5-48ba-ae11-541621fae5ad",
+        "a599aa0d-2e9b-4dd9-9c92-d21b763df109",
+        "a6cf2301-b3b6-40df-a023-7ab05d72587a",
+        "a6ed068c-ff02-46c5-a82e-de82002ea508",
+        "a9df42d4-2950-488d-a6cf-105484d1af0b",
+        "af250e6b-247a-4482-8979-3fe473710557",
+        "b1f7e765-d6ed-42b2-ae70-50f70622f153",
+        "b2c5fa98-9e9a-4f89-990f-87772efb8dfe",
+        "b3f06bbb-5eda-40a4-a86c-6054f12ac83d",
+        "b5c42f0c-4191-407c-b2d0-5ced7a5f4c15",
+        "b81d6ada-accc-4432-8ba1-69554cbfbfc6",
+        "b861897a-de76-4ecc-8d64-797c9481753c",
+        "bb2a7873-b855-4f23-a483-80c50a058369",
+        "bbae7b46-d502-4781-9dcc-85adcf2f24a9",
+        "bff0ab52-4588-4b2f-927f-be9643eb2116",
+        "c231c7c5-3e9f-4731-b82b-01b7d676b64d",
+        "c5c7642f-5c36-4b22-803f-db4b4d2a07f6",
+        "c83dd499-889e-4c4b-88f2-892b8e49a5f5",
+        "c869fc77-0412-4570-a1ce-30f94922b005",
+        "caabdefc-a504-4880-9e49-67136a2d8940",
+        "ccba1715-1029-4273-ba4e-023fb0833d85",
+        "cdb93928-b62b-46ac-9324-94e725c2797d",
+        "d160cd65-c6d5-4588-8e60-0b37d985e251",
+        "d2b6e4c9-6d52-4ecc-a2ab-9a23ed637ae5",
+        "d2d0c0cc-81b3-44ca-ac5a-253097412714",
+        "d2e1430a-c195-4268-a7ff-ae61f95ee7a5",
+        "d3f01313-37de-45af-b2da-662b0b69b277",
+        "d6850c50-9f38-42c7-ba14-e1ff113debeb",
+        "d9991b4c-ed02-434b-a1d8-c4950aa33924",
+        "da18f420-58af-4ccd-ae0a-f0179c64c2f6",
+        "dbf582ca-714b-49c9-ad44-46d00d3f9c50",
+        "de17bd7c-0888-4aa0-93bc-ae467c386323",
+        "dff65d87-cc17-42df-87b7-f4a40cf4ee80",
+        "e4bd2d4e-a6f8-4bfc-ac3f-7ead8eee9909",
+        "e5a59456-f65e-4655-b7e6-74c619bef73e",
+        "e981dddd-4e0d-4876-92d1-1fc437b3232d",
+        "ebac3d5d-7ac0-4b16-b5b9-f41072e7a041",
+        "ed0b53a4-6404-4151-a712-fce728b2920d",
+        "ed1b1d4d-85c8-4311-9085-779190de37dc",
+        "ee5e691c-b20b-4dfd-9bd5-8ca9b53455a2",
+        "f22a02c3-6cc3-4b72-9c52-254bac128260",
+        "f277bf12-92aa-4840-9af0-7b152abaff1c",
+        "f32e8285-d153-48f7-b335-3c7c520bfaa2",
+        "f371020e-3d73-4def-bd2a-15eafa9f08bc",
+        "f4fb8d6f-1759-4363-bfae-b1792ba3db97",
+        "fa04f57f-4529-4fe2-85fe-a3c82c16745a",
+        "fafa631e-d36c-42ee-a301-b612c11deb3b",
+        "ff732f04-23ac-4b21-808c-701d182c21f3"
+      ],
+      "count": 98,
+      "bbox": {
+        "min": [
+          17040.81636923241,
+          -17652.70567300447,
+          -4.901000000000041
+        ],
+        "max": [
+          17116.13621211114,
+          -17613.69499488582,
+          4.901000000000041
+        ]
+      },
+      "layers": {
+        "Lamello_Clamex-P-14": 98
+      },
+      "primitives": {
+        "UNKNOWN": 98
+      },
+      "id": "G10",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "0809bb40-1a83-45d8-a445-6d335e2c737b",
+        "0c90fca2-a5c0-45d2-add3-111c1f2839fd",
+        "0deb88ff-f3aa-49aa-9af9-fc202edefe4b",
+        "0e9004ae-1847-4e5c-a675-b390f1c35bb2",
+        "0f133d36-1a5a-4f1d-9f4f-b0ca431ede57",
+        "0f999a1b-6a2e-4b37-8cf4-3cc3916bdd07",
+        "12cf5d55-2736-45e6-ab87-09f0914be866",
+        "1abc4de6-4302-4cf5-916f-c99b7a9b780f",
+        "1b6c9403-710d-4ec9-86b0-30f109617983",
+        "1ea90bf3-74fc-4751-8443-fd9e60254f12",
+        "20d4c8dd-f9c4-4856-a2be-14fe7b5d44be",
+        "220fc60c-c560-42f8-9be3-f604cbab15ec",
+        "25f5cfce-de90-4446-97eb-e1e52a4397f4",
+        "2a2c99d6-21a3-45f8-933a-4364d958feaf",
+        "2ccf7d62-f43a-4da0-a5ae-5adf36b9241a",
+        "2d10177a-a873-472c-bae1-430b2439a1c6",
+        "2f96e1e0-4e38-42b6-8962-352aa3c77899",
+        "30463401-a34c-4eb6-8f0e-c4eb8c9dcc1a",
+        "31286cab-62e4-476b-8137-f956c6a24114",
+        "320e6fa4-07de-438e-9939-561c1319ac65",
+        "3358c1a5-ebee-4f0e-90d9-a9462a681aed",
+        "35cc1950-5cae-4d48-9380-d3a3ce1f8801",
+        "3ae9d753-0721-43ab-822c-2f65c5c81206",
+        "40de21be-aee9-40cb-b6b4-f9d3a0cd1d83",
+        "41ad532f-9295-4427-a067-3ac6017023f4",
+        "42f1c1f3-5cd8-47f4-8b61-2c555a7b3c4f",
+        "431330c9-1947-4602-b906-013ac403591e",
+        "438e5681-ab6a-4bc7-8234-07e350f2974a",
+        "4667a6ae-c19b-448e-9eaa-e3230e29719a",
+        "46f52ef0-5ffe-464b-afd1-63dd78fc3654",
+        "515df168-bac1-4038-9bad-9e3c91de710b",
+        "520fd3cf-bfc6-4289-813e-05d7127aea45",
+        "53153c14-4f48-4bf3-b36b-59057f4e68cb",
+        "5c63c7ae-a92f-4ab9-b099-0fa3a776e548",
+        "604a6af9-002f-4f6a-a842-e0dfcfeaecb6",
+        "61f86ed0-b476-4860-b9fd-084658db5cef",
+        "6497d4d9-55cc-46c4-a636-ee21e5b17008",
+        "6a3ce6b5-778e-4c56-b427-ee06f23776b6",
+        "6c72d93c-9c4b-4d7b-94a1-c72b158f8718",
+        "6f448a5a-b2f4-4b12-b5eb-4a5fe740ba49",
+        "73968bdf-e5f2-4fe3-85c3-19cc43185665",
+        "7448adf5-6675-406f-9781-a343099289ff",
+        "75296d79-bcb2-4d6d-9153-4033067aa6c7",
+        "794f5301-680e-48b5-8683-f1ae3f1dd2c8",
+        "79f44431-4829-4b8b-bb73-fc31d3fa5dc6",
+        "7ed236f8-8cd3-4409-b7f3-7a9ed6a27371",
+        "82361293-3a03-4580-93c2-91ed51525de6",
+        "84116bf3-8f06-4392-b4b3-d697be275e1b",
+        "8521764c-c4d0-45b9-8640-610f50eb5b94",
+        "86483103-e76c-48f0-a7cd-0a168cbc4c40",
+        "891c78ae-291b-49e9-86e3-4dde74b4cf8d",
+        "8ced75ed-f58f-45c6-ab41-70e74b595c38",
+        "8de06d26-953e-4f32-9770-4721e0b9137e",
+        "8fba2eaa-0dc7-4864-9f95-5a6cd901cd9f",
+        "9231bd26-48f3-4242-be9a-97fd40770d08",
+        "9427522a-5171-4b1c-bf9b-8d11f115ca22",
+        "95d60ac8-8abe-452b-9612-277cd1d4d723",
+        "96bc2cb8-7dc8-48cc-b043-0f8b7726e35a",
+        "9ca9361f-7895-4ad9-af87-766e8b016a89",
+        "9df1f601-09b0-4338-8ef1-4cc96f153179",
+        "a08320b0-b8ba-4712-b305-ea64dd3e77e3",
+        "a3df1677-c5cb-42cf-8730-82ed35e3c4d4",
+        "a550a1bf-4e88-424c-8f5c-fa17cbe4a032",
+        "a775e61a-da8d-4bb0-aca2-3e6c0a9ae95f",
+        "a973e2f8-91ff-432f-8a30-b1a5a58af0d1",
+        "adb7c01e-a956-4ad3-806d-5b179206fda0",
+        "afaf842f-7031-4424-8472-80c58b5ce88d",
+        "b2d9facf-e004-4a58-ba3e-f69f3423efa5",
+        "b5d0e661-5cf1-4d2a-bcac-2e53a57fc872",
+        "b7229de3-81ca-4681-92b6-2f4ad1829aba",
+        "b78427f9-3a7d-4ea7-bc41-7613ff537e0b",
+        "b84d5801-9172-421d-aa0c-40adf93ddba9",
+        "bb7787f5-698d-40f3-b49a-c09c486ff40a",
+        "bca6af34-eb1d-4fef-b6b2-63208ac389d9",
+        "bf2d22af-4a4c-4002-a3ba-f45cafa3f670",
+        "c1283d84-0b75-4ade-a819-46e18fb1acef",
+        "c5d71a58-02f9-4fea-9552-9335280c161d",
+        "c5de9c79-b821-4758-85a0-a7e9a24c1279",
+        "c68c7ac4-0933-435b-9678-cfc8204015c7",
+        "ca1a11b5-4828-41d3-9f10-1689b30b9c4d",
+        "cb78ec8f-f673-45c6-b9dd-54ea5e8ebe89",
+        "cc12eeb0-ff4f-4ad7-87c9-b00765ca610c",
+        "cd88c970-1eea-4e80-987b-5f3101c1e014",
+        "cda7746e-1024-4cd0-bde5-7070d3f7af17",
+        "cfd2f7de-4c81-4dfd-89be-339a49fc6d23",
+        "da1c7187-f506-498e-9f82-82299e5d270a",
+        "db22fe21-f54f-41d9-82ee-8731027ac03f",
+        "df0755ca-e081-4f8d-bd2c-9e41abcbaa50",
+        "e055d76f-684b-4de9-bd07-cb3c0809b4df",
+        "e96cf590-efcf-4f4c-9958-902ad8243253",
+        "e9f535ac-4e38-4c00-9237-fe3847cfb309",
+        "f127f675-bf08-48ff-aaf7-4dfd7e654b1d",
+        "f47c7443-2bda-41bc-a780-a2ae794b528e",
+        "f4c3b709-15eb-4d10-95ac-3bcb957b3621",
+        "f7aa8d76-f406-44e7-9f81-cb2d0667a2cd",
+        "fd2e0f11-425f-4b97-8640-df95765632e6",
+        "fe8b1e39-a942-4fa4-bf05-26ad7c33667b",
+        "ff8a8ace-f89d-4662-af39-d0df5c7d8105"
+      ],
+      "count": 98,
+      "bbox": {
+        "min": [
+          19040.81636923241,
+          -17652.70567300447,
+          -4.901000000000041
+        ],
+        "max": [
+          19116.13621211114,
+          -17613.69499488582,
+          4.901000000000041
+        ]
+      },
+      "layers": {
+        "Lamello_Clamex-P-14": 98
+      },
+      "primitives": {
+        "UNKNOWN": 98
+      },
+      "id": "G11",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "0088e029-f46f-4ce3-b1f3-a72c007ef4d6",
+        "0194dc13-461b-4020-a18c-f3421e490d9c",
+        "019cb353-49a7-441b-bfa8-8cd60e73cb45",
+        "034695fd-0c2d-4612-8fb4-4aed38a9cae2",
+        "038e5962-f8bd-4343-9e80-26c4786cb244",
+        "03ccb0f1-a211-43a2-a956-a16c89780420",
+        "04cd51f4-0057-4804-88e5-b55058139999",
+        "06704356-00df-409a-8358-560d6ac75d4d",
+        "075a405b-9672-4881-af4a-9bf29e80e9d2",
+        "078ac11a-ef0b-4cd4-b98f-73aed7935cf0",
+        "07b723da-d31f-4fa6-b924-c76197d18ff6",
+        "0a0f540d-6034-4895-a95a-9274116cb932",
+        "0ce4f324-8ff3-4f9d-add4-6a99244eac55",
+        "0d05b220-6146-4a01-b10b-93bd011f7207",
+        "0e08a433-b1ae-4a13-9fcb-a78f48063884",
+        "0eb571a2-2c9c-49cf-ad91-ec468438478c",
+        "0f87243e-96a3-42b4-833a-66e7a2185ab3",
+        "1083539b-06b3-419f-bf2f-6e669ab3260a",
+        "1109c6db-781f-4402-a873-d68637d6250f",
+        "135ced1f-b69d-47c8-bc75-8627ab5a480b",
+        "144a5327-bb2c-40be-a614-40a47968e17b",
+        "1963e2c7-10cd-4664-95b3-4947c23dcdb0",
+        "1a6aacd4-ec98-46c5-b861-96cabc042dd8",
+        "1b837e1a-7b87-4eb1-9a9e-8f972bdd6ac9",
+        "1da70ef1-5619-4155-ac42-5aff2a3139a0",
+        "1e24fa9a-5253-4abd-a6b0-95923ee70a2c",
+        "1f94a162-9d46-4d88-81f9-c9eaf58af9c4",
+        "2008ee77-06d9-4b9c-9754-530742e4a8e3",
+        "20e550bc-72d9-420e-b434-3342d0787fad",
+        "28ef0150-90f0-41ab-818d-2c7a990e7860",
+        "296cb082-ad6c-4b17-8938-170692aac230",
+        "2cbdb1f7-86c3-4579-b355-f6208904a190",
+        "3308217e-4380-415b-acea-9cd9cc657362",
+        "338d0143-142c-4faa-86fc-fa339b24e7b2",
+        "33a55760-5657-48b8-9077-18687b21aa9e",
+        "35ad51e3-3b46-484e-8149-e770efcacf39",
+        "38ead413-72e6-43af-81c1-adb8c5c1bbbd",
+        "39e67faf-94b6-4ca6-b95e-9cf3655bb219",
+        "3d47e5e9-944b-4466-a9be-b2248f850ca1",
+        "3d6e7903-8cc9-44a7-9a39-c0cbf57523f5",
+        "451d0239-f5d7-4aa9-b322-a6df4a150ff0",
+        "45cea5b0-38a9-4377-8ab7-b4388bde5d94",
+        "4791b6dc-975f-4e88-83ba-9f8ab95e317d",
+        "47f39b15-5bad-4216-a362-3ebcc67712dc",
+        "48a5af16-b64c-4184-9e7f-283fd5c9ef2f",
+        "4b8e10e2-f5f1-4066-be70-b00f7a1faff4",
+        "4bc436dc-f434-45da-ac92-538905069caa",
+        "4bd0dac1-cef9-492a-9fa2-e596a001612f",
+        "4d281f08-da6b-4399-b878-7e14b9865ff5",
+        "52b68145-a59d-492f-a0f9-f2252784a366",
+        "55af8740-64e2-40a0-b29b-c2720a8051da",
+        "5a43feaa-0cb6-4e87-9700-fb6393f3604d",
+        "5d8c1726-8bb9-4f52-81ac-0cc1e3536e1d",
+        "5e5ee92a-9f70-4b0d-815f-8ae142dc87ae",
+        "5ee36058-3eaa-46b0-9307-e5923d0a140f",
+        "5f8672bf-36b7-43f4-9d85-23ac4e0e244b",
+        "622b10e7-b631-4d95-8eda-3bae20fd2028",
+        "68227b13-37f1-4ef3-ab09-15affff446e0",
+        "69a83bdd-afbc-49bc-b586-0c1bfffa39de",
+        "6ab2183f-c365-4529-a65e-1615013180ba",
+        "6b1d4dfb-5e87-4c6f-9915-360e44ff7e89",
+        "6b75ca24-98bc-4ab6-ab54-bceb8c1c3a3f",
+        "70701d62-d042-42b9-8d18-127e5cd68ade",
+        "7243cafd-114b-41ba-aa07-971178128465",
+        "737b6a6f-3595-4151-b8d4-690078e3f14b",
+        "742da9e4-ca73-4b6e-ba7f-243da842833a",
+        "77ad6f42-836e-4059-9ebb-1af5b77c070a",
+        "7860572c-be89-46b7-aa23-f3bc75bcec17",
+        "78fca771-34a3-4117-892f-64e05a3bf039",
+        "7d7b01ca-3707-4c30-a127-5011da4901ec",
+        "8041cacb-d9b5-4aeb-9468-3f714ddd0fb1",
+        "81670e3e-51b8-495f-92af-2035e79285a0",
+        "817e0c7e-775d-4e8c-8302-7d80e22d817f",
+        "820eb74d-1b19-4d53-80ed-46660a0e5113",
+        "83d9ff67-a0a8-4365-b13f-97f2c6ff5d9f",
+        "84d2fe01-f7ae-49cf-8242-b2d677346814",
+        "85ac8700-35ce-491d-9ae0-060b47fc424a",
+        "85cba29c-1ea6-44d4-8746-6e6edd53b0eb",
+        "87869924-01b1-4e76-9356-f969365fc986",
+        "8a1a816a-281c-49f4-9883-31dd6d72c4db",
+        "8bc71d38-4bcb-407f-9036-b30f6b84fab0",
+        "8fdd525b-1698-42af-8712-70f17c1a60cc",
+        "90ebb7fb-c879-4e57-9e8f-7121f596f211",
+        "935d89f3-76d2-45f0-adae-f5f82ac84a55",
+        "94f447a0-be14-42e9-b69b-7bb8445091d7",
+        "9557271f-94a2-48ea-a328-cad33e105f6c",
+        "98661f1e-61fe-42e1-925b-1698ff5da200",
+        "a0677cc7-f43d-42dc-a245-b5046c8f4fb2",
+        "a14ce5cd-8f3c-4882-a4fb-f4f6f248aedb",
+        "a33b498f-bac8-448a-bc55-181cb12d8726",
+        "a35fccf0-3e56-4f23-bd09-b998d2ac40a8",
+        "a44cc4e7-3d30-4a2d-b1be-1d5e6f2187ba",
+        "a56f016c-c077-4baa-b84b-ffb08c5fb82c",
+        "a691d05d-26b0-4b13-a39b-64b729ee0021",
+        "a6bbef00-7a8a-4a23-8970-20dec22b255b",
+        "a8ce8812-7293-45d9-a0f6-867219cca586",
+        "ac4c9c33-c7f6-4cd2-ac20-1c44141fb3f4",
+        "afb6ce42-8e2d-4ee8-ac40-3315a1c3b197",
+        "b776a18a-a8e6-4b85-a28c-fa5dd4782756",
+        "b79e6414-a902-4aa2-9d06-0c5a348b3a1f",
+        "b9553f98-4617-4f13-86f8-fa39b0d608ba",
+        "b9b3f308-3ecb-45b5-b228-863d729cd829",
+        "bb561107-c283-4968-8335-da939b9a62ff",
+        "bd43e547-d207-40b6-bcc4-18009eba613a",
+        "bfe091fa-a644-48a2-9381-570bdae2229d",
+        "c15c81bb-ac75-4b89-b775-aef4857179ee",
+        "c4a954d4-7cbd-496a-837f-4e125a5cbcb6",
+        "c4cfddc4-c9b5-4579-82cf-1335d28b1a0d",
+        "c4fb5487-0979-409a-8cf2-621694580b3a",
+        "c5406c30-0b2b-41b6-858f-01cb883b4a56",
+        "c811dc25-95d6-4bdb-b52c-59c206790193",
+        "c85e2d51-2c32-4a1f-ae2c-d99a1305d8c6",
+        "c9516d72-4191-4c1f-b462-f846ed51bb10",
+        "c968d457-d56b-4e93-b88c-ea922e5e8448",
+        "ca8d248e-cf57-45cc-9321-f43d3ae02054",
+        "cafa5b59-550b-4091-ba20-9980ef44816e",
+        "cb0faf90-0b7a-4e4d-90ac-966bfc5d2fa0",
+        "cbb52c75-b84e-417e-8e0c-074f22163622",
+        "cd11cd5a-f384-43c8-82cb-af0737cf41cb",
+        "cf9a5547-6c4c-4753-b0b4-2ec16798323d",
+        "d567ca73-8120-491b-bdb9-afa8dc8897f9",
+        "d799cba3-d16b-4ea6-8087-98a4af487525",
+        "da2140de-33ba-47b8-bc87-f7aa696d56f9",
+        "dcd8c8f8-1c04-4590-a201-99fc74d86c05",
+        "de8eaa4e-0185-40c5-a878-39391a9c5f7c",
+        "e05922e6-6eac-4706-a153-9493305192dc",
+        "e1f54b62-9761-4994-9dd7-8e75e632e01f",
+        "e416562f-b346-4b0b-8039-237e666c921c",
+        "e5645c95-b9a0-413b-ac57-cf12a5092ac4",
+        "e79deb52-0e5f-4231-a359-e739524399fb",
+        "e9f3ae03-8cc1-4cd7-a098-d223f85b0aff",
+        "ea141879-03dc-40a5-930c-58906f30382d",
+        "ea55c606-1214-461a-82ca-c16283fe6f39",
+        "ed67dae3-e52d-4f2a-9e58-f81670f3676f",
+        "eda3c54b-7ce1-41b2-804f-07cad047fd92",
+        "ee718d80-7882-4b7c-ad26-d54b83a337ae",
+        "ef7de2ab-f46b-4fd9-a204-f34e0915ee7b",
+        "f03b616f-947a-471b-b14e-03b7e1049e6e",
+        "f043cd5b-5728-423e-b162-495a79628ddf",
+        "f04eb7e0-dbb9-4be4-aaae-3dcc53febcad",
+        "f3c00d59-865a-4281-ab12-ac848c102dce",
+        "f40adbf5-93e3-474d-a491-95cc20947c41",
+        "f6ab0248-68c4-4d98-b1ca-bebabd80f692",
+        "fa17418c-6dd4-40d7-bd55-4cdf7a9d5109",
+        "fb3f884d-bef7-46fc-98ac-0d8b8e0ef9e9",
+        "fbaba472-4677-4763-82db-8a54a255fbc6",
+        "fe9ea6cf-e59f-4169-b2ee-391580f8678c",
+        "fec6ec3e-df80-4737-8b98-bde01960a579"
+      ],
+      "count": 148,
+      "bbox": {
+        "min": [
+          17040.81167988266,
+          -17572.00987610183,
+          -4.901000000000002
+        ],
+        "max": [
+          17116.13152276139,
+          -17533.28431676716,
+          4.90100000000001
+        ]
+      },
+      "layers": {
+        "Lamello_Clamex-P-14": 148
+      },
+      "primitives": {
+        "UNKNOWN": 148
+      },
+      "id": "G12",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "0014ad36-a61f-41ac-9e74-7b66c057fbc7",
+        "02748445-3262-4a42-9842-a1d86f56e938",
+        "04594d3e-5ca9-46d7-b5ae-94ea528d2d89",
+        "074468ba-5ec1-4d83-a3d2-5470ebb30b98",
+        "088f4c5a-d255-4321-b2f2-880d3f411d55",
+        "0dc9153d-279e-40d6-992f-ea26ce5ac53d",
+        "0e027f12-42f6-42eb-ba05-683b622b819a",
+        "0f744a43-966c-4ae1-9c56-080dcde432c0",
+        "1568e62e-e08a-4420-b81b-0df8ec970955",
+        "17653c4d-9357-4c2c-b56c-e71a824d383f",
+        "17e32427-c1f2-454b-a6da-8f2ae8e500f9",
+        "1863744f-52a7-45b8-8084-64cae54f9667",
+        "1ae01c2d-a733-4a41-be59-778a7b9edb5e",
+        "1c5a587c-66f4-4626-b3b8-ebd5b6358761",
+        "1cae4974-1ae2-4e13-a03e-f12a1e5b8c9d",
+        "1cdd0c3d-28dd-48fd-94f6-9a93df090f08",
+        "1f571abb-ecfb-4b67-8704-289b92f846ff",
+        "1fe1f21b-57ab-4ea3-88a1-c2e0eb07a971",
+        "267b9bb8-a6d8-482a-9514-4c2e8d4aca32",
+        "28f61787-7a0b-4e71-b567-9ec6cb27b986",
+        "291a494a-ae0e-4c0a-9930-c320fb6d31a4",
+        "2a42a491-1b4a-4081-8142-a830374534e0",
+        "2bce044b-fb9e-4ff1-9941-ed5f6c2049a4",
+        "2cb9e2b3-02ee-4204-98fa-f18219628364",
+        "2cedb33c-d18a-47bd-9ca4-bcc9046306d7",
+        "2cfb0df6-a000-4941-a89b-13f2bc0f339f",
+        "2ff677a1-3d35-48ef-80b8-c425521a665e",
+        "34235ff5-e918-4fcd-8745-214d66cb0c4a",
+        "34f7576b-3aaa-4601-8702-55f069ba38a5",
+        "380b1041-ddff-44c0-b79e-f2bb0524e9e1",
+        "38f81d1d-5ca1-4f2c-82dc-a314718a38a8",
+        "3b1da446-d733-4596-891a-53766be3fefc",
+        "3e0dd6ef-f02c-46a9-ab92-3bda98b41d83",
+        "4167722a-af4f-4ab7-973e-ab16bbf20ed0",
+        "42354c6b-9d9b-4b88-a010-a92f107f99ee",
+        "45514f3f-c1f1-4d30-bf04-6cc27b5539fe",
+        "46beac4f-2f1f-4a4e-b791-6261573f02e9",
+        "4ba3c47c-6c04-4615-b196-26abbb2a3b46",
+        "4db88084-0600-418e-b02d-95402d2c5b58",
+        "4e16321f-c011-47ee-a55e-599c8adf343e",
+        "53530697-691e-44a4-99e6-cd9ed2d5f396",
+        "547d8e96-36e1-466c-8339-536fa0e35f27",
+        "556ae708-8579-44d5-b8e2-1d1cfdba4801",
+        "56674294-9b92-49e0-8221-610608d088b1",
+        "56c4e79e-c286-42eb-8a2a-e169588f9a54",
+        "58bf9c69-0e64-4f74-9994-31602c30fb54",
+        "59a5c71f-ddf3-48d9-8506-06ee3acd3850",
+        "5d63b963-e94b-49f7-8047-6362493f337f",
+        "5de6913e-3bf7-4eba-88ae-3d8eaf53b86c",
+        "61109948-fdd0-4449-b881-7ee561f316ad",
+        "61761222-5a17-4b62-8ea8-c7251c797c03",
+        "6199f6b9-a03f-44b6-b780-ba8bb5783bac",
+        "625911fb-3984-42d7-919b-3958c7e509c1",
+        "6358e230-fb08-4210-8192-0a00c2ebc418",
+        "64a08740-966e-4c88-8e73-657914f42bf0",
+        "651c8a5e-ce64-4363-86c0-929a18416b62",
+        "6613811d-7a77-43e0-8bba-746a5161ee73",
+        "69b26577-b252-4f6f-a2cd-bfe7b633c21e",
+        "69b86b51-c22f-499b-924b-9dff1dd8285a",
+        "6b2e87fd-600a-4e40-ab72-986d0481b67d",
+        "6ba273e8-75f0-4e0a-8873-011263c5288c",
+        "6e0177f7-ff75-4011-b340-dad0462a7750",
+        "6e973d6b-8e65-4a4d-a961-1597d3c76f1e",
+        "70cd09c9-c297-4fb1-bed8-5c5ced89a1a6",
+        "71105d94-f4fe-42ea-b74c-0eb9dd6997b7",
+        "768d5c52-cd15-4db9-b770-ca86a63576e4",
+        "78517f67-4b7a-481e-b5ad-8de8079a8975",
+        "7a22b5dd-f68a-445d-9e2a-495f142c9dc8",
+        "7a458a51-4d92-4e9f-899a-299fd1c2940d",
+        "7b66cab3-86f4-4326-847b-c6bb2356dc28",
+        "7cfbac40-abfd-48f7-a2b3-36148b6079f3",
+        "7e0acdb1-0ba9-46ed-a2ed-765378d6abe5",
+        "80e1ba90-4e03-486d-9285-a4e9c0c4a201",
+        "82311c6f-431b-4025-a3be-7f084c09df7b",
+        "82853e4c-24ad-4145-b0b9-d460fc860399",
+        "83906dcb-37b8-4b87-8f30-2989cba1b96b",
+        "83e5a6e7-724c-434a-8bb7-83884402b7ce",
+        "84f2ffc6-c638-443b-9271-4e953263cbd2",
+        "86f0b6be-92ee-4b62-ae72-fc277ac6452b",
+        "8abfd5b3-a50b-4b3f-80a6-6ab351647857",
+        "8c04e2ba-5350-47ca-a071-f3ce6c145e11",
+        "8c0dcdd6-ce47-41f2-8f23-d0100da5265c",
+        "8f3d21f2-b22d-4fc0-814e-4a1b46682ced",
+        "8f92a5dd-230c-4254-8194-b489935dfc8e",
+        "902f8e9c-f167-4b9a-978a-d0f46ad5d9d2",
+        "90d0de8b-7b17-4f49-abd2-cd0beb8237cb",
+        "9297ef66-1c42-423b-a888-f13d6607999e",
+        "93bfbbb8-2992-49ab-be07-2b03d48a4285",
+        "9467a7cb-1874-4e85-98f2-c6edfa5cea88",
+        "9573843e-fd22-45ea-9ba5-e3da3fe20335",
+        "966202bd-5e4d-4f8a-accb-6133b71eb984",
+        "9afab052-552b-452d-9d81-4b820acb040f",
+        "9b0874b6-8edf-4688-9f44-fd50671f33ed",
+        "9b24e19a-c8a6-421f-9f00-dd88f64a1dd2",
+        "9c632328-700a-468d-9c2a-cd432118b0a3",
+        "9cdfe547-d19f-4448-9abb-45dc27b04338",
+        "9e2ba0ac-4c21-468e-b941-a69d387a688b",
+        "9f06b6bd-a6b3-4fc8-8f79-d845e496ca03",
+        "a0be22f1-5f26-4fa3-99c4-3579e0fb3071",
+        "a680cf4c-4c8c-4ed9-978a-5479c9f9bfc0",
+        "a8d10919-9b63-49b8-aa83-23f6ffd9103d",
+        "ac9ba96d-0fad-4c79-88c7-0f8ffb3761a0",
+        "ad78c464-1f0c-4c09-940b-938f841cfe14",
+        "ae1d73f9-efb5-4a37-b5c5-28e2249fb436",
+        "b05ead66-49d6-4034-8f52-b2f29d462d77",
+        "b172c2c7-f8bf-41a6-9752-c0dcd180ee59",
+        "b2fa9be6-1e59-45c3-8980-96cf5f1fe15c",
+        "b31929c9-fc27-46e7-bbe8-4644137f4015",
+        "b53c6f1e-4418-4844-a262-3e4315683a38",
+        "b5bdd06b-adbe-400d-bd7b-671ccc377dbd",
+        "b5ed7ee5-ff03-4e06-a01b-785b1134f877",
+        "b7fab6c7-c447-4404-93d1-e31793478733",
+        "b8445216-ba80-49b0-a086-31ca6553f3db",
+        "bca29de1-627a-4872-be4f-9b94ddf238e5",
+        "bd49b896-c8d0-4177-bd75-2208912aceb9",
+        "bf1cb4b5-9a78-41f9-8610-ca32b59ebee0",
+        "c264918f-b483-43db-9944-ccf5f5a60738",
+        "c604e1c6-20e4-4141-baf0-ac6022ce13c4",
+        "c743204e-73c4-4730-9051-e05a8221a8fe",
+        "c7e4677e-dbc0-4369-9477-8e92b1186666",
+        "c803c3cf-95ae-4f23-b402-a68931db7435",
+        "c87d364e-f5b9-4f5d-8436-fb16a4c72d93",
+        "c8bb0da2-119c-4759-a8d4-00701fc1030a",
+        "c93cc7f9-5679-4f4a-b242-5ebf220d2fba",
+        "cad3082d-fef8-44c7-bfb6-f18e7837f638",
+        "cefde508-5600-4ceb-aaa9-cb3c1cf4ad4b",
+        "d23620ab-18b3-4e75-9630-b05bd2df3012",
+        "d3a3e5c0-4638-4963-9448-0be9f2e106d6",
+        "d6fb9676-df4f-4bf9-822f-90a00d806c13",
+        "d7c7a3e7-bef3-49ff-9c68-b509b8d6ba64",
+        "d93ca487-59e8-4bb5-af5d-e05e59795c91",
+        "da8e6d79-28c9-4143-b2de-7ef775579909",
+        "dadf613f-966b-451c-8458-5a4531b0a6ca",
+        "dc1f6188-26a3-4104-a44e-18c161a52a56",
+        "de73b512-7344-4cb2-ad5a-38684d02e179",
+        "e12fdf19-b641-4597-911f-1349bf89c0ed",
+        "e1bc09f5-fd91-4774-a322-193273b3e251",
+        "e4c19ed5-1096-4c7e-9d91-140c8f079724",
+        "e7a26839-5c1d-43a6-b71c-d9ead92079ed",
+        "e9f47a54-9878-4740-8d6d-1eeaefd85942",
+        "ec2547b4-37e4-4d98-9c86-da08f147513c",
+        "f2a26394-e320-476e-96b4-367d9e105ae0",
+        "f9cb82bc-fd6d-45de-a606-efa46f331986",
+        "fb6dbbd9-c70a-4668-ba6e-f7723aa11daf",
+        "fbf40221-0faa-4a44-aff5-a6ccdfac14af",
+        "fc47681e-c8be-4c39-be4b-5a409f9683ba",
+        "fc4e8daf-e9d2-465f-a011-eb497bc75792",
+        "fcd45a9a-1eb3-414f-bf18-ab31c19b276a"
+      ],
+      "count": 148,
+      "bbox": {
+        "min": [
+          19040.81167988266,
+          -17572.00987610183,
+          -4.901000000000002
+        ],
+        "max": [
+          19116.13152276139,
+          -17533.28431676716,
+          4.90100000000001
+        ]
+      },
+      "layers": {
+        "Lamello_Clamex-P-14": 148
+      },
+      "primitives": {
+        "UNKNOWN": 148
+      },
+      "id": "G13",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "28fb3de1-09d7-4368-b969-2d19d1603a59",
+        "3664d990-14b6-4bdf-b6da-5b9c25ec0636",
+        "3c0b1ba5-c116-469f-b796-58d86da6fba6",
+        "52194ff3-d139-4943-96b7-233a285074fc",
+        "591ceabe-a6c1-4611-9b37-0588aae09758",
+        "606171d2-79ff-4719-8706-13fbd32584e2",
+        "63bd3d5e-06b2-4e25-a616-4323308e62e8",
+        "7cedd378-90da-4ec4-b173-19ef4db6b3e2",
+        "8181b45c-683e-4fec-8bba-fcc09f04b824",
+        "96bad1bf-56a5-4b5f-b580-0d215a58ee5f",
+        "a5b7ab0b-42dd-411a-86af-5a6d8e8cba9e",
+        "af8fd347-684b-4623-9286-fcde37a37a7d",
+        "bb1be290-6017-49e6-8f9d-93079ce20f7f",
+        "d178e108-f852-4cb1-91c2-33eb78d03510",
+        "d8465d2f-f5e7-44ee-b784-25a1c17a2649",
+        "d97d31e0-7e9b-4d87-b82f-43f5c017f0b8",
+        "de5ed809-1d6e-46bc-b9f9-da5f99baf649",
+        "ee3f7a09-5f94-4a4e-b1d2-45a2f7afc630"
+      ],
+      "count": 18,
+      "bbox": {
+        "min": [
+          12645.641708418072,
+          -16690.60782581533,
+          0.0
+        ],
+        "max": [
+          12798.413294468122,
+          -15968.18713308434,
+          2000.0
+        ]
+      },
+      "layers": {
+        "Default": 16,
+        "Ebene 01": 2
+      },
+      "primitives": {
+        "UNKNOWN": 12,
+        "STRAIGHT_ROUND_STOCK": 2,
+        "RECTANGULAR_PLATE": 4
+      },
+      "id": "G14",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "01f42681-08bf-4bb5-9469-631beb1fb0ab",
+        "1863b0be-a8f6-4319-baf4-e7a1d73b6fcd",
+        "1a56dadb-a99c-4339-978e-91d060d84f67",
+        "1a70e148-f213-4779-8f34-1824e65bf8f5",
+        "2294b5b7-0e40-42ab-ad3b-3248867747c9",
+        "24ae08ad-a7a1-499a-85c4-65368f6d6dd1",
+        "25cc72b9-9091-4965-a35d-d5dfe3f28b70",
+        "28bf7221-ff96-4d5f-b68b-01334a0c59aa",
+        "30f892c6-a13c-454c-93c9-5153b8adc8f5",
+        "5246571a-9854-4e9f-99ca-17b4b4aa1e8f",
+        "6c6a076c-5021-4076-a1c6-260a330c99bf",
+        "70a67dee-188f-46ac-9d88-74c52a53e667",
+        "72448f61-3986-4552-9ef3-05ce487fbe86",
+        "9102c064-a3b5-4040-b50b-6c313135f042",
+        "a393e599-0044-4692-be0c-9ee3e2a12ec9",
+        "a41acda2-b038-4ceb-9399-89699c001685",
+        "accb7a94-f36e-48e9-982d-03720e4a28c7",
+        "cb364047-27d3-44a0-9570-87f5c87c33a7",
+        "d1147ae2-46c2-4cb4-a4d1-38072fce2618",
+        "d662e980-c3b0-45b5-abf4-d87ad75d897b",
+        "dca25deb-f30a-4156-bd5a-50ed637b63ce",
+        "fa8c57db-670c-41dc-88c7-3ac3375cb8c8"
+      ],
+      "count": 22,
+      "bbox": {
+        "min": [
+          13665.517732290047,
+          -16690.60782581533,
+          0.0
+        ],
+        "max": [
+          15227.938425021048,
+          -15968.18713308434,
+          2000.0
+        ]
+      },
+      "layers": {
+        "Default": 16,
+        "Ebene 01": 3,
+        "KORPUS-VERBINDER": 3
+      },
+      "primitives": {
+        "UNKNOWN": 12,
+        "STRAIGHT_ROUND_STOCK": 5,
+        "RECTANGULAR_PLATE": 5
+      },
+      "id": "G15",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "218d7afa-278c-4693-a7b3-39f22464625f",
+        "82afee2f-3a47-47c7-8c79-4cc5a85c64c7",
+        "c0d5bed0-e172-4117-bbec-a6adbf6e2180",
+        "cf3ff4f7-584d-435c-9f90-75a5eb8ac250"
+      ],
+      "count": 4,
+      "bbox": {
+        "min": [
+          13051.16291114673,
+          -16674.597828142865,
+          0.0
+        ],
+        "max": [
+          13136.644407235633,
+          -15984.474023864252,
+          2000.0
+        ]
+      },
+      "layers": {
+        "Default": 4
+      },
+      "primitives": {
+        "UNKNOWN": 4
+      },
+      "id": "G16",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "0617b3e4-454e-4eb6-8f84-fe6c31afd184",
+        "08c67d6a-7191-411f-be04-3599327e796b",
+        "11684345-5375-4465-93e0-75da1c5adff4",
+        "120a5904-9a4e-4ecd-9ef6-653c8e23c467",
+        "1297810a-e765-409d-a01e-18f52467e8ec",
+        "16790cda-d406-4fb5-b0f2-1497508242e3",
+        "17425447-2f2c-4719-89bb-3e2966cb2d0f",
+        "17832f08-045d-49cd-be87-8cd04e30173d",
+        "1d287129-4afd-4700-af4a-49267eda70f9",
+        "23d06ee5-797b-4286-a53c-98309ace9e5e",
+        "26313161-0649-439c-952f-9b15ece9452d",
+        "31840e9e-2530-4fda-b307-c8f492f1e926",
+        "3350a720-e4d1-4eeb-9e63-155ed03aaaf1",
+        "47fdb75b-b841-466d-ac71-8f75e4ae492f",
+        "53437ce8-47ba-4e81-911a-8e1cf0deb668",
+        "5ad74215-9026-477e-8118-67782989f34e",
+        "5c1815db-9acb-44d8-93c0-67f6b7cecd12",
+        "5c6d0978-c49a-446c-b5c2-4f638917d9cf",
+        "7254b9da-8578-4c9b-a7f1-6b4ae13e6535",
+        "79f14ede-7cf5-4ce7-83bf-d7073e8124af",
+        "7de96e5c-e33a-4dce-b766-70126b62dc12",
+        "7e8bfb96-a6d5-4072-aecc-2e034fdf3010",
+        "7ec2d405-ddc3-47e5-9c61-99269bbeaaa6",
+        "88f5183e-18f4-4c47-9bb1-c131e4f1e543",
+        "931ab8e4-2f33-4984-8278-b9142e6e6a93",
+        "95a752d4-8c4f-42b1-8de4-95dbf149a53e",
+        "9f9d30db-7cbe-472c-92ca-6737b0c3c64b",
+        "a18462cc-b99e-4f93-a08d-6361c80fa6a3",
+        "a8a8b298-c835-4354-9532-ac5f1e6d7e1d",
+        "b717de3d-380d-4967-90ed-86c8b3eaeb1a",
+        "bccc3a12-c73a-467a-adb4-21f645cc723e",
+        "bd3ec856-7f73-4d9d-935a-9ea5f785f8ba",
+        "c44b90ae-1b23-4d36-83e5-f98f5a73cbab",
+        "c985af69-ee07-4c8c-bae9-8187a3e9f8bc",
+        "c9f59e3c-ee0b-46d3-a060-e771163fbef6",
+        "caeffad3-7222-4400-965f-96f08eb9c4c9",
+        "cdd77d9f-dec2-4247-bc3d-3d4d410cd47b",
+        "d4eeaf3d-b374-4c6c-a376-2a467d93422c",
+        "db994f47-16b7-4c1d-8d41-5acf717be3e5",
+        "e59c794d-41b3-4b35-8cde-54e23531b691",
+        "e92e78d0-862d-45d6-8b12-8f6288e4d877",
+        "e9ca83c2-4c47-45c6-9805-a79232bf0c70",
+        "f88af08e-dd11-48ac-a6e1-7ca0add9461f",
+        "faa78a11-6a30-4529-8231-6f5cd6281e03"
+      ],
+      "count": 44,
+      "bbox": {
+        "min": [
+          10920.017611441415,
+          -15290.012400228119,
+          0.0
+        ],
+        "max": [
+          12483.94181128694,
+          -14524.95857635893,
+          2100.000000000005
+        ]
+      },
+      "layers": {
+        "Default": 28,
+        "Ebene 01": 4,
+        "band": 12
+      },
+      "primitives": {
+        "RECTANGULAR_SOLID": 8,
+        "RECTANGULAR_PLATE": 4,
+        "UNKNOWN": 32
+      },
+      "id": "G17",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "096750bf-841b-4f9b-ac2e-9cae0074cd10",
+        "09c4de31-3686-4632-8542-7e22f4e4ff27",
+        "0d0857f9-f740-483e-94c7-084882b2cfe5",
+        "0ec5feee-af0e-4797-a924-deb99bf21b48",
+        "1539a4dd-04f5-44d6-89c3-11358fe62116",
+        "1781a82b-1143-491e-b9a9-45b1b50f5c78",
+        "1cc0d096-0a9c-478e-b5c1-a5b43825d059",
+        "21c810bf-40b3-4983-bd6b-2606e90f8045",
+        "24171adc-8679-4b28-ae5d-9ac52b091b14",
+        "272270ac-8355-4d81-88cf-b5dade89c4b6",
+        "295f3bca-d986-4b30-b90f-2ac43239ffa8",
+        "29f666a5-f061-470d-a0c6-9cf594045ecc",
+        "2edc521a-6034-42b0-ba6c-2bcbb2ff17d7",
+        "33870497-d3d4-41a2-a722-59405f0bc28f",
+        "3b62e55d-3336-4a95-8bba-529f7946a6eb",
+        "47098333-d71d-41e0-85f2-a0f13a330ccb",
+        "5917c0f4-fce3-4167-a803-efb89d45abaa",
+        "5dff9780-486f-4c16-8e5f-7ee4775fab05",
+        "627a4eef-6d83-4ca6-9fec-fcc54c765533",
+        "6a4a33b9-01dd-4b16-9296-04b5191569d8",
+        "7269f17f-8880-48fd-9a48-e19c4ba4d189",
+        "75127f26-8567-42ec-9bd7-337d81268562",
+        "75576dff-c835-4927-9b8e-c32b76c5948a",
+        "7b43974e-d574-4042-b397-21a37c3bbed5",
+        "7dc24c33-e82d-46dd-a600-f8217cd71c14",
+        "83964a07-0e26-4d16-acaf-ea6fc39f8934",
+        "8c80befa-7408-44cb-a299-4503a7442813",
+        "9439c12c-db7c-42bf-8c57-41ffd30f23ac",
+        "9e06f880-2875-4a68-838a-29ef4340d57e",
+        "9fc25f1c-9b62-4f2d-899a-bc4c017902aa",
+        "a32d1532-dd79-4e2d-88af-72dfd12a7e54",
+        "a6c8a90c-78ce-4988-b560-f4266be30d74",
+        "a6d70116-5904-4fd1-bcfc-a8484141e207",
+        "a8a75564-a969-459e-8fc1-c2c6ca16e8d4",
+        "aaa280a1-29bc-4d51-afb5-39743f61cec9",
+        "b64d9dd4-40c0-47f3-bba9-f64b45dc392e",
+        "b79657a1-cb84-4a16-ac8a-c5b56c499ed5",
+        "be8ddfa0-87a6-44f3-9efb-f0eae2b07557",
+        "c31977ee-59f2-4c2f-9c4b-f1ac3cacbe4a",
+        "c51ccef0-4e61-4a58-890a-7dbf9f480e59",
+        "c9ce272b-83cc-4ed1-b8a4-b201cdb9c0ce",
+        "caa51f48-1585-4350-babd-1adc8895b29b",
+        "cb754f9c-fd13-4357-98e9-ffc82ddf34e7",
+        "cbc62654-fa24-4028-928d-77b6ba0972f3",
+        "cd353ecc-2ed0-4151-b871-82087113f94c",
+        "d448a5c8-f149-4bfb-ac58-3be2532df912",
+        "d624b0b0-63d4-4999-a81d-c486ec6d1300",
+        "da2905c4-72ce-4357-a953-66283ac05e24",
+        "e078ccae-8e74-473e-8a05-7bf4b5bef9d4",
+        "e1001aee-97d9-46a9-a679-255c07d64f8b",
+        "e32f4f58-71ce-4a4d-a24a-c52ffd9709f2",
+        "f0077b3c-3fa7-4a69-93e1-fbd9e60d7488",
+        "f04d4655-f2c9-462b-ae36-4abd0c1a4197",
+        "f441f57b-b429-4264-b50f-d1e8456a575f",
+        "f491b97f-074f-468c-be89-ba835c73f97e",
+        "fdc566c5-f5f9-455e-b291-a13b84d76c2c"
+      ],
+      "count": 56,
+      "bbox": {
+        "min": [
+          17047.902552831474,
+          -15290.012400228119,
+          0.0
+        ],
+        "max": [
+          18611.826752677003,
+          -14524.95857635893,
+          2100.000000000005
+        ]
+      },
+      "layers": {
+        "band": 12,
+        "Default": 36,
+        "Ebene 01": 8
+      },
+      "primitives": {
+        "UNKNOWN": 36,
+        "RECTANGULAR_SOLID": 12,
+        "RECTANGULAR_PLATE": 8
+      },
+      "id": "G18",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "1cf2cd2a-3ab4-4236-a6bb-ed32a52aa3a8",
+        "233fd1c8-0fd3-49b4-8c63-95a04370894e",
+        "24132f5b-668f-4d53-b76c-3e3b75b8acab",
+        "2846bce8-670a-4214-8a73-3a44e84de6b3",
+        "3252f751-2b64-4f96-8cd7-9a32039619fe",
+        "3413670a-b383-4d89-aaf6-f7f61a5b7731",
+        "3556d64e-d427-4e72-beea-9baaf4e65ad5",
+        "38bbe3cc-46a3-4e26-a9ff-b220d7552615",
+        "4636b7b6-1f17-4719-bdf0-03370384922a",
+        "4b9e745d-6492-4f95-a7b5-f8f527d46a1b",
+        "5889c2ea-5c63-4a2b-a3cd-72baa449f90e",
+        "58ad042e-aa8a-4381-90f1-a7537c0bc1b7",
+        "68285890-552f-4e6a-a41b-c6a16868388b",
+        "77446e52-5c54-45f4-9f5e-7e101618b1ed",
+        "7dd7dd82-2343-496d-b2f8-29261b13ec87",
+        "8ab68543-c06c-4e57-b8a2-8980c0f8308c",
+        "9cf75135-6012-4e2e-8430-8f5845e2ddf3",
+        "a20cdc04-2ad2-4bdf-bf30-128e54b9d297",
+        "a5d78e49-69c0-44b6-a277-a34287be7a15",
+        "a92f9174-82a9-43b6-9972-4bfa197a37a0",
+        "bbe3931e-94f7-4cd4-8f91-3526f28d0acd",
+        "c3114f94-e953-4c19-baa5-c7e3c5fade69",
+        "c35bb4bd-5eb0-4750-b34a-fe97d5486c6d",
+        "cc995ff4-a323-440b-9d96-5e630c397804",
+        "d4ee6e8d-4a99-4224-9cf5-6180442d6556",
+        "dac2d566-6621-42f9-a0c7-7531ed83e713",
+        "e635894d-5211-4863-b335-6df118ea5582",
+        "e8f6784a-eed5-40d2-9ec6-ad6d389147ea",
+        "f827c83b-4c8f-4529-9cdb-dce9caf59284",
+        "fe92a9c4-0422-4e4d-a94e-03c831b4f457"
+      ],
+      "count": 30,
+      "bbox": {
+        "min": [
+          8243.432523259446,
+          -15282.337703359184,
+          0.0
+        ],
+        "max": [
+          9807.35672310497,
+          -14532.633273227866,
+          2100.000000000005
+        ]
+      },
+      "layers": {
+        "Default": 26,
+        "Ebene 01": 4
+      },
+      "primitives": {
+        "RECTANGULAR_SOLID": 8,
+        "RECTANGULAR_PLATE": 4,
+        "UNKNOWN": 18
+      },
+      "id": "G19",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "01e3adb5-c587-4445-893a-c5ecd9d9a9cc",
+        "03439805-c566-41fd-a7c3-d13526808a05",
+        "047ace38-b9d0-4339-8a3c-3be303edd0d0",
+        "0497daa1-a961-4114-a388-553a25e70089",
+        "04c664c7-1ab8-4c5f-84ed-4b60fe256840",
+        "080dd65c-b855-4975-aef8-1690476276a2",
+        "092e2f49-27e4-49b6-acb7-fd386ed56637",
+        "0dc78048-bf5b-42b0-9f2c-cf2aa4e5048d",
+        "0f3994ad-b5a5-4008-bb52-3d377ca4f572",
+        "0f5dbeee-7780-4932-a7b1-edbb87ae19e3",
+        "18b21333-f61e-4e97-92b9-0458deda731e",
+        "19489ef9-e025-42ea-9e6e-c6a64cd321e6",
+        "1a55c129-92fa-447e-b56c-0a8ae5c19ca9",
+        "2241b7fa-f503-4f08-b1df-590b93166325",
+        "24193b28-4ac6-4225-9929-d4ddd1adc66d",
+        "25a5051d-4407-4f95-9e0a-a4598633e1b5",
+        "25e3dce2-d01c-4ef7-bd27-4a1079e66b29",
+        "25ed4291-a774-4391-8a57-c5d8f04e94b1",
+        "28c949da-12cb-4883-beb9-92f4b696044c",
+        "28f6dd2f-b333-48ff-b1c5-27645a908bc8",
+        "2c2713b0-34e7-4130-a00c-c331443dd350",
+        "31e60e97-5615-4b1c-8471-8a0f284b75da",
+        "36fbed3d-e0f5-4532-bd7a-e6ff055e33df",
+        "396856dd-e466-40b2-9ebe-8c9e2a84c8e1",
+        "3ccd0ee2-4e6c-4f50-be81-f5fd5ec88ff5",
+        "41dc98b7-f81d-46c0-9e14-150cdbd5a1af",
+        "454ecd4f-194b-4daa-9a5d-5c3a36abfda1",
+        "50b7a370-d930-4fc0-94c1-da319546db9a",
+        "51ed71f2-f7e0-4fd0-a1e3-8353329c691a",
+        "53383af2-a3ba-4249-8ec5-7a3bda7ba786",
+        "580c48a0-df9a-49be-ae4a-5ee50727a15b",
+        "5b8119db-7e1c-4181-90a6-ae014609e125",
+        "5e268314-6edf-40f0-829d-98d2393b5191",
+        "5ed26c33-67e9-4af4-b952-afe9034470d8",
+        "5f9c336e-61ee-41cc-a611-1cb3526f12a7",
+        "6850c840-427a-44ef-b8f3-ac0a0f85de4b",
+        "686ef12e-8d98-4891-9203-25b09a1ef90d",
+        "6878acbb-7681-4d6e-9e86-1c4152bc06e2",
+        "68e0d495-5337-422a-a795-ec9665fab548",
+        "6beb908d-f220-40c9-a532-ea378cd8ebdb",
+        "6c85dde0-bb34-4630-b846-7ffae842c88d",
+        "6e76c824-1c35-4b4b-925e-8b212b21e0c1",
+        "6ef77b21-8eda-4abc-ba81-aa0cd93237cc",
+        "7508282f-d120-4f81-8a5b-75299151b9ab",
+        "75e9a870-762d-4bb5-913e-adf71c699364",
+        "779cffab-ba3a-4924-a8fa-2ad02d475ab7",
+        "77cec37b-945d-4ab6-b8c8-a74b76e64023",
+        "83d94a16-045c-4ad2-be1b-96be1b3fec40",
+        "848894df-d198-4423-be2f-fb29f0d9120e",
+        "857e7475-348c-49b2-be29-daf4c420fb9e",
+        "8be952d1-2d27-487a-bd8d-90211d7bca1d",
+        "9066c7ce-c778-4790-8c87-c10f9e00afd5",
+        "9128f29c-638a-4d97-af29-697efcef5621",
+        "9290f643-0686-412a-9022-7ff55b78c1cd",
+        "95ddde5b-5930-48c4-a463-3f5b3b46010a",
+        "9a29460f-31b3-4a11-b713-55db7529427a",
+        "9ebe30e0-6a2b-4463-8d58-b0d24a68ab3e",
+        "9eccb808-a20a-410e-9d4b-2351360b0ad1",
+        "a49eabf3-f1c6-4f47-a0ee-55a4befaff04",
+        "a5ff7980-a845-453b-97ce-bcc613b7ae47",
+        "a82cbd58-9707-4543-bde6-243f1ae4b394",
+        "ae8613e3-81b1-4e53-975e-55c6063f0cfa",
+        "aec4ee9c-4e82-4e17-83eb-109815ce8854",
+        "b2652b78-0a72-4ce0-8008-e678ad539103",
+        "b3843c3d-5df0-4c9e-8f56-2499de647820",
+        "b46335ee-64e4-42b2-b030-7bf741323d47",
+        "b5d630fe-f7e2-445a-8a2e-2d77a05bfebd",
+        "b7b22067-edf9-4620-ab7b-625afc959cb1",
+        "b80826ce-834f-469d-a7ad-184f6862b3ed",
+        "b94a952e-04e3-4187-b0e8-25117bc6ddaf",
+        "beee72b7-1088-4246-b214-207e9f8f64b9",
+        "bff6a8cc-51b8-496c-99df-c8894b2f6b79",
+        "c1d1dda8-d433-4455-9447-ef095841f424",
+        "c4711ce4-4d84-453c-b04b-4c2f4d63eaac",
+        "c4bc6f79-3d48-4ce4-b549-028e629d0468",
+        "c966bba3-e9aa-4e4c-86dd-33a1df99871a",
+        "ca4fe139-4e67-4254-9383-87bd1b24b4a5",
+        "cb253bc8-5997-4641-97c4-0bb6ebb51df6",
+        "cb5f43fc-6a10-432a-8d55-25f71869b0dd",
+        "cb69c658-bf46-4cc1-b54f-9629aadcb5ee",
+        "d2396a38-f707-48c9-b7fd-d5c6d7e89314",
+        "d3348e25-f332-46b7-b2a1-975482da5da8",
+        "d5639d86-187b-4551-8204-e794b9e377b9",
+        "d5b700f1-ca26-4682-8572-191accd42496",
+        "d8193587-bb74-410f-8029-9aa20cbd612e",
+        "dba1046a-6fb0-4ae6-8ca8-66faab920a51",
+        "dba29e81-cc66-4c52-8e84-8725e24ca3f4",
+        "e7bb9c0c-d08b-459d-b5df-877b7606205a",
+        "ec5cf0cd-f69e-4b6d-982f-24dd40accfa9",
+        "ecbff634-a3bd-41c0-a1e9-d8cadd7a93bf"
+      ],
+      "count": 90,
+      "bbox": {
+        "min": [
+          13845.078049919195,
+          -14942.139982826116,
+          0.0
+        ],
+        "max": [
+          15270.131873788374,
+          -14217.068915014008,
+          865.0
+        ]
+      },
+      "layers": {
+        "Default": 21,
+        "Ebene 01": 1,
+        "band": 4,
+        "Schraube_DIN7991_M6": 64
+      },
+      "primitives": {
+        "UNKNOWN": 69,
+        "RECTANGULAR_PLATE": 1,
+        "STRAIGHT_ROUND_STOCK": 16,
+        "RECTANGULAR_SOLID": 4
+      },
+      "id": "G20",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "00497d04-9568-40f3-a823-b598467b5e0a",
+        "0515db72-812a-42ba-b072-1b163c87e503",
+        "0705edc1-3ff6-4be4-ae4d-ed27eb654ec0",
+        "09692528-0b22-409e-8c06-6565b7194cab",
+        "0a73b173-ba28-49d1-af71-2cb2b2030b75",
+        "199c0d09-6f2c-40c6-bf27-4ced19f99162",
+        "19eb1697-41d7-4ce2-a8fd-b9f71ba52664",
+        "19fcaf59-4f51-4bdb-aba1-e7cf6aaadc59",
+        "1a333d80-ac3b-4d84-bbf9-1af990a4f526",
+        "25ea8d49-317e-4946-a47c-63481806d8a5",
+        "2ad91950-c6d6-4475-b3fa-9e19f98e37f4",
+        "2e6aeec0-9986-46a5-9031-a032afa11b45",
+        "35edc1a0-4e47-4a7f-ad1e-90410e996ef9",
+        "3657ef5f-9bb0-47c8-a1d3-13021bffa517",
+        "371db2f5-ba51-41df-9be1-9eced42506be",
+        "37261fa8-73ef-42ac-8619-565badac5c54",
+        "3b04e2d5-c228-48f2-8731-288ed042dba6",
+        "40497cef-c4fb-4f2f-8907-917177f99b15",
+        "4154c453-2a5d-41aa-8dd7-d1303c59ebb5",
+        "45ed5bd5-5439-4b54-a396-510be4b47b4e",
+        "4b5c8081-d9bf-4088-95ff-a694714dc986",
+        "50c40df3-960b-44bb-986e-5c4984f19752",
+        "52719b3a-9a88-4d0a-9b32-e18446878eed",
+        "5368bcdb-5795-4bcb-8f63-1a9b5cf0b1b3",
+        "53d3c762-7628-47aa-81c8-5f9e370c454c",
+        "57af2569-3871-49bd-8dda-9da22f25ed7f",
+        "5989a4d9-6fe6-4b95-844f-f33d3509e7ed",
+        "6038e41b-d753-413d-86de-8e9dc165f7f9",
+        "6361ac87-9f2f-443e-b766-0210c93ba31c",
+        "654a2ba1-4f44-4ff4-968f-d71cc206405c",
+        "676b769e-5795-406b-b152-f73eca943dab",
+        "679de13c-14a6-41d8-a9c5-7bd9c6700af7",
+        "716be14a-46d1-4943-9321-193a472b8501",
+        "727868de-142a-44bb-876e-cf68e289a48a",
+        "727d34fa-cf0c-48c1-805b-0f81577f9faf",
+        "7c17750e-a989-42f1-822e-d13a8ea68a2c",
+        "7f55bfb0-b417-4518-a8ca-49c6407b5af6",
+        "896d436c-8d8d-4ea5-b57b-5db90f8a9518",
+        "8c9addc3-8fb8-4141-9bb3-a88b7316a319",
+        "8d0708b7-df35-41ca-bcd5-66eda772f294",
+        "8d85a708-7c16-46c4-ad65-301b341707aa",
+        "8feda551-3f3f-4e37-8441-d7add90ff895",
+        "8ff2dbe2-57d5-4f84-a3e9-c46e7f5ae292",
+        "96f77ffd-d254-42ba-9171-d0f3b06ec1e2",
+        "975ec3b4-4ad3-4e3f-be14-0d43045e61a2",
+        "9790e056-c56f-4825-817b-b41667d7599a",
+        "98ef09c9-7a01-4fa3-8ed4-81fd1d2a1844",
+        "9c6fb2fa-d417-4ff8-aa8f-6588c8a3381c",
+        "9c80ab26-26fc-4c58-b5c3-6c95ed9c9934",
+        "9d8bae1b-7f23-4c40-8903-042107b19d2c",
+        "9e8983bb-51df-4ecd-8a3d-714ef6096008",
+        "9f6c4e4c-6505-4536-afbc-d27fd07ab519",
+        "a39a83d6-1cfc-4f0e-a197-78b557c64730",
+        "a8cc7e96-704a-427e-9d35-fddd3d4e04ac",
+        "abcab62b-f587-4ce6-8dab-b06f17494ae9",
+        "ac973875-0c20-4a47-b296-8357284ed63e",
+        "acd3a7f4-d460-4aa5-badf-985bf042a62c",
+        "af086736-2795-4369-bee8-e3772850b93b",
+        "b0094bb9-08ff-407e-8ddf-8fc2cd4faaa0",
+        "b78c9f6c-699a-4c00-abd5-8063e7602563",
+        "b9cbbc3c-cc2d-48fc-9e53-0ed7539ee4ed",
+        "ba02f0e0-9602-4504-9ec0-98ab2f533801",
+        "bd59bcfc-a0d2-4555-9a83-80cdc3a4bc76",
+        "bdaa58f0-137c-4c3d-a719-bba8289b0e57",
+        "bf79c0f2-1c73-4a49-b87c-a70628666e1b",
+        "c1276101-8624-4c4e-9f7d-90f96ff81982",
+        "c588cb34-c7d5-43db-83ff-0a9271f0c600",
+        "c73b949a-a1e7-4914-bccd-ea8b599ec1c1",
+        "c8f70317-ef3a-4900-8c09-ee3896443346",
+        "cb27693d-951f-43e3-8550-2c650725fbbf",
+        "cba24b39-a6ef-4baa-bbdc-5fdb3b3b049e",
+        "cf82ce8b-d84c-4a3f-a9ea-3beed69a6796",
+        "d0d3d850-43a7-42b0-98d9-e59c4b5bb581",
+        "d589319d-7c47-4fdb-9dc0-f4bf150abbc3",
+        "e131fc09-0b5a-405a-a7cf-203f60f9e383",
+        "e593115c-6904-4526-9e21-0a78dd1af08a",
+        "e6098532-72ae-46ba-b695-f24b42184e98",
+        "e7df768e-b5d8-4cec-827c-f9d42a729ecb",
+        "ec8490ed-7b86-47cf-90d1-b21d960573b0",
+        "eef16103-cac7-4ca2-aa53-e1ccbe8a9089",
+        "f0b9e6b9-4c4e-4b02-ac55-505a09f40504",
+        "f42d65b7-d81f-487e-a7e5-554dadf93d67",
+        "f60b56c9-a8c0-4c01-a522-6bdc9c9f630e",
+        "f691d554-43bd-4635-b31d-f4a730248af8",
+        "f89ec8ba-d84b-455e-9b25-9c09453b232f",
+        "fa8b0f37-ee6a-4103-82a9-8359a4f24627",
+        "fb27352d-4855-46c4-98c2-8da2d7effcfb",
+        "fdffb897-071e-42f2-9fa6-56f847ed940e",
+        "ff6b5604-dcca-46c7-870b-e67a5b2cd614"
+      ],
+      "count": 89,
+      "bbox": {
+        "min": [
+          13845.078049919195,
+          -13958.497736751442,
+          0.0
+        ],
+        "max": [
+          15270.131873788374,
+          -13233.426668939335,
+          865.0
+        ]
+      },
+      "layers": {
+        "band": 4,
+        "Default": 21,
+        "Schraube_DIN7991_M6": 64
+      },
+      "primitives": {
+        "UNKNOWN": 69,
+        "STRAIGHT_ROUND_STOCK": 16,
+        "RECTANGULAR_SOLID": 4
+      },
+      "id": "G21",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "68bee01b-645c-4804-8fdb-515b2254d978"
+      ],
+      "count": 1,
+      "bbox": {
+        "min": [
+          8465.142156940972,
+          -13287.395408304787,
+          706.0000000000001
+        ],
+        "max": [
+          8477.142156941098,
+          -13278.575408304783,
+          754.0000000000001
+        ]
+      },
+      "layers": {
+        "SHERPA_MINI_10": 1
+      },
+      "primitives": {
+        "UNKNOWN": 1
+      },
+      "id": "G22",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "eccfa0da-20e0-4b08-a70c-9def10e0e7d8"
+      ],
+      "count": 1,
+      "bbox": {
+        "min": [
+          8465.14215694071,
+          -13254.693139476014,
+          706.0000000000001
+        ],
+        "max": [
+          8477.142156941009,
+          -13245.693139476014,
+          754.0000000000001
+        ]
+      },
+      "layers": {
+        "SHERPA_MINI_10": 1
+      },
+      "primitives": {
+        "UNKNOWN": 1
+      },
+      "id": "G23",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "046cb0a3-5335-4103-a2f7-50704510842f",
+        "04ef5a10-33e4-4b84-a862-bbc39933f6a0",
+        "1b6a8690-719d-47e3-a7e0-9c477cf3e56b",
+        "27ce8b2c-7794-4c6a-a9e2-bd9cfe41ed45",
+        "2d928077-8a9a-4191-b05a-ea1a3bbd2387",
+        "32c99c6f-426c-4368-ac80-57588ae4b1ff",
+        "3b9f69d8-218d-4d60-be23-ed72bcfe806f",
+        "566add8a-ce10-4c9e-94c9-f7b046635f5f",
+        "57ec26fa-1a97-4ad5-bdc9-86066983921b",
+        "73343a3e-c8e9-46b2-a42a-1358214d9f11",
+        "7d3f3db2-6a5c-4666-8210-f752f31d5c97",
+        "86adb058-5eb2-4be1-86d6-ddc4b83657bd",
+        "bfb7651b-e61d-48b7-9f31-07e1aa40944c",
+        "c01a9fbb-131f-4bc3-9904-b49d85259488",
+        "c761cf0a-cbe3-4c06-95fe-1d558c1cb327",
+        "cdaeb81b-923e-429a-99e1-541f3df76b67",
+        "d5f5e801-bdf7-4d77-90b6-099caca6d1f6",
+        "d868ea2c-ec19-4ba5-8f7c-b0ef32efef41",
+        "de775da1-30e1-49fb-8882-a58b25c3db98",
+        "e11579a2-9b1e-449a-87d7-e757698bd7ec",
+        "e618bba9-ac85-442a-b5d0-a3e66cff6044",
+        "f288f36b-646b-46c0-bb9e-99380b61c917",
+        "f6f4cdaa-5aa1-48a4-8f3d-479baa56c1c5"
+      ],
+      "count": 23,
+      "bbox": {
+        "min": [
+          8539.023670933555,
+          -13151.140250069695,
+          0.0
+        ],
+        "max": [
+          10219.023670933555,
+          -12426.3402500697,
+          852.0
+        ]
+      },
+      "layers": {
+        "Default": 18,
+        "Layer 02": 4,
+        "Ebene 01": 1
+      },
+      "primitives": {
+        "UNKNOWN": 14,
+        "STRAIGHT_ROUND_STOCK": 4,
+        "RECTANGULAR_PLATE": 2,
+        "RECTANGULAR_SOLID": 3
+      },
+      "id": "G24",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "0c8af175-64bc-44ea-96ad-74a245948cc9",
+        "2f310675-1582-4d22-870c-b80f3b8ed80c",
+        "38b0cc7a-2a80-40f7-b5ac-46240c8fbe53",
+        "49d1d8b0-d6d8-4e4e-8e8d-71e759719ba8",
+        "52a25679-5535-41d7-afe7-bc742e140f08",
+        "5fde1040-5bc2-4d11-b91e-e98c2d3a29ae",
+        "67fd0da7-e598-46e0-9ddf-a02fe2baa654",
+        "a50547e8-7641-4491-9c5b-ec8947748c73",
+        "af2d31dd-9cfd-4c7e-8cd4-1ff0d69b192b"
+      ],
+      "count": 9,
+      "bbox": {
+        "min": [
+          11064.130659409957,
+          -13009.827701434813,
+          780.0
+        ],
+        "max": [
+          11104.130659409957,
+          -12969.827701434813,
+          910.0
+        ]
+      },
+      "layers": {
+        "Default": 1,
+        "Schraube_DIN7991_M6": 8
+      },
+      "primitives": {
+        "STRAIGHT_ROUND_STOCK": 1,
+        "UNKNOWN": 8
+      },
+      "id": "G25",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "000e7598-6369-431c-b5ab-c19979a09ba5",
+        "00b999b1-db9f-4448-8042-82cd7349127b",
+        "07b9b406-5ef7-4865-a6ec-67dab29c339f",
+        "089d2a8c-208d-4dae-b49f-fdfe20b9590d",
+        "0d1d2b87-2dc9-41b4-b913-6e66cf014c58",
+        "0e9c782d-3702-465f-9682-e2cf815c1c4e",
+        "15a9ebcf-ed6d-4d5a-a166-7c5085c4c936",
+        "169d43e7-154f-43e3-9424-55b5e7adf72e",
+        "17fd9edc-26d9-42bf-90fe-dfc985864f0f",
+        "1869ad71-4aa1-4db5-b469-18df661d825b",
+        "1a260db7-0b3a-4279-a937-209bc23579f4",
+        "1aab1e70-9dbc-4fb0-8f02-8cf1f3b66a75",
+        "1fcf6631-05f7-48c7-a7a1-5f4ed39c3e0f",
+        "1fe4fa87-29ca-48f8-bb27-754719dc9c7d",
+        "226a3ce6-7ded-4eda-95cc-d37b6fc9a12e",
+        "2594869c-add5-44b7-93db-8b28d0ad0de9",
+        "26fc41f5-5b36-4487-848c-2dd0a59af6e0",
+        "2a6fbf43-e1f0-45eb-b641-b71de0ad9d76",
+        "2b10940a-a468-4060-b70c-10424b6c9b49",
+        "2d26ce60-9161-4bbb-90d0-d2ae8fdcff54",
+        "30ae0d4f-e2f1-41e3-82d2-0ce21ebd2906",
+        "33c9c9b8-869b-4553-991d-f66f8fea6eff",
+        "354349e2-75c0-44fd-aca1-df97ca948dcd",
+        "365c308a-a756-46fc-adc9-05aca8b4002f",
+        "366eba87-82be-4419-b115-fd2862029d5f",
+        "4111562b-912b-4aaa-8958-2860d77ba331",
+        "4349ec21-b9b0-494a-be77-db42e8686430",
+        "480d8747-a25e-4a66-a94f-eb86ffb1d973",
+        "4cbc30ae-bab4-4ad1-b945-1794256bfa15",
+        "4ecbf7d3-1835-4080-9b3b-ecebabafbe35",
+        "506c5f34-310f-433a-a7c3-dc7120f97bcf",
+        "5536e735-8e06-499a-a12f-f7533a59873c",
+        "5652fd90-e4c6-4f9c-9053-eae558acaa8b",
+        "579459ab-1c11-4be9-8e3a-7a8af2636bae",
+        "5929b66a-e0a0-48a9-ab03-134d7ab6e7b1",
+        "5c42b1c7-fde7-4caa-b1c9-469ebb3ea04c",
+        "5cfdc8dc-b710-4907-9438-fd423964a6f4",
+        "5f5b7fc3-e4f6-48d3-89ef-8ee9a6cb4c4a",
+        "64eb725c-dce2-4fd0-9b0f-2a4123868426",
+        "69188478-83cd-48e5-82d4-97902bbf4b7b",
+        "6acb6a6f-dffc-4bc1-8f21-ec1d71ae295d",
+        "6acff71a-7a52-4645-96e5-25ee2084ccc1",
+        "6bb16bd3-c65d-409b-aea3-29b536faf5f8",
+        "6ca31420-38dd-44ad-b05c-14ab2814e0d1",
+        "6efb0555-1e85-42d4-9d60-4bb58e03907e",
+        "6fb1f26d-558c-4275-93f5-c29a8b180797",
+        "719b6b52-02d6-4d11-a7dd-47549b9ea4ca",
+        "720ea485-0386-4a71-b374-f1709edbde2c",
+        "7c9001b4-4544-4368-99a2-14ac3e9d9ca7",
+        "815fe7ef-43d0-4103-92e6-19afbd486307",
+        "844aab25-9f59-4ceb-aa6b-9b56b0834383",
+        "868b3f32-e1fd-47f8-ab2d-a7950190cdc4",
+        "88e5557c-0cc5-4bd6-940f-68e0b7977e78",
+        "89238bda-3c37-4b0c-bc36-a6d578ae5af7",
+        "8a6432da-9e9c-4860-9b1e-32fb4e552b7d",
+        "8d2e75ac-6fb1-4a51-b767-2e61267e136b",
+        "925e3bb0-a7ac-4a85-b721-8d9dd2be2156",
+        "969c03c0-1abf-4d0a-b5ed-8f4e666bd1d5",
+        "9f090c54-ad22-415b-95fb-deb89f222695",
+        "a003b403-aaaa-44bf-8711-35cc89c47fcb",
+        "a06c8c9b-dcc0-4962-a553-8c852888e699",
+        "a0aa0974-cbcc-4ae3-948f-64b05e09833f",
+        "a661e57f-958c-4a8f-8cd4-ea8581139236",
+        "ac6ecd3b-6068-4880-898d-d09193ce928d",
+        "adf6ba1d-65da-48ff-a535-360c256cde10",
+        "aef9af53-0ee4-4f8d-bf48-4a21c843004a",
+        "b12d89ec-15ca-4848-8b0e-dcb04ba235a6",
+        "b7c0f855-95bc-4fd9-81d8-11bc8510cfc1",
+        "b85c2c5f-1955-4265-91e3-d3f5f68efd97",
+        "b8b0f5a4-79cf-4380-8c7c-ebbabdaed632",
+        "b8f6605a-836d-4fed-a69e-0149a0efd161",
+        "b9b76c2b-ccdf-45c9-9410-1efe22868e86",
+        "bde60e83-2c1f-448d-908c-96f25de8162c",
+        "bed79078-0da9-465d-93c7-5e5798f7b37a",
+        "c08df5f1-1937-4f48-af09-dfbe6d1e2533",
+        "c340400f-eca6-4359-8375-b82583734a81",
+        "c48b405c-19e6-4aa9-989a-a2f61f4276ce",
+        "ca871e31-c8be-42a7-ae29-56a469131dc5",
+        "cc747e34-6851-4703-bbb8-0c8e4fe09e18",
+        "ccc0df39-a444-432e-af41-3a46e6543b1d",
+        "cdb5f93d-a56a-4c62-bb58-150471ae0cdb",
+        "ce7b765c-646a-47a7-a834-03b67f372edf",
+        "d0995538-5329-4895-9902-f63efbc7761c",
+        "d10e9218-deda-4d49-a957-afc60bec28cf",
+        "d13a6e73-052b-4593-931c-d2b0989e11da",
+        "d24c15d1-2f82-441e-ab81-a0d5e8116c83",
+        "d787668e-791a-4f86-b716-fa4270aca750",
+        "ddaa22b1-be1f-483b-9358-5c18969eea69",
+        "df621c6b-ed37-4f36-ac96-b2f764dcd912",
+        "dfc3e4bc-77a4-4720-b417-535130bee45a",
+        "e169995e-a291-42ad-9d96-89b64564f284",
+        "e6fd9cfe-fd75-4591-add1-07f4c5bf3bf4",
+        "e76b6429-f669-43b3-aa40-d89f757c2b65",
+        "eb6f568b-ea8e-428f-ba5c-6370a6ec724c",
+        "ec1fa1ba-bda1-47a1-a0d1-bd879735ac15",
+        "ec6da971-6b7d-47c8-8c5c-0e8949ff7977",
+        "ed30cb11-5564-4f12-a395-62a4f260bf96",
+        "edfc7e9f-b55d-4994-95ef-6bbc4121498e",
+        "eefd5c89-2456-491f-bb88-cc8056aefa2f",
+        "ef03647b-08fb-4b4a-9a96-65b76ebeee9c",
+        "f153e0a4-6396-4c5d-b934-8c9ea7ffbeae",
+        "fb10c140-a392-49b5-92c4-6b80d427c231",
+        "fe41fd7a-1f8c-46be-97e8-81cc4756a162",
+        "ffbe46ee-cab6-4159-aea4-92dd7c4ae389"
+      ],
+      "count": 104,
+      "bbox": {
+        "min": [
+          10969.452799429591,
+          -13001.806566444493,
+          0.0
+        ],
+        "max": [
+          12434.506623298763,
+          -12236.752742575301,
+          910.0
+        ]
+      },
+      "layers": {
+        "band": 8,
+        "Default": 23,
+        "Schraube_DIN7991_M6": 64,
+        "Ebene 01": 1,
+        "M6_Muffe": 8
+      },
+      "primitives": {
+        "UNKNOWN": 95,
+        "STRAIGHT_ROUND_STOCK": 8,
+        "RECTANGULAR_PLATE": 1
+      },
+      "id": "G26",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "c8946418-f8de-4a70-b8a0-335fcfa007f9"
+      ],
+      "count": 1,
+      "bbox": {
+        "min": [
+          11111.624879753832,
+          -12998.800194898202,
+          733.9854431801422
+        ],
+        "max": [
+          11123.875128083624,
+          -12986.58405159462,
+          749.6056132333405
+        ]
+      },
+      "layers": {
+        "M6_Muffe": 1
+      },
+      "primitives": {
+        "UNKNOWN": 1
+      },
+      "id": "G27",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "00557f3b-437c-48c3-a7c2-4ba090797a47",
+        "0301e81b-8e4c-453a-9c26-bb11b55448fd",
+        "0382bdaa-182f-4485-9eed-d0b39f977a56",
+        "05003943-29dd-4397-982c-344b89272c14",
+        "0930004a-91a9-401c-be10-895d965bca9b",
+        "09cac4f3-709b-4918-83ec-60098edc55c8",
+        "1021082b-5281-492b-b313-ae5b9216f0ce",
+        "12b3b670-25d5-467e-b009-5edd966cea46",
+        "131c6d9b-6817-4441-bb46-20bd567cde06",
+        "180235b8-a912-4cd2-a332-ec604c594b5c",
+        "1919c221-8a88-47b1-b378-47d04c83560c",
+        "21ffa41e-834e-4629-8b63-ee47c2cf09f4",
+        "254bb15b-2162-4ada-83f8-a9f3b5f720ed",
+        "267a5301-0612-43e7-8ba9-d663b56d0402",
+        "2885be54-ece6-471b-b1a6-791e0cd11a41",
+        "2a7a0d33-deb6-4c27-9e23-87da39ee3adc",
+        "330f4455-1397-466f-ba9c-42a7aa7766c6",
+        "3b7b9538-537f-4a95-b482-63d204af63fc",
+        "3e3fa3f1-f536-469b-97b7-01e4e1d2cae9",
+        "418fcaf4-5bc1-4f9b-b308-ddf446ae49ac",
+        "442d03ee-f1fe-4cb7-bdef-cce9f1124c13",
+        "47601ca8-8b15-433c-8d01-648773157188",
+        "4b58e2ca-a7cf-4f25-81c0-380a4cfda969",
+        "50073103-0f7b-4cdc-93ca-f5f53f65df24",
+        "51db5c9e-786e-4d07-93d8-28c225d5935a",
+        "52fe420e-cc28-40d2-bf16-f24f34840dfa",
+        "5495f0ad-3ddb-4f56-8524-ea809064a0c1",
+        "5e5cc7d2-bc98-4941-bc27-eee372e6be1b",
+        "6ef9b5fb-88f6-4055-b015-cf633f564b60",
+        "6f5fe56b-47f3-488d-8cfe-726f4ce8e786",
+        "6ff51f7e-8974-4097-a1ec-9d50f4df3696",
+        "72e6983a-aee3-4c51-a3de-f05e68f30a25",
+        "74011e19-4a00-4788-be48-5443b8cd4b94",
+        "7a0c3f05-df7d-462f-ae50-203a0f175b9f",
+        "7cdbe01f-2fd4-4c82-85ba-1f321bbf1814",
+        "7d8fd1ce-64f0-49ce-be2c-ba8113123434",
+        "81966126-53c7-4e74-baaa-13bcbfb67fad",
+        "834aafef-6b46-41d6-8fda-cca036339485",
+        "84f9e726-7521-44e2-b046-ee9887f23c4d",
+        "85e6675b-e2af-487b-a2e4-5ac1e492190c",
+        "8895f814-0f01-4b57-84f3-1ffccc2454dc",
+        "8a3c877d-01ea-4c5c-8393-a9f5c41ea847",
+        "8b15fc64-1160-43b7-9e9a-fe5af7649dce",
+        "8c6309b1-43a3-4a05-a3c7-9e5f0f019c95",
+        "8d0db9a7-6d75-43c5-97b7-61a847edaa48",
+        "8f2007ba-ce11-4ff1-8e90-66e4b3ac866e",
+        "95bd9508-209c-4666-8f4d-4079df7625ca",
+        "98bf1115-d0be-4682-b4d5-e37e69ae62a9",
+        "9bbc14b2-594b-4ff3-b5b2-88c8f21d46ed",
+        "9c64487a-d1bc-47af-98bb-826187846a8c",
+        "9e44d04a-26c8-4d23-beaa-dc7bf9c45555",
+        "a1624796-1238-4c26-91a4-fa31540d63a1",
+        "a25534db-f803-46af-910a-ed7766ceb1e0",
+        "a6aff4d0-67de-4d04-b299-456a2c85a8f3",
+        "a76876c4-c877-452f-8b89-57b2c213fc72",
+        "a9424bee-7479-4a8e-9675-cff75433ec31",
+        "ab960def-e439-4428-9f9e-fb6279534991",
+        "ada930bd-bc7d-4cf2-917b-7529864fd62e",
+        "ade03b57-2da8-4ff5-8ba5-6cbc0c79b216",
+        "afe84393-c383-4c1b-a0fb-d436b440cdf0",
+        "b464c851-2abf-4553-9ea2-914cda44b1db",
+        "b9e16d8f-7519-49e3-ac7e-3e32756d1823",
+        "bac0ea05-4f75-49a0-84e7-c4208102aae6",
+        "be4f5a10-1104-4d00-884f-12fcb950fadb",
+        "c12c0c13-a066-4ec1-90fc-17254b4eeee7",
+        "c516f603-0aee-418c-a745-5d0ad1178126",
+        "c51f4b26-86f8-4ef5-b0e9-41b839fa3681",
+        "caa21189-5187-49c5-ad2c-fabf9dda262d",
+        "cd049c32-c545-486b-b692-3808d080db4d",
+        "d26ff1d5-30ba-407c-ad47-f22eb4fc116c",
+        "d44f3b83-9b43-4d81-8374-b30ad0ee99c1",
+        "d8d414d9-4c5c-49ac-b6f1-d391fce3a432",
+        "d907eae2-eb62-4e0c-b253-2577643606ca",
+        "d9fa1d0c-3278-4107-b901-fb3d0a752faf",
+        "dd6939be-af02-4a29-88de-04bfa63bec5d",
+        "e015867c-0ff9-48b9-8df0-dbc3756f3c13",
+        "e4384beb-1d92-4ae1-b863-fc3f787c18b8",
+        "e52515cf-d69d-4eae-a7ce-aa8acc91ccb1",
+        "ec6058e7-44d2-45f0-8c6f-b5f88d36f1eb",
+        "ece42fb6-3dd6-4b18-9454-b9a3397dee9d",
+        "f0e82f60-275c-4e66-a240-ef916b21431f",
+        "f30a111f-5db2-4525-a115-1fe036b75db0",
+        "f4fa4821-b3d8-4ff8-b860-d028f6e907ce",
+        "fc5ed6c1-f027-4515-8acf-57a1c3e7beb4",
+        "fe6be0cc-215f-41fd-80ff-19e20e0a4c50",
+        "fea1e667-b9d9-4795-b451-b455b7a737fe"
+      ],
+      "count": 86,
+      "bbox": {
+        "min": [
+          1279.3059332185053,
+          -12989.679654509899,
+          -1.8947806286936004e-16
+        ],
+        "max": [
+          2720.105933218506,
+          -12248.879654509903,
+          910.0
+        ]
+      },
+      "layers": {
+        "Schraube_DIN7991_M6": 56,
+        "Default": 21,
+        "M6_Muffe": 8,
+        "Ebene 01": 1
+      },
+      "primitives": {
+        "UNKNOWN": 78,
+        "STRAIGHT_ROUND_STOCK": 7,
+        "RECTANGULAR_PLATE": 1
+      },
+      "id": "G28",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "08846bee-e72c-456a-93a1-9c1af0571251",
+        "0c0fb645-1089-4f47-b4d1-49962f6e2370",
+        "480ab59a-0a50-44b9-a1dc-b9290e887627",
+        "48fe076d-d212-453f-a81b-b9b0fa3f7b8a",
+        "630a7547-8f79-4b95-9d7a-a813990bea6b",
+        "65efb397-74c5-446f-8a74-ce90c0875bb1",
+        "7204ad96-23f6-4f53-9a31-1914f40ed07d",
+        "a3c155ef-3c96-4d4d-9169-6a03f518df20",
+        "a3cb4c18-e2c3-4ca7-9b18-05979ea6b7c0",
+        "bc5ae86d-746d-4a26-ac56-79ebd5637308",
+        "c2a8ec06-81ea-4dc2-9e46-25fd959dab22",
+        "db10cdc2-62b9-4ab5-a1ce-625bcb573851",
+        "e29c09f5-88d5-48af-8d5a-cc42687e26b5",
+        "f7172768-07d0-4c62-9e3f-e9a8b3117fc1",
+        "fa402b00-a939-40e1-a2dc-73a1cf6c7f6d",
+        "fba7e640-5083-4a03-bf82-9b10dcc743c3"
+      ],
+      "count": 16,
+      "bbox": {
+        "min": [
+          1263.1327941657119,
+          -11278.45127913572,
+          -1.8947806286936004e-16
+        ],
+        "max": [
+          2736.2790722713,
+          -10521.47814008292,
+          2000.0
+        ]
+      },
+      "layers": {
+        "Default": 16
+      },
+      "primitives": {
+        "UNKNOWN": 14,
+        "STRAIGHT_ROUND_STOCK": 2
+      },
+      "id": "G29",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "14d74893-0a93-4448-a20b-e98dbb13b04d",
+        "39aeafd6-5533-461b-a5a3-01485153ae4f",
+        "39b48d4a-3758-474e-9c97-5b20298496b6",
+        "3e8fc725-ebfb-4e01-bd17-8c2762e6a3a5",
+        "47f50987-59f3-4fa0-b00b-f4c652228552",
+        "49127bd4-130e-4887-bff0-c989c659db99",
+        "4afcc4bb-8012-4f33-996b-054a29a2a102",
+        "55f7a54b-9d57-47e9-bab0-9116dfb97e27",
+        "5dcfab0c-ef97-4c3d-a432-ff900ad67047",
+        "808066c7-e4ac-40ef-b6be-1c1502211323",
+        "afb14d8f-770b-4d00-98a3-4919f08750d7",
+        "b00c3ed6-d883-460e-9d62-5b3b8fc744ee",
+        "dd3611fd-7a29-4adf-8c84-85c2af9bb56e",
+        "e01e8034-712f-4f5f-beae-4de6d0bc146b",
+        "f448c6c0-95a4-4ec1-bc75-cc2578e9ae05"
+      ],
+      "count": 15,
+      "bbox": {
+        "min": [
+          1271.0216619710877,
+          -9592.301213499968,
+          -1.8947806286936004e-16
+        ],
+        "max": [
+          2768.390204465922,
+          -8795.504099576387,
+          750.0
+        ]
+      },
+      "layers": {
+        "Default": 14,
+        "Ebene 01": 1
+      },
+      "primitives": {
+        "UNKNOWN": 11,
+        "RECTANGULAR_PLATE": 4
+      },
+      "id": "G30",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "161400d1-48dd-43b9-b94c-df1357159709",
+        "1c2f0898-1539-46e7-a0de-830f17fa18eb",
+        "27984569-6fd8-4ce5-88bf-56fe84ff836f",
+        "315be144-7f5e-4c07-bd0b-7be38cef062f",
+        "52964434-2da4-4e2e-93c4-268ae9701cf9",
+        "60d0a3aa-f91e-4476-aba7-fb0631ae5377",
+        "635691cf-cfba-43bb-9758-a04e6a570a6a",
+        "65d145ed-e8a2-4830-afd1-29f09455917a",
+        "77a94acb-d659-463b-a9c8-0cb25b3b414e",
+        "79e7d803-7e96-4f36-acb8-6eb3f47f19c3",
+        "7f544a07-8bb1-49e8-b874-73382316c903",
+        "8d5f8340-92bb-4dd8-bbec-1ced0493a62d",
+        "ae8f7d37-2c21-41e2-b43a-8fbad2812b72",
+        "afcd4fa1-80ef-4079-85ca-e3b231723fc2",
+        "b9e7bdf8-cb08-447f-9714-5806fa79eb80",
+        "bb1e8d38-1c47-4668-920b-987f449643b0",
+        "bd992e0f-6cd4-4b0f-9446-10ae88386299",
+        "c8ddb8f9-52d1-44c6-ac6b-7b25e47c2316",
+        "ca4affd7-6b86-4518-a2b4-efd28e35f0f3",
+        "ccae1ba4-ec14-4a34-9cab-bdab3b2b0f42",
+        "d2290a4d-2d35-403b-a788-f5f63ca08c99",
+        "e38c0580-0e66-4b83-be9c-17712802362b",
+        "e9215d13-7d3b-4ed1-b2ac-a342f114420e",
+        "ea2ee490-9f6c-4950-babb-d627b502f968",
+        "f189e3d4-e5a0-44f2-a044-65a0423d095f",
+        "f29cc9f0-a6f5-41f9-a0f8-3de16bc0aba6",
+        "f83362a1-ffa3-44b4-b078-9fc600dd0216"
+      ],
+      "count": 27,
+      "bbox": {
+        "min": [
+          2080.9446662105174,
+          -7716.4406038248,
+          -1.780386406206206e-13
+        ],
+        "max": [
+          2887.771590104566,
+          -6909.613679930766,
+          2000.0000000000002
+        ]
+      },
+      "layers": {
+        "Default": 23,
+        "Ebene 01": 4
+      },
+      "primitives": {
+        "RECTANGULAR_SOLID": 1,
+        "UNKNOWN": 24,
+        "RECTANGULAR_PLATE": 2
+      },
+      "id": "G31",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "0256418d-a01e-423c-a830-6e1159fe92e3",
+        "447c1bf6-d573-44d0-b1b0-afed986f8e2c",
+        "4c7f5c64-5a3d-4be9-a285-9401b7e0acfb",
+        "69a98d70-c0d9-4380-8325-53b7a0441bd7",
+        "6ad3ef1a-2dd7-4a88-81c3-90d7ef9807e6",
+        "6c4e16e1-7d50-4536-98d0-4759ee7c8241",
+        "6dac5fac-6e42-44c5-82dd-970ed024b573",
+        "8b1de127-bb2e-4dc9-a2cf-ab5ad06c4180",
+        "c0ab896c-4aad-4932-93a8-5c71a2261e76",
+        "c46e97a5-a2c8-40cf-b48a-2f5aee78bc05",
+        "d45e68b3-db0e-4fa1-a216-1b469858066c",
+        "e2eaa386-c090-4998-89cc-f3e5a78a603f"
+      ],
+      "count": 12,
+      "bbox": {
+        "min": [
+          -1905.2617600443875,
+          -5748.402041109588,
+          -1.8947806286936004e-16
+        ],
+        "max": [
+          -1205.2617600443875,
+          -5007.602041109589,
+          1807.2012656822578
+        ]
+      },
+      "layers": {
+        "Default": 11,
+        "Ebene 01": 1
+      },
+      "primitives": {
+        "UNKNOWN": 12
+      },
+      "id": "G32",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "3026ef8c-780d-4a94-b806-faa93b864f30",
+        "30367d2e-f7a4-470c-bbae-d53ad01fa32c",
+        "4e86ac77-4d6d-4fbe-9837-5d4983c171b5",
+        "6d1c2db2-3024-487e-ade9-91f91380659b",
+        "817224b2-465a-450d-af6d-565c35cd5786",
+        "95cfe6f4-789a-4c5b-b71f-430280d7d6fe",
+        "97ed09d4-0d98-4195-bf2a-2627f82c3a10",
+        "a67bd778-04f5-45bb-a3e3-7274b1ac009c",
+        "aa233b29-8965-4be3-947a-c40d7442d6ef",
+        "d4ac7d53-ac5a-4c17-b011-68113037eae9",
+        "df2cc2f9-ed3c-4a8d-8c67-f1f58ab5b5ef",
+        "e23667cb-f93d-4acd-9365-8557a4e79484"
+      ],
+      "count": 12,
+      "bbox": {
+        "min": [
+          -808.1009418725142,
+          -5748.402041109588,
+          -1.8947806286936004e-16
+        ],
+        "max": [
+          -78.45153275225219,
+          -5007.602041109589,
+          1807.2012656822578
+        ]
+      },
+      "layers": {
+        "Default": 11,
+        "Ebene 01": 1
+      },
+      "primitives": {
+        "UNKNOWN": 12
+      },
+      "id": "G33",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "358baee9-3837-4c6c-892f-79cca3bf91d0",
+        "839a074e-cb3e-4ede-920f-e40d7a76be86",
+        "b8f6f2a7-142e-4b4c-b035-1a44b551b2e7",
+        "ceed7ebb-a1c6-492d-820f-8ace30d3a717"
+      ],
+      "count": 4,
+      "bbox": {
+        "min": [
+          2109.371590104566,
+          -5524.808914243313,
+          -1.780386406206206e-13
+        ],
+        "max": [
+          2887.771590104566,
+          -5484.008914243312,
+          2000.0000000000002
+        ]
+      },
+      "layers": {
+        "Default": 3,
+        "Ebene 01": 1
+      },
+      "primitives": {
+        "RECTANGULAR_SOLID": 1,
+        "UNKNOWN": 3
+      },
+      "id": "G34",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "3a042a4c-5c2a-454a-9c99-091a357efebf",
+        "48b4f1f1-1366-43f1-9075-19482f9002c0",
+        "625df7f7-3fe3-49b9-82d8-e41e87e13642",
+        "8b294df4-f71c-4b7f-90e3-f778bd919529",
+        "9ab3971c-fa8e-45c5-aa32-a6db5cab6b71",
+        "9c22e6aa-66e3-4b38-97ab-7b7f4f2a4099",
+        "bc67d6ff-6269-4fb8-abff-c5da7eb0ed04",
+        "cde9e6cd-0706-4aa4-860a-4dca07d0fa55",
+        "d06055f1-e483-44f4-880a-e70e88110f54",
+        "da8ff86f-ed87-4334-83b1-45feafa53034",
+        "de82421c-9975-4df1-b4c7-6a5accd34fdf",
+        "e85666be-f081-4b63-b261-7f7f95287134"
+      ],
+      "count": 12,
+      "bbox": {
+        "min": [
+          -1905.2617600443873,
+          -4091.3805860849734,
+          -1.8947806286936004e-16
+        ],
+        "max": [
+          -505.26176004438753,
+          -3350.5805860849728,
+          1807.2012656822578
+        ]
+      },
+      "layers": {
+        "Default": 11,
+        "Ebene 01": 1
+      },
+      "primitives": {
+        "UNKNOWN": 12
+      },
+      "id": "G35",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "4a003661-e5ae-4884-ab6c-ae1d54068b08",
+        "4fb91f75-4e71-4816-8a1f-570fdeec778f",
+        "70d7c9df-d843-4714-8c7f-6687e2faa3de",
+        "9601303d-f144-4d4e-b3c4-762ed8b41dcf",
+        "f5cccc8b-e633-4ca7-8fb3-f232805dc867"
+      ],
+      "count": 5,
+      "bbox": {
+        "min": [
+          2202.75100204032,
+          -3399.839613327393,
+          0.0
+        ],
+        "max": [
+          2902.75100204032,
+          -3359.839613327388,
+          2000.0
+        ]
+      },
+      "layers": {
+        "Default": 4,
+        "Ebene 01": 1
+      },
+      "primitives": {
+        "RECTANGULAR_SOLID": 4,
+        "UNKNOWN": 1
+      },
+      "id": "G36",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "54521e05-491f-40df-9772-7e76d2a1330e"
+      ],
+      "count": 1,
+      "bbox": {
+        "min": [
+          2202.7510020403165,
+          -3259.839613327393,
+          1838.1913185829167
+        ],
+        "max": [
+          2242.7510020403192,
+          -2639.839613327388,
+          1878.1913185829171
+        ]
+      },
+      "layers": {
+        "Default": 1
+      },
+      "primitives": {
+        "RECTANGULAR_SOLID": 1
+      },
+      "id": "G37",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "b0e83944-2468-4a95-ba32-e52b144893f1"
+      ],
+      "count": 1,
+      "bbox": {
+        "min": [
+          2202.7510020403165,
+          -3259.839613327393,
+          564.7217391541776
+        ],
+        "max": [
+          2242.7510020403192,
+          -2639.839613327388,
+          604.7217391541781
+        ]
+      },
+      "layers": {
+        "Default": 1
+      },
+      "primitives": {
+        "RECTANGULAR_SOLID": 1
+      },
+      "id": "G38",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "40b98a2f-ecfd-4e7a-a5a1-89148b6f8578"
+      ],
+      "count": 1,
+      "bbox": {
+        "min": [
+          2862.7510020403174,
+          -3259.839613327393,
+          1838.1913185829167
+        ],
+        "max": [
+          2902.75100204032,
+          -2639.839613327388,
+          1878.1913185829171
+        ]
+      },
+      "layers": {
+        "Default": 1
+      },
+      "primitives": {
+        "RECTANGULAR_SOLID": 1
+      },
+      "id": "G39",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "813ad8e6-7ba5-4eaf-ac90-ce7a5fa23b22"
+      ],
+      "count": 1,
+      "bbox": {
+        "min": [
+          2862.7510020403174,
+          -3259.839613327393,
+          564.7217391541776
+        ],
+        "max": [
+          2902.75100204032,
+          -2639.839613327388,
+          604.7217391541781
+        ]
+      },
+      "layers": {
+        "Default": 1
+      },
+      "primitives": {
+        "RECTANGULAR_SOLID": 1
+      },
+      "id": "G40",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "019c4a96-12fb-4991-a94b-22d2a50090ec",
+        "a59d40d1-bc6e-44f6-84f6-3b43036b2a70",
+        "c1b6ef2e-569b-49f9-acfa-1ac55cd8c692",
+        "e75f1657-f61d-4538-a568-b9bf2955541e"
+      ],
+      "count": 4,
+      "bbox": {
+        "min": [
+          -3976.420578979679,
+          -3143.491168297201,
+          0.0
+        ],
+        "max": [
+          -3276.420578979679,
+          -2443.491168297201,
+          800.0
+        ]
+      },
+      "layers": {
+        "Default": 4
+      },
+      "primitives": {
+        "RECTANGULAR_PLATE": 4
+      },
+      "id": "G41",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "097f989c-d55b-4e4c-9f35-af7432b5331a"
+      ],
+      "count": 1,
+      "bbox": {
+        "min": [
+          136.27554389319354,
+          -2904.5957297746695,
+          706.0000000000001
+        ],
+        "max": [
+          148.27554389331917,
+          -2895.7757297746693,
+          754.0000000000001
+        ]
+      },
+      "layers": {
+        "SHERPA_MINI_10": 1
+      },
+      "primitives": {
+        "UNKNOWN": 1
+      },
+      "id": "G42",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "567f1e8d-e225-4958-8fea-dd88644f261c"
+      ],
+      "count": 1,
+      "bbox": {
+        "min": [
+          4286.204049848423,
+          -2904.5957297746695,
+          706.0000000000001
+        ],
+        "max": [
+          4298.204049848549,
+          -2895.7757297746693,
+          754.0000000000001
+        ]
+      },
+      "layers": {
+        "SHERPA_MINI_10": 1
+      },
+      "primitives": {
+        "UNKNOWN": 1
+      },
+      "id": "G43",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "de177914-a160-40be-8fe7-3751e61a45ad"
+      ],
+      "count": 1,
+      "bbox": {
+        "min": [
+          136.27554389293164,
+          -2871.893460945899,
+          706.0000000000001
+        ],
+        "max": [
+          148.27554389322873,
+          -2862.893460945899,
+          754.0000000000001
+        ]
+      },
+      "layers": {
+        "SHERPA_MINI_10": 1
+      },
+      "primitives": {
+        "UNKNOWN": 1
+      },
+      "id": "G44",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "e588c4fa-5b09-43ee-aa94-91c7b5018b9c"
+      ],
+      "count": 1,
+      "bbox": {
+        "min": [
+          4286.204049848162,
+          -2871.893460945899,
+          706.0000000000001
+        ],
+        "max": [
+          4298.204049848458,
+          -2862.893460945899,
+          754.0000000000001
+        ]
+      },
+      "layers": {
+        "SHERPA_MINI_10": 1
+      },
+      "primitives": {
+        "UNKNOWN": 1
+      },
+      "id": "G45",
+      "interpretation": "SMALL_SEPARATE_TRIAL_OR_AUXILIARY_UNRESOLVED"
+    },
+    {
+      "guids": [
+        "2c7b6842-2330-4cf4-a731-f1bf45774cf1",
+        "3a1140b0-d9ef-450a-93b9-e32395772262",
+        "454030b6-faa6-44be-b203-4669abc4a90d",
+        "4d28b2bf-5c30-4b09-80a6-dabf80846f24",
+        "54b0ecba-fc0b-4aaa-9e2c-296ea11639a7",
+        "913b0ebc-6723-45b8-98c6-d86c597e65d4",
+        "aee6e571-b579-4dad-a85f-08bcf37b5753",
+        "b173374f-1e18-43f0-bb01-3249f3bac92d",
+        "c1d1fa42-e0bc-4976-9738-c412f33f0dcd",
+        "e875587a-e26b-450d-a80d-053b01f4710e"
+      ],
+      "count": 10,
+      "bbox": {
+        "min": [
+          -1905.2617600443873,
+          -2776.34057153958,
+          -1.8947806286936004e-16
+        ],
+        "max": [
+          -505.26176004438753,
+          -2035.5405715395796,
+          1615.0
+        ]
+      },
+      "layers": {
+        "Ebene 01": 1,
+        "Default": 9
+      },
+      "primitives": {
+        "UNKNOWN": 10
+      },
+      "id": "G46",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "15cbf57a-22ca-4467-b6fb-71213781b540",
+        "47d5c603-8ff5-41b9-a6fc-90cf5f7e6eea",
+        "49c241bf-3336-4f66-9d97-712e38b31686",
+        "77986be1-2164-4b06-8ffd-1bc60b0c90cf",
+        "7a8f4ddc-b7ec-43a9-a73e-8bb27a990ca8",
+        "8f3bfb9f-d7f6-42d6-9129-f84adea18d01",
+        "9cf0a3ae-5339-4a87-ae92-03b69fa407a9",
+        "cea95938-6d1f-4319-a29f-d3155e2e008b",
+        "da9e4c44-8ba4-4d88-8964-345180534f06",
+        "e8cb3d0c-0657-4d5a-b582-00b13240c96e"
+      ],
+      "count": 10,
+      "bbox": {
+        "min": [
+          -17.052699798322948,
+          -2776.34057153958,
+          -1.8947806286936004e-16
+        ],
+        "max": [
+          1382.9473002016769,
+          -2035.5405715395796,
+          750.0
+        ]
+      },
+      "layers": {
+        "Default": 9,
+        "Ebene 01": 1
+      },
+      "primitives": {
+        "UNKNOWN": 10
+      },
+      "id": "G47",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "225083ec-a264-4ef4-849c-3a478fd21690",
+        "3e4c239e-6a39-4774-8f93-75003177e816",
+        "401ab813-5dfa-437f-8442-b1b1a81569ce",
+        "64d62aa7-2e85-494d-88fb-aba74831fc54",
+        "8ed05b0f-0b13-4cc3-bde4-c00ead7e7d0d",
+        "ba4bad55-7305-45ca-ba83-756db58f1b3c",
+        "bcb89e85-f586-437f-aa97-1fbe2bb7472d",
+        "bd5df11e-bdba-44fb-8931-e2a6cea8d890",
+        "eec9a9fb-d3cf-4007-b99e-53ff37026695",
+        "f7e75b85-4bbd-4e01-a3b8-2a396b74c4bf"
+      ],
+      "count": 10,
+      "bbox": {
+        "min": [
+          4399.020390367062,
+          -2776.3405715395797,
+          -1.8947806286936004e-16
+        ],
+        "max": [
+          5799.020390367063,
+          -2035.5405715395796,
+          750.0
+        ]
+      },
+      "layers": {
+        "Default": 9,
+        "Ebene 01": 1
+      },
+      "primitives": {
+        "UNKNOWN": 10
+      },
+      "id": "G48",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "1e7942bd-9d8b-40f0-bdc1-0d26596967d4",
+        "b3886768-c21b-4e0c-8c80-36f19d13d9ad",
+        "d9a0e813-f9c1-4f0d-98dc-90f4fd759bdb",
+        "e8bd21be-4008-4389-8b12-c387b80440c9",
+        "f4da4441-7a25-4ee1-9c5b-d3a6e70e3573"
+      ],
+      "count": 5,
+      "bbox": {
+        "min": [
+          2202.75100204032,
+          -2539.839613327388,
+          0.0
+        ],
+        "max": [
+          2902.75100204032,
+          -2499.839613327383,
+          2000.0
+        ]
+      },
+      "layers": {
+        "Default": 4,
+        "Ebene 01": 1
+      },
+      "primitives": {
+        "RECTANGULAR_SOLID": 4,
+        "UNKNOWN": 1
+      },
+      "id": "G49",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "0fefee6e-2397-40d6-9dc9-0cf6b8126add",
+        "118ccc21-609f-436b-92b1-5f1217fa2ed2",
+        "124e94b0-faa1-4e8f-b99c-3c9ac08091c0",
+        "147b9ba3-fe80-4e3e-95ab-6eeb6882145c",
+        "16c5ebd7-048b-4155-85e5-97b5d6c1b20c",
+        "1f4eabe7-8d7b-406c-a709-64adcaa1dbbb",
+        "20fa544f-a67c-4d03-ab68-cba101afd54b",
+        "2ea99a53-cfe9-4329-b8c2-d5d76c265d66",
+        "4448b97e-c94d-49cd-a916-3b7bdd528ed9",
+        "4664c612-3407-489d-9716-d16df32e2b3b",
+        "4aff8e02-d9e9-4a1f-8150-ed628cb594d1",
+        "4dc2925a-a3f3-4146-b06a-4550d254bda9",
+        "4feb94f1-fc58-4d58-b877-7609e881bec6",
+        "50737e7e-f575-4fc4-b454-bd3cad853f43",
+        "64a8e4a2-1514-44bf-a28a-76370752e05d",
+        "6f83b57d-fa9f-4dc1-9c56-72b8ea1be370",
+        "7153af7a-4abd-4f88-8d0a-ae3ef59fb112",
+        "74372781-d650-4158-bfcc-e28459a969b8",
+        "75784bf0-e799-40a5-9f13-4e9ad788c19b",
+        "760a987a-1845-41cd-92e6-05251b3f9d68",
+        "7c9da1a5-dd65-46ef-a6ac-1058e7358b27",
+        "83943fbe-ea5d-4cbc-b2a9-760b62ec474f",
+        "87d9c39f-24e8-40d2-aa5f-344e825e7924",
+        "8c23c0fa-cdc3-450b-be97-efa7535e87f6",
+        "9698cdcc-0662-4348-96fc-a4b76f225bff",
+        "98a3d22a-fa69-4ef5-9aa7-33b51a7e0ec1",
+        "a0224653-c197-4ebd-af1d-cf4211488cba",
+        "af344c09-edd3-4590-8926-d1aae9c10f54",
+        "b7bad64f-30af-428c-b4d5-deb5a312a1c4",
+        "be9e5c06-a013-4764-8e19-fcc2b2998c81",
+        "c66e90ef-e046-4556-806c-477654d98291",
+        "cb4016f8-d278-4187-a97d-42b663cff12b",
+        "e228ffd9-ff11-4cf1-881b-b943c054b6e7",
+        "edb08bd3-6779-4c59-ac43-4020349de431"
+      ],
+      "count": 34,
+      "bbox": {
+        "min": [
+          2080.9446662105174,
+          -237.6815190216387,
+          -1.780386406206206e-13
+        ],
+        "max": [
+          2887.771590104566,
+          569.1454048723945,
+          2000.0000000000002
+        ]
+      },
+      "layers": {
+        "Default": 30,
+        "Ebene 01": 4
+      },
+      "primitives": {
+        "UNKNOWN": 32,
+        "RECTANGULAR_PLATE": 2
+      },
+      "id": "G50",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "0b5fb68b-bc16-45d2-afe7-47b4918691dd",
+        "14ed7c3f-bc1c-4241-acf0-db403da9026f",
+        "2e16be0f-36f7-449b-b28a-77fb585e74e4",
+        "35712200-26bc-4580-909d-8eceb4ea315b",
+        "3e2ad4b8-f09e-41ec-be13-61f2100c47f6",
+        "3e87e27b-5338-4015-b987-647fdbbe9710",
+        "4b6e0548-6eea-4662-8963-e46ddfd9ce53",
+        "4fbcb3bf-2075-480c-aa44-e0827a740340",
+        "5f3e8b6e-281a-42a4-bb45-400dbb448c15",
+        "5fd1ca23-0715-478f-a45e-7ccf9e5e06ca",
+        "609babf0-74e2-4f30-9702-0b9871bf47d6",
+        "6179f9ea-b0a1-4f8b-8543-a7de8038f90f",
+        "61e40b9a-44eb-4d8d-abf6-ce23365185f9",
+        "650d5088-8e28-4920-9831-4a63d873d069",
+        "6ae794d8-ede0-46ff-a0d2-07fd27c78cc0",
+        "7467139c-28a8-492c-aac6-f67ae0a4100e",
+        "7784ca30-d12a-4272-b04c-d2f1e3d92717",
+        "86010d82-5f5f-4470-b7a6-0d1f03c26b8b",
+        "8cc9a919-bd10-464e-ab4a-324f6df31064",
+        "9a74ea08-b987-4911-82bf-5bd35317c654",
+        "9bb93669-3335-4810-aea3-90bec56f884d",
+        "a3e4aa91-0fdf-477e-992d-4c13550e46a3",
+        "a4bedf11-1927-4bbb-8347-a75eebd508b7",
+        "a5c75929-2ce2-4362-b8b4-8d21836cacb6",
+        "ad06a561-6b02-408e-816c-7efc1d5fe142",
+        "b21a9402-f312-42b2-b0d4-dc99f9e6adbc",
+        "bc3875af-96a4-470d-bfdd-bcef32e61891",
+        "bf4a73a3-a3cb-4d2a-b07a-662cabedb9b0",
+        "c6ed3d20-9a69-4423-bd1d-119e76e1a69e",
+        "cbb291be-caf0-4a37-b072-da764fee35cd",
+        "cd5a3ba6-8928-4782-8c98-2981cf5b7142",
+        "d9b9eb05-091d-4485-a407-3563449ca158",
+        "e0a6ae48-03e7-4d34-8f5b-1821c03a3d90",
+        "f51a15a6-944e-48ee-9250-4d16e0c42521"
+      ],
+      "count": 34,
+      "bbox": {
+        "min": [
+          3807.622399891995,
+          -237.6815190216387,
+          -1.7683022030910342e-13
+        ],
+        "max": [
+          5395.449323786043,
+          569.1454048723945,
+          1169.5798909231903
+        ]
+      },
+      "layers": {
+        "Default": 29,
+        "Ebene 01": 5
+      },
+      "primitives": {
+        "UNKNOWN": 32,
+        "RECTANGULAR_PLATE": 2
+      },
+      "id": "G51",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "01e296a2-31d8-49a6-a552-712b652f6d2d",
+        "06a75a2c-ff00-4cac-8729-80aa4b22058e",
+        "0fbb9f95-c07b-4968-b087-659cfed0b916",
+        "4d7fcee5-a689-40b0-b5f1-bfc862a51900",
+        "55659689-8553-4c2c-bffe-e8512ee928d3",
+        "67262503-a419-45a2-bdf4-c2ce6c1ad366",
+        "86afa16c-b999-4c63-ae14-192e45fa4a4e",
+        "8e8ff270-ba8e-49c6-88ac-5e70c18eaa81",
+        "976d1589-83d3-47c3-8b51-9b35cf764688",
+        "bbacdbae-d1a2-41e0-af7d-f440ab5ed325",
+        "c05f08bb-1f6d-462b-ac9a-d08af58f1ba9",
+        "c61ac674-6a66-485a-80f6-cca2670db93e",
+        "c7a0c0ab-7c66-4e85-9715-452ba7f27bf3",
+        "c8cf02a1-ae5a-414c-907d-e43185b41cb2",
+        "f20718c3-56ed-4365-8084-14f412b0042b",
+        "f3590c08-d8aa-472a-a4c9-446b5689dcf3"
+      ],
+      "count": 16,
+      "bbox": {
+        "min": [
+          -17.052699798322948,
+          -5.087331536388145,
+          -6.315935428978669e-16
+        ],
+        "max": [
+          1382.9473002016769,
+          776.8864188291999,
+          2500.0000000000005
+        ]
+      },
+      "layers": {
+        "Default": 13,
+        "Layer 01": 1,
+        "Layer 02": 1,
+        "Layer 03": 1
+      },
+      "primitives": {
+        "UNKNOWN": 15,
+        "RECTANGULAR_SOLID": 1
+      },
+      "id": "G52",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "079ce448-f569-45ce-ab23-9c0a8070c4c6",
+        "09affcb3-f7b4-4b60-a411-07cb7ec78e2d",
+        "0b09717e-5d1b-4001-834e-8e048efc7b18",
+        "0d73a8fc-6c62-4267-9a25-39ec21633025",
+        "0ff54a9d-aacb-4e7b-bb36-5bbb01ebb70d",
+        "169e57ab-15d9-4e04-b274-42b139956e82",
+        "217383d0-3602-4e6e-8394-852cbfd69be2",
+        "2faafe63-1f69-46fc-a6a0-58a7a070e179",
+        "30e077a0-a75c-432f-ab7e-963b0249df7d",
+        "312e146d-206e-4044-99e9-3c9b3fc0c3a8",
+        "3257aca2-3fac-4ce3-ac05-4044c0d7a0c4",
+        "33fb7530-bb9c-4ddb-b783-cc5b77257670",
+        "3ad08e5d-d046-4ab6-92fd-1248550a13ee",
+        "3e9d89ef-3648-49f6-b4e0-5e835a8b2031",
+        "428dd317-a3bb-4964-a89b-648ae088598e",
+        "4e392727-05b1-4634-96f7-ecc2a6653a95",
+        "50360ff5-be34-4d57-af47-040031df36ce",
+        "55cd152e-a0a3-4b7e-8a12-c83c45f279e9",
+        "59706a37-4062-4150-9b0a-5eb82482edc3",
+        "5c284156-5919-4cec-9784-f79ddbe9c78d",
+        "5e7d01f9-fddf-4759-b69d-8ee5c9e36497",
+        "693a0e18-b100-4e7b-813e-eaef96b4b434",
+        "749794e9-b4ec-4591-96b2-48371bf0dacc",
+        "7a19a0b2-19f7-43ec-aca3-a964611b6d9f",
+        "83066b84-a22e-431b-b66b-183d6d6d731d",
+        "8ab5aac2-9a05-4d99-b625-cf26312869bf",
+        "8b1ee406-2dae-43c2-8e8f-cd932aa728f6",
+        "8dd0ae35-c2aa-4b19-bab1-75ac0b257b2d",
+        "9014beb0-1f0d-485f-b2d8-fe281f459c45",
+        "90938645-bbd1-4b03-b212-448966b9d8eb",
+        "94b5d9fa-0a27-48ca-ade9-e1fe85ce94bd",
+        "95b9f9c8-2d2c-49c7-8ff7-47beeb2b2214",
+        "9e71a294-af64-4a6d-81ff-39205e72db8c",
+        "9f51e4a7-a668-4c42-b085-582e7f507312",
+        "aa31ed20-593d-4c9b-b4d9-c782f39e7e57",
+        "bbaa9f49-4766-4be2-9e38-6ea463a75a4d",
+        "c812d297-f336-434e-8fd1-ef53b8a57253",
+        "cad5b6e0-af49-4ca8-9f3f-351aeb80bed0",
+        "dfd2566c-974f-46a5-8c86-65e90684a20e",
+        "e2d36038-3463-4973-bc38-a23582bfc730",
+        "e3907b51-df11-48e1-bdb9-458b46fece83",
+        "e45641e1-9578-48d0-b683-91cc1718c32d",
+        "e699dcc5-f2da-4208-9146-9e598a9453fd",
+        "f2563f68-8b7c-44bd-be6d-11fa4888f652",
+        "fb17c4a5-0d64-400f-b99e-6ade757ceea3",
+        "fb8c9a1b-b41d-4cb4-a10b-2d5e4d157597",
+        "fe255be7-bad2-4a29-8817-2894d4dd5e68",
+        "fe27c2ea-c0ab-4a28-be16-452db033f157"
+      ],
+      "count": 48,
+      "bbox": {
+        "min": [
+          6515.049351559723,
+          143.53893216064958,
+          -1.780386406206206e-13
+        ],
+        "max": [
+          8039.854554332218,
+          1495.1780158054673,
+          2000.0000000000002
+        ]
+      },
+      "layers": {
+        "Default": 42,
+        "Ebene 01": 6
+      },
+      "primitives": {
+        "UNKNOWN": 48
+      },
+      "id": "G53",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "2a15c074-7481-4db5-8c1b-7cd1af9996ca",
+        "3e50a1e9-bc6c-464b-a486-3aa35e701952",
+        "54a474a5-0e8c-4cc3-9a2a-39b4f8d6c699",
+        "8c8bcda5-63c1-4ac3-8bec-238d20c55044",
+        "f0303e5b-af83-418a-9540-4fb183841cc2",
+        "f7f0c005-2b75-435b-a43d-1daa63e96ca2"
+      ],
+      "count": 6,
+      "bbox": {
+        "min": [
+          -1337.4526997991006,
+          694.9126684636119,
+          -6.315935428978669e-16
+        ],
+        "max": [
+          -96.6526997975443,
+          735.7126684636121,
+          2500.0000000000005
+        ]
+      },
+      "layers": {
+        "Default": 4,
+        "Layer 01": 2
+      },
+      "primitives": {
+        "UNKNOWN": 6
+      },
+      "id": "G54",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    },
+    {
+      "guids": [
+        "08347f1e-286e-4ceb-a1ad-25ee93054973",
+        "09300ac1-2abf-42c6-8fce-d7721cd26bcb",
+        "11ad4ef0-6b25-47c6-bdd2-05e6bb5eab8b",
+        "14a34793-55b8-42f1-872c-bdecf77a3d87",
+        "14d3cb80-9cfd-4d0d-9d62-f25bc78dbb79",
+        "17a279a3-dafa-4c88-a35b-9acb4ef90388",
+        "18e3260a-4898-41cc-856f-2403b46b6f2f",
+        "1a828410-262f-411d-acda-be79a0c6c4a8",
+        "1fdfbebc-2548-42fa-b85e-d9852210df1f",
+        "2321b875-9ce9-4dbd-8138-846f4c933f25",
+        "241ccac5-01f6-4f19-ba54-b0b84dbba0de",
+        "263db5b3-6ccb-41fd-a564-60c7fe546bde",
+        "2a1bc5d7-f050-40f1-ad58-860e9528ba57",
+        "2a479139-f6e4-42cf-a193-a1cf3b5c94f4",
+        "2b1e8af8-edb2-452f-9982-b3ba18811970",
+        "2cc72c95-6f1f-41f7-9a69-79ace5c5001a",
+        "32a59732-7429-42c2-b800-87189dba9d27",
+        "3827db9f-90cb-49d9-ba17-3f47d457833c",
+        "3da057b9-db4d-43ae-bb1b-476085d8e2c4",
+        "43801ab9-51e4-450b-b24a-efca826e8631",
+        "45e8a164-71a7-40a8-89bc-ece42166cee9",
+        "5057171f-bfa6-45e3-a08f-d7c4b65c2f49",
+        "52c4c035-da62-4a3e-965a-64188d0a3b29",
+        "57bf414d-7923-42e9-95b6-7d26e933ad6c",
+        "601560c5-fea6-403a-99ab-e7e69dd31f87",
+        "61345010-f5cd-4a45-86a7-237495beb76b",
+        "650b5b94-3b9c-4abc-9abd-783a746a26a0",
+        "663214df-fd8c-42ec-a1d0-a3fec1287b24",
+        "689ac010-8971-4120-91b9-a5492d882762",
+        "6cd41ef3-e4b7-4412-b0c9-69e8c8e1659e",
+        "6fbb6f1a-2a64-4838-b629-dcc408ad77f6",
+        "72400fa8-0491-438f-960a-58ed0adc063c",
+        "7403bfc5-a915-4687-b044-7a05c4c929b1",
+        "77054637-d246-4c8a-bdd3-db1ab0c1496d",
+        "783071cd-90ac-4a4e-a191-997881533b89",
+        "7b4abc15-2645-4e05-a992-1ce648c6e075",
+        "7c7027ad-ef44-4a1a-8ba0-2326cd7e61a4",
+        "894f73e0-9be0-4069-940d-56036e9a2b72",
+        "8980aa4d-dd52-4cb2-9232-801eeeb5e4ec",
+        "8bb334a1-ebd4-47d4-872e-bd8f611ec5e2",
+        "8da66827-f579-4ff2-9f1d-707145d139bd",
+        "995a1c2d-039f-4992-8cf0-1c5105ebe374",
+        "9a0cebd7-314d-4966-9524-4d44a235ed51",
+        "9c5cc612-ec7c-499d-b2f5-d00d54fad688",
+        "a6160b97-caa9-4a53-9002-39d47952846e",
+        "a83826d6-7cca-4e4d-a0e2-c51065161b46",
+        "a97362d2-f294-47e5-9ca9-2b39fadf6c3d",
+        "b0fc1d57-75ed-4b90-931a-0ba1a0ec1984",
+        "c30a6377-1372-475f-b46f-05dde873451c",
+        "c6f5bb73-6e78-4e23-bbf2-ad143beaead0",
+        "c8d190f0-47a1-44b7-b187-ffe92b154f63",
+        "ca4faf5e-9340-4aed-a2d4-2627054f3c49",
+        "ca74ff6b-8a21-4d85-9787-dc79c380a15f",
+        "d9071c64-96bb-4e98-9cbf-d910a2fdd3ee",
+        "d92cd092-72d5-4eba-a253-7c7e7f965ab3",
+        "da55e163-4417-41bd-87e8-311a7154dec7",
+        "e2f28bf9-2093-45ae-8a48-243d46d586b1",
+        "e36beb15-1fba-45d5-9909-db586ee16a50",
+        "e73a5723-d066-4a0d-a8eb-d5e58b777930",
+        "e7dfbe0f-92f3-46bb-a0ac-3d86cc6ce993",
+        "eb5d4aa5-f903-4fb1-94aa-df8da80c8fcc",
+        "ee0ac805-9265-42f2-ad5f-2b894839e2eb",
+        "f72129dc-6a1b-41e0-9d67-f30d413fa2e6",
+        "faca56af-6c68-41dd-9d19-929926f06cb1",
+        "fd8b9425-0e02-4fd5-9c4b-acf3e2e3e7f5",
+        "fd9396d9-d443-4490-843e-0969dda4a29f"
+      ],
+      "count": 66,
+      "bbox": {
+        "min": [
+          -6869.6770306127055,
+          1220.3607438151712,
+          -6.315935428978669e-16
+        ],
+        "max": [
+          -2201.079576193633,
+          5888.968289405703,
+          2500.0000000000005
+        ]
+      },
+      "layers": {
+        "Default": 46,
+        "Layer 01": 20
+      },
+      "primitives": {
+        "UNKNOWN": 66
+      },
+      "id": "G55",
+      "interpretation": "SPATIAL_STUDY_CANDIDATE"
+    }
+  ],
+  "selected_studies": [
+    {
+      "id": "S01",
+      "spatial_group_id": "G03",
+      "selection_reason": "Materialbenannter 2100-mm-Vitrinenversuch mit bearbeiteten Rundstäben und Glas",
+      "membership_status": "PLAUSIBLE_SPATIAL_STUDY_NOT_SEMANTICALLY_CONFIRMED",
+      "guids": [
+        "013c37eb-7140-48b8-8807-a4d27bfece90",
+        "0197f36a-4eb1-40ec-b061-891b0d61e45c",
+        "01af0d4c-ed23-4f04-b07e-ada803670581",
+        "059a6e64-5611-4745-bdcf-87a575dbc79b",
+        "05f71441-2427-41fc-91c2-703c7b7d35db",
+        "0912d1a7-d84a-49f2-80e3-40f9a44f671c",
+        "1192bc51-dcc5-4898-ae1d-d9ae668b6978",
+        "13583016-8a9c-405b-979f-ed9ffbaa1c11",
+        "14f7a561-ffe2-47f2-9f31-9ee7ad92805e",
+        "19804e18-aa05-4327-a542-b36bb75014af",
+        "1b1987d4-d741-4aad-8b04-dcb2fb63a760",
+        "1d4c6e17-8244-42ce-a903-2458bd4ac592",
+        "1d7e4ba2-5bf8-450e-bf57-2c468dcd7061",
+        "1ead16fa-7951-4edd-9d46-9e327e629afe",
+        "20b02f3c-acda-4a68-b9f6-db9ab0028ee5",
+        "2781176b-d30a-465d-8da1-a3f9231d9ccd",
+        "29b6e052-c015-456e-99b5-b038e700439e",
+        "2bf5643d-ef90-4f6f-aca8-c40dd37e2737",
+        "2cbac45f-54e2-4ed4-a1aa-4b938e3b952a",
+        "337d9506-e84f-462e-9a7f-09d4997f85fe",
+        "3656e979-a93e-41bc-94d7-8c18e402f4c0",
+        "374629b4-2027-4dc0-900b-8876340fbb6b",
+        "3af0aa1b-99fe-4273-b163-0c17c6fca75a",
+        "41eee5f5-c6fa-4f5d-9abe-798f5d99f25b",
+        "45c3c3e5-e9aa-4485-bcfb-51676561f325",
+        "48f4f09c-cdfb-461c-af5e-f158179cb451",
+        "4f5fbe73-3140-4456-8f0e-f0cb1af221fb",
+        "5785393d-5128-462a-a3b7-969ad1342bd6",
+        "59959240-0155-485f-9cc6-254a280e06be",
+        "59c67b3d-ed56-4fb2-b565-cc1abd8d0cf0",
+        "5ab25b92-4858-42d8-afe8-6d39f6025b0d",
+        "5c971636-84ef-460c-ab44-cd1c8b8ddb64",
+        "600cceae-5398-4318-b94f-8ed514415cd6",
+        "6d5a6bc6-c61f-4b7f-92ee-b6954b9f7640",
+        "6e0adccf-dbab-4ac1-9e59-023f35c31fc0",
+        "6fcfdcb0-2ca6-4e7b-91bc-eb0075a7e359",
+        "7e9d84cb-23b3-4f38-a1d4-9a8239911465",
+        "7f40d1be-aa51-4268-a2f9-20eb8431e4b3",
+        "839d5b88-4291-48eb-aca4-bc6b57d49f93",
+        "85caebf0-3a74-456c-8344-3a16a887e381",
+        "86740115-6cf5-4999-9d37-a4ed3d6040cd",
+        "87c2095c-a0ff-43ab-afe3-ba900290b13e",
+        "89387961-ca72-45e6-9484-e723cdf2d87d",
+        "8c22dc40-18b0-4fe6-a989-a45e8e042027",
+        "9acc089f-52f5-42ac-bca9-84aec08b328b",
+        "9cf819bf-d43b-4e3e-9c1d-80dc79d281ec",
+        "9e8c1b36-c660-40d5-a382-6f5630eb8a5b",
+        "a5e11eb2-8278-4ae3-9b96-5c739a7a2d4d",
+        "ac7c3fa7-4bdb-4fe6-85b0-8830e596c850",
+        "b0d955fb-d74f-40c6-bafa-253bf9e223aa",
+        "b1fb4c05-0f32-43ea-8442-5a73ab343892",
+        "bc9cf64d-3a0b-4976-b7c8-e2cdd12bb478",
+        "c2d6200f-f400-4f20-9d07-c2959f405aa9",
+        "c5398de1-4500-4f57-8b61-33aedb569755",
+        "c5c9ca65-56eb-4c39-b204-5b71708ce7f4",
+        "c9c7fa44-04fa-4cc9-9c44-def94f832a22",
+        "cc0535cc-3e86-4629-ac0e-c836b9aaa612",
+        "cd36aa9f-1fe3-471f-b941-63bd756aee41",
+        "ce784795-691a-4624-ab68-75f8db82ab9c",
+        "d31d6057-d7c4-4977-80c9-f7882e02e69d",
+        "d4c1f571-1f7a-45f8-98b4-0a718655e4be",
+        "d854fada-2ddc-4d3f-8957-f6c8efd636c6",
+        "e47f50dc-8841-4cb0-bbbf-3caed22127e3",
+        "e664b66f-ee27-4f0a-b9c7-a3833aa859c6",
+        "ed6efb92-75d4-4d51-ab63-d274c02b17af",
+        "f491cf67-ec1f-41cb-9a73-6ea77479f17f",
+        "fc482b1f-a9fe-4057-b2c9-6e53be13fef5",
+        "ffba1971-64fa-4fb3-9e5f-2ceadb094388",
+        "ffcb8d2d-d2e3-4551-b139-82dc29c40c8b",
+        "ffdf1c81-6ac0-445d-828b-22aa55940ac1"
+      ],
+      "ambiguous_satellite_guids": [],
+      "bbox": {
+        "min": [
+          13713.711978214338,
+          -23566.022115489977,
+          0.0
+        ],
+        "max": [
+          15227.938425021071,
+          -22875.29438784056,
+          2100.0
+        ]
+      },
+      "grouping_correction": "No membership change between 0.1-mm and 10-mm hypotheses.",
+      "attached_reference_guids": [
+        "17ea8303-754d-4f2e-b4af-454680cadd44",
+        "601caa67-1655-4eaa-a539-7fa725764487",
+        "fbf2f7d5-c35e-4f47-9ae0-be22e003f391",
+        "90dfd41b-8263-494d-99a9-affa1b7e22c4",
+        "0e6571d8-3bc8-45a2-95c9-ab6bb57268c7",
+        "ab954d04-c683-4805-9977-0f5b0d6b19b4",
+        "94a1ef0e-6077-46a4-aeae-784b2230918a",
+        "623b6bc3-a020-443b-aa40-04c6530cf9a8",
+        "422e9755-e768-4491-9c33-fc44ada2f6c2",
+        "0ab55616-ea26-4a98-bef3-15719ff3e8c5",
+        "8a8475e4-75ee-4713-a412-051f05bd0e67",
+        "81ad80a4-4f73-408a-ad96-3303da82fe7a",
+        "538094ea-9989-43ef-bddd-00cc7ac6b708",
+        "a3770d0c-7f7b-48eb-af07-2da18d5e13b7",
+        "b56d2342-b83f-4c08-a04d-a700d92b4fdc",
+        "e3d211aa-e5a5-4bdb-8745-42739a82f2b0",
+        "c6fa42ab-430f-4f3a-82bd-8fd0987e1b84",
+        "2b6c9462-6ff9-4a82-9edc-78e8f1e6058e",
+        "bdc4cde6-de96-4807-96ca-2e9835dd3bb2",
+        "998b2c59-469c-471a-9798-f2832b0f20e6"
+      ]
+    },
+    {
+      "id": "S02",
+      "spatial_group_id": "G05",
+      "selection_reason": "2000-mm-Rundstab-/Plattenstudie mit Verbinderteilen",
+      "membership_status": "PLAUSIBLE_SPATIAL_STUDY_NOT_SEMANTICALLY_CONFIRMED",
+      "guids": [
+        "162e8589-5cae-4ba8-af14-780e7ed16964",
+        "201d9dc1-d68a-42b5-be96-ecc9ab58ddeb",
+        "211fac58-9c9b-4900-a24c-0fd3a9ef7f22",
+        "2c15516e-85cf-4585-adfa-cbadac92645c",
+        "304ca5b2-295b-477e-8b09-c019d802982a",
+        "407f0039-7276-415e-be08-a953b94793cb",
+        "45c1f18c-f25e-45d1-ad77-7ae0bbd91a7b",
+        "51038648-3e80-4bd4-95ad-7e9129e71141",
+        "59787ede-5ca9-4a04-854e-f15e639a0c11",
+        "6117d509-66c8-4dcc-bd41-23e00e2c86cf",
+        "62b153ea-21ce-40a7-8d5c-a095b5669f94",
+        "77536d7c-3285-4ed8-9daf-bd864131f202",
+        "7c982821-9c48-466d-983b-0226aa386ac2",
+        "820d313b-8997-44a8-a1fd-71d585656d84",
+        "8c6aace8-3d1f-48d7-9959-ef4064eaa48b",
+        "8f136fdf-139d-40be-9dc0-8f7d6e950b50",
+        "9575265f-dc3c-4e1f-bacd-a8eb1722eeb7",
+        "9ab2c203-8253-44b4-aad7-8cfa730bd9e3",
+        "ea8b2a9a-7648-4a64-b24c-ce5165a29c6a",
+        "f08876b9-e4f7-4e02-a679-a761eb18b2d3",
+        "f40e6b73-b57a-43e3-9caa-7486642e796a"
+      ],
+      "ambiguous_satellite_guids": [],
+      "bbox": {
+        "min": [
+          13665.517732290047,
+          -22566.223839884005,
+          0.0
+        ],
+        "max": [
+          15227.938425021048,
+          -21843.803147153016,
+          2000.0
+        ]
+      },
+      "grouping_correction": "No membership change between 0.1-mm and 10-mm hypotheses.",
+      "attached_reference_guids": [
+        "10dc3a17-e13e-441d-84cd-73666a4c849a",
+        "cafc1109-540e-49a6-8449-a79706f99478",
+        "7bc04af9-1b13-47cb-8cdb-cce516a96f16",
+        "3d2d2cf6-10aa-46ce-9ef8-47190447edec",
+        "77d2807b-f1a3-45ff-8860-c36b4cecd1b5"
+      ]
+    },
+    {
+      "id": "S03",
+      "spatial_group_id": "G07",
+      "selection_reason": "Räumlich getrennte ähnliche Entwurfsalternative ohne dieselben Verbinderteile",
+      "membership_status": "PLAUSIBLE_SPATIAL_STUDY_NOT_SEMANTICALLY_CONFIRMED",
+      "guids": [
+        "0686988b-03ab-40e5-b536-5c69472f6a32",
+        "0822b7b2-7a59-43a9-b204-a79e1b32c924",
+        "149c6fbb-58f3-42b8-a257-b2300b296b63",
+        "3a64285b-bf71-4a8f-b962-154af6c5fd94",
+        "3dec3e66-20e1-45bf-bac9-cc490cc6d7da",
+        "407a2c10-c352-49fc-8818-203dd2e5df6a",
+        "49bc8931-e1bb-4e41-9036-0a9cbf365862",
+        "4e30559b-c108-4a8b-aab4-ab0dbc27becb",
+        "50d73629-3b20-4604-8acf-446906d4a6d5",
+        "59b648cf-9874-449e-9d19-de284f7ff4c7",
+        "5cd7b64f-78a3-4abb-9030-249e14656314",
+        "6bec8338-046d-42ac-aef4-187847627945",
+        "8f9ece63-e1ec-4d06-a71a-50cea74bd822",
+        "a21d1366-e275-45f0-a0bf-81109c46a904",
+        "a64bb6dd-cd4a-4282-b3c1-45aa6eb7eae8",
+        "bda0a2dc-3c9e-48d6-aace-43730b0c0501",
+        "fecd792e-0ec4-4727-a81f-f0f6e0dd6d74",
+        "fffcc5cb-a784-4b87-bbea-2acc51cf6920"
+      ],
+      "ambiguous_satellite_guids": [],
+      "bbox": {
+        "min": [
+          13665.517732290047,
+          -19226.628506368823,
+          0.0
+        ],
+        "max": [
+          15227.938425021048,
+          -18504.207813637837,
+          2000.0
+        ]
+      },
+      "grouping_correction": "No membership change between 0.1-mm and 10-mm hypotheses.",
+      "attached_reference_guids": [
+        "bd1877f5-78ad-441f-9ce4-f718de48a0f0",
+        "0d8a569e-13e3-493a-b818-7de1a4a707b1",
+        "4d7b9636-7fb9-4d20-9971-96e4b82011f9",
+        "0916ff2e-0b28-4380-9ec7-5d9c56e1c29f",
+        "762b4622-e5d8-44de-934b-c2709546e670",
+        "041024a7-6d0e-47ff-a089-72d0df0e8a9e",
+        "190325f0-00a2-44f6-9fc1-483067315d76"
+      ]
+    },
+    {
+      "id": "S04",
+      "spatial_group_id": "G15",
+      "selection_reason": "Ähnliche Studie mit empfindlicher Gruppengrenze: eine Zusatzplatte separat",
+      "membership_status": "PLAUSIBLE_SPATIAL_STUDY_NOT_SEMANTICALLY_CONFIRMED",
+      "guids": [
+        "01f42681-08bf-4bb5-9469-631beb1fb0ab",
+        "1863b0be-a8f6-4319-baf4-e7a1d73b6fcd",
+        "1a70e148-f213-4779-8f34-1824e65bf8f5",
+        "2294b5b7-0e40-42ab-ad3b-3248867747c9",
+        "24ae08ad-a7a1-499a-85c4-65368f6d6dd1",
+        "25cc72b9-9091-4965-a35d-d5dfe3f28b70",
+        "28bf7221-ff96-4d5f-b68b-01334a0c59aa",
+        "30f892c6-a13c-454c-93c9-5153b8adc8f5",
+        "5246571a-9854-4e9f-99ca-17b4b4aa1e8f",
+        "6c6a076c-5021-4076-a1c6-260a330c99bf",
+        "70a67dee-188f-46ac-9d88-74c52a53e667",
+        "72448f61-3986-4552-9ef3-05ce487fbe86",
+        "9102c064-a3b5-4040-b50b-6c313135f042",
+        "a393e599-0044-4692-be0c-9ee3e2a12ec9",
+        "a41acda2-b038-4ceb-9399-89699c001685",
+        "accb7a94-f36e-48e9-982d-03720e4a28c7",
+        "cb364047-27d3-44a0-9570-87f5c87c33a7",
+        "d1147ae2-46c2-4cb4-a4d1-38072fce2618",
+        "d662e980-c3b0-45b5-abf4-d87ad75d897b",
+        "dca25deb-f30a-4156-bd5a-50ed637b63ce",
+        "fa8c57db-670c-41dc-88c7-3ac3375cb8c8"
+      ],
+      "ambiguous_satellite_guids": [
+        "1a56dadb-a99c-4339-978e-91d060d84f67"
+      ],
+      "bbox": {
+        "min": [
+          13665.517732290047,
+          -16690.60782581533,
+          0.0
+        ],
+        "max": [
+          15227.938425021048,
+          -15968.18713308434,
+          2000.0
+        ]
+      },
+      "grouping_correction": "Use 0.1-mm stable core; extra object from 10-mm join kept as explicit ambiguous satellite, excluded from module subtotal.",
+      "attached_reference_guids": [
+        "e347cbf5-d7ee-43c0-a681-9e24b535daed",
+        "8695533c-a520-42b7-ae6d-c825de9efeaa",
+        "da0800fc-7e13-403b-a69f-2c038bbcdb09",
+        "e430252a-f5fa-4de5-84ee-919cdc82a879",
+        "91e7aa80-1cdf-42cf-b813-72e8d215788c"
+      ]
+    },
+    {
+      "id": "S05",
+      "spatial_group_id": "G24",
+      "selection_reason": "Niedrige 852-mm-Studie mit anderen Platten- und Rahmengeometrien",
+      "membership_status": "PLAUSIBLE_SPATIAL_STUDY_NOT_SEMANTICALLY_CONFIRMED",
+      "guids": [
+        "046cb0a3-5335-4103-a2f7-50704510842f",
+        "04ef5a10-33e4-4b84-a862-bbc39933f6a0",
+        "1b6a8690-719d-47e3-a7e0-9c477cf3e56b",
+        "27ce8b2c-7794-4c6a-a9e2-bd9cfe41ed45",
+        "2d928077-8a9a-4191-b05a-ea1a3bbd2387",
+        "32c99c6f-426c-4368-ac80-57588ae4b1ff",
+        "3b9f69d8-218d-4d60-be23-ed72bcfe806f",
+        "566add8a-ce10-4c9e-94c9-f7b046635f5f",
+        "57ec26fa-1a97-4ad5-bdc9-86066983921b",
+        "73343a3e-c8e9-46b2-a42a-1358214d9f11",
+        "7d3f3db2-6a5c-4666-8210-f752f31d5c97",
+        "86adb058-5eb2-4be1-86d6-ddc4b83657bd",
+        "bfb7651b-e61d-48b7-9f31-07e1aa40944c",
+        "c01a9fbb-131f-4bc3-9904-b49d85259488",
+        "c761cf0a-cbe3-4c06-95fe-1d558c1cb327",
+        "cdaeb81b-923e-429a-99e1-541f3df76b67",
+        "d5f5e801-bdf7-4d77-90b6-099caca6d1f6",
+        "d868ea2c-ec19-4ba5-8f7c-b0ef32efef41",
+        "de775da1-30e1-49fb-8882-a58b25c3db98",
+        "e11579a2-9b1e-449a-87d7-e757698bd7ec",
+        "e618bba9-ac85-442a-b5d0-a3e66cff6044",
+        "f288f36b-646b-46c0-bb9e-99380b61c917",
+        "f6f4cdaa-5aa1-48a4-8f3d-479baa56c1c5"
+      ],
+      "ambiguous_satellite_guids": [],
+      "bbox": {
+        "min": [
+          8539.023670933555,
+          -13151.140250069695,
+          0.0
+        ],
+        "max": [
+          10219.023670933555,
+          -12426.3402500697,
+          852.0
+        ]
+      },
+      "grouping_correction": "No membership change between 0.1-mm and 10-mm hypotheses.",
+      "attached_reference_guids": [
+        "959ca5d6-9b96-403b-9483-b6c25739bc3b",
+        "50e8895a-7ba8-45b2-8cc5-23a0b4ce34fa",
+        "466172b2-d340-4f93-ab78-b1d2ed4df8ce",
+        "3e271f1e-9cdb-4085-ae5c-7f100ea725bc",
+        "403ed1cd-7de3-4c0f-9c1f-35762cb39191"
+      ]
+    }
+  ],
+  "summary": {
+    "spatial_groups_10mm": 55,
+    "larger_3D_study_candidates": 34,
+    "selected_studies": 5,
+    "selected_core_objects": 153,
+    "ambiguous_satellites": 1,
+    "reference_or_annotation_objects": 114
+  },
+  "method": "Unsupervised deterministic AABB gap components; no existing Rhino groups or material-layer module grouping used. 0.1/10/50/150 mm sensitivity retained. No production variants aggregated."
+}

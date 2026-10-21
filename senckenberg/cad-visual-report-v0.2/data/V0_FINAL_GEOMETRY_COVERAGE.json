@@ -1,0 +1,1732 @@
+{
+  "status": "PASS",
+  "source_sha256": "89ba1a6fd1c8a6c8fb22c991e96a581bf663380aed14ecbdbabf3245a5c02a88",
+  "selected_object_count": 153,
+  "nonempty_source_mesh_objects": 153,
+  "mesh_rows": [
+    {
+      "part_label": "S01-P001",
+      "guid": "013c37eb-7140-48b8-8807-a4d27bfece90",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 48,
+      "faces": 20
+    },
+    {
+      "part_label": "S01-P002",
+      "guid": "0197f36a-4eb1-40ec-b061-891b0d61e45c",
+      "source_mesh_sections": 2,
+      "missing_or_empty_sections": [],
+      "vertices": 144,
+      "faces": 134
+    },
+    {
+      "part_label": "S01-P003",
+      "guid": "01af0d4c-ed23-4f04-b07e-ada803670581",
+      "source_mesh_sections": 2,
+      "missing_or_empty_sections": [],
+      "vertices": 144,
+      "faces": 134
+    },
+    {
+      "part_label": "S01-P004",
+      "guid": "059a6e64-5611-4745-bdcf-87a575dbc79b",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 6
+    },
+    {
+      "part_label": "S01-P005",
+      "guid": "05f71441-2427-41fc-91c2-703c7b7d35db",
+      "source_mesh_sections": 19,
+      "missing_or_empty_sections": [],
+      "vertices": 1804,
+      "faces": 1602
+    },
+    {
+      "part_label": "S01-P006",
+      "guid": "0912d1a7-d84a-49f2-80e3-40f9a44f671c",
+      "source_mesh_sections": 19,
+      "missing_or_empty_sections": [],
+      "vertices": 1804,
+      "faces": 1602
+    },
+    {
+      "part_label": "S01-P007",
+      "guid": "1192bc51-dcc5-4898-ae1d-d9ae668b6978",
+      "source_mesh_sections": 19,
+      "missing_or_empty_sections": [],
+      "vertices": 1804,
+      "faces": 1602
+    },
+    {
+      "part_label": "S01-P008",
+      "guid": "13583016-8a9c-405b-979f-ed9ffbaa1c11",
+      "source_mesh_sections": 19,
+      "missing_or_empty_sections": [],
+      "vertices": 1804,
+      "faces": 1602
+    },
+    {
+      "part_label": "S01-P009",
+      "guid": "14f7a561-ffe2-47f2-9f31-9ee7ad92805e",
+      "source_mesh_sections": 19,
+      "missing_or_empty_sections": [],
+      "vertices": 1804,
+      "faces": 1602
+    },
+    {
+      "part_label": "S01-P010",
+      "guid": "19804e18-aa05-4327-a542-b36bb75014af",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 3236,
+      "faces": 3208
+    },
+    {
+      "part_label": "S01-P011",
+      "guid": "1b1987d4-d741-4aad-8b04-dcb2fb63a760",
+      "source_mesh_sections": 67,
+      "missing_or_empty_sections": [],
+      "vertices": 5423,
+      "faces": 4929
+    },
+    {
+      "part_label": "S01-P012",
+      "guid": "1d4c6e17-8244-42ce-a903-2458bd4ac592",
+      "source_mesh_sections": 67,
+      "missing_or_empty_sections": [],
+      "vertices": 5423,
+      "faces": 4929
+    },
+    {
+      "part_label": "S01-P013",
+      "guid": "1d7e4ba2-5bf8-450e-bf57-2c468dcd7061",
+      "source_mesh_sections": 2,
+      "missing_or_empty_sections": [],
+      "vertices": 144,
+      "faces": 134
+    },
+    {
+      "part_label": "S01-P014",
+      "guid": "1ead16fa-7951-4edd-9d46-9e327e629afe",
+      "source_mesh_sections": 24,
+      "missing_or_empty_sections": [],
+      "vertices": 1912,
+      "faces": 1684
+    },
+    {
+      "part_label": "S01-P015",
+      "guid": "20b02f3c-acda-4a68-b9f6-db9ab0028ee5",
+      "source_mesh_sections": 67,
+      "missing_or_empty_sections": [],
+      "vertices": 5423,
+      "faces": 4929
+    },
+    {
+      "part_label": "S01-P016",
+      "guid": "2781176b-d30a-465d-8da1-a3f9231d9ccd",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 3236,
+      "faces": 3208
+    },
+    {
+      "part_label": "S01-P017",
+      "guid": "29b6e052-c015-456e-99b5-b038e700439e",
+      "source_mesh_sections": 67,
+      "missing_or_empty_sections": [],
+      "vertices": 5423,
+      "faces": 4929
+    },
+    {
+      "part_label": "S01-P018",
+      "guid": "2bf5643d-ef90-4f6f-aca8-c40dd37e2737",
+      "source_mesh_sections": 19,
+      "missing_or_empty_sections": [],
+      "vertices": 1804,
+      "faces": 1602
+    },
+    {
+      "part_label": "S01-P019",
+      "guid": "2cbac45f-54e2-4ed4-a1aa-4b938e3b952a",
+      "source_mesh_sections": 67,
+      "missing_or_empty_sections": [],
+      "vertices": 5423,
+      "faces": 4929
+    },
+    {
+      "part_label": "S01-P020",
+      "guid": "337d9506-e84f-462e-9a7f-09d4997f85fe",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 3236,
+      "faces": 3208
+    },
+    {
+      "part_label": "S01-P021",
+      "guid": "3656e979-a93e-41bc-94d7-8c18e402f4c0",
+      "source_mesh_sections": 24,
+      "missing_or_empty_sections": [],
+      "vertices": 1912,
+      "faces": 1684
+    },
+    {
+      "part_label": "S01-P022",
+      "guid": "374629b4-2027-4dc0-900b-8876340fbb6b",
+      "source_mesh_sections": 2,
+      "missing_or_empty_sections": [],
+      "vertices": 144,
+      "faces": 134
+    },
+    {
+      "part_label": "S01-P023",
+      "guid": "3af0aa1b-99fe-4273-b163-0c17c6fca75a",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 3236,
+      "faces": 3208
+    },
+    {
+      "part_label": "S01-P024",
+      "guid": "41eee5f5-c6fa-4f5d-9abe-798f5d99f25b",
+      "source_mesh_sections": 14,
+      "missing_or_empty_sections": [],
+      "vertices": 352,
+      "faces": 249
+    },
+    {
+      "part_label": "S01-P025",
+      "guid": "45c3c3e5-e9aa-4485-bcfb-51676561f325",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 48,
+      "faces": 20
+    },
+    {
+      "part_label": "S01-P026",
+      "guid": "48f4f09c-cdfb-461c-af5e-f158179cb451",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 48,
+      "faces": 20
+    },
+    {
+      "part_label": "S01-P027",
+      "guid": "4f5fbe73-3140-4456-8f0e-f0cb1af221fb",
+      "source_mesh_sections": 67,
+      "missing_or_empty_sections": [],
+      "vertices": 5423,
+      "faces": 4929
+    },
+    {
+      "part_label": "S01-P028",
+      "guid": "5785393d-5128-462a-a3b7-969ad1342bd6",
+      "source_mesh_sections": 19,
+      "missing_or_empty_sections": [],
+      "vertices": 473,
+      "faces": 362
+    },
+    {
+      "part_label": "S01-P029",
+      "guid": "59959240-0155-485f-9cc6-254a280e06be",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 3236,
+      "faces": 3208
+    },
+    {
+      "part_label": "S01-P030",
+      "guid": "59c67b3d-ed56-4fb2-b565-cc1abd8d0cf0",
+      "source_mesh_sections": 19,
+      "missing_or_empty_sections": [],
+      "vertices": 841,
+      "faces": 781
+    },
+    {
+      "part_label": "S01-P031",
+      "guid": "5ab25b92-4858-42d8-afe8-6d39f6025b0d",
+      "source_mesh_sections": 2,
+      "missing_or_empty_sections": [],
+      "vertices": 144,
+      "faces": 134
+    },
+    {
+      "part_label": "S01-P032",
+      "guid": "5c971636-84ef-460c-ab44-cd1c8b8ddb64",
+      "source_mesh_sections": 10,
+      "missing_or_empty_sections": [],
+      "vertices": 48,
+      "faces": 18
+    },
+    {
+      "part_label": "S01-P033",
+      "guid": "600cceae-5398-4318-b94f-8ed514415cd6",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 3236,
+      "faces": 3208
+    },
+    {
+      "part_label": "S01-P034",
+      "guid": "6d5a6bc6-c61f-4b7f-92ee-b6954b9f7640",
+      "source_mesh_sections": 22,
+      "missing_or_empty_sections": [],
+      "vertices": 858,
+      "faces": 791
+    },
+    {
+      "part_label": "S01-P035",
+      "guid": "6e0adccf-dbab-4ac1-9e59-023f35c31fc0",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 3236,
+      "faces": 3208
+    },
+    {
+      "part_label": "S01-P036",
+      "guid": "6fcfdcb0-2ca6-4e7b-91bc-eb0075a7e359",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 3236,
+      "faces": 3208
+    },
+    {
+      "part_label": "S01-P037",
+      "guid": "7e9d84cb-23b3-4f38-a1d4-9a8239911465",
+      "source_mesh_sections": 19,
+      "missing_or_empty_sections": [],
+      "vertices": 1804,
+      "faces": 1602
+    },
+    {
+      "part_label": "S01-P038",
+      "guid": "7f40d1be-aa51-4268-a2f9-20eb8431e4b3",
+      "source_mesh_sections": 24,
+      "missing_or_empty_sections": [],
+      "vertices": 1912,
+      "faces": 1684
+    },
+    {
+      "part_label": "S01-P039",
+      "guid": "839d5b88-4291-48eb-aca4-bc6b57d49f93",
+      "source_mesh_sections": 67,
+      "missing_or_empty_sections": [],
+      "vertices": 5423,
+      "faces": 4929
+    },
+    {
+      "part_label": "S01-P040",
+      "guid": "85caebf0-3a74-456c-8344-3a16a887e381",
+      "source_mesh_sections": 67,
+      "missing_or_empty_sections": [],
+      "vertices": 5423,
+      "faces": 4929
+    },
+    {
+      "part_label": "S01-P041",
+      "guid": "86740115-6cf5-4999-9d37-a4ed3d6040cd",
+      "source_mesh_sections": 19,
+      "missing_or_empty_sections": [],
+      "vertices": 1804,
+      "faces": 1602
+    },
+    {
+      "part_label": "S01-P042",
+      "guid": "87c2095c-a0ff-43ab-afe3-ba900290b13e",
+      "source_mesh_sections": 19,
+      "missing_or_empty_sections": [],
+      "vertices": 1804,
+      "faces": 1602
+    },
+    {
+      "part_label": "S01-P043",
+      "guid": "89387961-ca72-45e6-9484-e723cdf2d87d",
+      "source_mesh_sections": 2,
+      "missing_or_empty_sections": [],
+      "vertices": 144,
+      "faces": 134
+    },
+    {
+      "part_label": "S01-P044",
+      "guid": "8c22dc40-18b0-4fe6-a989-a45e8e042027",
+      "source_mesh_sections": 2,
+      "missing_or_empty_sections": [],
+      "vertices": 144,
+      "faces": 134
+    },
+    {
+      "part_label": "S01-P045",
+      "guid": "9acc089f-52f5-42ac-bca9-84aec08b328b",
+      "source_mesh_sections": 2,
+      "missing_or_empty_sections": [],
+      "vertices": 144,
+      "faces": 134
+    },
+    {
+      "part_label": "S01-P046",
+      "guid": "9cf819bf-d43b-4e3e-9c1d-80dc79d281ec",
+      "source_mesh_sections": 67,
+      "missing_or_empty_sections": [],
+      "vertices": 5423,
+      "faces": 4929
+    },
+    {
+      "part_label": "S01-P047",
+      "guid": "9e8c1b36-c660-40d5-a382-6f5630eb8a5b",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 3236,
+      "faces": 3208
+    },
+    {
+      "part_label": "S01-P048",
+      "guid": "a5e11eb2-8278-4ae3-9b96-5c739a7a2d4d",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 3236,
+      "faces": 3208
+    },
+    {
+      "part_label": "S01-P049",
+      "guid": "ac7c3fa7-4bdb-4fe6-85b0-8830e596c850",
+      "source_mesh_sections": 10,
+      "missing_or_empty_sections": [],
+      "vertices": 48,
+      "faces": 18
+    },
+    {
+      "part_label": "S01-P050",
+      "guid": "b0d955fb-d74f-40c6-bafa-253bf9e223aa",
+      "source_mesh_sections": 19,
+      "missing_or_empty_sections": [],
+      "vertices": 1804,
+      "faces": 1602
+    },
+    {
+      "part_label": "S01-P051",
+      "guid": "b1fb4c05-0f32-43ea-8442-5a73ab343892",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 3236,
+      "faces": 3208
+    },
+    {
+      "part_label": "S01-P052",
+      "guid": "bc9cf64d-3a0b-4976-b7c8-e2cdd12bb478",
+      "source_mesh_sections": 67,
+      "missing_or_empty_sections": [],
+      "vertices": 5423,
+      "faces": 4929
+    },
+    {
+      "part_label": "S01-P053",
+      "guid": "c2d6200f-f400-4f20-9d07-c2959f405aa9",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 3236,
+      "faces": 3208
+    },
+    {
+      "part_label": "S01-P054",
+      "guid": "c5398de1-4500-4f57-8b61-33aedb569755",
+      "source_mesh_sections": 24,
+      "missing_or_empty_sections": [],
+      "vertices": 1910,
+      "faces": 1683
+    },
+    {
+      "part_label": "S01-P055",
+      "guid": "c5c9ca65-56eb-4c39-b204-5b71708ce7f4",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 6
+    },
+    {
+      "part_label": "S01-P056",
+      "guid": "c9c7fa44-04fa-4cc9-9c44-def94f832a22",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 8
+    },
+    {
+      "part_label": "S01-P057",
+      "guid": "cc0535cc-3e86-4629-ac0e-c836b9aaa612",
+      "source_mesh_sections": 2,
+      "missing_or_empty_sections": [],
+      "vertices": 144,
+      "faces": 134
+    },
+    {
+      "part_label": "S01-P058",
+      "guid": "cd36aa9f-1fe3-471f-b941-63bd756aee41",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 3236,
+      "faces": 3208
+    },
+    {
+      "part_label": "S01-P059",
+      "guid": "ce784795-691a-4624-ab68-75f8db82ab9c",
+      "source_mesh_sections": 2,
+      "missing_or_empty_sections": [],
+      "vertices": 144,
+      "faces": 134
+    },
+    {
+      "part_label": "S01-P060",
+      "guid": "d31d6057-d7c4-4977-80c9-f7882e02e69d",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 48,
+      "faces": 20
+    },
+    {
+      "part_label": "S01-P061",
+      "guid": "d4c1f571-1f7a-45f8-98b4-0a718655e4be",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 48,
+      "faces": 20
+    },
+    {
+      "part_label": "S01-P062",
+      "guid": "d854fada-2ddc-4d3f-8957-f6c8efd636c6",
+      "source_mesh_sections": 67,
+      "missing_or_empty_sections": [],
+      "vertices": 5423,
+      "faces": 4929
+    },
+    {
+      "part_label": "S01-P063",
+      "guid": "e47f50dc-8841-4cb0-bbbf-3caed22127e3",
+      "source_mesh_sections": 19,
+      "missing_or_empty_sections": [],
+      "vertices": 1804,
+      "faces": 1602
+    },
+    {
+      "part_label": "S01-P064",
+      "guid": "e664b66f-ee27-4f0a-b9c7-a3833aa859c6",
+      "source_mesh_sections": 2,
+      "missing_or_empty_sections": [],
+      "vertices": 144,
+      "faces": 134
+    },
+    {
+      "part_label": "S01-P065",
+      "guid": "ed6efb92-75d4-4d51-ab63-d274c02b17af",
+      "source_mesh_sections": 14,
+      "missing_or_empty_sections": [],
+      "vertices": 796,
+      "faces": 741
+    },
+    {
+      "part_label": "S01-P066",
+      "guid": "f491cf67-ec1f-41cb-9a73-6ea77479f17f",
+      "source_mesh_sections": 2,
+      "missing_or_empty_sections": [],
+      "vertices": 144,
+      "faces": 134
+    },
+    {
+      "part_label": "S01-P067",
+      "guid": "fc482b1f-a9fe-4057-b2c9-6e53be13fef5",
+      "source_mesh_sections": 67,
+      "missing_or_empty_sections": [],
+      "vertices": 5423,
+      "faces": 4929
+    },
+    {
+      "part_label": "S01-P068",
+      "guid": "ffba1971-64fa-4fb3-9e5f-2ceadb094388",
+      "source_mesh_sections": 19,
+      "missing_or_empty_sections": [],
+      "vertices": 1804,
+      "faces": 1602
+    },
+    {
+      "part_label": "S01-P069",
+      "guid": "ffcb8d2d-d2e3-4551-b139-82dc29c40c8b",
+      "source_mesh_sections": 22,
+      "missing_or_empty_sections": [],
+      "vertices": 477,
+      "faces": 374
+    },
+    {
+      "part_label": "S01-P070",
+      "guid": "ffdf1c81-6ac0-445d-828b-22aa55940ac1",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 8
+    },
+    {
+      "part_label": "S02-P001",
+      "guid": "162e8589-5cae-4ba8-af14-780e7ed16964",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 6
+    },
+    {
+      "part_label": "S02-P002",
+      "guid": "201d9dc1-d68a-42b5-be96-ecc9ab58ddeb",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S02-P003",
+      "guid": "211fac58-9c9b-4900-a24c-0fd3a9ef7f22",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 6
+    },
+    {
+      "part_label": "S02-P004",
+      "guid": "2c15516e-85cf-4585-adfa-cbadac92645c",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S02-P005",
+      "guid": "304ca5b2-295b-477e-8b09-c019d802982a",
+      "source_mesh_sections": 3,
+      "missing_or_empty_sections": [],
+      "vertices": 130,
+      "faces": 92
+    },
+    {
+      "part_label": "S02-P006",
+      "guid": "407f0039-7276-415e-be08-a953b94793cb",
+      "source_mesh_sections": 13,
+      "missing_or_empty_sections": [],
+      "vertices": 494,
+      "faces": 357
+    },
+    {
+      "part_label": "S02-P007",
+      "guid": "45c1f18c-f25e-45d1-ad77-7ae0bbd91a7b",
+      "source_mesh_sections": 8,
+      "missing_or_empty_sections": [],
+      "vertices": 36,
+      "faces": 12
+    },
+    {
+      "part_label": "S02-P008",
+      "guid": "51038648-3e80-4bd4-95ad-7e9129e71141",
+      "source_mesh_sections": 24,
+      "missing_or_empty_sections": [],
+      "vertices": 918,
+      "faces": 835
+    },
+    {
+      "part_label": "S02-P009",
+      "guid": "59787ede-5ca9-4a04-854e-f15e639a0c11",
+      "source_mesh_sections": 11,
+      "missing_or_empty_sections": [],
+      "vertices": 193,
+      "faces": 147
+    },
+    {
+      "part_label": "S02-P010",
+      "guid": "6117d509-66c8-4dcc-bd41-23e00e2c86cf",
+      "source_mesh_sections": 8,
+      "missing_or_empty_sections": [],
+      "vertices": 36,
+      "faces": 11
+    },
+    {
+      "part_label": "S02-P011",
+      "guid": "62b153ea-21ce-40a7-8d5c-a095b5669f94",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S02-P012",
+      "guid": "77536d7c-3285-4ed8-9daf-bd864131f202",
+      "source_mesh_sections": 7,
+      "missing_or_empty_sections": [],
+      "vertices": 197,
+      "faces": 163
+    },
+    {
+      "part_label": "S02-P013",
+      "guid": "7c982821-9c48-466d-983b-0226aa386ac2",
+      "source_mesh_sections": 3,
+      "missing_or_empty_sections": [],
+      "vertices": 130,
+      "faces": 92
+    },
+    {
+      "part_label": "S02-P014",
+      "guid": "820d313b-8997-44a8-a1fd-71d585656d84",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 8
+    },
+    {
+      "part_label": "S02-P015",
+      "guid": "8c6aace8-3d1f-48d7-9959-ef4064eaa48b",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S02-P016",
+      "guid": "8f136fdf-139d-40be-9dc0-8f7d6e950b50",
+      "source_mesh_sections": 7,
+      "missing_or_empty_sections": [],
+      "vertices": 428,
+      "faces": 337
+    },
+    {
+      "part_label": "S02-P017",
+      "guid": "9575265f-dc3c-4e1f-bacd-a8eb1722eeb7",
+      "source_mesh_sections": 5,
+      "missing_or_empty_sections": [],
+      "vertices": 774,
+      "faces": 646
+    },
+    {
+      "part_label": "S02-P018",
+      "guid": "9ab2c203-8253-44b4-aad7-8cfa730bd9e3",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 8
+    },
+    {
+      "part_label": "S02-P019",
+      "guid": "ea8b2a9a-7648-4a64-b24c-ce5165a29c6a",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S02-P020",
+      "guid": "f08876b9-e4f7-4e02-a679-a761eb18b2d3",
+      "source_mesh_sections": 24,
+      "missing_or_empty_sections": [],
+      "vertices": 918,
+      "faces": 836
+    },
+    {
+      "part_label": "S02-P021",
+      "guid": "f40e6b73-b57a-43e3-9caa-7486642e796a",
+      "source_mesh_sections": 3,
+      "missing_or_empty_sections": [],
+      "vertices": 66,
+      "faces": 44
+    },
+    {
+      "part_label": "S03-P001",
+      "guid": "0686988b-03ab-40e5-b536-5c69472f6a32",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S03-P002",
+      "guid": "0822b7b2-7a59-43a9-b204-a79e1b32c924",
+      "source_mesh_sections": 8,
+      "missing_or_empty_sections": [],
+      "vertices": 36,
+      "faces": 11
+    },
+    {
+      "part_label": "S03-P003",
+      "guid": "149c6fbb-58f3-42b8-a257-b2300b296b63",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 8
+    },
+    {
+      "part_label": "S03-P004",
+      "guid": "3a64285b-bf71-4a8f-b962-154af6c5fd94",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S03-P005",
+      "guid": "3dec3e66-20e1-45bf-bac9-cc490cc6d7da",
+      "source_mesh_sections": 8,
+      "missing_or_empty_sections": [],
+      "vertices": 36,
+      "faces": 12
+    },
+    {
+      "part_label": "S03-P006",
+      "guid": "407a2c10-c352-49fc-8818-203dd2e5df6a",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 8
+    },
+    {
+      "part_label": "S03-P007",
+      "guid": "49bc8931-e1bb-4e41-9036-0a9cbf365862",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 6
+    },
+    {
+      "part_label": "S03-P008",
+      "guid": "4e30559b-c108-4a8b-aab4-ab0dbc27becb",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S03-P009",
+      "guid": "50d73629-3b20-4604-8acf-446906d4a6d5",
+      "source_mesh_sections": 11,
+      "missing_or_empty_sections": [],
+      "vertices": 193,
+      "faces": 147
+    },
+    {
+      "part_label": "S03-P010",
+      "guid": "59b648cf-9874-449e-9d19-de284f7ff4c7",
+      "source_mesh_sections": 18,
+      "missing_or_empty_sections": [],
+      "vertices": 914,
+      "faces": 744
+    },
+    {
+      "part_label": "S03-P011",
+      "guid": "5cd7b64f-78a3-4abb-9030-249e14656314",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S03-P012",
+      "guid": "6bec8338-046d-42ac-aef4-187847627945",
+      "source_mesh_sections": 3,
+      "missing_or_empty_sections": [],
+      "vertices": 130,
+      "faces": 92
+    },
+    {
+      "part_label": "S03-P013",
+      "guid": "8f9ece63-e1ec-4d06-a71a-50cea74bd822",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S03-P014",
+      "guid": "a21d1366-e275-45f0-a0bf-81109c46a904",
+      "source_mesh_sections": 18,
+      "missing_or_empty_sections": [],
+      "vertices": 912,
+      "faces": 742
+    },
+    {
+      "part_label": "S03-P015",
+      "guid": "a64bb6dd-cd4a-4282-b3c1-45aa6eb7eae8",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 6
+    },
+    {
+      "part_label": "S03-P016",
+      "guid": "bda0a2dc-3c9e-48d6-aace-43730b0c0501",
+      "source_mesh_sections": 3,
+      "missing_or_empty_sections": [],
+      "vertices": 130,
+      "faces": 92
+    },
+    {
+      "part_label": "S03-P017",
+      "guid": "fecd792e-0ec4-4727-a81f-f0f6e0dd6d74",
+      "source_mesh_sections": 3,
+      "missing_or_empty_sections": [],
+      "vertices": 66,
+      "faces": 44
+    },
+    {
+      "part_label": "S03-P018",
+      "guid": "fffcc5cb-a784-4b87-bbea-2acc51cf6920",
+      "source_mesh_sections": 7,
+      "missing_or_empty_sections": [],
+      "vertices": 197,
+      "faces": 163
+    },
+    {
+      "part_label": "S04-P001",
+      "guid": "01f42681-08bf-4bb5-9469-631beb1fb0ab",
+      "source_mesh_sections": 24,
+      "missing_or_empty_sections": [],
+      "vertices": 918,
+      "faces": 836
+    },
+    {
+      "part_label": "S04-P002",
+      "guid": "1863b0be-a8f6-4319-baf4-e7a1d73b6fcd",
+      "source_mesh_sections": 3,
+      "missing_or_empty_sections": [],
+      "vertices": 130,
+      "faces": 92
+    },
+    {
+      "part_label": "S04-P003",
+      "guid": "1a70e148-f213-4779-8f34-1824e65bf8f5",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S04-P004",
+      "guid": "2294b5b7-0e40-42ab-ad3b-3248867747c9",
+      "source_mesh_sections": 7,
+      "missing_or_empty_sections": [],
+      "vertices": 197,
+      "faces": 163
+    },
+    {
+      "part_label": "S04-P005",
+      "guid": "24ae08ad-a7a1-499a-85c4-65368f6d6dd1",
+      "source_mesh_sections": 3,
+      "missing_or_empty_sections": [],
+      "vertices": 130,
+      "faces": 92
+    },
+    {
+      "part_label": "S04-P006",
+      "guid": "25cc72b9-9091-4965-a35d-d5dfe3f28b70",
+      "source_mesh_sections": 24,
+      "missing_or_empty_sections": [],
+      "vertices": 918,
+      "faces": 835
+    },
+    {
+      "part_label": "S04-P007",
+      "guid": "28bf7221-ff96-4d5f-b68b-01334a0c59aa",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 6
+    },
+    {
+      "part_label": "S04-P008",
+      "guid": "30f892c6-a13c-454c-93c9-5153b8adc8f5",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S04-P009",
+      "guid": "5246571a-9854-4e9f-99ca-17b4b4aa1e8f",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 8
+    },
+    {
+      "part_label": "S04-P010",
+      "guid": "6c6a076c-5021-4076-a1c6-260a330c99bf",
+      "source_mesh_sections": 11,
+      "missing_or_empty_sections": [],
+      "vertices": 193,
+      "faces": 147
+    },
+    {
+      "part_label": "S04-P011",
+      "guid": "70a67dee-188f-46ac-9d88-74c52a53e667",
+      "source_mesh_sections": 8,
+      "missing_or_empty_sections": [],
+      "vertices": 36,
+      "faces": 12
+    },
+    {
+      "part_label": "S04-P012",
+      "guid": "72448f61-3986-4552-9ef3-05ce487fbe86",
+      "source_mesh_sections": 7,
+      "missing_or_empty_sections": [],
+      "vertices": 428,
+      "faces": 337
+    },
+    {
+      "part_label": "S04-P013",
+      "guid": "9102c064-a3b5-4040-b50b-6c313135f042",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 8
+    },
+    {
+      "part_label": "S04-P014",
+      "guid": "a393e599-0044-4692-be0c-9ee3e2a12ec9",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S04-P015",
+      "guid": "a41acda2-b038-4ceb-9399-89699c001685",
+      "source_mesh_sections": 8,
+      "missing_or_empty_sections": [],
+      "vertices": 36,
+      "faces": 11
+    },
+    {
+      "part_label": "S04-P016",
+      "guid": "accb7a94-f36e-48e9-982d-03720e4a28c7",
+      "source_mesh_sections": 5,
+      "missing_or_empty_sections": [],
+      "vertices": 774,
+      "faces": 646
+    },
+    {
+      "part_label": "S04-P017",
+      "guid": "cb364047-27d3-44a0-9570-87f5c87c33a7",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S04-P018",
+      "guid": "d1147ae2-46c2-4cb4-a4d1-38072fce2618",
+      "source_mesh_sections": 6,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 6
+    },
+    {
+      "part_label": "S04-P019",
+      "guid": "d662e980-c3b0-45b5-abf4-d87ad75d897b",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S04-P020",
+      "guid": "dca25deb-f30a-4156-bd5a-50ed637b63ce",
+      "source_mesh_sections": 3,
+      "missing_or_empty_sections": [],
+      "vertices": 66,
+      "faces": 44
+    },
+    {
+      "part_label": "S04-P021",
+      "guid": "fa8c57db-670c-41dc-88c7-3ac3375cb8c8",
+      "source_mesh_sections": 13,
+      "missing_or_empty_sections": [],
+      "vertices": 494,
+      "faces": 357
+    },
+    {
+      "part_label": "S05-P001",
+      "guid": "046cb0a3-5335-4103-a2f7-50704510842f",
+      "source_mesh_sections": 8,
+      "missing_or_empty_sections": [],
+      "vertices": 36,
+      "faces": 14
+    },
+    {
+      "part_label": "S05-P002",
+      "guid": "04ef5a10-33e4-4b84-a862-bbc39933f6a0",
+      "source_mesh_sections": 3,
+      "missing_or_empty_sections": [],
+      "vertices": 130,
+      "faces": 92
+    },
+    {
+      "part_label": "S05-P003",
+      "guid": "1b6a8690-719d-47e3-a7e0-9c477cf3e56b",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S05-P004",
+      "guid": "27ce8b2c-7794-4c6a-a9e2-bd9cfe41ed45",
+      "source_mesh_sections": 3,
+      "missing_or_empty_sections": [],
+      "vertices": 130,
+      "faces": 92
+    },
+    {
+      "part_label": "S05-P005",
+      "guid": "2d928077-8a9a-4191-b05a-ea1a3bbd2387",
+      "source_mesh_sections": 3,
+      "missing_or_empty_sections": [],
+      "vertices": 130,
+      "faces": 92
+    },
+    {
+      "part_label": "S05-P006",
+      "guid": "32c99c6f-426c-4368-ac80-57588ae4b1ff",
+      "source_mesh_sections": 3,
+      "missing_or_empty_sections": [],
+      "vertices": 130,
+      "faces": 92
+    },
+    {
+      "part_label": "S05-P007",
+      "guid": "3b9f69d8-218d-4d60-be23-ed72bcfe806f",
+      "source_mesh_sections": 3,
+      "missing_or_empty_sections": [],
+      "vertices": 130,
+      "faces": 92
+    },
+    {
+      "part_label": "S05-P008",
+      "guid": "566add8a-ce10-4c9e-94c9-f7b046635f5f",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 274,
+      "faces": 197
+    },
+    {
+      "part_label": "S05-P009",
+      "guid": "57ec26fa-1a97-4ad5-bdc9-86066983921b",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 274,
+      "faces": 197
+    },
+    {
+      "part_label": "S05-P010",
+      "guid": "73343a3e-c8e9-46b2-a42a-1358214d9f11",
+      "source_mesh_sections": 20,
+      "missing_or_empty_sections": [],
+      "vertices": 100,
+      "faces": 41
+    },
+    {
+      "part_label": "S05-P011",
+      "guid": "7d3f3db2-6a5c-4666-8210-f752f31d5c97",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S05-P012",
+      "guid": "86adb058-5eb2-4be1-86d6-ddc4b83657bd",
+      "source_mesh_sections": 3,
+      "missing_or_empty_sections": [],
+      "vertices": 130,
+      "faces": 92
+    },
+    {
+      "part_label": "S05-P013",
+      "guid": "bfb7651b-e61d-48b7-9f31-07e1aa40944c",
+      "source_mesh_sections": 20,
+      "missing_or_empty_sections": [],
+      "vertices": 100,
+      "faces": 41
+    },
+    {
+      "part_label": "S05-P014",
+      "guid": "c01a9fbb-131f-4bc3-9904-b49d85259488",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 8
+    },
+    {
+      "part_label": "S05-P015",
+      "guid": "c761cf0a-cbe3-4c06-95fe-1d558c1cb327",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 274,
+      "faces": 197
+    },
+    {
+      "part_label": "S05-P016",
+      "guid": "cdaeb81b-923e-429a-99e1-541f3df76b67",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 8
+    },
+    {
+      "part_label": "S05-P017",
+      "guid": "d5f5e801-bdf7-4d77-90b6-099caca6d1f6",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S05-P018",
+      "guid": "d868ea2c-ec19-4ba5-8f7c-b0ef32efef41",
+      "source_mesh_sections": 8,
+      "missing_or_empty_sections": [],
+      "vertices": 36,
+      "faces": 13
+    },
+    {
+      "part_label": "S05-P019",
+      "guid": "de775da1-30e1-49fb-8882-a58b25c3db98",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 8
+    },
+    {
+      "part_label": "S05-P020",
+      "guid": "e11579a2-9b1e-449a-87d7-e757698bd7ec",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 338,
+      "faces": 248
+    },
+    {
+      "part_label": "S05-P021",
+      "guid": "e618bba9-ac85-442a-b5d0-a3e66cff6044",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 8
+    },
+    {
+      "part_label": "S05-P022",
+      "guid": "f288f36b-646b-46c0-bb9e-99380b61c917",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 274,
+      "faces": 197
+    },
+    {
+      "part_label": "S05-P023",
+      "guid": "f6f4cdaa-5aa1-48a4-8f3d-479baa56c1c5",
+      "source_mesh_sections": 1,
+      "missing_or_empty_sections": [],
+      "vertices": 24,
+      "faces": 8
+    }
+  ],
+  "processed_rod_bbox_sanity_checks": [
+    {
+      "part_label": "S01-P014",
+      "guid": "1ead16fa-7951-4edd-9d46-9e327e629afe",
+      "bbox_max_span_mm": 2100,
+      "native_boundary_sample_spans_mm": [
+        39.999999999992724,
+        39.99999999999636,
+        2100.0000000000005
+      ],
+      "longest_span_excess_mm": -4.547473508864641e-13,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 2100.0,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 2100.0000000000005
+    },
+    {
+      "part_label": "S01-P021",
+      "guid": "3656e979-a93e-41bc-94d7-8c18e402f4c0",
+      "bbox_max_span_mm": 2100,
+      "native_boundary_sample_spans_mm": [
+        39.99999999999636,
+        39.999999999992724,
+        2100.0000000000005
+      ],
+      "longest_span_excess_mm": -4.547473508864641e-13,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 2100.0,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 2100.0000000000005
+    },
+    {
+      "part_label": "S01-P024",
+      "guid": "41eee5f5-c6fa-4f5d-9abe-798f5d99f25b",
+      "bbox_max_span_mm": 1302.0172439427351,
+      "native_boundary_sample_spans_mm": [
+        1302.0172439427297,
+        29.99902937411389,
+        29.456832294801373
+      ],
+      "longest_span_excess_mm": 5.4569682106375694e-12,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 1.8189894035458565e-12,
+      "saved_mesh_longest_span_mm": 1302.0166015625,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_DIAGONAL",
+      "current_raw_length_proxy_mm": 1302.3627926032625
+    },
+    {
+      "part_label": "S01-P028",
+      "guid": "5785393d-5128-462a-a3b7-969ad1342bd6",
+      "bbox_max_span_mm": 1514.2264468067315,
+      "native_boundary_sample_spans_mm": [
+        1302.017243942717,
+        29.45634698187132,
+        29.456832295273216
+      ],
+      "longest_span_excess_mm": 212.20920286401451,
+      "status": "LOOSE_BOUND_OVERESTIMATE_DETECTED",
+      "boundary_longest_span_refinement_change_mm": 3.637978807091713e-12,
+      "saved_mesh_longest_span_mm": 1302.0166015625,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_DIAGONAL",
+      "current_raw_length_proxy_mm": 1302.3628156255645
+    },
+    {
+      "part_label": "S01-P030",
+      "guid": "59c67b3d-ed56-4fb2-b565-cc1abd8d0cf0",
+      "bbox_max_span_mm": 690.7277276494169,
+      "native_boundary_sample_spans_mm": [
+        29.45634698187132,
+        600.0000000000255,
+        29.456832295273216
+      ],
+      "longest_span_excess_mm": 90.72772764939145,
+      "status": "LOOSE_BOUND_OVERESTIMATE_DETECTED",
+      "boundary_longest_span_refinement_change_mm": 3.637978807091713e-12,
+      "saved_mesh_longest_span_mm": 600.0,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 600.0000000000255
+    },
+    {
+      "part_label": "S01-P034",
+      "guid": "6d5a6bc6-c61f-4b7f-92ee-b6954b9f7640",
+      "bbox_max_span_mm": 690.7277276494096,
+      "native_boundary_sample_spans_mm": [
+        29.456832294798005,
+        600.0000000000182,
+        28.91366458960374
+      ],
+      "longest_span_excess_mm": 90.72772764939145,
+      "status": "LOOSE_BOUND_OVERESTIMATE_DETECTED",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 600.0,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 600.0000000000182
+    },
+    {
+      "part_label": "S01-P038",
+      "guid": "7f40d1be-aa51-4268-a2f9-20eb8431e4b3",
+      "bbox_max_span_mm": 2100,
+      "native_boundary_sample_spans_mm": [
+        39.99999999999636,
+        39.999999999992724,
+        2100.0000000000005
+      ],
+      "longest_span_excess_mm": -4.547473508864641e-13,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 2100.0,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 2100.0000000000005
+    },
+    {
+      "part_label": "S01-P054",
+      "guid": "c5398de1-4500-4f57-8b61-33aedb569755",
+      "bbox_max_span_mm": 2100,
+      "native_boundary_sample_spans_mm": [
+        39.999999999992724,
+        39.999999999992724,
+        2100.0000000000005
+      ],
+      "longest_span_excess_mm": -4.547473508864641e-13,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 2100.0,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 2100.0000000000005
+    },
+    {
+      "part_label": "S01-P065",
+      "guid": "ed6efb92-75d4-4d51-ab63-d274c02b17af",
+      "bbox_max_span_mm": 668.0000000000036,
+      "native_boundary_sample_spans_mm": [
+        29.999029374119345,
+        600.0000000000364,
+        29.456832294801373
+      ],
+      "longest_span_excess_mm": 67.99999999996726,
+      "status": "LOOSE_BOUND_OVERESTIMATE_DETECTED",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 600.0,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 600.0000000000364
+    },
+    {
+      "part_label": "S01-P069",
+      "guid": "ffcb8d2d-d2e3-4551-b139-82dc29c40c8b",
+      "bbox_max_span_mm": 1514.2264468067297,
+      "native_boundary_sample_spans_mm": [
+        1302.0172439427133,
+        29.470327105998877,
+        28.91366458960374
+      ],
+      "longest_span_excess_mm": 212.20920286401633,
+      "status": "LOOSE_BOUND_OVERESTIMATE_DETECTED",
+      "boundary_longest_span_refinement_change_mm": 1.8189894035458565e-12,
+      "saved_mesh_longest_span_mm": 1302.0166015625,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_DIAGONAL",
+      "current_raw_length_proxy_mm": 1302.3628156255627
+    },
+    {
+      "part_label": "S02-P005",
+      "guid": "304ca5b2-295b-477e-8b09-c019d802982a",
+      "bbox_max_span_mm": 602.0172439424823,
+      "native_boundary_sample_spans_mm": [
+        30.0,
+        602.0172439424969,
+        30.0
+      ],
+      "longest_span_excess_mm": -1.4551915228366852e-11,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 3.637978807091713e-12,
+      "saved_mesh_longest_span_mm": 602.017578125,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 602.0172439424969
+    },
+    {
+      "part_label": "S02-P009",
+      "guid": "59787ede-5ca9-4a04-854e-f15e639a0c11",
+      "bbox_max_span_mm": 722.4206927309897,
+      "native_boundary_sample_spans_mm": [
+        29.456346981858587,
+        602.0172439425041,
+        29.456832294802325
+      ],
+      "longest_span_excess_mm": 120.40344878848555,
+      "status": "LOOSE_BOUND_OVERESTIMATE_DETECTED",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 602.017578125,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 602.0172439425041
+    },
+    {
+      "part_label": "S02-P012",
+      "guid": "77536d7c-3285-4ed8-9daf-bd864131f202",
+      "bbox_max_span_mm": 1562.4206927310006,
+      "native_boundary_sample_spans_mm": [
+        1302.017243942495,
+        29.455547260837193,
+        29.999810009576095
+      ],
+      "longest_span_excess_mm": 260.40344878850556,
+      "status": "LOOSE_BOUND_OVERESTIMATE_DETECTED",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 1302.0166015625,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 1302.017243942495
+    },
+    {
+      "part_label": "S02-P013",
+      "guid": "7c982821-9c48-466d-983b-0226aa386ac2",
+      "bbox_max_span_mm": 602.0172439424823,
+      "native_boundary_sample_spans_mm": [
+        30.0,
+        602.0172439424969,
+        30.0
+      ],
+      "longest_span_excess_mm": -1.4551915228366852e-11,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 3.637978807091713e-12,
+      "saved_mesh_longest_span_mm": 602.017578125,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 602.0172439424969
+    },
+    {
+      "part_label": "S02-P021",
+      "guid": "f40e6b73-b57a-43e3-9caa-7486642e796a",
+      "bbox_max_span_mm": 2000,
+      "native_boundary_sample_spans_mm": [
+        39.999999999992724,
+        39.999999999992724,
+        2000.0000000000005
+      ],
+      "longest_span_excess_mm": -4.547473508864641e-13,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 2000.0,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 2000.0000000000005
+    },
+    {
+      "part_label": "S03-P009",
+      "guid": "50d73629-3b20-4604-8acf-446906d4a6d5",
+      "bbox_max_span_mm": 722.420692730986,
+      "native_boundary_sample_spans_mm": [
+        29.456346981858587,
+        602.0172439425005,
+        29.456832294802325
+      ],
+      "longest_span_excess_mm": 120.40344878848555,
+      "status": "LOOSE_BOUND_OVERESTIMATE_DETECTED",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 602.017578125,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 602.0172439425005
+    },
+    {
+      "part_label": "S03-P012",
+      "guid": "6bec8338-046d-42ac-aef4-187847627945",
+      "bbox_max_span_mm": 602.017243942486,
+      "native_boundary_sample_spans_mm": [
+        30.0,
+        602.0172439424932,
+        30.0
+      ],
+      "longest_span_excess_mm": -7.275957614183426e-12,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 602.017578125,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 602.0172439424932
+    },
+    {
+      "part_label": "S03-P016",
+      "guid": "bda0a2dc-3c9e-48d6-aace-43730b0c0501",
+      "bbox_max_span_mm": 602.017243942486,
+      "native_boundary_sample_spans_mm": [
+        30.0,
+        602.0172439424932,
+        30.0
+      ],
+      "longest_span_excess_mm": -7.275957614183426e-12,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 602.017578125,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 602.0172439424932
+    },
+    {
+      "part_label": "S03-P017",
+      "guid": "fecd792e-0ec4-4727-a81f-f0f6e0dd6d74",
+      "bbox_max_span_mm": 2000,
+      "native_boundary_sample_spans_mm": [
+        39.999999999992724,
+        39.999999999992724,
+        2000.0000000000005
+      ],
+      "longest_span_excess_mm": -4.547473508864641e-13,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 2000.0,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 2000.0000000000005
+    },
+    {
+      "part_label": "S03-P018",
+      "guid": "fffcc5cb-a784-4b87-bbea-2acc51cf6920",
+      "bbox_max_span_mm": 1562.4206927310006,
+      "native_boundary_sample_spans_mm": [
+        1302.017243942495,
+        29.455547260829917,
+        29.999810009576095
+      ],
+      "longest_span_excess_mm": 260.40344878850556,
+      "status": "LOOSE_BOUND_OVERESTIMATE_DETECTED",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 1302.0166015625,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 1302.017243942495
+    },
+    {
+      "part_label": "S04-P002",
+      "guid": "1863b0be-a8f6-4319-baf4-e7a1d73b6fcd",
+      "bbox_max_span_mm": 602.0172439424841,
+      "native_boundary_sample_spans_mm": [
+        30.0,
+        602.0172439424914,
+        30.0
+      ],
+      "longest_span_excess_mm": -7.275957614183426e-12,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 602.017578125,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 602.0172439424914
+    },
+    {
+      "part_label": "S04-P004",
+      "guid": "2294b5b7-0e40-42ab-ad3b-3248867747c9",
+      "bbox_max_span_mm": 1562.4206927310006,
+      "native_boundary_sample_spans_mm": [
+        1302.017243942495,
+        29.455547260833555,
+        29.999810009576095
+      ],
+      "longest_span_excess_mm": 260.40344878850556,
+      "status": "LOOSE_BOUND_OVERESTIMATE_DETECTED",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 1302.0166015625,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 1302.017243942495
+    },
+    {
+      "part_label": "S04-P005",
+      "guid": "24ae08ad-a7a1-499a-85c4-65368f6d6dd1",
+      "bbox_max_span_mm": 602.0172439424841,
+      "native_boundary_sample_spans_mm": [
+        30.0,
+        602.0172439424914,
+        30.0
+      ],
+      "longest_span_excess_mm": -7.275957614183426e-12,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 602.017578125,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 602.0172439424914
+    },
+    {
+      "part_label": "S04-P010",
+      "guid": "6c6a076c-5021-4076-a1c6-260a330c99bf",
+      "bbox_max_span_mm": 722.4206927309879,
+      "native_boundary_sample_spans_mm": [
+        29.456346981858587,
+        602.0172439425005,
+        29.456832294802325
+      ],
+      "longest_span_excess_mm": 120.40344878848737,
+      "status": "LOOSE_BOUND_OVERESTIMATE_DETECTED",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 602.017578125,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 602.0172439425005
+    },
+    {
+      "part_label": "S04-P020",
+      "guid": "dca25deb-f30a-4156-bd5a-50ed637b63ce",
+      "bbox_max_span_mm": 2000,
+      "native_boundary_sample_spans_mm": [
+        39.999999999992724,
+        39.999999999992724,
+        2000.0000000000005
+      ],
+      "longest_span_excess_mm": -4.547473508864641e-13,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 2000.0,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 2000.0000000000005
+    },
+    {
+      "part_label": "S05-P002",
+      "guid": "04ef5a10-33e4-4b84-a862-bbc39933f6a0",
+      "bbox_max_span_mm": 679.0685498190778,
+      "native_boundary_sample_spans_mm": [
+        30.0,
+        679.0685498190851,
+        30.00000000000003
+      ],
+      "longest_span_excess_mm": -7.275957614183426e-12,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 679.068359375,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 679.0685498190851
+    },
+    {
+      "part_label": "S05-P004",
+      "guid": "27ce8b2c-7794-4c6a-a9e2-bd9cfe41ed45",
+      "bbox_max_span_mm": 679.0685498190778,
+      "native_boundary_sample_spans_mm": [
+        30.0,
+        679.0685498190851,
+        30.00000000000003
+      ],
+      "longest_span_excess_mm": -7.275957614183426e-12,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 679.068359375,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 679.0685498190851
+    },
+    {
+      "part_label": "S05-P005",
+      "guid": "2d928077-8a9a-4191-b05a-ea1a3bbd2387",
+      "bbox_max_span_mm": 750,
+      "native_boundary_sample_spans_mm": [
+        40.0,
+        40.0,
+        750.0000000000002
+      ],
+      "longest_span_excess_mm": -2.2737367544323206e-13,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 749.9999999999998,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 750.0000000000002
+    },
+    {
+      "part_label": "S05-P006",
+      "guid": "32c99c6f-426c-4368-ac80-57588ae4b1ff",
+      "bbox_max_span_mm": 750,
+      "native_boundary_sample_spans_mm": [
+        40.0,
+        40.0,
+        750.0000000000002
+      ],
+      "longest_span_excess_mm": -2.2737367544323206e-13,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 749.9999999999998,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 750.0000000000002
+    },
+    {
+      "part_label": "S05-P007",
+      "guid": "3b9f69d8-218d-4d60-be23-ed72bcfe806f",
+      "bbox_max_span_mm": 750,
+      "native_boundary_sample_spans_mm": [
+        40.0,
+        40.0,
+        750.0000000000002
+      ],
+      "longest_span_excess_mm": -2.2737367544323206e-13,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 749.9999999999998,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 750.0000000000002
+    },
+    {
+      "part_label": "S05-P012",
+      "guid": "86adb058-5eb2-4be1-86d6-ddc4b83657bd",
+      "bbox_max_span_mm": 750,
+      "native_boundary_sample_spans_mm": [
+        40.0,
+        40.0,
+        750.0000000000002
+      ],
+      "longest_span_excess_mm": -2.2737367544323206e-13,
+      "status": "NO_LONGEST_SPAN_EXCESS_DETECTED_IN_BOUNDARY_SAMPLES_NOT_GLOBAL_PROOF",
+      "boundary_longest_span_refinement_change_mm": 0.0,
+      "saved_mesh_longest_span_mm": 749.9999999999998,
+      "current_length_basis": "SAMPLED_NATIVE_BOUNDARY_BBOX_MAX_SPAN_PROXY",
+      "current_raw_length_proxy_mm": 750.0000000000002
+    }
+  ],
+  "bbox_longest_span_excess_detected_count": 11,
+  "limits": "Boundary sampling is a sanity check, not a full trimmed-surface extrema solver. AABB overlap is not physical contact or semantic module membership."
+}

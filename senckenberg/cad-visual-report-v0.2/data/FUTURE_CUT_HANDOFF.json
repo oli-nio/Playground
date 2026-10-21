@@ -1,0 +1,19 @@
+{
+  "status": "PRESERVED_NOT_EXECUTED",
+  "source_sha256": "89ba1a6fd1c8a6c8fb22c991e96a581bf663380aed14ecbdbabf3245a5c02a88",
+  "parts": "data/PARTS.json",
+  "stock_summaries": "data/STOCK_SUMMARIES.json",
+  "csv_directory": "exports/",
+  "all_V0_measurement_and_material_statuses_preserved": true,
+  "selected_production_variants": null,
+  "production_quantities": null,
+  "optimizer_status": "STOP_INCONCLUSIVE",
+  "new_optimizer_or_costs": false,
+  "rules": [
+    "Do not sum alternatives implicitly.",
+    "Keep confirmed dimensions separate from raw_length_proxy_mm.",
+    "UNKNOWN is not zero.",
+    "Material labels remain hints or unknown.",
+    "Read the retained CUT_OPTIMIZATION.json before any future optimization."
+  ]
+}

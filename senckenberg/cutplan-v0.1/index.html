@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#173c3c">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'wasm-unsafe-eval' blob:; style-src 'unsafe-inline'; img-src data:; frame-src blob:; worker-src blob:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>FORMIKAT CUTPLAN · Privater Browserstart</title>
+<style>
+:root{font-family:Arial,Helvetica,sans-serif;color:#173c3c;background:#faf9f5;font-size:16px}*{box-sizing:border-box}body{margin:0}button,.button{font:inherit;cursor:pointer;border:1px solid #173c3c;border-radius:8px;padding:13px 19px;background:#173c3c;color:#fff;text-decoration:none;display:inline-block;text-align:center}button.secondary,.button.secondary{background:transparent;color:#173c3c;border-color:#c8d3cd}button:disabled{opacity:.5;cursor:wait}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #b26c38;outline-offset:4px}a{color:#215c58}header{border-bottom:1px solid #d9dfd8;padding:22px 30px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{letter-spacing:1.8px;font-size:20px}.brand strong{font-weight:800}.tag{color:#5a6b65;font-size:13px}.wrap{max-width:1030px;margin:0 auto;padding:52px 28px 28px}h1{font-size:clamp(30px,4.5vw,46px);line-height:1.12;margin:12px 0 18px;letter-spacing:-1px}p{line-height:1.6}.lead{font-size:18px;max-width:760px;color:#465c54}.eyebrow{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#5a7168}.steps{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:32px 0 20px}.card{border:1px solid #d9dfd8;border-radius:14px;padding:25px;background:#fff}.card h2{font-size:21px;margin:10px 0}.num{font-weight:bold;color:#507c70;font-size:13px}.card p{font-size:15px;color:#52665c}.card .button,.card button{margin-top:12px}.note{border-left:4px solid #ba7c2f;background:#fff2da;padding:14px 18px;line-height:1.55;font-size:14px;border-radius:3px}.privacy{font-size:14px;color:#52665c}.remember{display:flex;align-items:flex-start;gap:9px;margin:18px 0 0;font-size:13px;line-height:1.5;color:#52665c}.remember input{width:18px;height:18px;flex:none;accent-color:#173c3c}#status{margin:18px 0;min-height:24px;font-size:15px;line-height:1.5}#status[data-error=true]{color:#9c3326}#saved{border:1px solid #b7cbbf;background:#edf3ee;border-radius:12px;padding:20px;margin-bottom:24px}#saved p{margin:0 0 10px}details{margin-top:24px;border-top:1px solid #d9dfd8;padding-top:18px}summary{cursor:pointer;font-weight:600}details p{font-size:14px;color:#52665c}.small{font-size:12px;color:#65746d}footer{padding:24px 0;color:#65746d;font-size:12px}#viewer{height:100dvh;display:flex;flex-direction:column}#viewer[hidden],[hidden]{display:none!important}.viewerbar{display:flex;gap:14px;align-items:center;justify-content:space-between;padding:10px 16px;background:#173c3c;color:#fff;font-size:13px}.viewerbar button{padding:7px 12px;border-color:#73908a;font-size:12px}.viewerwarning{background:#fff2da;padding:7px 16px;color:#684d24;font-size:12px;line-height:1.4}iframe{flex:1;width:100%;min-height:0;border:0;background:#faf9f5}.row{display:flex;gap:10px;flex-wrap:wrap}#back{white-space:nowrap}.viewertitle{font-weight:bold}.viewerinfo{color:#d8e9e2}.loading{opacity:.65}.app-live header,.app-live #landing{display:none}code{overflow-wrap:anywhere}#clear{border:0;background:transparent;color:#7f4637;text-decoration:underline;padding:5px 0;margin-top:14px;font-size:13px}@media(max-width:680px){header{padding:17px 20px}.tag{max-width:140px;text-align:right}.wrap{padding:32px 19px}.steps{grid-template-columns:1fr}.card{padding:21px}.viewerbar{gap:8px;flex-wrap:wrap}.viewerinfo{font-size:11px}.viewerwarning{font-size:11px}.card .button,.card button{width:100%}}
+</style>
+</head>
+<body>
+<header><div class="brand">FORMIKAT <strong>CUTPLAN</strong></div><div class="tag">V0.1 · privater Browserstart</div></header>
+<main id="landing" class="wrap">
+<div class="eyebrow">Modulauswahl → Materialbedarf → Zuschnitt → Kosten</div>
+<h1>CUTPLAN im Browser ansehen.<br>Projektdaten bleiben bei dir.</h1>
+<p class="lead">Diese öffentliche Startseite öffnet die originale CUTPLAN-V0.1-Anwendung direkt auf deinem Gerät. Kein Windows-Startskript, kein lokaler Server und kein Upload deiner Senckenberg-Daten.</p>
+<div id="saved" hidden><p>Das geprüfte Anwendungspaket ist in diesem Browser gespeichert.</p><div class="row"><button id="resume">CUTPLAN öffnen</button><button id="remove" class="secondary">Gespeichertes Paket entfernen</button></div></div>
+<div class="steps">
+<section class="card"><span class="num">01 · EINMAL HERUNTERLADEN</span><h2>Originalpaket aus Drive</h2><p>Speichere <strong>CUTPLAN_ANWENDUNG.zip</strong> aus deinem privaten Drive in „Dateien“ beziehungsweise „Downloads“. Das Paket enthält das Senckenberg-Testprojekt bereits.</p><a class="button secondary" href="https://drive.google.com/file/d/1FaOdAJdbh7zY2ROySOnHWdxbcaZ9aghb/view" target="_blank" rel="noopener noreferrer">Privates Anwendungspaket öffnen</a></section>
+<section class="card"><span class="num">02 · HIER LOKAL ÖFFNEN</span><h2>Paket auswählen und starten</h2><p>Wähle die heruntergeladene ZIP-Datei. Die Startseite prüft ihre SHA-256-Prüfsumme und öffnet die darin enthaltene Anwendung lokal – <strong>ohne die Datei zu versenden</strong>.</p><button id="choose">CUTPLAN-ZIP auswählen</button><label class="remember"><input id="remember" type="checkbox"><span>Paket für spätere Besuche in diesem Browser speichern. Nur auf einem eigenen Gerät aktivieren.</span></label></section>
+</div>
+<input id="package-file" type="file" accept=".zip,.html,application/zip,text/html" hidden>
+<div id="status" role="status" aria-live="polite">Erwartet wird das verifizierte Originalpaket CUTPLAN V0.1 vom 23.10.2026.</div>
+<div class="note"><strong>Entwicklungsfassung, keine Bestellfreigabe.</strong> Produktionsauswahl und Preise sind Testszenarien. Bekannter Fehler: Packungspreise für Rohstäbe und Rohplatten werden in V0.1 falsch berechnet. Für verbindliche Kalkulationen diesen Stand nicht verwenden.</div>
+<p class="privacy">Veröffentlicht wird nur diese Startseite. Das Anwendungspaket, die CAD-Ableitungen, Materialpreise und gespeicherten Projekte werden nicht in das öffentliche Repository übertragen. GitHub erhält beim Seitenaufruf übliche Webzugriffe, aber diese Startseite sendet keine Projektdateien. Rechnen, Bearbeiten und Export laufen im Browser.</p>
+<details><summary>Apple, Wiederöffnen und Datensicherung</summary><p>Auf iPhone/iPad: Paket in der Dateien-App speichern und über „CUTPLAN-ZIP auswählen“ laden. Falls dein Browser ZIP-Dateien nicht direkt entpacken kann, entpacke das Paket in „Dateien“ und wähle hier stattdessen <strong>CUTPLAN_OFFLINE.html</strong>. Du musst die HTML-Datei nicht direkt als lokale Website öffnen.</p><p>Änderungen bitte in CUTPLAN mit <strong>„Projekt speichern“</strong> als eigene <code>.cutplan</code>-Datei sichern. Beim nächsten Start über <strong>„Öffnen“</strong> laden. Eine browserinterne Wiederherstellungskopie ersetzt keine Projektdatei. Lokaler Speicher kann durch Browsereinstellungen oder Speicherbereinigung verloren gehen.</p><p>Dieser Online-Startweg ist vom ursprünglichen lokalen Windows-Start getrennt. Ein WebKit-Test ist kein Nachweis auf einem echten iPhone oder iPad. Bei Speicher- oder Browserproblemen bleibt das Originalpaket unverändert nutzbar.</p><button id="clear">Alle lokal gespeicherten CUTPLAN-Daten dieses Browserursprungs löschen</button></details>
+<footer>Originalanwendung: CUTPLAN V0.1 · Quellpaket bytegenau geprüft · Rechenkern unverändert · Startseite: 23.10.2026</footer>
+</main>
+<section id="viewer" hidden aria-label="CUTPLAN Anwendung">
+<div class="viewerbar"><div><span class="viewertitle">FORMIKAT CUTPLAN</span> <span class="viewerinfo">· Original V0.1 · Daten lokal · Projekt separat speichern</span></div><button id="back">Startseite</button></div>
+<div class="viewerwarning">Testdaten, keine Bestellfreigabe. Bekannter V0.1-Fehler bei Packungspreisen für Rohmaterial. Apple-Geräte nicht vollständig freigegeben.</div>
+<iframe id="app" title="FORMIKAT CUTPLAN V0.1" sandbox="allow-scripts allow-same-origin allow-downloads allow-modals"></iframe>
+</section>
+<script>
+'use strict';
+(()=>{
+const ZIP_HASH='31aa5e535f8bf0a480ca68f7cbf53964e06101ed36240ade96dfaa0df81ac13a';
+const HTML_HASH='e92f9aa2beca8ac629525c4d4b8683418d24134ee464aec39673138381640ac0';
+const HTML_SIZE=18235428,DB_NAME='FORMIKAT_CUTPLAN_WEB_START_V1';
+const $=id=>document.getElementById(id);let stored=null,activeURL=null,working=false;
+const status=(text,error=false)=>{$('status').textContent=text;$('status').dataset.error=String(error);};
+function busy(value){working=value;$('choose').disabled=value;$('resume').disabled=value;}
+function hex(bytes){return Array.from(bytes,b=>b.toString(16).padStart(2,'0')).join('');}
+async function sha(bytes){if(!globalThis.crypto?.subtle)throw Error('Dieser Startweg benötigt HTTPS und einen Browser mit WebCrypto.');return hex(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)));}
+async function db(){return new Promise((resolve,reject)=>{const r=indexedDB.open(DB_NAME,1);r.onupgradeneeded=()=>r.result.createObjectStore('packages');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);r.onblocked=()=>reject(Error('Lokaler Speicher ist blockiert.'));});}
+async function loadStored(){const d=await db();try{return await new Promise((res,rej)=>{const r=d.transaction('packages').objectStore('packages').get('v01');r.onsuccess=()=>res(r.result||null);r.onerror=()=>rej(r.error);});}finally{d.close();}}
+async function storePackage(blob){const d=await db();try{await new Promise((res,rej)=>{const t=d.transaction('packages','readwrite');t.objectStore('packages').put({blob,name:'CUTPLAN_ANWENDUNG.zip',saved:new Date().toISOString()},'v01');t.oncomplete=res;t.onerror=()=>rej(t.error);t.onabort=()=>rej(t.error);});}finally{d.close();}}
+async function deletePackage(){const d=await db();try{await new Promise((res,rej)=>{const t=d.transaction('packages','readwrite');t.objectStore('packages').delete('v01');t.oncomplete=res;t.onerror=()=>rej(t.error);});}finally{d.close();}stored=null;$('saved').hidden=true;}
+async function unzipHTML(buffer){
+ const v=new DataView(buffer),bytes=new Uint8Array(buffer);let end=-1;
+ for(let p=buffer.byteLength-22;p>=Math.max(0,buffer.byteLength-65557);p--)if(v.getUint32(p,true)===0x06054b50){end=p;break;}
+ if(end<0)throw Error('ZIP-Verzeichnis nicht gefunden.');
+ if(v.getUint16(end+4,true)!==0||v.getUint16(end+6,true)!==0)throw Error('Mehrteilige ZIP-Dateien werden nicht geöffnet.');
+ const count=v.getUint16(end+10,true);let p=v.getUint32(end+16,true);
+ if(count>2000)throw Error('Unerwarteter ZIP-Inhalt.');
+ for(let i=0;i<count;i++){
+  if(p+46>bytes.length||v.getUint32(p,true)!==0x02014b50)throw Error('Ungültiges ZIP-Verzeichnis.');
+  const method=v.getUint16(p+10,true),packed=v.getUint32(p+20,true),size=v.getUint32(p+24,true),nl=v.getUint16(p+28,true),xl=v.getUint16(p+30,true),cl=v.getUint16(p+32,true),offset=v.getUint32(p+42,true);
+  if(p+46+nl+xl+cl>bytes.length)throw Error('Ungültige ZIP-Grenze.');
+  const name=new TextDecoder().decode(bytes.subarray(p+46,p+46+nl));
+  if(name==='CUTPLAN_OFFLINE.html'){
+   if(size!==HTML_SIZE||offset+30>bytes.length||v.getUint32(offset,true)!==0x04034b50)throw Error('Unerwartete Anwendungsdatei.');
+   const start=offset+30+v.getUint16(offset+26,true)+v.getUint16(offset+28,true);
+   if(start+packed>bytes.length)throw Error('Unvollständige ZIP-Datei.');
+   if(method===0)return bytes.slice(start,start+packed).buffer;
+   if(method!==8)throw Error('Dieses ZIP-Kompressionsverfahren wird nicht unterstützt.');
+   let decoder;try{decoder=new DecompressionStream('deflate-raw');}catch{throw Error('Dieser Browser kann ZIP nicht direkt entpacken. Bitte das Paket in Dateien/Downloads entpacken und hier CUTPLAN_OFFLINE.html auswählen.');}
+   const out=await new Response(new Blob([bytes.subarray(start,start+packed)]).stream().pipeThrough(decoder)).arrayBuffer();
+   if(out.byteLength!==size)throw Error('Entpackte Dateigröße stimmt nicht.');return out;
+  }p+=46+nl+xl+cl;
+ }throw Error('CUTPLAN_OFFLINE.html fehlt im Paket.');
+}
+function showApp(){document.body.classList.add('app-live');$('viewer').hidden=false;window.scrollTo(0,0);}
+async function openPackage(file){
+ if(working)return;busy(true);status('Prüfsumme wird lokal geprüft …');
+ try{
+  if(!file||file.size>30*1024*1024)throw Error('Bitte nur das Originalpaket oder die enthaltene CUTPLAN_OFFLINE.html wählen (max. 30 MB).');
+  const bytes=await file.arrayBuffer(),hash=await sha(bytes);let htmlBytes,isZip=false;
+  if(hash===ZIP_HASH){isZip=true;status('Originalpaket bestätigt. Anwendung wird lokal entpackt …');htmlBytes=await unzipHTML(bytes);}
+  else if(hash===HTML_HASH)htmlBytes=bytes;
+  else throw Error('Diese Datei entspricht nicht dem geprüften CUTPLAN-V0.1-Paket. Bitte CUTPLAN_ANWENDUNG.zip oder die unveränderte CUTPLAN_OFFLINE.html aus dem verlinkten Drive-Paket auswählen.');
+  if(htmlBytes.byteLength!==HTML_SIZE||await sha(htmlBytes)!==HTML_HASH)throw Error('Die Prüfsumme der enthaltenen Anwendung stimmt nicht.');
+  let html=new TextDecoder('utf-8',{fatal:true}).decode(htmlBytes);
+  const policy="default-src 'none'; script-src 'unsafe-inline' 'wasm-unsafe-eval' blob:; worker-src blob:; style-src 'unsafe-inline'; img-src data: blob:; font-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'";
+  html=html.replace('<head>','<head><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="'+policy+'">');
+  const url=URL.createObjectURL(new Blob([html],{type:'text/html;charset=utf-8'}));
+  const old=activeURL;activeURL=url;$('app').src=url;if(old)setTimeout(()=>URL.revokeObjectURL(old),10000);
+  let saved=false;
+  if($('remember').checked&&isZip){try{await storePackage(new Blob([bytes],{type:'application/zip'}));stored=await loadStored();$('saved').hidden=!stored;saved=true;}catch{status('Anwendung geöffnet; dauerhafte lokale Speicherung nicht möglich. Projekt bitte separat sichern.',true);}}
+  showApp();status(saved?'Originalpaket geprüft und lokal gespeichert. Änderungen bitte in CUTPLAN als Projektdatei sichern.':'Originalpaket geprüft. Daten werden ausschließlich auf diesem Gerät verarbeitet.');
+ }catch(e){status(e.message||String(e),true);}finally{busy(false);$('package-file').value='';}
+}
+$('choose').onclick=()=>$('package-file').click();$('package-file').onchange=e=>{const f=e.target.files[0];if(f)openPackage(f);};
+$('resume').onclick=()=>{if(activeURL){showApp();return;}if(stored?.blob)openPackage(stored.blob);};
+$('back').onclick=()=>{document.body.classList.remove('app-live');$('viewer').hidden=true;if(activeURL){$('saved').hidden=false;$('resume').textContent='Zur laufenden Anwendung';}window.scrollTo(0,0);};
+$('remove').onclick=async()=>{if(confirm('Nur das gespeicherte Anwendungspaket aus diesem Browser entfernen? Eigene Projektdateien bleiben unverändert.')){try{await deletePackage();status('Gespeichertes Paket entfernt. Eigene Projektdateien bleiben erhalten.');}catch(e){status(String(e),true);}}};
+$('clear').onclick=async()=>{
+ if(!confirm('Gespeichertes Anwendungspaket und CUTPLAN-Wiederherstellungskopie in diesem Browser löschen? Nicht exportierte Änderungen gehen verloren. Heruntergeladene Projektdateien bleiben erhalten.'))return;
+ $('app').src='about:blank';if(activeURL)URL.revokeObjectURL(activeURL);activeURL=null;stored=null;
+ for(const name of [DB_NAME,'FORMIKAT_CUTPLAN_LOCAL'])await new Promise(resolve=>{const r=indexedDB.deleteDatabase(name);r.onsuccess=resolve;r.onerror=resolve;r.onblocked=()=>{status('Bitte andere CUTPLAN-Tabs schließen und das Löschen erneut versuchen.',true);resolve();};});
+ $('saved').hidden=true;status('Lokale Löschung angefordert. Separat exportierte Projektdateien wurden nicht verändert.');
+};
+loadStored().then(value=>{stored=value;$('saved').hidden=!value;}).catch(()=>{});
+})();
+</script>
+</body>
+</html>

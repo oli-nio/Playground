@@ -1,0 +1,49 @@
+name: Publish CUTPLAN pilot once
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-cutplan-v01-once.yml']
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 1
+      - name: Install hash-verified pilot HTML and license notices
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib, io, pathlib, urllib.request, zipfile
+          url = 'https://sb-215uc4s26wq6.vercel.run/cutplan-public.zip'
+          archive = urllib.request.urlopen(url, timeout=90).read()
+          assert hashlib.sha256(archive).hexdigest() == 'e1f5f37625fe630e0bcf6bd1b13c07fda7af8f0e6d49fab886d2433d23eb9a80'
+          package = zipfile.ZipFile(io.BytesIO(archive))
+          html = package.read('CUTPLAN_OFFLINE.html')
+          assert hashlib.sha256(html).hexdigest() == 'e92f9aa2beca8ac629525c4d4b8683418d24134ee464aec39673138381640ac0'
+          target = pathlib.Path('senckenberg/cutplan-v0.1')
+          target.mkdir(parents=True, exist_ok=True)
+          (target / 'index.html').write_bytes(html)
+          for name in package.namelist():
+              p = pathlib.PurePosixPath(name)
+              if len(p.parts) == 2 and p.parts[0] == 'LICENSES' and p.suffix == '.txt':
+                  out = target / str(p)
+                  out.parent.mkdir(exist_ok=True)
+                  out.write_bytes(package.read(name))
+          (target / 'PILOT_README.md').write_text('# CUTPLAN V0.1 Pilot\n\nDirect browser application with the included Senckenberg test project.\n\nThe calculation engine and bundled HTML are unchanged from the verified original release. All prices and production selections are test scenarios, not order approvals. Known V0.1 limitation: pack pricing for raw stock is incorrect.\n\nNo Rhino source files are included.\n\nOriginal HTML SHA-256: e92f9aa2beca8ac629525c4d4b8683418d24134ee464aec39673138381640ac0\n', encoding='utf-8')
+          print('Verified pilot HTML:', len(html), 'bytes')
+          PY
+      - name: Commit only CUTPLAN publication files
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- senckenberg/cutplan-v0.1
+          git diff --cached --name-only
+          git diff --cached --name-only | grep -v '^senckenberg/cutplan-v0.1/' && exit 1 || true
+          git diff --cached --quiet && exit 0
+          git commit -m 'Publish original CUTPLAN V0.1 directly with Senckenberg pilot data'
+          git push origin HEAD:main

@@ -1,0 +1,107 @@
+FORMIKAT CUTPLAN V2.1 – KURZE ABNAHME
+24.10.2026 | Engine CUTPLAN-V2.1-2.1.0 | Nur lokale Ausgabe
+
+ERGEBNIS
+Die gezielt nachgewiesene wirtschaftlichere Ring-Mischbelegung wird jetzt
+automatisch gefunden. Keine neue Bibliothek, kein Solverwechsel, keine zusätzliche
+Bedienebene, keine Cloud-Abhängigkeit und kein Qwen-Einsatz.
+
+44 RINGSEGMENTE – GLEICHE BEDINGUNGEN
+V2:   4 x 2500 x 1250 mm                 12,500 m²  475,00 Test-EUR netto
+V2.1: 1 x 2500 x 1250 + 2 x 3000 x 1500 12,125 m²  460,75 Test-EUR netto
+Jeweils 44/44 vollständig und unabhängig gültig.
+Ersparnis: 0,375 m² und 14,25 Test-EUR = 3 %, NICHT 25 %.
+Preisannahme 38 EUR/m², kein bestätigter Lieferantenpreis.
+Unverändert: gespeicherte vollständige Profile einschließlich Innenlöchern,
+3 mm Werkzeugabstand, 10 mm Rand, 0,025 mm Konturabweichung,
+0/90/180/270 Grad, keine Spiegelung, keine Teile in Löchern, keine Common Lines.
+Die Bilder ring_alt_1..4.svg und ring_neu_1..3.svg zeigen diese geprüften Pläne.
+
+WICHTIGER ZIELKONFLIKT
+Größtes konservativ geprüftes Restrechteck: vorher 0,885648 m²,
+jetzt 0,381435 m². Die günstigere Lösung hat KEINEN größeren Restnachweis.
+Ein Restrechteck ist potenziell geometrisch frei, nicht bestätigter Lagerbestand,
+kein vollständiger Konturrest und kein freigegebener Entnahmeschnitt.
+Kein spekulativer Restwert wurde von den Kosten abgezogen.
+
+UMGESETZTER KERN
+- Begrenzte automatische Suche über einzelne und paarweise Rohformate;
+  maximal 4096 besuchte Mengenvektoren, keine erschöpfende Optimierung.
+- Schneller konservativer Startplan, gegen tatsächliche Konturen validiert.
+- Vergleich zweier Verfahrensreihenfolgen zur Zuteilung knapper Bestände.
+- Gemeinsames Auftrags-Suchbudget, gültige Incumbents bleiben erhalten.
+- Korrigierter Guillotine-Suchplan: Reihenfolgen/Achsen pro Vorzugsformatgruppe.
+- Kanonische Material-/Formatdaten beim Speichern, keine Suchkappen als neue Bestände.
+- Bestehende Sägebaum-, Geometrie-, Mengen- und HiGHS-1D-Prüfung erhalten.
+
+TATSÄCHLICHE KONTROLLEN
+Ringe, Seeds 42 und 73:
+  2 s: vierundvierzig von vierundvierzig gültig, aber 7 kleine Platten,
+       21,875 m², 831,25 Test-EUR. Vollständig, noch nicht wirtschaftlich gut.
+  8 s und 20 s: alle vier Läufe automatisch 3 gemischte Platten wie oben.
+  Ein erfolgloser Versuch ist kein Unmöglichkeitsbeweis.
+Solver-Abbruch nach erstem vollständigem Incumbent: vollständiger gültiger Plan bleibt.
+
+Gesamtprojekt, Node-Lauf:
+  1825 Quellvorkommen unverändert zugeordnet; 157 gewählt,
+  107 geeignete Teile vollständig platziert, 50 Positionen offen.
+  Erster vollständiger Startstand nach 223 ms (noch nicht der günstigste).
+  Ein gemeinsames 8-s-Suchbudget; Solver-Wanduhrzeit 8,165 s.
+  Einschließlich PDF, Export und zusätzlicher Abschlussprüfungen 9,598 s.
+  Geometrie/Validierung sind nicht präemptiv; keine millisekundengenaue CPU-Garantie.
+  Bekannte Material-Testzwischensumme 1472,25 EUR netto.
+  grand_total bleibt null: keine vollständige Projektsumme bei 50 offenen Positionen.
+
+Weitere Regressionen:
+  14 Anwendungs-, 6 Vertrags-, 9 kurze, 3 lineare und 9 Ring-Prüfgruppen bestanden.
+  Enthält wiederholte Unverändertheitsprüfungen; keine künstliche Gesamterfolgsquote.
+  6-Rechteck-Referenz: 50 Test-EUR, gültige Schnittbäume.
+  Reale vier Sägerechtecke: 126 Test-EUR, unveränderte Quellmaße.
+  Endlicher Bestandsfall: 30 Test-EUR, keine Bestandsverdopplung.
+  Rundstab D30: 29/29 Teile, 14 Stäbe.
+  Synthetischer CNC/Säge-Bestandsgegenfall: gültig 20 statt 100 Test-EUR.
+  Letzteres ist KEINE Einsparung an einem echten FORMIKAT-Projekt.
+  Echte Innenlöcher erhalten; simulierte Reste nicht als Bestand eingesetzt.
+  Fehlende Preise bleiben offen; echte Nullpreise zulässig.
+  Vorheriger gültiger Plan bleibt bei 1-ms-Deadline erhalten.
+
+Browser: kalter vollständiger lokaler Windows-Lauf mit 107 geeigneten Teilen,
+3 gemischten Ringplatten und 1472,25 EUR bekannter Testzwischensumme.
+Download und erneutes Öffnen einschließlich SHA-Inhaltsprüfung bestanden.
+Manueller Abbruch eines 20-s-Laufs: 44/44 Ringteile auf 3 Rohformaten erhalten.
+Tatsächliche Fensterprüfungen: 1280 x 900 und 375 x 812 Pixel.
+Schmale Dokumentbreite 360 <= 375 Pixel; kein horizontaler Seitenüberlauf.
+Screenshots: delivery/BROWSER_BREIT.jpg und delivery/BROWSER_SCHMAL.jpg.
+Kein getesteter Safari-/iPad-Betrieb behauptet.
+Alle 9 PDF-Seiten gerendert und visuell geprüft.
+
+OFFLINE / UNVERÄNDERTHEIT
+Externe Socket-/Fetch-Verbindungsprobe im vollständigen lokalen Ablauf gesperrt;
+null unerwartete Laufzeit-Netzaufrufe. Browser-CSP auf eigene Assets beschränkt.
+Lokal gebündelte Clipper-/HiGHS-Verfahren unverändert im Einsatz.
+Keine Original-3DM-Dateien neu geöffnet, verändert oder hochgeladen.
+Vorherige V2 und Quellgeometrie unverändert; neue Ausgabe in separatem V2.1-Ordner.
+Keine Veröffentlichungen, GitHub-Zugriffe oder Rechnerkonfigurationsänderungen.
+CUTPLAN V2.1 ist eine Anwendungsversion, keine erneute Verifikation von CAD V0.4.9.
+
+START / AUSGABEN
+Im Versionsordner START_CUTPLAN.cmd doppelklicken.
+delivery/SENCKENBERG_V2_1.cutplan: geprüftes vollständiges Testprojekt.
+delivery/CUTPLAN_BERICHT_V2_1.pdf: aktueller Projektausdruck, 9 Seiten.
+delivery/VERGLEICH.html: bebilderter Offline-Vergleich.
+V2-PDF ebenfalls 9 Seiten: keine Seitenzahl-Ersparnis durch V2.1.
+
+BELEGE RELATIV ZUM VERSIONSORDNER
+qa/RELEASE_CHECK.json
+qa/PLANNER_REGRESSIONS_release_rings.json
+qa/PLANNER_REGRESSIONS_final_quick.json
+qa/PLANNER_REGRESSIONS_final_linear.json
+qa/PLANNER_REGRESSIONS_final_contracts.json
+qa/APP_CONTRACTS.json
+qa/IMMUTABLE_V2_SNAPSHOT.json
+
+GRENZEN
+Kein globales Optimum bewiesen. Nur begrenzte Ein-/Zwei-Formatvorschläge und zwei
+Bestandszuteilungen, keine erschöpfende Gesamtbeschaffungsoptimierung.
+Kein Nachweis sicherer Einspannung oder CNC-Maschinenbearbeitung.
+Keine automatische Fertigungs-, Maschinen- oder Bestellfreigabe.

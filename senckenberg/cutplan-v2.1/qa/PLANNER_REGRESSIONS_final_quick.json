@@ -1,0 +1,2848 @@
+{
+  "created_utc": "2026-10-24T13:09:12.023Z",
+  "mode": "quick",
+  "engine": "CUTPLAN-V2.1-2.1.0",
+  "inputs": {
+    "seed_sha256": "bec29c08672be8fa9565dee446cf2701a4ec2d58519713607708aac4cd7c6d76",
+    "app": {
+      "core.js": "34f4ed75014024d9b8ab983fc3f19c1e2295c877bbc9994b1393e62b841de96a",
+      "geometry.js": "2f1051995d7f749c2df166c551c46207ad0d1b81294a0e2707854258168d7157",
+      "validator.js": "3f64c4119a2ceaeab328e11780e17d93592187c262fd5b70b820a518e9172c91",
+      "optimizer.js": "4f010039c86b59cb1db2dc12f0abaae34f8894545dfb35145cb27c4d6f0a872f",
+      "export.js": "b1e5774439aa16f29a6daa50371e0948ad6dc73d7573e8870a5c68951c7d743b"
+    },
+    "original_v2_files": 57
+  },
+  "checks": [
+    {
+      "name": "Immutable V2 snapshot and complete 1825-object ownership",
+      "pass": true,
+      "seconds": 0.174
+    },
+    {
+      "name": "Exact six-rectangle cost50 reference with independently valid cut trees",
+      "pass": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "Real four saw rectangles preserve source measurements and cost126",
+      "pass": true,
+      "seconds": 0.012
+    },
+    {
+      "name": "Finite stock does not duplicate and reaches30 reference",
+      "pass": true,
+      "seconds": 0.01
+    },
+    {
+      "name": "Unknown prices choose material objective; never claim known total",
+      "pass": true,
+      "seconds": 0.011
+    },
+    {
+      "name": "Genuine zero price is valid; simulated remnants are never available stock",
+      "pass": true,
+      "seconds": 0.005
+    },
+    {
+      "name": "Cross-process stock allocation20, not sequential100; retained genuine inner hole",
+      "pass": true,
+      "seconds": 1.148
+    },
+    {
+      "name": "Independent validator rejects overlapping duplicates even at zero kerf",
+      "pass": true,
+      "seconds": 0
+    },
+    {
+      "name": "Prior V2 and test seed unchanged after all runs",
+      "pass": true,
+      "seconds": 0.254
+    }
+  ],
+  "runs": [
+    {
+      "name": "EXACT_6_RECT",
+      "seconds": 0.021,
+      "parameters": {
+        "id": "SCENARIO_CNC",
+        "mode": "saw",
+        "kerf_mm": 3,
+        "margin_mm": 10,
+        "trim_start_mm": 5,
+        "trim_end_mm": 5,
+        "allowance_mm": 0,
+        "min_remnant_mm": 100,
+        "min_remnant_area_mm2": 40000,
+        "part_in_part": false,
+        "hold_verified": false,
+        "common_line": false,
+        "minimum_bridge_mm": 0,
+        "objective": "cost",
+        "seed": 42,
+        "search_seconds": 1,
+        "raw_strategy": "contour",
+        "source": "TESTPARAMETER – keine Maschinenfreigabe",
+        "status": "SCENARIO",
+        "profiles": {
+          "linear": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "saw": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "cnc": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          }
+        }
+      },
+      "input_sha256": "286764183a0c3820c090ab9a8da090cd5244a0791df2397fef463b68c3e8d9c8",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "placed": 6,
+        "unplaced": 0,
+        "quantity_balanced": true,
+        "method": "Independent segment/winding/distance, count, stock and arithmetic validator; no nesting boolean operation reused."
+      },
+      "placed": 6,
+      "unplaced": 0,
+      "raw_use": 3103860,
+      "purchased_use": 3103860,
+      "cost": 50,
+      "formats": [
+        {
+          "id": "LARGE",
+          "origin": "purchase",
+          "width": 2023,
+          "height": 1020
+        },
+        {
+          "id": "SMALL",
+          "origin": "purchase",
+          "width": 1020,
+          "height": 1020
+        }
+      ],
+      "largest_clear_rectangle_mm2": 32480.00000000002,
+      "trace": [
+        {
+          "ms": 8,
+          "placed": 6,
+          "unplaced": 0
+        },
+        {
+          "ms": 18,
+          "placed": 6,
+          "unplaced": 0
+        }
+      ],
+      "solution": {
+        "stocks": [
+          {
+            "id": "SAW1",
+            "format": {
+              "id": "LARGE",
+              "width": 2023,
+              "height": 1020,
+              "origin": "purchase",
+              "availability": 8,
+              "price_override": {
+                "value": 30,
+                "unit": "EUR/sheet",
+                "currency": "EUR",
+                "basis": "NET"
+              }
+            },
+            "placements": [
+              {
+                "piece_id": "EXACT_0",
+                "x": 10,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "EXACT_1",
+                "x": 503,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "EXACT_2",
+                "x": 996,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "EXACT_3",
+                "x": 1489,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "cut_tree": {
+              "x": 10,
+              "y": 10,
+              "w": 2003,
+              "h": 1000,
+              "axis": "X",
+              "cut_at": 500,
+              "kerf": 3,
+              "children": [
+                {
+                  "x": 10,
+                  "y": 10,
+                  "w": 490,
+                  "h": 1000,
+                  "axis": "Y",
+                  "cut_at": 1000,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 10,
+                      "y": 10,
+                      "w": 490,
+                      "h": 990,
+                      "piece_id": "EXACT_0"
+                    },
+                    {
+                      "x": 10,
+                      "y": 1003,
+                      "w": 490,
+                      "h": 7
+                    }
+                  ]
+                },
+                {
+                  "x": 503,
+                  "y": 10,
+                  "w": 1510,
+                  "h": 1000,
+                  "axis": "X",
+                  "cut_at": 993,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 503,
+                      "y": 10,
+                      "w": 490,
+                      "h": 1000,
+                      "axis": "Y",
+                      "cut_at": 1000,
+                      "kerf": 3,
+                      "children": [
+                        {
+                          "x": 503,
+                          "y": 10,
+                          "w": 490,
+                          "h": 990,
+                          "piece_id": "EXACT_1"
+                        },
+                        {
+                          "x": 503,
+                          "y": 1003,
+                          "w": 490,
+                          "h": 7
+                        }
+                      ]
+                    },
+                    {
+                      "x": 996,
+                      "y": 10,
+                      "w": 1017,
+                      "h": 1000,
+                      "axis": "X",
+                      "cut_at": 1486,
+                      "kerf": 3,
+                      "children": [
+                        {
+                          "x": 996,
+                          "y": 10,
+                          "w": 490,
+                          "h": 1000,
+                          "axis": "Y",
+                          "cut_at": 1000,
+                          "kerf": 3,
+                          "children": [
+                            {
+                              "x": 996,
+                              "y": 10,
+                              "w": 490,
+                              "h": 990,
+                              "piece_id": "EXACT_2"
+                            },
+                            {
+                              "x": 996,
+                              "y": 1003,
+                              "w": 490,
+                              "h": 7
+                            }
+                          ]
+                        },
+                        {
+                          "x": 1489,
+                          "y": 10,
+                          "w": 524,
+                          "h": 1000,
+                          "axis": "X",
+                          "cut_at": 1979,
+                          "kerf": 3,
+                          "children": [
+                            {
+                              "x": 1489,
+                              "y": 10,
+                              "w": 490,
+                              "h": 1000,
+                              "axis": "Y",
+                              "cut_at": 1000,
+                              "kerf": 3,
+                              "children": [
+                                {
+                                  "x": 1489,
+                                  "y": 10,
+                                  "w": 490,
+                                  "h": 990,
+                                  "piece_id": "EXACT_3"
+                                },
+                                {
+                                  "x": 1489,
+                                  "y": 1003,
+                                  "w": 490,
+                                  "h": 7
+                                }
+                              ]
+                            },
+                            {
+                              "x": 1982,
+                              "y": 10,
+                              "w": 31,
+                              "h": 1000
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "balance": {
+              "raw_area_mm2": 2063460,
+              "parts_area_mm2": 1940400,
+              "margin_area_mm2": 60460,
+              "tool_loss_mm2": 13350.232118000044,
+              "unallocated_remainder_mm2": 49249.76788199996,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1980.52,
+                "y": 10,
+                "width": 32.48000000000002,
+                "height": 1000,
+                "area_mm2": 32480.00000000002,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW2",
+            "format": {
+              "id": "SMALL",
+              "width": 1020,
+              "height": 1020,
+              "origin": "purchase",
+              "availability": 8,
+              "price_override": {
+                "value": 20,
+                "unit": "EUR/sheet",
+                "currency": "EUR",
+                "basis": "NET"
+              }
+            },
+            "placements": [
+              {
+                "piece_id": "EXACT_4",
+                "x": 10,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "EXACT_5",
+                "x": 503,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "cut_tree": {
+              "x": 10,
+              "y": 10,
+              "w": 1000,
+              "h": 1000,
+              "axis": "X",
+              "cut_at": 500,
+              "kerf": 3,
+              "children": [
+                {
+                  "x": 10,
+                  "y": 10,
+                  "w": 490,
+                  "h": 1000,
+                  "axis": "Y",
+                  "cut_at": 1000,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 10,
+                      "y": 10,
+                      "w": 490,
+                      "h": 990,
+                      "piece_id": "EXACT_4"
+                    },
+                    {
+                      "x": 10,
+                      "y": 1003,
+                      "w": 490,
+                      "h": 7
+                    }
+                  ]
+                },
+                {
+                  "x": 503,
+                  "y": 10,
+                  "w": 507,
+                  "h": 1000,
+                  "axis": "X",
+                  "cut_at": 993,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 503,
+                      "y": 10,
+                      "w": 490,
+                      "h": 1000,
+                      "axis": "Y",
+                      "cut_at": 1000,
+                      "kerf": 3,
+                      "children": [
+                        {
+                          "x": 503,
+                          "y": 10,
+                          "w": 490,
+                          "h": 990,
+                          "piece_id": "EXACT_5"
+                        },
+                        {
+                          "x": 503,
+                          "y": 1003,
+                          "w": 490,
+                          "h": 7
+                        }
+                      ]
+                    },
+                    {
+                      "x": 996,
+                      "y": 10,
+                      "w": 14,
+                      "h": 1000
+                    }
+                  ]
+                }
+              ]
+            },
+            "balance": {
+              "raw_area_mm2": 1040400,
+              "parts_area_mm2": 970200,
+              "margin_area_mm2": 40400,
+              "tool_loss_mm2": 5932.233761999989,
+              "unallocated_remainder_mm2": 23867.76623800001,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 994.52,
+                "y": 10,
+                "width": 15.480000000000018,
+                "height": 1000,
+                "area_mm2": 15480.000000000018,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          }
+        ],
+        "unplaced": [],
+        "method": "Validated guillotine multistart: four orderings, both split axes; finite mixed formats",
+        "global_optimal": false
+      }
+    },
+    {
+      "name": "REAL_4_SAW",
+      "seconds": 0.007,
+      "parameters": {
+        "id": "SCENARIO_CNC",
+        "mode": "saw",
+        "kerf_mm": 3,
+        "margin_mm": 10,
+        "trim_start_mm": 5,
+        "trim_end_mm": 5,
+        "allowance_mm": 0,
+        "min_remnant_mm": 100,
+        "min_remnant_area_mm2": 40000,
+        "part_in_part": false,
+        "hold_verified": false,
+        "common_line": false,
+        "minimum_bridge_mm": 0,
+        "objective": "cost",
+        "seed": 42,
+        "search_seconds": 1,
+        "raw_strategy": "contour",
+        "source": "TESTPARAMETER – keine Maschinenfreigabe",
+        "status": "SCENARIO",
+        "profiles": {
+          "linear": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "saw": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "cnc": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          }
+        }
+      },
+      "input_sha256": "8ae4ab9c28804a8643df30592bc6e8b162fa146baf7320f4d4fbf08ffdb32135",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "placed": 4,
+        "unplaced": 0,
+        "quantity_balanced": true,
+        "method": "Independent segment/winding/distance, count, stock and arithmetic validator; no nesting boolean operation reused."
+      },
+      "placed": 4,
+      "unplaced": 0,
+      "raw_use": 4500000,
+      "purchased_use": 4500000,
+      "cost": 126,
+      "formats": [
+        {
+          "id": "P3000",
+          "origin": "purchase",
+          "width": 3000,
+          "height": 1500
+        }
+      ],
+      "largest_clear_rectangle_mm2": 777917.3657458444,
+      "trace": [
+        {
+          "ms": 1,
+          "placed": 4,
+          "unplaced": 0
+        },
+        {
+          "ms": 1,
+          "placed": 4,
+          "unplaced": 0
+        },
+        {
+          "ms": 6,
+          "placed": 4,
+          "unplaced": 0
+        }
+      ],
+      "solution": {
+        "stocks": [
+          {
+            "id": "SAW1",
+            "format": {
+              "id": "P3000",
+              "width": 3000,
+              "height": 1500,
+              "availability": 20,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "modultest:9ab2c203-8253-44b4-aad7-8cfa730bd9e3#0",
+                "x": 10.025,
+                "y": 10.025,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "modultest:162e8589-5cae-4ba8-af14-780e7ed16964#0",
+                "x": 1291.092244,
+                "y": 10.025,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "modultest:211fac58-9c9b-4900-a24c-0fd3a9ef7f22#0",
+                "x": 1291.092244,
+                "y": 591.0922439999999,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "modultest:820d313b-8997-44a8-a1fd-71d585656d84#0",
+                "x": 2966.142244,
+                "y": 10.025,
+                "angle": 90,
+                "locked": false
+              }
+            ],
+            "cut_tree": {
+              "x": 10,
+              "y": 10,
+              "w": 2980,
+              "h": 1480,
+              "axis": "X",
+              "cut_at": 1288.0672439999998,
+              "kerf": 3,
+              "children": [
+                {
+                  "x": 10,
+                  "y": 10,
+                  "w": 1278.0672439999998,
+                  "h": 1480,
+                  "axis": "Y",
+                  "cut_at": 1111.05,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 10,
+                      "y": 10,
+                      "w": 1278.0672439999998,
+                      "h": 1101.05,
+                      "piece_id": "modultest:9ab2c203-8253-44b4-aad7-8cfa730bd9e3#0"
+                    },
+                    {
+                      "x": 10,
+                      "y": 1114.05,
+                      "w": 1278.0672439999998,
+                      "h": 375.95000000000005
+                    }
+                  ]
+                },
+                {
+                  "x": 1291.0672439999998,
+                  "y": 10,
+                  "w": 1698.9327560000002,
+                  "h": 1480,
+                  "axis": "X",
+                  "cut_at": 2392.117244,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 1291.0672439999998,
+                      "y": 10,
+                      "w": 1101.05,
+                      "h": 1480,
+                      "axis": "Y",
+                      "cut_at": 588.067244,
+                      "kerf": 3,
+                      "children": [
+                        {
+                          "x": 1291.0672439999998,
+                          "y": 10,
+                          "w": 1101.05,
+                          "h": 578.067244,
+                          "piece_id": "modultest:162e8589-5cae-4ba8-af14-780e7ed16964#0"
+                        },
+                        {
+                          "x": 1291.0672439999998,
+                          "y": 591.067244,
+                          "w": 1101.05,
+                          "h": 898.932756,
+                          "axis": "X",
+                          "cut_at": 1869.1344879999997,
+                          "kerf": 3,
+                          "children": [
+                            {
+                              "x": 1291.0672439999998,
+                              "y": 591.067244,
+                              "w": 578.067244,
+                              "h": 898.932756,
+                              "axis": "Y",
+                              "cut_at": 1162.117244,
+                              "kerf": 3,
+                              "children": [
+                                {
+                                  "x": 1291.0672439999998,
+                                  "y": 591.067244,
+                                  "w": 578.067244,
+                                  "h": 571.05,
+                                  "piece_id": "modultest:211fac58-9c9b-4900-a24c-0fd3a9ef7f22#0"
+                                },
+                                {
+                                  "x": 1291.0672439999998,
+                                  "y": 1165.117244,
+                                  "w": 578.067244,
+                                  "h": 324.8827560000001
+                                }
+                              ]
+                            },
+                            {
+                              "x": 1872.1344879999997,
+                              "y": 591.067244,
+                              "w": 519.982756,
+                              "h": 898.932756
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "x": 2395.117244,
+                      "y": 10,
+                      "w": 594.8827560000002,
+                      "h": 1480,
+                      "axis": "X",
+                      "cut_at": 2966.167244,
+                      "kerf": 3,
+                      "children": [
+                        {
+                          "x": 2395.117244,
+                          "y": 10,
+                          "w": 571.0500000000001,
+                          "h": 1480,
+                          "axis": "Y",
+                          "cut_at": 1288.0672439999998,
+                          "kerf": 3,
+                          "children": [
+                            {
+                              "x": 2395.117244,
+                              "y": 10,
+                              "w": 571.0500000000001,
+                              "h": 1278.0672439999998,
+                              "piece_id": "modultest:820d313b-8997-44a8-a1fd-71d585656d84#0"
+                            },
+                            {
+                              "x": 2395.117244,
+                              "y": 1291.0672439999998,
+                              "w": 571.0500000000001,
+                              "h": 198.93275600000015
+                            }
+                          ]
+                        },
+                        {
+                          "x": 2969.167244,
+                          "y": 10,
+                          "w": 20.83275600000013,
+                          "h": 1480
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "balance": {
+              "raw_area_mm2": 4500000,
+              "parts_area_mm2": 3103642.4773848,
+              "margin_area_mm2": 89600,
+              "tool_loss_mm2": 15113.107024199795,
+              "unallocated_remainder_mm2": 1291644.415591,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 1163.637244,
+                "width": 2383.597244,
+                "height": 326.362756,
+                "area_mm2": 777917.3657458444,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          }
+        ],
+        "unplaced": [],
+        "method": "Validated guillotine multistart: four orderings, both split axes; finite mixed formats",
+        "global_optimal": false
+      }
+    },
+    {
+      "name": "FINITE_STOCK",
+      "seconds": 0.01,
+      "parameters": {
+        "id": "SCENARIO_CNC",
+        "mode": "saw",
+        "kerf_mm": 3,
+        "margin_mm": 10,
+        "trim_start_mm": 5,
+        "trim_end_mm": 5,
+        "allowance_mm": 0,
+        "min_remnant_mm": 100,
+        "min_remnant_area_mm2": 40000,
+        "part_in_part": false,
+        "hold_verified": false,
+        "common_line": false,
+        "minimum_bridge_mm": 0,
+        "objective": "cost",
+        "seed": 42,
+        "search_seconds": 1,
+        "raw_strategy": "contour",
+        "source": "TESTPARAMETER – keine Maschinenfreigabe",
+        "status": "SCENARIO",
+        "profiles": {
+          "linear": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "saw": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "cnc": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          }
+        }
+      },
+      "input_sha256": "7bfd7ec341f19a8074f84e3b8fc5c3d7dbe52db5bbcec9379f0763967b614dd9",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "placed": 6,
+        "unplaced": 0,
+        "quantity_balanced": true,
+        "method": "Independent segment/winding/distance, count, stock and arithmetic validator; no nesting boolean operation reused."
+      },
+      "placed": 6,
+      "unplaced": 0,
+      "raw_use": 3103860,
+      "purchased_use": 2063460,
+      "cost": 30,
+      "formats": [
+        {
+          "id": "SMALL",
+          "origin": "stock",
+          "width": 1020,
+          "height": 1020
+        },
+        {
+          "id": "LARGE",
+          "origin": "purchase",
+          "width": 2023,
+          "height": 1020
+        }
+      ],
+      "largest_clear_rectangle_mm2": 32480.00000000002,
+      "trace": [
+        {
+          "ms": 1,
+          "placed": 6,
+          "unplaced": 0
+        }
+      ],
+      "solution": {
+        "stocks": [
+          {
+            "id": "SAW1",
+            "format": {
+              "id": "SMALL",
+              "width": 1020,
+              "height": 1020,
+              "origin": "stock",
+              "availability": 1,
+              "price_override": {
+                "value": 20,
+                "unit": "EUR/sheet",
+                "currency": "EUR",
+                "basis": "NET"
+              }
+            },
+            "placements": [
+              {
+                "piece_id": "EXACT_0",
+                "x": 10,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "EXACT_1",
+                "x": 503,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "cut_tree": {
+              "x": 10,
+              "y": 10,
+              "w": 1000,
+              "h": 1000,
+              "axis": "X",
+              "cut_at": 500,
+              "kerf": 3,
+              "children": [
+                {
+                  "x": 10,
+                  "y": 10,
+                  "w": 490,
+                  "h": 1000,
+                  "axis": "Y",
+                  "cut_at": 1000,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 10,
+                      "y": 10,
+                      "w": 490,
+                      "h": 990,
+                      "piece_id": "EXACT_0"
+                    },
+                    {
+                      "x": 10,
+                      "y": 1003,
+                      "w": 490,
+                      "h": 7
+                    }
+                  ]
+                },
+                {
+                  "x": 503,
+                  "y": 10,
+                  "w": 507,
+                  "h": 1000,
+                  "axis": "X",
+                  "cut_at": 993,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 503,
+                      "y": 10,
+                      "w": 490,
+                      "h": 1000,
+                      "axis": "Y",
+                      "cut_at": 1000,
+                      "kerf": 3,
+                      "children": [
+                        {
+                          "x": 503,
+                          "y": 10,
+                          "w": 490,
+                          "h": 990,
+                          "piece_id": "EXACT_1"
+                        },
+                        {
+                          "x": 503,
+                          "y": 1003,
+                          "w": 490,
+                          "h": 7
+                        }
+                      ]
+                    },
+                    {
+                      "x": 996,
+                      "y": 10,
+                      "w": 14,
+                      "h": 1000
+                    }
+                  ]
+                }
+              ]
+            },
+            "balance": {
+              "raw_area_mm2": 1040400,
+              "parts_area_mm2": 970200,
+              "margin_area_mm2": 40400,
+              "tool_loss_mm2": 5932.233761999989,
+              "unallocated_remainder_mm2": 23867.76623800001,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 994.52,
+                "y": 10,
+                "width": 15.480000000000018,
+                "height": 1000,
+                "area_mm2": 15480.000000000018,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW2",
+            "format": {
+              "id": "LARGE",
+              "width": 2023,
+              "height": 1020,
+              "origin": "purchase",
+              "availability": 8,
+              "price_override": {
+                "value": 30,
+                "unit": "EUR/sheet",
+                "currency": "EUR",
+                "basis": "NET"
+              }
+            },
+            "placements": [
+              {
+                "piece_id": "EXACT_2",
+                "x": 10,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "EXACT_3",
+                "x": 503,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "EXACT_4",
+                "x": 996,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "EXACT_5",
+                "x": 1489,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "cut_tree": {
+              "x": 10,
+              "y": 10,
+              "w": 2003,
+              "h": 1000,
+              "axis": "X",
+              "cut_at": 500,
+              "kerf": 3,
+              "children": [
+                {
+                  "x": 10,
+                  "y": 10,
+                  "w": 490,
+                  "h": 1000,
+                  "axis": "Y",
+                  "cut_at": 1000,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 10,
+                      "y": 10,
+                      "w": 490,
+                      "h": 990,
+                      "piece_id": "EXACT_2"
+                    },
+                    {
+                      "x": 10,
+                      "y": 1003,
+                      "w": 490,
+                      "h": 7
+                    }
+                  ]
+                },
+                {
+                  "x": 503,
+                  "y": 10,
+                  "w": 1510,
+                  "h": 1000,
+                  "axis": "X",
+                  "cut_at": 993,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 503,
+                      "y": 10,
+                      "w": 490,
+                      "h": 1000,
+                      "axis": "Y",
+                      "cut_at": 1000,
+                      "kerf": 3,
+                      "children": [
+                        {
+                          "x": 503,
+                          "y": 10,
+                          "w": 490,
+                          "h": 990,
+                          "piece_id": "EXACT_3"
+                        },
+                        {
+                          "x": 503,
+                          "y": 1003,
+                          "w": 490,
+                          "h": 7
+                        }
+                      ]
+                    },
+                    {
+                      "x": 996,
+                      "y": 10,
+                      "w": 1017,
+                      "h": 1000,
+                      "axis": "X",
+                      "cut_at": 1486,
+                      "kerf": 3,
+                      "children": [
+                        {
+                          "x": 996,
+                          "y": 10,
+                          "w": 490,
+                          "h": 1000,
+                          "axis": "Y",
+                          "cut_at": 1000,
+                          "kerf": 3,
+                          "children": [
+                            {
+                              "x": 996,
+                              "y": 10,
+                              "w": 490,
+                              "h": 990,
+                              "piece_id": "EXACT_4"
+                            },
+                            {
+                              "x": 996,
+                              "y": 1003,
+                              "w": 490,
+                              "h": 7
+                            }
+                          ]
+                        },
+                        {
+                          "x": 1489,
+                          "y": 10,
+                          "w": 524,
+                          "h": 1000,
+                          "axis": "X",
+                          "cut_at": 1979,
+                          "kerf": 3,
+                          "children": [
+                            {
+                              "x": 1489,
+                              "y": 10,
+                              "w": 490,
+                              "h": 1000,
+                              "axis": "Y",
+                              "cut_at": 1000,
+                              "kerf": 3,
+                              "children": [
+                                {
+                                  "x": 1489,
+                                  "y": 10,
+                                  "w": 490,
+                                  "h": 990,
+                                  "piece_id": "EXACT_5"
+                                },
+                                {
+                                  "x": 1489,
+                                  "y": 1003,
+                                  "w": 490,
+                                  "h": 7
+                                }
+                              ]
+                            },
+                            {
+                              "x": 1982,
+                              "y": 10,
+                              "w": 31,
+                              "h": 1000
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "balance": {
+              "raw_area_mm2": 2063460,
+              "parts_area_mm2": 1940400,
+              "margin_area_mm2": 60460,
+              "tool_loss_mm2": 13350.232118000044,
+              "unallocated_remainder_mm2": 49249.76788199996,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1980.52,
+                "y": 10,
+                "width": 32.48000000000002,
+                "height": 1000,
+                "area_mm2": 32480.00000000002,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          }
+        ],
+        "unplaced": [],
+        "method": "Validated guillotine multistart: four orderings, both split axes; finite mixed formats",
+        "global_optimal": false
+      }
+    },
+    {
+      "name": "UNKNOWN_PRICES",
+      "seconds": 0.007,
+      "parameters": {
+        "id": "SCENARIO_CNC",
+        "mode": "saw",
+        "kerf_mm": 3,
+        "margin_mm": 10,
+        "trim_start_mm": 5,
+        "trim_end_mm": 5,
+        "allowance_mm": 0,
+        "min_remnant_mm": 100,
+        "min_remnant_area_mm2": 40000,
+        "part_in_part": false,
+        "hold_verified": false,
+        "common_line": false,
+        "minimum_bridge_mm": 0,
+        "objective": "waste",
+        "seed": 42,
+        "search_seconds": 1,
+        "raw_strategy": "contour",
+        "source": "TESTPARAMETER – keine Maschinenfreigabe",
+        "status": "SCENARIO",
+        "profiles": {
+          "linear": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "saw": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "cnc": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          }
+        }
+      },
+      "input_sha256": "68bb7c8857898925e9fe684e2fff46bfc8ccc0cb852eeebd445e3795b7010368",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "placed": 6,
+        "unplaced": 0,
+        "quantity_balanced": true,
+        "method": "Independent segment/winding/distance, count, stock and arithmetic validator; no nesting boolean operation reused."
+      },
+      "placed": 6,
+      "unplaced": 0,
+      "raw_use": 3103860,
+      "purchased_use": 3103860,
+      "cost": null,
+      "formats": [
+        {
+          "id": "LARGE",
+          "origin": "purchase",
+          "width": 2023,
+          "height": 1020
+        },
+        {
+          "id": "SMALL",
+          "origin": "purchase",
+          "width": 1020,
+          "height": 1020
+        }
+      ],
+      "largest_clear_rectangle_mm2": 32480.00000000002,
+      "trace": [
+        {
+          "ms": 0,
+          "placed": 6,
+          "unplaced": 0
+        },
+        {
+          "ms": 5,
+          "placed": 6,
+          "unplaced": 0
+        }
+      ],
+      "solution": {
+        "stocks": [
+          {
+            "id": "SAW1",
+            "format": {
+              "id": "LARGE",
+              "width": 2023,
+              "height": 1020,
+              "origin": "purchase",
+              "availability": 8
+            },
+            "placements": [
+              {
+                "piece_id": "EXACT_0",
+                "x": 10,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "EXACT_1",
+                "x": 503,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "EXACT_2",
+                "x": 996,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "EXACT_3",
+                "x": 1489,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "cut_tree": {
+              "x": 10,
+              "y": 10,
+              "w": 2003,
+              "h": 1000,
+              "axis": "X",
+              "cut_at": 500,
+              "kerf": 3,
+              "children": [
+                {
+                  "x": 10,
+                  "y": 10,
+                  "w": 490,
+                  "h": 1000,
+                  "axis": "Y",
+                  "cut_at": 1000,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 10,
+                      "y": 10,
+                      "w": 490,
+                      "h": 990,
+                      "piece_id": "EXACT_0"
+                    },
+                    {
+                      "x": 10,
+                      "y": 1003,
+                      "w": 490,
+                      "h": 7
+                    }
+                  ]
+                },
+                {
+                  "x": 503,
+                  "y": 10,
+                  "w": 1510,
+                  "h": 1000,
+                  "axis": "X",
+                  "cut_at": 993,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 503,
+                      "y": 10,
+                      "w": 490,
+                      "h": 1000,
+                      "axis": "Y",
+                      "cut_at": 1000,
+                      "kerf": 3,
+                      "children": [
+                        {
+                          "x": 503,
+                          "y": 10,
+                          "w": 490,
+                          "h": 990,
+                          "piece_id": "EXACT_1"
+                        },
+                        {
+                          "x": 503,
+                          "y": 1003,
+                          "w": 490,
+                          "h": 7
+                        }
+                      ]
+                    },
+                    {
+                      "x": 996,
+                      "y": 10,
+                      "w": 1017,
+                      "h": 1000,
+                      "axis": "X",
+                      "cut_at": 1486,
+                      "kerf": 3,
+                      "children": [
+                        {
+                          "x": 996,
+                          "y": 10,
+                          "w": 490,
+                          "h": 1000,
+                          "axis": "Y",
+                          "cut_at": 1000,
+                          "kerf": 3,
+                          "children": [
+                            {
+                              "x": 996,
+                              "y": 10,
+                              "w": 490,
+                              "h": 990,
+                              "piece_id": "EXACT_2"
+                            },
+                            {
+                              "x": 996,
+                              "y": 1003,
+                              "w": 490,
+                              "h": 7
+                            }
+                          ]
+                        },
+                        {
+                          "x": 1489,
+                          "y": 10,
+                          "w": 524,
+                          "h": 1000,
+                          "axis": "X",
+                          "cut_at": 1979,
+                          "kerf": 3,
+                          "children": [
+                            {
+                              "x": 1489,
+                              "y": 10,
+                              "w": 490,
+                              "h": 1000,
+                              "axis": "Y",
+                              "cut_at": 1000,
+                              "kerf": 3,
+                              "children": [
+                                {
+                                  "x": 1489,
+                                  "y": 10,
+                                  "w": 490,
+                                  "h": 990,
+                                  "piece_id": "EXACT_3"
+                                },
+                                {
+                                  "x": 1489,
+                                  "y": 1003,
+                                  "w": 490,
+                                  "h": 7
+                                }
+                              ]
+                            },
+                            {
+                              "x": 1982,
+                              "y": 10,
+                              "w": 31,
+                              "h": 1000
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "balance": {
+              "raw_area_mm2": 2063460,
+              "parts_area_mm2": 1940400,
+              "margin_area_mm2": 60460,
+              "tool_loss_mm2": 13350.232118000044,
+              "unallocated_remainder_mm2": 49249.76788199996,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1980.52,
+                "y": 10,
+                "width": 32.48000000000002,
+                "height": 1000,
+                "area_mm2": 32480.00000000002,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW2",
+            "format": {
+              "id": "SMALL",
+              "width": 1020,
+              "height": 1020,
+              "origin": "purchase",
+              "availability": 8
+            },
+            "placements": [
+              {
+                "piece_id": "EXACT_4",
+                "x": 10,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "EXACT_5",
+                "x": 503,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "cut_tree": {
+              "x": 10,
+              "y": 10,
+              "w": 1000,
+              "h": 1000,
+              "axis": "X",
+              "cut_at": 500,
+              "kerf": 3,
+              "children": [
+                {
+                  "x": 10,
+                  "y": 10,
+                  "w": 490,
+                  "h": 1000,
+                  "axis": "Y",
+                  "cut_at": 1000,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 10,
+                      "y": 10,
+                      "w": 490,
+                      "h": 990,
+                      "piece_id": "EXACT_4"
+                    },
+                    {
+                      "x": 10,
+                      "y": 1003,
+                      "w": 490,
+                      "h": 7
+                    }
+                  ]
+                },
+                {
+                  "x": 503,
+                  "y": 10,
+                  "w": 507,
+                  "h": 1000,
+                  "axis": "X",
+                  "cut_at": 993,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 503,
+                      "y": 10,
+                      "w": 490,
+                      "h": 1000,
+                      "axis": "Y",
+                      "cut_at": 1000,
+                      "kerf": 3,
+                      "children": [
+                        {
+                          "x": 503,
+                          "y": 10,
+                          "w": 490,
+                          "h": 990,
+                          "piece_id": "EXACT_5"
+                        },
+                        {
+                          "x": 503,
+                          "y": 1003,
+                          "w": 490,
+                          "h": 7
+                        }
+                      ]
+                    },
+                    {
+                      "x": 996,
+                      "y": 10,
+                      "w": 14,
+                      "h": 1000
+                    }
+                  ]
+                }
+              ]
+            },
+            "balance": {
+              "raw_area_mm2": 1040400,
+              "parts_area_mm2": 970200,
+              "margin_area_mm2": 40400,
+              "tool_loss_mm2": 5932.233761999989,
+              "unallocated_remainder_mm2": 23867.76623800001,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 994.52,
+                "y": 10,
+                "width": 15.480000000000018,
+                "height": 1000,
+                "area_mm2": 15480.000000000018,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          }
+        ],
+        "unplaced": [],
+        "method": "Validated guillotine multistart: four orderings, both split axes; finite mixed formats",
+        "global_optimal": false
+      }
+    },
+    {
+      "name": "ZERO_PRICE_NO_SIMULATION",
+      "seconds": 0.003,
+      "parameters": {
+        "id": "SCENARIO_CNC",
+        "mode": "saw",
+        "kerf_mm": 3,
+        "margin_mm": 10,
+        "trim_start_mm": 5,
+        "trim_end_mm": 5,
+        "allowance_mm": 0,
+        "min_remnant_mm": 100,
+        "min_remnant_area_mm2": 40000,
+        "part_in_part": false,
+        "hold_verified": false,
+        "common_line": false,
+        "minimum_bridge_mm": 0,
+        "objective": "cost",
+        "seed": 42,
+        "search_seconds": 1,
+        "raw_strategy": "contour",
+        "source": "TESTPARAMETER – keine Maschinenfreigabe",
+        "status": "SCENARIO",
+        "profiles": {
+          "linear": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "saw": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "cnc": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          }
+        }
+      },
+      "input_sha256": "f990d215919b22bab627295fd36a534e0f4cc65ae9d7cf874883b77ec368a89c",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "placed": 6,
+        "unplaced": 0,
+        "quantity_balanced": true,
+        "method": "Independent segment/winding/distance, count, stock and arithmetic validator; no nesting boolean operation reused."
+      },
+      "placed": 6,
+      "unplaced": 0,
+      "raw_use": 4126920,
+      "purchased_use": 4126920,
+      "cost": 0,
+      "formats": [
+        {
+          "id": "LARGE",
+          "origin": "purchase",
+          "width": 2023,
+          "height": 1020
+        },
+        {
+          "id": "LARGE",
+          "origin": "purchase",
+          "width": 2023,
+          "height": 1020
+        }
+      ],
+      "largest_clear_rectangle_mm2": 1018480,
+      "trace": [
+        {
+          "ms": 0,
+          "placed": 6,
+          "unplaced": 0
+        }
+      ],
+      "solution": {
+        "stocks": [
+          {
+            "id": "SAW1",
+            "format": {
+              "id": "LARGE",
+              "width": 2023,
+              "height": 1020,
+              "origin": "purchase",
+              "availability": 8,
+              "price_override": {
+                "value": 0,
+                "unit": "EUR/sheet",
+                "currency": "EUR",
+                "basis": "NET"
+              }
+            },
+            "placements": [
+              {
+                "piece_id": "EXACT_0",
+                "x": 10,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "EXACT_1",
+                "x": 503,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "EXACT_2",
+                "x": 996,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "EXACT_3",
+                "x": 1489,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "cut_tree": {
+              "x": 10,
+              "y": 10,
+              "w": 2003,
+              "h": 1000,
+              "axis": "X",
+              "cut_at": 500,
+              "kerf": 3,
+              "children": [
+                {
+                  "x": 10,
+                  "y": 10,
+                  "w": 490,
+                  "h": 1000,
+                  "axis": "Y",
+                  "cut_at": 1000,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 10,
+                      "y": 10,
+                      "w": 490,
+                      "h": 990,
+                      "piece_id": "EXACT_0"
+                    },
+                    {
+                      "x": 10,
+                      "y": 1003,
+                      "w": 490,
+                      "h": 7
+                    }
+                  ]
+                },
+                {
+                  "x": 503,
+                  "y": 10,
+                  "w": 1510,
+                  "h": 1000,
+                  "axis": "X",
+                  "cut_at": 993,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 503,
+                      "y": 10,
+                      "w": 490,
+                      "h": 1000,
+                      "axis": "Y",
+                      "cut_at": 1000,
+                      "kerf": 3,
+                      "children": [
+                        {
+                          "x": 503,
+                          "y": 10,
+                          "w": 490,
+                          "h": 990,
+                          "piece_id": "EXACT_1"
+                        },
+                        {
+                          "x": 503,
+                          "y": 1003,
+                          "w": 490,
+                          "h": 7
+                        }
+                      ]
+                    },
+                    {
+                      "x": 996,
+                      "y": 10,
+                      "w": 1017,
+                      "h": 1000,
+                      "axis": "X",
+                      "cut_at": 1486,
+                      "kerf": 3,
+                      "children": [
+                        {
+                          "x": 996,
+                          "y": 10,
+                          "w": 490,
+                          "h": 1000,
+                          "axis": "Y",
+                          "cut_at": 1000,
+                          "kerf": 3,
+                          "children": [
+                            {
+                              "x": 996,
+                              "y": 10,
+                              "w": 490,
+                              "h": 990,
+                              "piece_id": "EXACT_2"
+                            },
+                            {
+                              "x": 996,
+                              "y": 1003,
+                              "w": 490,
+                              "h": 7
+                            }
+                          ]
+                        },
+                        {
+                          "x": 1489,
+                          "y": 10,
+                          "w": 524,
+                          "h": 1000,
+                          "axis": "X",
+                          "cut_at": 1979,
+                          "kerf": 3,
+                          "children": [
+                            {
+                              "x": 1489,
+                              "y": 10,
+                              "w": 490,
+                              "h": 1000,
+                              "axis": "Y",
+                              "cut_at": 1000,
+                              "kerf": 3,
+                              "children": [
+                                {
+                                  "x": 1489,
+                                  "y": 10,
+                                  "w": 490,
+                                  "h": 990,
+                                  "piece_id": "EXACT_3"
+                                },
+                                {
+                                  "x": 1489,
+                                  "y": 1003,
+                                  "w": 490,
+                                  "h": 7
+                                }
+                              ]
+                            },
+                            {
+                              "x": 1982,
+                              "y": 10,
+                              "w": 31,
+                              "h": 1000
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "balance": {
+              "raw_area_mm2": 2063460,
+              "parts_area_mm2": 1940400,
+              "margin_area_mm2": 60460,
+              "tool_loss_mm2": 13350.232118000044,
+              "unallocated_remainder_mm2": 49249.76788199996,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1980.52,
+                "y": 10,
+                "width": 32.48000000000002,
+                "height": 1000,
+                "area_mm2": 32480.00000000002,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW2",
+            "format": {
+              "id": "LARGE",
+              "width": 2023,
+              "height": 1020,
+              "origin": "purchase",
+              "availability": 8,
+              "price_override": {
+                "value": 0,
+                "unit": "EUR/sheet",
+                "currency": "EUR",
+                "basis": "NET"
+              }
+            },
+            "placements": [
+              {
+                "piece_id": "EXACT_4",
+                "x": 10,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "EXACT_5",
+                "x": 503,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "cut_tree": {
+              "x": 10,
+              "y": 10,
+              "w": 2003,
+              "h": 1000,
+              "axis": "X",
+              "cut_at": 500,
+              "kerf": 3,
+              "children": [
+                {
+                  "x": 10,
+                  "y": 10,
+                  "w": 490,
+                  "h": 1000,
+                  "axis": "Y",
+                  "cut_at": 1000,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 10,
+                      "y": 10,
+                      "w": 490,
+                      "h": 990,
+                      "piece_id": "EXACT_4"
+                    },
+                    {
+                      "x": 10,
+                      "y": 1003,
+                      "w": 490,
+                      "h": 7
+                    }
+                  ]
+                },
+                {
+                  "x": 503,
+                  "y": 10,
+                  "w": 1510,
+                  "h": 1000,
+                  "axis": "X",
+                  "cut_at": 993,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 503,
+                      "y": 10,
+                      "w": 490,
+                      "h": 1000,
+                      "axis": "Y",
+                      "cut_at": 1000,
+                      "kerf": 3,
+                      "children": [
+                        {
+                          "x": 503,
+                          "y": 10,
+                          "w": 490,
+                          "h": 990,
+                          "piece_id": "EXACT_5"
+                        },
+                        {
+                          "x": 503,
+                          "y": 1003,
+                          "w": 490,
+                          "h": 7
+                        }
+                      ]
+                    },
+                    {
+                      "x": 996,
+                      "y": 10,
+                      "w": 1017,
+                      "h": 1000
+                    }
+                  ]
+                }
+              ]
+            },
+            "balance": {
+              "raw_area_mm2": 2063460,
+              "parts_area_mm2": 970200,
+              "margin_area_mm2": 60460,
+              "tool_loss_mm2": 5932.233761999989,
+              "unallocated_remainder_mm2": 1026867.766238,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 994.52,
+                "y": 10,
+                "width": 1018.48,
+                "height": 1000,
+                "area_mm2": 1018480,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          }
+        ],
+        "unplaced": [],
+        "method": "Validated guillotine multistart: four orderings, both split axes; finite mixed formats",
+        "global_optimal": false
+      }
+    },
+    {
+      "name": "CROSS_PROCESS_STOCK_IMMUTABLE_V2",
+      "seconds": 1.024,
+      "parameters": {
+        "id": "SCENARIO_CNC",
+        "mode": "cnc",
+        "kerf_mm": 3,
+        "margin_mm": 10,
+        "trim_start_mm": 5,
+        "trim_end_mm": 5,
+        "allowance_mm": 0,
+        "min_remnant_mm": 100,
+        "min_remnant_area_mm2": 40000,
+        "part_in_part": false,
+        "hold_verified": false,
+        "common_line": false,
+        "minimum_bridge_mm": 0,
+        "objective": "waste",
+        "seed": 42,
+        "search_seconds": 1,
+        "raw_strategy": "contour",
+        "source": "TESTPARAMETER – keine Maschinenfreigabe",
+        "status": "SCENARIO",
+        "profiles": {
+          "linear": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 10,
+            "trim_end_mm": 10
+          },
+          "saw": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 10,
+            "trim_end_mm": 10
+          },
+          "cnc": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 10,
+            "trim_end_mm": 10
+          }
+        }
+      },
+      "input_sha256": "af3e01f4182a48c0ea166b82c3574ad33eeb1139641e7b29f8b054d23f43998b",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "placed": 2,
+        "unplaced": 0,
+        "quantity_balanced": true,
+        "method": "Independent per-process geometry/cut-tree validation plus shared-stock and complete identity ledger"
+      },
+      "placed": 2,
+      "unplaced": 0,
+      "raw_use": 3000000,
+      "purchased_use": 2000000,
+      "cost": 100,
+      "formats": [
+        {
+          "id": "STOCK",
+          "origin": "stock",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "id": "BUY_LARGE",
+          "origin": "purchase",
+          "width": 2000,
+          "height": 1000
+        }
+      ],
+      "largest_clear_rectangle_mm2": 1056910.4,
+      "trace": [],
+      "solution": {
+        "stocks": [
+          {
+            "id": "cnc_SHEET1",
+            "format": {
+              "id": "STOCK",
+              "width": 1000,
+              "height": 1000,
+              "origin": "stock",
+              "availability": 1
+            },
+            "placements": [
+              {
+                "piece_id": "SYNTHETIC_CNC_WITH_HOLE#0",
+                "x": 10.004,
+                "y": 10.004,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  510.004,
+                  510.004
+                ]
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 1000000,
+              "parts_area_mm2": 240000,
+              "margin_area_mm2": 39600,
+              "tool_loss_mm2": 2098.1546040000103,
+              "unallocated_remainder_mm2": 718301.845396,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 511.524,
+                "width": 980,
+                "height": 478.476,
+                "area_mm2": 468906.48,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            },
+            "process_mode": "cnc"
+          },
+          {
+            "id": "saw_SAW1",
+            "format": {
+              "id": "BUY_LARGE",
+              "width": 2000,
+              "height": 1000,
+              "origin": "purchase",
+              "availability": 4,
+              "price_override": {
+                "value": 100,
+                "unit": "EUR/sheet",
+                "currency": "EUR",
+                "basis": "NET"
+              }
+            },
+            "placements": [
+              {
+                "piece_id": "SYNTHETIC_SAW#0",
+                "x": 10,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "cut_tree": {
+              "x": 10,
+              "y": 10,
+              "w": 1980,
+              "h": 980,
+              "axis": "X",
+              "cut_at": 910,
+              "kerf": 3,
+              "children": [
+                {
+                  "x": 10,
+                  "y": 10,
+                  "w": 900,
+                  "h": 980,
+                  "axis": "Y",
+                  "cut_at": 910,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 10,
+                      "y": 10,
+                      "w": 900,
+                      "h": 900,
+                      "piece_id": "SYNTHETIC_SAW#0"
+                    },
+                    {
+                      "x": 10,
+                      "y": 913,
+                      "w": 900,
+                      "h": 77
+                    }
+                  ]
+                },
+                {
+                  "x": 913,
+                  "y": 10,
+                  "w": 1077,
+                  "h": 980
+                }
+              ]
+            },
+            "balance": {
+              "raw_area_mm2": 2000000,
+              "parts_area_mm2": 810000,
+              "margin_area_mm2": 59600,
+              "tool_loss_mm2": 2703.554584000027,
+              "unallocated_remainder_mm2": 1127696.445416,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 911.52,
+                "y": 10,
+                "width": 1078.48,
+                "height": 980,
+                "area_mm2": 1056910.4,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            },
+            "process_mode": "saw"
+          }
+        ],
+        "unplaced": [],
+        "process_groups": [
+          {
+            "stocks": [
+              {
+                "id": "SHEET1",
+                "format": {
+                  "id": "STOCK",
+                  "width": 1000,
+                  "height": 1000,
+                  "origin": "stock",
+                  "availability": 1
+                },
+                "placements": [
+                  {
+                    "piece_id": "SYNTHETIC_CNC_WITH_HOLE#0",
+                    "x": 10.004,
+                    "y": 10.004,
+                    "angle": 0,
+                    "locked": false,
+                    "_extent": [
+                      510.004,
+                      510.004
+                    ]
+                  }
+                ],
+                "balance": {
+                  "raw_area_mm2": 1000000,
+                  "parts_area_mm2": 240000,
+                  "margin_area_mm2": 39600,
+                  "tool_loss_mm2": 2098.1546040000103,
+                  "unallocated_remainder_mm2": 718301.845396,
+                  "reusable_remainder_area_mm2": null,
+                  "clear_rectangle": {
+                    "x": 10,
+                    "y": 511.524,
+                    "width": 980,
+                    "height": 478.476,
+                    "area_mm2": 468906.48,
+                    "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                    "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                    "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+                  },
+                  "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+                  "balance_difference_mm2": 0
+                }
+              }
+            ],
+            "unplaced": [],
+            "method": "Clipper 6.4.2 Minkowski NFP / validated multi-start bottom-left",
+            "global_optimal": false,
+            "candidate_generation": "Decimated outlines for candidate positions only; full bounded-error contours used for every collision check",
+            "seed": 42,
+            "initialization": "Enclosing-blank warm start revalidated against actual contours",
+            "iterations": 57,
+            "search_ms": 1009,
+            "best_objective": 0,
+            "lower_bound_area_mm2": 240000,
+            "mode": "cnc",
+            "piece_ids": [
+              "SYNTHETIC_CNC_WITH_HOLE#0"
+            ]
+          },
+          {
+            "stocks": [
+              {
+                "id": "SAW1",
+                "format": {
+                  "id": "BUY_LARGE",
+                  "width": 2000,
+                  "height": 1000,
+                  "origin": "purchase",
+                  "availability": 4,
+                  "price_override": {
+                    "value": 100,
+                    "unit": "EUR/sheet",
+                    "currency": "EUR",
+                    "basis": "NET"
+                  }
+                },
+                "placements": [
+                  {
+                    "piece_id": "SYNTHETIC_SAW#0",
+                    "x": 10,
+                    "y": 10,
+                    "angle": 0,
+                    "locked": false
+                  }
+                ],
+                "cut_tree": {
+                  "x": 10,
+                  "y": 10,
+                  "w": 1980,
+                  "h": 980,
+                  "axis": "X",
+                  "cut_at": 910,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 10,
+                      "y": 10,
+                      "w": 900,
+                      "h": 980,
+                      "axis": "Y",
+                      "cut_at": 910,
+                      "kerf": 3,
+                      "children": [
+                        {
+                          "x": 10,
+                          "y": 10,
+                          "w": 900,
+                          "h": 900,
+                          "piece_id": "SYNTHETIC_SAW#0"
+                        },
+                        {
+                          "x": 10,
+                          "y": 913,
+                          "w": 900,
+                          "h": 77
+                        }
+                      ]
+                    },
+                    {
+                      "x": 913,
+                      "y": 10,
+                      "w": 1077,
+                      "h": 980
+                    }
+                  ]
+                },
+                "balance": {
+                  "raw_area_mm2": 2000000,
+                  "parts_area_mm2": 810000,
+                  "margin_area_mm2": 59600,
+                  "tool_loss_mm2": 2703.554584000027,
+                  "unallocated_remainder_mm2": 1127696.445416,
+                  "reusable_remainder_area_mm2": null,
+                  "clear_rectangle": {
+                    "x": 911.52,
+                    "y": 10,
+                    "width": 1078.48,
+                    "height": 980,
+                    "area_mm2": 1056910.4,
+                    "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                    "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                    "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+                  },
+                  "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+                  "balance_difference_mm2": 0
+                }
+              }
+            ],
+            "unplaced": [],
+            "method": "Validated guillotine multistart: four orderings, both split axes; finite mixed formats",
+            "global_optimal": false,
+            "mode": "saw",
+            "piece_ids": [
+              "SYNTHETIC_SAW#0"
+            ]
+          }
+        ],
+        "method": "Automatic geometry-bound process selection",
+        "objective": "cost",
+        "price_complete": true,
+        "global_optimal": false,
+        "process_separation": "Separate raw formats per process; no unproved shared sheet plan",
+        "validated": true,
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "placed": 2,
+          "unplaced": 0,
+          "quantity_balanced": true,
+          "method": "Independent per-process geometry/cut-tree validation plus shared-stock and complete identity ledger"
+        }
+      }
+    },
+    {
+      "name": "CROSS_PROCESS_STOCK",
+      "seconds": 0.017,
+      "parameters": {
+        "id": "SCENARIO_CNC",
+        "mode": "cnc",
+        "kerf_mm": 3,
+        "margin_mm": 10,
+        "trim_start_mm": 5,
+        "trim_end_mm": 5,
+        "allowance_mm": 0,
+        "min_remnant_mm": 100,
+        "min_remnant_area_mm2": 40000,
+        "part_in_part": false,
+        "hold_verified": false,
+        "common_line": false,
+        "minimum_bridge_mm": 0,
+        "objective": "waste",
+        "seed": 42,
+        "search_seconds": 1,
+        "raw_strategy": "contour",
+        "source": "TESTPARAMETER – keine Maschinenfreigabe",
+        "status": "SCENARIO",
+        "profiles": {
+          "linear": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 10,
+            "trim_end_mm": 10
+          },
+          "saw": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 10,
+            "trim_end_mm": 10
+          },
+          "cnc": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 10,
+            "trim_end_mm": 10
+          }
+        }
+      },
+      "input_sha256": "af3e01f4182a48c0ea166b82c3574ad33eeb1139641e7b29f8b054d23f43998b",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "placed": 2,
+        "unplaced": 0,
+        "quantity_balanced": true,
+        "method": "Independent per-process geometry/cut-tree validation plus shared-stock and complete identity ledger"
+      },
+      "placed": 2,
+      "unplaced": 0,
+      "raw_use": 1600000,
+      "purchased_use": 600000,
+      "cost": 20,
+      "formats": [
+        {
+          "id": "BUY_SMALL",
+          "origin": "purchase",
+          "width": 1000,
+          "height": 600
+        },
+        {
+          "id": "STOCK",
+          "origin": "stock",
+          "width": 1000,
+          "height": 1000
+        }
+      ],
+      "largest_clear_rectangle_mm2": 277516.66000000003,
+      "trace": [],
+      "solution": {
+        "stocks": [
+          {
+            "id": "cnc_SAW1",
+            "format": {
+              "id": "BUY_SMALL",
+              "width": 1000,
+              "height": 600,
+              "origin": "purchase",
+              "availability": 4,
+              "price_override": {
+                "value": 20,
+                "unit": "EUR/sheet",
+                "currency": "EUR",
+                "basis": "NET"
+              }
+            },
+            "placements": [
+              {
+                "piece_id": "SYNTHETIC_CNC_WITH_HOLE#0",
+                "x": 10.003,
+                "y": 10.003,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 600000,
+              "parts_area_mm2": 239999.99999999997,
+              "margin_area_mm2": 31600,
+              "tool_loss_mm2": 2097.151595000032,
+              "unallocated_remainder_mm2": 326302.84840499994,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 511.52299999999997,
+                "y": 10,
+                "width": 478.47700000000003,
+                "height": 580,
+                "area_mm2": 277516.66000000003,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            },
+            "process_mode": "cnc"
+          },
+          {
+            "id": "saw_SAW1",
+            "format": {
+              "id": "STOCK",
+              "width": 1000,
+              "height": 1000,
+              "origin": "stock",
+              "availability": 1
+            },
+            "placements": [
+              {
+                "piece_id": "SYNTHETIC_SAW#0",
+                "x": 10,
+                "y": 10,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "cut_tree": {
+              "x": 10,
+              "y": 10,
+              "w": 980,
+              "h": 980,
+              "axis": "X",
+              "cut_at": 910,
+              "kerf": 3,
+              "children": [
+                {
+                  "x": 10,
+                  "y": 10,
+                  "w": 900,
+                  "h": 980,
+                  "axis": "Y",
+                  "cut_at": 910,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 10,
+                      "y": 10,
+                      "w": 900,
+                      "h": 900,
+                      "piece_id": "SYNTHETIC_SAW#0"
+                    },
+                    {
+                      "x": 10,
+                      "y": 913,
+                      "w": 900,
+                      "h": 77
+                    }
+                  ]
+                },
+                {
+                  "x": 913,
+                  "y": 10,
+                  "w": 77,
+                  "h": 980
+                }
+              ]
+            },
+            "balance": {
+              "raw_area_mm2": 1000000,
+              "parts_area_mm2": 810000,
+              "margin_area_mm2": 39600,
+              "tool_loss_mm2": 2703.554584000027,
+              "unallocated_remainder_mm2": 147696.44541599997,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 911.52,
+                "width": 980,
+                "height": 78.48000000000002,
+                "area_mm2": 76910.40000000002,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            },
+            "process_mode": "saw"
+          }
+        ],
+        "unplaced": [],
+        "process_groups": [
+          {
+            "stocks": [
+              {
+                "id": "SAW1",
+                "format": {
+                  "id": "BUY_SMALL",
+                  "width": 1000,
+                  "height": 600,
+                  "origin": "purchase",
+                  "availability": 4,
+                  "price_override": {
+                    "value": 20,
+                    "unit": "EUR/sheet",
+                    "currency": "EUR",
+                    "basis": "NET"
+                  }
+                },
+                "placements": [
+                  {
+                    "piece_id": "SYNTHETIC_CNC_WITH_HOLE#0",
+                    "x": 10.003,
+                    "y": 10.003,
+                    "angle": 0,
+                    "locked": false
+                  }
+                ],
+                "balance": {
+                  "raw_area_mm2": 600000,
+                  "parts_area_mm2": 239999.99999999997,
+                  "margin_area_mm2": 31600,
+                  "tool_loss_mm2": 2097.151595000032,
+                  "unallocated_remainder_mm2": 326302.84840499994,
+                  "reusable_remainder_area_mm2": null,
+                  "clear_rectangle": {
+                    "x": 511.52299999999997,
+                    "y": 10,
+                    "width": 478.47700000000003,
+                    "height": 580,
+                    "area_mm2": 277516.66000000003,
+                    "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                    "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                    "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+                  },
+                  "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+                  "balance_difference_mm2": 0
+                }
+              }
+            ],
+            "unplaced": [],
+            "method": "Fast conservative envelope placement; actual contours unchanged; not a saw plan",
+            "global_optimal": false,
+            "mode": "cnc",
+            "piece_ids": [
+              "SYNTHETIC_CNC_WITH_HOLE#0"
+            ]
+          },
+          {
+            "stocks": [
+              {
+                "id": "SAW1",
+                "format": {
+                  "id": "STOCK",
+                  "width": 1000,
+                  "height": 1000,
+                  "origin": "stock",
+                  "availability": 1
+                },
+                "placements": [
+                  {
+                    "piece_id": "SYNTHETIC_SAW#0",
+                    "x": 10,
+                    "y": 10,
+                    "angle": 0,
+                    "locked": false
+                  }
+                ],
+                "cut_tree": {
+                  "x": 10,
+                  "y": 10,
+                  "w": 980,
+                  "h": 980,
+                  "axis": "X",
+                  "cut_at": 910,
+                  "kerf": 3,
+                  "children": [
+                    {
+                      "x": 10,
+                      "y": 10,
+                      "w": 900,
+                      "h": 980,
+                      "axis": "Y",
+                      "cut_at": 910,
+                      "kerf": 3,
+                      "children": [
+                        {
+                          "x": 10,
+                          "y": 10,
+                          "w": 900,
+                          "h": 900,
+                          "piece_id": "SYNTHETIC_SAW#0"
+                        },
+                        {
+                          "x": 10,
+                          "y": 913,
+                          "w": 900,
+                          "h": 77
+                        }
+                      ]
+                    },
+                    {
+                      "x": 913,
+                      "y": 10,
+                      "w": 77,
+                      "h": 980
+                    }
+                  ]
+                },
+                "balance": {
+                  "raw_area_mm2": 1000000,
+                  "parts_area_mm2": 810000,
+                  "margin_area_mm2": 39600,
+                  "tool_loss_mm2": 2703.554584000027,
+                  "unallocated_remainder_mm2": 147696.44541599997,
+                  "reusable_remainder_area_mm2": null,
+                  "clear_rectangle": {
+                    "x": 10,
+                    "y": 911.52,
+                    "width": 980,
+                    "height": 78.48000000000002,
+                    "area_mm2": 76910.40000000002,
+                    "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                    "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                    "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+                  },
+                  "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+                  "balance_difference_mm2": 0
+                }
+              }
+            ],
+            "unplaced": [],
+            "method": "Validated guillotine multistart: four orderings, both split axes; finite mixed formats",
+            "global_optimal": false,
+            "mode": "saw",
+            "piece_ids": [
+              "SYNTHETIC_SAW#0"
+            ]
+          }
+        ],
+        "objective": "cost",
+        "price_complete": true,
+        "complete": true,
+        "global_optimal": false,
+        "process_order": [
+          "saw",
+          "cnc"
+        ],
+        "method": "Automatic procurement-aware separated process planning",
+        "process_separation": "Separate raw formats per process, two process-order stock allocations compared; no shared-sheet machining claim",
+        "validated": true,
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "placed": 2,
+          "unplaced": 0,
+          "quantity_balanced": true,
+          "method": "Independent per-process geometry/cut-tree validation plus shared-stock and complete identity ledger"
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "scope": "Independent original-contour and quantity validation. Synthetic fixtures are explicitly not production CAD savings. No CAD files read, no network calls.",
+  "allocation_reference": {
+    "synthetic": true,
+    "lower_bound": 20,
+    "reason": "Net part area 1,050,000mm2 exceeds the one stock sheet 1,000,000mm2. A purchase is required; the cheapest purchased format costs20. The validated stock-reservation plan attains20. Not savings measured on a FORMIKAT CAD job."
+  },
+  "completed_utc": "2026-10-24T13:09:13.685Z",
+  "pass": true
+}

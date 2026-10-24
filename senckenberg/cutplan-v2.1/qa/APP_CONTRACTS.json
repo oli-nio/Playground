@@ -1,0 +1,99 @@
+{
+  "created_utc": "2026-10-24T13:23:19.161Z",
+  "engine": "CUTPLAN-V2.1-2026-10-24",
+  "release_sha256": "8e93691573a42e828b6c5424cee86488607460700c5471c1e73f20f45a5af3d6",
+  "scope": "Application contracts using precomputed release only; no solver/GUI/PDF run.",
+  "checks": [
+    {
+      "name": "1825 original occurrences retain one source/module owner;157 selected107 usable50 open",
+      "pass": true,
+      "ms": 196
+    },
+    {
+      "name": "Alternative modules are rejected rather than silently added by default",
+      "pass": true,
+      "ms": 102
+    },
+    {
+      "name": "Scenario duplication is deep; module quantity and price changes stay independent",
+      "pass": true,
+      "ms": 124
+    },
+    {
+      "name": "Price units EUR/m and per-format; UNKNOWN differs from genuine zero",
+      "pass": true,
+      "ms": 0
+    },
+    {
+      "name": "Mixed net/gross price bases forbid a joint total; open sources never become zero",
+      "pass": true,
+      "ms": 102
+    },
+    {
+      "name": "Synthetic legacy overrides/locks fully archived; source and original object untouched",
+      "pass": true,
+      "ms": 592
+    },
+    {
+      "name": "Actual V0.1 saved project read-only adoption preserves result/locks/price/source",
+      "pass": true,
+      "ms": 650
+    },
+    {
+      "name": "Portable project roundtrip retains full source/contour/result data; corrupt envelope rejected",
+      "pass": true,
+      "ms": 826
+    },
+    {
+      "name": "Price, module quantity, process and format changes mark result stale",
+      "pass": true,
+      "ms": 413
+    },
+    {
+      "name": "All saved107 placements are independently valid and retain canonical source formats",
+      "pass": true,
+      "ms": 41
+    },
+    {
+      "name": "Flat/group placement tampering is rejected independently",
+      "pass": true,
+      "ms": 1
+    },
+    {
+      "name": "False claimed free rectangle covering real parts is rejected even in matched groups",
+      "pass": true,
+      "ms": 36
+    },
+    {
+      "name": "All24 genuine inner-hole ring contours and all44 original ring outlines unchanged",
+      "pass": true,
+      "ms": 108
+    },
+    {
+      "name": "All input release, seed and immutable V2 files remain unchanged",
+      "pass": true,
+      "ms": 105
+    }
+  ],
+  "failures": [],
+  "actual_legacy": {
+    "path": "C:\\Users\\olive\\Documents\\Codex\\FORMIKAT_CUTPLAN_V2_2026-10-24\\qa\\LEGACY_USER_COPY.cutplan",
+    "sha256": "7756b892047ed032884ea18b94fe739f6d0aa6bab721ff164788c6defc6bbef4",
+    "archived_locks": 1,
+    "price_retained": 6,
+    "source_unchanged": true
+  },
+  "flat_group_tamper_errors": [
+    "Abweichende Verfahrensgeometrie"
+  ],
+  "false_rest_rectangle_errors": [
+    "Restrechteck nicht geometrisch frei"
+  ],
+  "ring_contour_integrity": {
+    "parts": 44,
+    "with_genuine_inner_holes": 24,
+    "raw_records_sha256": "95f8a0f6d0bc651f2e0e1b0eb9f9fc31be1cdaa3800ed143972e049c91958ef7"
+  },
+  "pass": true,
+  "completed_utc": "2026-10-24T13:23:22.481Z"
+}

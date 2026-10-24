@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>FORMIKAT CUTPLAN V2.1 · Vergleich und Abnahme</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#26352e;background:#f2f3ee;line-height:1.55;font-size:17px}*{box-sizing:border-box}body{margin:0}main{max-width:1440px;margin:auto;padding:40px 28px 70px}h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;letter-spacing:-.04em;margin:.35em 0}h2{font-size:1.65rem;line-height:1.2;margin:0 0 20px}h3{margin:0 0 10px;font-size:1.2rem}p{max-width:88ch;margin:.6em 0 1em}.eyebrow{font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;color:#526a59}.intro{font-size:1.15rem;max-width:80ch}.panel,section{background:#fff;border:1px solid #dce1d7;border-radius:15px;padding:26px;margin-top:24px}.notice{border-left:5px solid #b17c32;background:#fff8e9}.good{color:#326140}.quiet,figcaption{color:#59645e;font-size:.88rem}.links{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}.links a{display:inline-block;background:#294d3b;color:#fff;text-decoration:none;padding:10px 15px;border-radius:7px}.links a.secondary{background:white;border:1px solid #a9b8ab;color:#294d3b}a{color:#21563b;text-underline-offset:3px}a:focus-visible{outline:3px solid #b47c27;outline-offset:4px}table{border-collapse:collapse;width:100%;font-size:.95rem}th,td{text-align:left;padding:13px 12px;border-bottom:1px solid #dde3d9;vertical-align:top}th{background:#f0f4ed;font-weight:600}.table-wrap{overflow-x:auto}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}.plan{background:#fff;border:1px solid #dce1d7;border-radius:15px;padding:20px;min-width:0}.plan h2{font-size:1.4rem}.plan figure{margin:22px 0 0;border-top:1px solid #e1e5dc;padding-top:14px}.plan img{display:block;width:100%;height:auto;background:#fafbf8}.plan figcaption{margin:8px 2px 0}.list{padding-left:22px}.list li{margin:.5em 0}.proof{font-size:.9rem}.proof a{overflow-wrap:anywhere}.proof li{margin:.4em 0}.badge{display:inline-block;padding:3px 9px;border-radius:30px;font-size:.78rem;background:#edf4e9;color:#315c3c}.bottom{margin-top:28px;color:#59645e;font-size:.85rem}@media(max-width:720px){main{padding:24px 13px 40px}.panel,section{padding:19px}.comparison{grid-template-columns:1fr;gap:18px}.plan{padding:14px}th,td{padding:10px 8px}.links a{width:100%;text-align:center}}@media print{body{background:#fff}main{max-width:none;padding:0}.links{display:none}section,.panel,.plan{border-radius:0;break-inside:avoid}.comparison{display:block}.plan{break-before:page}.plan figure{break-inside:avoid}.proof{font-size:9pt}a{color:inherit}}
+</style>
+</head>
+<body>
+<main>
+<div class="eyebrow">FORMIKAT · lokal und offline · 24. Oktober 2026</div>
+<h1>CUTPLAN V2.1</h1>
+<p class="intro">Wirtschaftlichere Rohformatwahl, ohne neuen Solver und ohne weitere Eingabemenüs. Die zuvor nur gezielt nachgewiesene Mischbelegung wird jetzt automatisch gefunden.</p>
+<div class="links">
+<a href="CUTPLAN_BERICHT_V2_1.pdf">Projektausdruck · 9 Seiten</a>
+<a href="../index.html" class="secondary">Projekt in der Anwendung über „Projekt speichern“ sichern</a>
+<a href="ABNAHME.txt" class="secondary">Kurze technische Abnahme</a>
+</div>
+<p class="quiet">Anwendung starten: im entpackten Versionsordner <strong>START_CUTPLAN.cmd</strong> doppelklicken und das Projekt bei Bedarf öffnen. Dieser Vergleich selbst benötigt keinen Server und keine Internetverbindung.</p>
+
+<section>
+<h2>Der belegte Fortschritt: 3 % weniger Rohmaterial</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>44 Ringsegmente</th><th>Bisherige V2</th><th>Neue V2.1</th></tr></thead>
+<tbody>
+<tr><td>Vollständig und unabhängig gültig</td><td>44 von 44</td><td><strong>44 von 44</strong></td></tr>
+<tr><td>Tatsächlich verwendete Rohformate</td><td>4 × 2500 × 1250 mm</td><td><strong>1 × 2500 × 1250 mm<br>2 × 3000 × 1500 mm</strong></td></tr>
+<tr><td>Gekaufte Rohfläche</td><td>12,500 m²</td><td><strong>12,125 m²</strong></td></tr>
+<tr><td>Material-Testkosten, netto</td><td>475,00 €</td><td><strong>460,75 €</strong></td></tr>
+<tr><td>Größtes nachgewiesenes freies Rechteck</td><td>0,886 m²</td><td>0,381 m²</td></tr>
+</tbody></table></div>
+<p class="good"><strong>0,375 m² und 14,25 Test-Euro weniger Einkauf.</strong> Die geringere Plattenzahl allein ist kein Einsparmaß: drei statt vier Platten bedeutet hier nicht 25 % weniger Material.</p>
+<p>Die Eingaben blieben gleich: Original-Profilpolylinien mit ihren Innenlöchern, 44 Teile, 3 mm Werkzeugabstand, 10 mm Rand, 0,025 mm deklarierte Konturabweichung, Winkel 0/90/180/270°, keine Spiegelung, keine Teile in Löchern und keine gemeinsamen Schnittlinien. Preisannahme: 38 €/m² netto; kein bestätigter Lieferantenpreis.</p>
+</section>
+
+<div class="panel notice">
+<h2>Günstigerer Einkauf ist nicht dasselbe wie eine größere Restplatte</h2>
+<p>Die Mischbelegung spart Rohfläche und Testkosten, liefert aber <strong>kein größeres zusammenhängendes Restrechteck</strong>. Der bisherige Vier-Platten-Plan hat hier den besseren Nachweis. Bei denselben Platten verbessert bloßes Zusammenrücken nicht die globale Flächenausnutzung; es kann nur die Restgeometrie verbessern.</p>
+<p class="quiet">Die Rechtecke sind konservativ geometrisch freie Bereiche, kein bestätigter Lagerbestand, keine vollständige Bewertung aller Konturreste und kein freigegebener Entnahmeschnitt. Ein zukünftiger Restwert wurde nicht gutgeschrieben.</p>
+</div>
+
+<div class="comparison" aria-label="Ringbelegungen vorher und nachher">
+<article class="plan">
+<span class="badge">Ausgangsstand · V2</span>
+<h2>Vier gleiche kleine Platten</h2>
+<p>12,500 m² · 475,00 Test-Euro</p>
+<figure><img src="ring_alt_1.svg" alt="V2: Belegung der ersten 2500 mal 1250 Millimeter großen Platte"><figcaption>Platte 1 · 2500 × 1250 mm</figcaption></figure>
+<figure><img src="ring_alt_2.svg" alt="V2: Belegung der zweiten kleinen Platte"><figcaption>Platte 2 · 2500 × 1250 mm</figcaption></figure>
+<figure><img src="ring_alt_3.svg" alt="V2: Belegung der dritten kleinen Platte"><figcaption>Platte 3 · 2500 × 1250 mm</figcaption></figure>
+<figure><img src="ring_alt_4.svg" alt="V2: Belegung der vierten kleinen Platte mit freiem Restbereich"><figcaption>Platte 4 · 2500 × 1250 mm</figcaption></figure>
+</article>
+<article class="plan">
+<span class="badge">Automatisch gefunden · V2.1</span>
+<h2>Eine kleine und zwei große Platten</h2>
+<p>12,125 m² · 460,75 Test-Euro</p>
+<figure><img src="ring_neu_1.svg" alt="V2.1: Belegung der einen 2500 mal 1250 Millimeter großen Platte"><figcaption>Platte 1 · 2500 × 1250 mm</figcaption></figure>
+<figure><img src="ring_neu_2.svg" alt="V2.1: Belegung der ersten 3000 mal 1500 Millimeter großen Platte"><figcaption>Platte 2 · 3000 × 1500 mm</figcaption></figure>
+<figure><img src="ring_neu_3.svg" alt="V2.1: Belegung der zweiten 3000 mal 1500 Millimeter großen Platte"><figcaption>Platte 3 · 3000 × 1500 mm</figcaption></figure>
+</article>
+</div>
+<p class="quiet">Bilder zeigen die tatsächlich geprüften Pläne und Positionsbezüge. Sie werden auf Spaltenbreite skaliert; kleine und große Rohplatten haben deshalb hier nicht denselben Bildschirmmaßstab.</p>
+
+<section>
+<h2>Was sich tatsächlich geändert hat</h2>
+<ol class="list">
+<li><strong>Wenige Rohformatkombinationen automatisch vergleichen.</strong> Eine begrenzte Suche über einzelne und paarweise Formate ergänzt die vorhandene Konturbelegung. Keine harte Vorgabe speziell für diese CAD-Datei.</li>
+<li><strong>Schnell einen vollständigen gültigen Startplan sichern.</strong> Ein konservativer Hüllstart wird gegen die unveränderten Konturen geprüft, bevor die teurere Staffelung beginnt. Er bleibt eine Konturbelegung, kein vorgetäuschter Sägeplan.</li>
+<li><strong>Knappen Bestand zwischen Verfahren besser vergeben.</strong> Zwei Verfahrensreihenfolgen werden verglichen. Im unabhängig lösbaren synthetischen Gegenfall sinken die Testkosten von 100 auf 20 Euro; das ist keine Einsparung an einem FORMIKAT-Originalauftrag.</li>
+<li><strong>Ein Suchbudget für den ganzen Auftrag.</strong> Beste gültige Lösungen bleiben erhalten. Der Browser beendet überlange Suche; atomare Geometrie- und Validierungsschritte sind nicht millisekundengenau unterbrechbar.</li>
+<li><strong>Säge-Suchplan korrigiert.</strong> Reihenfolgen und Schnittachsen werden jetzt für jede Vorzugsformatgruppe variiert. Bestehende ausführbare Schnittbäume, HiGHS-1D-Zuschnitt und unabhängige Validierung bleiben erhalten.</li>
+</ol>
+</section>
+
+<section>
+<h2>Messung, nicht nur eine schönere Zeichnung</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Kontrolllauf</th><th>Tatsächliches Ergebnis</th><th>Einordnung</th></tr></thead>
+<tbody>
+<tr><td>Ringe · 2 s · Seeds 42 und 73</td><td>Je 44/44 gültig, aber 7 kleine Platten, 21,875 m²</td><td>Schneller vollständiger Sicherheitsplan; noch kein wirtschaftlich guter Plan. V2 platzierte im damaligen Kaltstart nur 28/44.</td></tr>
+<tr><td>Ringe · 8 s und 20 s · Seeds 42 und 73</td><td>Viermal automatisch 1 kleine + 2 große Platten; 44/44, 12,125 m², 460,75 Test-Euro</td><td>Gleiche Teile und Fertigungsregeln; längere Suche brachte hier keinen weiteren Vorteil.</td></tr>
+<tr><td>Gesamtes Senckenberg-Testprojekt</td><td>107 geeignete Teile vollständig; erster vollständiger Startstand nach 223 ms; Solver-Wanduhrzeit 8,165 s bei 8 s Budget</td><td>Gemessener lokaler Node-Lauf. Gesamter Release-Ablauf einschließlich PDF, Export und zusätzlichen Prüfungen: 9,598 s.</td></tr>
+<tr><td>Rundstab und Säge</td><td>29 D30-Teile auf 14 Stäben; Rechteckreferenz 50 Test-Euro; reale vier Rechtecke 126 Test-Euro; endlicher Bestandsfall 30 Test-Euro</td><td>Unabhängige Mengen-, Abstand-, Bestands- beziehungsweise Schnittbaumprüfung bestanden.</td></tr>
+<tr><td>Verträge und Abbruch</td><td>6 Vertrags-, 9 kurze, 3 lineare und 9 Ring-Prüfgruppen bestanden</td><td>Enthält wiederholte Unverändertheitsprüfungen, keine Summe unabhängiger Erfolgsquoten. Solver-Abbruch bewahrt einen vollständigen gültigen Incumbent.</td></tr>
+</tbody></table></div>
+<p>Im lokalen Windows-Browser wurde ein kalter vollständiger Lauf mit 107 geeigneten Teilen und drei gemischten Ringplatten bestätigt. Download und erneutes Öffnen bestanden einschließlich SHA-Inhaltsprüfung. Ein manueller Browser-Abbruch eines 20-s-Laufs behielt 44/44 Ringteile auf drei Rohformaten. Der Projektausdruck hat 9 Seiten; alle Seiten wurden gerendert und visuell geprüft. Auch der V2-Ausdruck hat 9 Seiten: <strong>keine Seitenreduktion in V2.1</strong>.</p>
+<details><summary>Breite und schmale Browseransicht ansehen</summary>
+<p class="quiet">Tatsächlich geprüft: 1280 × 900 und 375 × 812 Pixel. In der schmalen Ansicht blieb die Dokumentbreite mit 360 Pixeln innerhalb des Fensters. Das ist kein Safari- oder iPad-Test.</p>
+<figure style="margin:16px 0"><img src="BROWSER_BREIT.jpg" alt="Tatsächliche breite lokale CUTPLAN-V2.1-Browseransicht" style="display:block;width:100%;height:auto"><figcaption>Windows-Browser · breite Ansicht</figcaption></figure>
+<figure style="margin:16px 0"><img src="BROWSER_SCHMAL.jpg" alt="Tatsächliche schmale lokale CUTPLAN-V2.1-Browseransicht" style="display:block;max-width:375px;width:100%;height:auto"><figcaption>Windows-Browser · schmale Ansicht, kein Seitenüberlauf</figcaption></figure>
+</details>
+<p><strong>1.472,25 € netto sind nur die bekannte Material-Testzwischensumme des Gesamtprojekts.</strong> Von 157 gewählten CAD-Vorkommen bleiben 50 Positionen mit offenen Grundlagen sichtbar; die 107 geeigneten sind vollständig platziert. Eine vollständige Projektsumme bleibt ausdrücklich offen.</p>
+</section>
+
+<section>
+<h2>Grenzen und sichere Verwendung</h2>
+<p>Kein Globaloptimalitätsbeweis. Die Formatvorschläge sind eine begrenzte Ein-/Zwei-Format-Suche, keine erschöpfende Beschaffungsoptimierung. Zwei Bestandsvergaben decken nicht jede denkbare Allokation ab. Keine freie kontinuierliche Drehung, kein neuer Geometriekern, kein Qwen, keine Cloud-Laufzeit und keine Maschinen- oder Bestellfreigabe.</p>
+<p>Alle 1.825 Quellvorkommen behalten ihre Zuordnung. Vorversionen und gespeicherte Quellgeometrie sind unverändert; es wurden keine neuen Original-CAD-Dateien geöffnet oder hochgeladen. Offline-Prüfung des vollständigen lokalen Ablaufs: externe Socket- und Fetch-Verbindungen gesperrt, keine unerwarteten Laufzeit-Netzaufrufe. Der Browser lädt lokal gebündelte Assets unter einer auf eigene Quellen begrenzten Sicherheitsregel. Clipper und HiGHS bleiben lokal gebündelt.</p>
+<details class="proof"><summary>Technische Prüfbelege</summary>
+<ul>
+<li><a href="../qa/RELEASE_CHECK.json">Vollständiger Release-Lauf, Mengen, Zeiten, Hashes und Offline-Nachweis</a></li>
+<li><a href="../qa/PLANNER_REGRESSIONS_release_rings.json">Release-Ringmatrix: Budgets 2/8/20 s, Seeds 42/73 und Solver-Abbruch</a></li>
+<li><a href="../qa/PLANNER_REGRESSIONS_final_quick.json">Säge, Preise, endlicher Bestand, Innenloch und Bestandsallokation</a></li>
+<li><a href="../qa/PLANNER_REGRESSIONS_final_linear.json">Unveränderte HiGHS-1D-Regression</a></li>
+<li><a href="../qa/PLANNER_REGRESSIONS_final_contracts.json">Speicherverträge, Deadline, Kandidatengrenze und Flächengleichstand</a></li>
+<li><a href="../qa/APP_CONTRACTS.json">14 zusätzliche Anwendungsprüfungen: Varianten, Altprojekt, Preise, unveränderte Innenlöcher und Manipulationserkennung</a></li>
+<li><a href="../qa/IMMUTABLE_V2_SNAPSHOT.json">Eingefrorene unveränderte V2-Dateien</a></li>
+</ul>
+</details>
+</section>
+<p class="bottom">CUTPLAN V2.1 · Engine CUTPLAN-V2.1-2.1.0 · Lokaler Entwicklungs- und Teststand. Die Anwendungsversion ist keine erneute Verifikation einer CAD-Intelligence-Version. Dieser Bericht enthält abgeleitete Zeichnungen und Ergebnisse, keine Rhino-Originale.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,5031 @@
+{
+  "created_utc": "2026-10-24T13:20:30.141Z",
+  "mode": "rings",
+  "engine": "CUTPLAN-V2.1-2.1.0",
+  "inputs": {
+    "seed_sha256": "bec29c08672be8fa9565dee446cf2701a4ec2d58519713607708aac4cd7c6d76",
+    "app": {
+      "core.js": "34f4ed75014024d9b8ab983fc3f19c1e2295c877bbc9994b1393e62b841de96a",
+      "geometry.js": "2f1051995d7f749c2df166c551c46207ad0d1b81294a0e2707854258168d7157",
+      "validator.js": "3f64c4119a2ceaeab328e11780e17d93592187c262fd5b70b820a518e9172c91",
+      "optimizer.js": "9bbcd9e7b55b8bcb6c4d123a29cc0afab2092e3dcbea6244a84efb8d3f88d71c",
+      "export.js": "b1e5774439aa16f29a6daa50371e0948ad6dc73d7573e8870a5c68951c7d743b"
+    },
+    "original_v2_files": 57
+  },
+  "checks": [
+    {
+      "name": "Immutable V2 snapshot and complete 1825-object ownership",
+      "pass": true,
+      "seconds": 0.177
+    },
+    {
+      "name": "Automatic real44 rings, budget2s seed42",
+      "pass": true,
+      "seconds": 2.093
+    },
+    {
+      "name": "Automatic real44 rings, budget2s seed73",
+      "pass": true,
+      "seconds": 2.071
+    },
+    {
+      "name": "Automatic real44 rings, budget8s seed42",
+      "pass": true,
+      "seconds": 8.141
+    },
+    {
+      "name": "Automatic real44 rings, budget8s seed73",
+      "pass": true,
+      "seconds": 8.093
+    },
+    {
+      "name": "Automatic real44 rings, budget20s seed42",
+      "pass": true,
+      "seconds": 20.092
+    },
+    {
+      "name": "Automatic real44 rings, budget20s seed73",
+      "pass": true,
+      "seconds": 20.093
+    },
+    {
+      "name": "Cancellation after first full incumbent retains a full independently valid plan",
+      "pass": true,
+      "seconds": 0.062
+    },
+    {
+      "name": "Prior V2 and test seed unchanged after all runs",
+      "pass": true,
+      "seconds": 0.271
+    }
+  ],
+  "runs": [
+    {
+      "name": "RINGS_2_42",
+      "seconds": 2.084,
+      "parameters": {
+        "id": "SCENARIO_CNC",
+        "mode": "cnc",
+        "kerf_mm": 3,
+        "margin_mm": 10,
+        "trim_start_mm": 5,
+        "trim_end_mm": 5,
+        "allowance_mm": 0,
+        "min_remnant_mm": 100,
+        "min_remnant_area_mm2": 40000,
+        "part_in_part": false,
+        "hold_verified": false,
+        "common_line": false,
+        "minimum_bridge_mm": 0,
+        "objective": "cost",
+        "seed": 42,
+        "search_seconds": 2,
+        "raw_strategy": "contour",
+        "source": "TESTPARAMETER – keine Maschinenfreigabe",
+        "status": "SCENARIO",
+        "profiles": {
+          "linear": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "saw": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "cnc": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          }
+        }
+      },
+      "input_sha256": "d4dfa85a59c216e58b61b2c3c8944cd8f819de5b8be94116df6504e3bab6c1b2",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "placed": 44,
+        "unplaced": 0,
+        "quantity_balanced": true,
+        "method": "Independent segment/winding/distance, count, stock and arithmetic validator; no nesting boolean operation reused."
+      },
+      "placed": 44,
+      "unplaced": 0,
+      "raw_use": 21875000,
+      "purchased_use": 21875000,
+      "cost": 831.25,
+      "formats": [
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        }
+      ],
+      "largest_clear_rectangle_mm2": 2454237.512,
+      "trace": [
+        {
+          "ms": 80,
+          "placed": 44,
+          "unplaced": 0
+        }
+      ],
+      "solution": {
+        "stocks": [
+          {
+            "id": "SAW1",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:c468dda2-cef2-4600-aefa-c7ba7f94a824#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:5019ba9d-4bb0-4181-8ec9-a1c3b5cfd813#0",
+                "x": 1191.502477,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:b3b0454a-b375-4aef-a77d-aad87b491cb0#0",
+                "x": 10.028,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:3fdb6327-0c2b-4037-b11e-b6243240ad57#0",
+                "x": 1191.502477,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:a7e5a787-5927-47c9-8e7d-e3d01fbcf69c#0",
+                "x": 10.028,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:53a6ab7c-9554-4854-99c1-65e880781842#0",
+                "x": 10.028,
+                "y": 1109.116315,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:c5c21112-e787-4dce-a55d-04e2c80e4aa1#0",
+                "x": 1272.700833,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 1226699.6533611645,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 27227.46390383551,
+              "unallocated_remainder_mm2": 1796472.882735,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 1075.421155,
+                "width": 1218.8101669999999,
+                "height": 164.578845,
+                "area_mm2": 200590.3695591171,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW2",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:604a4c00-3efc-4487-98b8-60a9b142b727#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:be9403d8-a3a9-4be5-9b32-5a82f5cbeb52#0",
+                "x": 1191.49739,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:643011ad-17b1-4d26-a63e-f0a70ac57853#0",
+                "x": 10.028,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:25f2762e-191b-48a3-9078-b3f285e15be8#0",
+                "x": 1191.49739,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:ee72b898-f3bc-487d-ae8f-84652b209d20#0",
+                "x": 10.028,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:6348792a-8dc9-4365-994c-3a7eb114b52b#0",
+                "x": 10.028,
+                "y": 1109.116315,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:7281afd1-2181-450f-ae8d-c1c064ccf58e#0",
+                "x": 1272.700833,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 1226699.6534783328,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 27475.729168667458,
+              "unallocated_remainder_mm2": 1796224.6173529997,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 1075.421155,
+                "width": 1218.8101669999999,
+                "height": 164.578845,
+                "area_mm2": 200590.3695591171,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW3",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:10af7648-1f8b-46a9-98ee-2c30b5faf1c6#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:b7136ec2-269d-42de-8a4e-ffd2aed91706#0",
+                "x": 1191.49739,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:85d78f91-97d9-4c68-b56e-af1bf883ae6a#0",
+                "x": 10.028,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:e53cc859-4051-4936-8584-50b64b307b25#0",
+                "x": 1191.49739,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:eeb44f56-ba7b-4764-b328-d18f9ab8856b#0",
+                "x": 10.028,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:2e67415a-6f2c-411c-a444-7076916359b4#0",
+                "x": 10.028,
+                "y": 1109.116315,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:2addbcc5-ab5e-4876-bf50-48317c44d031#0",
+                "x": 1272.700833,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 1226699.6532547057,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 27725.879433294293,
+              "unallocated_remainder_mm2": 1795974.467312,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 1075.421155,
+                "width": 1218.8101669999999,
+                "height": 164.578845,
+                "area_mm2": 200590.3695591171,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW4",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:65a1c10c-d954-4d2e-9eca-b1778b88f3ae#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:fa060813-11a6-42fd-be6f-e7db46dd3508#0",
+                "x": 1191.499037,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:80b9b957-3ac2-48c0-ada4-62133a2e289f#0",
+                "x": 10.028,
+                "y": 430.921045,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:946c8382-cc8e-48cb-b8f9-1c0f383edd19#0",
+                "x": 1191.49739,
+                "y": 430.921045,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:c13d1db3-0363-4f93-b02d-c9913ee6e21a#0",
+                "x": 10.028,
+                "y": 851.691176,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:95db549e-0b8d-4011-b78f-ba65b4dd5621#0",
+                "x": 10.028,
+                "y": 1022.6252470000001,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:ec210468-6a51-4b74-bc77-3fbc6c2c322b#0",
+                "x": 1272.700833,
+                "y": 851.691176,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 1048726.349520694,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 29039.52575730579,
+              "unallocated_remainder_mm2": 1972634.1247220002,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 988.9300870000001,
+                "width": 1218.8101669999999,
+                "height": 251.06991299999993,
+                "area_mm2": 306006.56259220536,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW5",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:83ff60ff-998e-47d5-b8ee-a01ea6c3dea4#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:74416896-0722-4871-94c8-707adbf4f5af#0",
+                "x": 1191.49739,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:d94600cb-4b2a-4f85-861e-f964d296d5fa#0",
+                "x": 10.028,
+                "y": 430.798131,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:a597ecd2-39ae-4f5d-b9c0-2a6aed8390ad#0",
+                "x": 1191.4936340000002,
+                "y": 430.798131,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:bab02780-76b9-4950-8996-e61f71928382#0",
+                "x": 10.028,
+                "y": 851.568262,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:3eb363db-8dcc-43d8-a995-b9179083fd99#0",
+                "x": 10.028,
+                "y": 1022.502333,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 971523.6007791967,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 24329.171432303265,
+              "unallocated_remainder_mm2": 2054547.2277885,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 850.0572619999999,
+                "width": 1218.8101669999999,
+                "height": 389.9427380000001,
+                "area_mm2": 475266.17362221726,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW6",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:8199ffb4-2b98-4999-8c20-b14501b0304b#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:c7c17ea4-21dd-444b-aeca-d27affeabac9#0",
+                "x": 10.028,
+                "y": 180.962071,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:aad4b6d1-e59e-4e49-9216-438a87915854#0",
+                "x": 10.028,
+                "y": 351.89614200000005,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:e5330e97-a571-4575-afc4-17afbc333bef#0",
+                "x": 10.028,
+                "y": 522.8302130000001,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:0d0520e3-9e14-40b2-b890-a27e0436f0cc#0",
+                "x": 10.028,
+                "y": 693.7642840000001,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:f015c813-b76a-4123-b7f2-d3a215b5659e#0",
+                "x": 10.028,
+                "y": 864.6983550000001,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:5b690bbf-a907-4e36-ae2e-483a882b8c19#0",
+                "x": 10.028,
+                "y": 985.6339050000001,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:2fb1a5ce-8620-4a6a-9613-a14d546cf621#0",
+                "x": 10.028,
+                "y": 1106.569455,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 1433870.4871133973,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 33129.82634010282,
+              "unallocated_remainder_mm2": 1583399.6865464998,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 10,
+                "width": 1218.8101669999999,
+                "height": 1230,
+                "area_mm2": 1499136.5054099998,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW7",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:2407a4f9-5bc8-414f-9eb8-d23334d696b8#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:d4f16f17-2047-4004-8ace-83f8aa2097aa#0",
+                "x": 10.028,
+                "y": 130.96354999999997,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 284314.47607873764,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 6784.830023262359,
+              "unallocated_remainder_mm2": 2759300.6938980003,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 250.38809999999995,
+                "width": 2480,
+                "height": 989.6119000000001,
+                "area_mm2": 2454237.512,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          }
+        ],
+        "unplaced": [],
+        "method": "Fast conservative envelope placement; actual contours unchanged; not a saw plan",
+        "global_optimal": false,
+        "iterations": 1,
+        "search_ms": 2075,
+        "best_objective": 831.25,
+        "complete": true,
+        "format_search": [
+          {
+            "caps": {
+              "P2500": 1,
+              "P3000": 2
+            },
+            "axis": [
+              0,
+              180
+            ],
+            "ms": 1965,
+            "placed": 27,
+            "complete": false,
+            "valid": true
+          }
+        ],
+        "deadline_kind": "Shared cooperative wall-clock deadline; wall time includes non-preemptive geometry and validation",
+        "lower_bound_area_mm2": 7418533.873586231
+      },
+      "saved_formats_equal_original": true
+    },
+    {
+      "name": "RINGS_2_73",
+      "seconds": 2.063,
+      "parameters": {
+        "id": "SCENARIO_CNC",
+        "mode": "cnc",
+        "kerf_mm": 3,
+        "margin_mm": 10,
+        "trim_start_mm": 5,
+        "trim_end_mm": 5,
+        "allowance_mm": 0,
+        "min_remnant_mm": 100,
+        "min_remnant_area_mm2": 40000,
+        "part_in_part": false,
+        "hold_verified": false,
+        "common_line": false,
+        "minimum_bridge_mm": 0,
+        "objective": "cost",
+        "seed": 73,
+        "search_seconds": 2,
+        "raw_strategy": "contour",
+        "source": "TESTPARAMETER – keine Maschinenfreigabe",
+        "status": "SCENARIO",
+        "profiles": {
+          "linear": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "saw": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "cnc": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          }
+        }
+      },
+      "input_sha256": "ffc946dccfe3d7126d839801068f1f760b160249f53aa516fea08074efee9ba5",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "placed": 44,
+        "unplaced": 0,
+        "quantity_balanced": true,
+        "method": "Independent segment/winding/distance, count, stock and arithmetic validator; no nesting boolean operation reused."
+      },
+      "placed": 44,
+      "unplaced": 0,
+      "raw_use": 21875000,
+      "purchased_use": 21875000,
+      "cost": 831.25,
+      "formats": [
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        }
+      ],
+      "largest_clear_rectangle_mm2": 2454237.512,
+      "trace": [
+        {
+          "ms": 52,
+          "placed": 44,
+          "unplaced": 0
+        }
+      ],
+      "solution": {
+        "stocks": [
+          {
+            "id": "SAW1",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:c468dda2-cef2-4600-aefa-c7ba7f94a824#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:5019ba9d-4bb0-4181-8ec9-a1c3b5cfd813#0",
+                "x": 1191.502477,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:b3b0454a-b375-4aef-a77d-aad87b491cb0#0",
+                "x": 10.028,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:3fdb6327-0c2b-4037-b11e-b6243240ad57#0",
+                "x": 1191.502477,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:a7e5a787-5927-47c9-8e7d-e3d01fbcf69c#0",
+                "x": 10.028,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:53a6ab7c-9554-4854-99c1-65e880781842#0",
+                "x": 10.028,
+                "y": 1109.116315,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:c5c21112-e787-4dce-a55d-04e2c80e4aa1#0",
+                "x": 1272.700833,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 1226699.6533611645,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 27227.46390383551,
+              "unallocated_remainder_mm2": 1796472.882735,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 1075.421155,
+                "width": 1218.8101669999999,
+                "height": 164.578845,
+                "area_mm2": 200590.3695591171,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW2",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:604a4c00-3efc-4487-98b8-60a9b142b727#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:be9403d8-a3a9-4be5-9b32-5a82f5cbeb52#0",
+                "x": 1191.49739,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:643011ad-17b1-4d26-a63e-f0a70ac57853#0",
+                "x": 10.028,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:25f2762e-191b-48a3-9078-b3f285e15be8#0",
+                "x": 1191.49739,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:ee72b898-f3bc-487d-ae8f-84652b209d20#0",
+                "x": 10.028,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:6348792a-8dc9-4365-994c-3a7eb114b52b#0",
+                "x": 10.028,
+                "y": 1109.116315,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:7281afd1-2181-450f-ae8d-c1c064ccf58e#0",
+                "x": 1272.700833,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 1226699.6534783328,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 27475.729168667458,
+              "unallocated_remainder_mm2": 1796224.6173529997,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 1075.421155,
+                "width": 1218.8101669999999,
+                "height": 164.578845,
+                "area_mm2": 200590.3695591171,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW3",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:10af7648-1f8b-46a9-98ee-2c30b5faf1c6#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:b7136ec2-269d-42de-8a4e-ffd2aed91706#0",
+                "x": 1191.49739,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:85d78f91-97d9-4c68-b56e-af1bf883ae6a#0",
+                "x": 10.028,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:e53cc859-4051-4936-8584-50b64b307b25#0",
+                "x": 1191.49739,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:eeb44f56-ba7b-4764-b328-d18f9ab8856b#0",
+                "x": 10.028,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:2e67415a-6f2c-411c-a444-7076916359b4#0",
+                "x": 10.028,
+                "y": 1109.116315,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:2addbcc5-ab5e-4876-bf50-48317c44d031#0",
+                "x": 1272.700833,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 1226699.6532547057,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 27725.879433294293,
+              "unallocated_remainder_mm2": 1795974.467312,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 1075.421155,
+                "width": 1218.8101669999999,
+                "height": 164.578845,
+                "area_mm2": 200590.3695591171,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW4",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:65a1c10c-d954-4d2e-9eca-b1778b88f3ae#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:fa060813-11a6-42fd-be6f-e7db46dd3508#0",
+                "x": 1191.499037,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:80b9b957-3ac2-48c0-ada4-62133a2e289f#0",
+                "x": 10.028,
+                "y": 430.921045,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:946c8382-cc8e-48cb-b8f9-1c0f383edd19#0",
+                "x": 1191.49739,
+                "y": 430.921045,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:c13d1db3-0363-4f93-b02d-c9913ee6e21a#0",
+                "x": 10.028,
+                "y": 851.691176,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:95db549e-0b8d-4011-b78f-ba65b4dd5621#0",
+                "x": 10.028,
+                "y": 1022.6252470000001,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:ec210468-6a51-4b74-bc77-3fbc6c2c322b#0",
+                "x": 1272.700833,
+                "y": 851.691176,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 1048726.349520694,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 29039.52575730579,
+              "unallocated_remainder_mm2": 1972634.1247220002,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 988.9300870000001,
+                "width": 1218.8101669999999,
+                "height": 251.06991299999993,
+                "area_mm2": 306006.56259220536,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW5",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:83ff60ff-998e-47d5-b8ee-a01ea6c3dea4#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:74416896-0722-4871-94c8-707adbf4f5af#0",
+                "x": 1191.49739,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:d94600cb-4b2a-4f85-861e-f964d296d5fa#0",
+                "x": 10.028,
+                "y": 430.798131,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:a597ecd2-39ae-4f5d-b9c0-2a6aed8390ad#0",
+                "x": 1191.4936340000002,
+                "y": 430.798131,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:bab02780-76b9-4950-8996-e61f71928382#0",
+                "x": 10.028,
+                "y": 851.568262,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:3eb363db-8dcc-43d8-a995-b9179083fd99#0",
+                "x": 10.028,
+                "y": 1022.502333,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 971523.6007791967,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 24329.171432303265,
+              "unallocated_remainder_mm2": 2054547.2277885,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 850.0572619999999,
+                "width": 1218.8101669999999,
+                "height": 389.9427380000001,
+                "area_mm2": 475266.17362221726,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW6",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:8199ffb4-2b98-4999-8c20-b14501b0304b#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:c7c17ea4-21dd-444b-aeca-d27affeabac9#0",
+                "x": 10.028,
+                "y": 180.962071,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:aad4b6d1-e59e-4e49-9216-438a87915854#0",
+                "x": 10.028,
+                "y": 351.89614200000005,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:e5330e97-a571-4575-afc4-17afbc333bef#0",
+                "x": 10.028,
+                "y": 522.8302130000001,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:0d0520e3-9e14-40b2-b890-a27e0436f0cc#0",
+                "x": 10.028,
+                "y": 693.7642840000001,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:f015c813-b76a-4123-b7f2-d3a215b5659e#0",
+                "x": 10.028,
+                "y": 864.6983550000001,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:5b690bbf-a907-4e36-ae2e-483a882b8c19#0",
+                "x": 10.028,
+                "y": 985.6339050000001,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:2fb1a5ce-8620-4a6a-9613-a14d546cf621#0",
+                "x": 10.028,
+                "y": 1106.569455,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 1433870.4871133973,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 33129.82634010282,
+              "unallocated_remainder_mm2": 1583399.6865464998,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 10,
+                "width": 1218.8101669999999,
+                "height": 1230,
+                "area_mm2": 1499136.5054099998,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW7",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:2407a4f9-5bc8-414f-9eb8-d23334d696b8#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:d4f16f17-2047-4004-8ace-83f8aa2097aa#0",
+                "x": 10.028,
+                "y": 130.96354999999997,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 284314.47607873764,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 6784.830023262359,
+              "unallocated_remainder_mm2": 2759300.6938980003,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 250.38809999999995,
+                "width": 2480,
+                "height": 989.6119000000001,
+                "area_mm2": 2454237.512,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          }
+        ],
+        "unplaced": [],
+        "method": "Fast conservative envelope placement; actual contours unchanged; not a saw plan",
+        "global_optimal": false,
+        "iterations": 1,
+        "search_ms": 2060,
+        "best_objective": 831.25,
+        "complete": true,
+        "format_search": [
+          {
+            "caps": {
+              "P2500": 1,
+              "P3000": 2
+            },
+            "axis": [
+              0,
+              180
+            ],
+            "ms": 1988,
+            "placed": 27,
+            "complete": false,
+            "valid": true
+          }
+        ],
+        "deadline_kind": "Shared cooperative wall-clock deadline; wall time includes non-preemptive geometry and validation",
+        "lower_bound_area_mm2": 7418533.873586231
+      },
+      "saved_formats_equal_original": true
+    },
+    {
+      "name": "RINGS_8_42",
+      "seconds": 8.09,
+      "parameters": {
+        "id": "SCENARIO_CNC",
+        "mode": "cnc",
+        "kerf_mm": 3,
+        "margin_mm": 10,
+        "trim_start_mm": 5,
+        "trim_end_mm": 5,
+        "allowance_mm": 0,
+        "min_remnant_mm": 100,
+        "min_remnant_area_mm2": 40000,
+        "part_in_part": false,
+        "hold_verified": false,
+        "common_line": false,
+        "minimum_bridge_mm": 0,
+        "objective": "cost",
+        "seed": 42,
+        "search_seconds": 8,
+        "raw_strategy": "contour",
+        "source": "TESTPARAMETER – keine Maschinenfreigabe",
+        "status": "SCENARIO",
+        "profiles": {
+          "linear": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "saw": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "cnc": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          }
+        }
+      },
+      "input_sha256": "bc7d2a554e65950673445a50291d3cebddb0871b4428ba5876af21e176479d2b",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "placed": 44,
+        "unplaced": 0,
+        "quantity_balanced": true,
+        "method": "Independent segment/winding/distance, count, stock and arithmetic validator; no nesting boolean operation reused."
+      },
+      "placed": 44,
+      "unplaced": 0,
+      "raw_use": 12125000,
+      "purchased_use": 12125000,
+      "cost": 460.75,
+      "formats": [
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P3000",
+          "origin": "purchase",
+          "width": 3000,
+          "height": 1500
+        },
+        {
+          "id": "P3000",
+          "origin": "purchase",
+          "width": 3000,
+          "height": 1500
+        }
+      ],
+      "largest_clear_rectangle_mm2": 381435.37598130066,
+      "trace": [
+        {
+          "ms": 50,
+          "placed": 44,
+          "unplaced": 0
+        },
+        {
+          "ms": 6039,
+          "placed": 44,
+          "unplaced": 0
+        }
+      ],
+      "solution": {
+        "stocks": [
+          {
+            "id": "SHEET1",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:a7e5a787-5927-47c9-8e7d-e3d01fbcf69c#0",
+                "x": 10.030000000000001,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1269.646833,
+                  177.908071
+                ]
+              },
+              {
+                "piece_id": "generationendialog:ee72b898-f3bc-487d-ae8f-84652b209d20#0",
+                "x": 2489.97,
+                "y": 183.0251748942184,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2489.97,
+                  183.02517489421854
+                ]
+              },
+              {
+                "piece_id": "generationendialog:eeb44f56-ba7b-4764-b328-d18f9ab8856b#0",
+                "x": 1269.647,
+                "y": 348.856142,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  348.85614200000015
+                ]
+              },
+              {
+                "piece_id": "generationendialog:c13d1db3-0363-4f93-b02d-c9913ee6e21a#0",
+                "x": 1230.353,
+                "y": 289.47248873913037,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  457.3505597391304
+                ]
+              },
+              {
+                "piece_id": "generationendialog:95db549e-0b8d-4011-b78f-ba65b4dd5621#0",
+                "x": 1269.647,
+                "y": 519.8042130000001,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  519.8042130000002
+                ]
+              },
+              {
+                "piece_id": "generationendialog:bab02780-76b9-4950-8996-e61f71928382#0",
+                "x": 1230.353,
+                "y": 460.4205597391304,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  628.2986307391304
+                ]
+              },
+              {
+                "piece_id": "generationendialog:3eb363db-8dcc-43d8-a995-b9179083fd99#0",
+                "x": 1269.647,
+                "y": 690.7522840000001,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  690.7522840000003
+                ]
+              },
+              {
+                "piece_id": "generationendialog:8199ffb4-2b98-4999-8c20-b14501b0304b#0",
+                "x": 1230.353,
+                "y": 631.3686307391304,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  799.2467017391303
+                ]
+              },
+              {
+                "piece_id": "generationendialog:c7c17ea4-21dd-444b-aeca-d27affeabac9#0",
+                "x": 1269.647,
+                "y": 861.7003550000002,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  861.7003550000003
+                ]
+              },
+              {
+                "piece_id": "generationendialog:aad4b6d1-e59e-4e49-9216-438a87915854#0",
+                "x": 1230.353,
+                "y": 802.3167017391303,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  970.1947727391303
+                ]
+              },
+              {
+                "piece_id": "generationendialog:e5330e97-a571-4575-afc4-17afbc333bef#0",
+                "x": 1269.647,
+                "y": 1032.6484260000002,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  1032.6484260000004
+                ]
+              },
+              {
+                "piece_id": "generationendialog:0d0520e3-9e14-40b2-b890-a27e0436f0cc#0",
+                "x": 1230.353,
+                "y": 973.2647727391302,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  1141.1428437391303
+                ]
+              },
+              {
+                "piece_id": "generationendialog:6348792a-8dc9-4365-994c-3a7eb114b52b#0",
+                "x": 1269.647,
+                "y": 1153.5979760000005,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  1153.5979760000007
+                ]
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 2559914.293215944,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 55411.58389755571,
+              "unallocated_remainder_mm2": 435074.1228865003,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 1155.1429760000008,
+                "width": 2480,
+                "height": 84.85702399999923,
+                "area_mm2": 210445.41951999807,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SHEET2",
+            "format": {
+              "id": "P3000",
+              "width": 3000,
+              "height": 1500,
+              "availability": 20,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:be9403d8-a3a9-4be5-9b32-5a82f5cbeb52#0",
+                "x": 10.030000000000001,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.44339,
+                  471.05112199999996
+                ]
+              },
+              {
+                "piece_id": "generationendialog:643011ad-17b1-4d26-a63e-f0a70ac57853#0",
+                "x": 1191.553,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2369.96639,
+                  471.05112199999996
+                ]
+              },
+              {
+                "piece_id": "generationendialog:25f2762e-191b-48a3-9078-b3f285e15be8#0",
+                "x": 2369.967,
+                "y": 643.1273374957118,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2369.967,
+                  643.1273374957119
+                ]
+              },
+              {
+                "piece_id": "generationendialog:c468dda2-cef2-4600-aefa-c7ba7f94a824#0",
+                "x": 1188.448477,
+                "y": 643.730436770341,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1188.448477,
+                  643.7304367703412
+                ]
+              },
+              {
+                "piece_id": "generationendialog:b3b0454a-b375-4aef-a77d-aad87b491cb0#0",
+                "x": 2369.966,
+                "y": 841.0075143520271,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2369.966,
+                  841.0075143520272
+                ]
+              },
+              {
+                "piece_id": "generationendialog:3fdb6327-0c2b-4037-b11e-b6243240ad57#0",
+                "x": 1188.448477,
+                "y": 841.6111908257434,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1188.448477,
+                  841.6111908257435
+                ]
+              },
+              {
+                "piece_id": "generationendialog:5019ba9d-4bb0-4181-8ec9-a1c3b5cfd813#0",
+                "x": 2989.97,
+                "y": 1012.3816818782617,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1012.3816818782618
+                ]
+              },
+              {
+                "piece_id": "generationendialog:e53cc859-4051-4936-8584-50b64b307b25#0",
+                "x": 1188.431,
+                "y": 1039.4950494759341,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1188.431,
+                  1039.4950494759341
+                ]
+              },
+              {
+                "piece_id": "generationendialog:604a4c00-3efc-4487-98b8-60a9b142b727#0",
+                "x": 2989.97,
+                "y": 1210.2620782273864,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1210.2620782273866
+                ]
+              },
+              {
+                "piece_id": "generationendialog:10af7648-1f8b-46a9-98ee-2c30b5faf1c6#0",
+                "x": 1808.442,
+                "y": 1295.2001748777732,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1808.442,
+                  1295.2001748777734
+                ]
+              },
+              {
+                "piece_id": "generationendialog:b7136ec2-269d-42de-8a4e-ffd2aed91706#0",
+                "x": 2989.97,
+                "y": 1408.1453605958395,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1408.1453605958397
+                ]
+              },
+              {
+                "piece_id": "generationendialog:2e67415a-6f2c-411c-a444-7076916359b4#0",
+                "x": 10.030000000000001,
+                "y": 1298.2701748777733,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1269.646833,
+                  1416.1497248777732
+                ]
+              },
+              {
+                "piece_id": "generationendialog:c5c21112-e787-4dce-a55d-04e2c80e4aa1#0",
+                "x": 2295.004873,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  145.72391100000002
+                ]
+              },
+              {
+                "piece_id": "generationendialog:ec210468-6a51-4b74-bc77-3fbc6c2c322b#0",
+                "x": 2295.004873,
+                "y": 141.91461254239738,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  277.6085235423974
+                ]
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 4500000,
+              "parts_area_mm2": 2512677.494415748,
+              "margin_area_mm2": 89600,
+              "tool_loss_mm2": 57134.975291252136,
+              "unallocated_remainder_mm2": 1840587.530293,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 1417.6947248777733,
+                "width": 2980,
+                "height": 72.3052751222267,
+                "area_mm2": 215469.71986423558,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SHEET3",
+            "format": {
+              "id": "P3000",
+              "width": 3000,
+              "height": 1500,
+              "availability": 20,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:85d78f91-97d9-4c68-b56e-af1bf883ae6a#0",
+                "x": 10.030000000000001,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.44339,
+                  471.05112199999996
+                ]
+              },
+              {
+                "piece_id": "generationendialog:f015c813-b76a-4123-b7f2-d3a215b5659e#0",
+                "x": 1191.553,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2451.169833,
+                  127.90955
+                ]
+              },
+              {
+                "piece_id": "generationendialog:2fb1a5ce-8620-4a6a-9613-a14d546cf621#0",
+                "x": 1191.553,
+                "y": 130.97955,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2451.169833,
+                  248.85909999999998
+                ]
+              },
+              {
+                "piece_id": "generationendialog:53a6ab7c-9554-4854-99c1-65e880781842#0",
+                "x": 1191.553,
+                "y": 251.92909999999998,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2451.169833,
+                  369.80864999999994
+                ]
+              },
+              {
+                "piece_id": "generationendialog:5b690bbf-a907-4e36-ae2e-483a882b8c19#0",
+                "x": 1191.553,
+                "y": 372.87864999999994,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2451.169833,
+                  490.75819999999993
+                ]
+              },
+              {
+                "piece_id": "generationendialog:2407a4f9-5bc8-414f-9eb8-d23334d696b8#0",
+                "x": 10.030000000000001,
+                "y": 493.8281999999999,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1269.646833,
+                  611.7077499999999
+                ]
+              },
+              {
+                "piece_id": "generationendialog:d4f16f17-2047-4004-8ace-83f8aa2097aa#0",
+                "x": 1272.757,
+                "y": 493.8281999999999,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2532.373833,
+                  611.7077499999999
+                ]
+              },
+              {
+                "piece_id": "generationendialog:fa060813-11a6-42fd-be6f-e7db46dd3508#0",
+                "x": 1811.5549629999998,
+                "y": 369.46460458177006,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  787.3016495817701
+                ]
+              },
+              {
+                "piece_id": "generationendialog:65a1c10c-d954-4d2e-9eca-b1778b88f3ae#0",
+                "x": 1191.553,
+                "y": 601.4682679761642,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2369.968037,
+                  1019.3053129761641
+                ]
+              },
+              {
+                "piece_id": "generationendialog:80b9b957-3ac2-48c0-ada4-62133a2e289f#0",
+                "x": 10.030000000000001,
+                "y": 614.7777499999999,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.44339,
+                  1032.491881
+                ]
+              },
+              {
+                "piece_id": "generationendialog:83ff60ff-998e-47d5-b8ee-a01ea6c3dea4#0",
+                "x": 1269.647,
+                "y": 1155.1708245894476,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  1155.1708245894476
+                ]
+              },
+              {
+                "piece_id": "generationendialog:946c8382-cc8e-48cb-b8f9-1c0f383edd19#0",
+                "x": 2989.968,
+                "y": 1140.5709515101294,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.968,
+                  1140.5709515101296
+                ]
+              },
+              {
+                "piece_id": "generationendialog:74416896-0722-4871-94c8-707adbf4f5af#0",
+                "x": 2989.97,
+                "y": 1280.7215235234708,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1280.721523523471
+                ]
+              },
+              {
+                "piece_id": "generationendialog:a597ecd2-39ae-4f5d-b9c0-2a6aed8390ad#0",
+                "x": 2989.97,
+                "y": 1420.8732499455448,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1420.873249945545
+                ]
+              },
+              {
+                "piece_id": "generationendialog:d94600cb-4b2a-4f85-861e-f964d296d5fa#0",
+                "x": 1188.44,
+                "y": 1276.5478245894476,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1188.44,
+                  1276.5478245894476
+                ]
+              },
+              {
+                "piece_id": "generationendialog:7281afd1-2181-450f-ae8d-c1c064ccf58e#0",
+                "x": 493.478,
+                "y": 213.63347242979935,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.443127,
+                  349.3273834297994
+                ]
+              },
+              {
+                "piece_id": "generationendialog:2addbcc5-ab5e-4876-bf50-48317c44d031#0",
+                "x": 493.475,
+                "y": 345.51727989173196,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.440127,
+                  481.211190891732
+                ]
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 4500000,
+              "parts_area_mm2": 2345942.085954538,
+              "margin_area_mm2": 89600,
+              "tool_loss_mm2": 68229.97088996181,
+              "unallocated_remainder_mm2": 1996227.9431555,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 1278.0928245894477,
+                "width": 1800.0116099999998,
+                "height": 211.90717541055233,
+                "area_mm2": 381435.37598130066,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          }
+        ],
+        "unplaced": [],
+        "method": "Clipper 6.4.2 Minkowski NFP / validated multi-start bottom-left",
+        "global_optimal": false,
+        "candidate_generation": "Decimated outlines for candidate positions only; full bounded-error contours used for every collision check",
+        "seed": 42,
+        "iterations": 2,
+        "search_ms": 8083,
+        "best_objective": 460.75,
+        "complete": true,
+        "format_search": [
+          {
+            "caps": {
+              "P2500": 1,
+              "P3000": 2
+            },
+            "axis": [
+              0,
+              180
+            ],
+            "ms": 5988,
+            "placed": 44,
+            "complete": true,
+            "valid": true
+          },
+          {
+            "caps": {
+              "P2500": 2,
+              "P3000": 1
+            },
+            "axis": [
+              0,
+              180
+            ],
+            "ms": 2013,
+            "placed": 34,
+            "complete": false,
+            "valid": true
+          }
+        ],
+        "deadline_kind": "Shared cooperative wall-clock deadline; wall time includes non-preemptive geometry and validation",
+        "lower_bound_area_mm2": 7418533.873586231
+      },
+      "saved_formats_equal_original": true
+    },
+    {
+      "name": "RINGS_8_73",
+      "seconds": 8.054,
+      "parameters": {
+        "id": "SCENARIO_CNC",
+        "mode": "cnc",
+        "kerf_mm": 3,
+        "margin_mm": 10,
+        "trim_start_mm": 5,
+        "trim_end_mm": 5,
+        "allowance_mm": 0,
+        "min_remnant_mm": 100,
+        "min_remnant_area_mm2": 40000,
+        "part_in_part": false,
+        "hold_verified": false,
+        "common_line": false,
+        "minimum_bridge_mm": 0,
+        "objective": "cost",
+        "seed": 73,
+        "search_seconds": 8,
+        "raw_strategy": "contour",
+        "source": "TESTPARAMETER – keine Maschinenfreigabe",
+        "status": "SCENARIO",
+        "profiles": {
+          "linear": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "saw": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "cnc": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          }
+        }
+      },
+      "input_sha256": "8cd48d8692a6644fbae9adee32cc14c3c5903c42e0b79d4f0f864a6094cd0312",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "placed": 44,
+        "unplaced": 0,
+        "quantity_balanced": true,
+        "method": "Independent segment/winding/distance, count, stock and arithmetic validator; no nesting boolean operation reused."
+      },
+      "placed": 44,
+      "unplaced": 0,
+      "raw_use": 12125000,
+      "purchased_use": 12125000,
+      "cost": 460.75,
+      "formats": [
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P3000",
+          "origin": "purchase",
+          "width": 3000,
+          "height": 1500
+        },
+        {
+          "id": "P3000",
+          "origin": "purchase",
+          "width": 3000,
+          "height": 1500
+        }
+      ],
+      "largest_clear_rectangle_mm2": 381435.37598130066,
+      "trace": [
+        {
+          "ms": 56,
+          "placed": 44,
+          "unplaced": 0
+        },
+        {
+          "ms": 6134,
+          "placed": 44,
+          "unplaced": 0
+        }
+      ],
+      "solution": {
+        "stocks": [
+          {
+            "id": "SHEET1",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:a7e5a787-5927-47c9-8e7d-e3d01fbcf69c#0",
+                "x": 10.030000000000001,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1269.646833,
+                  177.908071
+                ]
+              },
+              {
+                "piece_id": "generationendialog:ee72b898-f3bc-487d-ae8f-84652b209d20#0",
+                "x": 2489.97,
+                "y": 183.0251748942184,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2489.97,
+                  183.02517489421854
+                ]
+              },
+              {
+                "piece_id": "generationendialog:eeb44f56-ba7b-4764-b328-d18f9ab8856b#0",
+                "x": 1269.647,
+                "y": 348.856142,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  348.85614200000015
+                ]
+              },
+              {
+                "piece_id": "generationendialog:c13d1db3-0363-4f93-b02d-c9913ee6e21a#0",
+                "x": 1230.353,
+                "y": 289.47248873913037,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  457.3505597391304
+                ]
+              },
+              {
+                "piece_id": "generationendialog:95db549e-0b8d-4011-b78f-ba65b4dd5621#0",
+                "x": 1269.647,
+                "y": 519.8042130000001,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  519.8042130000002
+                ]
+              },
+              {
+                "piece_id": "generationendialog:bab02780-76b9-4950-8996-e61f71928382#0",
+                "x": 1230.353,
+                "y": 460.4205597391304,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  628.2986307391304
+                ]
+              },
+              {
+                "piece_id": "generationendialog:3eb363db-8dcc-43d8-a995-b9179083fd99#0",
+                "x": 1269.647,
+                "y": 690.7522840000001,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  690.7522840000003
+                ]
+              },
+              {
+                "piece_id": "generationendialog:8199ffb4-2b98-4999-8c20-b14501b0304b#0",
+                "x": 1230.353,
+                "y": 631.3686307391304,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  799.2467017391303
+                ]
+              },
+              {
+                "piece_id": "generationendialog:c7c17ea4-21dd-444b-aeca-d27affeabac9#0",
+                "x": 1269.647,
+                "y": 861.7003550000002,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  861.7003550000003
+                ]
+              },
+              {
+                "piece_id": "generationendialog:aad4b6d1-e59e-4e49-9216-438a87915854#0",
+                "x": 1230.353,
+                "y": 802.3167017391303,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  970.1947727391303
+                ]
+              },
+              {
+                "piece_id": "generationendialog:e5330e97-a571-4575-afc4-17afbc333bef#0",
+                "x": 1269.647,
+                "y": 1032.6484260000002,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  1032.6484260000004
+                ]
+              },
+              {
+                "piece_id": "generationendialog:0d0520e3-9e14-40b2-b890-a27e0436f0cc#0",
+                "x": 1230.353,
+                "y": 973.2647727391302,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  1141.1428437391303
+                ]
+              },
+              {
+                "piece_id": "generationendialog:6348792a-8dc9-4365-994c-3a7eb114b52b#0",
+                "x": 1269.647,
+                "y": 1153.5979760000005,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  1153.5979760000007
+                ]
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 2559914.293215944,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 55411.58389755571,
+              "unallocated_remainder_mm2": 435074.1228865003,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 1155.1429760000008,
+                "width": 2480,
+                "height": 84.85702399999923,
+                "area_mm2": 210445.41951999807,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SHEET2",
+            "format": {
+              "id": "P3000",
+              "width": 3000,
+              "height": 1500,
+              "availability": 20,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:be9403d8-a3a9-4be5-9b32-5a82f5cbeb52#0",
+                "x": 10.030000000000001,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.44339,
+                  471.05112199999996
+                ]
+              },
+              {
+                "piece_id": "generationendialog:643011ad-17b1-4d26-a63e-f0a70ac57853#0",
+                "x": 1191.553,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2369.96639,
+                  471.05112199999996
+                ]
+              },
+              {
+                "piece_id": "generationendialog:25f2762e-191b-48a3-9078-b3f285e15be8#0",
+                "x": 2369.967,
+                "y": 643.1273374957118,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2369.967,
+                  643.1273374957119
+                ]
+              },
+              {
+                "piece_id": "generationendialog:c468dda2-cef2-4600-aefa-c7ba7f94a824#0",
+                "x": 1188.448477,
+                "y": 643.730436770341,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1188.448477,
+                  643.7304367703412
+                ]
+              },
+              {
+                "piece_id": "generationendialog:b3b0454a-b375-4aef-a77d-aad87b491cb0#0",
+                "x": 2369.966,
+                "y": 841.0075143520271,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2369.966,
+                  841.0075143520272
+                ]
+              },
+              {
+                "piece_id": "generationendialog:3fdb6327-0c2b-4037-b11e-b6243240ad57#0",
+                "x": 1188.448477,
+                "y": 841.6111908257434,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1188.448477,
+                  841.6111908257435
+                ]
+              },
+              {
+                "piece_id": "generationendialog:5019ba9d-4bb0-4181-8ec9-a1c3b5cfd813#0",
+                "x": 2989.97,
+                "y": 1012.3816818782617,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1012.3816818782618
+                ]
+              },
+              {
+                "piece_id": "generationendialog:e53cc859-4051-4936-8584-50b64b307b25#0",
+                "x": 1188.431,
+                "y": 1039.4950494759341,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1188.431,
+                  1039.4950494759341
+                ]
+              },
+              {
+                "piece_id": "generationendialog:604a4c00-3efc-4487-98b8-60a9b142b727#0",
+                "x": 2989.97,
+                "y": 1210.2620782273864,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1210.2620782273866
+                ]
+              },
+              {
+                "piece_id": "generationendialog:10af7648-1f8b-46a9-98ee-2c30b5faf1c6#0",
+                "x": 1808.442,
+                "y": 1295.2001748777732,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1808.442,
+                  1295.2001748777734
+                ]
+              },
+              {
+                "piece_id": "generationendialog:b7136ec2-269d-42de-8a4e-ffd2aed91706#0",
+                "x": 2989.97,
+                "y": 1408.1453605958395,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1408.1453605958397
+                ]
+              },
+              {
+                "piece_id": "generationendialog:2e67415a-6f2c-411c-a444-7076916359b4#0",
+                "x": 10.030000000000001,
+                "y": 1298.2701748777733,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1269.646833,
+                  1416.1497248777732
+                ]
+              },
+              {
+                "piece_id": "generationendialog:c5c21112-e787-4dce-a55d-04e2c80e4aa1#0",
+                "x": 2295.004873,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  145.72391100000002
+                ]
+              },
+              {
+                "piece_id": "generationendialog:ec210468-6a51-4b74-bc77-3fbc6c2c322b#0",
+                "x": 2295.004873,
+                "y": 141.91461254239738,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  277.6085235423974
+                ]
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 4500000,
+              "parts_area_mm2": 2512677.494415748,
+              "margin_area_mm2": 89600,
+              "tool_loss_mm2": 57134.975291252136,
+              "unallocated_remainder_mm2": 1840587.530293,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 1417.6947248777733,
+                "width": 2980,
+                "height": 72.3052751222267,
+                "area_mm2": 215469.71986423558,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SHEET3",
+            "format": {
+              "id": "P3000",
+              "width": 3000,
+              "height": 1500,
+              "availability": 20,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:85d78f91-97d9-4c68-b56e-af1bf883ae6a#0",
+                "x": 10.030000000000001,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.44339,
+                  471.05112199999996
+                ]
+              },
+              {
+                "piece_id": "generationendialog:f015c813-b76a-4123-b7f2-d3a215b5659e#0",
+                "x": 1191.553,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2451.169833,
+                  127.90955
+                ]
+              },
+              {
+                "piece_id": "generationendialog:2fb1a5ce-8620-4a6a-9613-a14d546cf621#0",
+                "x": 1191.553,
+                "y": 130.97955,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2451.169833,
+                  248.85909999999998
+                ]
+              },
+              {
+                "piece_id": "generationendialog:53a6ab7c-9554-4854-99c1-65e880781842#0",
+                "x": 1191.553,
+                "y": 251.92909999999998,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2451.169833,
+                  369.80864999999994
+                ]
+              },
+              {
+                "piece_id": "generationendialog:5b690bbf-a907-4e36-ae2e-483a882b8c19#0",
+                "x": 1191.553,
+                "y": 372.87864999999994,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2451.169833,
+                  490.75819999999993
+                ]
+              },
+              {
+                "piece_id": "generationendialog:2407a4f9-5bc8-414f-9eb8-d23334d696b8#0",
+                "x": 10.030000000000001,
+                "y": 493.8281999999999,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1269.646833,
+                  611.7077499999999
+                ]
+              },
+              {
+                "piece_id": "generationendialog:d4f16f17-2047-4004-8ace-83f8aa2097aa#0",
+                "x": 1272.757,
+                "y": 493.8281999999999,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2532.373833,
+                  611.7077499999999
+                ]
+              },
+              {
+                "piece_id": "generationendialog:fa060813-11a6-42fd-be6f-e7db46dd3508#0",
+                "x": 1811.5549629999998,
+                "y": 369.46460458177006,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  787.3016495817701
+                ]
+              },
+              {
+                "piece_id": "generationendialog:65a1c10c-d954-4d2e-9eca-b1778b88f3ae#0",
+                "x": 1191.553,
+                "y": 601.4682679761642,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2369.968037,
+                  1019.3053129761641
+                ]
+              },
+              {
+                "piece_id": "generationendialog:80b9b957-3ac2-48c0-ada4-62133a2e289f#0",
+                "x": 10.030000000000001,
+                "y": 614.7777499999999,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.44339,
+                  1032.491881
+                ]
+              },
+              {
+                "piece_id": "generationendialog:83ff60ff-998e-47d5-b8ee-a01ea6c3dea4#0",
+                "x": 1269.647,
+                "y": 1155.1708245894476,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  1155.1708245894476
+                ]
+              },
+              {
+                "piece_id": "generationendialog:946c8382-cc8e-48cb-b8f9-1c0f383edd19#0",
+                "x": 2989.968,
+                "y": 1140.5709515101294,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.968,
+                  1140.5709515101296
+                ]
+              },
+              {
+                "piece_id": "generationendialog:74416896-0722-4871-94c8-707adbf4f5af#0",
+                "x": 2989.97,
+                "y": 1280.7215235234708,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1280.721523523471
+                ]
+              },
+              {
+                "piece_id": "generationendialog:a597ecd2-39ae-4f5d-b9c0-2a6aed8390ad#0",
+                "x": 2989.97,
+                "y": 1420.8732499455448,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1420.873249945545
+                ]
+              },
+              {
+                "piece_id": "generationendialog:d94600cb-4b2a-4f85-861e-f964d296d5fa#0",
+                "x": 1188.44,
+                "y": 1276.5478245894476,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1188.44,
+                  1276.5478245894476
+                ]
+              },
+              {
+                "piece_id": "generationendialog:7281afd1-2181-450f-ae8d-c1c064ccf58e#0",
+                "x": 493.478,
+                "y": 213.63347242979935,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.443127,
+                  349.3273834297994
+                ]
+              },
+              {
+                "piece_id": "generationendialog:2addbcc5-ab5e-4876-bf50-48317c44d031#0",
+                "x": 493.475,
+                "y": 345.51727989173196,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.440127,
+                  481.211190891732
+                ]
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 4500000,
+              "parts_area_mm2": 2345942.085954538,
+              "margin_area_mm2": 89600,
+              "tool_loss_mm2": 68229.97088996181,
+              "unallocated_remainder_mm2": 1996227.9431555,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 1278.0928245894477,
+                "width": 1800.0116099999998,
+                "height": 211.90717541055233,
+                "area_mm2": 381435.37598130066,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          }
+        ],
+        "unplaced": [],
+        "method": "Clipper 6.4.2 Minkowski NFP / validated multi-start bottom-left",
+        "global_optimal": false,
+        "candidate_generation": "Decimated outlines for candidate positions only; full bounded-error contours used for every collision check",
+        "seed": 73,
+        "iterations": 2,
+        "search_ms": 8051,
+        "best_objective": 460.75,
+        "complete": true,
+        "format_search": [
+          {
+            "caps": {
+              "P2500": 1,
+              "P3000": 2
+            },
+            "axis": [
+              0,
+              180
+            ],
+            "ms": 6077,
+            "placed": 44,
+            "complete": true,
+            "valid": true
+          },
+          {
+            "caps": {
+              "P2500": 2,
+              "P3000": 1
+            },
+            "axis": [
+              0,
+              180
+            ],
+            "ms": 1905,
+            "placed": 33,
+            "complete": false,
+            "valid": true
+          }
+        ],
+        "deadline_kind": "Shared cooperative wall-clock deadline; wall time includes non-preemptive geometry and validation",
+        "lower_bound_area_mm2": 7418533.873586231
+      },
+      "saved_formats_equal_original": true
+    },
+    {
+      "name": "RINGS_20_42",
+      "seconds": 20.054,
+      "parameters": {
+        "id": "SCENARIO_CNC",
+        "mode": "cnc",
+        "kerf_mm": 3,
+        "margin_mm": 10,
+        "trim_start_mm": 5,
+        "trim_end_mm": 5,
+        "allowance_mm": 0,
+        "min_remnant_mm": 100,
+        "min_remnant_area_mm2": 40000,
+        "part_in_part": false,
+        "hold_verified": false,
+        "common_line": false,
+        "minimum_bridge_mm": 0,
+        "objective": "cost",
+        "seed": 42,
+        "search_seconds": 20,
+        "raw_strategy": "contour",
+        "source": "TESTPARAMETER – keine Maschinenfreigabe",
+        "status": "SCENARIO",
+        "profiles": {
+          "linear": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "saw": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "cnc": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          }
+        }
+      },
+      "input_sha256": "f4f3aa2bdb35d2bb4461f989978f717c8d276254d69638896db7c4aad1c90d7b",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "placed": 44,
+        "unplaced": 0,
+        "quantity_balanced": true,
+        "method": "Independent segment/winding/distance, count, stock and arithmetic validator; no nesting boolean operation reused."
+      },
+      "placed": 44,
+      "unplaced": 0,
+      "raw_use": 12125000,
+      "purchased_use": 12125000,
+      "cost": 460.75,
+      "formats": [
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P3000",
+          "origin": "purchase",
+          "width": 3000,
+          "height": 1500
+        },
+        {
+          "id": "P3000",
+          "origin": "purchase",
+          "width": 3000,
+          "height": 1500
+        }
+      ],
+      "largest_clear_rectangle_mm2": 381435.37598130066,
+      "trace": [
+        {
+          "ms": 53,
+          "placed": 44,
+          "unplaced": 0
+        },
+        {
+          "ms": 6037,
+          "placed": 44,
+          "unplaced": 0
+        }
+      ],
+      "solution": {
+        "stocks": [
+          {
+            "id": "SHEET1",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:a7e5a787-5927-47c9-8e7d-e3d01fbcf69c#0",
+                "x": 10.030000000000001,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1269.646833,
+                  177.908071
+                ]
+              },
+              {
+                "piece_id": "generationendialog:ee72b898-f3bc-487d-ae8f-84652b209d20#0",
+                "x": 2489.97,
+                "y": 183.0251748942184,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2489.97,
+                  183.02517489421854
+                ]
+              },
+              {
+                "piece_id": "generationendialog:eeb44f56-ba7b-4764-b328-d18f9ab8856b#0",
+                "x": 1269.647,
+                "y": 348.856142,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  348.85614200000015
+                ]
+              },
+              {
+                "piece_id": "generationendialog:c13d1db3-0363-4f93-b02d-c9913ee6e21a#0",
+                "x": 1230.353,
+                "y": 289.47248873913037,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  457.3505597391304
+                ]
+              },
+              {
+                "piece_id": "generationendialog:95db549e-0b8d-4011-b78f-ba65b4dd5621#0",
+                "x": 1269.647,
+                "y": 519.8042130000001,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  519.8042130000002
+                ]
+              },
+              {
+                "piece_id": "generationendialog:bab02780-76b9-4950-8996-e61f71928382#0",
+                "x": 1230.353,
+                "y": 460.4205597391304,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  628.2986307391304
+                ]
+              },
+              {
+                "piece_id": "generationendialog:3eb363db-8dcc-43d8-a995-b9179083fd99#0",
+                "x": 1269.647,
+                "y": 690.7522840000001,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  690.7522840000003
+                ]
+              },
+              {
+                "piece_id": "generationendialog:8199ffb4-2b98-4999-8c20-b14501b0304b#0",
+                "x": 1230.353,
+                "y": 631.3686307391304,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  799.2467017391303
+                ]
+              },
+              {
+                "piece_id": "generationendialog:c7c17ea4-21dd-444b-aeca-d27affeabac9#0",
+                "x": 1269.647,
+                "y": 861.7003550000002,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  861.7003550000003
+                ]
+              },
+              {
+                "piece_id": "generationendialog:aad4b6d1-e59e-4e49-9216-438a87915854#0",
+                "x": 1230.353,
+                "y": 802.3167017391303,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  970.1947727391303
+                ]
+              },
+              {
+                "piece_id": "generationendialog:e5330e97-a571-4575-afc4-17afbc333bef#0",
+                "x": 1269.647,
+                "y": 1032.6484260000002,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  1032.6484260000004
+                ]
+              },
+              {
+                "piece_id": "generationendialog:0d0520e3-9e14-40b2-b890-a27e0436f0cc#0",
+                "x": 1230.353,
+                "y": 973.2647727391302,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  1141.1428437391303
+                ]
+              },
+              {
+                "piece_id": "generationendialog:6348792a-8dc9-4365-994c-3a7eb114b52b#0",
+                "x": 1269.647,
+                "y": 1153.5979760000005,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  1153.5979760000007
+                ]
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 2559914.293215944,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 55411.58389755571,
+              "unallocated_remainder_mm2": 435074.1228865003,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 1155.1429760000008,
+                "width": 2480,
+                "height": 84.85702399999923,
+                "area_mm2": 210445.41951999807,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SHEET2",
+            "format": {
+              "id": "P3000",
+              "width": 3000,
+              "height": 1500,
+              "availability": 20,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:be9403d8-a3a9-4be5-9b32-5a82f5cbeb52#0",
+                "x": 10.030000000000001,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.44339,
+                  471.05112199999996
+                ]
+              },
+              {
+                "piece_id": "generationendialog:643011ad-17b1-4d26-a63e-f0a70ac57853#0",
+                "x": 1191.553,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2369.96639,
+                  471.05112199999996
+                ]
+              },
+              {
+                "piece_id": "generationendialog:25f2762e-191b-48a3-9078-b3f285e15be8#0",
+                "x": 2369.967,
+                "y": 643.1273374957118,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2369.967,
+                  643.1273374957119
+                ]
+              },
+              {
+                "piece_id": "generationendialog:c468dda2-cef2-4600-aefa-c7ba7f94a824#0",
+                "x": 1188.448477,
+                "y": 643.730436770341,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1188.448477,
+                  643.7304367703412
+                ]
+              },
+              {
+                "piece_id": "generationendialog:b3b0454a-b375-4aef-a77d-aad87b491cb0#0",
+                "x": 2369.966,
+                "y": 841.0075143520271,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2369.966,
+                  841.0075143520272
+                ]
+              },
+              {
+                "piece_id": "generationendialog:3fdb6327-0c2b-4037-b11e-b6243240ad57#0",
+                "x": 1188.448477,
+                "y": 841.6111908257434,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1188.448477,
+                  841.6111908257435
+                ]
+              },
+              {
+                "piece_id": "generationendialog:5019ba9d-4bb0-4181-8ec9-a1c3b5cfd813#0",
+                "x": 2989.97,
+                "y": 1012.3816818782617,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1012.3816818782618
+                ]
+              },
+              {
+                "piece_id": "generationendialog:e53cc859-4051-4936-8584-50b64b307b25#0",
+                "x": 1188.431,
+                "y": 1039.4950494759341,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1188.431,
+                  1039.4950494759341
+                ]
+              },
+              {
+                "piece_id": "generationendialog:604a4c00-3efc-4487-98b8-60a9b142b727#0",
+                "x": 2989.97,
+                "y": 1210.2620782273864,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1210.2620782273866
+                ]
+              },
+              {
+                "piece_id": "generationendialog:10af7648-1f8b-46a9-98ee-2c30b5faf1c6#0",
+                "x": 1808.442,
+                "y": 1295.2001748777732,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1808.442,
+                  1295.2001748777734
+                ]
+              },
+              {
+                "piece_id": "generationendialog:b7136ec2-269d-42de-8a4e-ffd2aed91706#0",
+                "x": 2989.97,
+                "y": 1408.1453605958395,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1408.1453605958397
+                ]
+              },
+              {
+                "piece_id": "generationendialog:2e67415a-6f2c-411c-a444-7076916359b4#0",
+                "x": 10.030000000000001,
+                "y": 1298.2701748777733,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1269.646833,
+                  1416.1497248777732
+                ]
+              },
+              {
+                "piece_id": "generationendialog:c5c21112-e787-4dce-a55d-04e2c80e4aa1#0",
+                "x": 2295.004873,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  145.72391100000002
+                ]
+              },
+              {
+                "piece_id": "generationendialog:ec210468-6a51-4b74-bc77-3fbc6c2c322b#0",
+                "x": 2295.004873,
+                "y": 141.91461254239738,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  277.6085235423974
+                ]
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 4500000,
+              "parts_area_mm2": 2512677.494415748,
+              "margin_area_mm2": 89600,
+              "tool_loss_mm2": 57134.975291252136,
+              "unallocated_remainder_mm2": 1840587.530293,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 1417.6947248777733,
+                "width": 2980,
+                "height": 72.3052751222267,
+                "area_mm2": 215469.71986423558,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SHEET3",
+            "format": {
+              "id": "P3000",
+              "width": 3000,
+              "height": 1500,
+              "availability": 20,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:85d78f91-97d9-4c68-b56e-af1bf883ae6a#0",
+                "x": 10.030000000000001,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.44339,
+                  471.05112199999996
+                ]
+              },
+              {
+                "piece_id": "generationendialog:f015c813-b76a-4123-b7f2-d3a215b5659e#0",
+                "x": 1191.553,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2451.169833,
+                  127.90955
+                ]
+              },
+              {
+                "piece_id": "generationendialog:2fb1a5ce-8620-4a6a-9613-a14d546cf621#0",
+                "x": 1191.553,
+                "y": 130.97955,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2451.169833,
+                  248.85909999999998
+                ]
+              },
+              {
+                "piece_id": "generationendialog:53a6ab7c-9554-4854-99c1-65e880781842#0",
+                "x": 1191.553,
+                "y": 251.92909999999998,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2451.169833,
+                  369.80864999999994
+                ]
+              },
+              {
+                "piece_id": "generationendialog:5b690bbf-a907-4e36-ae2e-483a882b8c19#0",
+                "x": 1191.553,
+                "y": 372.87864999999994,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2451.169833,
+                  490.75819999999993
+                ]
+              },
+              {
+                "piece_id": "generationendialog:2407a4f9-5bc8-414f-9eb8-d23334d696b8#0",
+                "x": 10.030000000000001,
+                "y": 493.8281999999999,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1269.646833,
+                  611.7077499999999
+                ]
+              },
+              {
+                "piece_id": "generationendialog:d4f16f17-2047-4004-8ace-83f8aa2097aa#0",
+                "x": 1272.757,
+                "y": 493.8281999999999,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2532.373833,
+                  611.7077499999999
+                ]
+              },
+              {
+                "piece_id": "generationendialog:fa060813-11a6-42fd-be6f-e7db46dd3508#0",
+                "x": 1811.5549629999998,
+                "y": 369.46460458177006,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  787.3016495817701
+                ]
+              },
+              {
+                "piece_id": "generationendialog:65a1c10c-d954-4d2e-9eca-b1778b88f3ae#0",
+                "x": 1191.553,
+                "y": 601.4682679761642,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2369.968037,
+                  1019.3053129761641
+                ]
+              },
+              {
+                "piece_id": "generationendialog:80b9b957-3ac2-48c0-ada4-62133a2e289f#0",
+                "x": 10.030000000000001,
+                "y": 614.7777499999999,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.44339,
+                  1032.491881
+                ]
+              },
+              {
+                "piece_id": "generationendialog:83ff60ff-998e-47d5-b8ee-a01ea6c3dea4#0",
+                "x": 1269.647,
+                "y": 1155.1708245894476,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  1155.1708245894476
+                ]
+              },
+              {
+                "piece_id": "generationendialog:946c8382-cc8e-48cb-b8f9-1c0f383edd19#0",
+                "x": 2989.968,
+                "y": 1140.5709515101294,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.968,
+                  1140.5709515101296
+                ]
+              },
+              {
+                "piece_id": "generationendialog:74416896-0722-4871-94c8-707adbf4f5af#0",
+                "x": 2989.97,
+                "y": 1280.7215235234708,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1280.721523523471
+                ]
+              },
+              {
+                "piece_id": "generationendialog:a597ecd2-39ae-4f5d-b9c0-2a6aed8390ad#0",
+                "x": 2989.97,
+                "y": 1420.8732499455448,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1420.873249945545
+                ]
+              },
+              {
+                "piece_id": "generationendialog:d94600cb-4b2a-4f85-861e-f964d296d5fa#0",
+                "x": 1188.44,
+                "y": 1276.5478245894476,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1188.44,
+                  1276.5478245894476
+                ]
+              },
+              {
+                "piece_id": "generationendialog:7281afd1-2181-450f-ae8d-c1c064ccf58e#0",
+                "x": 493.478,
+                "y": 213.63347242979935,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.443127,
+                  349.3273834297994
+                ]
+              },
+              {
+                "piece_id": "generationendialog:2addbcc5-ab5e-4876-bf50-48317c44d031#0",
+                "x": 493.475,
+                "y": 345.51727989173196,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.440127,
+                  481.211190891732
+                ]
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 4500000,
+              "parts_area_mm2": 2345942.085954538,
+              "margin_area_mm2": 89600,
+              "tool_loss_mm2": 68229.97088996181,
+              "unallocated_remainder_mm2": 1996227.9431555,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 1278.0928245894477,
+                "width": 1800.0116099999998,
+                "height": 211.90717541055233,
+                "area_mm2": 381435.37598130066,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          }
+        ],
+        "unplaced": [],
+        "method": "Clipper 6.4.2 Minkowski NFP / validated multi-start bottom-left",
+        "global_optimal": false,
+        "candidate_generation": "Decimated outlines for candidate positions only; full bounded-error contours used for every collision check",
+        "seed": 42,
+        "iterations": 5,
+        "search_ms": 20051,
+        "best_objective": 460.75,
+        "complete": true,
+        "format_search": [
+          {
+            "caps": {
+              "P2500": 1,
+              "P3000": 2
+            },
+            "axis": [
+              0,
+              180
+            ],
+            "ms": 5983,
+            "placed": 44,
+            "complete": true,
+            "valid": true
+          },
+          {
+            "caps": {
+              "P2500": 2,
+              "P3000": 1
+            },
+            "axis": [
+              0,
+              180
+            ],
+            "ms": 4165,
+            "placed": 41,
+            "complete": false,
+            "valid": true
+          },
+          {
+            "caps": {
+              "P2500": 3
+            },
+            "axis": [
+              0,
+              180
+            ],
+            "ms": 3812,
+            "placed": 36,
+            "complete": false,
+            "valid": true
+          },
+          {
+            "caps": {
+              "P3000": 2
+            },
+            "axis": [
+              0,
+              180
+            ],
+            "ms": 3716,
+            "placed": 32,
+            "complete": false,
+            "valid": true
+          }
+        ],
+        "deadline_kind": "Shared cooperative wall-clock deadline; wall time includes non-preemptive geometry and validation",
+        "lower_bound_area_mm2": 7418533.873586231
+      },
+      "saved_formats_equal_original": true
+    },
+    {
+      "name": "RINGS_20_73",
+      "seconds": 20.055,
+      "parameters": {
+        "id": "SCENARIO_CNC",
+        "mode": "cnc",
+        "kerf_mm": 3,
+        "margin_mm": 10,
+        "trim_start_mm": 5,
+        "trim_end_mm": 5,
+        "allowance_mm": 0,
+        "min_remnant_mm": 100,
+        "min_remnant_area_mm2": 40000,
+        "part_in_part": false,
+        "hold_verified": false,
+        "common_line": false,
+        "minimum_bridge_mm": 0,
+        "objective": "cost",
+        "seed": 73,
+        "search_seconds": 20,
+        "raw_strategy": "contour",
+        "source": "TESTPARAMETER – keine Maschinenfreigabe",
+        "status": "SCENARIO",
+        "profiles": {
+          "linear": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "saw": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "cnc": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          }
+        }
+      },
+      "input_sha256": "ee437d89d2751b5363670206e471932bbd1dd059eee2dc7ca1be3af354044683",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "placed": 44,
+        "unplaced": 0,
+        "quantity_balanced": true,
+        "method": "Independent segment/winding/distance, count, stock and arithmetic validator; no nesting boolean operation reused."
+      },
+      "placed": 44,
+      "unplaced": 0,
+      "raw_use": 12125000,
+      "purchased_use": 12125000,
+      "cost": 460.75,
+      "formats": [
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P3000",
+          "origin": "purchase",
+          "width": 3000,
+          "height": 1500
+        },
+        {
+          "id": "P3000",
+          "origin": "purchase",
+          "width": 3000,
+          "height": 1500
+        }
+      ],
+      "largest_clear_rectangle_mm2": 381435.37598130066,
+      "trace": [
+        {
+          "ms": 51,
+          "placed": 44,
+          "unplaced": 0
+        },
+        {
+          "ms": 5879,
+          "placed": 44,
+          "unplaced": 0
+        }
+      ],
+      "solution": {
+        "stocks": [
+          {
+            "id": "SHEET1",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:a7e5a787-5927-47c9-8e7d-e3d01fbcf69c#0",
+                "x": 10.030000000000001,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1269.646833,
+                  177.908071
+                ]
+              },
+              {
+                "piece_id": "generationendialog:ee72b898-f3bc-487d-ae8f-84652b209d20#0",
+                "x": 2489.97,
+                "y": 183.0251748942184,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2489.97,
+                  183.02517489421854
+                ]
+              },
+              {
+                "piece_id": "generationendialog:eeb44f56-ba7b-4764-b328-d18f9ab8856b#0",
+                "x": 1269.647,
+                "y": 348.856142,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  348.85614200000015
+                ]
+              },
+              {
+                "piece_id": "generationendialog:c13d1db3-0363-4f93-b02d-c9913ee6e21a#0",
+                "x": 1230.353,
+                "y": 289.47248873913037,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  457.3505597391304
+                ]
+              },
+              {
+                "piece_id": "generationendialog:95db549e-0b8d-4011-b78f-ba65b4dd5621#0",
+                "x": 1269.647,
+                "y": 519.8042130000001,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  519.8042130000002
+                ]
+              },
+              {
+                "piece_id": "generationendialog:bab02780-76b9-4950-8996-e61f71928382#0",
+                "x": 1230.353,
+                "y": 460.4205597391304,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  628.2986307391304
+                ]
+              },
+              {
+                "piece_id": "generationendialog:3eb363db-8dcc-43d8-a995-b9179083fd99#0",
+                "x": 1269.647,
+                "y": 690.7522840000001,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  690.7522840000003
+                ]
+              },
+              {
+                "piece_id": "generationendialog:8199ffb4-2b98-4999-8c20-b14501b0304b#0",
+                "x": 1230.353,
+                "y": 631.3686307391304,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  799.2467017391303
+                ]
+              },
+              {
+                "piece_id": "generationendialog:c7c17ea4-21dd-444b-aeca-d27affeabac9#0",
+                "x": 1269.647,
+                "y": 861.7003550000002,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  861.7003550000003
+                ]
+              },
+              {
+                "piece_id": "generationendialog:aad4b6d1-e59e-4e49-9216-438a87915854#0",
+                "x": 1230.353,
+                "y": 802.3167017391303,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  970.1947727391303
+                ]
+              },
+              {
+                "piece_id": "generationendialog:e5330e97-a571-4575-afc4-17afbc333bef#0",
+                "x": 1269.647,
+                "y": 1032.6484260000002,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  1032.6484260000004
+                ]
+              },
+              {
+                "piece_id": "generationendialog:0d0520e3-9e14-40b2-b890-a27e0436f0cc#0",
+                "x": 1230.353,
+                "y": 973.2647727391302,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2489.969833,
+                  1141.1428437391303
+                ]
+              },
+              {
+                "piece_id": "generationendialog:6348792a-8dc9-4365-994c-3a7eb114b52b#0",
+                "x": 1269.647,
+                "y": 1153.5979760000005,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  1153.5979760000007
+                ]
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 2559914.293215944,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 55411.58389755571,
+              "unallocated_remainder_mm2": 435074.1228865003,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 1155.1429760000008,
+                "width": 2480,
+                "height": 84.85702399999923,
+                "area_mm2": 210445.41951999807,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SHEET2",
+            "format": {
+              "id": "P3000",
+              "width": 3000,
+              "height": 1500,
+              "availability": 20,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:be9403d8-a3a9-4be5-9b32-5a82f5cbeb52#0",
+                "x": 10.030000000000001,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.44339,
+                  471.05112199999996
+                ]
+              },
+              {
+                "piece_id": "generationendialog:643011ad-17b1-4d26-a63e-f0a70ac57853#0",
+                "x": 1191.553,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2369.96639,
+                  471.05112199999996
+                ]
+              },
+              {
+                "piece_id": "generationendialog:25f2762e-191b-48a3-9078-b3f285e15be8#0",
+                "x": 2369.967,
+                "y": 643.1273374957118,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2369.967,
+                  643.1273374957119
+                ]
+              },
+              {
+                "piece_id": "generationendialog:c468dda2-cef2-4600-aefa-c7ba7f94a824#0",
+                "x": 1188.448477,
+                "y": 643.730436770341,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1188.448477,
+                  643.7304367703412
+                ]
+              },
+              {
+                "piece_id": "generationendialog:b3b0454a-b375-4aef-a77d-aad87b491cb0#0",
+                "x": 2369.966,
+                "y": 841.0075143520271,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2369.966,
+                  841.0075143520272
+                ]
+              },
+              {
+                "piece_id": "generationendialog:3fdb6327-0c2b-4037-b11e-b6243240ad57#0",
+                "x": 1188.448477,
+                "y": 841.6111908257434,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1188.448477,
+                  841.6111908257435
+                ]
+              },
+              {
+                "piece_id": "generationendialog:5019ba9d-4bb0-4181-8ec9-a1c3b5cfd813#0",
+                "x": 2989.97,
+                "y": 1012.3816818782617,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1012.3816818782618
+                ]
+              },
+              {
+                "piece_id": "generationendialog:e53cc859-4051-4936-8584-50b64b307b25#0",
+                "x": 1188.431,
+                "y": 1039.4950494759341,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1188.431,
+                  1039.4950494759341
+                ]
+              },
+              {
+                "piece_id": "generationendialog:604a4c00-3efc-4487-98b8-60a9b142b727#0",
+                "x": 2989.97,
+                "y": 1210.2620782273864,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1210.2620782273866
+                ]
+              },
+              {
+                "piece_id": "generationendialog:10af7648-1f8b-46a9-98ee-2c30b5faf1c6#0",
+                "x": 1808.442,
+                "y": 1295.2001748777732,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1808.442,
+                  1295.2001748777734
+                ]
+              },
+              {
+                "piece_id": "generationendialog:b7136ec2-269d-42de-8a4e-ffd2aed91706#0",
+                "x": 2989.97,
+                "y": 1408.1453605958395,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1408.1453605958397
+                ]
+              },
+              {
+                "piece_id": "generationendialog:2e67415a-6f2c-411c-a444-7076916359b4#0",
+                "x": 10.030000000000001,
+                "y": 1298.2701748777733,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1269.646833,
+                  1416.1497248777732
+                ]
+              },
+              {
+                "piece_id": "generationendialog:c5c21112-e787-4dce-a55d-04e2c80e4aa1#0",
+                "x": 2295.004873,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  145.72391100000002
+                ]
+              },
+              {
+                "piece_id": "generationendialog:ec210468-6a51-4b74-bc77-3fbc6c2c322b#0",
+                "x": 2295.004873,
+                "y": 141.91461254239738,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  277.6085235423974
+                ]
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 4500000,
+              "parts_area_mm2": 2512677.494415748,
+              "margin_area_mm2": 89600,
+              "tool_loss_mm2": 57134.975291252136,
+              "unallocated_remainder_mm2": 1840587.530293,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 1417.6947248777733,
+                "width": 2980,
+                "height": 72.3052751222267,
+                "area_mm2": 215469.71986423558,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SHEET3",
+            "format": {
+              "id": "P3000",
+              "width": 3000,
+              "height": 1500,
+              "availability": 20,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:85d78f91-97d9-4c68-b56e-af1bf883ae6a#0",
+                "x": 10.030000000000001,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.44339,
+                  471.05112199999996
+                ]
+              },
+              {
+                "piece_id": "generationendialog:f015c813-b76a-4123-b7f2-d3a215b5659e#0",
+                "x": 1191.553,
+                "y": 10.030000000000001,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2451.169833,
+                  127.90955
+                ]
+              },
+              {
+                "piece_id": "generationendialog:2fb1a5ce-8620-4a6a-9613-a14d546cf621#0",
+                "x": 1191.553,
+                "y": 130.97955,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2451.169833,
+                  248.85909999999998
+                ]
+              },
+              {
+                "piece_id": "generationendialog:53a6ab7c-9554-4854-99c1-65e880781842#0",
+                "x": 1191.553,
+                "y": 251.92909999999998,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2451.169833,
+                  369.80864999999994
+                ]
+              },
+              {
+                "piece_id": "generationendialog:5b690bbf-a907-4e36-ae2e-483a882b8c19#0",
+                "x": 1191.553,
+                "y": 372.87864999999994,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2451.169833,
+                  490.75819999999993
+                ]
+              },
+              {
+                "piece_id": "generationendialog:2407a4f9-5bc8-414f-9eb8-d23334d696b8#0",
+                "x": 10.030000000000001,
+                "y": 493.8281999999999,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1269.646833,
+                  611.7077499999999
+                ]
+              },
+              {
+                "piece_id": "generationendialog:d4f16f17-2047-4004-8ace-83f8aa2097aa#0",
+                "x": 1272.757,
+                "y": 493.8281999999999,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2532.373833,
+                  611.7077499999999
+                ]
+              },
+              {
+                "piece_id": "generationendialog:fa060813-11a6-42fd-be6f-e7db46dd3508#0",
+                "x": 1811.5549629999998,
+                "y": 369.46460458177006,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  787.3016495817701
+                ]
+              },
+              {
+                "piece_id": "generationendialog:65a1c10c-d954-4d2e-9eca-b1778b88f3ae#0",
+                "x": 1191.553,
+                "y": 601.4682679761642,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  2369.968037,
+                  1019.3053129761641
+                ]
+              },
+              {
+                "piece_id": "generationendialog:80b9b957-3ac2-48c0-ada4-62133a2e289f#0",
+                "x": 10.030000000000001,
+                "y": 614.7777499999999,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.44339,
+                  1032.491881
+                ]
+              },
+              {
+                "piece_id": "generationendialog:83ff60ff-998e-47d5-b8ee-a01ea6c3dea4#0",
+                "x": 1269.647,
+                "y": 1155.1708245894476,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1269.647,
+                  1155.1708245894476
+                ]
+              },
+              {
+                "piece_id": "generationendialog:946c8382-cc8e-48cb-b8f9-1c0f383edd19#0",
+                "x": 2989.968,
+                "y": 1140.5709515101294,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.968,
+                  1140.5709515101296
+                ]
+              },
+              {
+                "piece_id": "generationendialog:74416896-0722-4871-94c8-707adbf4f5af#0",
+                "x": 2989.97,
+                "y": 1280.7215235234708,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1280.721523523471
+                ]
+              },
+              {
+                "piece_id": "generationendialog:a597ecd2-39ae-4f5d-b9c0-2a6aed8390ad#0",
+                "x": 2989.97,
+                "y": 1420.8732499455448,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  2989.97,
+                  1420.873249945545
+                ]
+              },
+              {
+                "piece_id": "generationendialog:d94600cb-4b2a-4f85-861e-f964d296d5fa#0",
+                "x": 1188.44,
+                "y": 1276.5478245894476,
+                "angle": 180,
+                "locked": false,
+                "_extent": [
+                  1188.44,
+                  1276.5478245894476
+                ]
+              },
+              {
+                "piece_id": "generationendialog:7281afd1-2181-450f-ae8d-c1c064ccf58e#0",
+                "x": 493.478,
+                "y": 213.63347242979935,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.443127,
+                  349.3273834297994
+                ]
+              },
+              {
+                "piece_id": "generationendialog:2addbcc5-ab5e-4876-bf50-48317c44d031#0",
+                "x": 493.475,
+                "y": 345.51727989173196,
+                "angle": 0,
+                "locked": false,
+                "_extent": [
+                  1188.440127,
+                  481.211190891732
+                ]
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 4500000,
+              "parts_area_mm2": 2345942.085954538,
+              "margin_area_mm2": 89600,
+              "tool_loss_mm2": 68229.97088996181,
+              "unallocated_remainder_mm2": 1996227.9431555,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 1278.0928245894477,
+                "width": 1800.0116099999998,
+                "height": 211.90717541055233,
+                "area_mm2": 381435.37598130066,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          }
+        ],
+        "unplaced": [],
+        "method": "Clipper 6.4.2 Minkowski NFP / validated multi-start bottom-left",
+        "global_optimal": false,
+        "candidate_generation": "Decimated outlines for candidate positions only; full bounded-error contours used for every collision check",
+        "seed": 73,
+        "iterations": 5,
+        "search_ms": 20052,
+        "best_objective": 460.75,
+        "complete": true,
+        "format_search": [
+          {
+            "caps": {
+              "P2500": 1,
+              "P3000": 2
+            },
+            "axis": [
+              0,
+              180
+            ],
+            "ms": 5827,
+            "placed": 44,
+            "complete": true,
+            "valid": true
+          },
+          {
+            "caps": {
+              "P2500": 2,
+              "P3000": 1
+            },
+            "axis": [
+              0,
+              180
+            ],
+            "ms": 4271,
+            "placed": 41,
+            "complete": false,
+            "valid": true
+          },
+          {
+            "caps": {
+              "P2500": 3
+            },
+            "axis": [
+              0,
+              180
+            ],
+            "ms": 3789,
+            "placed": 36,
+            "complete": false,
+            "valid": true
+          },
+          {
+            "caps": {
+              "P3000": 2
+            },
+            "axis": [
+              0,
+              180
+            ],
+            "ms": 3857,
+            "placed": 32,
+            "complete": false,
+            "valid": true
+          }
+        ],
+        "deadline_kind": "Shared cooperative wall-clock deadline; wall time includes non-preemptive geometry and validation",
+        "lower_bound_area_mm2": 7418533.873586231
+      },
+      "saved_formats_equal_original": true
+    },
+    {
+      "name": "CANCEL_FIRST_FULL",
+      "seconds": 0.056,
+      "parameters": {
+        "id": "SCENARIO_CNC",
+        "mode": "cnc",
+        "kerf_mm": 3,
+        "margin_mm": 10,
+        "trim_start_mm": 5,
+        "trim_end_mm": 5,
+        "allowance_mm": 0,
+        "min_remnant_mm": 100,
+        "min_remnant_area_mm2": 40000,
+        "part_in_part": false,
+        "hold_verified": false,
+        "common_line": false,
+        "minimum_bridge_mm": 0,
+        "objective": "cost",
+        "seed": 42,
+        "search_seconds": 8,
+        "raw_strategy": "contour",
+        "source": "TESTPARAMETER – keine Maschinenfreigabe",
+        "status": "SCENARIO",
+        "profiles": {
+          "linear": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "saw": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "cnc": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          }
+        }
+      },
+      "input_sha256": "bc7d2a554e65950673445a50291d3cebddb0871b4428ba5876af21e176479d2b",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "placed": 44,
+        "unplaced": 0,
+        "quantity_balanced": true,
+        "method": "Independent segment/winding/distance, count, stock and arithmetic validator; no nesting boolean operation reused."
+      },
+      "placed": 44,
+      "unplaced": 0,
+      "raw_use": 21875000,
+      "purchased_use": 21875000,
+      "cost": 831.25,
+      "formats": [
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        },
+        {
+          "id": "P2500",
+          "origin": "purchase",
+          "width": 2500,
+          "height": 1250
+        }
+      ],
+      "largest_clear_rectangle_mm2": 2454237.512,
+      "trace": [],
+      "solution": {
+        "stocks": [
+          {
+            "id": "SAW1",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:c468dda2-cef2-4600-aefa-c7ba7f94a824#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:5019ba9d-4bb0-4181-8ec9-a1c3b5cfd813#0",
+                "x": 1191.502477,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:b3b0454a-b375-4aef-a77d-aad87b491cb0#0",
+                "x": 10.028,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:3fdb6327-0c2b-4037-b11e-b6243240ad57#0",
+                "x": 1191.502477,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:a7e5a787-5927-47c9-8e7d-e3d01fbcf69c#0",
+                "x": 10.028,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:53a6ab7c-9554-4854-99c1-65e880781842#0",
+                "x": 10.028,
+                "y": 1109.116315,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:c5c21112-e787-4dce-a55d-04e2c80e4aa1#0",
+                "x": 1272.700833,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 1226699.6533611645,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 27227.46390383551,
+              "unallocated_remainder_mm2": 1796472.882735,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 1075.421155,
+                "width": 1218.8101669999999,
+                "height": 164.578845,
+                "area_mm2": 200590.3695591171,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW2",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:604a4c00-3efc-4487-98b8-60a9b142b727#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:be9403d8-a3a9-4be5-9b32-5a82f5cbeb52#0",
+                "x": 1191.49739,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:643011ad-17b1-4d26-a63e-f0a70ac57853#0",
+                "x": 10.028,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:25f2762e-191b-48a3-9078-b3f285e15be8#0",
+                "x": 1191.49739,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:ee72b898-f3bc-487d-ae8f-84652b209d20#0",
+                "x": 10.028,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:6348792a-8dc9-4365-994c-3a7eb114b52b#0",
+                "x": 10.028,
+                "y": 1109.116315,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:7281afd1-2181-450f-ae8d-c1c064ccf58e#0",
+                "x": 1272.700833,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 1226699.6534783328,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 27475.729168667458,
+              "unallocated_remainder_mm2": 1796224.6173529997,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 1075.421155,
+                "width": 1218.8101669999999,
+                "height": 164.578845,
+                "area_mm2": 200590.3695591171,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW3",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:10af7648-1f8b-46a9-98ee-2c30b5faf1c6#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:b7136ec2-269d-42de-8a4e-ffd2aed91706#0",
+                "x": 1191.49739,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:85d78f91-97d9-4c68-b56e-af1bf883ae6a#0",
+                "x": 10.028,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:e53cc859-4051-4936-8584-50b64b307b25#0",
+                "x": 1191.49739,
+                "y": 474.105122,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:eeb44f56-ba7b-4764-b328-d18f9ab8856b#0",
+                "x": 10.028,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:2e67415a-6f2c-411c-a444-7076916359b4#0",
+                "x": 10.028,
+                "y": 1109.116315,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:2addbcc5-ab5e-4876-bf50-48317c44d031#0",
+                "x": 1272.700833,
+                "y": 938.182244,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 1226699.6532547057,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 27725.879433294293,
+              "unallocated_remainder_mm2": 1795974.467312,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 1075.421155,
+                "width": 1218.8101669999999,
+                "height": 164.578845,
+                "area_mm2": 200590.3695591171,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW4",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:65a1c10c-d954-4d2e-9eca-b1778b88f3ae#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:fa060813-11a6-42fd-be6f-e7db46dd3508#0",
+                "x": 1191.499037,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:80b9b957-3ac2-48c0-ada4-62133a2e289f#0",
+                "x": 10.028,
+                "y": 430.921045,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:946c8382-cc8e-48cb-b8f9-1c0f383edd19#0",
+                "x": 1191.49739,
+                "y": 430.921045,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:c13d1db3-0363-4f93-b02d-c9913ee6e21a#0",
+                "x": 10.028,
+                "y": 851.691176,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:95db549e-0b8d-4011-b78f-ba65b4dd5621#0",
+                "x": 10.028,
+                "y": 1022.6252470000001,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:ec210468-6a51-4b74-bc77-3fbc6c2c322b#0",
+                "x": 1272.700833,
+                "y": 851.691176,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 1048726.349520694,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 29039.52575730579,
+              "unallocated_remainder_mm2": 1972634.1247220002,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 988.9300870000001,
+                "width": 1218.8101669999999,
+                "height": 251.06991299999993,
+                "area_mm2": 306006.56259220536,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW5",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:83ff60ff-998e-47d5-b8ee-a01ea6c3dea4#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:74416896-0722-4871-94c8-707adbf4f5af#0",
+                "x": 1191.49739,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:d94600cb-4b2a-4f85-861e-f964d296d5fa#0",
+                "x": 10.028,
+                "y": 430.798131,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:a597ecd2-39ae-4f5d-b9c0-2a6aed8390ad#0",
+                "x": 1191.4936340000002,
+                "y": 430.798131,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:bab02780-76b9-4950-8996-e61f71928382#0",
+                "x": 10.028,
+                "y": 851.568262,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:3eb363db-8dcc-43d8-a995-b9179083fd99#0",
+                "x": 10.028,
+                "y": 1022.502333,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 971523.6007791967,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 24329.171432303265,
+              "unallocated_remainder_mm2": 2054547.2277885,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 850.0572619999999,
+                "width": 1218.8101669999999,
+                "height": 389.9427380000001,
+                "area_mm2": 475266.17362221726,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW6",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:8199ffb4-2b98-4999-8c20-b14501b0304b#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:c7c17ea4-21dd-444b-aeca-d27affeabac9#0",
+                "x": 10.028,
+                "y": 180.962071,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:aad4b6d1-e59e-4e49-9216-438a87915854#0",
+                "x": 10.028,
+                "y": 351.89614200000005,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:e5330e97-a571-4575-afc4-17afbc333bef#0",
+                "x": 10.028,
+                "y": 522.8302130000001,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:0d0520e3-9e14-40b2-b890-a27e0436f0cc#0",
+                "x": 10.028,
+                "y": 693.7642840000001,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:f015c813-b76a-4123-b7f2-d3a215b5659e#0",
+                "x": 10.028,
+                "y": 864.6983550000001,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:5b690bbf-a907-4e36-ae2e-483a882b8c19#0",
+                "x": 10.028,
+                "y": 985.6339050000001,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:2fb1a5ce-8620-4a6a-9613-a14d546cf621#0",
+                "x": 10.028,
+                "y": 1106.569455,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 1433870.4871133973,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 33129.82634010282,
+              "unallocated_remainder_mm2": 1583399.6865464998,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 1271.1898330000001,
+                "y": 10,
+                "width": 1218.8101669999999,
+                "height": 1230,
+                "area_mm2": 1499136.5054099998,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          },
+          {
+            "id": "SAW7",
+            "format": {
+              "id": "P2500",
+              "width": 2500,
+              "height": 1250,
+              "availability": 30,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:2407a4f9-5bc8-414f-9eb8-d23334d696b8#0",
+                "x": 10.028,
+                "y": 10.028,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:d4f16f17-2047-4004-8ace-83f8aa2097aa#0",
+                "x": 10.028,
+                "y": 130.96354999999997,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "raw_area_mm2": 3125000,
+              "parts_area_mm2": 284314.47607873764,
+              "margin_area_mm2": 74600,
+              "tool_loss_mm2": 6784.830023262359,
+              "unallocated_remainder_mm2": 2759300.6938980003,
+              "reusable_remainder_area_mm2": null,
+              "clear_rectangle": {
+                "x": 10,
+                "y": 250.38809999999995,
+                "width": 2480,
+                "height": 989.6119000000001,
+                "area_mm2": 2454237.512,
+                "method": "Largest axis-aligned rectangle outside conservatively expanded occurrence bounding boxes; not a global contour-space optimum",
+                "status": "GEOMETRIC_POTENTIAL_ONLY_NOT_INVENTORY",
+                "clearance": "Half tool spacing plus contour error plus 0.02 mm; stock margins excluded"
+              },
+              "remainder_status": "SIMULATION_GEOMETRY_NOT_CONFIRMED_STOCK; unallocated area is not automatically waste or usable stock",
+              "balance_difference_mm2": 0
+            }
+          }
+        ],
+        "unplaced": [],
+        "method": "Fast conservative envelope placement; actual contours unchanged; not a saw plan",
+        "global_optimal": false,
+        "iterations": 0,
+        "search_ms": 54,
+        "best_objective": 831.25,
+        "complete": true,
+        "format_search": [],
+        "deadline_kind": "Shared cooperative wall-clock deadline; wall time includes non-preemptive geometry and validation",
+        "lower_bound_area_mm2": 7418533.873586231
+      },
+      "saved_formats_equal_original": true
+    }
+  ],
+  "failures": [],
+  "scope": "Independent original-contour and quantity validation. Synthetic fixtures are explicitly not production CAD savings. No CAD files read, no network calls.",
+  "completed_utc": "2026-10-24T13:21:31.264Z",
+  "pass": true
+}

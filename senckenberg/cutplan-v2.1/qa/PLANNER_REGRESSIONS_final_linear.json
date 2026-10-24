@@ -1,0 +1,824 @@
+{
+  "created_utc": "2026-10-24T13:17:32.047Z",
+  "mode": "linear",
+  "engine": "CUTPLAN-V2.1-2.1.0",
+  "inputs": {
+    "seed_sha256": "bec29c08672be8fa9565dee446cf2701a4ec2d58519713607708aac4cd7c6d76",
+    "app": {
+      "core.js": "34f4ed75014024d9b8ab983fc3f19c1e2295c877bbc9994b1393e62b841de96a",
+      "geometry.js": "2f1051995d7f749c2df166c551c46207ad0d1b81294a0e2707854258168d7157",
+      "validator.js": "3f64c4119a2ceaeab328e11780e17d93592187c262fd5b70b820a518e9172c91",
+      "optimizer.js": "9bbcd9e7b55b8bcb6c4d123a29cc0afab2092e3dcbea6244a84efb8d3f88d71c",
+      "export.js": "b1e5774439aa16f29a6daa50371e0948ad6dc73d7573e8870a5c68951c7d743b"
+    },
+    "original_v2_files": 57
+  },
+  "checks": [
+    {
+      "name": "Immutable V2 snapshot and complete 1825-object ownership",
+      "pass": true,
+      "seconds": 0.172
+    },
+    {
+      "name": "Retained HiGHS roundD30 regression29/29 and14 bars",
+      "pass": true,
+      "seconds": 0.163
+    },
+    {
+      "name": "Prior V2 and test seed unchanged after all runs",
+      "pass": true,
+      "seconds": 0.266
+    }
+  ],
+  "runs": [
+    {
+      "name": "ROUND_D30",
+      "seconds": 0.161,
+      "parameters": {
+        "id": "SCENARIO_CNC",
+        "mode": "cnc",
+        "kerf_mm": 3,
+        "margin_mm": 10,
+        "trim_start_mm": 5,
+        "trim_end_mm": 5,
+        "allowance_mm": 0,
+        "min_remnant_mm": 100,
+        "min_remnant_area_mm2": 40000,
+        "part_in_part": false,
+        "hold_verified": false,
+        "common_line": false,
+        "minimum_bridge_mm": 0,
+        "objective": "cost",
+        "seed": 42,
+        "search_seconds": 2,
+        "raw_strategy": "contour",
+        "source": "TESTPARAMETER – keine Maschinenfreigabe",
+        "status": "SCENARIO",
+        "profiles": {
+          "linear": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "saw": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          },
+          "cnc": {
+            "kerf_mm": 3,
+            "margin_mm": 10,
+            "trim_start_mm": 5,
+            "trim_end_mm": 5
+          }
+        }
+      },
+      "input_sha256": "53405bfa205a496c66e413fc7bc2c0d6c256f2ded0b8c2e4188367316617d8c7",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "placed": 29,
+        "unplaced": 0,
+        "quantity_balanced": true,
+        "method": "Independent segment/winding/distance, count, stock and arithmetic validator; no nesting boolean operation reused."
+      },
+      "placed": 29,
+      "unplaced": 0,
+      "raw_use": 42000,
+      "purchased_use": 42000,
+      "cost": 210,
+      "formats": [
+        {
+          "id": "L3000",
+          "origin": "purchase",
+          "length": 3000
+        },
+        {
+          "id": "L3000",
+          "origin": "purchase",
+          "length": 3000
+        },
+        {
+          "id": "L3000",
+          "origin": "purchase",
+          "length": 3000
+        },
+        {
+          "id": "L3000",
+          "origin": "purchase",
+          "length": 3000
+        },
+        {
+          "id": "L3000",
+          "origin": "purchase",
+          "length": 3000
+        },
+        {
+          "id": "L3000",
+          "origin": "purchase",
+          "length": 3000
+        },
+        {
+          "id": "L3000",
+          "origin": "purchase",
+          "length": 3000
+        },
+        {
+          "id": "L3000",
+          "origin": "purchase",
+          "length": 3000
+        },
+        {
+          "id": "L3000",
+          "origin": "purchase",
+          "length": 3000
+        },
+        {
+          "id": "L3000",
+          "origin": "purchase",
+          "length": 3000
+        },
+        {
+          "id": "L3000",
+          "origin": "purchase",
+          "length": 3000
+        },
+        {
+          "id": "L3000",
+          "origin": "purchase",
+          "length": 3000
+        },
+        {
+          "id": "L3000",
+          "origin": "purchase",
+          "length": 3000
+        },
+        {
+          "id": "L3000",
+          "origin": "purchase",
+          "length": 3000
+        }
+      ],
+      "largest_clear_rectangle_mm2": 0,
+      "trace": [
+        {
+          "ms": 2,
+          "placed": 29,
+          "unplaced": 0
+        },
+        {
+          "ms": 161,
+          "placed": 29,
+          "unplaced": 0
+        }
+      ],
+      "solution": {
+        "stocks": [
+          {
+            "id": "BAR1",
+            "format": {
+              "id": "L3000",
+              "length": 3000,
+              "availability": 40,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "modultest:304ca5b2-295b-477e-8b09-c019d802982a#0",
+                "x": 8,
+                "length": 602.0172439424823,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "modultest:7c982821-9c48-466d-983b-0226aa386ac2#0",
+                "x": 613.0172439424823,
+                "length": 602.0172439424823,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:c14371da-5610-4063-a3b1-bb6882aa8970#0",
+                "x": 1218.0344878849646,
+                "length": 1200.0000000015561,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "errors": [],
+              "raw_length_mm": 3000,
+              "part_length_mm": 2404.0344878865208,
+              "cut_and_trim_loss_mm": 25,
+              "remainder_mm": 570.9655121134792,
+              "actual_cut_count": 5,
+              "reusable_remainder_mm": 570.9655121134792,
+              "unusable_remainder_mm": 0,
+              "remainder_chunks_mm": [
+                0,
+                0,
+                570.9655121134792
+              ],
+              "balance_difference_mm": 0,
+              "raw_end_trim_mm": 10,
+              "saw_kerf_loss_mm": 15,
+              "simulation_remainder_not_inventory": true
+            }
+          },
+          {
+            "id": "BAR2",
+            "format": {
+              "id": "L3000",
+              "length": 3000,
+              "availability": 40,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:81ad1dfa-0fba-4e7a-a1df-9504c2989f12#0",
+                "x": 8,
+                "length": 1200.0000000015566,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:d1e55512-5d20-41ac-b21a-fef9b3585e0d#0",
+                "x": 1211.0000000015566,
+                "length": 1200.0000000015566,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "errors": [],
+              "raw_length_mm": 3000,
+              "part_length_mm": 2400.000000003113,
+              "cut_and_trim_loss_mm": 22,
+              "remainder_mm": 577.9999999968868,
+              "actual_cut_count": 4,
+              "reusable_remainder_mm": 577.9999999968868,
+              "unusable_remainder_mm": 0,
+              "remainder_chunks_mm": [
+                0,
+                577.9999999968868
+              ],
+              "balance_difference_mm": 0,
+              "raw_end_trim_mm": 10,
+              "saw_kerf_loss_mm": 12,
+              "simulation_remainder_not_inventory": true
+            }
+          },
+          {
+            "id": "BAR3",
+            "format": {
+              "id": "L3000",
+              "length": 3000,
+              "availability": 40,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:f145e9ae-7922-48c6-98e3-d0ebe07345f5#0",
+                "x": 8,
+                "length": 1200.0000000015561,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:728f0413-acf8-4b93-824e-d0a3a6e5524b#0",
+                "x": 1211.0000000015561,
+                "length": 1200.0000000015566,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "errors": [],
+              "raw_length_mm": 3000,
+              "part_length_mm": 2400.0000000031127,
+              "cut_and_trim_loss_mm": 22,
+              "remainder_mm": 577.9999999968873,
+              "actual_cut_count": 4,
+              "reusable_remainder_mm": 577.9999999968873,
+              "unusable_remainder_mm": 0,
+              "remainder_chunks_mm": [
+                0,
+                577.9999999968873
+              ],
+              "balance_difference_mm": 0,
+              "raw_end_trim_mm": 10,
+              "saw_kerf_loss_mm": 12,
+              "simulation_remainder_not_inventory": true
+            }
+          },
+          {
+            "id": "BAR4",
+            "format": {
+              "id": "L3000",
+              "length": 3000,
+              "availability": 40,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:689ac010-8971-4120-91b9-a5492d882762#0",
+                "x": 8,
+                "length": 1200.0000000015573,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:3da057b9-db4d-43ae-bb1b-476085d8e2c4#0",
+                "x": 1211.0000000015573,
+                "length": 1200.0000000015575,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "errors": [],
+              "raw_length_mm": 3000,
+              "part_length_mm": 2400.000000003115,
+              "cut_and_trim_loss_mm": 22,
+              "remainder_mm": 577.999999996885,
+              "actual_cut_count": 4,
+              "reusable_remainder_mm": 577.999999996885,
+              "unusable_remainder_mm": 0,
+              "remainder_chunks_mm": [
+                0,
+                577.999999996885
+              ],
+              "balance_difference_mm": 0,
+              "raw_end_trim_mm": 10,
+              "saw_kerf_loss_mm": 12,
+              "simulation_remainder_not_inventory": true
+            }
+          },
+          {
+            "id": "BAR5",
+            "format": {
+              "id": "L3000",
+              "length": 3000,
+              "availability": 40,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:7403bfc5-a915-4687-b044-7a05c4c929b1#0",
+                "x": 8,
+                "length": 1200.0000000015552,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:ca4faf5e-9340-4aed-a2d4-2627054f3c49#0",
+                "x": 1211.0000000015552,
+                "length": 1200.0000000015552,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "errors": [],
+              "raw_length_mm": 3000,
+              "part_length_mm": 2400.0000000031105,
+              "cut_and_trim_loss_mm": 22,
+              "remainder_mm": 577.9999999968895,
+              "actual_cut_count": 4,
+              "reusable_remainder_mm": 577.9999999968895,
+              "unusable_remainder_mm": 0,
+              "remainder_chunks_mm": [
+                0,
+                577.9999999968895
+              ],
+              "balance_difference_mm": 0,
+              "raw_end_trim_mm": 10,
+              "saw_kerf_loss_mm": 12,
+              "simulation_remainder_not_inventory": true
+            }
+          },
+          {
+            "id": "BAR6",
+            "format": {
+              "id": "L3000",
+              "length": 3000,
+              "availability": 40,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:e36beb15-1fba-45d5-9909-db586ee16a50#0",
+                "x": 8,
+                "length": 1200.0000000015561,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:43801ab9-51e4-450b-b24a-efca826e8631#0",
+                "x": 1211.0000000015561,
+                "length": 1200.0000000015561,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "errors": [],
+              "raw_length_mm": 3000,
+              "part_length_mm": 2400.0000000031123,
+              "cut_and_trim_loss_mm": 22,
+              "remainder_mm": 577.9999999968877,
+              "actual_cut_count": 4,
+              "reusable_remainder_mm": 577.9999999968877,
+              "unusable_remainder_mm": 0,
+              "remainder_chunks_mm": [
+                0,
+                577.9999999968877
+              ],
+              "balance_difference_mm": 0,
+              "raw_end_trim_mm": 10,
+              "saw_kerf_loss_mm": 12,
+              "simulation_remainder_not_inventory": true
+            }
+          },
+          {
+            "id": "BAR7",
+            "format": {
+              "id": "L3000",
+              "length": 3000,
+              "availability": 40,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:d9071c64-96bb-4e98-9cbf-d910a2fdd3ee#0",
+                "x": 8,
+                "length": 1200.0000000015566,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:08347f1e-286e-4ceb-a1ad-25ee93054973#0",
+                "x": 1211.0000000015566,
+                "length": 1200.0000000015566,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "errors": [],
+              "raw_length_mm": 3000,
+              "part_length_mm": 2400.000000003113,
+              "cut_and_trim_loss_mm": 22,
+              "remainder_mm": 577.9999999968868,
+              "actual_cut_count": 4,
+              "reusable_remainder_mm": 577.9999999968868,
+              "unusable_remainder_mm": 0,
+              "remainder_chunks_mm": [
+                0,
+                577.9999999968868
+              ],
+              "balance_difference_mm": 0,
+              "raw_end_trim_mm": 10,
+              "saw_kerf_loss_mm": 12,
+              "simulation_remainder_not_inventory": true
+            }
+          },
+          {
+            "id": "BAR8",
+            "format": {
+              "id": "L3000",
+              "length": 3000,
+              "availability": 40,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:faca56af-6c68-41dd-9d19-929926f06cb1#0",
+                "x": 8,
+                "length": 1200.0000000015564,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:7b4abc15-2645-4e05-a992-1ce648c6e075#0",
+                "x": 1211.0000000015564,
+                "length": 1200.0000000015564,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "errors": [],
+              "raw_length_mm": 3000,
+              "part_length_mm": 2400.0000000031127,
+              "cut_and_trim_loss_mm": 22,
+              "remainder_mm": 577.9999999968873,
+              "actual_cut_count": 4,
+              "reusable_remainder_mm": 577.9999999968873,
+              "unusable_remainder_mm": 0,
+              "remainder_chunks_mm": [
+                0,
+                577.9999999968873
+              ],
+              "balance_difference_mm": 0,
+              "raw_end_trim_mm": 10,
+              "saw_kerf_loss_mm": 12,
+              "simulation_remainder_not_inventory": true
+            }
+          },
+          {
+            "id": "BAR9",
+            "format": {
+              "id": "L3000",
+              "length": 3000,
+              "availability": 40,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "modultest:201d9dc1-d68a-42b5-be96-ecc9ab58ddeb#0",
+                "x": 8,
+                "length": 1302.017243942486,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "modultest:8c6aace8-3d1f-48d7-9959-ef4064eaa48b#0",
+                "x": 1313.017243942486,
+                "length": 1302.017243942486,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "errors": [],
+              "raw_length_mm": 3000,
+              "part_length_mm": 2604.034487884972,
+              "cut_and_trim_loss_mm": 22,
+              "remainder_mm": 373.9655121150281,
+              "actual_cut_count": 4,
+              "reusable_remainder_mm": 373.9655121150281,
+              "unusable_remainder_mm": 0,
+              "remainder_chunks_mm": [
+                0,
+                373.9655121150281
+              ],
+              "balance_difference_mm": 0,
+              "raw_end_trim_mm": 10,
+              "saw_kerf_loss_mm": 12,
+              "simulation_remainder_not_inventory": true
+            }
+          },
+          {
+            "id": "BAR10",
+            "format": {
+              "id": "L3000",
+              "length": 3000,
+              "availability": 40,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:32a59732-7429-42c2-b800-87189dba9d27#0",
+                "x": 8,
+                "length": 1200.0000000015561,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:fd9396d9-d443-4490-843e-0969dda4a29f#0",
+                "x": 1211.0000000015561,
+                "length": 1200.0000000015561,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "errors": [],
+              "raw_length_mm": 3000,
+              "part_length_mm": 2400.0000000031123,
+              "cut_and_trim_loss_mm": 22,
+              "remainder_mm": 577.9999999968877,
+              "actual_cut_count": 4,
+              "reusable_remainder_mm": 577.9999999968877,
+              "unusable_remainder_mm": 0,
+              "remainder_chunks_mm": [
+                0,
+                577.9999999968877
+              ],
+              "balance_difference_mm": 0,
+              "raw_end_trim_mm": 10,
+              "saw_kerf_loss_mm": 12,
+              "simulation_remainder_not_inventory": true
+            }
+          },
+          {
+            "id": "BAR11",
+            "format": {
+              "id": "L3000",
+              "length": 3000,
+              "availability": 40,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:6fbb6f1a-2a64-4838-b629-dcc408ad77f6#0",
+                "x": 8,
+                "length": 1200.0000000015575,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:8da66827-f579-4ff2-9f1d-707145d139bd#0",
+                "x": 1211.0000000015575,
+                "length": 1200.0000000015575,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "errors": [],
+              "raw_length_mm": 3000,
+              "part_length_mm": 2400.000000003115,
+              "cut_and_trim_loss_mm": 22,
+              "remainder_mm": 577.999999996885,
+              "actual_cut_count": 4,
+              "reusable_remainder_mm": 577.999999996885,
+              "unusable_remainder_mm": 0,
+              "remainder_chunks_mm": [
+                0,
+                577.999999996885
+              ],
+              "balance_difference_mm": 0,
+              "raw_end_trim_mm": 10,
+              "saw_kerf_loss_mm": 12,
+              "simulation_remainder_not_inventory": true
+            }
+          },
+          {
+            "id": "BAR12",
+            "format": {
+              "id": "L3000",
+              "length": 3000,
+              "availability": 40,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:d92cd092-72d5-4eba-a253-7c7e7f965ab3#0",
+                "x": 8,
+                "length": 1200.0000000015561,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:e73a5723-d066-4a0d-a8eb-d5e58b777930#0",
+                "x": 1211.0000000015561,
+                "length": 1200.0000000015561,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "errors": [],
+              "raw_length_mm": 3000,
+              "part_length_mm": 2400.0000000031123,
+              "cut_and_trim_loss_mm": 22,
+              "remainder_mm": 577.9999999968877,
+              "actual_cut_count": 4,
+              "reusable_remainder_mm": 577.9999999968877,
+              "unusable_remainder_mm": 0,
+              "remainder_chunks_mm": [
+                0,
+                577.9999999968877
+              ],
+              "balance_difference_mm": 0,
+              "raw_end_trim_mm": 10,
+              "saw_kerf_loss_mm": 12,
+              "simulation_remainder_not_inventory": true
+            }
+          },
+          {
+            "id": "BAR13",
+            "format": {
+              "id": "L3000",
+              "length": 3000,
+              "availability": 40,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:6cd41ef3-e4b7-4412-b0c9-69e8c8e1659e#0",
+                "x": 8,
+                "length": 1200.0000000015566,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:57bf414d-7923-42e9-95b6-7d26e933ad6c#0",
+                "x": 1211.0000000015566,
+                "length": 1200.0000000015566,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "errors": [],
+              "raw_length_mm": 3000,
+              "part_length_mm": 2400.000000003113,
+              "cut_and_trim_loss_mm": 22,
+              "remainder_mm": 577.9999999968868,
+              "actual_cut_count": 4,
+              "reusable_remainder_mm": 577.9999999968868,
+              "unusable_remainder_mm": 0,
+              "remainder_chunks_mm": [
+                0,
+                577.9999999968868
+              ],
+              "balance_difference_mm": 0,
+              "raw_end_trim_mm": 10,
+              "saw_kerf_loss_mm": 12,
+              "simulation_remainder_not_inventory": true
+            }
+          },
+          {
+            "id": "BAR14",
+            "format": {
+              "id": "L3000",
+              "length": 3000,
+              "availability": 40,
+              "origin": "purchase",
+              "status": "SCENARIO"
+            },
+            "placements": [
+              {
+                "piece_id": "generationendialog:14a34793-55b8-42f1-872c-bdecf77a3d87#0",
+                "x": 8,
+                "length": 1200.0000000015561,
+                "angle": 0,
+                "locked": false
+              },
+              {
+                "piece_id": "generationendialog:2321b875-9ce9-4dbd-8138-846f4c933f25#0",
+                "x": 1211.0000000015561,
+                "length": 1200.0000000015561,
+                "angle": 0,
+                "locked": false
+              }
+            ],
+            "balance": {
+              "errors": [],
+              "raw_length_mm": 3000,
+              "part_length_mm": 2400.0000000031123,
+              "cut_and_trim_loss_mm": 22,
+              "remainder_mm": 577.9999999968877,
+              "actual_cut_count": 4,
+              "reusable_remainder_mm": 577.9999999968877,
+              "unusable_remainder_mm": 0,
+              "remainder_chunks_mm": [
+                0,
+                577.9999999968877
+              ],
+              "balance_difference_mm": 0,
+              "raw_end_trim_mm": 10,
+              "saw_kerf_loss_mm": 12,
+              "simulation_remainder_not_inventory": true
+            }
+          }
+        ],
+        "unplaced": [],
+        "method": "HiGHS 1.15.2 WASM aggregated integer assignment",
+        "solver_status": "Optimal",
+        "global_optimal": true,
+        "model_objective": 210.00042,
+        "model_variables": 116,
+        "optimality_scope": "Linear stock model with declared end trims, actual cuts, finite formats and selected objective; not a fabrication release.",
+        "baseline_objective": 210,
+        "best_objective": 210,
+        "lower_bound_mm": 33808.068975808856,
+        "seed": 42
+      },
+      "saved_formats_equal_original": true
+    }
+  ],
+  "failures": [],
+  "scope": "Independent original-contour and quantity validation. Synthetic fixtures are explicitly not production CAD savings. No CAD files read, no network calls.",
+  "completed_utc": "2026-10-24T13:17:32.651Z",
+  "pass": true
+}

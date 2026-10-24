@@ -1,0 +1,86 @@
+{
+  "created_utc": "2026-10-24T13:20:28.558Z",
+  "mode": "contracts",
+  "engine": "CUTPLAN-V2.1-2.1.0",
+  "inputs": {
+    "seed_sha256": "bec29c08672be8fa9565dee446cf2701a4ec2d58519713607708aac4cd7c6d76",
+    "app": {
+      "core.js": "34f4ed75014024d9b8ab983fc3f19c1e2295c877bbc9994b1393e62b841de96a",
+      "geometry.js": "2f1051995d7f749c2df166c551c46207ad0d1b81294a0e2707854258168d7157",
+      "validator.js": "3f64c4119a2ceaeab328e11780e17d93592187c262fd5b70b820a518e9172c91",
+      "optimizer.js": "9bbcd9e7b55b8bcb6c4d123a29cc0afab2092e3dcbea6244a84efb8d3f88d71c",
+      "export.js": "b1e5774439aa16f29a6daa50371e0948ad6dc73d7573e8870a5c68951c7d743b"
+    },
+    "original_v2_files": 57
+  },
+  "checks": [
+    {
+      "name": "Immutable V2 snapshot and complete 1825-object ownership",
+      "pass": true,
+      "seconds": 0.181
+    },
+    {
+      "name": "Saved grouped and flat formats exactly equal original material, not residual caps",
+      "pass": true,
+      "seconds": 0.116
+    },
+    {
+      "name": "Previous full valid material plan survives a1ms deadline without loss",
+      "pass": true,
+      "seconds": 0.108
+    },
+    {
+      "name": "Count-vector generation is bounded by4096 visits and respects expired deadline",
+      "pass": true,
+      "seconds": 0.019
+    },
+    {
+      "name": "Equal-price feasible formats prefer lower raw area, not list order",
+      "pass": true,
+      "seconds": 0.003
+    },
+    {
+      "name": "Prior V2 and test seed unchanged after all runs",
+      "pass": true,
+      "seconds": 0.261
+    }
+  ],
+  "runs": [],
+  "failures": [],
+  "scope": "Independent original-contour and quantity validation. Synthetic fixtures are explicitly not production CAD savings. No CAD files read, no network calls.",
+  "saved_format_contract": {
+    "flat_count": 2,
+    "grouped_count": 2,
+    "byte_equal_to_original": true
+  },
+  "previous_deadline_contract": {
+    "deadline_ms": 1,
+    "actual_ms": 5,
+    "complete": true,
+    "cost": 20
+  },
+  "candidate_enumeration_contract": {
+    "expired": {
+      "visited": 0,
+      "limit": 4096,
+      "stopped": true,
+      "ms": 0,
+      "scope": "Bounded single/pair count-vector search; not an exhaustive or optimality proof"
+    },
+    "bounded": {
+      "visited": 4096,
+      "limit": 4096,
+      "stopped": true,
+      "ms": 18,
+      "scope": "Bounded single/pair count-vector search; not an exhaustive or optimality proof"
+    },
+    "retained_vectors": 32
+  },
+  "equal_cost_tie_contract": {
+    "cost": 20,
+    "selected_raw_mm2": 1040400,
+    "rejected_same_price_raw_mm2": 2063460
+  },
+  "completed_utc": "2026-10-24T13:20:29.252Z",
+  "pass": true
+}
